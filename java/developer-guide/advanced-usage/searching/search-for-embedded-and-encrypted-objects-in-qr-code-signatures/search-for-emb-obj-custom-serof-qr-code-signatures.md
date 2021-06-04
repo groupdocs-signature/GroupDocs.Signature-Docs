@@ -1,6 +1,6 @@
 ---
-id: search-for-embedded-object-with-custom-serialization-of-qr-code-signatures
-url: signature/java/search-for-embedded-object-with-custom-serialization-of-qr-code-signatures
+id: search-embed-obj-with-custom-serializ-qr-codes
+url: signature/java/search-embed-obj-with-custom-serializ-qr-codes
 title: Search for embedded object with custom serialization of QR-Code signatures
 weight: 2
 description: " This article explains how to search for embedded electronic signatures with custom serialization in QR-code electronic signatures. This topic contains example of custom serialization, class definition and search for serialized objects in the QR-codes with GroupDocs.Signature."

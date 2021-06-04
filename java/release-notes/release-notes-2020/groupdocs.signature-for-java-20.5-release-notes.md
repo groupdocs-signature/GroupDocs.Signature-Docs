@@ -50,7 +50,7 @@ Following topics from Developer Guide were updated:
 
 [Sign document with Form Field signature (advanced)]({{< ref "signature/java/developer-guide/advanced-usage/signing/sign-document-with-form-field-signature-advanced.md" >}})
 
-[Sign documents with standard QR-code entries]({{< ref "signature/java/developer-guide/advanced-usage/signing/sign-document-with-embedded-and-encrypted-data-in-qr-code-signatures/_index.md" >}})
+[Sign documents with standard QR-code entries]({{< ref "signature/java/developer-guide/advanced-usage/signing/sign-embed-and-encr-data-qr-codes/_index.md" >}})
 
 ## Public API and Backward Incompatible Changes
 

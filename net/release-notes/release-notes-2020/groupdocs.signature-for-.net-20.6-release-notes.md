@@ -38,7 +38,7 @@ Full List of Issues Covering all Changes in this Release
 
 ## Public Developer Guide examples changes
 Following topics from Developer Guide were added
-*   [Sign documents with standard encryption of QR-code]({{< ref "signature/net/developer-guide/advanced-usage/signing/sign-document-with-embedded-and-encrypted-data-in-qr-code-signatures/sign-documents-with-standard-encryption-for-qr-code.md" >}})
+*   [Sign documents with standard encryption of QR-code]({{< ref "signature/net/developer-guide/advanced-usage/signing/sign-embed-and-encr-data-qr-codes/sign-documents-with-standard-encryption-for-qr-code.md" >}})
 
 ## Public API and Backward Incompatible Changes
 

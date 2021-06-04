@@ -1,6 +1,6 @@
 ---
-id: sign-document-with-embedded-and-encrypted-data-in-qr-code-signatures
-url: signature/java/sign-document-with-embedded-and-encrypted-data-in-qr-code-signatures
+id: sign-embed-and-encr-data-qr-codes
+url: signature/java/sign-embed-and-encr-data-qr-codes
 title: Sign document with embedded and encrypted data in QR-code signatures
 weight: 6
 description: "This section contains articles with explanation how to create QR-Code electronic signatures and embed into QR-Code custom data object with its serialization and encryption. The examples show how to customize object serialization and encryption."

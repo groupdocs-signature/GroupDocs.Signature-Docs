@@ -1,6 +1,6 @@
 ---
-id: search-for-embedded-and-encrypted-objects-in-qr-code-signatures
-url: signature/net/search-for-embedded-and-encrypted-objects-in-qr-code-signatures
+id: search-embed-n-encr-obj-in-qr-codes
+url: signature/net/search-embed-n-encr-obj-in-qr-codes
 title: Search for embedded and encrypted objects in QR-Code signatures
 weight: 9
 description: " This section explains how to search for embedded electronic signatures into the QR-Code electronic signatures with GroupDocs.Signature API. Also this topic shows the way to customize data serialization and encryption same as provides the class definition with ability to embed it into the QR-Code electronic signature."
