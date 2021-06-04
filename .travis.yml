@@ -28,13 +28,12 @@ install:
 - sudo dpkg -i hugo_extended_0.67.1_Linux-64bit.deb
 
 script:
+- mkdir -p $ROOT_DIR/content/$PRODUCT
 - cp -r java $ROOT_DIR/content/$PRODUCT
 - cp -r net $ROOT_DIR/content/$PRODUCT
+- cp _index.md $ROOT_DIR/content/$PRODUCT
 - hugo --source $ROOT_DIR --minify --config config.toml,ignore-total-config.toml
-- mkdir -p $SRC_DIR/search-json
-- mv $SRC_DIR/index.json $SRC_DIR/search-json/$PRODUCT.json
 
 after_success:
 - scp -i ./deploy_key -r $SRC_DIR/$PRODUCT $USER@$HOST:$DEST_DIR
 - scp -i ./deploy_key -r $SRC_DIR/product-sitemap.xml $USER@$HOST:$DEST_DIR/sitemaps/$PRODUCT.xml
-- scp -i ./deploy_key -r $SRC_DIR/search-json/$PRODUCT.json $USER@$HOST:$DEST_DIR/search-json/$PRODUCT.json
