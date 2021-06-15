@@ -3,7 +3,7 @@ id: features-overview
 url: signature/java/features-overview
 title: Features Overview
 weight: 1
-description: ""
+description: "This is an overview of GroupDocs.Signature for Java library features and capabilities"
 keywords: 
 productName: GroupDocs.Signature for Java
 hideChildren: False

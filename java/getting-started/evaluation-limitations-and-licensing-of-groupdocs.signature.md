@@ -3,7 +3,7 @@ id: evaluation-limitations-and-licensing-of-groupdocs-signature
 url: signature/java/evaluation-limitations-and-licensing-of-groupdocs-signature
 title: Evaluation Limitations and Licensing of GroupDocs.Signature
 weight: 5
-description: ""
+description: "This article explains evaluation limitations and licensing of GroupDocs.Signature for Java"
 keywords: 
 productName: GroupDocs.Signature for Java
 hideChildren: False

@@ -3,7 +3,7 @@ id: installation
 url: signature/net/installation
 title: Installation
 weight: 4
-description: ""
+description: "This guide explains how to install GroupDocs.Signature for .NET to your environment"
 keywords: 
 productName: GroupDocs.Signature for .NET
 hideChildren: False

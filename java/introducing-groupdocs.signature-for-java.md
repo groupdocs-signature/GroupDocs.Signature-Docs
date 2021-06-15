@@ -3,7 +3,7 @@ id: introducing-groupdocs-signature-for-java
 url: signature/java/introducing-groupdocs-signature-for-java
 title: Introducing GroupDocs.Signature for Java
 weight: 1
-description: ""
+description: "Introduction to GroupDocs.Signature for Java - what is it and why to use"
 keywords: 
 productName: GroupDocs.Signature for Java
 hideChildren: False

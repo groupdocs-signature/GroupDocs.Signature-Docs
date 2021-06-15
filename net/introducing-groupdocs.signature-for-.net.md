@@ -3,7 +3,7 @@ id: introducing-groupdocs-signature-for-net
 url: signature/net/introducing-groupdocs-signature-for-net
 title: Introducing GroupDocs.Signature for .NET
 weight: 1
-description: ""
+description: "Introduction to GroupDocs.Signature for .NET - what is it and why to use"
 keywords: 
 productName: GroupDocs.Signature for .NET
 hideChildren: False

@@ -3,7 +3,7 @@ id: installation
 url: signature/java/installation
 title: Development Environment Installation and Configuration
 weight: 4
-description: ""
+description: "This guide explains how to install GroupDocs.Signature for Java to your environment"
 keywords: 
 productName: GroupDocs.Signature for Java
 hideChildren: False

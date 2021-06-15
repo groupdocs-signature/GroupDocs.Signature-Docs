@@ -3,7 +3,7 @@ id: features-overview
 url: signature/net/features-overview
 title: Features Overview
 weight: 1
-description: ""
+description: "This section decsribes how to get started with GroupDocs.Signature for .NET library"
 keywords: 
 productName: GroupDocs.Signature for .NET
 hideChildren: False

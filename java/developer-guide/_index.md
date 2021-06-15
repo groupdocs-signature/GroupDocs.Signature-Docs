@@ -3,7 +3,7 @@ id: developer-guide
 url: signature/java/developer-guide
 title: Developer Guide
 weight: 3
-description: ""
+description: "This section decsribes how to get started with GroupDocs.Signature for Java library"
 keywords: 
 productName: GroupDocs.Signature for Java
 hideChildren: False

@@ -3,7 +3,7 @@ id: supported-document-formats
 url: signature/java/supported-document-formats
 title: Supported Document Formats
 weight: 2
-description: ""
+description: "This section describes GroupDocs.Signature for Java supported document types"
 keywords: 
 productName: GroupDocs.Signature for Java
 hideChildren: False

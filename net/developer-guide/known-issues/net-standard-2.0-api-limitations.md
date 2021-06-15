@@ -3,7 +3,7 @@ id: net-standard-2-0-api-limitations
 url: signature/net/net-standard-2-0-api-limitations
 title: .NET Standard 2.0 API Limitations
 weight: 1
-description: ""
+description: "This section describes GroupDocs.Signature for .NET limitations when using under .NET Standard 2.0 environment"
 keywords: 
 productName: GroupDocs.Signature for .NET
 hideChildren: False

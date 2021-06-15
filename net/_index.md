@@ -3,7 +3,7 @@ id: home
 url: signature/net
 title: GroupDocs.Signature for .NET
 weight: 1
-description: ""
+description: "GroupDocs.Signature for .NET is an easy to use electronic signature API designed for C#/.NET applications"
 keywords: 
 productName: GroupDocs.Signature for .NET
 hideChildren: True

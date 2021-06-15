@@ -3,7 +3,7 @@ id: system-requirements
 url: signature/java/system-requirements
 title: System Requirements
 weight: 3
-description: ""
+description: "This article explains GroupDocs.Signature for Java system requirements."
 keywords: 
 productName: GroupDocs.Signature for Java
 hideChildren: False

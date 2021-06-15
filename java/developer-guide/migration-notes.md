@@ -3,7 +3,7 @@ id: migration-notes
 url: signature/java/migration-notes
 title: Migration Notes
 weight: 3
-description: ""
+description: "How to migrate from earlier versions of GroupDocs.Signature for Java"
 keywords: 
 productName: GroupDocs.Signature for Java
 hideChildren: False
