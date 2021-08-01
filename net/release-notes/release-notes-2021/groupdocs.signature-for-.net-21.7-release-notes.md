@@ -12,13 +12,13 @@ hideChildren: False
 
 ## Major Features
 
-This release contains improvements on document modification procedures, new feature to adjust loading document external resources, some adjustments with Word processing documents native sigantures, new overload methods that allow to remove signature by its identifiers and few bug fixes.
+This release contains improvements on document modification procedures, new feature to adjust loading document external resources, some adjustments with Word processing documents native signatures, new overload methods that allow to remove signature by its identifiers and few bug fixes.
 Below the list of most notable changes in release of GroupDocs.Signature for .NET 21.7:
 
 * Load Option allows to adjust the loading of external resources to improve document processing performance.
-* The Appearence of native sigantures in the Word Processing documents was improved.
+* The appearance of native signatures in the Word Processing documents was improved.
 * After document modification metadata layer was adjusted to keep actual information about Digital signatures for Presentation and Word processing documents.
-* New methods Delete were added to support sigantures deletion by single and multiple identifiers.
+* New methods Delete were added to support signatures deletion by single and multiple identifiers.
 * Fixed long processing time with Presentation documents with many pages and external resources.
 
 Full List of Issues Covering all Changes in this Release
@@ -27,8 +27,8 @@ Full List of Issues Covering all Changes in this Release
 | --- | --- | --- |
 | SIGNATURENET-3531 | Implement ability to adjust loading of Document External Resources  | Feature |
 | SIGNATURENET-3539 | Update Background appearance for Word Document Processing files  | Improvement |
-| SIGNATURENET-3498 | Mark Digital Sigantures as deleted when modifying Presentation documents  | Improvement |
-| SIGNATURENET-3497 | Mark Digital Sigantures as deleted when modifying Word Processing documents  | Improvement |
+| SIGNATURENET-3498 | Mark Digital Signatures as deleted when modifying Presentation documents  | Improvement |
+| SIGNATURENET-3497 | Mark Digital Signatures as deleted when modifying Word Processing documents  | Improvement |
 | SIGNATURENET-3495 | Extend Delete method with overloads that accept Id or List of identifiers  | Improvement |
 | SIGNATURENET-3487 | Adjust metadata after Update and Delete operations for Presentation documents  | Improvement |
 | SIGNATURENET-3484 | Adjust metadata after Update and Delete operations for Word Processing documents  | Improvement |
@@ -55,7 +55,7 @@ This boolean option allow to specify if external resources in the document shoul
     };
 ```
 
-#### Public class [Signature](https://apireference.groupdocs.com/signature/net/groupdocs.signature/signature) was updated with overload methods Delete that accept one or several signature indentifiers
+#### Public class [Signature](https://apireference.groupdocs.com/signature/net/groupdocs.signature/signature) was updated with overload methods Delete that accept one or several signature identifiers
 
 Public class [Signature](https://apireference.groupdocs.com/signature/net/groupdocs.signature/Signature) was updated with overload methods Delete
 
