@@ -20,7 +20,7 @@ Below the list of most notable changes in release of GroupDocs.Signature for Jav
 * The issues with deleting Digital signatures in Word Processing and Spreadsheet files were fixed.
 * Added support of Spreadsheet formats XLT and XLTM.
 * Improvements were made to run sign processing with multiple threads.
-* Implemented metadata adjustments ehn midifying documents.
+* Implemented metadata adjustments when modifying documents.
 * Few other minor bugs were fixed.
 
 Full List of Issues Covering all Changes in this Release
