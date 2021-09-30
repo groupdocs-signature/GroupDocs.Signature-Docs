@@ -16,6 +16,7 @@ hideChildren: False
 * [Me-Card](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/mecard) entry implements similar to V-Card contact details standard. More details could be found [here](https://en.wikipedia.org/wiki/MeCard_(QR_code)).
 * [EPC](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/epc) implements standard of the European Payments Council guidelines define the content of a QR code that can be used to initiate [SEPA](https://en.wikipedia.org/wiki/SEPA_credit_transfer) credit transfer. More details could be found [here](https://en.wikipedia.org/wiki/EPC_QR_code).
 * [Event](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/event) entry implements event standard.
+* [CryptoCurrencyTransfer](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/cryptocurrencytransfer) entry implements event standard.
 
 Here are the steps to embed standard entry into QR-code with GroupDocs.Signature:  
 
@@ -256,6 +257,52 @@ using (Signature signature = new Signature("sample.pdf"))
         Height = 100,
         Margin = new Padding(10)
     };
+    // sign document to file
+    signature.Sign("output.pdf", options);
+}
+```
+
+## Sign PDF with CryptoCurrencyTransfer information in the QR-Code image
+
+This example shows how to esign PDF with Cryptocurrency transfer data inside the QR-code image.
+
+```csharp
+using (Signature signature = new Signature("sample.pdf"))
+{
+    // create crypto currency object
+    CryptoCurrencyTransfer transfer = new CryptoCurrencyTransfer()
+    {
+        Type = CryptoCurrencyType.Bitcoin,
+        Address = "1JHG2qjdk5Khiq7X5xQrr1wfigepJEK3t",
+        Amount = 1234.56M,
+        Message = "Consulting services"
+    };
+    // create alternative crypto currency object
+    CryptoCurrencyTransfer customTransfer = new CryptoCurrencyTransfer()
+    {
+        Type = CryptoCurrencyType.Custom,
+        CustomType = @"SuperCoin",
+        Address = @"15N3yGu3UFHeyUNdzQ5sS3aRFRzu5Ae7EZ",
+        Amount = 6543.21M,
+        Message = @"Accounting services"
+    };
+    // create QR-code options
+    QrCodeSignOptions options1 = new QrCodeSignOptions
+    {
+        // setup Data property to Address instance
+        Data = transfer,
+        Left = 10,
+        Top = 10,
+    };
+    // create alternative QR-code options
+    QrCodeSignOptions options2 = new QrCodeSignOptions
+    {
+        // setup Data property to Address instance
+        Data = customTransfer,
+        Left = 10,
+        Top = 200
+    };
+    List<SignOptions> listOptions = new List<SignOptions>() { options1, options2 };
     // sign document to file
     signature.Sign("output.pdf", options);
 }

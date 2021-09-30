@@ -68,7 +68,7 @@ These FileType static objects describe new supported Spreadsheet document types.
 
 Public class [SignatureSettings](https://apireference.groupdocs.com/signature/net/groupdocs.signature/SignatureSettings) was updated with property
 
-* property bool [ShowDeletedSiganturesInfo] that allows to specify if deleted Signature information should be included into the Document Information structure. By default this value is enabled.
+* property bool [ShowDeletedSignaturesInfo] that allows to specify if deleted Signature information should be included into the Document Information structure. By default this value is enabled.
 
 **New property of SignatureSettings class**
 
@@ -79,7 +79,7 @@ Public class [SignatureSettings](https://apireference.groupdocs.com/signature/ne
         /// Gets or sets flag that includes deleted signatures into Document Info result.
         /// Each Signature <see cref="BaseSignature"/> has Deleted flag <see cref="BaseSignature.Deleted"/> to detect if it was deleted.
         /// </summary>
-        public bool ShowDeletedSiganturesInfo { get; set; } = true;
+        public bool ShowDeletedSignaturesInfo { get; set; } = true;
    }
 ```
 
@@ -131,9 +131,9 @@ public static void Run()
     // define Signature settings to remove Deleted signatures from the list
     SignatureSettings signatureSettings = new SignatureSettings()
     {
-        ShowDeletedSiganturesInfo = false
+        ShowDeletedSignaturesInfo = false
     };
-    using (Signature signature = new Signature("signed.pdf"))
+    using (Signature signature = new Signature("signed.pdf", signatureSettings))
     {
         IDocumentInfo documentInfo = signature.GetDocumentInfo();
         
