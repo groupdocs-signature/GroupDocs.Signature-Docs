@@ -15,11 +15,10 @@ hideChildren: False
 This release contains new features with QR Code embedded objects and few optimization on Document modification process that will allow to skip unnecessary document saving when Update and Delete method had no effect.
 Below the list of most notable changes in release of GroupDocs.Signature for .NET 21.9:
 
-* Load Option allows to adjust the loading of external resources to improve document processing performance.
-* The appearance of native signatures in the Word Processing documents was improved.
-* After document modification metadata layer was adjusted to keep actual information about Digital signatures for Presentation and Word processing documents.
-* New methods Delete were added to support signatures deletion by single and multiple identifiers.
-* Fixed long processing time with Presentation documents with many pages and external resources.
+* Signature Settings has new properties to adjust document saving when modifications method had no effect.
+* New QR Code type crypto currency trasnfer for embedded object was added.
+* Fixed issue with image document processing.
+* Implemented ability to skip document saving based on new settings.
 
 Full List of Issues Covering all Changes in this Release
 
