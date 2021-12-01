@@ -32,6 +32,7 @@ Full List of Issues Covering all Changes in this Release
 | SIGNATURENET-3733 | The exception is thrown when rendering Spreadsheet .ods file | Bug |
 | SIGNATURENET-3732 | The exception is thrown for Digital Signature verification and searching for Linux OS | Bug |
 | SIGNATURENET-3731 | Pdf Document could not be successfully certified for trial versions | Bug |
+| SIGNATURENET-3701 | The signed Pdf file is corrupted and can not be opened in Acrobat Reader (.Net Core 3.x) | Bug |
 
 ## Public API and Backward Incompatible Changes
 
