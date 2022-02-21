@@ -7,6 +7,7 @@ description: "This guide explains how to install GroupDocs.Signature for .NET to
 keywords: 
 productName: GroupDocs.Signature for .NET
 hideChildren: False
+toc: True
 ---
 ## Install from Nuget
 
@@ -23,7 +24,7 @@ Follow these steps to reference GroupDocs.Signature using Package Manager GUI:
 
 ![Installation](signature/net/images/installation.png)
 
-#### Using Package Manager Console
+### Using Package Manager Console
 
 You can follow the steps below to reference GroupDocs.Signature for .NET using the Package Manager Console:
 

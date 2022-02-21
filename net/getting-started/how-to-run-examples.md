@@ -7,6 +7,7 @@ description: "This article describes how to run GroupDocs.Signature for .NET cod
 keywords: 
 productName: GroupDocs.Signature for .NET
 hideChildren: False
+toc: True
 ---
 {{< alert style="warning" >}}Before running an example make sure that GroupDocs.Signature has been installed successfully.{{< /alert >}}
 

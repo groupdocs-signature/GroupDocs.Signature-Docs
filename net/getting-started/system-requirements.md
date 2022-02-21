@@ -2,11 +2,12 @@
 id: system-requirements
 url: signature/net/system-requirements
 title: System Requirements
-weight: 2
+weight: 3
 description: "This article explains GroupDocs.Signature for .NET system requirements."
 keywords: 
 productName: GroupDocs.Signature for .NET
 hideChildren: False
+toc: True
 ---
 ## Overview
 

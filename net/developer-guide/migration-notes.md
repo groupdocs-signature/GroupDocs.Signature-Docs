@@ -7,6 +7,7 @@ description: "How to migrate from earlier versions of GroupDocs.Signature for .N
 keywords: 
 productName: GroupDocs.Signature for .NET
 hideChildren: False
+toc: True
 ---
 ### Why To Migrate?
   

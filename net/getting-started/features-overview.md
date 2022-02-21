@@ -7,6 +7,8 @@ description: "This section decsribes how to get started with GroupDocs.Signature
 keywords: 
 productName: GroupDocs.Signature for .NET
 hideChildren: False
+toc: True
+
 ---
 ## Electronic signature
 

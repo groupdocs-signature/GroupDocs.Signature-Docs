@@ -2,7 +2,7 @@
 id: supported-document-formats
 url: signature/net/supported-document-formats
 title: Supported Document Formats
-weight: 3
+weight: 2
 description: "This section describes GroupDocs.Signature for .NET supported document types"
 keywords: 
 productName: GroupDocs.Signature for .NET

@@ -1,12 +1,13 @@
 ---
-id: evaluation-limitations-and-licensing-of-groupdocs-signature
-url: signature/net/evaluation-limitations-and-licensing-of-groupdocs-signature
-title: Evaluation Limitations and Licensing of GroupDocs.Signature
+id: licensing-and-subscription
+url: signature/net/licensing-and-subscription
+title: Licensing and Subscription
 weight: 5
 description: "This article explains evaluation limitations and licensing of GroupDocs.Signature for .NET"
 keywords: 
 productName: GroupDocs.Signature for .NET
 hideChildren: False
+toc: True
 ---
 {{< alert style="info" >}}
 You can use GroupDocs.Signature without the license. The usage and functionalities are pretty much same as the licensed one but you will face few limitations while using the non-licensed API.
@@ -35,7 +36,7 @@ License license = new License();
 license.SetLicense(licensePath);
 ```
 
-#### Setting License from Stream
+### Setting License from Stream
 
 The following example shows how to load a license from a stream.
 
@@ -54,7 +55,7 @@ When developing an ASP.NET application, you can call License.SetLicense from the
 Do not call License.SetLicense from within Page\_Load methods since it means the license will be loaded every time a web page is loaded.
 {{< /alert >}}
 
-#### Setting Metered License
+### Setting Metered License
 
 {{< alert style="info" >}}
 You can also set [Metered](https://apireference.groupdocs.com/net/signature/groupdocs.signature/metered) license as an alternative to license file. It is a new licensing mechanism that will be used along with existing licensing method. It is useful for the customers who want to be billed based on the usage of the API features. For more details, please refer to [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered) section.
