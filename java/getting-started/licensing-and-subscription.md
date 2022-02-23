@@ -1,12 +1,13 @@
 ---
-id: evaluation-limitations-and-licensing-of-groupdocs-signature
-url: signature/java/evaluation-limitations-and-licensing-of-groupdocs-signature
-title: Evaluation Limitations and Licensing of GroupDocs.Signature
+id: licensing-and-subscription
+url: signature/java/licensing-and-subscription
+title: Licensing and Subscription
 weight: 5
 description: "This article explains evaluation limitations and licensing of GroupDocs.Signature for Java"
 keywords: 
 productName: GroupDocs.Signature for Java
 hideChildren: False
+toc: True
 ---
 {{< alert style="info" >}}You can use GroupDocs.Signature without the license. The usage and functionalities are pretty much same as the licensed one but you will face few limitations while using the non-licensed API.{{< /alert >}}
 
@@ -22,7 +23,7 @@ You can easily download GroupDocs.Signature for evaluation. The evaluation downl
 The license file contains details such as the product name, number of developers it is licensed to, subscription expiry date and so on. It contains the digital signature, so don't modify the file. Even inadvertent addition of an extra line break into the file will invalidate it. You need to set a license before utilizing GroupDocs.Signature API if you want to avoid its evaluation limitations.   
 The license can be loaded from a file or stream object. 
 
-#### Setting License from File
+### Setting License from File
 
 The code below will explain how to set product license.
 
@@ -33,7 +34,7 @@ License license = new License();
 license.setLicense(licensePath);
 ```
 
-#### Setting License from Stream
+### Setting License from Stream
 
 The following example shows how to load a license from a stream.
 
@@ -46,7 +47,7 @@ using (FileInputStream fileStream = new FileInputStream("GroupDocs.Signature.lic
 }
 ```
 
-#### Setting Metered License
+### Setting Metered License
 
 {{< alert style="info" >}}
 You can also set [Metered](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.metered/Metered) license as an alternative to license file. It is a new licensing mechanism that will be used along with existing licensing method. It is useful for the customers who want to be billed based on the usage of the API features. For more details, please refer to [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered) section.

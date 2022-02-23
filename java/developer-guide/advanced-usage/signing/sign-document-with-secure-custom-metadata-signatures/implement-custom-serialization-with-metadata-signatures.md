@@ -7,6 +7,7 @@ description: "This article explains how to implement custom serialization for Me
 keywords: 
 productName: GroupDocs.Signature for Java
 hideChildren: False
+toc: True
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides ability to embed into Metadata signature custom objects. This feature is implemented over object serialization to string and further encryption. By default library uses json format serialization and symmetric encryption but allows to provide custom serialization and encryption. Customization of serialization requires implementation of interface [IDataSerializer](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.extensions.serialization/IDataSerializer) with two methods to serialize and de-serialize data.
 
@@ -189,21 +190,4 @@ for(BaseSignature temp : signResult.getSucceeded())
 }
 ```
 
-## More resources
 
-### GitHub Examples 
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-*   [GroupDocs.Signature for .NET examples, plugins, and showcase](https://github.com/groupdocs-signature/GroupDocs.Signature-for-.NET)    
-*   [GroupDocs.Signature for Java examples, plugins, and showcase](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java)    
-*   [Document Signature for .NET MVC UI Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-.NET-MVC)    
-*   [Document Signature for .NET App WebForms UI Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-.NET-WebForms)    
-*   [Document Signature for Java App Dropwizard UI Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java-Dropwizard)   
-*   [Document Signature for Java Spring UI Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java-Spring)
-    
-
-### Free Online App 
-
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
-You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

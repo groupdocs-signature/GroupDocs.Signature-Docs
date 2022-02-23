@@ -7,6 +7,7 @@ description: "This is an overview of GroupDocs.Signature for Java library featur
 keywords: 
 productName: GroupDocs.Signature for Java
 hideChildren: False
+toc: True
 ---
 ## Sign document
 

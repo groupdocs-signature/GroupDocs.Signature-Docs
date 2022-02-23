@@ -7,6 +7,7 @@ description: "This guide explains how to install GroupDocs.Signature for Java to
 keywords: 
 productName: GroupDocs.Signature for Java
 hideChildren: False
+toc: True
 ---
 ## Installation from GroupDocs Repository using Maven
 

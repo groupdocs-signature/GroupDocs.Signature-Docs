@@ -9,7 +9,7 @@ productName: GroupDocs.Signature for .NET
 hideChildren: False
 toc: True
 ---
-### Why To Migrate?
+## Why To Migrate?
   
 Here are the key reasons to use the new updated API provided by GroupDocs.Signature for .NET since version 19.8:
 
@@ -19,11 +19,11 @@ Here are the key reasons to use the new updated API provided by GroupDocs.Signat
 * Product architecture was redesigned from scratch in order to simplify passing options and classes to manipulate signature.
 * Document information and preview generation procedures were simplified.
 
-### How To Migrate?
+## How To Migrate?
 
 Here is a brief comparison of how to sign document with text signature using old and new API.  
 
-#### Old coding style
+### Old coding style
 
 ```csharp
 // setup Signature configuration
@@ -49,7 +49,7 @@ string signedPath = handler.Sign<string>("test.pdf", signOptions,saveOptions);
 Console.WriteLine("Signed file path is: " + signedPath);
 ```
 
-#### New coding style
+### New coding style
 
 ```csharp
 using (Signature signature = new Signature("sample.pdf"))

@@ -7,6 +7,7 @@ description: "This article describes how to run GroupDocs.Signature for Java cod
 keywords: 
 productName: GroupDocs.Signature for Java
 hideChildren: False
+toc: True
 ---
   
 

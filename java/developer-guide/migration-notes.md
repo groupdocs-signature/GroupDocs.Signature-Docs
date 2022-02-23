@@ -7,8 +7,9 @@ description: "How to migrate from earlier versions of GroupDocs.Signature for Ja
 keywords: 
 productName: GroupDocs.Signature for Java
 hideChildren: False
+toc: True
 ---
-### Why To Migrate?
+## Why To Migrate?
 
 Here are the key reasons to use the new updated API provided by GroupDocs.Signature for Java since version 19.11:
 
@@ -19,11 +20,11 @@ Here are the key reasons to use the new updated API provided by GroupDocs.Signat
 *   Document information and preview generation procedures were simplified.  
     
 
-### How To Migrate?
+## How To Migrate?
 
 Here is a brief comparison of how to sign document with text signature using old and new API.  
 
-**Old coding style**
+### Old coding style
 
 ```java
 // setup Signature configuration
@@ -53,7 +54,7 @@ saveOptions.setOutputFileName("Pdf_TextSignatureFontBackgroundAndColorOptions");
 String signedPath = handler.<String>sign("test.pdf", signOptions, saveOptions);
 ```
 
-**New coding style**
+### New coding style
 
 ```java
 Signature signature = new Signature("sample.pdf");
