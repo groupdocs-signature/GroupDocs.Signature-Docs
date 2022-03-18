@@ -4,7 +4,7 @@ url: signature/net/getting-started
 title: Getting Started
 weight: 2
 description: "This section decsribes how to get started with GroupDocs.Signature for .NET library"
-keywords: 
+keywords: create digital signature
 productName: GroupDocs.Signature for .NET
 hideChildren: False
 ---

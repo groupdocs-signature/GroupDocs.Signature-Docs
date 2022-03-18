@@ -3,8 +3,8 @@ id: system-requirements
 url: signature/net/system-requirements
 title: System Requirements
 weight: 2
-description: "This article explains GroupDocs.Signature for .NET system requirements."
-keywords: 
+description: "GroupDocs.Signature for .NET supports any 32-bit or 64-bit operating system where .NET or Mono framework is installed"
+keywords: GroupDocs.Signature for .NET,Signature 
 productName: GroupDocs.Signature for .NET
 hideChildren: False
 ---

@@ -3,8 +3,8 @@ id: supported-document-formats
 url: signature/net/supported-document-formats
 title: Supported Document Formats
 weight: 3
-description: "This section describes GroupDocs.Signature for .NET supported document types"
-keywords: 
+description: "It supports DOCX, DOCM, DOC, DOT, DOTM, XLS, XLSX, PDF, PPT, JPG, PNG, HTML, EML and many more."
+keywords: DOCX, DOCM, DOC, DOT, DOTM, XLS, XLSX, PDF, PPT, JPG, PNG, HTML, EML
 productName: GroupDocs.Signature for .NET
 hideChildren: False
 ---
