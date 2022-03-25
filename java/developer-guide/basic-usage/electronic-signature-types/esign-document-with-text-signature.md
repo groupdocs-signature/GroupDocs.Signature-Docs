@@ -3,8 +3,8 @@ id: esign-document-with-text-signature
 url: signature/java/esign-document-with-text-signature
 title: eSign document with Text signature
 weight: 7
-description: "This article explains how to sign document with Text signature by GroupDocs.Signature API"
-keywords: 
+description: "This article explains how to sign document with Text signature by GroupDocs.Signature API. Let's try to add digital signature to a PDF programmatically."
+keywords: Add digital signature to a PDF programmatically, Text signature
 productName: GroupDocs.Signature for Java
 hideChildren: False
 ---

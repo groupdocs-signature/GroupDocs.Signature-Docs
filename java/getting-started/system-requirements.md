@@ -3,8 +3,8 @@ id: system-requirements
 url: signature/java/system-requirements
 title: System Requirements
 weight: 3
-description: "This article explains GroupDocs.Signature for Java system requirements."
-keywords: 
+description:  "GroupDocs.Signature for Java does not require any external software or third party tool to be installed."
+keywords: GroupDocs.Signature for Java,Signature 
 productName: GroupDocs.Signature for Java
 hideChildren: False
 ---

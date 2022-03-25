@@ -3,8 +3,8 @@ id: supported-document-formats
 url: signature/java/supported-document-formats
 title: Supported Document Formats
 weight: 2
-description: "This section describes GroupDocs.Signature for Java supported document types"
-keywords: 
+description: "It supports DOCX, DOCM, DOC, DOT, DOTM, XLS, XLSX, PDF, PPT, JPG, PNG, HTML, EML and many more."
+keywords: DOCX, DOCM, DOC, DOT, DOTM, XLS, XLSX, PDF, PPT, JPG, PNG, HTML, EML
 productName: GroupDocs.Signature for Java
 hideChildren: False
 ---

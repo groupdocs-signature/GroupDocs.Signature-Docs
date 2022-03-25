@@ -3,8 +3,8 @@ id: how-to-run-examples
 url: signature/java/how-to-run-examples
 title: How to Run Examples
 weight: 6
-description: "This article describes how to run GroupDocs.Signature for Java code examples."
-keywords: 
+description: "This article describes how to run Java digital signature API code examples. We offer multiple solutions on how you can run GroupDocs.Signature examples, by building your own or using our back-end or front-end examples out-of-the-box."
+keywords: digital signature API
 productName: GroupDocs.Signature for Java
 hideChildren: False
 ---
