@@ -3,7 +3,7 @@ id: developer-guide
 url: signature/java/developer-guide
 title: Developer Guide
 weight: 3
-description: : "This section decsribes how to add digital signature to pdf, docx, pptx, xlsx and many more with GroupDocs.Signature for Java library"
+description: "This section decsribes how to add digital signature to pdf, docx, pptx, xlsx and many more with GroupDocs.Signature for Java library"
 keywords: how to add digital signature to pdf, docx, pptx, xlsx
 productName: GroupDocs.Signature for Java
 hideChildren: False
