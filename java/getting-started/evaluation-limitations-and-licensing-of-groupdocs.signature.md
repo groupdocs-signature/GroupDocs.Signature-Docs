@@ -3,7 +3,7 @@ id: evaluation-limitations-and-licensing-of-groupdocs-signature
 url: signature/java/evaluation-limitations-and-licensing-of-groupdocs-signature
 title: Evaluation Limitations and Licensing of GroupDocs.Signature
 weight: 5
-description: : "free electronic signature Java api version is available to evaluate the API which will be similar as licensed but with few limitations"
+description: "free electronic signature Java api version is available to evaluate the API which will be similar as licensed but with few limitations"
 keywords: electronic signature api, ee electronic signature api, signature java api
 productName: GroupDocs.Signature for Java
 hideChildren: False
