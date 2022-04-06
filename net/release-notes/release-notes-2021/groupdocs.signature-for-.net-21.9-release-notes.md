@@ -99,9 +99,9 @@ This enumeration keeps supported cryptocurrency types.
 
 This class contains following properties
 
-* CryptoCurrencyType Type - the type of cryptocurency trasnfer [CryptoCurrencyType](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/cryptocurrencytype)
-* decimal Amount is the value as amount of trasnfer.
-* string Address is the address of the trasnfer.
+* CryptoCurrencyType Type - the type of cryptocurency transfer [CryptoCurrencyType](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/cryptocurrencytype)
+* decimal Amount is the value as amount of transfer.
+* string Address is the address of the transfer.
 * string Message to keep transfer message.
 * string CustomType to specify cryptocurrency name in case of custom cryptocurrency type.
 
@@ -109,7 +109,7 @@ This class contains following properties
 
 ```csharp
     /// <summary>
-    /// Represents Crypto currency transfer (reciever or transfer) for QR-Code.
+    /// Represents Crypto currency transfer (receive or send) for QR-Code.
     /// </summary>
     public class CryptoCurrencyTransfer
     {
