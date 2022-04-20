@@ -4,7 +4,7 @@ url: signature/java/delete-text-signatures-from-documents
 title: Delete Text signatures from documents
 weight: 4
 description: "This article explains how to delete Text electronic signatures with GroupDocs.Signature API."
-keywords: 
+keywords: delete text signature, how to delete Text electronic signatures
 productName: GroupDocs.Signature for Java
 hideChildren: False
 ---
