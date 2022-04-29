@@ -4,7 +4,7 @@ url: signature/net/delete-barcode-signatures-from-documents
 title: Delete Barcode signatures from documents
 weight: 1
 description: "This article explains how to delete Barcode electronic signatures with GroupDocs.Signature API."
-keywords: 
+keywords: delete Barcode,delete Barcode electronic signatures, how to delete Barcode electronic signatures
 productName: GroupDocs.Signature for .NET
 hideChildren: False
 ---
