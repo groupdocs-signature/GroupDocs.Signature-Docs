@@ -35,7 +35,7 @@ Then define GroupDocs.Signature for Java API dependency in your `pom.xml` as 
     <dependency>
         <groupId>com.groupdocs</groupId>
         <artifactId>groupdocs-signature</artifactId>
-        <version>19.11</version> 
+        <version>22.2.1</version> 
     </dependency>
 </dependencies>
 ```
