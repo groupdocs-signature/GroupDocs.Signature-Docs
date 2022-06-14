@@ -9,7 +9,7 @@ productName: GroupDocs.Signature for Java
 hideChildren: True
 ---
 {{< alert style="info" >}}
-![](signature/java/images/home.png) **Welcome to the GroupDocs.Signature for Java**  
+<img src="signature/java/images/home.png" width="110" height="110" alt="groupdocs-signature-java-home" align="left" style="margin: 0 30px 30px 0"/> **Welcome to the GroupDocs.Signature for Java**  
 GroupDocs.Signature for Java API allows developers to embed electronic signing into any mobile, tablet or web application or more. It supports text, image or digital signatures for various file formats. Using digital signatures, Java e-signing API permits users to authenticate and sign documents using passwords and digital certificates. 
 {{< /alert >}}
 
