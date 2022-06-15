@@ -6,7 +6,24 @@ weight: 1
 description: "This article explains how to add Barcode signature on document page with various options like barcode type, barcode text, positioning, alignment and other visual settings with GroupDocs.Signature"
 keywords: barcode, barcode signature, GroupDocs.Signature barcode, GroupDocs.Signature barcode signature
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Sign documents using Barcode and C#    
+        description: Put generated Barcode on any document with C# language by GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to add generated Barcode to various documents with C# 
+        description: Find out ways of signinig documents by Barcode using C#
+        steps:
+        - name: Load source file
+          text: Creating Signature calss instance demands file as a constructor parameter. It can be provided either as file path or as file stream. 
+        - name: Provide barcode options 
+          text: Provide all needed data while BarcodeSignOptions instantiating.
+        - name: Sign source and obtain result 
+          text: Invoke method Sign providing options and output file data. You can save signed file using file path or stream.
 ---
 ## What is a Barcode?
 

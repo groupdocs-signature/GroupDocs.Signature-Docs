@@ -6,7 +6,24 @@ weight: 7
 description: "This article explains how to sign document with Text signature by GroupDocs.Signature API. Let's try to add digital signature to a PDF programmatically."
 keywords: Add digital signature to a PDF programmatically, Text signature
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Documents signing with text in C#    
+        description: Put text on any document with C# language by GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to sign any documents with text using C# 
+        description: Learn all about signing a document by using a text and C#
+        steps:
+        - name: Load file which is planned to be signed
+          text: Create Signature object by passing file path or stream as a constructor parameter.
+        - name: Set up signing options 
+          text: Provide new ImageSignOptions class instance and fill all demanded data.
+        - name: Put text on source file and save result 
+          text: Invoke Sign method with signing options and output file path or stream.
 ---
 ## What is a Text signature?
 

@@ -6,7 +6,24 @@ weight: 2
 description: "This article explains how digitally esign documents with certificates using GroupDocs.Signature API"
 keywords: digital signature, certificate, digitally esign, esign with certificate, pfx, pfx certifiate
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Sign documents with digital certificate and C#    
+        description: Sign specific document with digital certificate and C# language by GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to add digital certificate to document using C# 
+        description: Learn how to sign document with digital certificate by C#
+        steps:
+        - name: Load source file which is from supported file types
+          text: Create Signature object by passing file as a constructor parameter. Either file path or file stream can be provided. 
+        - name: Specify signing options 
+          text: Create an instance of DigitalSignOptions class.
+        - name: Sign source file and save result 
+          text: Invoke Sign method with signing options and file path for signed file. File stream can be used as well.
 ---
 ## What is a Digital Signature?
 

@@ -6,7 +6,24 @@ weight: 6
 description: "This article explains how sign documents with electronic signature as QR code on document page with GroupDocs.Signature API."
 keywords: electronic signature, QR code 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Sign documents using QR-code and C#    
+        description: Put generated QR-code on any document with C# language by GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to add generated QR-code to any document using C# 
+        description: Learn how to sign any document with QR-code and C#
+        steps:
+        - name: Provide source file
+          text: Create an instance of Signature object by passing file as a constructor parameter. You may provide either file path or file stream. 
+        - name: Specify signing options 
+          text: Instantiate QrCodeSignOptions class. Set up all needed data.
+        - name: Sign file and get result 
+          text: Call Sign method with signing options and file path for result file. You also is able to use stream as output.
 ---
 ## What is a QR-code?
 

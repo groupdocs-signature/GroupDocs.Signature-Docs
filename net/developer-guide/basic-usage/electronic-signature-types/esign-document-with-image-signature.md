@@ -6,7 +6,24 @@ weight: 4
 description: "This article demonstrates how to add signature image on document page with GroupDocs.Signature."
 keywords: signature image, add signature image, how to add signature image
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Sign documents with image in C#    
+        description: Sign documents with various images fastly and easily with C# language and GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to sign any documents with image using C# 
+        description: Learn all about signing a document with image by C#
+        steps:
+        - name: Load file which is belongs to various supported file types
+          text: Instantiate Signature object by passing file as a constructor parameter. You may provide either file path or file stream. 
+        - name: Specify signing options 
+          text: Create an instance of ImageSignOptions class.
+        - name: Sign source file and save result 
+          text: Invoke Sign method with signing options and file path for signed file. File stream can be used as well.
 ---
 ## What is a Image Signature?
 
