@@ -7,6 +7,8 @@ description: "This section decsribes how to add digital signature to pdf, docx, 
 keywords: how to add digital signature to pdf, docx, pptx, xlsx
 productName: GroupDocs.Signature for Java
 hideChildren: False
+structuredData:
+    showOrganization: True
 ---
 {{< alert style="info" >}}
 This section describes some basic and advanced use cases of GroupDocs.Signature for Java. Please refer to [GitHub repository](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java) for more examples and samples.

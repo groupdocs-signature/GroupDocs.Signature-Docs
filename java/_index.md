@@ -7,6 +7,8 @@ description: "GroupDocs.Signature for Java is an easy to use electronic signatur
 keywords: electronic signature, signature, c# 
 productName: GroupDocs.Signature for Java
 hideChildren: True
+structuredData:
+    showOrganization: True
 ---
 {{< alert style="info" >}}
 <img src="signature/java/images/home.png" width="110" height="110" alt="groupdocs-signature-java-home" align="left" style="margin: 0 30px 30px 0"/> **Welcome to the GroupDocs.Signature for Java**  

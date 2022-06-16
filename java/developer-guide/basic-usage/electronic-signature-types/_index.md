@@ -7,6 +7,8 @@ description: "This documentation section describes different type of signatures 
 keywords: text signature, image signature, digital signature, stamp signature, barcode signature, qr-code signatures, form-field signature, metadata signature
 productName: GroupDocs.Signature for Java
 hideChildren: False
+structuredData:
+    showOrganization: True
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) for Java supports wide range of electronic signature types that are listed below:
 
