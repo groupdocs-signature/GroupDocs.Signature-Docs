@@ -38,7 +38,7 @@ It is common problem to add additional data in various types of business documen
 
 ### Signing document with Codabar in C\#
 
-To render your file to HTML file(s) with embedded resources do the following steps:
+To sign a particular document with just generated barcode:
 
 * Instantiate Signature class providing path to source document or document stream.
 * Create the BarcodeSignOptions instance and set up all demanded fields.
@@ -136,6 +136,8 @@ Another way to improve documents is to generate barcode firstly and add it to do
             GroupDocs.Signature.Signature.GenerateSignaturePreview(previewOptions);
 
 ```
+Image containing generated barcode might looks in this way:
+
 ![Generated barcode](signature/net/images/signature-use-cases/how-to-generate-barcode-and-sign-document-using-csharp/code93extended.png)
 
 ## Get a Free API License
@@ -151,4 +153,4 @@ Moreover, it is possible to learn how to use GroupDocs.Signature in your .NET ap
 
 ## See also
 
-* [How to sign documents with barcodes using C#](Signature/net/how-to-generate-barcode-and-sign-document-using-csharp/)
+* [How to sign documents with barcodes using C#](signature/net/how-to-generate-barcode-and-sign-document-using-csharp/)
