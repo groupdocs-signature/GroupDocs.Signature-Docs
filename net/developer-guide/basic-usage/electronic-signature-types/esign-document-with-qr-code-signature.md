@@ -9,8 +9,8 @@ productName: GroupDocs.Signature for .NET
 structuredData:
     showOrganization: True
     application:    
-        name: Sign documents using QR-code and C#    
-        description: Put generated QR-code on any document with C# language by GroupDocs.Signature for .NET APIs
+        name: Sign documents with QR code using C#    
+        description: Add QR code on any document with C# language by GroupDocs.Signature for .NET APIs
         productCode: signature
         productPlatform: net 
     showVideo: True

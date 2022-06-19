@@ -1,7 +1,7 @@
 ---
 id: load-password-protected-document
 url: signature/net/load-password-protected-document
-title: Load password-protected document
+title: How to load password-protected document
 weight: 2
 description: "This article explains how to load password protected document with GroupDocs.Signature API."
 keywords: 

@@ -1,38 +1,22 @@
 ---
-id: how-to-generate-barcode-and-sign-document-using-csharp
-url: signature/net/how-to-generate-barcode-and-sign-document-using-csharp
-title: How to generate barcode and sign document using C#
-weight: 2
-description: "This guide describes how to improve your document with generated barcodes using C#. Sign your documents with Codabar, Event or Code39Extended using GroupDocs.Signature .NET API by GroupDocs."
-keywords: Barcode Signature in CSharp, Sign document with Codabar in CSharp, Sign document with Event in CSharp, Sign document with Code39Extended in CSharp
+id: how-to-generate-qrcode-and-sign-document-using-csharp
+url: signature/net/how-to-generate-qrcode-and-sign-document-using-csharp
+title: How to generate QR code and sign document using C#
+weight: 1
+description: "This topic describes how to generate QR Code and add it to document on any page using C#. Sign your documents with QR Code using GroupDocs.Signature .NET API by GroupDocs."
+keywords: Creating QR Code in CSharp, QR Code signature in CSharp, Sign document with QR Code in CSharp
 productName: GroupDocs.Signature for .NET
-structuredData:
-    showOrganization: True
-    application:    
-        name: Generate Barcode and sign document with it using C#    
-        description: Creating Barcode signature and it to document with C# language by GroupDocs.Signature for .NET APIs
-        productCode: signature
-        productPlatform: net 
-    showVideo: True
-    howTo:
-        name: How to add Barcode to various documents with C# 
-        description: Find out ways of signinig documents with the Barcode using C#
-        steps:
-        - name: Load source document
-          text: Creating Signature instance with file path or stream as a constructor parameter will load the document. 
-        - name: Provide barcode options. 
-          text: Set specific properties of the the BarcodeSignOption instance like a Barcode type, barcode text and signatuer appearence settings.
-        - name: Sign source and obtain result 
-          text: Invoke method Sign with passing created options and output file data. You can save signed file using file path or stream.
+hideChildren: False
+toc: True
 ---
 
-Barcodes represent textual information as a quite small image which could be automatically scanned. Such approach brings new opportunities in computer processing of documents like sorting or moving through a business work-flow. In this article, we will discuss useful way to sign electronic documents with data encrypted in Bar or QR codes using C# in .NET applications.
+QR Code is a machine-readable image that can contain any limited information. Specific QR codes often contain data for a locator, identifier, or tracker that points to a website or application. A QR Code uses specific data to represent a object with its properties. For the QR Code enter your data. Each property will describe the QR Code type details. Press Generate Button and download generated QR Code image. Test the QR code with any scanner or mobile camera! Share and distribute your QR code. Share and post for everyone! The generated QR code can be shared over the social media as generated image, QR Code can be scanned over any mobile camera! Share and distribute your QR code to spread the information in it!
 
 There are following topics could be read in this article:
 
-* [Native .NET API for Electronic Signatures](signature/net/how-to-generate-barcode-and-sign-document-using-csharp/#native-net-api-for-electronic-signatures)
-* [How to sign PDF files with barcode](signature/net/how-to-generate-barcode-and-sign-document-using-csharp/#how-to-sign-pdf-files-with-barcode)
-* [Signing document with Codabar in C\#](signature/net/how-to-generate-barcode-and-sign-document-using-csharp/#signing-document-with-codabar-in-c)
+* [eSign document with QR-code signature](signature/net/esign-document-with-qr-code-signature/)
+* [Advanced document signing with QR-code](signature/net/sign-document-with-qr-code-signature-advanced/)
+* [Sign document with embedded and encrypted data in QR-code signatures](signature/net/sign-document-with-embedded-and-encrypted-data-in-qr-code-signatures/)
 * [Signing document with Event QR-code in C\#](signature/net/how-to-generate-barcode-and-sign-document-using-csharp/#signing-document-with-event-qr-code-in-c)
 * [Barcode and Qr-code image generation](signature/net/how-to-generate-barcode-and-sign-document-using-csharp/#barcode-and-qr-code-image-generation-in-c)
 
@@ -46,7 +30,7 @@ Use the [downloads section](https://downloads.groupdocs.com/signature/net) to ob
 PM> Install-Package GroupDocs.Signature
 ```
 
-## How to sign PDF files with barcode
+## How to sign PDF files with QR Code
 
 It is common problem to add additional data in various types of business documents. Such document may looks as in the picture below. The one of the most useful ways is to place a barcode directly on the document page.
 
