@@ -18,7 +18,7 @@ There are following topics could be read in this article:
 * [How to sign PDF files with barcode](signature/net/how-to-generate-barcode-and-sign-document-using-csharp/#how-to-sign-pdf-files-with-barcode)
 * [Signing document with Codabar in C\#](signature/net/how-to-generate-barcode-and-sign-document-using-csharp/#signing-document-with-codabar-in-c)
 * [Signing document with Event QR-code in C\#](signature/net/how-to-generate-barcode-and-sign-document-using-csharp/#signing-document-with-event-qr-code-in-c)
-* [Barcode and Qr-code image generation](signature/net/how-to-generate-barcode-and-sign-document-using-csharp/#layouts-rendering)
+* [Barcode and Qr-code image generation](signature/net/how-to-generate-barcode-and-sign-document-using-csharp/#barcode-and-qr-code-image-generation-in-c)
 
 ## Native .NET API for Electronic Signatures
 
