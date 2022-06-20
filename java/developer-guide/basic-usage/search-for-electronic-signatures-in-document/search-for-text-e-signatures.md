@@ -6,7 +6,24 @@ weight: 5
 description: "This topic explains how to search for text electronic signatures within the document pages by GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Search for text signatures in documents in Java    
+        description: Search text signatures in various documents fast and easily with Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to search any text signatures in documents using Java 
+        description: Get additional information of searching text signatures in documents with Java
+        steps:
+        - name: Load file which is belongs to various supported file types.
+          text: Instantiate Signature object by passing file as a constructor parameter. You may provide either file path or file stream. 
+        - name: Get list of text signatures 
+          text: Invoke method Search providing appropriate signature type.
+        - name: Process list of found signatures
+          text: Loop through list of found text signatures.
 ---
 [GroupDocs.Signature](https://products.groupdocs.com/signature/java) provides [TextSearchOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/TextSearchOptions) class to specify different options to search for Text electronic signatures within document.
 

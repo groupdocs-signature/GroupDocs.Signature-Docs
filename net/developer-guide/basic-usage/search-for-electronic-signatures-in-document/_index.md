@@ -7,6 +7,8 @@ description: "This topic learns how to search for document electronic signature 
 keywords: electronic signature, search for document electronic signature
 productName: GroupDocs.Signature for .NET
 hideChildren: False
+structuredData:
+    showOrganization: True
 ---
 Electronically signed documents can be searched for specific signatures for different purposes, such as signature properties review, etc.
 

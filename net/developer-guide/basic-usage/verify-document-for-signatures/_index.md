@@ -7,4 +7,6 @@ description: "This topic explains how to verify documents for various electronic
 keywords: 
 productName: GroupDocs.Signature for .NET
 hideChildren: False
+structuredData:
+    showOrganization: True
 ---

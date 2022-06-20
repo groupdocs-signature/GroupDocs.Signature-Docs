@@ -6,7 +6,24 @@ weight: 8
 description: "This article explains how to search for multiple electronic signatures across document pages with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Search for multiple signatures in documents in C#    
+        description: Search multiple signatures in various documents fast and easily with C# language and GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to search any multiple signatures in documents using C# 
+        description: Get additional information of searching multiple signatures in documents with C#
+        steps:
+        - name: Load file which is belongs to various supported file types.
+          text: Instantiate Signature object by passing file as a constructor parameter. You may provide either file path or file stream. 
+        - name: Get list of multiple signatures 
+          text: Invoke method Search providing appropriate signature type.
+        - name: Process list of found multiple signatures
+          text: Loop through list of found barcodes.
 ---
 Sometimes you may want to search for electronic signatures of different types simultaneously. [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) allows searching documents for different signature types in an easy and intuitive way. In common words the idea is to pass collection of desired signature types to Search method.
 

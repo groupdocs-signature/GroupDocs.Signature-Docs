@@ -6,7 +6,24 @@ weight: 4
 description: "This article explains how to search for Form Fields signatures with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Search for form-fields signatures in documents in Java    
+        description: Search form-fields in various documents fast and easily with Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to search any form-fields in documents using Java 
+        description: Get additional information of searching form-fields in documents with Java
+        steps:
+        - name: Load file which is belongs to various supported file types.
+          text: Instantiate Signature object by passing file as a constructor parameter. You may provide either file path or file stream. 
+        - name: Get list of form-fields 
+          text: Invoke method Search providing appropriate signature type.
+        - name: Process list of found signatures
+          text: Loop through list of found form-fields.
 ---
 To search for Form Fields e-signatures inside document you should pass instance of [FormFieldSearchOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/FormFieldSearchOptions) class to a search method of [GroupDocs.Signature](https://products.groupdocs.com/signature/java).  
 Here are the guide for searching Form Field e-signatures :

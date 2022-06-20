@@ -6,7 +6,24 @@ weight: 2
 description: "This topic explains how to search for digital electronic signatures across the documents with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Search for digital signatures in documents in Java    
+        description: Search digital signatures in various documents fast and easily with Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to search any digital signatures in documents using Java 
+        description: Get additional information of searching digital signatures in documents with Java
+        steps:
+        - name: Load file which is belongs to various supported file types.
+          text: Instantiate Signature object by passing file as a constructor parameter. You may provide either file path or file stream. 
+        - name: Get list of digital signatures 
+          text: Invoke method Search providing appropriate signature type.
+        - name: Process list of found signatures
+          text: Loop through list of found digital signatures.
 ---
 [GroupDocs.Signature](https://products.groupdocs.com/signature/java) offers an ability to find Digital signatures that are applied to document and returns its digital signature certificate.  
 Please follow these steps to search for Digital signatures within the document:

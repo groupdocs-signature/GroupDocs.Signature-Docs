@@ -6,7 +6,24 @@ weight: 7
 description: "This article explains how to search for Image electronic signatures with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Search for images signatures in documents in C#    
+        description: Search images in various documents fast and easily with C# language and GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to search any images in documents using C# 
+        description: Get additional information of searching images in documents with C#
+        steps:
+        - name: Load file which is belongs to various supported file types.
+          text: Instantiate Signature object by passing file as a constructor parameter. You may provide either file path or file stream. 
+        - name: Get list of images 
+          text: Invoke method Search providing appropriate signature type.
+        - name: Process list of found signatures
+          text: Loop through list of found images.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [ImageSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesearchoptions) class to specify different options to search for Image e-signatures.
 

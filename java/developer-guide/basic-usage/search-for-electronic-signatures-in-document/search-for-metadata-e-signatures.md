@@ -6,7 +6,24 @@ weight: 3
 description: "This topic explains how to search for metadata signatures within the documents with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Search for metadata in documents in Java    
+        description: Search metadata in various documents fast and easily with Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to search any metadata in documents using Java 
+        description: Get additional information of searching metadata in documents with Java
+        steps:
+        - name: Load file which is belongs to various supported file types.
+          text: Instantiate Signature object by passing file as a constructor parameter. You may provide either file path or file stream. 
+        - name: Get list of metadata 
+          text: Invoke method Search providing appropriate signature type.
+        - name: Process list of found signatures
+          text: Loop through list of found metadata.
 ---
 [GroupDocs.Signature](https://products.groupdocs.com/signature/java) provides a [MetadataSearchOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/MetadataSearchOptions) class to search Metadata electronic signatures within document.  
 Here are the steps to search for Metadata signatures using GroupDocs.Signature API:

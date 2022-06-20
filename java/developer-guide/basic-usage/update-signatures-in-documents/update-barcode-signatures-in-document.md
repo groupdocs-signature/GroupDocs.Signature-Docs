@@ -6,7 +6,26 @@ weight: 1
 description: "This article explains how to update Barcode electronic signatures with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Update barcode signatures in documents in Java    
+        description: Update barcode signatures in various documents fast and easily with Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to update any barcode signatures in documents using Java 
+        description: Get additional information of updating barcode signatures in documents with Java
+        steps:
+        - name: Load file which is belongs to various supported file types.
+          text: Instantiate Signature object by passing file as a constructor parameter. You may provide either file path or file stream. 
+        - name: Get list of barcode signatures
+          text: Instantiate BarcodeSearchOptions object and invoke method Search with it.
+        - name: Update found signature
+          text: Select one of found signature and update it properties in desirable way.
+        - name: Update document
+          text: Call method Update passing updated signature.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [BarcodeSignature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/BarcodeSignature) class to manipulate barcode signatures location, size and textual content. 
 

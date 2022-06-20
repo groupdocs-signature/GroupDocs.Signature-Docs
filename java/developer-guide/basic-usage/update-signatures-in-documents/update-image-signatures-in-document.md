@@ -6,7 +6,26 @@ weight: 2
 description: "This article explains how to update Image electronic signatures with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Update images in documents in Java    
+        description: Update image signatures in various documents fast and easily with Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to update any images in documents using Java 
+        description: Get additional information of updating image signatures in documents with Java
+        steps:
+        - name: Load file which is belongs to various supported file types.
+          text: Instantiate Signature object by passing file as a constructor parameter. You may provide either file path or file stream. 
+        - name: Get list of images
+          text: Instantiate ImageSearchOptions object and invoke method Search with it.
+        - name: Update found signature
+          text: Select one of found signature and update it properties in desirable way.
+        - name: Update document
+          text: Call method Update passing updated signature.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [ImageSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/ImageSignature) class to manipulate barcode signatures location, size and textual content. 
 
@@ -24,30 +43,30 @@ Here are the steps to update Barcode signature in the document with GroupDocs.Si
 This example shows how to update Image signature that was found using  [search](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method.
 
 ```java
-Signature signature = new Signature("sampleSigned.pdf");
-try 
+using (Signature signature = new Signature("sampleSigned.pdf"))
 {
     ImageSearchOptions options = new ImageSearchOptions();
-
     // search for image signatures in document
-    List<ImageSignature> signatures = signature.search(ImageSignature.class,options);
-    if (signatures.size() > 0)
+    List<ImageSignature> signatures = signature.Search<ImageSignature>(options);
+    if(signatures.Count > 0)
     {
-        ImageSignature imageSignature = signatures.get(0);
-        imageSignature.setLeft(100);
-        imageSignature.setTop(100);
-        boolean result = signature.update("sampleSigned-output.pdf",imageSignature);
-        if (result)
+        ImageSignature imageSignature = signatures[0];
+        // change Image properties
+        signatureToUpdate.Top = 200;
+        signatureToUpdate.Left = 200;
+        signatureToUpdate.Width = 300;
+        signatureToUpdate.Height = 150;
+
+        bool result = signature.Update(imageSignature);
+        if(result)
         {
-            System.out.print("Image signature at location " + imageSignature.getLeft() + "x" + imageSignature.getTop() + " and Size " + imageSignature.getSize() + " was updated in the document [" + fileName + ".");
+            Console.WriteLine($"Signature with Top '{imageSignature.Top}' was updated in the document ['{fileName}'].");
         }
         else
         {
-            System.out.print("Signature was not updated in the document! Signature at location " + imageSignature.getLeft() + "x" + imageSignature.getTop() + " and Size " + imageSignature.getSize() + " was not found!");
+            Console.WriteLine($"Signature was not updated in  the document! Signature with Top '{imageSignature.Top}' was not found!");
         }
     }
-} catch (Exception e) {
-    throw new GroupDocsSignatureException(e.getMessage());
 }
 ```
 

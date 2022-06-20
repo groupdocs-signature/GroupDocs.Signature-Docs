@@ -7,4 +7,6 @@ description: "This section shows how to update electronic signatures in the docu
 keywords: 
 productName: GroupDocs.Signature for .NET
 hideChildren: False
+structuredData:
+    showOrganization: True
 ---

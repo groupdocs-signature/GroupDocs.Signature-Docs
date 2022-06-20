@@ -7,6 +7,8 @@ description: "This topic learns how to search for document electronic signature 
 keywords: electronic signature, search for document electronic signature
 productName: GroupDocs.Signature for Java
 hideChildren: False
+structuredData:
+    showOrganization: True
 ---
 ## Search for electronic signatures in document
 

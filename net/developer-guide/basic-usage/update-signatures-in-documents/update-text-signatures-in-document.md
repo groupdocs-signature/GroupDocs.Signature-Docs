@@ -6,7 +6,26 @@ weight: 4
 description: "This article explains how to update Text electronic signatures with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Update text signatures in documents in C#    
+        description: Update text signatures in various documents fast and easily with C# language and GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to update any text signatures in documents using C# 
+        description: Get additional information of updating text signatures in documents with C#
+        steps:
+        - name: Load file which is belongs to various supported file types.
+          text: Instantiate Signature object by passing file as a constructor parameter. You may provide either file path or file stream. 
+        - name: Get list of text signatures
+          text: Instantiate BarcodeSearchOptions object and invoke method Search with it.
+        - name: Update found signature
+          text: Select one of found signature and update it properties in desirable way.
+        - name: Update document
+          text: Call method Update passing updated signature.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [TextSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/textsignature) class to manipulate text signatures location, size and textual content.  
 Please be aware that [Update](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/update/) method modifies the same document that was passed to constructor of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class.

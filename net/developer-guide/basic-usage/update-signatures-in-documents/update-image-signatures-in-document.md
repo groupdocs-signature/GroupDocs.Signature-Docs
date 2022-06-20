@@ -6,7 +6,26 @@ weight: 2
 description: "This article explains how to update Image electronic signatures with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Update images in documents in C#    
+        description: Update image signatures in various documents fast and easily with C# language and GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to update any images in documents using C# 
+        description: Get additional information of updating image signatures in documents with C#
+        steps:
+        - name: Load file which is belongs to various supported file types.
+          text: Instantiate Signature object by passing file as a constructor parameter. You may provide either file path or file stream. 
+        - name: Get list of images
+          text: Instantiate ImageSearchOptions object and invoke method Search with it.
+        - name: Update found signature
+          text: Select one of found signature and update it properties in desirable way.
+        - name: Update document
+          text: Call method Update passing updated signature.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [ImageSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/imagesignature) class to manipulate barcode signatures location, size and textual content.
 Please be aware that [Update](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/update/) method modifies the same document that was passed to constructor of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class.
@@ -24,28 +43,26 @@ This example shows how to update Image signature that was found using  [Search
 ```csharp
 using (Signature signature = new Signature("sampleSigned.pdf"))
 {
-    TextSearchOptions options = new TextSearchOptions();
-    // search for text signatures in document
-    List<TextSignature> signatures = signature.Search<TextSignature>(options);
+    ImageSearchOptions options = new ImageSearchOptions();
+    // search for image signatures in document
+    List<ImageSignature> signatures = signature.Search<ImageSignature>(options);
     if(signatures.Count > 0)
     {
-        TextSignature textSignature = signatures[0];
-        // change Text property
-        textSignature.Text = "John Walkman";
-        // change position
-        textSignature.Left = textSignature.Left + 10;
-        textSignature.Top = textSignature.Top + 10;
-        // change size. Please note not all documents support changing signature size
-        textSignature.Width = 200;
-        textSignature.Height = 100;
-        bool result = signature.Update(textSignature);
+        ImageSignature imageSignature = signatures[0];
+        // change Image properties
+        signatureToUpdate.Top = 200;
+        signatureToUpdate.Left = 200;
+        signatureToUpdate.Width = 300;
+        signatureToUpdate.Height = 150;
+
+        bool result = signature.Update(imageSignature);
         if(result)
         {
-            Console.WriteLine($"Signature with Text '{textSignature.Text}' was updated in the document ['{fileName}'].");
+            Console.WriteLine($"Signature with Top '{imageSignature.Top}' was updated in the document ['{fileName}'].");
         }
         else
         {
-            Console.WriteLine($"Signature was not updated in  the document! Signature with Text '{textSignature.Text}' was not found!");
+            Console.WriteLine($"Signature was not updated in  the document! Signature with Top '{imageSignature.Top}' was not found!");
         }
     }
 }

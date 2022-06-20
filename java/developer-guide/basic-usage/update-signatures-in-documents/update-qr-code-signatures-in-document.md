@@ -6,7 +6,26 @@ weight: 3
 description: "This article explains how to update QR-code electronic signatures with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Update QR-code signatures in documents in Java    
+        description: Update QR-code signatures in various documents fast and easily with Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to update any QR-code signatures in documents using Java 
+        description: Get additional information of updating QR-code signatures in documents with Java
+        steps:
+        - name: Load file which is belongs to various supported file types.
+          text: Instantiate Signature object by passing file as a constructor parameter. You may provide either file path or file stream. 
+        - name: Get list of QR-code signatures
+          text: Instantiate BarcodeSearchOptions object and invoke method Search with it.
+        - name: Update found signature
+          text: Select one of found signature and update it properties in desirable way.
+        - name: Update document
+          text: Call method Update passing updated signature.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [QrCodeSignature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/QrCodeSignature) class to manipulate QR-code signatures location, size, encode type and textual content. 
 
