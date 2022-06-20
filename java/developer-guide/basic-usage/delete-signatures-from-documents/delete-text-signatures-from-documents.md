@@ -6,7 +6,25 @@ weight: 4
 description: "This article explains how to delete Text electronic signatures with GroupDocs.Signature API."
 keywords: delete text signature, how to delete Text electronic signatures
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Remove Text electronic signatures from documents in Java    
+        description: Delete Text electronic signatures presented in documents in convenient way with Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to clear any documents from text electronic signatures using Java 
+        description: Information about removing text electronic signatures from documents by Java
+        steps:
+        - name: Load file which is belongs to various supported file types
+          text: Instantiate Signature object by passing file as a constructor parameter. You may provide either file path or file stream. 
+        - name: Get list of text electronic signatures presented in document 
+          text: Create an instance of TextSearchOptions class, fill data and call Search method of signature.
+        - name: Delete one of found text electronic signatures and save result 
+          text: Invoke Delete method passing found text electronic signature and file path for signed file. File stream can be used as well.
+
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [TextSignature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/TextSignature) class to manipulate text signatures and [delete](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#delete(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature)) them from the documents.   
 Please be aware that [delete](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#delete(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature)) method modifies the same document that was passed to constructor of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class.

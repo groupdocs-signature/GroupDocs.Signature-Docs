@@ -6,7 +6,8 @@ weight: 5
 description: "This article shows how to add Metadata signature to the each document type meta layer with different data types over with GroupDocs.Signature"
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
 ---
 ## What is a Metadata?
 

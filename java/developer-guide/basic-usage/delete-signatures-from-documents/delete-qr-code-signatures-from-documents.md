@@ -6,7 +6,24 @@ weight: 3
 description: "This article explains how to delete QR code electronic signatures with GroupDocs.Signature API."
 keywords: delete QR code, how to delete QR code
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Remove QR codes from documents in Java    
+        description: Delete QR codes presented in documents in convenient way with Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to clear any documents from QR codes using Java 
+        description: Information about removing QR codes from documents by Java
+        steps:
+        - name: Load file which is belongs to various supported file types
+          text: Instantiate Signature object by passing file as a constructor parameter. You may provide either file path or file stream. 
+        - name: Get list of QR codes presented in document 
+          text: Create an instance of QrCodeSearchOptions class, fill data and call Search method of signature.
+        - name: Delete one of found QR codes and save result 
+          text: Invoke Delete method passing found QR codes and file path for signed file. File stream can be used as well.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [QrCodeSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/QrCodeSignature) class to manipulate QR-code signatures and delete them from the documents over [delete](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#delete(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature)) method.
 

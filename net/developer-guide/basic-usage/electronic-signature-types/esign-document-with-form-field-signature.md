@@ -6,7 +6,24 @@ weight: 3
 description: "This article explains how to add various types of Form Field signatures on document page with options on component positioning, alignment and other visual options with GroupDocs.Signature"
 keywords: form fields,add various types of Form Field signature, component positioning
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Documents signing with form fields in C#    
+        description: Sign documents with form fields and C# language by GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to sign any documents with form fields using C# 
+        description: Learn all about signing a document by using form fields and C#
+        steps:
+        - name: Load file which is planned to be signed
+          text: Create Signature object by passing file path or stream as a constructor parameter.
+        - name: Set up signing options 
+          text: Provide new FormFieldSignature class instance and fill all demanded data.
+        - name: Sign source file with form fields and save result 
+          text: Invoke Sign method with signing options and output file path or stream.
 ---
 ## What is a Form Field?
 

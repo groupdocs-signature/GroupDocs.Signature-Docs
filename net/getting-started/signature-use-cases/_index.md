@@ -7,5 +7,7 @@ keywords: signature use cases, sign codabar, sign pdf, sign event, generate qr-c
 description: "In this section you will find examples of using GroupDocs.Signature for .NET while documents processing."
 productName: GroupDocs.Signature for .NET
 toc: False
+structuredData:
+    showOrganization: True
 ---
 This section explains best solutions for resolving common issues while documents signing with GroupDocs.Signature API. Discover more about popular GroupDocs.Signature features and use cases from the guides below.

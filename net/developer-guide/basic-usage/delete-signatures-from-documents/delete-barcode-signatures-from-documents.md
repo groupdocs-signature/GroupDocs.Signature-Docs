@@ -6,7 +6,24 @@ weight: 1
 description: "This article explains how to delete Barcode electronic signatures with GroupDocs.Signature API."
 keywords: delete Barcode,delete Barcode electronic signatures, how to delete Barcode electronic signatures
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Remove Barcodes from documents in C#    
+        description: Delete Barcodes presented in documents in convenient way with C# language and GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to clear any documents from barcodes using C# 
+        description: Information about removing barcodes from documents by C#
+        steps:
+        - name: Load file which is belongs to various supported file types
+          text: Instantiate Signature object by passing file as a constructor parameter. You may provide either file path or file stream. 
+        - name: Get list of barcodes presented in document 
+          text: Create an instance of BarcodeSearchOptions class, fill data and call Search method of signature.
+        - name: Delete one of found barcodes and save result 
+          text: Invoke Delete method passing found barcode and file path for signed file. File stream can be used as well.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [BarcodeSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/barcodesignature) class to manipulate barcode signatures and delete them from the documents over [Delete](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/delete) method.  
 Please be aware that [Delete](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/delete) method modifies the same document that was passed to constructor of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class.

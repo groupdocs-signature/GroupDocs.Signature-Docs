@@ -6,7 +6,24 @@ weight: 3
 description: "This article explains how to add metadata signatures to Presentation document with GroupDocs.Signature"
 keywords: Presentation metadata, Presentation metadata signature
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Signing presentations with metadata in C#    
+        description: Adding new metadata to presentations with C# language by GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to create new metadata in presentations using C# 
+        description: Learn all about signing a presentation by metadata and C#
+        steps:
+        - name: Load file which is planned to be signed
+          text: Create Signature object by passing file path or stream as a constructor parameter.
+        - name: Set up signing options 
+          text: Create demanded PresentationMetadataSignature class instances and add them to array.
+        - name: Sign source file and save result 
+          text: Invoke Sign method with array of signing options and output file path or stream.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [PresentationMetadataSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/presentationmetadatasignature) class to specify different Metadata signature objects for [MetadataSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/metadatasignoptions) instance to sign Presentation document files.
 Presentation document metadata is hidden attributes, some of them are visible only over viewing standard document properties like Author, Creation Date, Producer, Entry, Keywords etc.  

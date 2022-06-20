@@ -6,7 +6,24 @@ weight: 2
 description: "This article explains how to delete Image electronic signatures with GroupDocs.Signature API."
 keywords: delete Image electronic signatures, how to delete Image electronic signatures
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Remove Images from documents in Java    
+        description: Delete Images presented in documents in convenient way with Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to clear any documents from images using Java 
+        description: Information about removing images from documents by Java
+        steps:
+        - name: Load file which is belongs to various supported file types
+          text: Instantiate Signature object by passing file as a constructor parameter. You may provide either file path or file stream. 
+        - name: Get list of images presented in document 
+          text: Create an instance of ImageSearchOptions class, fill data and call Search method of signature.
+        - name: Delete one of found images and save result 
+          text: Invoke Delete method passing found images and file path for signed file. File stream can be used as well.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [ImageSignature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/ImageSignature) class to manipulate image signatures and delete them from the documents over [delete](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#delete(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature)) method.  
 Please be aware that [delete](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#delete(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature)) method modifies the same document that was passed to constructor of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class.

@@ -6,7 +6,24 @@ weight: 5
 description: "This article explains how to sign Word Processing document with metadata signatures by GroupDocs.Signature."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Sign Word Processing documents with metadata updating in Java    
+        description: Update metadata in Word Processing documents with Java language by GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How change metadata in Word Processing documents using Java 
+        description: Learn all about signing Word Processing documents by metadata and Java
+        steps:
+        - name: Load file which is planned to be signed
+          text: Create Signature object by passing file path or stream as a constructor parameter.
+        - name: Set up signing options 
+          text: Create demanded WordProcessingMetadataSignature class instances and add them to array.
+        - name: Sign source file and save result 
+          text: Invoke Sign method with array of signing options and output file path or stream.
 ---
 [GroupDocs.Signature](https://products.groupdocs.com/signature/java) provides [WordProcessingMetadataSignature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures.metadata/WordProcessingMetadataSignature) class to specify different Metadata signature objects for [MetadataSignOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/MetadataSignOptions) instance to sign Word Processing document files.   
 Word Processing document metadata is hidden attributes, some of them are visible only over viewing standard document properties like Author, Creation Date, Producer, Entry, Keywords etc.  

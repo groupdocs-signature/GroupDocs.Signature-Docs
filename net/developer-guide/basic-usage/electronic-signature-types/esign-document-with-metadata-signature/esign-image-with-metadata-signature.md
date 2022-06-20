@@ -6,7 +6,24 @@ weight: 1
 description: "This article shows how to add metadata signatures to the image exif metadata layer with various data types"
 keywords: image exif, image metadata, image meta exif, image exif signature
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Images metadata updating in C#    
+        description: Change metadata of images with C# language by GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to add metadata to images using C# 
+        description: Learn all about signing an image by metadata and C#
+        steps:
+        - name: Load file which is planned to be signed
+          text: Create Signature object by passing file path or stream as a constructor parameter.
+        - name: Set up signing options 
+          text: Create demanded ImageMetadataSignature class instances and add them to array.
+        - name: Sign source file and save result 
+          text: Invoke Sign method with array of signing options and output file path or stream.
 ---
 Metadata signature for Image document is an electronic signature based on image metadata standard. Most image formats support metadata specification or [EXIF](https://en.wikipedia.org/wiki/Exif). Image metadata is dictionary map with unique whole short identifier in range 0-65535, Some identifiers are reserved by [EXIF specification.](https://www.exiv2.org/tags.html) From signature perspective image metadata may content any hidden value of standard (int,char, string) or custom type (user defined class), be encrypted and decrypted back by known key over Search method.
 

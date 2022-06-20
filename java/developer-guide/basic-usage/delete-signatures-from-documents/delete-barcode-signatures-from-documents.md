@@ -6,7 +6,25 @@ weight: 1
 description: "This article explains how to delete Barcode electronic signatures with GroupDocs.Signature API."
 keywords: delete Barcode,delete Barcode electronic signatures, how to delete Barcode electronic signatures
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Remove Barcodes from documents in Java    
+        description: Delete Barcodes presented in documents in convenient way with Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to clear any documents from barcodes using Java 
+        description: Information about removing barcodes from documents by Java
+        steps:
+        - name: Load file which is belongs to various supported file types
+          text: Instantiate Signature object by passing file as a constructor parameter. You may provide either file path or file stream. 
+        - name: Get list of barcodes presented in document 
+          text: Create an instance of BarcodeSearchOptions class, fill data and call Search method of signature.
+        - name: Delete one of found barcodes and save result 
+          text: Invoke Delete method passing found barcode and file path for signed file. File stream can be used as well.
+
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [BarcodeSignature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/BarcodeSignature) class to manipulate barcode signatures and delete them from the documents over [delete](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options/Signature#delete(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature)) method.
 

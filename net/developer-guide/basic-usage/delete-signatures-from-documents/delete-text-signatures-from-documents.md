@@ -6,7 +6,25 @@ weight: 4
 description: "This article explains how to delete Text electronic signatures with GroupDocs.Signature API."
 keywords: delete text signature, how to delete Text electronic signatures
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Remove Text electronic signatures from documents in C#    
+        description: Delete Text electronic signatures presented in documents in convenient way with C# language and GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to clear any documents from text electronic signatures using C# 
+        description: Information about removing text electronic signatures from documents by C#
+        steps:
+        - name: Load file which is belongs to various supported file types
+          text: Instantiate Signature object by passing file as a constructor parameter. You may provide either file path or file stream. 
+        - name: Get list of text electronic signatures presented in document 
+          text: Create an instance of TextSearchOptions class, fill data and call Search method of signature.
+        - name: Delete one of found text electronic signatures and save result 
+          text: Invoke Delete method passing found text electronic signature and file path for signed file. File stream can be used as well.
+
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [TextSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/textsignature) class to manipulate text signatures and delete them from the documents.
 Please be aware that [Delete](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/delete) method modifies the same document that was passed to constructor of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class.

@@ -6,7 +6,24 @@ weight: 2
 description: "This article explains how to add metadata signatures to PDF document meta info layer with GroupDocs.Signature"
 keywords: Pdf metadata, Pdf metadata signatures
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Pdf documents metadata changing in C#    
+        description: Update metadata of pdf document with C# language by GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to append new metadata to pdf document using C# 
+        description: Learn all about signing pdf documents by metadata and C#
+        steps:
+        - name: Load file which is planned to be signed
+          text: Create Signature object by passing file path or stream as a constructor parameter.
+        - name: Set up signing options 
+          text: Create needed PdfMetadataSignature class instances and add them to array.
+        - name: Sign source file and save result 
+          text: Invoke Sign method with array of signing options and output file path or stream.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [PdfMetadataSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/pdfmetadatasignature) class to specify different Metadata signature objects for [MetadataSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/metadatasignoptions) instance.
 PDF document metadata is hidden attributes, some of them are visible only over viewing standard document properties like Author, Creation Date, Producer, Entry, Keywords etc.  

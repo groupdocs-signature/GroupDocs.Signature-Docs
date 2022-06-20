@@ -11,9 +11,9 @@ structuredData:
     showOrganization: True
     application:    
         name: Sign documents with image in Java    
-        description: Sign documents with various images fastly and easily with Java language and GroupDocs.Signature for .NET APIs
+        description: Sign documents with various images fastly and easily with Java language and GroupDocs.Signature for Java APIs
         productCode: signature
-        productPlatform: net 
+        productPlatform: java 
     showVideo: True
     howTo:
         name: How to sign any documents with image using Java 

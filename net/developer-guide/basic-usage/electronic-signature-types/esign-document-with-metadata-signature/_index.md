@@ -7,6 +7,8 @@ description: "This article shows how to add Metadata signature to the each docum
 keywords: 
 productName: GroupDocs.Signature for .NET
 hideChildren: False
+structuredData:
+    showOrganization: True
 ---
 ## What is a Metadata?
 

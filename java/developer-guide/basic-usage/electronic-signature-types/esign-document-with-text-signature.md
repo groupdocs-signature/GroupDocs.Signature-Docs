@@ -11,9 +11,9 @@ structuredData:
     showOrganization: True
     application:    
         name: Documents signing with text in Java    
-        description: Put text on any document with Java language by GroupDocs.Signature for .NET APIs
+        description: Put text on any document with Java language by GroupDocs.Signature for Java APIs
         productCode: signature
-        productPlatform: net 
+        productPlatform: java 
     showVideo: True
     howTo:
         name: How to sign any documents with text using Java 

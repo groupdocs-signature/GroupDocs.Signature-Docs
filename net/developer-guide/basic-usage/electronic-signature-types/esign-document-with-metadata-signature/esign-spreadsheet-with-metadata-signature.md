@@ -6,7 +6,24 @@ weight: 4
 description: "This article explains how to add metadata signatures to Spreadsheet document with GroupDocs.Signature"
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Spreadsheets metadata updating in C#    
+        description: Update metadata in Spreadsheets with C# language by GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to add new metadata in a spreadsheet using C# 
+        description: Learn all about signing a spreadsheets by metadata and C#
+        steps:
+        - name: Load file which is planned to be signed
+          text: Create Signature object by passing file path or stream as a constructor parameter.
+        - name: Set up signing options 
+          text: Create demanded SpreadsheetMetadataSignature class instances and add them to array.
+        - name: Sign source file and save result 
+          text: Invoke Sign method with array of signing options and output file path or stream.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [SpreadsheetMetadataSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/spreadsheetmetadatasignature) class to specify different Metadata signature objects for [MetadataSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/metadatasignoptions) instance to sign Spreadsheet document files.
 Spreadsheet document metadata is hidden attributes, some of them are visible only over viewing standard document properties like Author, Creation Date, Producer, Entry, Keywords etc.  

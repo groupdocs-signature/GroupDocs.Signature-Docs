@@ -6,7 +6,24 @@ weight: 9
 description: "This article explains how to sign document with multiple signatures of various type by GroupDocs.Signature API"
 keywords: multiple signatures, sign document, how to sign document with multiple signatures
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Documents signing with multiple signatures in Java    
+        description: Sign documents with many signatures simultaneously and Java language by GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to sign any documents with various signatures simultaneously using Java 
+        description: Learn all about signing a document by using multiple signatures and Java
+        steps:
+        - name: Load file which is planned to be signed
+          text: Create Signature object by passing file path or stream as a constructor parameter.
+        - name: Set up signing options 
+          text: Instantiate and set up BarcodeSignOptions, QrCodeSignOptions and DigitalSignOptions objects and add them to List.
+        - name: Sign source file with form fields and save result 
+          text: Invoke Sign method with signing options and output file path or stream.
 ---
 [GroupDocs.Signature](https://products.groupdocs.com/signature/java) allows to sign document with several signatures simultaneously and even apply signatures of different types to the same document.   
 Doing this is as simple as:

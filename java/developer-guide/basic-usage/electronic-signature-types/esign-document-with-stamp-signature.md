@@ -6,7 +6,24 @@ weight: 8
 description: "This article explains how to sign document electronically with generated Stamp signatures by GroupDocs.Signature API."
 keywords: sign document electronically, Stamp signatures
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Documents signing with stamps in C#    
+        description: Sign documents with generate stamps and C# language by GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to sign any documents with stamps using C# 
+        description: Learn all about signing a document by using stamps and C#
+        steps:
+        - name: Load file which is planned to be signed
+          text: Create Signature object by passing file path or stream as a constructor parameter.
+        - name: Set up signing options 
+          text: Provide new FormFieldSignature class instance and fill all demanded data.
+        - name: Sign source file with just painted stamp and save result 
+          text: Invoke Sign method with signing options and output file path or stream.
 ---
 ## What is a Stamp signature?
 

@@ -6,7 +6,22 @@ weight: 6
 description: "This article explains how to delete signature of the certain type with GroupDocs.Signature API."
 keywords: delete signature, how to delete signature of the certain type
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Remove electronic signatures from documents in Java    
+        description: Delete electronic signatures presented in documents in convenient way with Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to clear any documents from electronic signatures using Java 
+        description: Information about removing electronic signatures from documents by Java
+        steps:
+        - name: Load file which is belongs to various supported file types
+          text: Instantiate Signature object by passing file as a constructor parameter. You may provide either file path or file stream. 
+        - name: Delete all signatures of specific type presented in document 
+          text: Invoke Delete method passing type of signatures to be deleted.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides overloaded [delete](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#delete(java.lang.String,%20int)) method that accepts one [SignatureType](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/SignatureType) or list of them.
 Please be aware that this method modifies the same document that was passed to constructor of the [Signature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) class.

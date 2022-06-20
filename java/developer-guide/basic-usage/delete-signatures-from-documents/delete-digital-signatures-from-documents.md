@@ -6,7 +6,24 @@ weight: 5
 description: "This article explains how to delete Digital electronic signatures with GroupDocs.Signature API."
 keywords: Digital electronic signatures, delete Digital electronic signatures, how to delete Digital electronic signatures
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Remove digital signatures from documents in Java    
+        description: Delete digital signatures presented in documents in convenient way with Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to clear any documents from digital signatures using Java 
+        description: Information about removing digital signatures from documents by Java
+        steps:
+        - name: Load file which is belongs to various supported file types
+          text: Instantiate Signature object by passing file as a constructor parameter. You may provide either file path or file stream. 
+        - name: Get list of digital signatures presented in document 
+          text: Create an instance of DigitalSignature class, fill data and call Search method of signature.
+        - name: Delete one of found digital signatures and save result 
+          text: Invoke Delete method passing found digital signatures and file path for signed file. File stream can be used as well.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [DigitalSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/DigitalSignature) class to manipulate digital electronic signatures and delete them from the documents.
 Please be aware that [delete](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#delete(java.lang.String,%20int)) method modifies the same document that was passed to constructor of the [Signature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) class.

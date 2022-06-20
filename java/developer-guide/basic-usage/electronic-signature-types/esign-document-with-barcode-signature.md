@@ -11,9 +11,9 @@ structuredData:
     showOrganization: True
     application:    
         name: Sign documents using Barcode and Java    
-        description: Put generated Barcode on any document with Java language by GroupDocs.Signature for .NET APIs
+        description: Put generated Barcode on any document with Java language by GroupDocs.Signature for Java APIs
         productCode: signature
-        productPlatform: net 
+        productPlatform: java 
     showVideo: True
     howTo:
         name: How to add generated Barcode to various documents with Java 

@@ -6,7 +6,24 @@ weight: 5
 description: "This article explains how to delete Digital electronic signatures with GroupDocs.Signature API."
 keywords:  Digital electronic signatures, delete Digital electronic signatures, how to delete Digital electronic signatures
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Remove digital signatures from documents in C#    
+        description: Delete digital signatures presented in documents in convenient way with C# language and GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to clear any documents from digital signatures using C# 
+        description: Information about removing digital signatures from documents by C#
+        steps:
+        - name: Load file which is belongs to various supported file types
+          text: Instantiate Signature object by passing file as a constructor parameter. You may provide either file path or file stream. 
+        - name: Get list of digital signatures presented in document 
+          text: Create an instance of DigitalSignature class, fill data and call Search method of signature.
+        - name: Delete one of found digital signatures and save result 
+          text: Invoke Delete method passing found digital signatures and file path for signed file. File stream can be used as well.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [DigitalSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/digitalsignature) class to manipulate digital electronic signatures and delete them from the documents.
 Please be aware that [Delete](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/delete) method modifies the same document that was passed to constructor of the [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class.

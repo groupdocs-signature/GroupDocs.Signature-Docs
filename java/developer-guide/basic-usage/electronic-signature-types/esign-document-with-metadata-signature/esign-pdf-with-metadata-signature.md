@@ -6,7 +6,24 @@ weight: 2
 description: "This article explains how to add metadata signatures to PDF document meta info layer with GroupDocs.Signature"
 keywords: Pdf metadata, Pdf metadata signatures
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Pdf documents metadata changing in Java    
+        description: Update metadata of pdf document with Java language by GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to append new metadata to pdf document using Java 
+        description: Learn all about signing pdf documents by metadata and Java
+        steps:
+        - name: Load file which is planned to be signed
+          text: Create Signature object by passing file path or stream as a constructor parameter.
+        - name: Set up signing options 
+          text: Create needed PdfMetadataSignature class instances and add them to array.
+        - name: Sign source file and save result 
+          text: Invoke Sign method with array of signing options and output file path or stream.
 ---
 [GroupDocs.Signature](https://products.groupdocs.com/signature/java) provides [PdfMetadataSignature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures.metadata/PdfMetadataSignature) class to specify different Metadata signature objects for [MetadataSignOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/MetadataSignOptions) instance.   
 PDF document metadata is hidden attributes, some of them are visible only over viewing standard document properties like Author, Creation Date, Producer, Entry, Keywords etc.  

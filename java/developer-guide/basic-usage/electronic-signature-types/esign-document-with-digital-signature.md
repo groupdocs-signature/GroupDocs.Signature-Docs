@@ -11,9 +11,9 @@ structuredData:
     showOrganization: True
     application:    
         name: Sign documents with digital certificate and Java    
-        description: Sign specific document with digital certificate and Java language by GroupDocs.Signature for .NET APIs
+        description: Sign specific document with digital certificate and Java language by GroupDocs.Signature for Java APIs
         productCode: signature
-        productPlatform: net 
+        productPlatform: java 
     showVideo: True
     howTo:
         name: How to add digital certificate to document using Java 

@@ -6,8 +6,25 @@ weight: 1
 description: "This guide describes how to improve your document with generated barcodes using C#. Sign your documents with Codabar, Event or Code39Extended using GroupDocs.Signature .NET API by GroupDocs."
 keywords: Barcode Signature in CSharp, Sign document with Codabar in CSharp, Sign document with Event in CSharp, Sign document with Code39Extended in CSharp
 productName: GroupDocs.Signature for .NET
-hideChildren: False
 toc: True
+structuredData:
+    showOrganization: True
+    application:    
+        name: Documents signing with generated barcode in C#    
+        description: Sign any document with generated barcodes and C# language by GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to sign any documents with generated barcodes using C# 
+        description: Learn all about signing a document by using a generated barcodes and C#
+        steps:
+        - name: Load file which is planned to be signed
+          text: Create Signature object by passing file path or stream as a constructor parameter.
+        - name: Set up signing options 
+          text: Provide new BarcodeSignOptions class instance and fill all demanded data.
+        - name: Sign source file with generated barcode and save result 
+          text: Invoke Sign method with signing options and output file path or stream.
 ---
 
 Barcodes represent textual information as a quite small image which could be automatically scanned. Such approach brings new opportunities in computer processing of documents like sorting or moving through a business work-flow. In this article, we will discuss useful way to sign electronic documents with data encrypted in Bar or QR codes using C# in .NET applications.

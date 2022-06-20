@@ -6,7 +6,24 @@ weight: 9
 description: "This article explains how to sign document with multiple signatures of various type by GroupDocs.Signature API"
 keywords: multiple signatures, sign document, how to sign document with multiple signatures
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Documents signing with multiple signatures in C#    
+        description: Sign documents with many signatures simultaneously and C# language by GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to sign any documents with various signatures simultaneously using C# 
+        description: Learn all about signing a document by using multiple signatures and C#
+        steps:
+        - name: Load file which is planned to be signed
+          text: Create Signature object by passing file path or stream as a constructor parameter.
+        - name: Set up signing options 
+          text: Instantiate and set up BarcodeSignOptions, QrCodeSignOptions and DigitalSignOptions objects and add them to List.
+        - name: Sign source file with form fields and save result 
+          text: Invoke Sign method with signing options and output file path or stream.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) allows to sign document with several signatures simultaneously and even apply signatures of different types to the same document.
 Doing this is as simple as:

@@ -6,7 +6,24 @@ weight: 5
 description: "This article explains how to sign Word Processing document with metadata signatures by GroupDocs.Signature."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Sign Word Processing documents with metadata updating in C#    
+        description: Update metadata in Word Processing documents with C# language by GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How change metadata in Word Processing documents using C# 
+        description: Learn all about signing Word Processing documents by metadata and C#
+        steps:
+        - name: Load file which is planned to be signed
+          text: Create Signature object by passing file path or stream as a constructor parameter.
+        - name: Set up signing options 
+          text: Create demanded WordProcessingMetadataSignature class instances and add them to array.
+        - name: Sign source file and save result 
+          text: Invoke Sign method with array of signing options and output file path or stream.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [WordProcessingMetadataSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/wordprocessingmetadatasignature) class to specify different Metadata signature objects for [MetadataSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/metadatasignoptions) instance to sign Word Processing document files.
 Word Processing document metadata is hidden attributes, some of them are visible only over viewing standard document properties like Author, Creation Date, Producer, Entry, Keywords etc.  

@@ -6,7 +6,24 @@ weight: 4
 description: "This article explains how to add metadata signatures to Spreadsheet document with GroupDocs.Signature"
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Spreadsheets metadata updating in Java    
+        description: Update metadata in Spreadsheets with Java language by GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to add new metadata in a spreadsheet using Java 
+        description: Learn all about signing a spreadsheets by metadata and Java
+        steps:
+        - name: Load file which is planned to be signed
+          text: Create Signature object by passing file path or stream as a constructor parameter.
+        - name: Set up signing options 
+          text: Create demanded SpreadsheetMetadataSignature class instances and add them to array.
+        - name: Sign source file and save result 
+          text: Invoke Sign method with array of signing options and output file path or stream.
 ---
 [GroupDocs.Signature](https://products.groupdocs.com/signature/java) provides [SpreadsheetMetadataSignature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures.metadata/SpreadsheetMetadataSignature) class to specify different Metadata signature objects for [MetadataSignOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/MetadataSignOptions) instance to sign Spreadsheet document files.   
 Spreadsheet document metadata is hidden attributes, some of them are visible only over viewing standard document properties like Author, Creation Date, Producer, Entry, Keywords etc.  

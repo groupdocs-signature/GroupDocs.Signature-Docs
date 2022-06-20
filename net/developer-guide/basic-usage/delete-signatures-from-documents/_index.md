@@ -7,4 +7,6 @@ description: "This sections shows how to delete electronic signatures with Group
 keywords:  delete signatures from pdf, delete signatures
 productName: GroupDocs.Signature for .NET
 hideChildren: False
+structuredData:
+    showOrganization: True
 ---

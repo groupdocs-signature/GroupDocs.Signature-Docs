@@ -6,7 +6,24 @@ weight: 3
 description: "This article explains how to add various types of Form Field signatures on document page with options on component positioning, alignment and other visual options with GroupDocs.Signature"
 keywords: form fields, add various types of Form Field signature, component positioning
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Documents signing with form fields in Java    
+        description: Sign documents with form fields and Java language by GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to sign any documents with form fields using Java 
+        description: Learn all about signing a document by using form fields and Java
+        steps:
+        - name: Load file which is planned to be signed
+          text: Create Signature object by passing file path or stream as a constructor parameter.
+        - name: Set up signing options 
+          text: Provide new FormFieldSignature class instance and fill all demanded data.
+        - name: Sign source file with form fields and save result 
+          text: Invoke Sign method with signing options and output file path or stream.
 ---
 ## What is a Form Field?
 
