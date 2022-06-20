@@ -1,7 +1,7 @@
 ---
 id: save-signed-images-with-various-output-types
 url: signature/net/save-signed-images-with-various-output-types
-title: Save signed images with various output types
+title: Saving signed images with various output types
 weight: 2
 description: "This article explains how to save images with various image format types."
 keywords: 

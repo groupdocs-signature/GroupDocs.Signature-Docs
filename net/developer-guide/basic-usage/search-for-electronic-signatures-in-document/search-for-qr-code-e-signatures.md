@@ -1,7 +1,7 @@
 ---
 id: search-for-qr-code-e-signatures
 url: signature/net/search-for-qr-code-e-signatures
-title: Search for QR-Code e-signatures
+title: How to search for QR code signatures
 weight: 3
 description: "This article explains how to search for QR-code electronic signatures with GroupDocs.Signature API."
 keywords: 
