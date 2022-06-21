@@ -6,7 +6,24 @@ weight: 2
 description: "This topic explains how to verify digital electronic signatures with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Verify digital signatures in signed documents via C#    
+        description: Verification of digital signatures in various documents in convenient way with C# language and GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to check are digital signatures valid in particular document using C# 
+        description: Get additional information of digital signatures validation for any documents in C#
+        steps:
+        - name: Load particular file with supported type.
+          text: Construct Signature class instance by passing either file path or stream. 
+        - name: Provide verification options. 
+          text: Set demanded data of the DigitalVerifyOptions instance such as comment text and type of text verification.
+        - name: Get verification result
+          text: Call method Verify passing options. Obtain verification result whose property IsValid must be true if verification succeed.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [DigitalVerifyOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/digitalverifyoptions) class to specify different options for digital signatures verification.
 

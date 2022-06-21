@@ -6,7 +6,22 @@ weight: 2
 description: "This article explains how to detect document file type, obtain document details,  retrieve list of existing form fields and added signatures, calculate pages count when processing document file with GroupDocs.Signature."
 keywords: document properties, document information, document details, get document information
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Get document extended information using Java    
+        description: Gaining information about particular document using Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to collect document information using Java 
+        description: Getting detailed information about documents of various document types in Java
+        steps:
+        - name: Load particular file with supported type.
+          text: Instantiate Signature class by passing either file path or stream. 
+        - name: Get document information
+          text: Call GetDocumentInfo method save process information such as page count or document format.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) allows to get document information which includes:
 

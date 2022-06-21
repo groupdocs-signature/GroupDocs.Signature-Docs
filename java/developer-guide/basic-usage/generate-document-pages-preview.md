@@ -6,7 +6,26 @@ weight: 6
 description: "This topic explains how to get document pages preview as images with various options by GroupDocs.Signature API."
 keywords: preview as images, get document pages preview as images
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Generate documents preview using Java    
+        description: Getting pages previews of document pages using Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to generate previews of particular document pages with Java 
+        description: Get images with pages content of various document types in Java
+        steps:
+        - name: Implementing auxiliary delegates.
+          text: We don't know how you are going to process and release images, so you need to provide CreatePageStream and ReleasePageStream delegates. 
+        - name: Load particular file with supported type.
+          text: Construct Signature class instance by passing either file path or stream. 
+        - name: Provide preview options. 
+          text: Set type of result image in PreviewOptions instance.
+        - name: Get pages images
+          text: Invoke GeneratePreview method passing options and save page images by method from CreatePageStream delegate.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [PreviewOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options/PreviewOptions) class to specify different options to manage document pages preview generation process.  
   

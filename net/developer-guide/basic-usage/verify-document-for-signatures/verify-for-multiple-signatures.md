@@ -6,7 +6,24 @@ weight: 5
 description: "This topic explains how to verify electronic signatures of various types with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Verify electronic signatures in signed documents via C#    
+        description: Verification of electronic signatures in various documents in convenient way with C# language and GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to check are electronic signatures valid in particular document using C# 
+        description: Get additional information of electronic signatures validation for any documents in C#
+        steps:
+        - name: Load particular file with supported type.
+          text: Construct Signature class instance by passing either file path or stream. 
+        - name: Provide verification options. 
+          text: Set properties of demanded VerifyOptions such as BarcodeVerifyOptions or DigitalVerifyOptions. Various properties like text or BarcodeType depends on options type.
+        - name: Get verification result
+          text: Call method Verify passing options. Obtain verification result whose property IsValid must be true if verification succeed.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) supports verification of documents for different signature types. This approach requires to add all required verification options to list.
 

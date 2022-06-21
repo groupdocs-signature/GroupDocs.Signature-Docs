@@ -6,7 +6,24 @@ weight: 4
 description: "This topic explains how to verify Text electronic signatures with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Verify text signatures in signed documents via C#    
+        description: Verification of texts in various documents in convenient way with C# language and GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to check are texts valid in particular document using C# 
+        description: Get additional information of texts validation for any documents in C#
+        steps:
+        - name: Load particular file with supported type.
+          text: Construct Signature class instance by passing either file path or stream. 
+        - name: Provide verification options. 
+          text: Set demanded data of the TextVerifyOptions instance such as text or type of text verification.
+        - name: Get verification result
+          text: Call method Verify passing options. Obtain verification result whose property IsValid must be true if verification succeed.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [TextVerifyOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/textverifyoptions) class to specify different options for verification of Text signatures.
 

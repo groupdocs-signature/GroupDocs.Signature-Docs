@@ -7,4 +7,6 @@ description: "This section explains how to verify document for electronic signat
 keywords: 
 productName: GroupDocs.Signature for Java
 hideChildren: False
+structuredData:
+    showOrganization: True
 ---

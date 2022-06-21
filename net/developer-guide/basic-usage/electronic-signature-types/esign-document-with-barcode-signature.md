@@ -21,7 +21,7 @@ structuredData:
         - name: Load source document
           text: Creating Signature instance with file path or stream as a constructor parameter will load the document. 
         - name: Provide barcode options. 
-          text: Set specific properties of the the BarcodeSignOption instance like a Barcode type, barcode text and signatuer appearence settings.
+          text: Set specific properties of the BarcodeSignOption instance like a Barcode type, barcode text and signature appearance settings.
         - name: Sign source and obtain result 
           text: Invoke method Sign with passing created options and output file data. You can save signed file using file path or stream.
 ---

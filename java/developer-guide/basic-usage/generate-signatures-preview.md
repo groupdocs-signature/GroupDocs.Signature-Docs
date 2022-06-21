@@ -6,7 +6,26 @@ weight: 7
 description: "This topic explains how to get signature preview with the SignOptions by GroupDocs.Signature API."
 keywords: signature preview, how to get signature preview
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Generate signatures previews using Java    
+        description: Getting signatures previews using Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to create signatures artifacts of documents with Java 
+        description: Get previews images of signatures for various document types in Java
+        steps:
+        - name: Implementing auxiliary delegates.
+          text: We don't know how you are going to process and release generated previews, so you need to provide CreateSignatureStream and ReleaseSignatureStream delegates. 
+        - name: Load particular file with supported type.
+          text: Construct Signature class instance by passing either file path or stream. 
+        - name: Provide sign options. 
+          text: Instantiate desirable sign options like QrCodeSignOptions or other. Set up all important properties.
+        - name: Get signatures preview images
+          text: Invoke GenerateSignaturePreview method passing options and save signatures images by method defined in CreateSignatureStream delegate.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [PreviewSignatureOptions](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options/PreviewSignatureOptions) class to specify different options to manage signatures preview generation process.  
   

@@ -6,7 +6,22 @@ weight: 1
 description: "This article explains how to obtain supported file formats list for PDF, Words, Spreadsheet or Presentation document types when working with GroupDocs.Signature within your .NET applications."
 keywords: GroupDocs.Signature supported files, GroupDocs.Signature supported documents, GroupDocs.Signature PDF files, GroupDocs.Signature Words files, GroupDocs.Signature Presentation files, GroupDocs.Signature Spreadsheet files
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Get list of supported file types with Java    
+        description: Getting list of document types which can be processed using Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to obtain file types for signing with Java 
+        description: Collecting list of various document types which are suitable for signing in Java
+        steps:
+        - name: Get supported file types.
+          text: Invoke method GetSupportedFileTypes. 
+        - name: Process file types.
+          text: Process all selected file types in demanded way. 
 ---
 With [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) you can get the [list of file formats]({{< ref "signature/java/getting-started/supported-document-formats.md" >}}) that allow adding electronic signatures by following the below steps:
 

@@ -6,7 +6,26 @@ weight: 6
 description: "This topic explains how to get document pages preview as images with various options by GroupDocs.Signature API."
 keywords: preview as images, get document pages preview as images
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Generate documents preview using C#    
+        description: Getting pages previews of document pages using C# language and GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to generate previews of particular document pages with C# 
+        description: Get images with pages content of various document types in C#
+        steps:
+        - name: Implementing auxiliary delegates.
+          text: We don't know how you are going to process and release images, so you need to provide CreatePageStream and ReleasePageStream delegates. 
+        - name: Load particular file with supported type.
+          text: Construct Signature class instance by passing either file path or stream. 
+        - name: Provide preview options. 
+          text: Set type of result image in PreviewOptions instance.
+        - name: Get pages images
+          text: Invoke GeneratePreview method passing options and save page images by method from CreatePageStream delegate.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [PreviewOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/previewoptions) class to specify different options to manage document pages preview generation process.  
   

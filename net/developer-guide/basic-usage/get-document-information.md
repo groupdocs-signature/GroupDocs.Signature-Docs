@@ -6,7 +6,22 @@ weight: 2
 description: "This article explains how to detect document file type, obtain document details,  retrieve list of existing form fields and added signatures, calculate pages count when processing document file with GroupDocs.Signature."
 keywords: document properties, document information, document details, get document information
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Get document extended information using C#    
+        description: Gaining information about particular document using C# language and GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to collect document information using C# 
+        description: Getting detailed information about documents of various document types in C#
+        steps:
+        - name: Load particular file with supported type.
+          text: Instantiate Signature class by passing either file path or stream. 
+        - name: Get document information
+          text: Call GetDocumentInfo method save process information such as page count or document format.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) allows to get document information which includes:
 

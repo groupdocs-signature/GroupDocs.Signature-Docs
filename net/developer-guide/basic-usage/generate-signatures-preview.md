@@ -6,7 +6,26 @@ weight: 7
 description: "This topic explains how to get signature preview with the SignOptions by GroupDocs.Signature API."
 keywords: signature preview, how to get signature preview
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Generate signatures previews using C#    
+        description: Getting signatures previews using C# language and GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to create signatures artifacts of documents with C# 
+        description: Get previews images of signatures for various document types in C#
+        steps:
+        - name: Implementing auxiliary delegates.
+          text: We don't know how you are going to process and release generated previews, so you need to provide CreateSignatureStream and ReleaseSignatureStream delegates. 
+        - name: Load particular file with supported type.
+          text: Construct Signature class instance by passing either file path or stream. 
+        - name: Provide sign options. 
+          text: Instantiate desirable sign options like QrCodeSignOptions or other. Set up all important properties.
+        - name: Get signatures preview images
+          text: Invoke GenerateSignaturePreview method passing options and save signatures images by method defined in CreateSignatureStream delegate.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [PreviewSignatureOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/previewsignatureoptions) class to specify different options to manage signatures preview generation process.  
   

@@ -6,7 +6,24 @@ weight: 3
 description: "This topic explains how to verify QR-code electronic signatures with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Verify QR-code signatures in signed documents via Java    
+        description: Verification of QR-codes in various documents in convenient way with Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to check are QR-codes valid in particular document using Java 
+        description: Get additional information of QR-codes validation for any documents in Java
+        steps:
+        - name: Load particular file with supported type.
+          text: Construct Signature class instance by passing either file path or stream. 
+        - name: Provide verification options. 
+          text: Set demanded data of the QrCodeVerifyOptions instance such as QR-code type, text and type of text verification.
+        - name: Get verification result
+          text: Call method Verify passing options. Obtain verification result whose property IsValid must be true if verification succeed.
 ---
 **[GroupDocs.Signature](https://products.groupdocs.com/signature/java)** provides [QrCodeVerifyOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.verify/QrCodeVerifyOptions) class to specify different options for verification of QR-code signatures.
 

@@ -6,7 +6,24 @@ weight: 1
 description: "This topic explains how to verify document for Barcode electronic signatures with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Verify barcode signatures in signed documents via Java    
+        description: Verification of barcodes in various documents in convenient way with Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to check are barcodes valid in particular document using Java 
+        description: Get additional information of barcodes validation for any documents in Java
+        steps:
+        - name: Load particular file with supported type.
+          text: Construct Signature class instance by passing either file path or stream. 
+        - name: Provide verification options. 
+          text: Set demanded data of the BarcodeVerifyOptions instance such as Barcode type, text and type of text verification.
+        - name: Get verification result
+          text: Call method Verify passing options. Obtain verification result whose property IsValid must be true if verification succeed.
 ---
 [GroupDocs.Signature](https://products.groupdocs.com/signature/java) provides [BarcodeVerifyOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.verify/BarcodeVerifyOptions) class to specify different options for verification of Barcode signatures.
 
