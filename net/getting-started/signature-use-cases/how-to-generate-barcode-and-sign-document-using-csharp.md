@@ -21,7 +21,7 @@ structuredData:
         - name: Load source document
           text: Creating Signature instance with file path or stream as a constructor parameter will load the document. 
         - name: Provide barcode options. 
-          text: Set specific properties of the the BarcodeSignOption instance like a Barcode type, barcode text and signatuer appearence settings.
+          text: Set specific properties of the BarcodeSignOption instance like a Barcode type, barcode text and signature appearance settings.
         - name: Sign source and obtain result 
           text: Invoke method Sign with passing created options and output file data. You can save signed file using file path or stream.
 ---
@@ -81,6 +81,8 @@ Signed with Codabar document might looks like in the picture below. Codabar form
 
 ![Signed with Codabar document](signature/net/images/signature-use-cases/how-to-generate-barcode-and-sign-document-using-csharp/signed_codabar.png)
 
+[GroupDocs.Signature App](https://products.groupdocs.app/signature/generate/barcode/codabar) provides opportunity to try document signing with barcodes for free.
+
 ### Signing document with Event QR-code in C\#
 
 Sometimes it is needed to inform workers about business events. In such cases Event QR-code can provide all demanded information in a very effective way. This topic describes how to sign Pdf document with generated Event QR-code.
@@ -122,6 +124,8 @@ Sometimes it is needed to inform workers about business events. In such cases Ev
 Result of signing may looks like the picture below. Such QR-code can be very useful for events organization.
 
 ![Signed with Event QR-code document](signature/net/images/signature-use-cases/how-to-generate-barcode-and-sign-document-using-csharp/signed_event.png)
+
+[GroupDocs.Signature App](https://products.groupdocs.app/signature/generate/qrcode) gives opportunity to try document signing with QR-codes for free.
 
 ## Barcode and Qr-code image generation in C\#
 
