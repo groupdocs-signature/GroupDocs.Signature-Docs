@@ -16,7 +16,7 @@ structuredData:
     showVideo: True
     howTo:
         name: How to add Barcode to various documents with C# 
-        description: Find out ways of signinig documents with the Barcode using C#
+        description: Find out ways of signing documents with the Barcode using C#
         steps:
         - name: Load source document
           text: Creating Signature instance with file path or stream as a constructor parameter will load the document. 

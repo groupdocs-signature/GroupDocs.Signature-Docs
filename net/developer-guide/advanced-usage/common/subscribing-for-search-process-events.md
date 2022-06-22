@@ -6,7 +6,26 @@ weight: 4
 description: "This article explains how to subscribe for search electronic signatures events like start, progress and completion with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Subscription on document search using C#    
+        description: Document search events processing by C# language and GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to use events of document searching process with C# 
+        description: Get information about using events which are invoked at time of document searching via C#
+        steps:
+        - name: Define methods for events
+          text: Search in documents invokes such events as SearchStarted, SearchProgress and SearchCompleted. Define method for each event.
+        - name: Load source document
+          text: Instantiate Signature object with file path or stream as a constructor parameter will load the document. 
+        - name: Set up event delegates. 
+          text: Assign defined methods to all desirable events of Signature instance.
+        - name: Process document with event listeners. 
+          text: Invoke method Search of Signature instance and process all appearing events.
 ---
 [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class contains several events that are being called for different search process stages
 

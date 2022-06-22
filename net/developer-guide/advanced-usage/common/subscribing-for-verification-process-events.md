@@ -6,7 +6,26 @@ weight: 6
 description: "This article explains how to subscribe for verification of electronic signatures events like start, progress and completion with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Subscription to document verification using C#    
+        description: Document verification events processing by C# language and GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to use events of document verification process with C# 
+        description: Get information about using events which are invoked at time of document verification via C#
+        steps:
+        - name: Define methods for events
+          text: Documents verification starts events like VerifyStarted, VerifyProgress and VerifyCompleted. Define method for each event.
+        - name: Load source document
+          text: Instantiate Signature object with file path or stream as a constructor parameter will load the document. 
+        - name: Set up event delegates. 
+          text: Assign methods which were defined previously to events of Signature instance.
+        - name: Process document with event listeners. 
+          text: Call Signature Verify method and process all appearing events.
 ---
 [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature)class contains several events that are being called for different verification process stages
 

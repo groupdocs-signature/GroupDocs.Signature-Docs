@@ -7,4 +7,6 @@ description: "This section shows advanced signature processing like signing, ver
 keywords: 
 productName: GroupDocs.Signature for .NET
 hideChildren: False
+structuredData:
+    showOrganization: True
 ---

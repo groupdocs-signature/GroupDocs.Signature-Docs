@@ -6,7 +6,24 @@ weight: 1
 description: "This article shows how to get information about electronic signatures in the document and its form fields with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Collect signatures information with Java    
+        description: Getting data about form-fields and signatures from documents with Java language by GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to collect information about form-fields and signatures in documents with Java 
+        description: Learn how to get data of all presented signatures and form-fields in supported document using Java
+        steps:
+        - name: Load source document
+          text: Instantiate Signature object with file path or stream as a constructor parameter will load the document. 
+        - name: Get detailed information about form-fields and signatures. 
+          text: Invoke method GetDocumentInfo which returns specific DocumentInfo object.
+        - name: Process obtained data. 
+          text: Loop through DocumentInfo collections such as FormFields, TextSignatures, Pages etc.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) allows to get extended document information which includes:
 

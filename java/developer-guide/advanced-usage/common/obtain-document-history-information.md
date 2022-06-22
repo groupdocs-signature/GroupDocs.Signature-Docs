@@ -6,7 +6,24 @@ weight: 2
 description: "This article shows how to obtain the history of document changes with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Get document history with Java    
+        description: Collecting information about documents history with Java language by GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to get documents history data with Java 
+        description: Learn how to get data about history of particular document changes via Java
+        steps:
+        - name: Load source document
+          text: Instantiate Signature object with file path or stream as a constructor parameter will load the document. 
+        - name: Get detailed information about form-fields and signatures. 
+          text: Invoke method GetDocumentInfo which returns specific DocumentInfo object.
+        - name: Process obtained data. 
+          text: Loop through ProcessLogs collection and process data about document operations.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) allows to get document history information about processed changes that include list of [ProcessLog](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain/ProcessLog ). Each history log record contains following information :
 

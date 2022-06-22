@@ -7,4 +7,6 @@ description: "This section explains how to apply additional options to customize
 keywords: 
 productName: GroupDocs.Signature for Java
 hideChildren: False
+structuredData:
+    showOrganization: True
 ---

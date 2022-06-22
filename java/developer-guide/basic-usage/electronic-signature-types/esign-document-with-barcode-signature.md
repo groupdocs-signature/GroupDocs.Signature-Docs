@@ -17,10 +17,10 @@ structuredData:
     showVideo: True
     howTo:
         name: How to add generated Barcode to various documents with Java 
-        description: Find out ways of signinig documents by Barcode using Java
+        description: Find out ways of signing documents by Barcode using Java
         steps:
         - name: Load source file
-          text: Creating Signature calss instance demands file as a constructor parameter. It can be provided either as file path or as file stream. 
+          text: Creating Signature class instance demands file as a constructor parameter. It can be provided either as file path or as file stream. 
         - name: Provide barcode options 
           text: Provide all needed data while BarcodeSignOptions instantiating.
         - name: Sign source and obtain result 

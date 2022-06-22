@@ -6,7 +6,26 @@ weight: 6
 description: "This article explains how to subscribe for verification of electronic signatures events like start, progress and completion with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Subscription to document verification using Java    
+        description: Document verification events processing by Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to use events of document verification process with Java 
+        description: Get information about using events which are invoked at time of document verification via Java
+        steps:
+        - name: Define methods for events
+          text: Documents verification starts events like VerifyStarted, VerifyProgress and VerifyCompleted. Define method for each event.
+        - name: Load source document
+          text: Instantiate Signature object with file path or stream as a constructor parameter will load the document. 
+        - name: Set up event delegates. 
+          text: Assign methods which were defined previously to events of Signature instance.
+        - name: Process document with event listeners. 
+          text: Call Signature Verify method and process all appearing events.
 ---
 [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class contains several events that are being called for different verification process stages
 

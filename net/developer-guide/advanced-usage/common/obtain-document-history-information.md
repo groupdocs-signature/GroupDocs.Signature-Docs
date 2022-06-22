@@ -6,7 +6,24 @@ weight: 2
 description: "This article shows how to obtain the history of document changes with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Get document history with C#    
+        description: Collecting information about documents history with C# language by GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to get documents history data with C# 
+        description: Learn how to get data about history of particular document changes via C#
+        steps:
+        - name: Load source document
+          text: Instantiate Signature object with file path or stream as a constructor parameter will load the document. 
+        - name: Get detailed information about form-fields and signatures. 
+          text: Invoke method GetDocumentInfo which returns specific DocumentInfo object.
+        - name: Process obtained data. 
+          text: Loop through ProcessLogs collection and process data about document operations.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) allows to get document history information about processed changes that include list of [ProcessLog](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/processlog). Each history log record contains following information :
 

@@ -6,7 +6,26 @@ weight: 3
 description: "This article explains how to control signature processing (cancellation) for large documents with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Cancel too long document processing C#    
+        description: Document processing cancellation if it is lasted more than specific threshold with C# language by GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to stop too long document processing with C# 
+        description: Get information how to cancel any type of document processing via C#
+        steps:
+        - name: Load source document
+          text: Instantiate Signature object with file path or stream as a constructor parameter will load the document. 
+        - name: Define OnProgress method. 
+          text: Each type of document processing such as Sign, Search or Verify can invoke OnProgress method during it work.
+        - name: Implement OnProgress logic. 
+          text: If you have a condition which could be used to cancel processing implement it in OnProgress method.
+        - name: Process document with cancellation condition. 
+          text: Invoke Sign, Search or Verify method and if condition it true processing is being stopped.
 ---
 [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class supports cancellation for each of document processing (Sign, Verify, Search). The process cancellation happens over setting property [Cancel](https://apireference.groupdocs.com/net/signature/groupdocs.signature/processprogresseventargs/properties/cancel) of [ProcessProgressEventArgs](https://apireference.groupdocs.com/net/signature/groupdocs.signature/processprogresseventargs) property in proper event handler.
 

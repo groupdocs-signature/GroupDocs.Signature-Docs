@@ -7,4 +7,6 @@ description: "This section explains common signature processing features of Grou
 keywords: 
 productName: GroupDocs.Signature for .NET
 hideChildren: False
+structuredData:
+    showOrganization: True
 ---
