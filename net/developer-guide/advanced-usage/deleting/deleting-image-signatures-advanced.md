@@ -6,7 +6,24 @@ weight: 2
 description: "This article shows how to delete Image electronic signatures different ways with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Delete images from document via C#    
+        description: Remove specific images in documents using C# language by GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to remove image signatures in supported documents with C# 
+        description: Learn about ways of removing selected images in document using C#
+        steps:
+        - name: Load source document
+          text: Instantiate Signature object with file path or stream as a constructor parameter will load the document. 
+        - name: Specify image signatures to delete. 
+          text: Get all images presented in a document by invoking method Search passing ImageSearchOptions. Select only suitable barcode signatures in case if it is needed.
+        - name: Delete selected signatures. 
+          text: Invoke Delete method and analyze DeleteResult instance.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [ImageSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/imagesignature) class to manipulate image signatures and delete them from the documents over [Delete](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/delete) method.
 

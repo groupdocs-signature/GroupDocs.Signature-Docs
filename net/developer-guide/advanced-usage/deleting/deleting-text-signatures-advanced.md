@@ -6,7 +6,24 @@ weight: 5
 description: "This article shows how to delete Text electronic signatures different ways with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Delete text signatures from document via C#    
+        description: Remove specific Text electronic signatures in documents using C# language by GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to expel texts in supported documents with C# 
+        description: Learn about ways of wiping out selected text signatures in document using C#
+        steps:
+        - name: Load source document
+          text: Instantiate Signature object with file path or stream as a constructor parameter will load the document. 
+        - name: Specify text signatures to delete. 
+          text: Get all texts presented in a document by invoking method Search passing TextSearchOptions. Select only suitable barcode signatures in case if it is needed.
+        - name: Delete selected text signatures. 
+          text: Invoke Delete method and analyze DeleteResult instance.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [TextSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/textsignature) class to manipulate text signatures and delete them from the documents over [Delete](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/delete) method.  
 Please be aware that [Delete](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/delete) method modifies the same document that was passed to constructor of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class.

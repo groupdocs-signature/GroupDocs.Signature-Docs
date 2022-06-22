@@ -6,7 +6,26 @@ weight: 3
 description: "This article shows how to delete multiple electronic signatures different ways with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Delete selected signatures from document via C#    
+        description: Remove specific multiple signatures in documents using C# language by GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to remove electronic signatures in supported documents with C# 
+        description: Learn about ways of deletion selected signatures in document using C#
+        steps:
+        - name: Load source document
+          text: Instantiate Signature object with file path or stream as a constructor parameter will load the document. 
+        - name: Get specific signatures from document. 
+          text: Get all presented in a document electronic signatures by invoking method Search. Pass to this method only SearchOptions of desirable type.
+        - name: Select signatures to delete. 
+          text: Select only suitable electronic signatures and put them to new List instance.
+        - name: Remove specific signatures. 
+          text: Invoke Delete method of Signature instance and analyze DeleteResult object.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides different classes of signatures to manipulate and delete them from the documents over [Delete](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/delete) method.
 

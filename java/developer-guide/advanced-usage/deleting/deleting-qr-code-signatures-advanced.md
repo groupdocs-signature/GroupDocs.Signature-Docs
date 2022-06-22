@@ -6,7 +6,24 @@ weight: 4
 description: "This article shows how to delete QR-code electronic signatures different ways with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Delete QR Code signatures from document via Java    
+        description: Remove specific QR Codes in documents using Java language by GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to remove QR Codes in supported documents with Java 
+        description: Learn about ways of wiping out selected QR Codes in document using Java
+        steps:
+        - name: Load source document
+          text: Instantiate Signature object with file path or stream as a constructor parameter will load the document. 
+        - name: Specify QR Codes to delete. 
+          text: Get all QR Code signatures presented in a document by invoking method Search passing QrCodeSearchOptions. Select only suitable barcode signatures in case if it is needed.
+        - name: Expel selected QR Code signatures. 
+          text: Invoke Delete method and analyze DeleteResult instance.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [QrCodeSignature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/QrCodeSignature) class to manipulate QR-code signatures and delete them from the documents over [delete](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#delete(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature)) method.  
 Please be aware that [delete](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#delete(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature))  method modifies the same document that was passed to constructor of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class.

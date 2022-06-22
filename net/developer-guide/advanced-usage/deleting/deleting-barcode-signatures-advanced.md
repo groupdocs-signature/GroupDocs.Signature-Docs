@@ -6,7 +6,24 @@ weight: 1
 description: "This article shows how to delete Barcode electronic signatures different ways with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Delete barcode signatures from document via C#    
+        description: Remove specific barcodes in documents using C# language by GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to remove barcodes in supported documents with C# 
+        description: Learn about ways of deletion selected barcodes in document using C#
+        steps:
+        - name: Load source document
+          text: Instantiate Signature object with file path or stream as a constructor parameter will load the document. 
+        - name: Specify barcodes to delete. 
+          text: Get all barcodes presented in a document by invoking method Search passing BarcodeSearchOptions. Select only suitable barcode signatures in case if it is needed.
+        - name: Delete selected barcodes. 
+          text: Invoke Delete method and analyze DeleteResult instance.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [BarcodeSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/barcodesignature) class to manipulate barcode signatures and delete them from the documents over [Delete](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/delete) method.  
 Please be aware that [Delete](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/delete) method modifies the same document that was passed to constructor of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class.

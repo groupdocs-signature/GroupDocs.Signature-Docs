@@ -7,4 +7,6 @@ description: " This section contains examples with advanced electronic signatur
 keywords: 
 productName: GroupDocs.Signature for Java
 hideChildren: False
+structuredData:
+    showOrganization: True
 ---

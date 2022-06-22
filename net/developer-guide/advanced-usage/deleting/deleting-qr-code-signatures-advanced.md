@@ -6,7 +6,24 @@ weight: 4
 description: "This article shows how to delete QR-code electronic signatures different ways with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Delete QR Code signatures from document via C#    
+        description: Remove specific QR Codes in documents using C# language by GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to remove QR Codes in supported documents with C# 
+        description: Learn about ways of wiping out selected QR Codes in document using C#
+        steps:
+        - name: Load source document
+          text: Instantiate Signature object with file path or stream as a constructor parameter will load the document. 
+        - name: Specify QR Codes to delete. 
+          text: Get all QR Code signatures presented in a document by invoking method Search passing QrCodeSearchOptions. Select only suitable barcode signatures in case if it is needed.
+        - name: Expel selected QR Code signatures. 
+          text: Invoke Delete method and analyze DeleteResult instance.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [QrCodeSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/qrcodesignature) class to manipulate QR-code signatures and delete them from the documents over [Delete](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/delete) method.  
 Please be aware that [Delete](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/delete) method modifies the same document that was passed to constructor of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class.

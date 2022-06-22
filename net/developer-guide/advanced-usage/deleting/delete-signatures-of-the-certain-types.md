@@ -6,7 +6,24 @@ weight: 6
 description: "This article explains how to delete electronic signatures of the certain types with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Delete signatures from document with C#    
+        description: Remove all signatures of specific type from particular document with C# language by GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to remove signatures from documents using C# 
+        description: Investigate ways of deletion specific signatures from document using C#
+        steps:
+        - name: Load source document
+          text: Instantiate Signature object with file path or stream as a constructor parameter will load the document. 
+        - name: Specify signature types to delete. 
+          text: Create List instance and fill it with signature types which must be removed.
+        - name: Delete demanded signature types. 
+          text: Invoke Delete method and analyze DeleteResult instance.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides overloaded [Delete](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/delete) method that accepts list of the [SignatureType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/signaturetype) enumeration values.
 Please be aware that this method modifies the same document that was passed to constructor of the [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class.
