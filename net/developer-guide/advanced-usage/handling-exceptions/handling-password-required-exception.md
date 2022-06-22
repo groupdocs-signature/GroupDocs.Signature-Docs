@@ -6,7 +6,26 @@ weight: 2
 description: "This article shows how to handle missing document password exception with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Handling document password absence exception with C#    
+        description: Handle password required exception during document processing with C# language by GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to coupe with absent password using C# 
+        description: Learn all about ways of handling required password exceptions using C#
+        steps:
+        - name: Load source document
+          text: Instantiate Signature object with file path or stream as a constructor parameter will load the document. 
+        - name: Surround code with specific try-catch statement. 
+          text: Use PasswordRequiredException type in try-catch statement to handle with required password exception.
+        - name: Provide code with Signature try-catch statement. 
+          text: For other Signature exceptions use GroupDocsSignatureException.
+        - name: Implement code with common try-catch statement. 
+          text: For all other possible exceptions use Exception.
 ---
 [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class supports handling required password exception when opening protected documents over class [PasswordRequiredException](https://apireference.groupdocs.com/net/signature/groupdocs.signature/passwordrequiredexception).
 

@@ -7,4 +7,6 @@ description: " This section contains examples with advanced exceptions handling
 keywords: 
 productName: GroupDocs.Signature for .NET
 hideChildren: False
+structuredData:
+    showOrganization: True
 ---

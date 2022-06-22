@@ -6,7 +6,26 @@ weight: 1
 description: "This article shows how to handle incorrect document password exception with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Handling incorrect document password exception with Java    
+        description: Handle wrong password exception during document processing with Java language by GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to coupe with incorrect password exception using Java 
+        description: Learn all about ways of handling incorrect document password exceptions using Java
+        steps:
+        - name: Load source document
+          text: Instantiate Signature object with file path or stream as a constructor parameter will load the document. 
+        - name: Surround code with specific try-catch statement. 
+          text: Use IncorrectPasswordException type in try-catch statement to handle with incorrect password exception.
+        - name: Provide code with Signature try-catch statement. 
+          text: For other Signature exceptions use GroupDocsSignatureException.
+        - name: Implement code with common try-catch statement. 
+          text: For all other possible exceptions use Exception.
 ---
 [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class supports handling incorrect password passed to open protected documents over class [IncorrectPasswordException](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.exception/IncorrectPasswordException).
 
