@@ -1,23 +1,42 @@
 ---
 id: verify-qr-code-signatures
 url: signature/net/verify-qr-code-signatures
-title: Verify QR-code signatures
+title: Verifying QR Code signatures
 weight: 2
-description: " This article explains how to provide advanced verification of QR-code electronic signatures with GroupDocs.Signature API."
+description: " This article explains how to provide advanced verification of QR Code electronic signatures with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Verify QR code signature in documents using C#    
+        description: This article explains how to scan the document for QR Code and provide its verification with C# language and GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to scan QR Code and verify the document for specific QR Code entities using C# 
+        description: This topic explains how to verify the document for QR Code, provide QR Code verification and validation in C#
+        steps:
+        - name: Load document for verification from the local file or stream.
+          text: Create Signature class instance by passing either local or network file path or stream. 
+        - name: Provide QR Code verification options. 
+          text: Set demanded data of the QRCodeVerifyOptions instance to specify optionally QR Code type or text.
+        - name: Run verification
+          text: Call the Verify method with passing verification options and keep the verification process result.
+        - name: Analyse verification result
+          text: Check verification result for its state and verification details.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides different properties in [QrCodeVerifyOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodeverifyoptions) class to specify verification of QR-code signatures.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides different properties in [QrCodeVerifyOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodeverifyoptions) class to specify verification of QR Code signatures.
 
-Here are the steps to verify QR-code signature within the document with GroupDocs.Signature:
+Here are the steps to verify QR Code signature within the document with GroupDocs.Signature:
 
 * Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
 *Instantiate the  [QrCodeVerifyOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodeverifyoptions) object according to your requirements and specify verification options  
 * Call [Verify](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/verify) method of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class instance and pass [QrCodeVerifyOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodeverifyoptions)to it.  
 * Analyze [VerificationResult](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/verificationresult) result if needed.
   
-This example shows how to verify QR-code signature in the document. See [VerificationResult](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/verificationresult)
+This example shows how to verify QR Code signature in the document. See [VerificationResult](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/verificationresult)
 
 ```csharp
 using (Signature signature = new Signature("sample.pdf"))
