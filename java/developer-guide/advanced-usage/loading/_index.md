@@ -7,5 +7,7 @@ description: "This section explains how to load document from various sources li
 keywords: 
 productName: GroupDocs.Signature for Java
 hideChildren: False
+structuredData:
+    showOrganization: True
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) allows you to load password-protected documents and load documents from different sources. For more details please refer to the following guides:

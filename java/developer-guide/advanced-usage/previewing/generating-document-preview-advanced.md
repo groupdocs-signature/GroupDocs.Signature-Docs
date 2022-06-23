@@ -6,7 +6,26 @@ weight: 1
 description: "This article shows how to generate document pages with advanced options."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Generate document pages preview using Java    
+        description: Getting document pages images using Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to obtain document pages as image with Java 
+        description: Getting document pages saved as images of various types in Java
+        steps:
+        - name: Implementing auxiliary delegates.
+          text: We don't know how you are going to process and release generated previews, so you need to provide CreatePageStream and ReleasePageStream methods. 
+        - name: Load particular file of supported type.
+          text: Construct Signature class instance by passing either file path or stream. 
+        - name: Provide preview options. 
+          text: Instantiate PreviewOptions object. Set up all important properties especially CreatePageStream and ReleasePageStream.
+        - name: Get pages images
+          text: Invoke GeneratePreview method passing preview options and save pages images by method defined in CreatePageStream method.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [PreviewOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options/PreviewOptions) class to specify different options to manage document pages preview generation process. Since 20.3 version there's ability to hide signatures from documents. Using property [setHideSignature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options/PreviewOptions#setHideSignatures(boolean)) of [PreviewOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options/PreviewOptions) will allow to hide signatures from document preview.  
   

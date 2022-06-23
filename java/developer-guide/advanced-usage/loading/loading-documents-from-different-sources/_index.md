@@ -7,6 +7,8 @@ description: "This section explains how to load document from various sources an
 keywords: 
 productName: GroupDocs.Signature for Java
 hideChildren: False
+structuredData:
+    showOrganization: True
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) also enables you to render of remotely located documents. The rendering of the document would be similar to [Load document from Stream]({{< ref "signature/java/developer-guide/advanced-usage/loading/loading-documents-from-different-sources/load-document-from-stream.md" >}}). In order to render a remotely located document, below steps can be followed.
 Following examples demonstrates how to render document from different sources.

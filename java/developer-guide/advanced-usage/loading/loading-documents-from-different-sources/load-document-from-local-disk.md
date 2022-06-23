@@ -6,7 +6,24 @@ weight: 4
 description: "This section explains how to load document from local disk with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Signing document loaded from local disk using Java    
+        description: Handling documents stored on local disk with Java language by GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: Process document from local disk with Java 
+        description: Learn how to sign documents stored on local disk with Java
+        steps:
+        - name: Load source document
+          text: Create Signature instance with file path as a constructor parameter. 
+        - name: Provide signing options. 
+          text: Set specific properties of desired SignOptions instance.
+        - name: Sign source and obtain result 
+          text: Invoke method Sign with passing created options and output file data. You can save signed file using file path or stream.
 ---
 When document is located on the local disk [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) enables you to work with document over the file [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class constructor. [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) instance will open file for reading only when any method of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) will be called.
 

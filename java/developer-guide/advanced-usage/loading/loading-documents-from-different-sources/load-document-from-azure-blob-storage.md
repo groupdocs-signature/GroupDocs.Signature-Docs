@@ -6,7 +6,26 @@ weight: 2
 description: "This section explains how to load document from Azure Blob Storage with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Signing document loaded from Azure Blob Storage using Java    
+        description: Handling Azure Blob Storage documents with Java language by GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to get and process Azure Blob Storage document via Java 
+        description: Get information about ways of handling documents downloaded from Azure Blob Storage with Java
+        steps:
+        - name: Load source document
+          text: Instantiate CloudBlobContainer object providing account and blob storage data. Download file and save it to stream.
+        - name: Pass file to Signature. 
+          text: Instantiate Signature object by passing file stream as a constructor parameter.
+        - name: Provide signing options. 
+          text: Set specific properties of desired SignOptions instance.
+        - name: Sign source and obtain result 
+          text: Invoke method Sign with passing created options and output file data. You can save signed file using file path or stream.
 ---
 Following example demonstrates how to process documents from Azure Blob Storage.
 

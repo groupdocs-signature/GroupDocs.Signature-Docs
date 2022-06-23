@@ -7,6 +7,8 @@ description: "This section explains how to load document from various sources an
 keywords: 
 productName: GroupDocs.Signature for .NET
 hideChildren: False
+structuredData:
+    showOrganization: True
 ---
 ## Loading documents from different sources
 
