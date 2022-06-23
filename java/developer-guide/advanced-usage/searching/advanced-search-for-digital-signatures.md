@@ -6,7 +6,26 @@ weight: 2
 description: " This article explains how to make advanced search for digital electronic signatures with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Advanced search for digital signatures in documents in Java    
+        description: Advanced search for digital signatures in various documents fast and easily with Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to search digital signatures in advanced way using Java 
+        description: Get additional information of advanced searching digital signatures in documents with Java
+        steps:
+        - name: Upload document which has one of supported types.
+          text: Instantiate Signature object passing either file path or file stream as a constructor parameter.
+        - name: Create search options 
+          text: Instantiate DigitalSearchOptions object providing all demanded data like Comments or IssuerName.
+        - name: Get list of items 
+          text: Invoke method Search passing search options.
+        - name: Process list of found items
+          text: Loop through list of found items and process in demanded way.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [DigitalSearchOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/DigitalSearchOptions) class to specify different options to search for Digital Signatures.
 

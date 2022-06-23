@@ -6,7 +6,26 @@ weight: 4
 description: " This article explains how to make advanced search for Text electronic signatures with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Advanced search for text signatures in documents in Java    
+        description: Advanced search for text items in various documents fast and easily with Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: hava 
+    showVideo: True
+    howTo:
+        name: How to search for text in advanced way using Java 
+        description: Get additional information of advanced searching for text signatures in documents with Java
+        steps:
+        - name: Upload file of supported file types.
+          text: Instantiate object of Signature passing file as a constructor parameter. You can use either file path or file stream. 
+        - name: Create search options 
+          text: Instantiate TextSearchOptions object providing all demanded data like text, pages setup or match type.
+        - name: Get list of text signatures 
+          text: Invoke method Search passing search options.
+        - name: Process list of found items
+          text: Loop through list of found items and process in demanded way.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [TextSearchOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/TextSearchOptions) class to specify different options to search for Text Signatures.
 

@@ -6,7 +6,24 @@ weight: 12
 description: " This article explains how to search various data values types within electronic signatures in the document metadata by GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Advanced search for metadata entries in documents in Java    
+        description: Advanced search for metadata in various documents fast and easily with Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to search metadata in advanced way using Java 
+        description: Learn the best way of advanced searching metadata records in documents with Java
+        steps:
+        - name: Pass file of supported file types.
+          text: Call constructor of Signature class passing file as a parameter. You can use either file path or file stream. 
+        - name: Get list of items 
+          text: Invoke method Search passing SignatureType.Metadata type.
+        - name: Process list of found items
+          text: Loop through list of found items and process in demanded way.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides ability to search Metadata signatures and convert obtained values to various data types.
 

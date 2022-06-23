@@ -3,10 +3,29 @@ id: search-for-built-in-metadata-signatures
 url: signature/net/search-for-built-in-metadata-signatures
 title: Search for built-in Metadata signatures
 weight: 6
-description: " This article explains how to provide advanced search for metadata electronic signatures with GroupDocs.Signature API."
+description: "This article explains how to provide advanced search for metadata electronic signatures with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Advanced search for metadata entries in documents in C#    
+        description: Advanced search for metadata electronic signatures in various documents with C# language and GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to search for metadata using C# 
+        description: Investigate about advanced searching metadata records in documents with C#
+        steps:
+        - name: Provide file of supported file types.
+          text: Instantiate Signature class passing either file path or file stream as a parameter.
+        - name: Create search options 
+          text: Instantiate MetadataSearchOptions object and set up IncludeBuiltinProperties in true.
+        - name: Get list of items 
+          text: Call method Search providing search options.
+        - name: Process list of found items
+          text: Loop through list of found items and process in demanded way.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [MetadataSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/metadatasearchoptions) class to specify different options to search for Metadata signatures.
 

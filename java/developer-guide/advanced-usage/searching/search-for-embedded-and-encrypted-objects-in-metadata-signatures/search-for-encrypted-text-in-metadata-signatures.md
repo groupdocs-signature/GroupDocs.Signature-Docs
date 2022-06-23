@@ -6,7 +6,26 @@ weight: 4
 description: " This article explains how to search for encrypted text electronic signatures in the document metadata. This topic contains example of using standard encryption and search for encrypted text in the document metadata with further decryption by GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Search for encrypted text signatures in documents in Java    
+        description: Advanced search for encrypted text electronic signatures in various documents with Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: Getting list of encrypted text electronic signatures using Java 
+        description: Learn how to obtain information about encrypted text electronic signatures in documents with Java
+        steps:
+        - name: Provide document of supported file types.
+          text: Instantiate Signature with file as a constructor parameter. You can pass either file path or file stream. 
+        - name: Create search options 
+          text: Instantiate MetadataSearchOptions object and pass IDataEncryption instance such as SymmetricEncryption.
+        - name: Get list of items 
+          text: Invoke method Search with search options.
+        - name: Process list of found items
+          text: Process in desired way list of found items.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides ability to search encrypted Metadata signatures with standard or custom encryption. Standard encryption is implemented over class [SymmetricEncryption](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.extensions.encryption/SymmetricEncryption) class. Creation of this object expects 3 arguments like encryption algorithm enumeration [SymmetricAlgorithmType](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.extensions.encryption/SymmetricAlgorithmType) with one of following values (DES, TripleDES, RC2, Rijndael), string value key and string value salt.
 

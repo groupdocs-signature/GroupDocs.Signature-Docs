@@ -6,7 +6,24 @@ weight: 5
 description: "This article explains how to search for VCard, MeCard, Email, Address, EPC, SEPA, Event data in QR-code electronic signatures from previously signed documents with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Search for standard QR Code signatures in documents in C#    
+        description: Advanced search for standard QR Code electronic signatures in various documents with C# language and GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: Getting list of standard QR Code signatures using C# 
+        description: Learn how to get information about standard QR Code electronic signatures in documents with C#
+        steps:
+        - name: Provide document for processing.
+          text: Create Signature with file path or file stream as parameter. 
+        - name: Get list of items 
+          text: Call method Search with SignatureType like SignatureType.QrCode.
+        - name: Process list of found items
+          text: Process in desired way list of found items.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides additional features when searching for[QrCode Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/qrcodesignature)  that were previously added to document with embedded standard entry objects. Following standard entries are supported to search for and receive object back from Qr-Code
 

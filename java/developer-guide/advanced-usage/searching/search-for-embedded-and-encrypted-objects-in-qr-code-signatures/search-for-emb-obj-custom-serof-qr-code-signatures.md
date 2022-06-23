@@ -6,7 +6,26 @@ weight: 2
 description: " This article explains how to search for embedded electronic signatures with custom serialization in QR-code electronic signatures. This topic contains example of custom serialization, class definition and search for serialized objects in the QR-codes with GroupDocs.Signature."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Search for serialized QR Code signatures in documents in Java    
+        description: Advanced search for serialized QR Code electronic signatures in various documents with Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: Getting list of serialized QR Code electronic signatures using Java 
+        description: Learn how to acquire information about serialized QR Code electronic signatures in documents with Java
+        steps:
+        - name: Provide document of supported file types.
+          text: Instantiate Signature with file as a constructor parameter. You can pass either file path or file stream. 
+        - name: Create search options 
+          text: Implement IDataSerializer interface and instantiate QrCodeSearchOptions object providing serialization object.
+        - name: Get list of items 
+          text: Invoke method Search with search options.
+        - name: Process list of found items
+          text: Process in desired way list of found items.
 ---
 GroupDocs.Signature provides following abilities to search for embedded data objects in QR-code signatures ([QrCodeSignature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/QrCodeSignature)) that were embedded with custom encryption and serialization 
 

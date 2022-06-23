@@ -6,7 +6,26 @@ weight: 1
 description: " This article explains how to search for embedded electronic signatures with custom encryption in document metadata. This topic contains example of custom encryption, class definition and search for encrypted objects in the document metadata with GroupDocs.Signature."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Search for embedded signatures in documents in Java    
+        description: Advanced search for embedded electronic signatures in various documents with Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to get list of embedded electronic signatures using Java 
+        description: Collecting information about embedded electronic signatures in documents with Java
+        steps:
+        - name: Provide document for processing.
+          text: Create object of Signature passing file as a constructor parameter. You can use either file path or file stream. 
+        - name: Create search options 
+          text: Implement IDataEncryption interface and instantiate MetadataSearchOptions object providing encryption object.
+        - name: Get list of items 
+          text: Invoke method Search passing search options.
+        - name: Process list of found items
+          text: Loop through list of found items and process in demanded way.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides additional features when searching for Metadata Signatures that were previously encrypted and have embedded data objects. 
 *   ability to search for embedded custom objects into metadata and decrypt them to original source values

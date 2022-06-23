@@ -6,7 +6,26 @@ weight: 2
 description: " This article explains how to make advanced search for digital electronic signatures with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Advanced search for digital signatures in documents in C#    
+        description: Advanced search for digital signatures in various documents fast and easily with C# language and GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to search digital signatures in advanced way using C# 
+        description: Get additional information of advanced searching digital signatures in documents with C#
+        steps:
+        - name: Upload document which has one of supported types.
+          text: Instantiate Signature object passing either file path or file stream as a constructor parameter.
+        - name: Create search options 
+          text: Instantiate DigitalSearchOptions object providing all demanded data like Comments or IssuerName.
+        - name: Get list of items 
+          text: Invoke method Search passing search options.
+        - name: Process list of found items
+          text: Loop through list of found items and process in demanded way.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [DigitalSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/digitalsearchoptions) class to specify different options to search for Digital Signatures.
 

@@ -3,10 +3,29 @@ id: search-for-embedded-object-with-custom-encryption-of-metadata-signatures
 url: signature/net/search-for-embedded-object-with-custom-encryption-of-metadata-signatures
 title: Search for embedded object with custom encryption of Metadata signatures
 weight: 1
-description: " This article explains how to search for embedded electronic signatures with custom encryption in document metadata. This topic contains example of custom encryption, class definition and search for encrypted objects in the document metadata with GroupDocs.Signature."
+description: "This article explains how to search for embedded electronic signatures with custom encryption in document metadata. This topic contains example of custom encryption, class definition and search for encrypted objects in the document metadata with GroupDocs.Signature."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Search for embedded signatures in documents in C#    
+        description: Advanced search for embedded electronic signatures in various documents with C# language and GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to get list of embedded electronic signatures using C# 
+        description: Collecting information about embedded electronic signatures in documents with C#
+        steps:
+        - name: Provide document for processing.
+          text: Create object of Signature passing file as a constructor parameter. You can use either file path or file stream. 
+        - name: Create search options 
+          text: Implement IDataEncryption interface and instantiate MetadataSearchOptions object providing encryption object.
+        - name: Get list of items 
+          text: Invoke method Search passing search options.
+        - name: Process list of found items
+          text: Loop through list of found items and process in demanded way.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides additional features when searching for Metadata Signature that were previously encrypted and have embedded data objects.
 
