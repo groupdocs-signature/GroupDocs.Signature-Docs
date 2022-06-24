@@ -7,4 +7,6 @@ description: "This section explains how to search for electronic signatures acro
 keywords: 
 productName: GroupDocs.Signature for Java
 hideChildren: False
+structuredData:
+    showOrganization: True
 ---

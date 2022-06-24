@@ -6,7 +6,24 @@ weight: 12
 description: " This article explains how to search various data values types within electronic signatures in the document metadata by GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Advanced search for metadata entries in documents in C#    
+        description: Advanced search for metadata in various documents fast and easily with C# language and GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to search metadata in advanced way using C# 
+        description: Learn the best way of advanced searching metadata records in documents with C#
+        steps:
+        - name: Pass file of supported file types.
+          text: Call constructor of Signature class passing file as a parameter. You can use either file path or file stream. 
+        - name: Get list of items 
+          text: Invoke method Search passing SignatureType.Metadata type.
+        - name: Process list of found items
+          text: Loop through list of found items and process in demanded way.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides ability to search Metadata signatures and convert obtained values to various data types.
 

@@ -6,7 +6,26 @@ weight: 5
 description: " This article explains how to make advanced search for Image electronic signatures with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Advanced search for image signatures in documents in Java    
+        description: Advanced search for images in various documents fast and easily with Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to search image signatures in advanced way using Java 
+        description: Get additional information of advanced searching images in documents with Java
+        steps:
+        - name: Upload document which has one of supported types.
+          text: Instantiate Signature object passing either file path or file stream as a constructor parameter.
+        - name: Create search options 
+          text: Instantiate ImageSearchOptions object providing all demanded data like MinContentSize or ReturnContent.
+        - name: Get list of items 
+          text: Call method Search providing search options.
+        - name: Process list of found items
+          text: Loop through list of found items and process in demanded way.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [ImageSearchOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/ImageSearchOptions)  class to specify different options to search for Image Signatures.
 

@@ -6,7 +6,24 @@ weight: 11
 description: "This article explains how to handle exceptions when searching for electronic signatures with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Handling search exception with Java    
+        description: Handle exceptions during searching for signatures in documents with Java language by GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to coupe with search exceptions using Java 
+        description: Learn all about ways of handling exceptions during search using Java
+        steps:
+        - name: Load source document
+          text: Instantiate Signature object with file path or stream as a constructor parameter will load the document. 
+        - name: Surround code Signature try-catch statement. 
+          text: For search exceptions use GroupDocsSignatureException.
+        - name: Implement code with common try-catch statement. 
+          text: For all other possible exceptions use Exception class.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides different error messages due to validation issues, missing required data, files etc. For handling these exceptions class [GroupDocsSignatureException](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.exception/GroupDocsSignatureException)should be used.
 

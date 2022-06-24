@@ -6,7 +6,26 @@ weight: 1
 description: "This section explains how to load document from Amazon S3 Storage with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Signing document loaded from Amazon S3 Storage using C#    
+        description: Handling Amazon S3 Storage documents with C# language by GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to get and process Amazon S3 Storage document via C# 
+        description: Get information about ways of handling documents downloaded from Amazon S3 Storage with C#
+        steps:
+        - name: Load source document
+          text: Instantiate AmazonS3Client object, provide key and bucket values and save file to stream. 
+        - name: Pass file to Signature. 
+          text: Instantiate Signature object by passing file stream as a constructor parameter.
+        - name: Provide signing options. 
+          text: Set specific properties of desired SignOptions instance.
+        - name: Sign source and obtain result 
+          text: Invoke method Sign with passing created options and output file data. You can save signed file using file path or stream.
 ---
 Following example demonstrates how to process with documents from Amazon S3 Storage.
 

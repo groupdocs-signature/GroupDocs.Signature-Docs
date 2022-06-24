@@ -6,7 +6,26 @@ weight: 3
 description: " This article explains how to search for encrypted electronic signatures in the document metadata. This topic contains example of using standard encryption, serialization, class definition and search for embedded objects in the document metadata with GroupDocs.Signature."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Search for encrypted signatures in documents in C#    
+        description: Searching for encrypted electronic signatures in various documents with C# language and GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to get list of encrypted electronic signatures using C# 
+        description: Getting information about encrypted electronic signatures in documents with C#
+        steps:
+        - name: Load file which has one of supported file types.
+          text: Create object of Signature passing file as a constructor parameter. You can use either file path or file stream. 
+        - name: Create search options 
+          text: Instantiate MetadataSearchOptions object providing encryption object instance such as SymmetricEncryption.
+        - name: Get list of items 
+          text: Invoke method Search with instance of search options.
+        - name: Process found items list
+          text: Loop through list of found items and process in demanded way.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides ability to search for embedded objects in Metadata signatures with standard or custom encryption. Standard encryption is implemented over class [SymmetricEncryption](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/symmetricencryption) class. Creation of this object expects 3 arguments like encryption algorithm enumeration [SymmetricAlgorithmType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/symmetricalgorithmtype) with one of following values (DES, TripleDES, RC2, Rijndael), string value key and string value salt.
 

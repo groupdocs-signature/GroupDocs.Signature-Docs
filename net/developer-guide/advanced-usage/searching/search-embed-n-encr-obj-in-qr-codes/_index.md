@@ -7,6 +7,8 @@ description: " This section explains how to search for embedded electronic sign
 keywords: 
 productName: GroupDocs.Signature for .NET
 hideChildren: False
+structuredData:
+    showOrganization: True
 ---
 GroupDocs.Signature provides additional features when searching forQR-code signatures ([QrCodeSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/qrcodesignature)) that were previously encrypted or contains embedded data objects. Summary the abilities are as follow
 

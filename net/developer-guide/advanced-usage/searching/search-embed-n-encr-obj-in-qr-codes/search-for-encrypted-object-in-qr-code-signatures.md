@@ -1,12 +1,31 @@
 ---
 id: search-for-encrypted-object-in-qr-code-signatures
 url: signature/net/search-for-encrypted-object-in-qr-code-signatures
-title: Search for encrypted object in QR-code signatures
+title: Search for encrypted object in QR code signatures
 weight: 3
-description: " This article explains how to search for encrypted electronic signatures in QR-code electronic signatures. This topic contains example of using standard encryption, serialization, class definition and search for embedded objects in QR-codes with GroupDocs.Signature API."
+description: " This article explains how to search for encrypted electronic signatures in QR code electronic signatures. This topic contains example of using standard encryption, serialization, class definition and search for embedded objects in QR-codes with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Search for encrypted objects in QR Code signatures in documents in C#    
+        description: Advanced search for encrypted objects in QR Code electronic signatures in various documents with C# language and GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: Getting list of encrypted objects in QR Code signatures using C# 
+        description: Learn how to get information about encrypted objects in QR Code electronic signatures in documents with C#
+        steps:
+        - name: Provide document of supported file types.
+          text: Instantiate Signature with file as a constructor parameter. You can pass either file path or file stream. 
+        - name: Create search options 
+          text: Instantiate QrCodeSearchOptions providing encryption instance such as SymmetricEncryption.
+        - name: Get list of items 
+          text: Call method Search with search options.
+        - name: Process list of found items
+          text: Process in desired way list of found items.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides ability to search for embedded data objects in QR-code signatures ([QrCodeSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/qrcodesignature)) with standard or custom encryption. Standard encryption is implemented over class [SymmetricEncryption](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/symmetricencryption) class. Creation of this object expects 3 arguments like encryption algorithm enumeration [SymmetricAlgorithmType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/symmetricalgorithmtype) with one of following values ([DES, TripleDES, RC2, Rijndael](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/symmetricalgorithmtype)), string value key and string value salt.
 

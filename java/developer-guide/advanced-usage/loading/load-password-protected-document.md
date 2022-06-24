@@ -6,7 +6,26 @@ weight: 2
 description: "This article explains how to load password protected document with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Signing password protected document using Java    
+        description: Processing documents which are encrypted with password with Java language by GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to handle with password protected document via Java 
+        description: Get information about ways of handling password protected documents with Java
+        steps:
+        - name: Set up document password
+          text: Instantiate LoadOptions object, providing password data. 
+        - name: Pass file to Signature. 
+          text: Instantiate Signature object by passing file and LoadOptions as constructor parameters.
+        - name: Provide signing options. 
+          text: Set specific properties of desired SignOptions instance.
+        - name: Sign source and obtain result 
+          text: Invoke method Sign with passing created options and output file data. You can save signed file using file path or stream.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) supports processing documents that are protected with a password.
 

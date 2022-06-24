@@ -3,10 +3,29 @@ id: advanced-search-for-text-signatures
 url: signature/net/advanced-search-for-text-signatures
 title: Advanced search for Text signatures
 weight: 4
-description: " This article explains how to make advanced search for Text electronic signatures with GroupDocs.Signature API."
+description: "This article explains how to make advanced search for Text electronic signatures with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Advanced search for text signatures in documents in C#    
+        description: Advanced search for text items in various documents fast and easily with C# language and GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to search for text in advanced way using C# 
+        description: Get additional information of advanced searching for text signatures in documents with C#
+        steps:
+        - name: Upload file of supported file types.
+          text: Instantiate object of Signature passing file as a constructor parameter. You can use either file path or file stream. 
+        - name: Create search options 
+          text: Instantiate TextSearchOptions object providing all demanded data like text, pages setup or match type.
+        - name: Get list of text signatures 
+          text: Invoke method Search passing search options.
+        - name: Process list of found items
+          text: Loop through list of found items and process in demanded way.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [TextSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/textsearchoptions) class to specify different options to search for Text Signatures.
 

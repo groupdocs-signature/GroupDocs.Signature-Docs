@@ -6,7 +6,26 @@ weight: 10
 description: "This article explains how to search with excluding non-signature components like native documents text, images or barcodes that are the part of document content."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Advanced search for signatures in documents in Java    
+        description: Advanced search for electronic signatures excluding non-signature items in various documents with Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to get list of signatures using Java 
+        description: Learn more about advanced search for only-signature items in documents with Java
+        steps:
+        - name: Provide file of supported file types.
+          text: Instantiate Signature class passing either file path or file stream as a parameter.
+        - name: Create search options 
+          text: Instantiate SearchOptions object and set up SkipExternal in true.
+        - name: Get list of items 
+          text: Call method Search providing search options.
+        - name: Process list of found items
+          text: Loop through list of found items and process in desirable way.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides boolean property [setSkipExternal](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/SearchOptions#setSkipExternal(boolean)) of [SearchOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/SearchOptions) class to specify if searching process should exclude external signatures (external signatures are the signatures that were added with an 3rd party software and not with GroupDocs.Signature).
 

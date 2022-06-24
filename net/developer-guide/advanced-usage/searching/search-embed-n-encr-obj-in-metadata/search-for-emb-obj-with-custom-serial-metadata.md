@@ -6,7 +6,26 @@ weight: 2
 description: " This article explains how to search for embedded electronic signatures with custom serialization in document metadata. This topic contains example of custom serialization, class definition and search for serialized objects in the document metadata with GroupDocs.Signature."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Search for embedded metadata in documents in C#    
+        description: Searching for metadata with custom serialization in various documents with C# language and GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to get list of metadata signatures using C# 
+        description: Learn ways to obtain list of embedded electronic metadata signatures with custom serialization in documents with C#
+        steps:
+        - name: Load file which has one of supported file types.
+          text: Create object of Signature passing file as a constructor parameter. You can use either file path or file stream. 
+        - name: Create searching options 
+          text: Implement IDataEncryption interface and instantiate MetadataSearchOptions object providing encryption object.
+        - name: Get list of items 
+          text: Invoke method Search passing search options.
+        - name: Process list of found items
+          text: Loop through list of found embedded metadata items and process in desired way.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides additional features when searching for Metadata Signatures that were previously encrypted and have embedded data objects.
 

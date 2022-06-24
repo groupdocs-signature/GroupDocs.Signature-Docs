@@ -6,7 +6,24 @@ weight: 11
 description: "This article explains how to handle exceptions when searching for electronic signatures with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Handling search exception with C#    
+        description: Handle exceptions during searching for signatures in documents with C# language by GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to coupe with search exceptions using C# 
+        description: Learn all about ways of handling exceptions during search using C#
+        steps:
+        - name: Load source document
+          text: Instantiate Signature object with file path or stream as a constructor parameter will load the document. 
+        - name: Surround code Signature try-catch statement. 
+          text: For search exceptions use GroupDocsSignatureException.
+        - name: Implement code with common try-catch statement. 
+          text: For all other possible exceptions use Exception class.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides different error messages due to validation issues, missing required data, files etc. For handling these exceptions class [GroupDocsSignatureException](https://apireference.groupdocs.com/net/signature/groupdocs.signature/groupdocssignatureexception) should be used.
 

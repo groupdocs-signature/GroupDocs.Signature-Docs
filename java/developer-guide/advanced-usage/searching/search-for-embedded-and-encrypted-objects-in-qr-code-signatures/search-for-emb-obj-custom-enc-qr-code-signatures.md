@@ -6,7 +6,26 @@ weight: 1
 description: " This article explains how to search for embedded electronic signatures with custom encryption in QR-code electronic signatures. This topic contains example of custom encryption, class definition and search for encrypted objects in the QR-codes with GroupDocs.Signature."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Search for encrypted QR Code signatures in documents in Java    
+        description: Advanced search for encrypted QR Code electronic signatures in various documents with Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: Getting list of encrypted QR Code electronic signatures using Java 
+        description: Learn how to get information about encrypted QR Code electronic signatures in documents with Java
+        steps:
+        - name: Provide document for processing.
+          text: Instantiate Signature with file as a constructor parameter. You can pass either file path or file stream. 
+        - name: Create search options 
+          text: Implement IDataEncryption interface and instantiate QrCodeSearchOptions object providing encryption object.
+        - name: Get list of items 
+          text: Invoke method Search with search options.
+        - name: Process list of found items
+          text: Process in desired way list of found items.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides following abilities to search for embedded data objects in QR-code signatures ([QrCodeSignature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/QrCodeSignature)) that were encrypted with custom encryption.  
 *   ability to search for embedded custom objects into metadata and decrypt them to original source values

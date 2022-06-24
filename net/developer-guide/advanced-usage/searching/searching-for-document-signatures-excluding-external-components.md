@@ -6,7 +6,26 @@ weight: 10
 description: "This article explains how to search with excluding non-signature components like native documents text, images or barcodes that are the part of document content."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Advanced search for signatures in documents in C#    
+        description: Advanced search for electronic signatures excluding non-signature items in various documents with C# language and GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to get list of signatures using C# 
+        description: Learn more about advanced search for only-signature items in documents with C#
+        steps:
+        - name: Provide file of supported file types.
+          text: Instantiate Signature class passing either file path or file stream as a parameter.
+        - name: Create search options 
+          text: Instantiate SearchOptions object and set up SkipExternal in true.
+        - name: Get list of items 
+          text: Call method Search providing search options.
+        - name: Process list of found items
+          text: Loop through list of found items and process in desirable way.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides boolean property [SkipExternal](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/searchoptions/properties/skipexternal) of [SearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/searchoptions) class to specify if searching process should exclude external signatures (external signatures are the signatures that were added with an 3rd party software and not with GroupDocs.Signature).
 

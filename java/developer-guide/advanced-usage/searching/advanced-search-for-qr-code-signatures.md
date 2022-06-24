@@ -6,7 +6,26 @@ weight: 3
 description: " This article explains how to provide advanced search for QR-code electronic signatures with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Advanced search for QR Code signatures in documents in Java    
+        description: Advanced search for QR Codes in various documents fast and easily with Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to search QR Codes in advanced way using Java 
+        description: Get additional information of advanced searching QR Code signatures in documents with Java
+        steps:
+        - name: Load file which has one of supported file types.
+          text: Create object of Signature passing file as a constructor parameter. You can use either file path or file stream. 
+        - name: Create search options 
+          text: Instantiate QrCodeSearchOptions object providing all demanded data like type, pages setup or return content.
+        - name: Get list of items 
+          text: Invoke method Search passing search options.
+        - name: Process list of found items
+          text: Loop through list of found items and process in demanded way.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [QrCodeSearchOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/QrCodeSearchOptions) class to specify different options to search for QR-code signatures.
 

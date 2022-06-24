@@ -6,7 +6,26 @@ weight: 6
 description: "This section explains how to load document from URL with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Signing document loaded from Url using C#    
+        description: Processing documents downloaded from Url with C# language by GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to load document from Url and process via C# 
+        description: Learn all about processing documents downloaded from Url with C#
+        steps:
+        - name: Load source document
+          text: Instantiate WebRequest object providing url and save file to stream. 
+        - name: Pass file to Signature. 
+          text: Instantiate Signature object by passing file stream as a constructor parameter.
+        - name: Provide signing options. 
+          text: Set specific properties of desired SignOptions instance.
+        - name: Sign source and obtain result 
+          text: Invoke method Sign with passing created options and output file data. You can save signed file using file path or stream.
 ---
 Following example demonstrates how to work with documents from URL.
 

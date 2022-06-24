@@ -7,6 +7,8 @@ description: " This section explains how to search for embedded electronic sign
 keywords: 
 productName: GroupDocs.Signature for Java
 hideChildren: False
+structuredData:
+    showOrganization: True
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides additional features when searching forQR-code signatures ([QrCodeSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/QrCodeSignature)) that were previously encrypted or contains embedded data objects. Summary the abilities are as follow
 

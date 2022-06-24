@@ -7,6 +7,8 @@ description: " This section explains how to search for embedded electronic sign
 keywords: 
 productName: GroupDocs.Signature for Java
 hideChildren: False
+structuredData:
+    showOrganization: True
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides additional features when searching for Metadata Signatures ([MetadataSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/MetadataSignature)) that were previously encrypted or contains custom data objects. 
 
