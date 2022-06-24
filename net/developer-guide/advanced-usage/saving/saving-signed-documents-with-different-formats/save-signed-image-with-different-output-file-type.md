@@ -1,12 +1,31 @@
 ---
 id: save-signed-image-with-different-output-file-type
 url: signature/net/save-signed-image-with-different-output-file-type
-title: Save signed Image with different output file type
+title: How to save signed Image with different output file type
 weight: 1
 description: "This article explains how to save signed image with various image formats by GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Save signed images in different format using C#    
+        description: This article explains how to save signed images in differnt output format using C# language and GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to save signed Image with different output format file using C# 
+        description: This topic explains how to save image documents with specific file format using C#
+        steps:
+        - name: Load image document for signing from the local file or stream.
+          text: Create Signature class instance by passing either local or network file path or stream. 
+        - name: Provide with the signature options the specific ImageSaveOptions in. 
+          text: Set the instance of ImageSaveOptions with FileFormat and Overwrite properties to setup the saving policy.
+        - name: Run signing process and retrieve output image in desired format 
+          text: Call the Sign method with passing in the signature options and the image save options.
+        - name: Obtain signed image document in required format
+          text: Get the output document in requested format.
 ---
 [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class supports saving of Image signed documents with different formats. Each of document type has list of compatible saving type. These values are listed in enum [ImageSaveFileFormat](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/imagesavefileformat).
 

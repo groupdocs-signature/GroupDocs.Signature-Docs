@@ -6,7 +6,26 @@ weight: 1
 description: "This article explains how to save document with password protection."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Save document with password using Java    
+        description: This article explains how to save signed document with password using Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to save document with password using Java 
+        description: This article explains how to ptotected signed document with password using Java
+        steps:
+        - name: Load document for signing from the local file or stream.
+          text: Create Signature class instance by passing either local or network file path or stream. 
+        - name: Provide with the signature options the SaveOptions. 
+          text: Set the instance of SaveOptions (or derived specific one that is specific to Document type like PdfSaveOptions) with Password and UseOriginalPassword properties to setup the saving policy.
+        - name: Run signing process and retrieve output protected document 
+          text: Call the Sign method with passing in the signature options and the document save options.
+        - name: Obtain protected document
+          text: Get the protected signed document with password.
 ---
 [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature)  class supports saving signed document with password protection. This ability is supported over [setPassword](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/SaveOptions#setPassword(java.lang.String)) property of [SaveOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/SaveOptions) class that should be passed to [sign](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method.
 

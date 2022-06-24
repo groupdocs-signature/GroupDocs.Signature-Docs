@@ -1,12 +1,31 @@
 ---
 id: save-signed-document-with-password
 url: signature/net/save-signed-document-with-password
-title: Save signed document with password
+title: How to save document with password
 weight: 1
 description: "This article explains how to save document with password protection."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Save document with password using C#    
+        description: This article explains how to save signed document with password using C# language and GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to save document with password using C# 
+        description: This article explains how to ptotected signed document with password using C#
+        steps:
+        - name: Load document for signing from the local file or stream.
+          text: Create Signature class instance by passing either local or network file path or stream. 
+        - name: Provide with the signature options the SaveOptions. 
+          text: Set the instance of SaveOptions (or derived specific one that is specific to Document type like PdfSaveOptions) with Password and UseOriginalPassword properties to setup the saving policy.
+        - name: Run signing process and retrieve output protected document 
+          text: Call the Sign method with passing in the signature options and the document save options.
+        - name: Obtain protected document
+          text: Get the protected signed document with password.
 ---
 [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class supports saving signed document with password protection. This ability is supported over [Password](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/saveoptions/properties/password) property of [SaveOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/saveoptions) class that should be passed to [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign) method.
 

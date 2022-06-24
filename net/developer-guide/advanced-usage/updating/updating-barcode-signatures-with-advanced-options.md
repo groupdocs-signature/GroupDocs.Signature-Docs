@@ -1,7 +1,7 @@
 ---
 id: updating-barcode-signatures-with-advanced-options
 url: signature/net/updating-barcode-signatures-with-advanced-options
-title: Updating Barcode signatures with advanced options
+title: How to update Barcode signature in advance
 weight: 1
 description: " This article explains how to provide advanced options when updating Barcode electronic signatures with GroupDocs.Signature API."
 keywords: 

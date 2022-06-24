@@ -6,7 +6,26 @@ weight: 3
 description: "This article explains how to save signed Presentation documents with various file formats by GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Save signed Presentation in different format using Java    
+        description: This article explains how to save signed Presentation document in differnt output format using Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to save signed Presentation with different output format file using Java 
+        description: This topic explains how to save Presentation documents with specific file format using Java
+        steps:
+        - name: Load Presentation document for signing from the local file or stream.
+          text: Create Signature class instance by passing either local or network file path or stream. 
+        - name: Provide with the signature options the specific PresentationSaveOptions in. 
+          text: Set the instance of PresentationSaveOptions with FileFormat and Overwrite properties to setup the saving policy.
+        - name: Run signing process and retrieve output Presentation in desired format 
+          text: Call the Sign method with passing in the signature options and the Presentation save options.
+        - name: Obtain signed Presentation document in required format
+          text: Get the output document in requested format.
 ---
 [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class supports saving of Presentation signed documents with different formats. Each of document type has list of compatible saving type. These values are listed in enum [PresentationSaveFileFormat](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/PresentationSaveFileFormat).
 

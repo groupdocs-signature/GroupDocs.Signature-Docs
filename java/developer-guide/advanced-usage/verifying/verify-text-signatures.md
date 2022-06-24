@@ -9,14 +9,14 @@ productName: GroupDocs.Signature for Java
 structuredData:
     showOrganization: True
     application:    
-        name: Verify text signature in documents using C#    
-        description: This article explains how to scan the document for text signatures and provide its verification with C# language and GroupDocs.Signature for .NET APIs
+        name: Verify text signature in documents using Java    
+        description: This article explains how to scan the document for text signatures and provide its verification with Java language and GroupDocs.Signature for Java APIs
         productCode: signature
-        productPlatform: net 
+        productPlatform: java 
     showVideo: True
     howTo:
-        name: How to scan document for text entities and verify the document for specific text signatures conditions using C# 
-        description: This topic explains how to verify the document for Text signatures, provide Text elements verification and validation in C#
+        name: How to scan document for text entities and verify the document for specific text signatures conditions using Java 
+        description: This topic explains how to verify the document for Text signatures, provide Text elements verification and validation in Java
         steps:
         - name: Load document for verification from the local file or stream.
           text: Create Signature class instance by passing either local or network file path or stream. 

@@ -6,7 +6,26 @@ weight: 2
 description: "This article explains how to save signed PDF document with various file formats by GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Save PDF document in different file format using Java    
+        description: This article demonstrates how to save signed PDF file in differnt output format using Java language and GroupDocs.Signature for Java APIs
+        productCode: signature
+        productPlatform: java 
+    showVideo: True
+    howTo:
+        name: How to save PDF with different output format file using Java 
+        description: This topic explains how to save PDF documents with specific file format using Java
+        steps:
+        - name: Load PDF document for signing from the local file or stream.
+          text: Create Signature class instance by passing either local or network file path or stream. 
+        - name: Provide with the signature options the specific PdfSaveOptions in. 
+          text: Set the instance of PdfSaveOptions with FileFormat and Overwrite properties to setup the saving policy.
+        - name: Run signing process and retrieve output PDF in desired format 
+          text: Call the Sign method with passing in the signature options and the PDF save options.
+        - name: Obtain signed PDF document in required format
+          text: Get the output document in requested format.
 ---
 [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class supports saving of Pdf signed documents to different formats. Each of document type has list of compatible saving type. These values are listed in enum [PdfSaveFileFormat](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/PdfSaveFileFormat).
 

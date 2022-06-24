@@ -6,7 +6,26 @@ weight: 4
 description: "This article explains how to save signed Spreadsheet document with various file formats by GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Save signed Spreadsheet in different format using C#    
+        description: This article explains how to save signed Spreadsheet document in differnt output format using C# language and GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to save signed Spreadsheet with different output format file using C# 
+        description: This topic explains how to save Spreadsheet documents with specific file format using C#
+        steps:
+        - name: Load Spreadsheet document for signing from the local file or stream.
+          text: Create Signature class instance by passing either local or network file path or stream. 
+        - name: Provide with the signature options the specific SpreadsheetSaveOptions in. 
+          text: Set the instance of SpreadsheetSaveOptions with FileFormat and Overwrite properties to setup the saving policy.
+        - name: Run signing process and retrieve output Spreadsheet in desired format 
+          text: Call the Sign method with passing in the signature options and the Spreadsheet save options.
+        - name: Obtain signed Spreadsheet document in required format
+          text: Get the output document in requested format.
 ---
 [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class supports saving of Spreadsheet signed documents with different output file types. Each document type has list of compatible saving type. These values are listed in enum [SpreadsheetSaveFileFormat.](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/spreadsheetsavefileformat)
 

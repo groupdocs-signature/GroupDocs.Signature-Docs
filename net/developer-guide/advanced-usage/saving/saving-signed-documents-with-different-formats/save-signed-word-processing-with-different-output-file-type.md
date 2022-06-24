@@ -6,7 +6,26 @@ weight: 5
 description: "This article explains how to save signed Word Processing documents with various file formats by GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Save signed Words in different format using C#    
+        description: This article explains how to save signed Words document in differnt output format using C# language and GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to save signed Words with different output format file using C# 
+        description: This topic explains how to save Words documents with specific file format using C#
+        steps:
+        - name: Load Words document for signing from the local file or stream.
+          text: Create Signature class instance by passing either local or network file path or stream. 
+        - name: Provide with the signature options the specific WordProcessingSaveOptions in. 
+          text: Set the instance of WordProcessingSaveOptions with FileFormat and Overwrite properties to setup the saving policy.
+        - name: Run signing process and retrieve output Words in desired format 
+          text: Call the Sign method with passing in the signature options and the Words save options.
+        - name: Obtain signed Words document in required format
+          text: Get the output document in requested format.
 ---
 [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class supports saving of Word Processing signed documents with different formats. Each of document type has list of compatible saving type. These values are listed in enum [WordProcessingSaveFileFormat](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/wordprocessingsavefileformat).
 

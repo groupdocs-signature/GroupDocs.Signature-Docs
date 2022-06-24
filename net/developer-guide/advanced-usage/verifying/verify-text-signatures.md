@@ -1,7 +1,7 @@
 ---
 id: verify-text-signatures
 url: signature/net/verify-text-signatures
-title: How to verify text signatures
+title: Verifying Text signatures in advance
 weight: 3
 description: " This article explains how to provide advanced verification of Text electronic signatures with GroupDocs.Signature API."
 keywords: 
