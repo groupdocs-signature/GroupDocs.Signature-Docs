@@ -1,12 +1,31 @@
 ---
 id: sign-documents-with-standard-qr-code-entries
 url: signature/net/sign-documents-with-standard-qr-code-entries
-title: Sign documents with standard QR-code entries
+title: Sign documents with standard QR Code entries
 weight: 5
 description: "This article explains how to create QR-code electronic signature with standard encoded entries like Address, Email, V-Card, MeCard, EPC/SEPA, Event etc"
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Sign documents with QR code standard entities like WiFi, Contact, Address, Event, SEPA or MeCard using C#    
+        description: Create a QR code with standard content like contact details, address, WiFi network, or transaction details C# language by GroupDocs.Signature for .NET APIs
+        productCode: signature
+        productPlatform: net 
+    showVideo: True
+    howTo:
+        name: How to generated QR Code with standard entity and add it to any document using C# 
+        description: Learn how to sign any document with QR Code that contains standard entity and C#
+        steps:
+        - name: Provide source file
+          text: Create an instance of Signature object by passing file as a constructor parameter. You may provide either file path or file stream. 
+        - name: Specify signing options 
+          text: Instantiate QrCodeSignOptions class. Set up all needed data.
+        - name: Specify standard QR Code entry 
+          text: Instantiate one of the standard QR Code entry like WiFi, Email, Address, Event, SEPA, VCard or MeCard, and set to Data property of the sign options
+        - name: Sign file and get result 
+          text: Call Sign method with signing options and file path for result file. You also is able to use stream as output.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides ability to embed into QR-code signature standard entries like email, contact v-card, address etc. This feature supports standard QR-code representation of entries. At this moment following standard QR-code entries are supported
 
@@ -305,6 +324,41 @@ using (Signature signature = new Signature("sample.pdf"))
     List<SignOptions> listOptions = new List<SignOptions>() { options1, options2 };
     // sign document to file
     signature.Sign("output.pdf", options);
+}
+```
+
+## Create an image with the WiFi QR Code information
+
+This example shows how to create an image with the WiFi QR Code object.
+
+```csharp
+using (Signature signature = new Signature("sample.png"))
+{
+    // create WiFi object
+    WiFi wifi  = new WiFi()
+    {
+        SSID = "GuestNetwork!",
+        Encryption = WiFiEncryptionType.WPAWPA2,
+        Password = "guest",
+        Hidden = false
+    };
+
+    // create options
+    QrCodeSignOptions options = new QrCodeSignOptions
+    {
+        EncodeType = QrCodeTypes.QR,
+        // setup Data property to WiFi object instance
+        Data = wifi,
+        // set right bottom corner
+        HorizontalAlignment = HorizontalAlignment.Right,
+        VerticalAlignment = VerticalAlignment.Bottom,
+        Width = 100,
+        Height = 100,
+        Margin = new Padding(10)
+    };
+
+    // sign document to image file
+    signature.Sign("output.png", options);
 }
 ```
 
