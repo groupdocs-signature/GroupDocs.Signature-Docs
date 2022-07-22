@@ -83,51 +83,9 @@ Signed with Codabar document might looks like in the picture below. Codabar form
 
 [GroupDocs.Signature App](https://products.groupdocs.app/signature/generate/barcode/codabar) provides opportunity to try document signing with barcodes for free.
 
-### Signing document with Event QR-code in C\#
-
-Sometimes it is needed to inform workers about business events. In such cases Event QR-code can provide all demanded information in a very effective way. This topic describes how to sign Pdf document with generated Event QR-code.
-
-* Instantiate Signature class providing path to source document or document stream.
-* Set event data in Event object instance.
-* Create the QrCodeSignOptions object and set up all demanded fields.
-* Invoke Sign method to process the document, providing output file path and sign options.
-
-```cs
-            // instantiating the signature object
-            using (Signature signature = new Signature(@"source.pdf"))
-            {
-                //provide event data
-                Event eventQr = new Event()
-                {
-                    Title = "Meeting",
-                    Description = "Productivity issues",
-                    Location = "room 408",
-                    StartDate = new DateTime(2022, 06, 19, 15, 30, 0),
-                    EndDate = new DateTime(2022, 06, 19, 17, 0, 0)
-                };
-
-                // setup qrcode signature options
-                QrCodeSignOptions signOptions = new QrCodeSignOptions()
-                {
-                    HorizontalAlignment = HorizontalAlignment.Right,
-                    VerticalAlignment = VerticalAlignment.Bottom,
-                    EncodeType = QrCodeTypes.QR,
-                    Text = "",
-                    Data = eventQr
-                };
-
-                // sign document
-                signature.Sign(@"signed_event.pdf", signOptions);
-            }
-```
-
-Result of signing may looks like the picture below. Such QR-code can be very useful for events organization.
-
-![Signed with Event QR-code document](signature/net/images/signature-use-cases/how-to-generate-barcode-and-sign-document-using-csharp/signed_event.png)
-
 [GroupDocs.Signature App](https://products.groupdocs.app/signature/generate/qrcode) gives opportunity to try document signing with QR-codes for free.
 
-## Barcode and Qr-code image generation in C\#
+## Barcode and image generation in C\#
 
 Another way to improve documents is to generate barcode firstly and add it to documents using third-party tools. For this case it is possible to generate code as an image.
 
@@ -166,7 +124,7 @@ In order to use the API without evaluation limitations, you can get a free [temp
 
 ## Conclusion
 
-To sum up, some useful ways of processing documents, barcodes and QR-codes were discussed in this article. Using C# with .NET applications improves productivity of such actions dramatically.
+To sum up, some useful ways of processing documents and barcodes were discussed in this article. Using C# with .NET applications improves productivity of such actions dramatically.
 In addition, you can use [Online Applications to sign your files](https://products.groupdocs.app/signature/family) from GroupDocs.Signature for free.
 
 Moreover, it is possible to learn how to use GroupDocs.Signature in your .NET applications with [documentation](https://docs.groupdocs.com/signature/net/). Also, you may discuss any questions or issues at [Groupdocs forum](https://forum.groupdocs.com/).
