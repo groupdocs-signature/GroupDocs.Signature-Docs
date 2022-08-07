@@ -1,6 +1,6 @@
 ---
 id: groupdocs-signature-for-net-22-7-release-notes
-url: signature/net/groupdocs-signature-for-net-22-6-release-notes
+url: signature/net/groupdocs-signature-for-net-22-7-release-notes
 title: GroupDocs.Signature for .NET 22.7 Release Notes
 weight: 40
 description: ""
