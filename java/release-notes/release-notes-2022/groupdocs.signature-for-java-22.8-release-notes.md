@@ -51,7 +51,7 @@ The following topics from Developer Guide were changed
 
 #### Public class [SignOptions](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options/package-frame) was updated with ZOrder property
 
-Property [ZOrder] expects integer values to put the signatures on document page in proper order.
+Property [ZOrder](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/SignOptions#setZOrder-int-) expects integer values to put the signatures on document page in proper order.
 
 The following example demonstrates how to setup special ordering of the signatures on the document page.
 
