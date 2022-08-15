@@ -143,7 +143,7 @@ This enumeration keeps supported WiFi encryption types.
 
 #### Public class [WiFi](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/WiFi) was added to provide WiFi QR Code object properties
 
-Class [WiFi] contains following properties to get or set.
+Class [WiFi](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/WiFi) contains following properties to get or set.
 
 The following example demonstrates how to create WiFi QR Code standard entry.
 
