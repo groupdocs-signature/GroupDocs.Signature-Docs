@@ -2,7 +2,7 @@
 id: groupdocs-signature-for-java-22-8-release-notes
 url: signature/java/groupdocs-signature-for-java-22-8-release-notes
 title: GroupDocs.Signature for Java 22.8 Release Notes
-weight: 44
+weight: 36
 description: ""
 keywords: 
 productName: GroupDocs.Signature for Java
