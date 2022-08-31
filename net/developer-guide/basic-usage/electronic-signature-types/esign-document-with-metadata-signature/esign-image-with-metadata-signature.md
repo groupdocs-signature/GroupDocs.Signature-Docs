@@ -45,17 +45,17 @@ This example shows how to sign png image with metadata e-signatures
 using (Signature signature = new Signature("sample.png"))
 {
     // create Metadata option with predefined Metadata text
-    MetadataSignOptions options = new MetadataSignOptions();
+    var options = new MetadataSignOptions();
     // Specify different Metadata Signatures and add them to options signature collection
     ushort imgsMetadataId = 41996;
     // Create several Image Metadata signatures with different types
-    ImageMetadataSignature[] signatures = new ImageMetadataSignature[]
-    {
-        new ImageMetadataSignature(imgsMetadataId++, 123456), // int
-        new ImageMetadataSignature(imgsMetadataId++, "Mr.Scherlock Holmes"), // string
-        new ImageMetadataSignature(imgsMetadataId++, DateTime.Now), // date time
-        new ImageMetadataSignature(imgsMetadataId++, 123.456M), //decimal value
-    };
+    options
+        .Add(new ImageMetadataSignature(imgsMetadataId++, "Mr.Scherlock Holmes")) // String value
+        .Add(new ImageMetadataSignature(imgsMetadataId++, DateTime.Now))          // Date Time valu
+        .Add(new ImageMetadataSignature(imgsMetadataId++, 123456))                // Integer value
+        .Add(new ImageMetadataSignature(imgsMetadataId++, 123.456D))              // Double value
+        .Add(new ImageMetadataSignature(imgsMetadataId++, 123.456M))              // Decimal value
+        .Add(new ImageMetadataSignature(imgsMetadataId++, 123.456F));             // Float value
 
     // add these signatures to options
     options.Signatures.AddRange(signatures);

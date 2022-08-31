@@ -47,14 +47,13 @@ using (Signature signature = new Signature("sample.pdf"))
 {
     MetadataSignOptions options = new MetadataSignOptions();
 
-    // Create few Pdf Metadata signatures with different data types
-    PdfMetadataSignature[] signatures = new PdfMetadataSignature[]
-    {
-        new PdfMetadataSignature("Author", "Mr.Scherlock Holmes"),
-        new PdfMetadataSignature("DateCreated", DateTime.Now),
-        new PdfMetadataSignature("DocumentId", 123456),
-        new PdfMetadataSignature("SignatureId", 123.456M)
-    };
+    options
+       .Add(new PdfMetadataSignature("Author", "Mr.Scherlock Holmes")) // String value
+       .Add(new PdfMetadataSignature("CreatedOn", DateTime.Now))       // DateTime values
+       .Add(new PdfMetadataSignature("DocumentId", 123456))            // Integer value
+       .Add(new PdfMetadataSignature("SignatureId", 123.456D))         // Double value
+       .Add(new PdfMetadataSignature("Amount", 123.456M))              // Decimal value
+       .Add(new PdfMetadataSignature("Total", 123.456F));              // Float value
     // add these signatures to options
     options.Signatures.AddRange(signatures);
     signature.Sign("SampleSigned.pdf", options);
