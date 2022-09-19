@@ -27,21 +27,21 @@ structuredData:
         - name: Get pages images
           text: Invoke GeneratePreview method passing preview options and save pages images by method defined in CreatePageStream method.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [PreviewOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/previewoptions) class to specify different options to manage document pages preview generation process. Since 19.12 version there's ability to hide signatures from documents. Using property [HideSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/previewoptions/properties/hidesignatures) of [PreviewOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/previewoptions) will allow to hide signatures from document preview.  
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [PreviewOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions) class to specify different options to manage document pages preview generation process. Since 19.12 version there's ability to hide signatures from documents. Using property [HideSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions/hidesignatures) of [PreviewOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions) will allow to hide signatures from document preview.  
   
 Here are the steps to generate document preview with GroupDocs.Signature with hidden signatures:
 
-* Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
-* Instantiate the [PreviewOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/previewoptions) object with:
-* delegate for each page stream creation (see event handler [CreatePageStream](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/createpagestream));  
-* property [HideSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/previewoptions/properties/hidesignatures) set to true;
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
+* Instantiate the [PreviewOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions) object with:
+* delegate for each page stream creation (see event handler [CreatePageStream](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/createpagestream));  
+* property [HideSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions/hidesignatures) set to true;
 * image preview format - PNG / JPG / BMP;
 * page numbers to process;
 * custom size of preview images (if needed).  
 {{< alert style="info" >}}
-Stream that were created by [CreatePageStream](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/createpagestream) delegate will be disposed automatically once after generation of preview image. If you need to implement custom image preview stream disposing you have to pass additional argument [ReleasePageStream](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/releasepagestream) to clean up resources.  
+Stream that were created by [CreatePageStream](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/createpagestream) delegate will be disposed automatically once after generation of preview image. If you need to implement custom image preview stream disposing you have to pass additional argument [ReleasePageStream](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/releasepagestream) to clean up resources.  
 {{< /alert >}}  
-* Call [GeneratePreview](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/generatepreview) method of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class instance and pass [PreviewOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/previewoptions) to it.
+* Call [GeneratePreview](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/generatepreview) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [PreviewOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions) to it.
 
 ## Generate document preview without signatures on it
 

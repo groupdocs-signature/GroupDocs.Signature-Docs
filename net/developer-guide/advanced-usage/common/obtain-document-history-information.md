@@ -25,10 +25,10 @@ structuredData:
         - name: Process obtained data. 
           text: Loop through ProcessLogs collection and process data about document operations.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) allows to get document history information about processed changes that include list of [ProcessLog](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/processlog). Each history log record contains following information :
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) allows to get document history information about processed changes that include list of [ProcessLog](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/processlog). Each history log record contains following information :
 
 * date/time of processed change.
-* type of document process change. See [ProcessType](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/processtype)
+* type of document process change. See [ProcessType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/processtype)
 * description of change
 * quantity of succeeded and failed signatures
 

@@ -17,13 +17,13 @@ hideChildren: False
 
 Here are the steps to align signature on page with GroupDocs.Signature:
 
-* Create a new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
+* Create a new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
 * Instantiate signature options ([ImageSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesignoptions) for example) with all required properties.
 * Set  [HorizontalAlignment](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesignoptions/properties/horizontalalignment) with one of enumeration value to align signature along page width
 * Set  [VerticalAlignment](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesignoptions/properties/verticalalignment) with one of enumeration value to align signature along page height
 * Set  [Margin](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesignoptions/properties/margin) property with required offsetfrom page border
 * Set  [MarginMeasureType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesignoptions/properties/marginmeasuretype) property with non default value if there is need to specify offset from page border in another measure units like millimeters and page percents (from 100% width and 100% height)
-* Call [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign) method of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class instance and pass the instance of signature options ([ImageSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesignoptions) for example) to it.
+* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass the instance of signature options ([ImageSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesignoptions) for example) to it.
 
 This example shows how to locate signature with different alignments.
 

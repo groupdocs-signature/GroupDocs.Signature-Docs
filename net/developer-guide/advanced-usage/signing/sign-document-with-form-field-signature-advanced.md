@@ -12,7 +12,7 @@ hideChildren: False
 
 At the moment GroupDocs.Siganture supports creation of Form Field signatures for Pdf documents only.
 
-The [FormFieldSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/formfieldsignoptions) class contains one [FormFieldSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/formfieldsignature) object to put to the document.
+The [FormFieldSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/formfieldsignoptions) class contains one [FormFieldSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/formfieldsignature/) object to put to the document.
 
 Here are the list of different Form Field signature classes that could be set to [FormFieldSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/formfieldsignoptions)
 
@@ -24,11 +24,11 @@ Here are the list of different Form Field signature classes that could be set to
 
 Here are the steps to add Form Field signatures into document with GroupDocs.Signature:
 
-* Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
 * Instantiate the [FormFieldSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/formfieldsignoptions) object according to your requirements.
-* Instantiate one of the derived classes from [FormFieldSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/formfieldsignature) object. It could be [TextFormFieldSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/checkboxformfieldsignature), [CheckboxFormFieldSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/checkboxformfieldsignature) or [DigitalFormFieldSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/digitalformfieldsignature).
+* Instantiate one of the derived classes from [FormFieldSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/formfieldsignature/) object. It could be [TextFormFieldSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/checkboxformfieldsignature), [CheckboxFormFieldSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/checkboxformfieldsignature) or [DigitalFormFieldSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/digitalformfieldsignature).
 * Set FormFieldSignOptions.[Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/formfieldsignoptions/properties/signature) property with created object.
-* Call [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign) method of  [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class instance and pass [FormFieldSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/formfieldsignoptions) to it.
+* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of  [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [FormFieldSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/formfieldsignoptions) to it.
 * Analyze [SignResult](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/signresult) result to check newly created signatures if needed.
 
 Following examples show different scenarios of using form fields on document page. These samples are supported for Pdf documents.

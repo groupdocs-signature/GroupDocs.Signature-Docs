@@ -31,7 +31,7 @@ structuredData:
 
 Here are the steps to handle exceptions from GroupDocs.Signature while document verification:
 
-* Compose try-catch block above [Verify](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/verify) method with catching [GroupDocsSignatureException](https://apireference.groupdocs.com/net/signature/groupdocs.signature/groupdocssignatureexception) type error.  
+* Compose try-catch block above [Verify](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/verify) method with catching [GroupDocsSignatureException](https://apireference.groupdocs.com/net/signature/groupdocs.signature/groupdocssignatureexception) type error.  
 
 This example shows how to handle GroupDocs.Signature exceptions.
 

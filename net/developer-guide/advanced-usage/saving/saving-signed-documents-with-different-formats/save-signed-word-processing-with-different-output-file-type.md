@@ -27,14 +27,14 @@ structuredData:
         - name: Obtain signed Words document in required format
           text: Get the output document in requested format.
 ---
-[Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class supports saving of Word Processing signed documents with different formats. Each of document type has list of compatible saving type. These values are listed in enum [WordProcessingSaveFileFormat](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/wordprocessingsavefileformat).
+[Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class supports saving of Word Processing signed documents with different formats. Each of document type has list of compatible saving type. These values are listed in enum [WordProcessingSaveFileFormat](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/wordprocessingsavefileformat).
 
 Here are the steps to save signed Word Processing document to different output type with [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net):
 
-* Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
 * Instantiate required signature options.
 * Instantiate the [WordProcessingSaveOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/wordprocessingsaveoptions) object according to your requirements and specify [FileFormat](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/wordprocessingsaveoptions/properties/fileformat) as one of predefined values from [WordProcessingSaveFileFormat](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/wordprocessingsavefileformat).
-* Call [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign) method of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class instance and pass signatureoptions and [WordProcessingSaveOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/wordprocessingsaveoptions) object to it.
+* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass signatureoptions and [WordProcessingSaveOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/wordprocessingsaveoptions) object to it.
 
 Following example demonstrates how to save signed Word processing document with different output type
 

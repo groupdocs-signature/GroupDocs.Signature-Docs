@@ -27,7 +27,7 @@ structuredData:
         - name: Process list of found items
           text: Process in desired way list of found items.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides following abilities to search for embedded data objects in QR-code signatures ([QrCodeSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/qrcodesignature)) that were embedded with custom encryption and serialization
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides following abilities to search for embedded data objects in QR-code signatures ([QrCodeSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodesignature)) that were embedded with custom encryption and serialization
 
 * ability to search for embedded custom objects into metadata and decrypt them to original source values
 * ability to search for custom encrypted QR-code signature and decrypt it
@@ -37,8 +37,8 @@ Here are the steps to search and decrypt previously encrypted text of QR-Code an
 
 * Implement (use) custom data serialization class that implements [IDataEncryption](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/idataencryption) interface.
 * Ensure that data class if defined with custom serialization attribute  
-* Instantiate the [QrCodeSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodesearchoptions) object and setup [DataEncryption](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodesearchoptions/properties/dataencryption) value with custom encryption object implementation
-* Call [Search](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/search/_1) method of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class instance and pass [QrCodeSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodesearchoptions) to it.
+* Instantiate the [QrCodeSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesearchoptions) object and setup [DataEncryption](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodesearchoptions/properties/dataencryption) value with custom encryption object implementation
+* Call [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [QrCodeSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesearchoptions) to it.
 
 ## Implementation of custom data serialization
 
@@ -141,7 +141,7 @@ public class DocumentSignatureData
 
 ## Search for embedded custom objects in QR-code signatures
 
-This example shows how to decrypt previously embedded encrypted custom objects into [QrCodeSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/qrcodesignature) contains method [GetData](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/qrcodesignature/methods/getdata/_1) to retrieve object
+This example shows how to decrypt previously embedded encrypted custom objects into [QrCodeSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodesignature) contains method [GetData](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/qrcodesignature/methods/getdata/_1) to retrieve object
 
 ```csharp
 using (Signature signature = new Signature("QRCodeCustomSerializationObject.pdf"))

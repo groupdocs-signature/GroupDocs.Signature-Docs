@@ -29,7 +29,7 @@ structuredData:
 
 Here are the steps to handle exceptions from GroupDocs.Signature while searching for document signatures:
 
-* Compose try-catch block above [Search](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/search/_1)  method with catching [GroupDocsSignatureException](https://apireference.groupdocs.com/net/signature/groupdocs.signature/groupdocssignatureexception) type error.
+* Compose try-catch block above [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search)  method with catching [GroupDocsSignatureException](https://apireference.groupdocs.com/net/signature/groupdocs.signature/groupdocssignatureexception) type error.
 
 ## Exception handling while searching for document signatures
 

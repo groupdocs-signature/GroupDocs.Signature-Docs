@@ -24,6 +24,6 @@ Following are the links to some useful resources you may need to accomplish your
 * [GroupDocs.Signature for .NET Release Notes]({{< ref "signature/net/release-notes/_index.md" >}})
 * [GroupDocs.Signature for .NET Product Page](https://products.groupdocs.com/signature/net)
 * [Install GroupDocs.Signature for .NET NuGet Package](https://www.nuget.org/packages/GroupDocs.Signature/)
-* [GroupDocs.Signature for .NET API Reference Guide](https://apireference.groupdocs.com/net/signature)
+* [GroupDocs.Signature for .NET API Reference Guide](https://reference.groupdocs.com/signature/net/)
 * [GroupDocs.Signature for .NET Free Support Forum](https://forum.groupdocs.com/c/signature)
 * [GroupDocs.Signature for .NET Paid Support Helpdesk](https://helpdesk.groupdocs.com/)

@@ -27,14 +27,14 @@ structuredData:
         - name: Obtain signed PDF document in required format
           text: Get the output document in requested format.
 ---
-[Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class supports saving of Pdf signed documents to different formats. Each of document type has list of compatible saving type. These values are listed in enum [PdfSaveFileFormat](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/pdfsavefileformat).
+[Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class supports saving of Pdf signed documents to different formats. Each of document type has list of compatible saving type. These values are listed in enum [PdfSaveFileFormat](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/pdfsavefileformat).
 
 Here are the steps to save signed Pdf document to different output type with [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net):
 
-* Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature)  class and pass source document path or stream as a constructor parameter.
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature)  class and pass source document path or stream as a constructor parameter.
 * Instantiate required signature options.
-* Instantiate the [PdfSaveOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/pdfsaveoptions) object according to your requirements and specify [FileFormat](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/pdfsaveoptions/properties/fileformat) as one of predefined values from [PdfSaveFileFormat](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/pdfsavefileformat).  
-* Call [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign) method of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class instance and pass signatureoptions and [PdfSaveOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/pdfsaveoptions) object to it.
+* Instantiate the [PdfSaveOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/pdfsaveoptions) object according to your requirements and specify [FileFormat](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/pdfsaveoptions/fileformat) as one of predefined values from [PdfSaveFileFormat](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/pdfsavefileformat).  
+* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass signatureoptions and [PdfSaveOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/pdfsaveoptions) object to it.
 
 Following example demonstrates how to save signed PDF document with different output type
 

@@ -27,14 +27,14 @@ structuredData:
         - name: Obtain signed image document in required format
           text: Get the output document in requested format.
 ---
-[Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class supports saving of Image signed documents with different formats. Each of document type has list of compatible saving type. These values are listed in enum [ImageSaveFileFormat](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/imagesavefileformat).
+[Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class supports saving of Image signed documents with different formats. Each of document type has list of compatible saving type. These values are listed in enum [ImageSaveFileFormat](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/imagesavefileformat).
 
 Here are the steps to save signed Image document to different output type with [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net):
 
-* Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
 * Instantiate required signature options.
-* Instantiate the [ImageSaveOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesaveoptions) object according to your requirements and specify [FileFormat](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesaveoptions/properties/fileformat) as one of predefined values from [ImageSaveFileFormat](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/imagesavefileformat).  
-* Call [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign) method of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class instance and pass signatureoptions and object [ImageSaveOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesaveoptions) to it.
+* Instantiate the [ImageSaveOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/imagesaveoptions) object according to your requirements and specify [FileFormat](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/imagesaveoptions/fileformat) as one of predefined values from [ImageSaveFileFormat](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/imagesavefileformat).  
+* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass signatureoptions and object [ImageSaveOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/imagesaveoptions) to it.
 
 Following example demonstrates how to save signed Image document with different output type
 

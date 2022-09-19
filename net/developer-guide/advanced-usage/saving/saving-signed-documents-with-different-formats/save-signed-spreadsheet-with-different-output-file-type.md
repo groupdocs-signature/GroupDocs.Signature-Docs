@@ -27,15 +27,15 @@ structuredData:
         - name: Obtain signed Spreadsheet document in required format
           text: Get the output document in requested format.
 ---
-[Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class supports saving of Spreadsheet signed documents with different output file types. Each document type has list of compatible saving type. These values are listed in enum [SpreadsheetSaveFileFormat.](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/spreadsheetsavefileformat)
+[Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class supports saving of Spreadsheet signed documents with different output file types. Each document type has list of compatible saving type. These values are listed in enum [SpreadsheetSaveFileFormat.](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/spreadsheetsavefileformat)
 
 Here are the steps to save signed Spreadsheet document to different output type with [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net):
 
-* Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
 * Instantiate required signature options.
 * Instantiate the [SpreadsheetSaveOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/spreadsheetsaveoptions) object according to your requirements and specify [FileFormat](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/spreadsheetsaveoptions/properties/fileformat) as one of predefined values from [SpreadsheetSaveFileFormat](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/spreadsheetsavefileformat).  
 
-* Call [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign) method of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class instance and pass signatureoptions and [SpreadsheetSaveOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/spreadsheetsaveoptions) object to it.
+* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass signatureoptions and [SpreadsheetSaveOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/spreadsheetsaveoptions) object to it.
 
 Following example demonstrates how to save signed Spreadsheet document with different output type
 

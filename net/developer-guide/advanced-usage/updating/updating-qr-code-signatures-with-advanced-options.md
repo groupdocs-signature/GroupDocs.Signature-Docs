@@ -8,9 +8,9 @@ keywords:
 productName: GroupDocs.Signature for .NET
 hideChildren: False
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [QrCodeSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/qrcodesignature) class to manipulate qr-code signatures location, size, textual content and encode type over [Update](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/update/) method of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class. This method returns [UpdateResult](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/updateresult) object to analyze if signatures were successfully processed.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [QrCodeSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodesignature) class to manipulate qr-code signatures location, size, textual content and encode type over [Update](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/update/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class. This method returns [UpdateResult](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/updateresult) object to analyze if signatures were successfully processed.
 
-Please be aware that [Update](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/update/) method modifies the same document that was passed to constructor of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class. The [UpdateResult](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/updateresult) contains list of successfully updated signatures and ones that failed. The Barcode signature could be failed to update due to several reasons:
+Please be aware that [Update](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/update/) method modifies the same document that was passed to constructor of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class. The [UpdateResult](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/updateresult) contains list of successfully updated signatures and ones that failed. The Barcode signature could be failed to update due to several reasons:
 
 * if signature object was initialized with constructor by incorrect signature identifier;
 * if signature object was not found;
@@ -18,18 +18,18 @@ Please be aware that [Update](https://apireference.groupdocs.com/net/signature/g
 
 Here are the steps to update QR-code signature in the document with GroupDocs.Signature:
 
-* Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path as a constructor parameter;
-* Instantiate [QrCodeSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodesearchoptions) object with desired properties;
-* Call [Search](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/search/_1) method to obtain list of [QrCodeSignatures](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/qrcodesignature);
-* Select from list [QrCodeSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/qrcodesignature) object(s) that should be updated;
-* Call [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) object [Update](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/update/) method and pass one or several signatures to it.
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter;
+* Instantiate [QrCodeSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesearchoptions) object with desired properties;
+* Call [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) method to obtain list of [QrCodeSignatures](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodesignature);
+* Select from list [QrCodeSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodesignature) object(s) that should be updated;
+* Call [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) object [Update](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/update/) method and pass one or several signatures to it.
 * Analyze [UpdateResult](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/updateresult) result to check whether signatures were updated or not.
 
-Here are the alternative steps to update QR-code signature in the document with GroupDocs.Signature. This approach is based on saved signatures Id after [Search](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/search/_1) or [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign) methods.
+Here are the alternative steps to update QR-code signature in the document with GroupDocs.Signature. This approach is based on saved signatures Id after [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) or [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) methods.
 
-* Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path as a constructor parameter;
-* Instantiate one or several [QrCodeSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/qrcodesignature) objects with signature Id(s) passed to constructor;
-* Call [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class object [Update](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/update/) method and pass one or several signatures to it;
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter;
+* Instantiate one or several [QrCodeSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodesignature) objects with signature Id(s) passed to constructor;
+* Call [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class object [Update](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/update/) method and pass one or several signatures to it;
 * Analyze [UpdateResult](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/updateresult) result to check whether signatures were updated or not.
 
 The following table describes changeable properties for QR-code signatures dependent on document type
@@ -44,7 +44,7 @@ The following table describes changeable properties for QR-code signatures depen
 
 ## Update QR-code signature in the document after Search
 
-This example shows how to update QR-code signature that was found using [Search](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/search/_1) method.
+This example shows how to update QR-code signature that was found using [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) method.
 
 ```csharp
 // initialize Signature instance
@@ -88,7 +88,7 @@ using (Signature signature = new Signature("sampleSigned.pdf"))
 
 ## Update QR-code signature in document by known signature Identifier  
 
-This example shows how to update QR-code signature in the document by known signature Id (that was obtained by [Search](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/search/_1) or [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign) method previously).
+This example shows how to update QR-code signature in the document by known signature Id (that was obtained by [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) or [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method previously).
 
 ```csharp
 // initialize Signature instance

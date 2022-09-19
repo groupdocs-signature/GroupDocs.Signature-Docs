@@ -27,14 +27,14 @@ structuredData:
         - name: Obtain signed Presentation document in required format
           text: Get the output document in requested format.
 ---
-[Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class supports saving of Presentation signed documents with different formats. Each of document type has list of compatible saving type. These values are listed in enum [PresentationSaveFileFormat](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/presentationsavefileformat).
+[Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class supports saving of Presentation signed documents with different formats. Each of document type has list of compatible saving type. These values are listed in enum [PresentationSaveFileFormat](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/presentationsavefileformat).
 
 Here are the steps to save signed Presentation document to different output type with [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net):
 
-* Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature)  class and pass source document path or stream as a constructor parameter.
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature)  class and pass source document path or stream as a constructor parameter.
 * Instantiate required signature options.
 * Instantiate the [PresentationSaveOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/presentationsaveoptions) object according to your requirements and specify [FileFormat](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/presentationsaveoptions/properties/fileformat) as one of predefined values from [PresentationSaveFileFormat](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/presentationsavefileformat).  
-* Call [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign) method of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class instance and pass signatureoptions and [PresentationSaveOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/presentationsaveoptions) [](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/presentationsaveoptions) object to it.
+* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass signatureoptions and [PresentationSaveOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/presentationsaveoptions) [](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/presentationsaveoptions) object to it.
 
 Following example demonstrates how to save signed Presentation document with different output type
 

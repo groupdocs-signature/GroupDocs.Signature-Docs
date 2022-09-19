@@ -27,23 +27,23 @@ structuredData:
         - name: Process document with event listeners. 
           text: Call method Sign of Signature instance and process all appearing events.
 ---
-[Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class contains several events that are being called for different process stages
+[Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class contains several events that are being called for different process stages
 
-* [SignStarted](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/events/signstarted) to handle process start event. This event is occur once [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign) method is called
-* [SignProgress](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/events/signprogress) to handle progress event. This event occurs each time on signing each signature was completed.
-* [SignCompleted](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/events/signcompleted) to handle completion event. This event occurs once [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign) process was completed.
+* [SignStarted](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/signstarted) to handle process start event. This event is occur once [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method is called
+* [SignProgress](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/signprogress) to handle progress event. This event occurs each time on signing each signature was completed.
+* [SignCompleted](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/signcompleted) to handle completion event. This event occurs once [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) process was completed.
 
 Here are the steps to subscribe for signing process with [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net):
 
 * Define required handler delegates to process signing events.
-* Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
 * Subscribe for required events
-* Instantiate required [SignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/signoptions) object
-* Call [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign) method of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class instance and pass signature options in it
+* Instantiate required [SignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions) object
+* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass signature options in it
 
 ## Implement method for SignStarted event
 
-GroupDocs.Signature expects [ProcessStartEventHandler](https://apireference.groupdocs.com/net/signature/groupdocs.signature/processstarteventhandler) delegate to subscribe for [SignStarted](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/events/signstarted) event
+GroupDocs.Signature expects [ProcessStartEventHandler](https://reference.groupdocs.com/signature/net/groupdocs.signature/processprogresseventhandler) delegate to subscribe for [SignStarted](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/signstarted) event
 
 ```csharp
 private static void OnSignStarted(Signature signature, ProcessStartEventArgs args)

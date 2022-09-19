@@ -29,19 +29,19 @@ Sometimes you may want to search for electronic signatures of different types si
 
 Here are the steps to search for multiple signatures types within the document with GroupDocs.Signature:
 
-* Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
-* Instantiate search options for required signature types and them to collection of List<[SearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/searchoptions)\>  type.
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
+* Instantiate search options for required signature types and them to collection of List<[SearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/searchoptions)\>  type.
 
 The possible options are:
 
-* [BarcodeSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/barcodesearchoptions) - to search for Barcode signatures;
+* [BarcodeSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/barcodesearchoptions) - to search for Barcode signatures;
 * [DigitalSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/digitalsearchoptions) -  to search for Digital signatures;
 * [FormFieldSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/formfieldsearchoptions) - to search for Form-field signatures;
-* [ImageSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesearchoptions) - to search for Image signatures;
+* [ImageSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/imagesearchoptions) - to search for Image signatures;
 * [MetadataSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/metadatasearchoptions) - to search for Metadata signatures;
-* [QrCodeSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodesearchoptions) - to search for QR-code signatures;
-* [TextSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/textsearchoptions) to search for Text signatures.
-* Call [Search](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/search/_1) method of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class instance and pass collection of [search options](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/searchoptions) to it.
+* [QrCodeSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesearchoptions) - to search for QR-code signatures;
+* [TextSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsearchoptions) to search for Text signatures.
+* Call [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass collection of [search options](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/searchoptions) to it.
 
 This example shows how to search for multiple electronic signature types in the document.
 

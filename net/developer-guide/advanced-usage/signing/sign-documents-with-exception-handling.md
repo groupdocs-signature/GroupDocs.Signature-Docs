@@ -12,7 +12,7 @@ hideChildren: False
 
 Here are the steps to handle exceptions from GroupDocs.Signature:
 
-* Compose try-catch block above [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign) method with catching [GroupDocsSignatureException](https://apireference.groupdocs.com/net/signature/groupdocs.signature/groupdocssignatureexception) type error.  
+* Compose try-catch block above [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method with catching [GroupDocsSignatureException](https://apireference.groupdocs.com/net/signature/groupdocs.signature/groupdocssignatureexception) type error.  
 
 This example shows how to handle GroupDocs.Signature exceptions.
 

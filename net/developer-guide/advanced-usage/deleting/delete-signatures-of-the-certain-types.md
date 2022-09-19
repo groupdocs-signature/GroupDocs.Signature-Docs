@@ -25,13 +25,13 @@ structuredData:
         - name: Delete demanded signature types. 
           text: Invoke Delete method and analyze DeleteResult instance.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides overloaded [Delete](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/delete) method that accepts list of the [SignatureType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/signaturetype) enumeration values.
-Please be aware that this method modifies the same document that was passed to constructor of the [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides overloaded [Delete](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/delete) method that accepts list of the [SignatureType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signaturetype) enumeration values.
+Please be aware that this method modifies the same document that was passed to constructor of the [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class.
 
 Here are the steps to delete signature by certain types from the document with GroupDocs.Signature:
 
-* Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path or its stream as a constructor parameter;
-* Call [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) object [Delete](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/delete) method and pass list of the required [SignatureType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/signaturetype) enumerations to it.
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path or its stream as a constructor parameter;
+* Call [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) object [Delete](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/delete) method and pass list of the required [SignatureType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signaturetype) enumerations to it.
 
 This example shows how to delete various signatures types from the document at once.
 

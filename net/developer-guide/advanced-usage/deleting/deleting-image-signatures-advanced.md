@@ -25,29 +25,29 @@ structuredData:
         - name: Delete selected signatures. 
           text: Invoke Delete method and analyze DeleteResult instance.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [ImageSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/imagesignature) class to manipulate image signatures and delete them from the documents over [Delete](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/delete) method.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [ImageSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/imagesignature) class to manipulate image signatures and delete them from the documents over [Delete](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/delete) method.
 
-Please be aware that [Delete](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/delete) method modifies the same document that was passed to constructor of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class.
+Please be aware that [Delete](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/delete) method modifies the same document that was passed to constructor of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class.
 
 Here are the steps to delete Image signature from the document with GroupDocs.Signature:
 
-* Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path as a constructor parameter;
-* Instantiate [ImageSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesearchoptions) object with desired properties;
-* Call [Search](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/search/_1) method to obtain list of [ImageSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/imagesignature);
-* Select from list [ImageSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/imagesignature) object(s) that should be removed from the document;
-* Call [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) object [Delete](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/delete) method and pass one or several signatures to it.
-* Analyze [DeleteResult](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/deleteresult) result to check whether signatures were updated or not.
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter;
+* Instantiate [ImageSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/imagesearchoptions) object with desired properties;
+* Call [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) method to obtain list of [ImageSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/imagesignature);
+* Select from list [ImageSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/imagesignature) object(s) that should be removed from the document;
+* Call [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) object [Delete](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/delete) method and pass one or several signatures to it.
+* Analyze [DeleteResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/deleteresult) result to check whether signatures were updated or not.
 
-Here are the alternative steps to delete Image signature from the document with GroupDocs.Signature. This approach is based on saved signatures Id after [Search](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/search/_1) or [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign) methods.
+Here are the alternative steps to delete Image signature from the document with GroupDocs.Signature. This approach is based on saved signatures Id after [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) or [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) methods.
 
-* Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path as a constructor parameter;
-* Instantiate one or several [ImageSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/imagesignature) objects with signature Id(s) passed to constructor;
-* Call [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class object [Delete](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/delete) method and pass one or several signatures to it;
-* Analyze [DeleteResult](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/deleteresult) result to check whether signatures were updated or not.
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter;
+* Instantiate one or several [ImageSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/imagesignature) objects with signature Id(s) passed to constructor;
+* Call [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class object [Delete](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/delete) method and pass one or several signatures to it;
+* Analyze [DeleteResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/deleteresult) result to check whether signatures were updated or not.
 
 ## Delete Image signature from the document after Search
 
-This example shows how to delete Image signature that was found using [Search](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/search/_1) method.
+This example shows how to delete Image signature that was found using [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) method.
 
 ```csharp
 // initialize Signature instance
@@ -85,7 +85,7 @@ using (Signature signature = new Signature("signed.docx"))
 
 ## Delete Image signature from the document by known signature Identifier  
 
-This example shows how to delete Image signature in the document by known signature Id (that was obtained by [Search](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/search/_1) or [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign) method previously).
+This example shows how to delete Image signature in the document by known signature Id (that was obtained by [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) or [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method previously).
 
 ```csharp
 // initialize Signature instance

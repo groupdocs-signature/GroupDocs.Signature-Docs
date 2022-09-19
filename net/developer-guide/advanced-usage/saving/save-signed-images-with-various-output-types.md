@@ -8,23 +8,23 @@ keywords:
 productName: GroupDocs.Signature for .NET
 hideChildren: False
 ---
-[Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class supports saving of Image signed documents with various image format types and extended options.
+[Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class supports saving of Image signed documents with various image format types and extended options.
 
-Following classes are inherited from base class [SaveOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/saveoptions) and allows to specify additional output image format settings.
+Following classes are inherited from base class [SaveOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/saveoptions) and allows to specify additional output image format settings.
 
-* [BmpSaveOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/bmpsaveoptions) class allows to save signed image document to **BMP** image format and setup additional options ( like compression, resolutions, bits per pixel etc);
-* [GifSaveOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/gifsaveoptions) class allows to save signed image document to **GIF**image format and setup additional options ( like compression, resolutions etc);
-* [JpegSaveOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/jpegsaveoptions) class allows to save signed image document to **JPEG** image format and setup additional options ( like compression, resolutions, quality etc);
-* [PngSaveOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/pngsaveoptions) class allows to save signed image document to **PNG** image format and setup additional options ( like bit depth, color type, compression, filters etc);
-* [TiffSaveOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/tiffsaveoptions) class allows to save signed image document to **TIFF** image format and setup additional options
+* [BmpSaveOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/bmpsaveoptions) class allows to save signed image document to **BMP** image format and setup additional options ( like compression, resolutions, bits per pixel etc);
+* [GifSaveOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/gifsaveoptions) class allows to save signed image document to **GIF**image format and setup additional options ( like compression, resolutions etc);
+* [JpegSaveOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/jpegsaveoptions) class allows to save signed image document to **JPEG** image format and setup additional options ( like compression, resolutions, quality etc);
+* [PngSaveOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/pngsaveoptions) class allows to save signed image document to **PNG** image format and setup additional options ( like bit depth, color type, compression, filters etc);
+* [TiffSaveOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/tiffsaveoptions) class allows to save signed image document to **TIFF** image format and setup additional options
 
 Here are the steps to save signed Image document to special image output type with additional settings with GroupDocs.Signature:
 
-* Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
 * Instantiate required signature options.
-* Instantiate the one of required class of image format save options [BmpSaveOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/bmpsaveoptions), [GifSaveOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/gifsaveoptions), [JpegSaveOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/jpegsaveoptions), [PngSaveOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/pngsaveoptions), [TiffSaveOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/tiffsaveoptions) object according to your requirements and specify its properties.  
+* Instantiate the one of required class of image format save options [BmpSaveOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/bmpsaveoptions), [GifSaveOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/gifsaveoptions), [JpegSaveOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/jpegsaveoptions), [PngSaveOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/pngsaveoptions), [TiffSaveOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/tiffsaveoptions) object according to your requirements and specify its properties.  
 
-* Call [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign) method of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class instance and pass signatureoptions and [SaveOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/saveoptions) object to it.
+* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass signatureoptions and [SaveOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/saveoptions) object to it.
 
 ## Save signed image as BMP
 

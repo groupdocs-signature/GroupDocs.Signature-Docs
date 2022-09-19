@@ -55,11 +55,11 @@ Following topics from Developer Guide were added
 
 ## Public API and Backward Incompatible Changes
 
-#### Public class [DigitalSignature](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/digitalsignature) was updated with new properties and ability to set XAdES type. Supported only for Spreadsheets documents
+#### Public class [DigitalSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/digitalsignature) was updated with new properties and ability to set XAdES type. Supported only for Spreadsheets documents
 
-Public class **[DigitalSignature](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/digitalsignature)** was updated with new property.
+Public class **[DigitalSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/digitalsignature)** was updated with new property.
 
-*   new property **[XAdESType](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/barcodesignature/properties/xadestype)** of type **[XAdESType](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/xadestype)** was added to specify alternative digital signature format XML Advanced Electronic Signature (see more details here [XAdES on Wiki](https://en.wikipedia.org/wiki/XAdES);
+*   new property **[XAdESType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/digitalsignature/xadestype)** of type **[XAdESType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/xadestype)** was added to specify alternative digital signature format XML Advanced Electronic Signature (see more details here [XAdES on Wiki](https://en.wikipedia.org/wiki/XAdES);
 
 **New properties of DigitalSignature**
 

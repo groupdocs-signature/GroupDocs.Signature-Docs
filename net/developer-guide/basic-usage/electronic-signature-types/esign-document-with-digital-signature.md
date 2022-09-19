@@ -35,19 +35,19 @@ Digital signature as certificate file of PFX format allows to sign document afte
 
 ## How to eSign document with Digital signature
 
-**[GroupDocs.Signature](https://products.groupdocs.com/signature/net)** supports creation of digital signature based on existing PFX certificate. To specify different settings library provides [DigitalSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/digitalsignoptions) class that allows to adjust digital signature properties in the document:
+**[GroupDocs.Signature](https://products.groupdocs.com/signature/net)** supports creation of digital signature based on existing PFX certificate. To specify different settings library provides [DigitalSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/) class that allows to adjust digital signature properties in the document:
 
-* Certificate source from [FilePath](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/digitalsignoptions/properties/certificatefilepath) or [Stream](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/digitalsignoptions/properties/certificatestream);
-* Certificate [password](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/digitalsignoptions/properties/password);
-* [Contact](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/digitalsignoptions/properties/contact), [Reason](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/digitalsignoptions/properties/reason) and [Location](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/digitalsignoptions/properties/location) properties to set additional description;
-* [Visible](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/digitalsignoptions/properties/visible) property to specify whether signature should be visible on document page or not;
-* [XAdES type](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/digitalsignoptions/properties/xadestype) to specify whether e-signature should be of Xml Advanced Electronic Signature type.
+* Certificate source from [FilePath](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/certificatefilepath/) or [Stream](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/certificatestream/);
+* Certificate [password](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/password/);
+* [Contact](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/contact/), [Reason](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/reason/) and [Location](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/location/) properties to set additional description;
+* [Visible](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/visible/) property to specify whether signature should be visible on document page or not;
+* [XAdES type](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/xadestype/) to specify whether e-signature should be of Xml Advanced Electronic Signature type.
 
 Here are the steps to add Digital signature into document with GroupDocs.Signature:
 
-* Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
-* Instantiate the [DigitalSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/digitalsignoptions) object with required certificate and its password.
-* Call [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign) method of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class instance and pass [DigitalSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/digitalsignoptions) to it.
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
+* Instantiate the [DigitalSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/) object with required certificate and its password.
+* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [DigitalSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/) to it.
 
 This example shows how to sign PDF document with digital e-signature.
 

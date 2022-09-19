@@ -33,7 +33,7 @@ A **form field** is the interactive element located on document page that allows
 
 ## How to eSign document with Form Field signature
 
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) supports creation of new form fields or update existing ones within the documents. Class [FormFieldSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/formfieldsignoptions) specifies different options for Form Field signature. The [FormFieldSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/formfieldsignoptions)  class contains one [FormFieldSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/formfieldsignature) object to put to the document.  
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) supports creation of new form fields or update existing ones within the documents. Class [FormFieldSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/formfieldsignoptions) specifies different options for Form Field signature. The [FormFieldSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/formfieldsignoptions)  class contains one [FormFieldSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/formfieldsignature/) object to put to the document.  
 Here are the list of different Form Field signature classes that could be set to [FormFieldSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/formfieldsignoptions)
 
 * [TextFormFieldSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/textformfieldsignature) - represents text input form field on document page.
@@ -44,11 +44,11 @@ Here are the list of different Form Field signature classes that could be set to
 
 Here are the steps to add Form Field signatures into document with GroupDocs.Signature:
 
-* Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path as a constructor parameter;
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter;
 * Instantiate the [FormFieldSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/formfieldsignoptions) object according to your requirements;
 * Instantiate one of the objects  - [TextFormFieldSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/textformfieldsignature), [CheckboxFormFieldSignature,](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/checkboxformfieldsignature) [ComboboxFormFieldSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/comboboxformfieldsignature), [RadioButtonFormFieldSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/radiobuttonformfieldsignature) or [DigitalFormFieldSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/digitalformfieldsignature);
 * Set [FormFieldSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/formfieldsignoptions) Signature property with created object;
-* Call [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign) method of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class instance and pass [FormFieldSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/formfieldsignoptions) to it.
+* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [FormFieldSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/formfieldsignoptions) to it.
 
 *NOTE: At the moment GroupDocs.Signature supports creation of Form Field signatures for PDF documents only.*
 
@@ -92,11 +92,11 @@ Class [TextSignOptions](https://apireference.groupdocs.com/net/signature/groupdo
 
 Here are the steps to update existing form field signature within the document with GroupDocs.Signature:
 
-* Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
 * Instantiate the [TextSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/textsignoptions) object with all required additional options.
 * Set property [SignatureImplementation](https://apireference-qa.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions/properties/signatureimplementation) of [TextSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/textsignoptions) object with [TextSignatureImplementation.FormField](https://apireference-qa.groupdocs.com/signature/net/groupdocs.signature.domain/textsignatureimplementation) value from enumeration type [TextSignatureImplementation](https://apireference-qa.groupdocs.com/signature/net/groupdocs.signature.domain/textsignatureimplementation).
 * Set properties [FormTextFieldTitle](https://apireference-qa.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions/properties/formtextfieldtitle) and [FormTextFieldType](https://apireference-qa.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions/properties/formtextfieldtype) with proper values of form fields to update
-* Call [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign) method of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class instance and pass initialized [TextSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/textsignoptions) instance to it.
+* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass initialized [TextSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/textsignoptions) instance to it.
 * Analyze [SignResult](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/signresult) result to check newly created signatures if needed.  
 
 This example shows how to e sign PDF document with existing Form Field electronic signature on document page and update its value.

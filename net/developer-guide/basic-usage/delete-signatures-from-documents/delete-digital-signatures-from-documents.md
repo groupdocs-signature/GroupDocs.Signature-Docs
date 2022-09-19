@@ -25,20 +25,20 @@ structuredData:
         - name: Delete one of found digital signatures and save result 
           text: Invoke Delete method passing found digital signatures and file path for signed file. File stream can be used as well.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [DigitalSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/digitalsignature) class to manipulate digital electronic signatures and delete them from the documents.
-Please be aware that [Delete](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/delete) method modifies the same document that was passed to constructor of the [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [DigitalSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/digitalsignature) class to manipulate digital electronic signatures and delete them from the documents.
+Please be aware that [Delete](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/delete) method modifies the same document that was passed to constructor of the [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class.
 
 *Important information*. Please be aware that digitally signed documents with valid certificates (pfx files) are secured and verified. Changing digitally signed document makes them untrusted from the digital verification perspective. At this moment only Pdf documents support deletion of the specific digital signatures in case of many ones were added. Most documents support deletion of all digital signatures at once without separate certificates removal. It's strongly recommened to use deletion of electronic digital signatures by signature type Digital. See example [Delete Signatures of the certain type]
 
 Here are the steps to delete Digital signature from the document with GroupDocs.Signature:
 
-* Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path or its stream as a constructor parameter;
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path or its stream as a constructor parameter;
 * Instantiate [DigitalSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/digitalsearchoptions) object with desired properties;
-* Call [Search](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/search/_1) method to obtain list of [DigitalSignatures](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/digitalsignature);
-* Select from list [DigitalSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/digitalsignature) object(s) that should be removed from the document;
-* Call [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) object [Delete](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/delete) method and pass one or several signatures to it.
+* Call [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) method to obtain list of [DigitalSignatures](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/digitalsignature);
+* Select from list [DigitalSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/digitalsignature) object(s) that should be removed from the document;
+* Call [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) object [Delete](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/delete) method and pass one or several signatures to it.
 
-This example shows how to delete Digital signature that was found using [Search](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/search/_1) method.
+This example shows how to delete Digital signature that was found using [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) method.
 
 ```csharp
 using (Signature signature = new Signature("signed.pdf"))

@@ -40,7 +40,7 @@ The following topics from Developer Guide were added
 
 ## Public API and Backward Incompatible Changes
 
-#### Public class [SignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/signoptions) was updated with ZOrder property
+#### Public class [SignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions) was updated with ZOrder property
 
 Property [ZOrder] expects integer values to put the signatures on document page in proper order.
 

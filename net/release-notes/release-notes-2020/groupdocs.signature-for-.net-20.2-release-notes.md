@@ -52,9 +52,9 @@ Following topics from Developer Guide were updated:
 
 In version 20.2 following public members were added:
 
-*   Main public class [GroupDocs.Signature.Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) was updated with two new overload **[Search](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/search/index)**  methods
+*   Main public class [GroupDocs.Signature.Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) was updated with two new overload **[Search](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/search/index)**  methods
     
-    *   added overloaded method **[Search](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/search/index)** that expects one argument as **[SignatureType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/signaturetype)** value. This method implements searching for specified type of signatures. For example call of this method with argument **[SignatureType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/signaturetype)**. Metadata will search for all document metadata without any additional criteria and return list of [MetadataSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/metadatasignature).
+    *   added overloaded method **[Search](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/search/index)** that expects one argument as **[SignatureType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signaturetype)** value. This method implements searching for specified type of signatures. For example call of this method with argument **[SignatureType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signaturetype)**. Metadata will search for all document metadata without any additional criteria and return list of [MetadataSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/metadatasignature).
         
         ```csharp
         /// <summary>
@@ -65,7 +65,7 @@ In version 20.2 following public members were added:
         public List<T> Search<T>(SignatureType signatureType) where T : BaseSignature
         ```
         
-    *   added overloaded method **[Search](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/search/index)** that expects variable list or array of **[SignatureType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/signaturetype)** values. This methods implements searching for different signature types without any additional search criteria and returns [SearchResult](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/searchresult) object with list of found signatures.
+    *   added overloaded method **[Search](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/search/index)** that expects variable list or array of **[SignatureType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signaturetype)** values. This methods implements searching for different signature types without any additional search criteria and returns [SearchResult](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/searchresult) object with list of found signatures.
         
         ```csharp
         /// <summary>
@@ -132,13 +132,13 @@ In version 20.2 following public members were added:
     
 *   Public interface [GroupDocs.Signature.Domain.IDocumentInfo](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/idocumentinfo) and public class that implements this interface  [GroupDocs.Signature.Domain.DocumentInfo](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/documentinfo) were updated with new properties
     
-    *   property **TextSignatures** as list of [TextSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/textsignature) returns document text signatures previously added over [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign/index) method;
-    *   property **ImageSignatures** as list of [ImageSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/imagesignature) keeps document image signatures previously added over [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign/index) method;
-    *   property **DigitalSignatures** as list of [DigitalSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/digitalsignature) keeps document digital signatures previously added over [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign/index) method;
-    *   property **BarcodeSignatures** as list of [BarcodeSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/barcodesignature) keeps document barcode signatures previously added over [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign/index) method;
-    *   property **QrCodeSignatures** as list of [QrCodeSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/qrcodesignature) keeps document Qr-code signatures previously added over [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign/index) method;
-    *   property **FormFieldSignatures** as list of [FormFieldSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/formfieldsignature) keeps document form field signatures previously added over [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign/index) method;
-    *   property **FormFields** as list ofof [FormFieldSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/formfieldsignature) keeps all supported existing document forms fields no matter if these fields were added over Signature library or third party software.
+    *   property **TextSignatures** as list of [TextSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/textsignature) returns document text signatures previously added over [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method;
+    *   property **ImageSignatures** as list of [ImageSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/imagesignature) keeps document image signatures previously added over [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method;
+    *   property **DigitalSignatures** as list of [DigitalSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/digitalsignature) keeps document digital signatures previously added over [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method;
+    *   property **BarcodeSignatures** as list of [BarcodeSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/barcodesignature) keeps document barcode signatures previously added over [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method;
+    *   property **QrCodeSignatures** as list of [QrCodeSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodesignature) keeps document Qr-code signatures previously added over [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method;
+    *   property **FormFieldSignatures** as list of [FormFieldSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/formfieldsignature/) keeps document form field signatures previously added over [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method;
+    *   property **FormFields** as list ofof [FormFieldSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/formfieldsignature/) keeps all supported existing document forms fields no matter if these fields were added over Signature library or third party software.
     
     ```csharp
     /// <summary>
@@ -173,12 +173,12 @@ In version 20.2 following public members were added:
     
 Few example [Obtain document form fields and signatures information]({{< ref "signature/net/developer-guide/advanced-usage/common/obtain-document-form-fields-and-signatures-information.md" >}})
     
-*   Public class [GroupDocs.Signature.Domain.ImageSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/imagesignature) was updated with changes as follow
+*   Public class [GroupDocs.Signature.Domain.ImageSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/imagesignature) was updated with changes as follow
     
     *   new property **Format** of type [FileType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/filetype) was added to specify the original image data format;
     *   new property **byte\[\] Content** was added to keep original image raw data content
     
-    Since 20.2 version there's ability to grab content of image signatures. To enable this feature the property [ReturnContent](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesearchoptions/properties/returncontent)  of [ImageSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesearchoptions) must be set to true. Also there is ability to specify output image content format type over property [ReturnContentType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesearchoptions/properties/returncontenttype).
+    Since 20.2 version there's ability to grab content of image signatures. To enable this feature the property [ReturnContent](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesearchoptions/properties/returncontent)  of [ImageSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/imagesearchoptions) must be set to true. Also there is ability to specify output image content format type over property [ReturnContentType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesearchoptions/properties/returncontenttype).
     
     ```csharp
     /// <summary>
@@ -250,7 +250,7 @@ Few example [Obtain document form fields and signatures information]({{< ref "si
     }
     ```
     
-*    Public class [ImageSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesearchoptions) was updated with changes as follow    
+*    Public class [ImageSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/imagesearchoptions) was updated with changes as follow    
     *   New property **bool ReturnConten** was added to specify if returned image signatures objects should keep original or converted (if property **Format** was specified) image raw data. By default this value is set to false.
     *   New property **long MinContentSize** was added to support filtering image signatures by the minimum size of its image content. By default this value is set to 0 and this property does not affect search process.
     *   New property **long MaxContentSize** was added to support filtering image signatures by the maximum size of its image content. By default this value is set to 0 and this property does not affect search process.

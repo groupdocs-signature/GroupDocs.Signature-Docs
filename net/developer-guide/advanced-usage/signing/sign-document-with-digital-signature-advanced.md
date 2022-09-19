@@ -8,19 +8,19 @@ keywords:
 productName: GroupDocs.Signature for .NET
 hideChildren: False
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [DigitalSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/digitalsignoptions) class to specify different amount of settings for Digital signature
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [DigitalSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/) class to specify different amount of settings for Digital signature
 
-* digital certificate (file on local disk [CertificateFilePath](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/digitalsignoptions/properties/certificatefilepath) or stream [CertificateStream](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/digitalsignoptions/properties/certificatestream)) (required)
-* password of digital certificate [Password](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/digitalsignoptions/properties/password) (required)
-* digital signature details ([Reason](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/digitalsignoptions/properties/reason), [Contact](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/digitalsignoptions/properties/contact), [Location](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/digitalsignoptions/properties/location))
+* digital certificate (file on local disk [CertificateFilePath](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/certificatefilepath/) or stream [CertificateStream](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/certificatestream/)) (required)
+* password of digital certificate [Password](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/password/) (required)
+* digital signature details ([Reason](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/reason/), [Contact](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/contact/), [Location](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/location/))
 * signature image as digital signature appearance on document page ([ImageFilePath](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesignoptions/properties/imagefilepath) or [ImageStream](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesignoptions/properties/imagestream))
 * image signature appearance on document page ([Alignment](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesignoptions/properties/horizontalalignment), [Margin](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesignoptions/properties/margin) etc.)
 
 Here are the steps to add Digital signature into document with GroupDocs.Signature:
 
-* Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
-* Instantiate the [DigitalSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/digitalsignoptions) object with required certificate and its password.
-* Call [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign) method of  [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class instance and pass [DigitalSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/digitalsignoptions) to it.
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
+* Instantiate the [DigitalSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/) object with required certificate and its password.
+* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of  [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [DigitalSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/) to it.
 * Analyze [SignResult](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/signresult) result to check newly created signatures if needed.  
 
 This example shows how to add Digital signature to document. See [SignResult](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/signresult)

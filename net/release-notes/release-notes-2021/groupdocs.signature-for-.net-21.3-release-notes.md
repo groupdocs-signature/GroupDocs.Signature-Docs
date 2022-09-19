@@ -50,11 +50,11 @@ Following topics from Developer Guide were added
 
 ## Public API and Backward Incompatible Changes
 
-#### Public class [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) was updated with 2 new overload Delete methods
+#### Public class [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) was updated with 2 new overload Delete methods
 
-Method [Delete](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/delete) expects enumeration [SignatureType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/signaturetype).
+Method [Delete](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/delete) expects enumeration [SignatureType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signaturetype).
 
-Alternative overload method [Delete](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/delete) expects list of the [SignatureType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/signaturetype) enumeration.
+Alternative overload method [Delete](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/delete) expects list of the [SignatureType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signaturetype) enumeration.
 
 **New overload Delete methods of Signature class**
 
@@ -168,7 +168,7 @@ This class contains following properties
 }
 ```
 
-#### Public class [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) was updated with static method to generate Signature preview with specified SignOptions
+#### Public class [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) was updated with static method to generate Signature preview with specified SignOptions
 
 Static method [GenerateSignaturePreview](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/generatesignaturepreview) expects [PreviewSignatureOptions](https://apireference.groupdocs.com/signature/net/groupdocs.signature.options/previewsignatureoptions) to generate signature preview and control creation and deletion signature image stream.
 

@@ -14,9 +14,9 @@ structuredData:
 
 Here are main GroupDocs Signature API concepts:
 
-* [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) is the main class that contains all required methods for manipulating with document e-signatures.
+* [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) is the main class that contains all required methods for manipulating with document e-signatures.
 * Most part of methods expects different options to eSign document, verify and search electronic signatures inside document.
-* [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class implements [IDisposable](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable) interface to correctly release used resources - like safely closing document streams when all operations completed.
+* [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class implements [IDisposable](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable) interface to correctly release used resources - like safely closing document streams when all operations completed.
 
 ## Referencing required namespaces
 
@@ -31,7 +31,7 @@ using GroupDocs.Signature.Domain.Extensions;
 
 ## Signature object definition
 
-The following code shows most used code pattern to define [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) object and call its methods.  
+The following code shows most used code pattern to define [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) object and call its methods.  
 
 ```csharp
 // Sign document with text signature.

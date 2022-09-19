@@ -27,7 +27,7 @@ structuredData:
         - name: Process list of found items
           text: Loop through list of found items and process in demanded way.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [ImageSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesearchoptions) class to specify different options to search for Image Signatures
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [ImageSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/imagesearchoptions) class to specify different options to search for Image Signatures
 
 * bool ReturnContent property allows to return in the image signature its content;
 * long MinContentSize property with non zero value limits the minimum size of image to return;
@@ -36,10 +36,10 @@ structuredData:
 
 Here are the steps to search for image signatures within the document with GroupDocs.Signature:
 
-* Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
-* Instantiate the [ImageSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesearchoptions)  object according to your requirements and specify search options
-* Call [Search](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/search/_1) method of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class instance and pass [ImageSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesearchoptions) to it.
-* Analyze if needed list of returned list of [ImageSignatures](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/imagesignature)
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
+* Instantiate the [ImageSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/imagesearchoptions)  object according to your requirements and specify search options
+* Call [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [ImageSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/imagesearchoptions) to it.
+* Analyze if needed list of returned list of [ImageSignatures](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/imagesignature)
 
 This example shows how to make advanced search for Image signature in the document and further image signatures analyzes with saving image content
 

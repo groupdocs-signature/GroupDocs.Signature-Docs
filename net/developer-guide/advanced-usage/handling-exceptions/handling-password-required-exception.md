@@ -27,12 +27,12 @@ structuredData:
         - name: Implement code with common try-catch statement. 
           text: For all other possible exceptions use Exception.
 ---
-[Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class supports handling required password exception when opening protected documents over class [PasswordRequiredException](https://apireference.groupdocs.com/net/signature/groupdocs.signature/passwordrequiredexception).
+[Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class supports handling required password exception when opening protected documents over class [PasswordRequiredException](https://reference.groupdocs.com/signature/net/groupdocs.signature/passwordrequiredexception).
 
 Here are the steps to handle incorrect password exception when working with protected documents with GroupDocs.Signature:
 
-* Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
-* Cover the code that works with [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) object methods ([Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature.signature/sign/methods/4), [Verify](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/verify), [Search](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/search/_1), [Update](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/update), [Delete](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/delete)) with try - catch block including catching [PasswordRequiredException](https://apireference.groupdocs.com/net/signature/groupdocs.signature/passwordrequiredexception) exception.
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
+* Cover the code that works with [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) object methods ([Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/#sign_4), [Verify](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/verify), [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search), [Update](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/update), [Delete](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/delete)) with try - catch block including catching [PasswordRequiredException](https://reference.groupdocs.com/signature/net/groupdocs.signature/passwordrequiredexception) exception.
 
 Following example demonstrates how to handle required password exception.
 

@@ -35,15 +35,15 @@ structuredData:
 * [Me-Card](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/mecard) entry implements similar to V-Card contact details standard. More details could be found [here](https://en.wikipedia.org/wiki/MeCard_(QR_code)).
 * [EPC](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/epc) implements standard of the European Payments Council guidelines define the content of a QR code that can be used to initiate [SEPA](https://en.wikipedia.org/wiki/SEPA_credit_transfer) credit transfer. More details could be found [here](https://en.wikipedia.org/wiki/EPC_QR_code).
 * [Event](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/event) entry implements event standard.
-* [CryptoCurrencyTransfer](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/cryptocurrencytransfer) entry implements event standard.
+* [CryptoCurrencyTransfer](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/cryptocurrencytransfer/) entry implements event standard.
 
 Here are the steps to embed standard entry into QR-code with GroupDocs.Signature:  
 
-* Create new instance of  [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
+* Create new instance of  [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
 * Create new instance of one of standard entries class.
 * Create one or several objects of [QrCodeSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodesignoptions) object with [Data](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodesignoptions/properties/data) value assigned with initialized standard object before.
 * Instantiate the  [QrCodeSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodesignoptions)  object according to your requirements and custom object to [Data](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodesignoptions/properties/data) property.
-* Call [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign) method of  [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature)  class instance and pass [QrCodeSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodesignoptions) to it.
+* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of  [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature)  class instance and pass [QrCodeSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodesignoptions) to it.
 
 ## Sign PDF with email QR-code object
 

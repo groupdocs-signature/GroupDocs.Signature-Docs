@@ -10,17 +10,17 @@ hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) contains classes that implements for Pdf document special signature appearances.
 
-Base signature options [SignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/signoptions) contains property [SignOptions.Appearance](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/signoptions/properties/appearance) that expects instance of the following classes
+Base signature options [SignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions) contains property [SignOptions.Appearance](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/signoptions/properties/appearance) that expects instance of the following classes
 
 * [PdfTextAnnotationAppearance](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options.appearances/pdftextannotationappearance) class implements for Pdf documents signature as annotation area. Note that [TextSignOptions.SignatureImplementation](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/textsignoptions/properties/signatureimplementation) property must be set to [TextSignatureImplementation.Annotation](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/textsignatureimplementation)
 * [PdfTextStickerAppearance](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options.appearances/pdftextstickerappearance) class implements for Pdf documents signature as small sticker. Note that [TextSignOptions.SignatureImplementation](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/textsignoptions/properties/signatureimplementation) property must be set to [TextSignatureImplementation.Sticker](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/textsignatureimplementation)
 
 Here are the steps to setup special Pdf  document Text signature appearance with GroupDocs.Signature:
 
-* Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
 * Compose object of [TextSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/textsignoptions) object with all required additional options.
 * Set  [TextSignOptions.Appearance](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/signoptions/properties/appearance) property with [PdfTextAnnotationAppearance](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options.appearances/pdftextannotationappearance) object and set its properties
-* Call [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign) method of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class instance and pass [TextSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/textsignoptions) to it.
+* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [TextSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/textsignoptions) to it.
 * Analyze [SignResult](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/signresult) result to check newly created signatures if needed.
 
 ## Sign Pdf document with Text signature Annotation appearance

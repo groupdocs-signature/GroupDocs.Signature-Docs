@@ -8,13 +8,13 @@ keywords:
 productName: GroupDocs.Signature for .NET
 hideChildren: False
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides with [SignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/signoptions) property ZOrder that expects integer values as Z-order position. The signatures with a higher number of this property will be displayed above the others.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides with [SignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions) property ZOrder that expects integer values as Z-order position. The signatures with a higher number of this property will be displayed above the others.
 
 Here are the steps to manually adjust the ordering of signatures on the document page with GroupDocs.Signature:
 
-* Create a new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass the source document path as a constructor parameter.
-* Instantiate the [SignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/signoptions) object with the required options and set the ZOrder property.
-* Call [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign) method of  [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class instance and pass [SignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/signoptions) to it.
+* Create a new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass the source document path as a constructor parameter.
+* Instantiate the [SignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions) object with the required options and set the ZOrder property.
+* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of  [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [SignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions) to it.
 
 ## Sign document with Text signature
 

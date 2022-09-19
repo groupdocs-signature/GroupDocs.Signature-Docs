@@ -16,14 +16,14 @@ hideChildren: False
 * gamma correction ([GammaCorrection](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options.appearances/imageappearance/properties/gammacorrection))
 * border ([Border](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options.appearances/imageappearance/properties/border))
 
-Base signature class [SignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/signoptions) property [Appearance](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/signoptions/properties/appearance) should be set with instance of [ImageAppearance](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options.appearances/imageappearance) class to provide additional image adjustment
+Base signature class [SignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions) property [Appearance](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/signoptions/properties/appearance) should be set with instance of [ImageAppearance](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options.appearances/imageappearance) class to provide additional image adjustment
 
 Here are the steps to setup extra image appearance with GroupDocs.Signature:
 
-* Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
 * Compose object of[ImageAppearance](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options.appearances/imageappearance) object with all required additional options.
 * Set [SignOptions.Appearance](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/signoptions/properties/appearance) property with [ImageAppearance](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options.appearances/imageappearance)  object.  
-* Call [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign) method of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class instance and pass [SignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/signoptions) to it.
+* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [SignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions) to it.
 * Analyze [SignResult](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/signresult) result to check newly created signatures if needed.
 
 ## Sign document with image appearance

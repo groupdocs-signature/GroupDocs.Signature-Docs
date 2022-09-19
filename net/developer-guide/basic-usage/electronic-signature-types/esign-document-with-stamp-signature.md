@@ -43,9 +43,9 @@ Each Stamp option contains inner and outer lines. Inner lines represent vertical
 
 Here are the steps to add Stamp signature into document with GroupDocs.Signature:
 
-* Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
 * Instantiate the [StampSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/stampsignoptions) object according to your requirements and specify appropriate options.
-* Call [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign) method of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class instance and pass [StampSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/stampsignoptions) to it.
+* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [StampSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/stampsignoptions) to it.
 
 ## How to eSign document with Stamp signature
 

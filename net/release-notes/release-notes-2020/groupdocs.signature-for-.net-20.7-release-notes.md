@@ -213,9 +213,9 @@ using (Signature signature = new Signature("sample.pdf"))
 }
 ```
 
-### New public enumeration type [ProcessType](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/processtype) was added.
+### New public enumeration type [ProcessType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/processtype) was added.
 
-New public enumeration type **[ProcessType](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/processtype)** was added. This type describes document process type of supported operations.
+New public enumeration type **[ProcessType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/processtype)** was added. This type describes document process type of supported operations.
 
 **Enumeration of processing types**
 
@@ -244,9 +244,9 @@ New public enumeration type **[ProcessType](https://apireference.groupdocs.com/
     }
 ```
 
-### New public class [ProcessLog](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/processlog) was added.
+### New public class [ProcessLog](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/processlog) was added.
 
-New public class type **[ProcessLog](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/processlog)** was added to keep document process information like date/time, type of the process (**[ProcessType](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/processtype)**), message, quantity of succeeded and quantity of failed signatures.
+New public class type **[ProcessLog](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/processlog)** was added to keep document process information like date/time, type of the process (**[ProcessType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/processtype)**), message, quantity of succeeded and quantity of failed signatures.
 
 **ProcessLog class properties**
 

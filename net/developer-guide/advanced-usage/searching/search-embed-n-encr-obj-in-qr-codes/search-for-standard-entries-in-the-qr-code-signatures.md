@@ -25,7 +25,7 @@ structuredData:
         - name: Process list of found items
           text: Process in desired way list of found items.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides additional features when searching for[QrCode Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/qrcodesignature)  that were previously added to document with embedded standard entry objects. Following standard entries are supported to search for and receive object back from Qr-Code
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides additional features when searching for[QrCode Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodesignature)  that were previously added to document with embedded standard entry objects. Following standard entries are supported to search for and receive object back from Qr-Code
 
 * [Email](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/email) that keeps in the QR-code standard email information with recipient, subject and body.
 * [Address](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/address) with address information.

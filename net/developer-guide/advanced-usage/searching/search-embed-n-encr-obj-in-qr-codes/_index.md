@@ -10,7 +10,7 @@ hideChildren: False
 structuredData:
     showOrganization: True
 ---
-GroupDocs.Signature provides additional features when searching forQR-code signatures ([QrCodeSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/qrcodesignature)) that were previously encrypted or contains embedded data objects. Summary the abilities are as follow
+GroupDocs.Signature provides additional features when searching forQR-code signatures ([QrCodeSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodesignature)) that were previously encrypted or contains embedded data objects. Summary the abilities are as follow
 
 * ability to search for embedded custom objects into metadata and decrypt them to original source values
 * ability to search for encrypted text of QR-code signature and decrypt it

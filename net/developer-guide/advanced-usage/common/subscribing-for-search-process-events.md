@@ -27,19 +27,19 @@ structuredData:
         - name: Process document with event listeners. 
           text: Invoke method Search of Signature instance and process all appearing events.
 ---
-[Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class contains several events that are being called for different search process stages
+[Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class contains several events that are being called for different search process stages
 
-* [SearchStarted](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/events/searchstarted) to handle process start event. This event is occur once [Search](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/search/_1) method is called
-* [SearchProgress](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/events/searchprogress) to handle progress event. This event occurs each time on searching each document page.
-* [SearchCompleted](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/events/searchcompleted) to handle completion event. This event occurs once [Search](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/search/_1) process was completed.
+* [SearchStarted](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/searchstarted) to handle process start event. This event is occur once [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) method is called
+* [SearchProgress](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/searchprogress) to handle progress event. This event occurs each time on searching each document page.
+* [SearchCompleted](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/searchcompleted) to handle completion event. This event occurs once [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) process was completed.
 
 Here are the steps to subscribe for searching process with GroupDocs.Signature:
 
 * Define required handler delegates to process searching events.
-* Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
 * Subscribe for required events.
-* Instantiate required [SearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/searchoptions) object.
-* Call [Search](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/search/_1) method of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class instance and pass search options in it.
+* Instantiate required [SearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/searchoptions) object.
+* Call [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass search options in it.
 
 ## Implement method for SearchStarted event
 

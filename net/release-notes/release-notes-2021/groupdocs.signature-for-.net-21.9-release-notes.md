@@ -95,7 +95,7 @@ This enumeration keeps supported cryptocurrency types.
 }
 ```
 
-#### New public class [CryptoCurrencyTransfer](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/cryptocurrencytransfer) was added to keep properties of cryptocurrency data for QR-code embedded object
+#### New public class [CryptoCurrencyTransfer](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/cryptocurrencytransfer/) was added to keep properties of cryptocurrency data for QR-code embedded object
 
 This class contains following properties
 

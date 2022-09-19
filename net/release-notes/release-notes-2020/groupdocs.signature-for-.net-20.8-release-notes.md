@@ -54,9 +54,9 @@ New property Signatures keep list of processed signatures per process operation.
 public List<BaseSignature> Signatures { get; }
 ```
 
-### New property Deleted of [BaseSignature](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/basesignature) was added.
+### New property Deleted of [BaseSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/basesignature/) was added.
 
-New boolean property Deleted was added to class **[BaseSignature](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/basesignature)**. This property signals if Signature object was deleted from the Document.
+New boolean property Deleted was added to class **[BaseSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/basesignature/)**. This property signals if Signature object was deleted from the Document.
 
 ### Obsolete member Stamp was removed from enumeration [TextSignatureImplementation](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/textsignatureimplementation).
 

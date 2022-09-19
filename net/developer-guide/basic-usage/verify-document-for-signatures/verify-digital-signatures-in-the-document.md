@@ -29,9 +29,9 @@ structuredData:
 
 Here are the steps to verify Digital signature within the document with GroupDocs.Signature:
 
-* Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
 * Instantiate the [DigitalVerifyOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/digitalverifyoptions) object according to your requirements and specify verification options
-* Call [Verify](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/verify) method of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class instance and pass [DigitalVerifyOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/digitalverifyoptions) to it.
+* Call [Verify](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/verify) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [DigitalVerifyOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/digitalverifyoptions) to it.
 
 This example shows how to verify Digital signature in the document.
 

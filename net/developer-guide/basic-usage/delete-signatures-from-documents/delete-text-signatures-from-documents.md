@@ -26,18 +26,18 @@ structuredData:
           text: Invoke Delete method passing found text electronic signature and file path for signed file. File stream can be used as well.
 
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [TextSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/textsignature) class to manipulate text signatures and delete them from the documents.
-Please be aware that [Delete](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/delete) method modifies the same document that was passed to constructor of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [TextSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/textsignature) class to manipulate text signatures and delete them from the documents.
+Please be aware that [Delete](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/delete) method modifies the same document that was passed to constructor of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class.
 
 Here are the steps to delete Text signature from the document with GroupDocs.Signature:
 
-* Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path as a constructor parameter;
-* Instantiate [TextSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/textsearchoptions) object with desired properties;
-* Call [Search](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/search/_1) method to obtain list of [TextSignatures](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/textsignature);
-* Select from list [TextSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/textsignature) object(s) that should be removed from the document;
-* Call [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) object [Delete](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/delete) method and pass one or several signatures to it.
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter;
+* Instantiate [TextSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsearchoptions) object with desired properties;
+* Call [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) method to obtain list of [TextSignatures](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/textsignature);
+* Select from list [TextSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/textsignature) object(s) that should be removed from the document;
+* Call [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) object [Delete](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/delete) method and pass one or several signatures to it.
 
-This example shows how to delete Text signature that was found using [Search](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/search/_1) method.
+This example shows how to delete Text signature that was found using [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) method.
 
 ```csharp
 using (Signature signature = new Signature("signed.pptx"))

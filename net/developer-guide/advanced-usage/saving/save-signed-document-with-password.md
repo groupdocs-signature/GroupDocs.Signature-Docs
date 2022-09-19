@@ -27,14 +27,14 @@ structuredData:
         - name: Obtain protected document
           text: Get the protected signed document with password.
 ---
-[Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class supports saving signed document with password protection. This ability is supported over [Password](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/saveoptions/properties/password) property of [SaveOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/saveoptions) class that should be passed to [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign) method.
+[Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class supports saving signed document with password protection. This ability is supported over [Password](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/saveoptions/password) property of [SaveOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/saveoptions) class that should be passed to [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method.
 
 Here are the steps to protect signed document with password with [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net):
 
-* Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
 * Instantiate required signature options.
-* Instantiate the [SaveOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/saveoptions) object and specify [Password](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/saveoptions/properties/password) property with required password string.  
-* Call [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign) method of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class instance and pass signatureoptions and [SaveOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/saveoptions) object to it.
+* Instantiate the [SaveOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/saveoptions) object and specify [Password](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/saveoptions/password) property with required password string.  
+* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass signatureoptions and [SaveOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/saveoptions) object to it.
 
 Following example demonstrates how to save signed document with password.
 

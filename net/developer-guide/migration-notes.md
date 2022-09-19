@@ -12,8 +12,8 @@ hideChildren: False
   
 Here are the key reasons to use the new updated API provided by GroupDocs.Signature for .NET since version 19.8:
 
-* [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class introduced as a **single entry point** to sing the document with various signature types with further verification and search with any supported file format.
-* Document **signature options** ([SignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/signoptions)), **verify options** ([VerifyOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/verifyoptions)) and **search options** ([SearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/searchoptions)) were unified for all document types. Instead of using document related options now options are related to signature type only.
+* [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class introduced as a **single entry point** to sing the document with various signature types with further verification and search with any supported file format.
+* Document **signature options** ([SignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions)), **verify options** ([VerifyOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/verifyoptions)) and **search options** ([SearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/searchoptions)) were unified for all document types. Instead of using document related options now options are related to signature type only.
 * The overall document related classes were unified to common.
 * Product architecture was redesigned from scratch in order to simplify passing options and classes to manipulate signature.
 * Document information and preview generation procedures were simplified.

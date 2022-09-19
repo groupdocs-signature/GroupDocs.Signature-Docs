@@ -28,10 +28,10 @@ structuredData:
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) allows to sign document with several signatures simultaneously and even apply signatures of different types to the same document.
 Doing this is as simple as:
 
-* Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
 * Instantiate required all required sign options objects dependent on signature type:
 * [BarcodeSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/barcodesignoptions) - for Barcode signatures;
-* [DigitalSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/digitalsignoptions) - for Digital signatures;
+* [DigitalSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/) - for Digital signatures;
 * [FormFieldSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/formfieldsignoptions) - for Form-field signatures;
 * [ImageSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesignoptions) - for Image signatures;
 * [MetadataSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/metadatasignoptions) - for Metadata signatures;
@@ -39,7 +39,7 @@ Doing this is as simple as:
 * [StampSIgnOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/stampsignoptions) - for Stamp signatures;
 * [TextSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/textsignoptions) - for Text signatures.
 * Fill collection with sign options from previous step.  
-* Call [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign) method of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class instance and pass collection of sign options to it.
+* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass collection of sign options to it.
 
 This code snippet below demonstrates how to eSign PDF document with multiple signatures at the same time.
 

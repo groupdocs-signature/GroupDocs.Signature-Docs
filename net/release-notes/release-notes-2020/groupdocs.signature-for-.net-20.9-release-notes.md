@@ -28,7 +28,7 @@ Full List of Issues Covering all Changes in this Release
 
 ## Public API and Backward Incompatible Changes
 
-### New constructor with string signature unique identifier for class [DigitalSignature](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/digitalsignature) is the list of processed signatures
+### New constructor with string signature unique identifier for class [DigitalSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/digitalsignature) is the list of processed signatures
 
 New constructor class DigitalSignature allows to create instance with predefined signature identifier.
 

@@ -12,9 +12,9 @@ hideChildren: False
 
 Here are the steps to add Text signature into document with GroupDocs.Signature:
 
-* Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
-* Instantiate the [SignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/signoptions) object with all required additional options and setup [Background.Brush](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/background/properties/brush) property with instance of [SolidBrush](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/solidbrush)
-* Call [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign) method of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class instance and pass [SignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/signoptions) to it.
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
+* Instantiate the [SignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions) object with all required additional options and setup [Background.Brush](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/background/properties/brush) property with instance of [SolidBrush](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/solidbrush)
+* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [SignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions) to it.
 
 * Analyze [SignResult](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/signresult) result to check newly created signatures if needed.
 

@@ -42,9 +42,9 @@ To specify different options for Barcode signature GroupDocs.Signature for .NET
 * [EncodeType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/barcodesignoptions/properties/encodetype) - specifies Barcode type (AustralianPost, Codabar, EAN13, OPC, etc.);
 * [Text](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/textsignoptions/properties/text) - specifies Barcode text.
 Here are the steps to eSign document with Barcode signature using GroupDocs.Signature for .NET API:
-* Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
 * Instantiate the [BarcodeSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/barcodesignoptions) object according to your requirements and specify Barcode type by setting [EncodeType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/barcodesignoptions/properties/encodetype) from predefined supported types. Set [Text](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/textsignoptions/properties/text) property value.
-* Call [Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/sign) method of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class instance and pass [BarcodeSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/barcodesignoptions) to it.
+* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [BarcodeSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/barcodesignoptions) to it.
 
 This example shows how to sign PDF document with Barcode signature.
 

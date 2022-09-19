@@ -31,7 +31,7 @@ structuredData:
   
 Here are the steps to generate signature preview with GroupDocs.Signature:
 
-* Instantiate the required [SignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/signoptions) object with the settings you want to generate the preview
+* Instantiate the required [SignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions) object with the settings you want to generate the preview
 * Instantiate the [PreviewSignatureOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/previewsignatureoptions) object with:
 * delegate for signature stream creation (see event handler [CreateSignatureStream](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/createsignaturestream));
 * image preview format - PNG / JPG / BMP,
@@ -40,7 +40,7 @@ Here are the steps to generate signature preview with GroupDocs.Signature:
 {{< alert style="info" >}}
 Stream that were created by [CreateSignatureStream](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/createsignaturestream) delegate will be disposed automatically once after generation of preview image. If you need to implement custom image preview stream disposing you have to pass additional argument [ReleaseSignatureStream](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/releasesignaturestream) to clean up resources.  
 {{< /alert >}}
-* Call the static method [GenerateSignaturePreview](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/generatesignaturepreview)method of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) and pass [PreviewSignatureOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/previewsignatureoptions) to it.
+* Call the static method [GenerateSignaturePreview](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/generatesignaturepreview)method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) and pass [PreviewSignatureOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/previewsignatureoptions) to it.
 
 ## CreateSignatureStream delegate implementation
 
