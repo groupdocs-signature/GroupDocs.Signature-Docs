@@ -16,7 +16,7 @@ The complete examples package of **GroupDocs.Signature** is hosted on [GitHub
 
 In case you download the ZIP file, extract the folders on your local disk. The extracted files and folders will look like following image:
 
-![](signature/java/images/how-to-run-examples.png)
+![](/signature/java/images/how-to-run-examples.png)
 
 Open Eclipse and import the project to get started with it. Archived project file can also be imported.Follow the given steps to run the application:
 
@@ -24,7 +24,7 @@ Open Eclipse and import the project to get started with it. Archived project fil
 *   Click on Java Build Path.
 *   Go to Libraries and external Jars (GroupDocs.Signature.Jar).
 
-![](signature/java/images/how-to-run-examples_1.png)
+![](/signature/java/images/how-to-run-examples_1.png)
 
 ## Contribute
 

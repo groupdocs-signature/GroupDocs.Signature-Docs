@@ -29,7 +29,7 @@ structuredData:
 
 A **form field** is the interactive element located on document page that allows user data input through various control types like free input text box, multi-line text box, check boxes, drop down lists etc. Different document types support specific list of form field types. These elements are used to collect information from user on template form. Each Form Field element has an unique name, settings and value field. Form Fields should have unique names within the form. Picture below demonstrates possible document page with form fields.
 
-![FormField](signature/net/images/esign-document-with-form-field-signature.png)
+![FormField](/signature/net/images/esign-document-with-form-field-signature.png)
 
 ## How to eSign document with Form Field signature
 

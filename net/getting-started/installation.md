@@ -21,7 +21,7 @@ Follow these steps to reference GroupDocs.Signature using Package Manager GUI:
 * Select **Browse** tab and type **"GroupDocs.Signature"** in the search text box.
 * Click the **Install** button to install the latest version of the API into your project as shown in the following screenshot.  
 
-![Installation](signature/net/images/installation.png)
+![Installation](/signature/net/images/installation.png)
 
 #### Using Package Manager Console
 
@@ -32,7 +32,7 @@ You can follow the steps below to reference GroupDocs.Signature for .NET using t
 * Type the command "Install-Package GroupDocs.Signature" and press enter to install the latest release into your application.
 * After successful installation, GroupDocs.Signature will be referenced in your application.  
 
-![Installation](signature/net/images/installation_1.png)
+![Installation](/signature/net/images/installation_1.png)
 
 ## Install from official GroupDocs website
 

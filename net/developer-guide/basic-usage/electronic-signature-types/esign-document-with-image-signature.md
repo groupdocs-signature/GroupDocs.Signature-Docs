@@ -28,7 +28,7 @@ structuredData:
 ## What is a Image Signature?
 
 An **image** as signature is alternative way to put any presenting data in a visual form. This electronic signature type allows to create custom image with company logo, sender' initials, names or make a company stamp icon in it,  
-![Images](signature/net/images/esign-document-with-image-signature.png)
+![Images](/signature/net/images/esign-document-with-image-signature.png)
 
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [ImageSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesignoptions) class to specify different settings for Image signature such as image content by file or stream, location, colors and advanced effects.
 

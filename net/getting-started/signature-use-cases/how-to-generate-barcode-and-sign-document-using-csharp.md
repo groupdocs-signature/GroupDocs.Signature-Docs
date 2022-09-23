@@ -50,7 +50,7 @@ PM> Install-Package GroupDocs.Signature
 
 It is common problem to add additional data in various types of business documents. Such document may looks as in the picture below. The one of the most useful ways is to place a barcode directly on the document page.
 
-![Source PDF document preview](signature/net/images/signature-use-cases/how-to-generate-barcode-and-sign-document-using-csharp/source_doc_preview.png)
+![Source PDF document preview](/signature/net/images/signature-use-cases/how-to-generate-barcode-and-sign-document-using-csharp/source_doc_preview.png)
 
 ### Signing document with Codabar in C\#
 
@@ -79,7 +79,7 @@ To sign a particular document with just generated barcode:
 
 Signed with Codabar document might looks like in the picture below. Codabar format was developed for printed documents and might be useful in office document flow.
 
-![Signed with Codabar document](signature/net/images/signature-use-cases/how-to-generate-barcode-and-sign-document-using-csharp/signed_codabar.png)
+![Signed with Codabar document](/signature/net/images/signature-use-cases/how-to-generate-barcode-and-sign-document-using-csharp/signed_codabar.png)
 
 [GroupDocs.Signature App](https://products.groupdocs.app/signature/generate/barcode/codabar) provides opportunity to try document signing with barcodes for free.
 
@@ -116,7 +116,7 @@ Another way to improve documents is to generate barcode firstly and add it to do
 ```
 Image containing generated barcode might looks in this way:
 
-![Generated barcode](signature/net/images/signature-use-cases/how-to-generate-barcode-and-sign-document-using-csharp/code93extended.png)
+![Generated barcode](/signature/net/images/signature-use-cases/how-to-generate-barcode-and-sign-document-using-csharp/code93extended.png)
 
 ## Get a Free API License
 

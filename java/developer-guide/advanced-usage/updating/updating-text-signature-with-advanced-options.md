@@ -36,11 +36,11 @@ The following table describes changeable properties for Text signatures dependen
 
 | Document Type / Signature Property | Left | Top | Width | Height | Text | IsSignature |
 | --- | --- | --- | --- | --- | --- | --- |
-| Image | ![(error)](signature/java/images/error.png) | ![(error)](signature/java/images/error.png) | ![(error)](signature/java/images/error.png) | ![(error)](signature/java/images/error.png) | ![(error)](signature/java/images/error.png) | ![(error)](signature/java/images/error.png) |
-| Spreadsheet | ![(tick)](signature/java/images/check.png) | ![(tick)](signature/java/images/check.png) | ![(tick)](signature/java/images/check.png) | ![(tick)](signature/java/images/check.png) | ![(tick)](signature/java/images/check.png) | ![(tick)](signature/java/images/check.png) |
-| Pdf | ![(tick)](signature/java/images/check.png) | ![(tick)](signature/java/images/check.png) | ![(tick)](signature/java/images/check.png) | ![(tick)](signature/java/images/check.png) | ![(tick)](signature/java/images/check.png) | ![(tick)](signature/java/images/check.png) |
-| Presentation | ![(tick)](signature/java/images/check.png) | ![(tick)](signature/java/images/check.png) | ![(tick)](signature/java/images/check.png) | ![(tick)](signature/java/images/check.png) | ![(tick)](signature/java/images/check.png) | ![(tick)](signature/java/images/check.png) |
-| Word Processing | ![(tick)](signature/java/images/check.png) | ![(tick)](signature/java/images/check.png) | ![(tick)](signature/java/images/check.png) | ![(tick)](signature/java/images/check.png) | ![(tick)](signature/java/images/check.png) | ![(tick)](signature/java/images/check.png) |
+| Image | ![(error)](/signature/java/images/error.png) | ![(error)](/signature/java/images/error.png) | ![(error)](/signature/java/images/error.png) | ![(error)](/signature/java/images/error.png) | ![(error)](/signature/java/images/error.png) | ![(error)](/signature/java/images/error.png) |
+| Spreadsheet | ![(tick)](/signature/java/images/check.png) | ![(tick)](/signature/java/images/check.png) | ![(tick)](/signature/java/images/check.png) | ![(tick)](/signature/java/images/check.png) | ![(tick)](/signature/java/images/check.png) | ![(tick)](/signature/java/images/check.png) |
+| Pdf | ![(tick)](/signature/java/images/check.png) | ![(tick)](/signature/java/images/check.png) | ![(tick)](/signature/java/images/check.png) | ![(tick)](/signature/java/images/check.png) | ![(tick)](/signature/java/images/check.png) | ![(tick)](/signature/java/images/check.png) |
+| Presentation | ![(tick)](/signature/java/images/check.png) | ![(tick)](/signature/java/images/check.png) | ![(tick)](/signature/java/images/check.png) | ![(tick)](/signature/java/images/check.png) | ![(tick)](/signature/java/images/check.png) | ![(tick)](/signature/java/images/check.png) |
+| Word Processing | ![(tick)](/signature/java/images/check.png) | ![(tick)](/signature/java/images/check.png) | ![(tick)](/signature/java/images/check.png) | ![(tick)](/signature/java/images/check.png) | ![(tick)](/signature/java/images/check.png) | ![(tick)](/signature/java/images/check.png) |
 
 ## Update Text signature in the document after Search
 

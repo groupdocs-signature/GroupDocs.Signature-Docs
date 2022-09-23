@@ -84,7 +84,7 @@ Sometimes it is needed to inform workers about business events. In such cases Ev
 
 Result of signing may looks like the picture below. Such QR-code can be very useful for events organization.
 
-![Signed with Event QR-code document](signature/net/images/signature-use-cases/how-to-generate-barcode-and-sign-document-using-csharp/signed_event.png)
+![Signed with Event QR-code document](/signature/net/images/signature-use-cases/how-to-generate-barcode-and-sign-document-using-csharp/signed_event.png)
 
 [GroupDocs.Signature App](https://products.groupdocs.app/signature/generate/qrcode) gives opportunity to try document signing with QR-codes for free.
 
@@ -119,7 +119,7 @@ Another way to improve documents is to generate QR Code firstly and add it to do
 ```
 Image containing generated QR Code might looks in this way:
 
-![Generated QRCode](signature/net/images/signature-use-cases/how-to-generate-barcode-and-sign-document-using-csharp/signed_event.png)
+![Generated QRCode](/signature/net/images/signature-use-cases/how-to-generate-barcode-and-sign-document-using-csharp/signed_event.png)
 
 ## Get a Free API License
 

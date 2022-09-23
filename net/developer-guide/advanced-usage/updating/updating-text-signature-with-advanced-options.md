@@ -36,11 +36,11 @@ The following table describes changeable properties for Text signatures dependen
 
 | Document Type / Signature Property | Left | Top | Width | Height | Text | IsSignature |
 | --- | --- | --- | --- | --- | --- | --- |
-| Image | ![(error)](signature/net/images/error.png) | ![(error)](signature/net/images/error.png) | ![(error)](signature/net/images/error.png) | ![(error)](signature/net/images/error.png) | ![(error)](signature/net/images/error.png) | ![(error)](signature/net/images/error.png) |
-| Spreadsheet | ![(tick)](signature/net/images/check.png) | ![(tick)](signature/net/images/check.png) | ![(tick)](signature/net/images/check.png) | ![(tick)](signature/net/images/check.png) | ![(tick)](signature/net/images/check.png) | ![(tick)](signature/net/images/check.png) |
-| Pdf | ![(tick)](signature/net/images/check.png) | ![(tick)](signature/net/images/check.png) | ![(tick)](signature/net/images/check.png) | ![(tick)](signature/net/images/check.png) | ![(tick)](signature/net/images/check.png) | ![(tick)](signature/net/images/check.png) |
-| Presentation | ![(tick)](signature/net/images/check.png) | ![(tick)](signature/net/images/check.png) | ![(tick)](signature/net/images/check.png) | ![(tick)](signature/net/images/check.png) | ![(tick)](signature/net/images/check.png) | ![(tick)](signature/net/images/check.png) |
-| Word Processing | ![(tick)](signature/net/images/check.png) | ![(tick)](signature/net/images/check.png) | ![(tick)](signature/net/images/check.png) | ![(tick)](signature/net/images/check.png) | ![(tick)](signature/net/images/check.png) | ![(tick)](signature/net/images/check.png) |
+| Image | ![(error)](/signature/net/images/error.png) | ![(error)](/signature/net/images/error.png) | ![(error)](/signature/net/images/error.png) | ![(error)](/signature/net/images/error.png) | ![(error)](/signature/net/images/error.png) | ![(error)](/signature/net/images/error.png) |
+| Spreadsheet | ![(tick)](/signature/net/images/check.png) | ![(tick)](/signature/net/images/check.png) | ![(tick)](/signature/net/images/check.png) | ![(tick)](/signature/net/images/check.png) | ![(tick)](/signature/net/images/check.png) | ![(tick)](/signature/net/images/check.png) |
+| Pdf | ![(tick)](/signature/net/images/check.png) | ![(tick)](/signature/net/images/check.png) | ![(tick)](/signature/net/images/check.png) | ![(tick)](/signature/net/images/check.png) | ![(tick)](/signature/net/images/check.png) | ![(tick)](/signature/net/images/check.png) |
+| Presentation | ![(tick)](/signature/net/images/check.png) | ![(tick)](/signature/net/images/check.png) | ![(tick)](/signature/net/images/check.png) | ![(tick)](/signature/net/images/check.png) | ![(tick)](/signature/net/images/check.png) | ![(tick)](/signature/net/images/check.png) |
+| Word Processing | ![(tick)](/signature/net/images/check.png) | ![(tick)](/signature/net/images/check.png) | ![(tick)](/signature/net/images/check.png) | ![(tick)](/signature/net/images/check.png) | ![(tick)](/signature/net/images/check.png) | ![(tick)](/signature/net/images/check.png) |
 
 ## Update Text signature in the document after Search
 

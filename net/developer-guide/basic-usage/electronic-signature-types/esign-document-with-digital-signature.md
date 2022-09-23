@@ -31,7 +31,7 @@ A digital electronic signature is a scheme for verifying the document's authenti
 
 Digital signature as certificate file of PFX format allows to sign document after each creation or change with certificate and specify several optional parameters like subject, title, reason, contact etc. Most document viewers or editors support digital signatures verification that allows users to ensure document is from trusted source. Office documents format such as Word processing documents (DOC, DOCX, ODT, OTT), Spreadsheet files (XLSX, XLS, ODS, OTS) support digital signature without any visual appearance on document pages. PDF document format supports digital signature with alternative visual appearance on specific document page with custom image and labels. Picture below shows how digital signature looks by default on PDF document page..
 
-![Digital](signature/net/images/esign-document-with-digital-signature.png)
+![Digital](/signature/net/images/esign-document-with-digital-signature.png)
 
 ## How to eSign document with Digital signature
 

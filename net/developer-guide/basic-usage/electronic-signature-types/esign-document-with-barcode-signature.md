@@ -30,7 +30,7 @@ structuredData:
 A **barcode** or **bar code** is a way of presenting data in a visual, machine-readable form. Generally speaking, barcode is an image of rectangular form that consists of parallel black lines and white spaces of different widths.  
 Barcodes are used in various areas where quick identification is necessary - as part of the purchase process in retail stores, in warehouses to track inventory, and on invoices to assist in accounting, among many other uses.
 
-![Barcode](signature/net/images/esign-document-with-barcode-signature.gif)
+![Barcode](/signature/net/images/esign-document-with-barcode-signature.gif)
 
 Barcodes allow to store product related data like manufacturing and expiry dates, manufacturer name, country of the origin and product price. There are plenty of barcode types nowadays because different companies use different amount of number and bar combinations in their barcodes dependent on their needs. From document signature perspective Barcode may contain different characters (letters, digits or symbols) and have a various length and its size depending on the type and settings to keep signature information, title, subject or short encrypted data.  
 

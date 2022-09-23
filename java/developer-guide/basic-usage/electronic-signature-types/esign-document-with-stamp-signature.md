@@ -30,7 +30,7 @@ structuredData:
 A **stamp** signature is a special type of electronic signature that have visual appearance of round seal and its visual parameters can be set programmatically.   
 Every stamp signature can have multiple "stamp lines" with custom text and different line thickness, color, font weight and size. Here is an example of how stamp signature created with [**GroupDocs.Siganture**](https://products.groupdocs.com/signature/java) may look like: 
 
-![](signature/java/images/esign-document-with-stamp-signature.png)
+![](/signature/java/images/esign-document-with-stamp-signature.png)
 
 [GroupDocs.Signature](https://products.groupdocs.com/signature/java) provides [StampSignOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/StampSignOptions) class to specify different options for Stamp signature:
 
