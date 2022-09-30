@@ -25,10 +25,10 @@ structuredData:
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) allows to get document information which includes:
 
-* [FileType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/documentinfo/properties/filetype)
-* [Size](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/documentinfo/properties/size)
-* [PageCount](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/documentinfo/properties/pagecount)
-* Pages dimensions - [Height](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/pageinfo/properties/height) and [Width](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/pageinfo/properties/width) for each page in a document [Pages](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/idocumentinfo/properties/pages) collection.
+* [FileType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/documentinfo/filetype)
+* [Size](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/documentinfo/size)
+* [PageCount](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/documentinfo/pagecount)
+* Pages dimensions - [Height](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/pageinfo/height) and [Width](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/pageinfo/width) for each page in a document [Pages](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/idocumentinfo/pages) collection.
 
 ## Get document information from file on local disk
 

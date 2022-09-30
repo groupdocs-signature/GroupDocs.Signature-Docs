@@ -38,7 +38,7 @@ Full List of Issues Covering all Changes in this Release
 
 ## Public API and Backward Incompatible Changes
 
-### Class [PdfDigitalSignatureAppearance](https://apireference.groupdocs.com/signature/net/groupdocs.signature.options.appearances/pdfdigitalsignatureappearance) was update with new properties that allow to customize Font label appearance of PDF digital sigantures.
+### Class [PdfDigitalSignatureAppearance](https://reference.groupdocs.com/signature/net/groupdocs.signature.options.appearances/pdfdigitalsignatureappearance) was update with new properties that allow to customize Font label appearance of PDF digital sigantures.
 
 Class PdfDigitalSignatureAppearance was updated with new properties FontFamilyName and FontSize to custmomize Font of Digital Signature appearances labels.
 
@@ -63,6 +63,6 @@ public sealed class PdfDigitalSignatureAppearance : SignatureAppearance
 }
 ```
 
-### Class [PdfDigitalSignature](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/pdfdigitalsignature) was updated. Property Authority was removed.
+### Class [PdfDigitalSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/pdfdigitalsignature) was updated. Property Authority was removed.
 
 Class PdfDigitalSignature was updated with removed property Authority.

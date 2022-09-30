@@ -32,7 +32,7 @@ structuredData:
 * bool ReturnContent property allows to return in the image signature its content;
 * long MinContentSize property with non zero value limits the minimum size of image to return;
 * long MaxContentSize property with non zero value limits the maximum size of image to return;
-* [FileType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/filetype) ReturnContentType property allows to specify exact image content type
+* [FileType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/filetype) ReturnContentType property allows to specify exact image content type
 
 Here are the steps to search for image signatures within the document with GroupDocs.Signature:
 

@@ -33,7 +33,7 @@ Please be aware that [Delete](https://reference.groupdocs.com/signature/net/grou
 Here are the steps to delete Digital signature from the document with GroupDocs.Signature:
 
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path or its stream as a constructor parameter;
-* Instantiate [DigitalSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/digitalsearchoptions) object with desired properties;
+* Instantiate [DigitalSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsearchoptions) object with desired properties;
 * Call [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) method to obtain list of [DigitalSignatures](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/digitalsignature);
 * Select from list [DigitalSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/digitalsignature) object(s) that should be removed from the document;
 * Call [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) object [Delete](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/delete) method and pass one or several signatures to it.

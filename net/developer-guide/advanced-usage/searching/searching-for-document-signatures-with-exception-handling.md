@@ -25,11 +25,11 @@ structuredData:
         - name: Implement code with common try-catch statement. 
           text: For all other possible exceptions use Exception class.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides different error messages due to validation issues, missing required data, files etc. For handling these exceptions class [GroupDocsSignatureException](https://apireference.groupdocs.com/net/signature/groupdocs.signature/groupdocssignatureexception) should be used.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides different error messages due to validation issues, missing required data, files etc. For handling these exceptions class [GroupDocsSignatureException](https://reference.groupdocs.com/signature/net/groupdocs.signature/groupdocssignatureexception) should be used.
 
 Here are the steps to handle exceptions from GroupDocs.Signature while searching for document signatures:
 
-* Compose try-catch block above [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search)  method with catching [GroupDocsSignatureException](https://apireference.groupdocs.com/net/signature/groupdocs.signature/groupdocssignatureexception) type error.
+* Compose try-catch block above [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search)  method with catching [GroupDocsSignatureException](https://reference.groupdocs.com/signature/net/groupdocs.signature/groupdocssignatureexception) type error.
 
 ## Exception handling while searching for document signatures
 

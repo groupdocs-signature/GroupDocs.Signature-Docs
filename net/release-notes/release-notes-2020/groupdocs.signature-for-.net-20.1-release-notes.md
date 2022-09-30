@@ -59,7 +59,7 @@ Below is the list of most notable changes in release of GroupDocs.Signature for 
     ```
     
 2.  GroupDocs.Signature.Options.DigitalSignOptions  
-    Public class [DigitalSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/) was extended with new enumeration property **XAdESType** to specify if digital signature should be XAdES type. See enumeration type [XAdESType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/xadestype).
+    Public class [DigitalSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/) was extended with new enumeration property **XAdESType** to specify if digital signature should be XAdES type. See enumeration type [XAdESType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/xadestype).
     
     **XAdESType property**
     

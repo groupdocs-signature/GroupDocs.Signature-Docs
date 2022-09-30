@@ -10,14 +10,14 @@ hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides with [SignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions) property Extensions that expects list of different extensions classes. At this moment here are few of them
 
-* [SpreadsheetPosition](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/spreadsheetposition) that allows to specify for Spreadsheet documents signature position as Row and Column numbers
-* [TextShadow](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/textshadow) alternative extension for Text signature property
+* [SpreadsheetPosition](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/spreadsheetposition) that allows to specify for Spreadsheet documents signature position as Row and Column numbers
+* [TextShadow](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/textshadow) alternative extension for Text signature property
 
 Here are the steps to add extensions to signature into document with GroupDocs.Signature:
 
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
 * Instantiate the [SignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions) object with all required additional options.
-* Create instance of required Extension and call [SignOptions.Extensions.Add](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/signoptions/properties/extensions) method with passed object
+* Create instance of required Extension and call [SignOptions.Extensions.Add](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions/extensions) method with passed object
 * Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of  [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [SignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions) to it.
 
 ## Sign document with Text signature

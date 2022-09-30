@@ -41,7 +41,7 @@ Full List of Issues Covering all Changes in this Release
 
 ## Public API and Backward Incompatible Changes
 
-### New property Signatures of class [ProcessLog](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/processlog) is the list of processed signatures
+### New property Signatures of class [ProcessLog](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/processlog) is the list of processed signatures
 
 New property Signatures keep list of processed signatures per process operation.
 
@@ -58,10 +58,10 @@ public List<BaseSignature> Signatures { get; }
 
 New boolean property Deleted was added to class **[BaseSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/basesignature/)**. This property signals if Signature object was deleted from the Document.
 
-### Obsolete member Stamp was removed from enumeration [TextSignatureImplementation](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/textsignatureimplementation).
+### Obsolete member Stamp was removed from enumeration [TextSignatureImplementation](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/textsignatureimplementation).
 
-Obsolete member Stamp of enumeration **[TextSignatureImplementation](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/textsignatureimplementation)** was removed and no longer supported. Please use enumeration value Native instead.
+Obsolete member Stamp of enumeration **[TextSignatureImplementation](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/textsignatureimplementation)** was removed and no longer supported. Please use enumeration value Native instead.
 
-**Obsolete member Border was removed from [ImageAppearance](https://apireference.groupdocs.com/signature/net/groupdocs.signature.options.appearances/imageappearance**
+**Obsolete member Border was removed from [ImageAppearance](https://reference.groupdocs.com/signature/net/groupdocs.signature.options.appearances/imageappearance**
 
-Obsolete member Stamp of enumeration **[TextSignatureImplementation](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/textsignatureimplementation)** was removed and no longer supported. Please use enumeration value Native instead.
+Obsolete member Stamp of enumeration **[TextSignatureImplementation](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/textsignatureimplementation)** was removed and no longer supported. Please use enumeration value Native instead.

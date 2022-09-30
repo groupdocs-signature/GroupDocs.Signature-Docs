@@ -41,7 +41,7 @@ The following topics from Developer Guide were changed
 
 ## Public API and Backward Incompatible Changes
 
-#### New public enumeration [WiFiEncryptionType](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/wifiencryptiontype) was added to specify various encryption types for the WiFi QR Code entities
+#### New public enumeration [WiFiEncryptionType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/wifiencryptiontype) was added to specify various encryption types for the WiFi QR Code entities
 
 This enumeration keeps supported WiFi encryption types.
 
@@ -72,7 +72,7 @@ This enumeration keeps supported WiFi encryption types.
     }
 ```
 
-#### Public class [WiFi](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/wifi) was added to provide WiFi QR Code object properties
+#### Public class [WiFi](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/wifi) was added to provide WiFi QR Code object properties
 
 Class [WiFi] contains following properties to get or set.
 

@@ -27,15 +27,15 @@ structuredData:
         - name: Process list of found items
           text: Loop through list of found items and process in demanded way.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [MetadataSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/metadatasearchoptions) class to specify different options to search for Metadata signatures.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [MetadataSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasearchoptions) class to specify different options to search for Metadata signatures.
 
-Most document types such as Word Processing, Spreadsheet and Presentation contains built-in metadata properties. Using property [IncludeBuiltinProperties](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/metadatasearchoptions/properties/includebuiltinproperties) of [MetadataSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/metadatasearchoptions) allows to collect all supported built-in metadata properties of document. These properties are like document author, creation date, document keywords, titles, etc.
+Most document types such as Word Processing, Spreadsheet and Presentation contains built-in metadata properties. Using property [IncludeBuiltinProperties](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasearchoptions/includebuiltinproperties) of [MetadataSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasearchoptions) allows to collect all supported built-in metadata properties of document. These properties are like document author, creation date, document keywords, titles, etc.
 
 Here are the steps to search for metadata signatures within the document with GroupDocs.Signature:
 
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
-* Instantiate the [MetadataSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/metadatasearchoptions) object according to your requirements and specify [IncludeBuiltinProperties](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/metadatasearchoptions/properties/includebuiltinproperties) to true  
-* Call [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [MetadataSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/metadatasearchoptions) to it.
+* Instantiate the [MetadataSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasearchoptions) object according to your requirements and specify [IncludeBuiltinProperties](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasearchoptions/includebuiltinproperties) to true  
+* Call [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [MetadataSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasearchoptions) to it.
 
 This example shows how to get built in Metadata signatures.
 

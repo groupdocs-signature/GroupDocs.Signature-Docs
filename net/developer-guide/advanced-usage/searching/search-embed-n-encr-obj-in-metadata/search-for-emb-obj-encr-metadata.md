@@ -32,13 +32,13 @@ structuredData:
 * ability to search for embedded custom objects into metadata and decrypt them to original source values
 * ability to search for encrypted text of metadata signature and decrypt it  
   
-Here are the steps to search and decrypt previously encrypted text of metadata and decrypt custom object from metadata signature ([MetadataSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/metadatasignature)) with GroupDocs.Signature API:
+Here are the steps to search and decrypt previously encrypted text of metadata and decrypt custom object from metadata signature ([MetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/metadatasignature)) with GroupDocs.Signature API:
 
-* Implement custom data encryption class that implements [IDataEncryption](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/idataencryption) interface. By default Signature has several encryption implementation you can use but allows user to customize it. There's ability to specify inline encryption to use
+* Implement custom data encryption class that implements [IDataEncryption](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/idataencryption) interface. By default Signature has several encryption implementation you can use but allows user to customize it. There's ability to specify inline encryption to use
 * Define class with proper DataSerialization attribute  
-* Instantiate the [MetadataSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/metadatasearchoptions) object value
-* Call [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [MetadataSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/metadatasearchoptions) to it.
-* Process each Metadata signature ([MetadataSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/metadatasignature)) and set property [DataEncryption](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/metadatasearchoptions/properties/dataencryption) to specify data encryption and call [GetData](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/metadatasignature/methods/getdata/_1) method to retrieve object
+* Instantiate the [MetadataSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasearchoptions) object value
+* Call [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [MetadataSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasearchoptions) to it.
+* Process each Metadata signature ([MetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/metadatasignature)) and set property [DataEncryption](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasearchoptions/dataencryption) to specify data encryption and call [GetData](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/metadatasignature/getdata) method to retrieve object
 
 ## Implementation of custom data encryption
 
@@ -115,7 +115,7 @@ private class DocumentSignatureData
 
 ## Search for embedded custom objects in metadata signatures
 
- This example shows how to decrypt previously embedded encrypted custom objects into metadata signature. [MetadataSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/metadatasignature) contains method [GetData](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/metadatasignature/methods/getdata/_1) to retrieve object
+ This example shows how to decrypt previously embedded encrypted custom objects into metadata signature. [MetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/metadatasignature) contains method [GetData](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/metadatasignature/getdata) to retrieve object
 
 ```csharp
 using (Signature signature = new Signature("MetadataCustomEncryptionObject.docx"))

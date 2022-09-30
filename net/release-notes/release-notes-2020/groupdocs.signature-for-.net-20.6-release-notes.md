@@ -42,9 +42,9 @@ Following topics from Developer Guide were added
 
 ## Public API and Backward Incompatible Changes
 
-### Public enum [SymmetricAlgorithmType](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/symmetricalgorithmtype) was updated with new enumeration value for Net Standard 2.0.
+### Public enum [SymmetricAlgorithmType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/symmetricalgorithmtype) was updated with new enumeration value for Net Standard 2.0.
 
-Public class **[SymmetricAlgorithmType](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/symmetricalgorithmtype)** was updated with new enumeration .
+Public class **[SymmetricAlgorithmType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/symmetricalgorithmtype)** was updated with new enumeration .
 
 *   new enumeration options **AES** was added to specify AES encryption algorithm..
 
@@ -104,11 +104,11 @@ using (Signature signature = new Signature("sample.pdf"))
 }
 ```
 
-### Public class [TextSignOptions](https://apireference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions) was updated with new property for document specific signatures. Supported only for text watermarks for WordProcessing documents yet.
+### Public class [TextSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions) was updated with new property for document specific signatures. Supported only for text watermarks for WordProcessing documents yet.
 
-Public class **[TextSignOptions](https://apireference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions)** was updated with new property.
+Public class **[TextSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions)** was updated with new property.
 
-*   new property **[Native](https://apireference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions/properties/native)** of type **bool** was added to specify document specific signatures implementations. Now it influences only text watermarks for WordProcessing, but it's application area could be widened soon.
+*   new property **[Native](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions/native)** of type **bool** was added to specify document specific signatures implementations. Now it influences only text watermarks for WordProcessing, but it's application area could be widened soon.
 
 **New properties of TextSignOptions**
 

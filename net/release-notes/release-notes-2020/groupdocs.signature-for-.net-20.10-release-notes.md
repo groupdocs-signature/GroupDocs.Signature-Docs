@@ -34,7 +34,7 @@ Full List of Issues Covering all Changes in this Release
 
 ## Public API and Backward Incompatible Changes
 
-### New class [PdfDigitalSignatureAppearance](https://apireference.groupdocs.com/signature/net/groupdocs.signature.options.appearances/pdfdigitalsignatureappearance) was added with several properties that allow to customize appearance of digital sigantures on the PDF Document pages. 
+### New class [PdfDigitalSignatureAppearance](https://reference.groupdocs.com/signature/net/groupdocs.signature.options.appearances/pdfdigitalsignatureappearance) was added with several properties that allow to customize appearance of digital sigantures on the PDF Document pages. 
 
 New class PdfDigitalSignatureAppearance contains follow properties.
 

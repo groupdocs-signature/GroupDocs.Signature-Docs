@@ -10,7 +10,7 @@ hideChildren: False
 ---
 {{< alert style="info" >}}XML Advanced Electronic Signature feature is now supported under .Net Framework only for Spreadsheet documents{{< /alert >}}
 
-**GroupDocs.Signature** provides [DigitalSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/) class to specify different amount of settings for Digital signature. One of these properties is the field of enumeration type [XAdESType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/xadestype)
+**GroupDocs.Signature** provides [DigitalSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/) class to specify different amount of settings for Digital signature. One of these properties is the field of enumeration type [XAdESType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/xadestype)
 
 Here are the steps to add XML Advanced Electronic Signature with GroupDocs.Signature:
 
@@ -18,7 +18,7 @@ Here are the steps to add XML Advanced Electronic Signature with GroupDocs.Sign
 * Instantiate the [DigitalSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/) object with required certificate and its password.
 * Set property XAdESType to enumeration value **XAdESType.XAdES.**
 * Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [DigitalSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/) to it.
-* Analyze [SignResult](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/signresult) result to check newly created signatures if needed.
+* Analyze [SignResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult) result to check newly created signatures if needed.
 
 ## Sign Spreadsheet document with XML Advanced Electronic Signature
 

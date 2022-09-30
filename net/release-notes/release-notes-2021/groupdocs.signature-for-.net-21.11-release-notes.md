@@ -36,9 +36,9 @@ Full List of Issues Covering all Changes in this Release
 
 ## Public API and Backward Incompatible Changes
 
-#### Public class [PdfDigitalSignatureAppearance](https://apireference.groupdocs.com/signature/net/groupdocs.signature.options.appearances/pdfdigitalsignatureappearance) was updated with new property that allows to specify foreground color of Digital Signature appearance on Pdf document page
+#### Public class [PdfDigitalSignatureAppearance](https://reference.groupdocs.com/signature/net/groupdocs.signature.options.appearances/pdfdigitalsignatureappearance) was updated with new property that allows to specify foreground color of Digital Signature appearance on Pdf document page
 
-Public class [PdfDigitalSignatureAppearance](https://apireference.groupdocs.com/signature/net/groupdocs.signature.options.appearances/pdfdigitalsignatureappearance) was updated with propery
+Public class [PdfDigitalSignatureAppearance](https://reference.groupdocs.com/signature/net/groupdocs.signature.options.appearances/pdfdigitalsignatureappearance) was updated with propery
 
 * property Color [Foreground] that allows to specify foreground text color of signature labels.
 
@@ -55,7 +55,7 @@ Public class [PdfDigitalSignatureAppearance](https://apireference.groupdocs.com/
    }
 ```
 
-#### Public class [BarcodeTypes](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/barcodetypes) was updated with new static BarcodeType property that describes postal barcode Mailmark
+#### Public class [BarcodeTypes](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/barcodetypes) was updated with new static BarcodeType property that describes postal barcode Mailmark
 
 This property defines support of new postal barcode Mailmark.
 
@@ -75,7 +75,7 @@ This property defines support of new postal barcode Mailmark.
 }
 ```
 
-#### Public enum [SpreadsheetSaveFileFormat](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/spreadsheetsavefileformat) was updated with new supported save format types like Emf, Jpg and Png
+#### Public enum [SpreadsheetSaveFileFormat](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/spreadsheetsavefileformat) was updated with new supported save format types like Emf, Jpg and Png
 
 Newly added format types SpreadsheetSaveFileFormat.Emf, SpreadsheetSaveFileFormat.Jpg and SpreadsheetSaveFileFormat.Png allow to save signed document to rquired format.
 
@@ -98,7 +98,7 @@ Newly added format types SpreadsheetSaveFileFormat.Emf, SpreadsheetSaveFileForma
 }
 ```
 
-#### Public class [ImageSignOption](https://apireference.groupdocs.com/signature/net/groupdocs.signature.options/imagesignoptions) was extended with static method to create ImageSignOptions instance from base64 image string content and updated to implement IDisposable interface
+#### Public class [ImageSignOption](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/imagesignoptions) was extended with static method to create ImageSignOptions instance from base64 image string content and updated to implement IDisposable interface
 
 The ImageSignOptions class implements IDisposable interface and contains static method FromBase64(string base64Content) to create ImageSignOptions from base64 string
 

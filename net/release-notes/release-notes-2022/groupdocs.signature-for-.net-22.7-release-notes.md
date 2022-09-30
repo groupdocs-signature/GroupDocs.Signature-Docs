@@ -38,7 +38,7 @@ The following topics from Developer Guide were changed
 
 ## Public API and Backward Incompatible Changes
 
-#### Public enumeration [SymmetricAlgorithmType](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/symmetricalgorithmtype) was modified with few elements marked as obsolete and added new AES type
+#### Public enumeration [SymmetricAlgorithmType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/symmetricalgorithmtype) was modified with few elements marked as obsolete and added new AES type
 
 Represents symmetric encryption algorithm type.
 
@@ -70,7 +70,7 @@ Represents symmetric encryption algorithm type.
     }
 ```
 
-#### Public enumeration [PreviewFormats](https://apireference.groupdocs.com/signature/net/groupdocs.signature.options/previewsignatureoptions/properties/previewformat) was modified with new supported format types
+#### Public enumeration [PreviewFormats](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewsignatureoptions/previewformat) was modified with new supported format types
 
 Enumeration represents signature preview options with new format added - the vector SVG and GIF
 

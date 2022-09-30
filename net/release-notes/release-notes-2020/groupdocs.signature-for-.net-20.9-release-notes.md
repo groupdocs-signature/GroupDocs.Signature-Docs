@@ -61,6 +61,6 @@ using (Signature signature = new Signature("signedSample.pdf"))
 }
 ```
 
-### New boolean property ShowProperties of class [PdfDigitalSignature](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/pdfdigitalsignature) was added
+### New boolean property ShowProperties of class [PdfDigitalSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/pdfdigitalsignature) was added
 
-New boolean property ShowProperties was added to class **[PdfDigitalSignature](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/pdfdigitalsignature)**. This property allow to adjust appearance of Digital signture on Pdf document page.
+New boolean property ShowProperties was added to class **[PdfDigitalSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/pdfdigitalsignature)**. This property allow to adjust appearance of Digital signture on Pdf document page.

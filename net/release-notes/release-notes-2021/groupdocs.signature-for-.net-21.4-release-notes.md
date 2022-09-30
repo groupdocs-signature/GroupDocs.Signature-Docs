@@ -31,7 +31,7 @@ Full List of Issues Covering all Changes in this Release
 
 ## Public API and Backward Incompatible Changes
 
-#### New public enumeration [DocumentType](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/documenttype) was added to distinct supported document types
+#### New public enumeration [DocumentType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/documenttype) was added to distinct supported document types
 
 This enumeration keeps supported Document types.
 
@@ -59,12 +59,12 @@ This enumeration keeps supported Document types.
 }
 ```
 
-#### Public class [SignOptions](https://apireference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions) was updated with 2 new properties that allow to distinct signature type and document type
+#### Public class [SignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions) was updated with 2 new properties that allow to distinct signature type and document type
 
-Public class [SignOptions](https://apireference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions) was updated with properties
+Public class [SignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions) was updated with properties
 
-* readonly property [SignatureType](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/signaturetype).
-* property [DocumentType](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/documenttype).
+* readonly property [SignatureType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signaturetype).
+* property [DocumentType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/documenttype).
 
 **New properties of SignOptions class**
 

@@ -93,12 +93,12 @@ using (Signature signature = new Signature("signed.pdfx"))
 }
 ```
 
-#### New public class [PreviewSignatureOptions](https://apireference.groupdocs.com/signature/net/groupdocs.signature.options/previewsignatureoptions) was added to collect settings for signature preview
+#### New public class [PreviewSignatureOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewsignatureoptions) was added to collect settings for signature preview
 
 This class contains following properties
 
 * unique signature identifier SignatureId.
-* instance of the [SignOptions](https://apireference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions).
+* instance of the [SignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions).
 * enumeration of the preview image format
 
 **New static method GenerateSignaturePreview of Signature class**
@@ -170,7 +170,7 @@ This class contains following properties
 
 #### Public class [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) was updated with static method to generate Signature preview with specified SignOptions
 
-Static method [GenerateSignaturePreview](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/generatesignaturepreview) expects [PreviewSignatureOptions](https://apireference.groupdocs.com/signature/net/groupdocs.signature.options/previewsignatureoptions) to generate signature preview and control creation and deletion signature image stream.
+Static method [GenerateSignaturePreview](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/generatesignaturepreview) expects [PreviewSignatureOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewsignatureoptions) to generate signature preview and control creation and deletion signature image stream.
 
 **New static method GenerateSignaturePreview of Signature class**
 

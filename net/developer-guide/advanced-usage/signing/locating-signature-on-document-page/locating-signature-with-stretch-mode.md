@@ -8,18 +8,18 @@ keywords:
 productName: GroupDocs.Signature for .NET
 hideChildren: False
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides ability to stretch signature area along page width or height. Use enumeration [StretchMode](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/stretchmode) contains following values
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides ability to stretch signature area along page width or height. Use enumeration [StretchMode](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/stretchmode) contains following values
 
-* [None](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/stretchmode) - no stretch will be applied
-* [PageWidth](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/stretchmode) -  to stretch signature area along page width
-* [PageHeight](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/stretchmode) - to stretch signature area along page height
-* [PageArea](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/stretchmode) - to stretch signature area along page width and height
+* [None](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/stretchmode) - no stretch will be applied
+* [PageWidth](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/stretchmode) -  to stretch signature area along page width
+* [PageHeight](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/stretchmode) - to stretch signature area along page height
+* [PageArea](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/stretchmode) - to stretch signature area along page width and height
 
 Here are the steps to use stretch mode with adding text or images signatures into document with GroupDocs.Signature:
 
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
-* Instantiate the [TextSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/textsignoptions) or [ImageSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesignoptions)  object with all required additional options and setup [Stretch](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesignoptions/properties/stretch) property
-* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and the instance of signature options ([ImageSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesignoptions) for example) to it.
+* Instantiate the [TextSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions) or [ImageSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/imagesignoptions)  object with all required additional options and setup [Stretch](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/imagesignoptions/stretch) property
+* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and the instance of signature options ([ImageSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/imagesignoptions) for example) to it.
 
 ## Locate Signature Area with Stretch Mode
 

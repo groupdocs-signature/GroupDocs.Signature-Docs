@@ -32,7 +32,7 @@ structuredData:
 The following are the steps to work with password protected documents.
 
 *   Instantiate the [LoadOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/loadoptions) object;
-*   Set password in [LoadOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/loadoptions) the [Password](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/loadoptions/password)property;
+*   Set password in [LoadOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/loadoptions) the [Password](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/loadoptions/password) property;
 *   Create [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) object and call any method.
 
 The following code sample shows how to process password protected documents.

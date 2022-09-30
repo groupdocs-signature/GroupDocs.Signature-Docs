@@ -41,15 +41,15 @@ QR-code (or Quick Response code) is a sort of two-dimensional [barcode]({{< ref
 | **Length** | 3067 alphanumeric,<br> 3832 numeric,<br> 1914 bytes | 2335 alphanumeric,<br> 3116 numeric | 2335 alphanumeric,<br> 3116 numeric,<br> 1556 bytes | 7089 alphanumeric,<br> 4296 numeric,<br> 2953 bytes | 4296 alphanumeric,<br> 7089 numeric,<br> 2953 bytes |
 | **Example** | ![Aztec](/signature/net/images/esign-document-with-qr-code-signature_1.png) | ![DataMatrix](/signature/net/images/esign-document-with-qr-code-signature_2.png) | ![GS1 DataMatrix](/signature/net/images/esign-document-with-qr-code-signature_3.png) | ![GS1 QR code](/signature/net/images/esign-document-with-qr-code-signature_4.png) | ![QR](/signature/net/images/esign-document-with-qr-code-signature_5.png)
 
-While adding QR-code electronic signature to document GroupDocs.Signature the main settings are text to be encoded and QR-code [type](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/qrcodetypes/fields/index) which should be specified via [QrCodeSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodesignoptions) class.  
+While adding QR-code electronic signature to document GroupDocs.Signature the main settings are text to be encoded and QR-code [type](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodetypes/#fields) which should be specified via [QrCodeSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesignoptions) class.  
 
 Here are the steps to eSign document with QR-code signature:
 
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
 
-* Instantiate the [QrCodeSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodesignoptions) object according to your requirements and specify [EncodeType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodesignoptions/properties/encodetype) and [Text](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/textsignoptions/properties/text) properties.
+* Instantiate the [QrCodeSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesignoptions) object according to your requirements and specify [EncodeType](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesignoptions/encodetype) and [Text](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions/text) properties.
   
-* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [QrCodeSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodesignoptions) to it.
+* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [QrCodeSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesignoptions) to it.
 
 The code snippet below demonstrates how to sign PDF document with QR-code signature.
 

@@ -37,7 +37,7 @@ Full List of Issues Covering all Changes in this Release
 
 ## Public API and Backward Incompatible Changes
 
-#### Public class LoadOptions [LoadOptions](https://apireference.groupdocs.com/signature/net/groupdocs.signature.options/loadoptions) was updated new boolean property [LoadExternalResources](https://apireference.groupdocs.com/signature/net/groupdocs.signature.options/loadoptions/properties/loadexternalresources)
+#### Public class LoadOptions [LoadOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/loadoptions) was updated new boolean property [LoadExternalResources](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/loadoptions/loadexternalresources)
 
 This boolean option allow to specify if external resources in the document should be loaded or skipped. By default this property is enabled (value true) that signals to load external resources. If this property is set to false the external resources will be skipped. This mechanism can increase performance of document processing in case of many external resources (like media, images etc)
 
@@ -55,13 +55,13 @@ This boolean option allow to specify if external resources in the document shoul
     };
 ```
 
-#### Public class [Signature](https://apireference.groupdocs.com/signature/net/groupdocs.signature/signature) was updated with overload methods Delete that accept one or several signature identifiers
+#### Public class [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) was updated with overload methods Delete that accept one or several signature identifiers
 
-Public class [Signature](https://apireference.groupdocs.com/signature/net/groupdocs.signature/Signature) was updated with overload methods Delete
+Public class [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/Signature) was updated with overload methods Delete
 
 * method [Delete] with one string argument as signature identifier tries to find signature by id and remove it to return true. Otherwise the false value will be deleted.
 
-* second overload method [Delete] that expects list of string identifiers tries to find signatures with same identifiers and then remove them. The result of this procedure returns in the [DeleteResult](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/deleteresult) object.
+* second overload method [Delete] that expects list of string identifiers tries to find signatures with same identifiers and then remove them. The result of this procedure returns in the [DeleteResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/deleteresult) object.
 
 **New overload methods Delete of Signature class**
 

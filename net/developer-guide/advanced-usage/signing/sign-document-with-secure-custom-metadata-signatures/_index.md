@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Signature for .NET
 hideChildren: False
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides additional features with [MetadataSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/metadatasignature) class like following
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides additional features with [MetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/metadatasignature) class like following
 
 * ability to embedded custom objects into metadata
 * ability to specify custom objects encryption and serialization
@@ -16,19 +16,19 @@ hideChildren: False
 
 Here are the steps to embed custom object into Metadata signature with GroupDocs.Signature:
 
-* Implement if needed custom data serialization class that implement [IDataSerializer](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/idataserializer)  interface. By default GroupDocs.Signature uses embedded json format serialization but allows user to customize it.
-* Implement if needed custom data encryption class that implements [IDataEncryption](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/idataencryption) interface. By default GroupDocs.Signature has several encryption implementation you can use but allows user to customize it.
-* Implement class with properties and specify if needed class attributes (like custom serialization attribute, custom encryption attribute), specify attributes for properties like [FormatAttribute](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/formatattribute)  to specify serialization name and display format, same as [SkipSerializationAttribute](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/skipserializationattribute) to mark property of class as not serialize  
+* Implement if needed custom data serialization class that implement [IDataSerializer](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/idataserializer)  interface. By default GroupDocs.Signature uses embedded json format serialization but allows user to customize it.
+* Implement if needed custom data encryption class that implements [IDataEncryption](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/idataencryption) interface. By default GroupDocs.Signature has several encryption implementation you can use but allows user to customize it.
+* Implement class with properties and specify if needed class attributes (like custom serialization attribute, custom encryption attribute), specify attributes for properties like [FormatAttribute](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/formatattribute)  to specify serialization name and display format, same as [SkipSerializationAttribute](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/skipserializationattribute) to mark property of class as not serialize  
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
-* Create one or several objects of proper [MetadataSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/metadatasignature) object for document (like [PdfMetadataSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/pdfmetadatasignature), [ImageMetadataSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/imagemetadatasignature),  [PresentationMetadataSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/presentationmetadatasignature), [SpreadsheetMetadataSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/spreadsheetmetadatasignature), [WordProcessingMetadataSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/wordprocessingmetadatasignature)) and setup
-* Instantiate the [MetadataSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/metadatasignoptions) object according to your requirements and pass all metadata signatures to it.
-* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [MetadataSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/metadatasignoptions) to it.
+* Create one or several objects of proper [MetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/metadatasignature) object for document (like [PdfMetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/pdfmetadatasignature), [ImageMetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/imagemetadatasignature),  [PresentationMetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/presentationmetadatasignature), [SpreadsheetMetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/spreadsheetmetadatasignature), [WordProcessingMetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/wordprocessingmetadatasignature)) and setup
+* Instantiate the [MetadataSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasignoptions) object according to your requirements and pass all metadata signatures to it.
+* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [MetadataSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasignoptions) to it.
 
 Following topics show more details of these features
 
 ## Implementation of custom data serialization
 
- This example shows how to specify custom serialization class. This class should be implemented as Attribute and [IDataSerializer](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/idataserializer) interface.
+ This example shows how to specify custom serialization class. This class should be implemented as Attribute and [IDataSerializer](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/idataserializer) interface.
 
 ```csharp
 /// <summary>
@@ -243,7 +243,7 @@ using (Signature signature = new Signature("sample.pdf"))
 ```
 
 {{< alert style="info" >}}
-Examples above also work for different document types. For Presentations documents only objects of [PresentationMetadataSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/presentationmetadatasignature) should be used with same properties and behavior, for Spreadsheet documents only objects of [SpreadsheetMetadataSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/spreadsheetmetadatasignature) should be used with same properties and behavior, with WordProcessing documents the class [WordProcessingMetadataSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/wordprocessingmetadatasignature) should be used
+Examples above also work for different document types. For Presentations documents only objects of [PresentationMetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/presentationmetadatasignature) should be used with same properties and behavior, for Spreadsheet documents only objects of [SpreadsheetMetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/spreadsheetmetadatasignature) should be used with same properties and behavior, with WordProcessing documents the class [WordProcessingMetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/wordprocessingmetadatasignature) should be used
 {{< /alert >}}
 
 ## More resources

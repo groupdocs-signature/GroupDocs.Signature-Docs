@@ -8,22 +8,22 @@ keywords:
 productName: GroupDocs.Signature for .NET
 hideChildren: False
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [TextSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/textsignoptions) class to specify additional options for text signature to specify following signature appearance
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [TextSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions) class to specify additional options for text signature to specify following signature appearance
 
-* signature alignment ([HorizontalAlignment](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/textsignoptions/properties/horizontalalignment), [VerticalAlignment](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/textsignoptions/properties/verticalalignment))
-* margins ([Margin](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/textsignoptions/properties/margin))
-* border and background settings ([Border,](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/textsignoptions/properties/border) [Background](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/textsignoptions/properties/background))
-* font and colors ([Font](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/textsignoptions/properties/font), [Forecolor](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodesignoptions/properties/forecolor))
-* text signature implementation ([stamp, text as image, watermark, annotation, shaped](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/textsignoptions/properties/signatureimplementation) etc)
+* signature alignment ([HorizontalAlignment](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions/horizontalalignment), [VerticalAlignment](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions/verticalalignment))
+* margins ([Margin](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions/margin))
+* border and background settings ([Border,](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions/border) [Background](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions/background))
+* font and colors ([Font](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions/font), [Forecolor](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesignoptions/forecolor))
+* text signature implementation ([stamp, text as image, watermark, annotation, shaped](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions/signatureimplementation) etc)
 
 Here are the steps to add Text signature into document with GroupDocs.Signature:
 
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
-* Instantiate the [TextSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/textsignoptions) object with all required additional options .
-* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [TextSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/textsignoptions) to it.
-* Analyze [SignResult](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/signresult) result to check newly created signatures if needed.  
+* Instantiate the [TextSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions) object with all required additional options .
+* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [TextSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions) to it.
+* Analyze [SignResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult) result to check newly created signatures if needed.  
 
-This example shows how to add Text signature to document with advanced setup and analyzing result of method. See [SignResult](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/signresult)
+This example shows how to add Text signature to document with advanced setup and analyzing result of method. See [SignResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult)
 
 ```csharp
 using (Signature signature = new Signature("sample.pdf"))

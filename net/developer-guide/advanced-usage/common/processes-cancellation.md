@@ -79,7 +79,7 @@ Here are the steps to provide cancellation for verification process with [**Grou
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
 * Subscribe for [VerifyProgress](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/verifyprogress) event with proper handler method.  
 * Instantiate required [VerifyOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/verifyoptions)  object.
-* Call [Verify](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/verify)method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass verification options in it.
+* Call [Verify](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/verify) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass verification options in it.
 
 ```csharp
 private static void OnVerifyProgress(Signature sender, ProcessProgressEventArgs args)
@@ -114,7 +114,7 @@ Here are the steps to provide cancellation of searching process with GroupDocs.S
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
 * Subscribe for [SearchProgress](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/searchprogress) event with proper handler method.
 * Instantiate required[SearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/searchoptions) object.
-* Call [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search)method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass search options in it.
+* Call [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass search options in it.
 
 ```csharp
 private static void OnSearchProgress(Signature sender, ProcessProgressEventArgs args)

@@ -30,14 +30,14 @@ Doing this is as simple as:
 
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
 * Instantiate required all required sign options objects dependent on signature type:
-* [BarcodeSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/barcodesignoptions) - for Barcode signatures;
+* [BarcodeSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/barcodesignoptions) - for Barcode signatures;
 * [DigitalSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/) - for Digital signatures;
-* [FormFieldSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/formfieldsignoptions) - for Form-field signatures;
-* [ImageSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesignoptions) - for Image signatures;
-* [MetadataSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/metadatasignoptions) - for Metadata signatures;
-* [QrCodeSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodesignoptions) - for QR-code signatures
-* [StampSIgnOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/stampsignoptions) - for Stamp signatures;
-* [TextSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/textsignoptions) - for Text signatures.
+* [FormFieldSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/formfieldsignoptions) - for Form-field signatures;
+* [ImageSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/imagesignoptions) - for Image signatures;
+* [MetadataSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasignoptions) - for Metadata signatures;
+* [QrCodeSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesignoptions) - for QR-code signatures
+* [StampSIgnOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/stampsignoptions) - for Stamp signatures;
+* [TextSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions) - for Text signatures.
 * Fill collection with sign options from previous step.  
 * Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass collection of sign options to it.
 

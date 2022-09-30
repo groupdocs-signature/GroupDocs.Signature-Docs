@@ -54,9 +54,9 @@ Following topics from Developer Guide were updated:
 
 ## Public API and Backward Incompatible Changes
 
-Public class [ComboboxFormFieldSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/comboboxformfieldsignature) was updated with new properties and ability to add this form field type to Pdf documents.
+Public class [ComboboxFormFieldSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/comboboxformfieldsignature) was updated with new properties and ability to add this form field type to Pdf documents.
 
-Public class **[ComboboxFormFieldSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/comboboxformfieldsignature)** was updated with new properties.
+Public class **[ComboboxFormFieldSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/comboboxformfieldsignature)** was updated with new properties.
 
 *   property **Selected** as string returns the value which is selected at combo-box field;
 *   property **Items** as list of strings keeps list of values at combo-box field;
@@ -103,7 +103,7 @@ public sealed class ComboboxFormFieldSignature : FormFieldSignature
 }
 ```
 
-Following example demonstrates using **[Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature.signature/sign/methods/6)** method with **[ComboboxFormFieldSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/comboboxformfieldsignature)**
+Following example demonstrates using **[Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/#sign_7)** method with **[ComboboxFormFieldSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/comboboxformfieldsignature)**
 
 **Sign document with Combobox Form field siganture**
 
@@ -128,9 +128,9 @@ using (Signature signature = new Signature(filePath))
 }
 ```
 
-#### Public class [EPC](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/epc) was added to represent European Payments Council Quick Response Code to be encoded to QR-Code embedded objects.
+#### Public class [EPC](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/epc) was added to represent European Payments Council Quick Response Code to be encoded to QR-Code embedded objects.
 
-Public class **[EPC](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/epc)** was added to represent European Payments Council Quick Response Code to be encoded to QR-Code embedded objects.
+Public class **[EPC](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/epc)** was added to represent European Payments Council Quick Response Code to be encoded to QR-Code embedded objects.
 
 **New EFC class properties**
 
@@ -192,7 +192,7 @@ public sealed class EPC
 }
 ```
 
-Following example demonstrates using **[Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature.signature/sign/methods/6)** method to esign PDF document with embedded **[EFC](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/efc)** object into the QR-code
+Following example demonstrates using **[Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/#sign_7)** method to esign PDF document with embedded **[EFC](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/efc)** object into the QR-code
 
 **eSign Pdf with embedded EPC QR-Code**
 
@@ -225,9 +225,9 @@ Following example demonstrates using **[Sign](https://apireference.groupdocs.com
 }
 ```
 
-#### Public class [Event](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/event) was added to represent Event standard entry as QR-Code embedded objects.
+#### Public class [Event](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/event) was added to represent Event standard entry as QR-Code embedded objects.
 
-Public class **[Event](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/event)** was added to represent Event standard entry as QR-Code embedded objects.
+Public class **[Event](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/event)** was added to represent Event standard entry as QR-Code embedded objects.
 
 **New public class Event**
 
@@ -269,7 +269,7 @@ Public class **[Event](https://apireference.groupdocs.com/net/signature/groupdo
     }
 ```
 
-Following example demonstrates using **[Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature.signature/sign/methods/6)** method to esign PDF document with embedded **[Event](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/event)** object into the QR-code
+Following example demonstrates using **[Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/#sign_7)** method to esign PDF document with embedded **[Event](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/event)** object into the QR-code
 
 **eSign Pdf with embedded Event QR-Code**
 
@@ -300,9 +300,9 @@ using (Signature signature = new Signature("sample.pdf")){
 }
 ```
 
-#### Public class [MeCard](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/mecard) was added to represent standard contact details to be encoded to QR-Code embedded object.
+#### Public class [MeCard](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/mecard) was added to represent standard contact details to be encoded to QR-Code embedded object.
 
-Public class **[MeCard](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/mecard)** was added to represent standard contact details to be encoded to QR-Code embedded object.
+Public class **[MeCard](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/mecard)** was added to represent standard contact details to be encoded to QR-Code embedded object.
 
 **MeCard properties**
 
@@ -369,7 +369,7 @@ Public class **[MeCard](https://apireference.groupdocs.com/net/signature/groupd
     }
 ```
 
-Following example demonstrates using **[Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature.signature/sign/methods/6)** method to esign PDF document with embedded **[MeCard](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/mecard)** object into the QR-code
+Following example demonstrates using **[Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/#sign_7)** method to esign PDF document with embedded **[MeCard](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/mecard)** object into the QR-code
 
 **eSign Pdf with embedded MeCard QR-Code**
 
@@ -416,9 +416,9 @@ using (Signature signature = new Signature("sample.pdf"))
 }
 ```
 
-#### Public class [VCard](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/vcard) was updated with new property CellPhone.
+#### Public class [VCard](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/vcard) was updated with new property CellPhone.
 
-Public class **[VCard](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/vcard)** was update with new string property CellPhone to get or set cellular phone number for contact details.
+Public class **[VCard](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/vcard)** was update with new string property CellPhone to get or set cellular phone number for contact details.
 
 **New public class DeleteResult**
 
@@ -435,9 +435,9 @@ public class VCard
  }
 ```
 
-#### Public enumeration [FormFieldType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/formfieldtype) was updated with new option **Radio**.
+#### Public enumeration [FormFieldType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/formfieldtype) was updated with new option **Radio**.
 
-Enumeration **[FormFieldType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/formfieldtype)** was updated with new options Radio to specify Radio button type for signature [RadiobuttonFormFieldSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/radiobuttonformfieldsignature).
+Enumeration **[FormFieldType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/formfieldtype)** was updated with new options Radio to specify Radio button type for signature [RadiobuttonFormFieldSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/radiobuttonformfieldsignature).
 
 **New public class DeleteResult**
 
@@ -456,9 +456,9 @@ public enum FormFieldType
 
 ```
 
-#### Public class [RadiobuttonFormFieldSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/radiobuttonformfieldsignature) was added to implement radio buttons form field type for Pdf documents.
+#### Public class [RadiobuttonFormFieldSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/radiobuttonformfieldsignature) was added to implement radio buttons form field type for Pdf documents.
 
-Public class **[RadioButtonFormFieldSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/radiobuttonformfieldsignature)**
+Public class **[RadioButtonFormFieldSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/radiobuttonformfieldsignature)**
 
 **RadiobuttonFormFieldSignature properties**
 
@@ -501,7 +501,7 @@ Public class **[RadioButtonFormFieldSignature](https://apireference.groupdocs.c
     }
 ```
 
-Following example demonstrates using **[Sign](https://apireference.groupdocs.com/net/signature/groupdocs.signature.signature/sign/methods/6)** method with **[RadioButtonFormFieldSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/radiobuttonformfieldsignature)**
+Following example demonstrates using **[Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/#sign_7)** method with **[RadioButtonFormFieldSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/radiobuttonformfieldsignature)**
 
 **eSign PDF documen with Radio button form field**
 
@@ -527,9 +527,9 @@ using (Signature signature = new Signature("sample.pdf"))
 
 ```
 
-#### Public enumeration [TextSignatureImplementation](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/textsignatureimplementation) was updated with obsolete and new options.
+#### Public enumeration [TextSignatureImplementation](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/textsignatureimplementation) was updated with obsolete and new options.
 
-Public enumeration **[TextSignatureImplementation](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/textsignatureimplementation)** was  updated with marked as obsolete existing option **Stamp** and new option **Native**
+Public enumeration **[TextSignatureImplementation](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/textsignatureimplementation)** was  updated with marked as obsolete existing option **Stamp** and new option **Native**
 
 **TextSignatureImplementation options**
 
@@ -553,9 +553,9 @@ Public enumeration **[TextSignatureImplementation](https://apireference.groupdoc
 }
 ```
 
-#### Public class [ImageAppearance](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options.appearances/imageappearance) was updated with obsolete member Border.
+#### Public class [ImageAppearance](https://reference.groupdocs.com/signature/net/groupdocs.signature.options.appearances/imageappearance) was updated with obsolete member Border.
 
-Public class **[ImageAppearance](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options.appearances/imageappearance)** was  updated with marked as obsolete existing property **[Border](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options.appearances/imageappearance/properties/border)**. Please use new property **[Border](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesignoptions/properties/border)** of **[ImageSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesignoptions)**
+Public class **[ImageAppearance](https://reference.groupdocs.com/signature/net/groupdocs.signature.options.appearances/imageappearance)** was  updated with marked as obsolete existing property **[Border](https://reference.groupdocs.com/signature/net/groupdocs.signature.options.appearances/imageappearance/border)**. Please use new property **[Border](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/imagesignoptions/border)** of **[ImageSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/imagesignoptions)**
 
 **ImageAppearences obsolete member**
 
@@ -574,9 +574,9 @@ public class ImageAppearance
 }
 ```
 
-#### Public class [ImageSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesignoptions) was updated with Border property support.
+#### Public class [ImageSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/imagesignoptions) was updated with Border property support.
 
-Public class **[ImageSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/imagesignoptions)** was updated with property Border of [Border](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/border) type
+Public class **[ImageSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/imagesignoptions)** was updated with property Border of [Border](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/border) type
 
 **Border property**
 

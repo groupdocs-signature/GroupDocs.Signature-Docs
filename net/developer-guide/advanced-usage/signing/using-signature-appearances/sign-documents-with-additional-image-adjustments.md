@@ -8,27 +8,27 @@ keywords:
 productName: GroupDocs.Signature for .NET
 hideChildren: False
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) contains [ImageAppearance](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options.appearances/imageappearance) class that implements extra image adjustment setting like
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) contains [ImageAppearance](https://reference.groupdocs.com/signature/net/groupdocs.signature.options.appearances/imageappearance) class that implements extra image adjustment setting like
 
-* gray-scale ([Grayscale](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options.appearances/imageappearance/properties/grayscale))
-* brightness ([Brightness](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options.appearances/imageappearance/properties/brightness))
-* contrast ([Contrast](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options.appearances/imageappearance/properties/contrast))
-* gamma correction ([GammaCorrection](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options.appearances/imageappearance/properties/gammacorrection))
-* border ([Border](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options.appearances/imageappearance/properties/border))
+* gray-scale ([Grayscale](https://reference.groupdocs.com/signature/net/groupdocs.signature.options.appearances/imageappearance/grayscale))
+* brightness ([Brightness](https://reference.groupdocs.com/signature/net/groupdocs.signature.options.appearances/imageappearance/brightness))
+* contrast ([Contrast](https://reference.groupdocs.com/signature/net/groupdocs.signature.options.appearances/imageappearance/contrast))
+* gamma correction ([GammaCorrection](https://reference.groupdocs.com/signature/net/groupdocs.signature.options.appearances/imageappearance/gammacorrection))
+* border ([Border](https://reference.groupdocs.com/signature/net/groupdocs.signature.options.appearances/imageappearance/border))
 
-Base signature class [SignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions) property [Appearance](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/signoptions/properties/appearance) should be set with instance of [ImageAppearance](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options.appearances/imageappearance) class to provide additional image adjustment
+Base signature class [SignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions) property [Appearance](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions/appearance) should be set with instance of [ImageAppearance](https://reference.groupdocs.com/signature/net/groupdocs.signature.options.appearances/imageappearance) class to provide additional image adjustment
 
 Here are the steps to setup extra image appearance with GroupDocs.Signature:
 
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
-* Compose object of[ImageAppearance](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options.appearances/imageappearance) object with all required additional options.
-* Set [SignOptions.Appearance](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/signoptions/properties/appearance) property with [ImageAppearance](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options.appearances/imageappearance)  object.  
+* Compose object of[ImageAppearance](https://reference.groupdocs.com/signature/net/groupdocs.signature.options.appearances/imageappearance) object with all required additional options.
+* Set [SignOptions.Appearance](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions/appearance) property with [ImageAppearance](https://reference.groupdocs.com/signature/net/groupdocs.signature.options.appearances/imageappearance)  object.  
 * Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [SignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions) to it.
-* Analyze [SignResult](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/signresult) result to check newly created signatures if needed.
+* Analyze [SignResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult) result to check newly created signatures if needed.
 
 ## Sign document with image appearance
 
-This example shows how to specify extra image appearances. See [SignResult](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/signresult)
+This example shows how to specify extra image appearances. See [SignResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult)
 
 ```csharp
 using (Signature signature = new Signature("sample.pdf"))
@@ -69,7 +69,7 @@ using (Signature signature = new Signature("sample.pdf"))
 
 ## Sign PDF document with Text signature Sticker appearance
 
-This example shows how to add Text signature to Pdf document with sticker look. See [SignResult](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/signresult)
+This example shows how to add Text signature to Pdf document with sticker look. See [SignResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult)
 
 ```csharp
 using (Signature signature = new Signature("sample.docx"))

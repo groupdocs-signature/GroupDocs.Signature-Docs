@@ -8,17 +8,17 @@ keywords:
 productName: GroupDocs.Signature for .NET
 hideChildren: False
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [SolidBrush](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/solidbrush) class to specify solid filling signature background for Text and Stamp signature types
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [SolidBrush](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/solidbrush) class to specify solid filling signature background for Text and Stamp signature types
 
 Here are the steps to add Text signature into document with GroupDocs.Signature:
 
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
-* Instantiate the [SignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions) object with all required additional options and setup [Background.Brush](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/background/properties/brush) property with instance of [SolidBrush](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/solidbrush)
+* Instantiate the [SignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions) object with all required additional options and setup [Background.Brush](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/background/brush) property with instance of [SolidBrush](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/solidbrush)
 * Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [SignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions) to it.
 
-* Analyze [SignResult](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/signresult) result to check newly created signatures if needed.
+* Analyze [SignResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult) result to check newly created signatures if needed.
 
-This example shows how to add Text signature with solid brush background. See [SignResult](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/signresult)
+This example shows how to add Text signature with solid brush background. See [SignResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult)
 
 ```csharp
 using (Signature signature = new Signature("sample.pdf"))

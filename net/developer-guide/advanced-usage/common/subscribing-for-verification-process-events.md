@@ -27,7 +27,7 @@ structuredData:
         - name: Process document with event listeners. 
           text: Call Signature Verify method and process all appearing events.
 ---
-[Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature)class contains several events that are being called for different verification process stages
+[Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class contains several events that are being called for different verification process stages
 
 * [VerifyStarted](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/verifystarted) to handle process start event. This event is occur once [Verify](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/verify) method is called
 * [VerifyProgress](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/verifyprogress) to handle progress event. This event occurs each time on verifying each signature was completed.
@@ -39,7 +39,7 @@ Here are the steps to subscribe for verification process with GroupDocs.Signatur
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
 * Subscribe for required events
 * Instantiate required [VerifyOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/verifyoptions) object
-* Call [Verify](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/verify) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature)class instance and pass verify options in it
+* Call [Verify](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/verify) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass verify options in it
 
 ## Implement method for VerifyStarted event
 

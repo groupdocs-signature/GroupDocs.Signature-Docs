@@ -35,14 +35,14 @@ structuredData:
 
 Here are the steps to search and decrypt previously encrypted text of QR-Code and decrypt custom object from QR-Code signature with GroupDocs.Signature API:
 
-* Implement (use) custom data serialization class that implements [IDataEncryption](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/idataencryption) interface.
+* Implement (use) custom data serialization class that implements [IDataEncryption](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/idataencryption) interface.
 * Ensure that data class if defined with custom serialization attribute  
-* Instantiate the [QrCodeSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesearchoptions) object and setup [DataEncryption](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodesearchoptions/properties/dataencryption) value with custom encryption object implementation
+* Instantiate the [QrCodeSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesearchoptions) object and setup [DataEncryption](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesearchoptions/dataencryption) value with custom encryption object implementation
 * Call [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [QrCodeSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesearchoptions) to it.
 
 ## Implementation of custom data serialization
 
- This example shows how to specify custom serialization class. This class should be implemented as Attribute and [IDataSerializer](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/idataserializer) interface.
+ This example shows how to specify custom serialization class. This class should be implemented as Attribute and [IDataSerializer](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/idataserializer) interface.
 
 ```csharp
 /// <summary>
@@ -141,7 +141,7 @@ public class DocumentSignatureData
 
 ## Search for embedded custom objects in QR-code signatures
 
-This example shows how to decrypt previously embedded encrypted custom objects into [QrCodeSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodesignature) contains method [GetData](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/qrcodesignature/methods/getdata/_1) to retrieve object
+This example shows how to decrypt previously embedded encrypted custom objects into [QrCodeSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodesignature) contains method [GetData](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodesignature/getdata) to retrieve object
 
 ```csharp
 using (Signature signature = new Signature("QRCodeCustomSerializationObject.pdf"))

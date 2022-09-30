@@ -20,7 +20,7 @@ Following topics show different aspects
 
 ## Alternative implementation of custom data serialization
 
-This example shows how to specify custom serialization class. This class should be implemented as Attribute and [IDataSerializer](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain.extensions/idataserializer) interface.
+This example shows how to specify custom serialization class. This class should be implemented as Attribute and [IDataSerializer](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/idataserializer) interface.
 
 ```csharp
 /// <summary>

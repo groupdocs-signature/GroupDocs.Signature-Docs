@@ -99,16 +99,16 @@ using (Signature signature = new Signature("sample.xlsx"))
 }
 ```
 
-#### Public class [MetadataSignature](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/metadatasignature) was updated with new conversion methods to retrieve its values with various data types.
+#### Public class [MetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/metadatasignature) was updated with new conversion methods to retrieve its values with various data types.
 
-Public class **[MetadataSignature](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/metadatasignature)** was updated with new data conversion methods
+Public class **[MetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/metadatasignature)** was updated with new data conversion methods
 
-*   new method **[ToDecimal](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/metadatasignature/methods/todecimal)** converts metadata signature value to decimal;
-*   new method **[ToDecimal(IFormatProvider provider)](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/metadatasignature/methods/index)** converts metadata signature value to decimal based on provided format provider;
-*   new method **[ToSingle](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/metadatasignature/methods/tosingle)** converts metadata signature value to float;
-*   new method **[ToSingle(IFormatProvider provider)](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/metadatasignature/methods/index)** converts metadata signature value to float based provided format provider;
+*   new method **[ToDecimal](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/metadatasignature/todecimal)** converts metadata signature value to decimal;
+*   new method **[ToDecimal(IFormatProvider provider)](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/metadatasignature)** converts metadata signature value to decimal based on provided format provider;
+*   new method **[ToSingle](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/metadatasignature/tosingle)** converts metadata signature value to float;
+*   new method **[ToSingle(IFormatProvider provider)](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/metadatasignature)** converts metadata signature value to float based provided format provider;
 
-All inherited classes (**[ImageMetadataSignature](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/imagemetadatasignature), [PdfMetadataSignature](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/pdfmetadatasignature), [PresentationMetadataSignature](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/presentationmetadatasignature), [SpreadsheetMetadataSignature](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/spreadsheetmetadatasignature), [WordProcessingMetadataSignature](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/wordprocessingmetadatasignature)**) are extended with there methods.
+All inherited classes (**[ImageMetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/imagemetadatasignature), [PdfMetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/pdfmetadatasignature), [PresentationMetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/presentationmetadatasignature), [SpreadsheetMetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/spreadsheetmetadatasignature), [WordProcessingMetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/wordprocessingmetadatasignature)**) are extended with there methods.
 
 **New methods of MetadataSignature**
 
@@ -154,7 +154,7 @@ All inherited classes (**[ImageMetadataSignature](https://apireference.groupdocs
  }
 ```
 
-Public class **[PdfDigitalSignature](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/pdfdigitalsignature)** property **string** **[Authority](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/pdfdigitalsignature/properties/authority)** was marked as obsolete and will be removed since 20.09 version.
+Public class **[PdfDigitalSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/pdfdigitalsignature)** property **string** **[Authority](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/pdfdigitalsignature/authority)** was marked as obsolete and will be removed since 20.09 version.
 
 **PdfDigitalSignature properties**
 

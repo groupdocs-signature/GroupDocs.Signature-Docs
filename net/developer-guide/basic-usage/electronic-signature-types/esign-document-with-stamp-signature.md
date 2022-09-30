@@ -32,7 +32,7 @@ Every stamp signature can have multiple "stamp lines" with custom text and diffe
 
 ![Stamp](/signature/net/images/esign-document-with-stamp-signature.png)
 
-GroupDocs.Signature provides [StampSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/stampsignoptions) class to specify different options for Stamp signature:
+GroupDocs.Signature provides [StampSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/stampsignoptions) class to specify different options for Stamp signature:
 
 * Stamp type - Round or Square;
 * Height and width in pixels;
@@ -44,8 +44,8 @@ Each Stamp option contains inner and outer lines. Inner lines represent vertical
 Here are the steps to add Stamp signature into document with GroupDocs.Signature:
 
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
-* Instantiate the [StampSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/stampsignoptions) object according to your requirements and specify appropriate options.
-* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [StampSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/stampsignoptions) to it.
+* Instantiate the [StampSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/stampsignoptions) object according to your requirements and specify appropriate options.
+* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [StampSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/stampsignoptions) to it.
 
 ## How to eSign document with Stamp signature
 

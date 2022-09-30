@@ -51,10 +51,10 @@ Following topics from Developer Guide were updated:
 
 Public class **[BarcodeSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/barcodesignature/)** was updated with new properties.
 
-*   new property **[Format](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/barcodesignature/format)** of type **[FileType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/filetype)** was added to specify the original image data format;
+*   new property **[Format](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/barcodesignature/format)** of type **[FileType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/filetype)** was added to specify the original image data format;
 *   new property **byte\[\]** **[Content](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/barcodesignature/content)** was added to keep original Barcode image raw data content
 
-Since 20.4 version there's ability to grab content of Barcode signatures. To enable this feature the property **[ReturnContent](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/barcodesearchoptions/properties/returncontent)** of **[BarcodeSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/barcodesearchoptions)** must be set to true. Also there is ability to specify output image content format type over property **[ReturnContentType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/barcodesearchoptions/properties/returncontenttype)**.
+Since 20.4 version there's ability to grab content of Barcode signatures. To enable this feature the property **[ReturnContent](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/barcodesearchoptions/returncontent)** of **[BarcodeSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/barcodesearchoptions)** must be set to true. Also there is ability to specify output image content format type over property **[ReturnContentType](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/barcodesearchoptions/returncontenttype)**.
 
 **New properties of BarcodeSignature**
 
@@ -121,7 +121,7 @@ Public class **[BaseSignature](https://reference.groupdocs.com/signature/net/gr
 *   new property **CreatedOn** of type **DateTime** was added to specify the date when signature was created;
 *   new property **ModifiedOn** of type **DateTime** was added to specify the date when signature was updated
 
-Since 20.4 version there's ability to grab content of Barcode signatures. To enable this feature the property **[ReturnContent](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/barcodesearchoptions/properties/returncontent)** of **[BarcodeSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/barcodesearchoptions)** must be set to true. Also there is ability to specify output image content format type over property **[ReturnContentType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/barcodesearchoptions/properties/returncontenttype)**.
+Since 20.4 version there's ability to grab content of Barcode signatures. To enable this feature the property **[ReturnContent](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/barcodesearchoptions/returncontent)** of **[BarcodeSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/barcodesearchoptions)** must be set to true. Also there is ability to specify output image content format type over property **[ReturnContentType](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/barcodesearchoptions/returncontenttype)**.
 
 **New properties of BaseSignature**
 
@@ -158,14 +158,14 @@ using (Signature signature = new Signature("sample.pdf"))
 }
 ```
 
-#### Public class [QrCodeSignature](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodesignature) was updated with new properties and ability to contain QrCode image content.
+#### Public class [QrCodeSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodesignature) was updated with new properties and ability to contain QrCode image content.
 
-Public class **[QrCodeSignature](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodesignature)** was updated with new properties.
+Public class **[QrCodeSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodesignature)** was updated with new properties.
 
-*   new property **[Format](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodesignature/properties/format)** of type **[FileType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/filetype)** was added to specify the original image data format;
-*   new property **byte\[\] [Content](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodesignature/properties/content)** was added to keep original QRCode image raw data content
+*   new property **[Format](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodesignature/format)** of type **[FileType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/filetype)** was added to specify the original image data format;
+*   new property **byte\[\] [Content](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodesignature/content)** was added to keep original QRCode image raw data content
 
-Since 20.4 version there's ability to grab content of QRCode signatures. To enable this feature the property **[ReturnContent](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodesearchoptions/properties/returncontent)** of **[QrCodeSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesearchoptions)** must be set to true. Also there is ability to specify output image content format type over property **[ReturnContentType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodesearchoptions/properties/returncontenttype)**.
+Since 20.4 version there's ability to grab content of QRCode signatures. To enable this feature the property **[ReturnContent](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesearchoptions/returncontent)** of **[QrCodeSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesearchoptions)** must be set to true. Also there is ability to specify output image content format type over property **[ReturnContentType](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesearchoptions/returncontenttype)**.
 
 **New properties of QrCodeSignature**
 
@@ -228,8 +228,8 @@ using (Signature signature = new Signature(filePath))
 
 Public class **[BarcodeSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/barcodesearchoptions)** was updated with new properties.
 
-*   New property **bool [ReturnContent](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/barcodesearchoptions/properties/returncontent)** was added to specify if returned Barcode signatures objects should keep original or converted (if property **[ReturnContentType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/barcodesearchoptions/properties/returncontenttype)** was specified) Barcode image raw data. By default this value is set to false.
-*   New property **[ReturnContentType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/barcodesearchoptions/properties/returncontenttype)** of **[FileType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/filetype)** type was added to specify non default returned Barcode image content type. By default this value is set to null that means original Barcode image format will be returned.
+*   New property **bool [ReturnContent](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/barcodesearchoptions/returncontent)** was added to specify if returned Barcode signatures objects should keep original or converted (if property **[ReturnContentType](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/barcodesearchoptions/returncontenttype)** was specified) Barcode image raw data. By default this value is set to false.
+*   New property **[ReturnContentType](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/barcodesearchoptions/returncontenttype)** of **[FileType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/filetype)** type was added to specify non default returned Barcode image content type. By default this value is set to null that means original Barcode image format will be returned.
 
 **New properties of BarcodeSearchOptions**
 
@@ -294,12 +294,12 @@ using (Signature signature = new Signature(filePath))
 }
 ```
 
-#### Public class [BarcodeSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/barcodesignoptions) was updated with new properties for getting Barcode image content.
+#### Public class [BarcodeSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/barcodesignoptions) was updated with new properties for getting Barcode image content.
 
-Public class **[BarcodeSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/barcodesignoptions)** was updated with new properties.
+Public class **[BarcodeSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/barcodesignoptions)** was updated with new properties.
 
-*   New property **bool [ReturnContent](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/barcodesignoptions/properties/returncontent)** was added to specify if returned Barcode signatures objects in **[SignResult](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult)** should keep original or converted (if property **[ReturnContentType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/barcodesignoptions/properties/returncontenttype)** was specified) Barcode image raw data. By default this value is set to false.
-*   New property **[ReturnContentType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/barcodesignoptions/properties/returncontenttype)** of **[FileType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/filetype)** type was added to specify non default returned Barcode image content type. By default this value is set to null that means original Barcode image format will be returned.
+*   New property **bool [ReturnContent](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/barcodesignoptions/returncontent)** was added to specify if returned Barcode signatures objects in **[SignResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult)** should keep original or converted (if property **[ReturnContentType](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/barcodesignoptions/returncontenttype)** was specified) Barcode image raw data. By default this value is set to false.
+*   New property **[ReturnContentType](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/barcodesignoptions/returncontenttype)** of **[FileType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/filetype)** type was added to specify non default returned Barcode image content type. By default this value is set to null that means original Barcode image format will be returned.
 
 **New properties of BarcodeSignOptions**
 
@@ -401,8 +401,8 @@ using (Signature signature = new Signature(filePath))
 
 Public class **[QrCodeSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesearchoptions)** was updated with new properties.
 
-*   New property **bool** [ReturnContent](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodesearchoptions/properties/returncontent) was added to specify if returned QrCode signatures objects should keep original or converted (if property [ReturnContentType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodesearchoptions/properties/returncontenttype) was specified)  QrCode image raw data. By default this value is set to false.
-*   New property [ReturnContentType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodesearchoptions/properties/returncontenttype) of [FileType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/filetype) type was added to specify non default returned QrCode image content type. By default this value is set to null that means original QrCode image format will be returned.
+*   New property **bool** [ReturnContent](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesearchoptions/returncontent) was added to specify if returned QrCode signatures objects should keep original or converted (if property [ReturnContentType](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesearchoptions/returncontenttype) was specified)  QrCode image raw data. By default this value is set to false.
+*   New property [ReturnContentType](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesearchoptions/returncontenttype) of [FileType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/filetype) type was added to specify non default returned QrCode image content type. By default this value is set to null that means original QrCode image format will be returned.
 
 **New properties of QrCodeSearchOptions**
 
@@ -465,12 +465,12 @@ using (Signature signature = new Signature(filePath))
 }
 ```
 
-#### Public class [QrCodeSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodesignoptions) was updated with new properties for getting Barcode image content.
+#### Public class [QrCodeSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesignoptions) was updated with new properties for getting Barcode image content.
 
-Public class [QrCodeSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodesignoptions) was updated with new properties.
+Public class [QrCodeSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesignoptions) was updated with new properties.
 
-*   New property bool [ReturnContent](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodesignoptions/properties/returncontent) was added to specify if returned QrCode signatures objects in [SignResult](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult) should keep original or converted (if property [ReturnContentType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodesignoptions/properties/returncontenttype) was specified) QrCode image raw data. By default this value is set to false.
-*   New property [ReturnContentType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodesignoptions/properties/returncontenttype) of [FileType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/filetype) type was added to specify non default returned QrCode image content type. By default this value is set to null that means original QrCode image format will be returned.
+*   New property bool [ReturnContent](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesignoptions/returncontent) was added to specify if returned QrCode signatures objects in [SignResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult) should keep original or converted (if property [ReturnContentType](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesignoptions/returncontenttype) was specified) QrCode image raw data. By default this value is set to false.
+*   New property [ReturnContentType](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesignoptions/returncontenttype) of [FileType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/filetype) type was added to specify non default returned QrCode image content type. By default this value is set to null that means original QrCode image format will be returned.
 
 **New properties of QrCodeSignOptions**
 
@@ -568,10 +568,10 @@ using (Signature signature = new Signature("filePath"))
 ```
 
 
-Public class [QrCodeSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodesignoptions) was updated with changes as follow
+Public class [QrCodeSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesignoptions) was updated with changes as follow
 
-*   New property **bool [ReturnContent](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/barcodesignoptions/properties/returncontent)** was added to specify if returned QrCode signatures objects in **[SignResult](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult)** should keep original or converted (if property [ReturnContentType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodesignoptions/properties/returncontenttype) was specified) QrCode image raw data. By default this value is set to false.
-*   New property **[ReturnContentType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/qrcodesignoptions/properties/returncontenttype)** of [FileType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/filetype) type was added to specify non default returned QrCode image content type. By default this value is set to null that means original QrCode image format will be returned.
+*   New property **bool [ReturnContent](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/barcodesignoptions/returncontent)** was added to specify if returned QrCode signatures objects in **[SignResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult)** should keep original or converted (if property [ReturnContentType](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesignoptions/returncontenttype) was specified) QrCode image raw data. By default this value is set to false.
+*   New property **[ReturnContentType](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesignoptions/returncontenttype)** of [FileType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/filetype) type was added to specify non default returned QrCode image content type. By default this value is set to null that means original QrCode image format will be returned.
 
 ```csharp
     /// <summary>

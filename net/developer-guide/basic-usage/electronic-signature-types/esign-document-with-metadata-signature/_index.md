@@ -32,23 +32,23 @@ GroupDocs.Signature allows to store in metadata and extract back any user define
 
 ## How to eSign document with Metadata Signature
 
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [MetadataSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/metadatasignoptions) class to specify different options for Metadata Signature. The electronic signature as metadata allows to keep any value type or user defined objects and obtain these data back over search methods.  
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [MetadataSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasignoptions) class to specify different options for Metadata Signature. The electronic signature as metadata allows to keep any value type or user defined objects and obtain these data back over search methods.  
 Different document formats implement metadata in its own way. Office document formats like Spreadsheet, Word Processing and Presentation provides metadata properties as *"name-value"* pairs. PDF documents provide additional attribute prefix. Image documents implement metadata properties as a list of *"identifier-value"* pairs. Each document format requires unique metadata name or identifier (for images).
 
-The [MetadataSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/metadatasignoptions) class contains list of MetadataSignature objects to put or update in the document.  
+The [MetadataSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasignoptions) class contains list of MetadataSignature objects to put or update in the document.  
 Document metadata could keep big amount of data that provides an ability to keep serialized custom objects with additional encryption in there.
 
 Here are the steps to add Metadata signatures into document with GroupDocs.Signature:
 
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
-* Instantiate the [MetadataSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/metadatasignoptions) object according to your requirements.
-* Instantiate one or several Metadata Signature ([MetadataSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/metadatasignature)) objects using class for each document type.
-* for Spreadsheet document use [SpreadsheetMetadataSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/spreadsheetmetadatasignature) class;
-* for Word Processing use [WordProcessingMetadataSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/wordprocessingmetadatasignature) class;
-* for Presentation use [PresentationMetadataSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/presentationmetadatasignature) class;
-* for PDF use [PdfMetadataSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/pdfmetadatasignature) class;
-* for Images use [ImageMetadataSignature](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/imagemetadatasignature) class.
-* Add initialized Metadata signatures objects to [Signatures](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/metadatasignoptions/properties/signatures) property of [MetadataSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/metadatasignoptions);
-* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [MetadataSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/metadatasignoptions) to it.
+* Instantiate the [MetadataSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasignoptions) object according to your requirements.
+* Instantiate one or several Metadata Signature ([MetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/metadatasignature)) objects using class for each document type.
+* for Spreadsheet document use [SpreadsheetMetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/spreadsheetmetadatasignature) class;
+* for Word Processing use [WordProcessingMetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/wordprocessingmetadatasignature) class;
+* for Presentation use [PresentationMetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/presentationmetadatasignature) class;
+* for PDF use [PdfMetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/pdfmetadatasignature) class;
+* for Images use [ImageMetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/imagemetadatasignature) class.
+* Add initialized Metadata signatures objects to [Signatures](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasignoptions/signatures) property of [MetadataSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasignoptions);
+* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [MetadataSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasignoptions) to it.
 
 Please refer to the specific examples provided below:

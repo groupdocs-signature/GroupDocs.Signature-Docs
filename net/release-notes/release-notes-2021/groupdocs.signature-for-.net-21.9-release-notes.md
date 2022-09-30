@@ -33,9 +33,9 @@ Full List of Issues Covering all Changes in this Release
 
 ## Public API and Backward Incompatible Changes
 
-#### Public class [SignatureSettings](https://apireference.groupdocs.com/signature/net/groupdocs.signature/signaturesettings) was updated with new properties that allow to skip document saving when modification methods had no effect
+#### Public class [SignatureSettings](https://reference.groupdocs.com/signature/net/groupdocs.signature/signaturesettings) was updated with new properties that allow to skip document saving when modification methods had no effect
 
-Public class [SignatureSettings](https://apireference.groupdocs.com/signature/net/groupdocs.signature/SignatureSettings) was updated with properties
+Public class [SignatureSettings](https://reference.groupdocs.com/signature/net/groupdocs.signature/signaturesettings) was updated with properties
 
 * property bool [SaveDocumentOnEmptyUpdate] that allows to specify if document should not be saved when Update method had no affected signatures. By default this value equals to true.
 * property bool [SaveDocumentOnEmptyDelete] that allows to specify if document should not be saved when Delete method had no affected signatures. By default this value equals to true.
@@ -62,7 +62,7 @@ Public class [SignatureSettings](https://apireference.groupdocs.com/signature/ne
    }
 ```
 
-#### New public enumeration [CryptoCurrencyType](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/cryptocurrencytype) was added to specify various cryptocurrency types
+#### New public enumeration [CryptoCurrencyType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/cryptocurrencytype) was added to specify various cryptocurrency types
 
 This enumeration keeps supported cryptocurrency types.
 
@@ -99,7 +99,7 @@ This enumeration keeps supported cryptocurrency types.
 
 This class contains following properties
 
-* CryptoCurrencyType Type - the type of cryptocurency transfer [CryptoCurrencyType](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/cryptocurrencytype)
+* CryptoCurrencyType Type - the type of cryptocurency transfer [CryptoCurrencyType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/cryptocurrencytype)
 * decimal Amount is the value as amount of transfer.
 * string Address is the address of the transfer.
 * string Message to keep transfer message.

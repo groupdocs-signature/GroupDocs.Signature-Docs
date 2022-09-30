@@ -44,9 +44,9 @@ Following topics from Developer Guide were added
 
 ## Public API and Backward Incompatible Changes
 
-### New public enumeration type [PdfDigitalSignatureType](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/pdfdigitalsignaturetype) was added.
+### New public enumeration type [PdfDigitalSignatureType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/pdfdigitalsignaturetype) was added.
 
-New public enumeration type **[PdfDigitalSignatureType](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/pdfdigitalsignaturetype)** was added. This type describes possible values of PDF digital signature types.
+New public enumeration type **[PdfDigitalSignatureType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/pdfdigitalsignaturetype)** was added. This type describes possible values of PDF digital signature types.
 
 * At this moment enumeration contains two options Signature and Certificate. In first case a PDF document is signed digitally in second one it is digitally certified.
 
@@ -70,9 +70,9 @@ New public enumeration type **[PdfDigitalSignatureType](https://apireference.gr
  }
 ```
 
-### New public struct [TimeStamp](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/timestamp) was added.
+### New public struct [TimeStamp](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/timestamp) was added.
 
-New public struct **[TimeStamp](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/timestamp)** was added. This struct could be used for getting time stamp from third-party site to PDF digital signature.
+New public struct **[TimeStamp](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/timestamp)** was added. This struct could be used for getting time stamp from third-party site to PDF digital signature.
 
 *   At this moment enumeration struct contains Url, User and Password properties.
 
@@ -109,9 +109,9 @@ public struct TimeStamp
 }
 ```
 
-### Public class [PdfDigitalSignature](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/pdfdigitalsignature) was updated with new property.
+### Public class [PdfDigitalSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/pdfdigitalsignature) was updated with new property.
 
-Public class **[PdfDigitalSignature](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/pdfdigitalsignature)** was updated with new property for PDF document specific signatures. Supported only for digital signatures.
+Public class **[PdfDigitalSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/pdfdigitalsignature)** was updated with new property for PDF document specific signatures. Supported only for digital signatures.
 
 * new property Type of type PdfDigitalSignatureType was added to specify PDF document specific type of digital signatures.
 * new property TimeStamp of type TimeStamp was added to add possibility for getting time stamp from third-party site to PDF digital signatures.
@@ -283,9 +283,9 @@ New public class type **[ProcessLog](https://reference.groupdocs.com/signature/
     }
 ```
 
-### Public interface [IDocumentInfo](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/idocumentinfo) was extended with new property
+### Public interface [IDocumentInfo](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/idocumentinfo) was extended with new property
 
-Public interface **[IDocumentInfo](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/idocumentinfo)** was extended with new properties. 
+Public interface **[IDocumentInfo](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/idocumentinfo)** was extended with new properties. 
 
 * ProcessLogs property as IList of ProcessLog objects to keep the list of document process history log records.
 
@@ -304,9 +304,9 @@ Public interface **[IDocumentInfo](https://apireference.groupdocs.com/signature
 	}
 ```
 
-### Public class [DocumentInfo](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/documentinfo) was extended with new property.
+### Public class [DocumentInfo](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/documentinfo) was extended with new property.
 
-Public interface **[DocumentInfo](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain/documentinfo)** was extended with new property **ProcessLogs** to keep the list of document process history log records.
+Public interface **[DocumentInfo](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/documentinfo)** was extended with new property **ProcessLogs** to keep the list of document process history log records.
 
 **New property ProcessLogs of DocumentInfo class**
 

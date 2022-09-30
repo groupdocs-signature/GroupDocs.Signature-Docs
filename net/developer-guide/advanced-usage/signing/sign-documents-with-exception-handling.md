@@ -8,11 +8,11 @@ keywords:
 productName: GroupDocs.Signature for .NET
 hideChildren: False
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides different error messages due to validation issues, missing required data, files etc. For exception class [GroupDocsSignatureException](https://apireference.groupdocs.com/net/signature/groupdocs.signature/groupdocssignatureexception) is being used.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides different error messages due to validation issues, missing required data, files etc. For exception class [GroupDocsSignatureException](https://reference.groupdocs.com/signature/net/groupdocs.signature/groupdocssignatureexception) is being used.
 
 Here are the steps to handle exceptions from GroupDocs.Signature:
 
-* Compose try-catch block above [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method with catching [GroupDocsSignatureException](https://apireference.groupdocs.com/net/signature/groupdocs.signature/groupdocssignatureexception) type error.  
+* Compose try-catch block above [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method with catching [GroupDocsSignatureException](https://reference.groupdocs.com/signature/net/groupdocs.signature/groupdocssignatureexception) type error.  
 
 This example shows how to handle GroupDocs.Signature exceptions.
 

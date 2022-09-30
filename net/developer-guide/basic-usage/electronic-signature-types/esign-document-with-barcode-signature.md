@@ -36,15 +36,15 @@ Barcodes allow to store product related data like manufacturing and expiry dat
 
 ## How to eSign document with Barcode signature
 
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) supports wide range or Barcode types that can be used to create electronic signature within the documents. Please refer to [BarcodeTypes](https://apireference.groupdocs.com/net/signature/groupdocs.signature.domain/barcodetypes/fields/index) description to get the full list of supported barcodes.  
-To specify different options for Barcode signature GroupDocs.Signature for .NET provides [BarcodeSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/barcodesignoptions) class. The main fields are:
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) supports wide range or Barcode types that can be used to create electronic signature within the documents. Please refer to [BarcodeTypes](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/barcodetypes/#fields) description to get the full list of supported barcodes.  
+To specify different options for Barcode signature GroupDocs.Signature for .NET provides [BarcodeSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/barcodesignoptions) class. The main fields are:
 
-* [EncodeType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/barcodesignoptions/properties/encodetype) - specifies Barcode type (AustralianPost, Codabar, EAN13, OPC, etc.);
-* [Text](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/textsignoptions/properties/text) - specifies Barcode text.
+* [EncodeType](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/barcodesignoptions/encodetype) - specifies Barcode type (AustralianPost, Codabar, EAN13, OPC, etc.);
+* [Text](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions/text) - specifies Barcode text.
 Here are the steps to eSign document with Barcode signature using GroupDocs.Signature for .NET API:
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
-* Instantiate the [BarcodeSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/barcodesignoptions) object according to your requirements and specify Barcode type by setting [EncodeType](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/barcodesignoptions/properties/encodetype) from predefined supported types. Set [Text](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/textsignoptions/properties/text) property value.
-* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [BarcodeSignOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/barcodesignoptions) to it.
+* Instantiate the [BarcodeSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/barcodesignoptions) object according to your requirements and specify Barcode type by setting [EncodeType](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/barcodesignoptions/encodetype) from predefined supported types. Set [Text](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions/text) property value.
+* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [BarcodeSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/barcodesignoptions) to it.
 
 This example shows how to sign PDF document with Barcode signature.
 

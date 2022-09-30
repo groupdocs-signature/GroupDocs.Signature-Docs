@@ -25,12 +25,12 @@ structuredData:
         - name: Process list of found signatures
           text: Loop through list of found form-fields.
 ---
-To search for Form Fields e-signatures inside document you should pass instance of [FormFieldSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/formfieldsearchoptions) class to a Search method of [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net).  
+To search for Form Fields e-signatures inside document you should pass instance of [FormFieldSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/formfieldsearchoptions) class to a Search method of [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net).  
 Here are the guide for searching Form Field e-signatures:
 
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
-* Instantiate the [FormFieldSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/formfieldsearchoptions) object according to your requirements and specify additional search options (if needed);
-* Call [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [FormFieldSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/formfieldsearchoptions) to it.
+* Instantiate the [FormFieldSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/formfieldsearchoptions) object according to your requirements and specify additional search options (if needed);
+* Call [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [FormFieldSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/formfieldsearchoptions) to it.
 
 This example shows how to search for Form Field signatures in the document.
 

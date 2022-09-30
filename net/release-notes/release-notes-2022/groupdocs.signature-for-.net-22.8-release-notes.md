@@ -41,7 +41,7 @@ The following topics from Developer Guide were changed
 
 ## Public API and Backward Incompatible Changes
 
-#### Public enumeration [SymmetricAlgorithmType](https://apireference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/symmetricalgorithmtype) was modified with new element AESNew type
+#### Public enumeration [SymmetricAlgorithmType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/symmetricalgorithmtype) was modified with new element AESNew type
 
 Represents symmetric encryption algorithm type with new AESNew type.
 
@@ -59,7 +59,7 @@ Represents symmetric encryption algorithm type with new AESNew type.
     }
 ```
 
-#### Public class  [MetadataSignOptions](https://apireference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasignoptions) was updated with the new method to add the existing MetadataSignature object
+#### Public class  [MetadataSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasignoptions) was updated with the new method to add the existing MetadataSignature object
 
 Prototype is
 public MetadataSignOptions Add(MetadataSignature metadataSignature);
