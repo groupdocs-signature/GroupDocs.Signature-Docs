@@ -78,7 +78,7 @@ Class [WiFi] contains following properties to get or set.
 
 The following example demonstrates how to create WiFi QR Code standard entry.
 
-**Generate signature preview**
+**Create QR Code signature with WiFi**
 
 ```csharp
 public static void Run()
@@ -97,7 +97,7 @@ public static void Run()
         QrCodeSignOptions options = new QrCodeSignOptions
         {
             EncodeType = QrCodeTypes.QR,
-            // setup Data property to MeCard instance
+            // setup Data property to SMS instance
             Data = wifi,
             // set right bottom corner
             HorizontalAlignment = HorizontalAlignment.Left,

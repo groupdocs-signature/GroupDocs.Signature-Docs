@@ -362,6 +362,37 @@ using (Signature signature = new Signature("sample.png"))
 }
 ```
 
+## Sign PDF with SMS data information in the QR-Code
+
+This example shows how to esign PDF with QR Code SMS data on the PDF page. This could be used for automatic document verification or subscription. 
+
+```csharp
+using (Signature signature = new Signature("sample.pdf"))
+{
+    // create SMS object
+    SMS sms = new SMS()
+    {
+        Number = "0800 048 0408",
+        Message = "Document approval automatic SMS message"
+    };
+    // create options
+    QrCodeSignOptions options = new QrCodeSignOptions
+    {
+        EncodeType = QrCodeTypes.QR,
+        // setup Data property to Address instance
+        Data = sms,
+        // set right bottom corner
+        HorizontalAlignment = HorizontalAlignment.Right,
+        VerticalAlignment = VerticalAlignment.Bottom,
+        Width = 100,
+        Height = 100,
+        Margin = new Padding(10)
+    };
+    // sign document to file
+    signature.Sign("output.pdf", options);
+}
+```
+
 ## More resources
 
 ### GitHub Examples
