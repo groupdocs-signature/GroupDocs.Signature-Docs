@@ -9,7 +9,7 @@ productName: GroupDocs.Signature for .NET
 structuredData:
     showOrganization: True
     application:    
-        name: Sign documents with QR code standard entities like WiFi, Contact, Address, Event, SEPA or MeCard using C#    
+        name: Sign documents with QR code standard entities like WiFi, Contact, Address, Event, SEPA, MeCard, and SMS using C#    
         description: Create a QR code with standard content like contact details, address, WiFi network, or transaction details C# language by GroupDocs.Signature for .NET APIs
         productCode: signature
         productPlatform: net 
@@ -36,6 +36,8 @@ structuredData:
 * [EPC](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/epc) implements standard of the European Payments Council guidelines define the content of a QR code that can be used to initiate [SEPA](https://en.wikipedia.org/wiki/SEPA_credit_transfer) credit transfer. More details could be found [here](https://en.wikipedia.org/wiki/EPC_QR_code).
 * [Event](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/event) entry implements event standard.
 * [CryptoCurrencyTransfer](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/cryptocurrencytransfer/) entry implements event standard.
+* [WiFi](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/wifi) entry implements WiFI settings standard.
+* [SMS](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/sms) entry implements sms properties.
 
 Here are the steps to embed standard entry into QR-code with GroupDocs.Signature:  
 

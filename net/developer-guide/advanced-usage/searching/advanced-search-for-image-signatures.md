@@ -2,7 +2,7 @@
 id: advanced-search-for-image-signatures
 url: signature/net/advanced-search-for-image-signatures
 title: Advanced search for Image signatures
-weight: 5
+weight: 6
 description: " This article explains how to make advanced search for Image electronic signatures with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
