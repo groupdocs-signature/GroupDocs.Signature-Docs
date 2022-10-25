@@ -4,13 +4,13 @@ url: signature/java/installation
 title: Development Environment Installation and Configuration
 weight: 4
 description: "This guide explains how to install GroupDocs.Signature for Java to your environment"
-keywords: 
+keywords:
 productName: GroupDocs.Signature for Java
 hideChildren: False
 ---
 ## Installation from GroupDocs Repository using Maven
 
-GroupDocs hosts all Java APIs on [GroupDocs Repository](https://repository.groupdocs.com/). You can easily use [GroupDocs.Signature for Java](https://repository.groupdocs.com/webapp/#/artifacts/browse/tree/General/repo/com/groupdocs/groupdocs-signature) API directly in your Maven projects with simple configurations.
+GroupDocs hosts all Java APIs on [GroupDocs Repository](https://releases.groupdocs.com/java/repo/). You can easily use [GroupDocs.Signature for Java](https://releases.groupdocs.com/java/repo/com/groupdocs/groupdocs-signature/) API directly in your Maven projects with simple configurations.
 
 ### Specify GroupDocs Repository Configuration
 
@@ -21,7 +21,7 @@ First, you need to specify GroupDocs repository configuration/location in your M
 	<repository>
 		<id>GroupDocs Artifact Repository</id>
         	<name>GroupDocs Artifact Repository</name>
-        	<url>https://repository.groupdocs.com/repo/</url>
+        	<url>https://releases.groupdocs.com/java/repo/</url>
 	</repository>
 </repositories>
 ```
@@ -35,7 +35,7 @@ Then define GroupDocs.Signature for Java API dependency in your `pom.xml` as 
     <dependency>
         <groupId>com.groupdocs</groupId>
         <artifactId>groupdocs-signature</artifactId>
-        <version>22.2.1</version> 
+        <version>22.2.1</version>
     </dependency>
 </dependencies>
 ```
@@ -44,7 +44,7 @@ After performing above-mentioned steps, GroupDocs.Signature for Java dependency 
 
 ## Install from official GroupDocs website
 
-You can follow the steps below to reference GroupDocs.Signature for Java downloaded from official website [Downloads section](https://downloads.groupdocs.com/signature/java):
+You can follow the steps below to reference GroupDocs.Signature for Java downloaded from official website [Downloads section](https://releases.groupdocs.com/signature/java/):
 
 1.  Unpack zip archive .
 2.  Switch to **lib** folder.
