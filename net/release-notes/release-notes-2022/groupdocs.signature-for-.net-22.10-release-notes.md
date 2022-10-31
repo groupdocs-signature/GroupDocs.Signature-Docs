@@ -12,12 +12,12 @@ hideChildren: False
 
 ## Major Features
 
-The main features of this release are enhancements with the Document Info method and new Barcode type. The Document Info method was improved to retrieve the list of document Metadata signatures with the optional ability to include standard document metadata information as well. The new composite Barcode type allows to generate GS1Composite barcode type. For future releases we will provide additional settings to customize the upper and down barcode type with another options. Besides that there are fwe important fixes with Open Document processing files. Below the list of most notable changes in release of GroupDocs.Signature for .NET 21.10:
+The main features of this release are enhancements to the Document Info method and the new Barcode type. The Document Info method was improved to retrieve the list of document Metadata signatures with the optional ability to include standard document metadata information as well. The new composite Barcode type allows to generate the GS1Composite barcode type. For future releases, we will provide additional settings to customize the upper and down barcode type with other options. Besides that, there are few important fixes with Open Document processing files. Below the list of most notable changes in release of GroupDocs.Signature for .NET 21.10:
 
-* Document information data was upgrated with the Metadata sigantures that could include optionally standard document meta information
+* Document information data was upgraded with the Metadata signatures that could include optionally standard document meta information
 * New composite barcode type GS1Composite Barcode was implemented
 * Improved license encryption.
-* Implemented additional gloabl settings options to include or exclude standard document metadata information.
+* Implemented additional global Signature settings flag to include or exclude standard document metadata information.
 * Fixed issues with modifying the digitally signed Open Office documents.
 * The referenced libraries were updated to the latest versions.
 
@@ -33,7 +33,7 @@ Full List of Issues Covering all Changes in this Release
 
 ## Public Developer Guide examples changes
 
-The following topics from Developer Guide were changed
+The following topics from the Developer Guide were changed
 
 [eSign PDF with QR Code entries]({{< ref "signature/net/developer-guide/advanced-usage/common/obtain-document-form-fields-and-signatures-information.md" >}})
 
@@ -60,7 +60,7 @@ public interface IDocumentInfo
 
 #### Public class [SignatureSettings](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/sms) was updated with the new boolean flag to optional include standard metadata signatures into the document collection of metadata signatures
 
-Class [SignatureSettings] contains following property to get or set.
+Class [SignatureSettings] contains the following property to get or set.
 
 ```csharp
 /// <summary>
