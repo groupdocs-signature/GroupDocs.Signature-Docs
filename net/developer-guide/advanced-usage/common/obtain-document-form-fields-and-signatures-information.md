@@ -34,6 +34,7 @@ structuredData:
 * list of [BarcodeSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/barcodesignature) previously added to document over [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method or updated by [Update](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/update) method;
 * list of [QrCodeSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodesignature) previously added to document over [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method or updated by [Update](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/update) method;
 * list of [FormFieldSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/formfieldsignature/) previously added to document over [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method or updated by [Update](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/update) method;
+* list of [MetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/metadatasignature/) previously added to document over [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method or updated by [Update](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/update) method;
 
 ## Analyze document form fields and signatures information
 
@@ -93,6 +94,12 @@ using (Signature signature = new Signature("sampleSigned.pdf"))
     foreach (FormFieldSignature formFieldSignature in documentInfo.FormFields)
     {
         Console.WriteLine($" - #{formFieldSignature.SignatureId} Type {formFieldSignature.Type}: Name: {formFieldSignature.Name} Value: {formFieldSignature.Value}");
+    }
+    // display document Metadata signatures information
+    Console.WriteLine($"Document Metadata signatures : {documentInfo.MetadataSignatures.Count}");
+    foreach (MetadataSignature metadataSignature in documentInfo.MetadataSignatures)
+    {
+        Console.WriteLine($" - #{metadataSignature.Name} = {metadataSignature.Value}");
     }
 }
 ```
