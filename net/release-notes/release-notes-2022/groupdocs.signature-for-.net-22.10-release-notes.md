@@ -77,34 +77,52 @@ public class SignatureSettings
 }
 ```
 
-The following example demonstrates how to create SMS QR Code standard entry.
+The following example demonstrates how to obtain all document metadata signatures.
 
 **Create QR Code signature with SMS**
 
 ```csharp
 public static void Run()
 {
-    using (Signature signature = new Signature(filePath))
+    var settings = new SignatureSettings()
     {
-        // create SMS object
-        SMS sms = new SMS()
+        IncludeStandardMetadataSignatures = true
+    };
+    using (Signature signature = new Signature("signedContract.docx", settings))
+    {
+        IDocumentInfo documentInfo = signature.GetDocumentInfo();
+        Console.WriteLine($"Document properties {Path.GetFileName(filePath)}:");
+        Console.WriteLine($" - format : {documentInfo.FileType.FileFormat}");
+        Console.WriteLine($" - extension : {documentInfo.FileType.Extension}");
+        Console.WriteLine($" - size : {documentInfo.Size}");
+        Console.WriteLine($" - page count : {documentInfo.PageCount}");
+        foreach (PageInfo pageInfo in documentInfo.Pages)
         {
-            Number = "0800 048 0408",
-            Message = "Document approval automatic SMS message"
-        };
-        // create options
-        QrCodeSignOptions options = new QrCodeSignOptions
+            Console.WriteLine($" - page-{pageInfo.PageNumber} Width {pageInfo.Width}, Height {pageInfo.Height}");
+        }
+        
+        // display document Metadata signatures information
+        Console.WriteLine($"Document Metadata signatures : {documentInfo.MetadataSignatures.Count}");
+        foreach (MetadataSignature metadataSignature in documentInfo.MetadataSignatures)
         {
-            EncodeType = QrCodeTypes.QR,
-            // setup Data property to SMS instance
-            Data = sms,
-            // set right bottom corner
-            HorizontalAlignment = HorizontalAlignment.Left,
-            VerticalAlignment = VerticalAlignment.Center,
-            Width = 100,
-            Height = 100,
-            Margin = new Padding(10)
-        };
+            Console.WriteLine($" - #{metadataSignature.Name} = {metadataSignature.Value}");
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         // sign document to file
         signature.Sign(outputFilePath, options);

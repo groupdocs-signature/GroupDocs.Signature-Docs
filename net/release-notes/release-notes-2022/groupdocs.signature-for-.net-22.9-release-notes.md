@@ -81,7 +81,7 @@ The following example demonstrates how to create SMS QR Code standard entry.
 ```csharp
 public static void Run()
 {
-    using (Signature signature = new Signature(filePath))
+    using (Signature signature = new Signature("sample.pdf"))
     {
         // create SMS object
         SMS sms = new SMS()
