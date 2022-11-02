@@ -84,10 +84,12 @@ The following example demonstrates how to obtain all document metadata signature
 ```csharp
 public static void Run()
 {
+    // specify custom settings to include standard document metadata signatures (Author, Owner, Creation date, etc)
     var settings = new SignatureSettings()
     {
         IncludeStandardMetadataSignatures = true
     };
+    // create the Signature instance with the settings
     using (Signature signature = new Signature("signedContract.docx", settings))
     {
         IDocumentInfo documentInfo = signature.GetDocumentInfo();
@@ -109,24 +111,4 @@ public static void Run()
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // sign document to file
-        signature.Sign(outputFilePath, options);
-        Console.WriteLine($"\nSource document signed successfully with {signResult.Succeeded.Count} signature(s).\nFile saved at {outputFilePath}.");
-    }
-} 
 ```
