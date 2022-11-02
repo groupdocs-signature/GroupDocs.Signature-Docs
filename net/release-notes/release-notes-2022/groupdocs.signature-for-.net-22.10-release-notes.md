@@ -79,7 +79,7 @@ public class SignatureSettings
 
 The following example demonstrates how to obtain all document metadata signatures.
 
-**Create QR Code signature with SMS**
+**Obtain the document information with all metadata signatures**
 
 ```csharp
 public static void Run()
