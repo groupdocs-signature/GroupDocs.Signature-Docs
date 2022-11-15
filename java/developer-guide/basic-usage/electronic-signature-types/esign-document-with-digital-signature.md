@@ -36,18 +36,18 @@ Digital signature as certificate file of PFX format allows to sign document afte
 
 ## How to eSign document with Digital signature   
 
-GroupDocs.Signature supports creation of digital signature based on existing PFX certificate. To specify different settings library provides [DigitalSignOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/DigitalSignOptions) class that allows to adjust digital signature properties in the document:
+GroupDocs.Signature supports creation of digital signature based on existing PFX certificate. To specify different settings library provides [DigitalSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/DigitalSignOptions) class that allows to adjust digital signature properties in the document:
 
-*   Certificate source from [getCertificateFilePath](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/DigitalSignOptions#getCertificateFilePath()) or [getCertificateStream](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/DigitalSignOptions#getCertificateStream());
-*   Certificate [getPassword](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/DigitalSignOptions#getPassword());
-*   [getContact](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/DigitalSignOptions#getContact()), [getReason](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/DigitalSignOptions#getReason()) and [getLocation](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/DigitalSignOptions#getLocation()) properties to set additional description;
-*   [setVisible](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/DigitalSignOptions#setVisible(boolean)) property to specify whether signature should be visible on document page or not;
+*   Certificate source from [getCertificateFilePath](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/DigitalSignOptions#getCertificateFilePath()) or [getCertificateStream](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/DigitalSignOptions#getCertificateStream());
+*   Certificate [getPassword](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/DigitalSignOptions#getPassword());
+*   [getContact](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/DigitalSignOptions#getContact()), [getReason](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/DigitalSignOptions#getReason()) and [getLocation](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/DigitalSignOptions#getLocation()) properties to set additional description;
+*   [setVisible](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/DigitalSignOptions#setVisible(boolean)) property to specify whether signature should be visible on document page or not;
 
 Here are the steps to add Digital signature into document with GroupDocs.Signature:
 
-*   Create new instance of  [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.    
-*   Instantiate the [DigitalSignOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/DigitalSignOptions) object with required certificate and its password.    
-*   Call [sign](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of  [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [DigitalSignOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/DigitalSignOptions) to it.   
+*   Create new instance of  [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.    
+*   Instantiate the [DigitalSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/DigitalSignOptions) object with required certificate and its password.    
+*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of  [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [DigitalSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/DigitalSignOptions) to it.   
     
 
 This example shows how to sign PDF document with digital e-signature.

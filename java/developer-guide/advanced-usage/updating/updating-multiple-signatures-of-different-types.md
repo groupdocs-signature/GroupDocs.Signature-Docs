@@ -8,9 +8,9 @@ keywords:
 productName: GroupDocs.Signature for Java
 hideChildren: False
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides different classes of signatures to manipulate them by changing its properties over [update](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#update(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature)) method of [Signature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) class. This method returns [UpdateResult](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain/UpdateResult) object to analyze if signatures were successfully processed.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides different classes of signatures to manipulate them by changing its properties over [update](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#update(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature)) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) class. This method returns [UpdateResult](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain/UpdateResult) object to analyze if signatures were successfully processed.
 
-Please be aware that [update](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#update(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature)) method modifies the same document that was passed to constructor of [Signature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) class. The [UpdateResult](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain/UpdateResult)contains list of successfully updated signatures and ones that failed. The signature could be failed to update due to several reasons:
+Please be aware that [update](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#update(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature)) method modifies the same document that was passed to constructor of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) class. The [UpdateResult](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain/UpdateResult)contains list of successfully updated signatures and ones that failed. The signature could be failed to update due to several reasons:
 
 *   if signature object was initialized with constructor by incorrect signature identifier;
 *   if signature object was not found;
@@ -19,16 +19,16 @@ Please be aware that [update](https://apireference.groupdocs.com/java/signature
 
 Here are the steps to update multiple signature in the document with GroupDocs.Signature:
 
-*   Create new instance of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter;    
+*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter;    
 *   Instantiate one or several Search options with desired properties;    
-*   Call [search](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method and pass created list of Search Options to obtain list of [BaseSignatures](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/BaseSignature);      
-*   Select from list [BaseSignatures](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/BaseSignature) object(s) that should be updated;      
-*   Call [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) object [update](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#update(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature)) method and pass one or several signatures to it.    
-*   Analyze [UpdateResult](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain/UpdateResult) result to check whether signatures were updated or not.
+*   Call [search](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method and pass created list of Search Options to obtain list of [BaseSignatures](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/BaseSignature);      
+*   Select from list [BaseSignatures](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/BaseSignature) object(s) that should be updated;      
+*   Call [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) object [update](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#update(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature)) method and pass one or several signatures to it.    
+*   Analyze [UpdateResult](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain/UpdateResult) result to check whether signatures were updated or not.
 
 ## Update multiple signatures of different types in the document
 
-This example shows how to update signature that was found using  [search](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method.
+This example shows how to update signature that was found using  [search](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method.
 
 ```java
 // initialize Signature instance

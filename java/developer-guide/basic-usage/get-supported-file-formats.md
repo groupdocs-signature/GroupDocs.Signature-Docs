@@ -25,8 +25,8 @@ structuredData:
 ---
 With [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) you can get the [list of file formats]({{< ref "signature/java/getting-started/supported-document-formats.md" >}}) that allow adding electronic signatures by following the below steps:
 
-*   Call static function [getSupportedFileTypes](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/FileType#getSupportedFileTypes()) of [FileType](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/FileType) class;
-*   Enumerate through the collection of [FileType](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/FileType) objects.
+*   Call static function [getSupportedFileTypes](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/FileType#getSupportedFileTypes()) of [FileType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/FileType) class;
+*   Enumerate through the collection of [FileType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/FileType) objects.
 
 The following code sample demonstrates how to get supported file formats list.
 

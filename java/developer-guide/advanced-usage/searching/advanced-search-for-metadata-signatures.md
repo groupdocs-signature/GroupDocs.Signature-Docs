@@ -29,11 +29,11 @@ structuredData:
 
 Here are the steps to search for Metadata signature and obtain required data type with GroupDocs.Signature:
 
-*   Create new instance of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
+*   Create new instance of [Signature](https://reference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
     
-*   Create objects of [MetadataSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/metadatasearchoptions) class  
+*   Create objects of [MetadataSearchOptions](https://reference.groupdocs.com/net/signature/groupdocs.signature.options/metadatasearchoptions) class  
     
-*   Call [Search](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/search/_1) method of [Signature](https://apireference.groupdocs.com/net/signature/groupdocs.signature/signature) class instance and pass [MetadataSearchOptions](https://apireference.groupdocs.com/net/signature/groupdocs.signature.options/metadatasearchoptions)  to it.
+*   Call [Search](https://reference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/search/_1) method of [Signature](https://reference.groupdocs.com/net/signature/groupdocs.signature/signature) class instance and pass [MetadataSearchOptions](https://reference.groupdocs.com/net/signature/groupdocs.signature.options/metadatasearchoptions)  to it.
     
 *   Call proper conversion method to obtain corresponding Metadata value to required data type.
 

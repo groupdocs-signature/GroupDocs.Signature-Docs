@@ -25,7 +25,7 @@ structuredData:
         - name: Sign source and obtain result 
           text: Invoke method Sign with passing created options and output file data. You can save signed file using file path or stream.
 ---
-When document is located on the local disk [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) enables you to work with document over the file [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class constructor. [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) instance will open file for reading only when any method of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) will be called.
+When document is located on the local disk [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) enables you to work with document over the file [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class constructor. [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) instance will open file for reading only when any method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) will be called.
 
 Following code snippet shows how to load document from local disk.
 

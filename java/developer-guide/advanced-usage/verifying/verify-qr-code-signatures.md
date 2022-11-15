@@ -27,17 +27,17 @@ structuredData:
         - name: Analyse verification result
           text: Check verification result for its state and verification details.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides different properties in [QrCodeVerifyOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.verify/QrCodeVerifyOptions) class to specify verification of QR-code signatures.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides different properties in [QrCodeVerifyOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.verify/QrCodeVerifyOptions) class to specify verification of QR-code signatures.
 
 Here are the steps to verify qr-code signature within the document with GroupDocs.Signature:
 
-*   Create new instance of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.    
-*   Instantiate the  [QrCodeVerifyOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.verify/QrCodeVerifyOptions)  object according to your requirements and specify verification options      
-*   Call [verify](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#verify(com.groupdocs.signature.options.verify.VerifyOptions)) method of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [QrCodeVerifyOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.verify/QrCodeVerifyOptions) to it.  
-*   Analyze [VerificationResult](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain/VerificationResult) result if needed.
+*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.    
+*   Instantiate the  [QrCodeVerifyOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.verify/QrCodeVerifyOptions)  object according to your requirements and specify verification options      
+*   Call [verify](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#verify(com.groupdocs.signature.options.verify.VerifyOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [QrCodeVerifyOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.verify/QrCodeVerifyOptions) to it.  
+*   Analyze [VerificationResult](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain/VerificationResult) result if needed.
 
   
-This example shows how to verify QR-code signature in the document. See [VerificationResult](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain/VerificationResult)  
+This example shows how to verify QR-code signature in the document. See [VerificationResult](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain/VerificationResult)  
 
 ```java
 Signature signature = new Signature("sample.pdf");

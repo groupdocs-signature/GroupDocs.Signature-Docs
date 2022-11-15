@@ -27,23 +27,23 @@ structuredData:
         - name: Process document with event listeners. 
           text: Call Signature Verify method and process all appearing events.
 ---
-[Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class contains several events that are being called for different verification process stages
+[Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class contains several events that are being called for different verification process stages
 
-*   [VerifyStarted](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#VerifyStarted) to handle process start event. This event is occur once [verify](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#verify(com.groupdocs.signature.options.verify.VerifyOptions)) method is called
-*   [VerifyProgress](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#VerifyProgress) to handle progress event. This event occurs each time on verifying each signature was completed.
-*   [VerifyCompleted](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#VerifyCompleted) to handle completion event. This event occurs once [verify](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#verify(com.groupdocs.signature.options.verify.VerifyOptions)) process was completed.    
+*   [VerifyStarted](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#VerifyStarted) to handle process start event. This event is occur once [verify](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#verify(com.groupdocs.signature.options.verify.VerifyOptions)) method is called
+*   [VerifyProgress](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#VerifyProgress) to handle progress event. This event occurs each time on verifying each signature was completed.
+*   [VerifyCompleted](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#VerifyCompleted) to handle completion event. This event occurs once [verify](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#verify(com.groupdocs.signature.options.verify.VerifyOptions)) process was completed.    
 
 Here are the steps to subscribe for verification process with GroupDocs.Signature:
 *   Define required handler delegates to process signing events.    
-*   Create new instance of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path or stream as a constructor parameter.    
+*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path or stream as a constructor parameter.    
 *   Subscribe for required events      
-*   Instantiate required [VerifyOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.verify/VerifyOptions) object  
-*   Call [verify](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#verify(com.groupdocs.signature.options.verify.VerifyOptions)) method of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass verify options in it .
+*   Instantiate required [VerifyOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.verify/VerifyOptions) object  
+*   Call [verify](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#verify(com.groupdocs.signature.options.verify.VerifyOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass verify options in it .
     
 
 ## Implement method for VerifyStarted event
 
-GroupDocs.Signature expects [ProcessStartEventHandler](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.handler.events/ProcessStartEventHandler) delegate to subscribe for [VerifyStarted](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#VerifyStarted) event
+GroupDocs.Signature expects [ProcessStartEventHandler](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.handler.events/ProcessStartEventHandler) delegate to subscribe for [VerifyStarted](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#VerifyStarted) event
 
 ```java
 private static void onVerifyStarted(Signature sender, ProcessStartEventArgs args)

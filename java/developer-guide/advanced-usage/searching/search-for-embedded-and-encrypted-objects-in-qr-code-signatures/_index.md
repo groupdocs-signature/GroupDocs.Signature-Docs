@@ -10,7 +10,7 @@ hideChildren: False
 structuredData:
     showOrganization: True
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides additional features when searching forQR-code signatures ([QrCodeSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/QrCodeSignature)) that were previously encrypted or contains embedded data objects. Summary the abilities are as follow
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides additional features when searching forQR-code signatures ([QrCodeSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/QrCodeSignature)) that were previously encrypted or contains embedded data objects. Summary the abilities are as follow
 
 *   ability to search for embedded custom objects into metadata and decrypt them to original source values
 *   ability to search for encrypted text of QR-code signature and decrypt it
@@ -23,7 +23,7 @@ Following topics show different aspects
 
 ## Alternative implementation of custom data serialization
 
-This example shows how to specify custom serialization class. This class should be implemented as Attribute and [IDataSerializer](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/IDataSerializer) interface.
+This example shows how to specify custom serialization class. This class should be implemented as Attribute and [IDataSerializer](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/IDataSerializer) interface.
 
 ```java
 /**

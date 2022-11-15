@@ -36,11 +36,11 @@ A **Text** electronic signature is an arbitrary text that is added to a documen
 
   
 
-o manipulate with text signatures programmatically [GroupDocs.Signature](https://products.groupdocs.com/signature/java) provides [TextSignOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions) class and the whole workflow as easy as follows:
+o manipulate with text signatures programmatically [GroupDocs.Signature](https://products.groupdocs.com/signature/java) provides [TextSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions) class and the whole workflow as easy as follows:
 
-*   Create new instance of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.    
-*   Instantiate the [TextSignOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions) object according to your requirements and specify Text signature options.    
-*   Call [sign](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [TextSignOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions) to it.
+*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.    
+*   Instantiate the [TextSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions) object according to your requirements and specify Text signature options.    
+*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [TextSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions) to it.
     
 
 This example shows how to add Text signature to document.

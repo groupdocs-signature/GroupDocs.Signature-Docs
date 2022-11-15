@@ -27,21 +27,21 @@ structuredData:
         - name: Process document with cancellation condition. 
           text: Invoke Sign, Search or Verify method and if condition it true processing is being stopped.
 ---
-[Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class supports cancellation for each of document processing (Sign, Verify, Search). The process cancellation happens over setting property [getCancel](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.handler.events/ProcessProgressEventArgs#getCancel()) of [ProcessProgressEventArgs](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.handler.events/ProcessProgressEventArgs) property in proper event handler.
+[Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class supports cancellation for each of document processing (Sign, Verify, Search). The process cancellation happens over setting property [getCancel](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.handler.events/ProcessProgressEventArgs#getCancel()) of [ProcessProgressEventArgs](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.handler.events/ProcessProgressEventArgs) property in proper event handler.
 
-*   for [sign](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) process this flag should be set to true in handler of [SignProgress](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#SignProgress) event. This event occurs each time on signing each signature was completed.
-*   for [verify](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#verify(com.groupdocs.signature.options.verify.VerifyOptions)) process this flag should be set to true in handler of [VerifyProgress](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#VerifyProgress) event. This event occurs each time on verifying document page.
-*   for [search](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) process this flag should be set to true in handler of [SearchProgress](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#SearchProgress) event. This event occurs each time on searching document page per each options.  
+*   for [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) process this flag should be set to true in handler of [SignProgress](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#SignProgress) event. This event occurs each time on signing each signature was completed.
+*   for [verify](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#verify(com.groupdocs.signature.options.verify.VerifyOptions)) process this flag should be set to true in handler of [VerifyProgress](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#VerifyProgress) event. This event occurs each time on verifying document page.
+*   for [search](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) process this flag should be set to true in handler of [SearchProgress](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#SearchProgress) event. This event occurs each time on searching document page per each options.  
 
 ## Cancel signing process
 
 Here are the steps to provide cancellation for signing process with GroupDocs.Signature:
 
-*   Define [SignProgress](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#SignProgress) event handler delegates to conditionally cancel the process.
-*   Create new instance of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path or stream as a constructor parameter.    
-*   Subscribe for [SignProgress](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#SignProgress) event with proper handler method
-*   Instantiate required [SignOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/SignOptions) object 
-*   Call [sign](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass signature options in it
+*   Define [SignProgress](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#SignProgress) event handler delegates to conditionally cancel the process.
+*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path or stream as a constructor parameter.    
+*   Subscribe for [SignProgress](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#SignProgress) event with proper handler method
+*   Instantiate required [SignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/SignOptions) object 
+*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass signature options in it
    
     
 
@@ -81,11 +81,11 @@ public static void run() {
 
 Here are the steps to provide cancellation for verification process with GroupDocs.Signature:
 
-*   Define [VerifyProgress](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#VerifyProgress) event handler delegates to conditionally cancel the process.    
-*   Create new instance of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path or stream as a constructor parameter.    
-*   Subscribe for [VerifyProgress](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#VerifyProgress) event with proper handler method      
-*   Instantiate required [VerifyOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.verify/VerifyOptions)  object       
-*   Call [verify](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#verify(com.groupdocs.signature.options.verify.VerifyOptions)) method of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass verification options in it.
+*   Define [VerifyProgress](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#VerifyProgress) event handler delegates to conditionally cancel the process.    
+*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path or stream as a constructor parameter.    
+*   Subscribe for [VerifyProgress](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#VerifyProgress) event with proper handler method      
+*   Instantiate required [VerifyOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.verify/VerifyOptions)  object       
+*   Call [verify](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#verify(com.groupdocs.signature.options.verify.VerifyOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass verification options in it.
     
 
 ```java
@@ -124,11 +124,11 @@ public static void run() {
 
 Here are the steps to provide cancellation of searching process with GroupDocs.Signature:
 
-*   Define [SearchProgress](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#SearchProgress) event handler delegates to conditionally cancel the process.    
-*   Create new instance of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path or stream as a constructor parameter.    
-*   Subscribe for [SearchProgress](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#SearchProgress) event with proper handler method      
-*   Instantiate required[ SearchOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/SearchOptions) object       
-*   Call [search](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass search options in it
+*   Define [SearchProgress](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#SearchProgress) event handler delegates to conditionally cancel the process.    
+*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path or stream as a constructor parameter.    
+*   Subscribe for [SearchProgress](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#SearchProgress) event with proper handler method      
+*   Instantiate required[ SearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/SearchOptions) object       
+*   Call [search](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass search options in it
     
 ```java
 private static void onSearchProgress(Signature sender, ProcessProgressEventArgs args) {

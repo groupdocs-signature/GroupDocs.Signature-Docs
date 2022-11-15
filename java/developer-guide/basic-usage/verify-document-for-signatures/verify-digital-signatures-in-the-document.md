@@ -25,15 +25,15 @@ structuredData:
         - name: Get verification result
           text: Call method Verify passing options. Obtain verification result whose property IsValid must be true if verification succeed.
 ---
-**[GroupDocs.Signature](https://products.groupdocs.com/signature/java)** provides [DigitalVerifyOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.verify/DigitalVerifyOptions) class to specify different options for digital signatures verification.
+**[GroupDocs.Signature](https://products.groupdocs.com/signature/java)** provides [DigitalVerifyOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.verify/DigitalVerifyOptions) class to specify different options for digital signatures verification.
 
 Here are the steps to verify Digital signature within the document with GroupDocs.Signature:
 
-*   Create new instance of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.
+*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.
     
-*   Instantiate the [DigitalVerifyOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.verify/DigitalVerifyOptions) object according to your requirements and specify verification options  
+*   Instantiate the [DigitalVerifyOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.verify/DigitalVerifyOptions) object according to your requirements and specify verification options  
     
-*   Call [verify](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#verify(com.groupdocs.signature.options.verify.VerifyOptions)) method of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [DigitalVerifyOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.verify/DigitalVerifyOptions) to it.
+*   Call [verify](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#verify(com.groupdocs.signature.options.verify.VerifyOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [DigitalVerifyOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.verify/DigitalVerifyOptions) to it.
     
 
   

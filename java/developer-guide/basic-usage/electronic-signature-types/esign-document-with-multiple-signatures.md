@@ -28,18 +28,18 @@ structuredData:
 [GroupDocs.Signature](https://products.groupdocs.com/signature/java) allows to sign document with several signatures simultaneously and even apply signatures of different types to the same document.   
 Doing this is as simple as:
 
-*   Create new instance of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path or stream as a constructor parameter.    
+*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path or stream as a constructor parameter.    
 *   Instantiate required all required sign options objects dependent on signature type:    
-    *   [BarcodeSignOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/BarcodeSignOptions) - for Barcode signatures;
-    *   [DigitalSignOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/DigitalSignOptions) - for Digital signatures;
-    *   [FormFieldSignOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/FormFieldSignOptions) - for Form-field signatures;
-    *   [ImageSignOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions) - for Image signatures;
-    *   [MetadataSignOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/MetadataSignOptions) - for Metadata signatures;
-    *   [QrCodeSignOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/QrCodeSignOptions) - for QR-code signatures
-    *   [StampSignOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/StampSignOptions) - for Stamp signatures;
-    *   [TextSignOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions) - for Text signatures.
+    *   [BarcodeSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/BarcodeSignOptions) - for Barcode signatures;
+    *   [DigitalSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/DigitalSignOptions) - for Digital signatures;
+    *   [FormFieldSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/FormFieldSignOptions) - for Form-field signatures;
+    *   [ImageSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions) - for Image signatures;
+    *   [MetadataSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/MetadataSignOptions) - for Metadata signatures;
+    *   [QrCodeSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/QrCodeSignOptions) - for QR-code signatures
+    *   [StampSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/StampSignOptions) - for Stamp signatures;
+    *   [TextSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions) - for Text signatures.
 *   Fill collection with sign options from previous step.  
-*   Call [sign](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20java.util.List)) method of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass collection of sign options to it.
+*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20java.util.List)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass collection of sign options to it.
     
 This code snippet below demonstrates how to eSign PDF document with multiple signatures at the same time.
 

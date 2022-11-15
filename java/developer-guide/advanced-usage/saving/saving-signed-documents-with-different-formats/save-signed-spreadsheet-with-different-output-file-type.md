@@ -27,14 +27,14 @@ structuredData:
         - name: Obtain signed Spreadsheet document in required format
           text: Get the output document in requested format.
 ---
-[Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class supports saving of Spreadsheet signed documents with different output file types. Each document type has list of compatible saving type. These values are listed in enum [SpreadsheetSaveFileFormat.](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/SpreadsheetSaveFileFormat)
+[Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class supports saving of Spreadsheet signed documents with different output file types. Each document type has list of compatible saving type. These values are listed in enum [SpreadsheetSaveFileFormat.](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/SpreadsheetSaveFileFormat)
 
 Here are the steps to save signed Spreadsheet document to different output type with [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java):
 
-*   Create new instance of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path or stream as a constructor parameter.    
+*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path or stream as a constructor parameter.    
 *   Instantiate required signature options.    
-*   Instantiate the [SpreadsheetSaveOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/SpreadsheetSaveOptions) object according to your requirements and specify [setFileFormat](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/SpreadsheetSaveOptions#setFileFormat(int)) as one of predefined values from [SpreadsheetSaveFileFormat](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/SpreadsheetSaveFileFormat).
-*   Call [sign](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass signatureoptions and [SpreadsheetSaveOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/SpreadsheetSaveOptions) object to it.
+*   Instantiate the [SpreadsheetSaveOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/SpreadsheetSaveOptions) object according to your requirements and specify [setFileFormat](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/SpreadsheetSaveOptions#setFileFormat(int)) as one of predefined values from [SpreadsheetSaveFileFormat](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/SpreadsheetSaveFileFormat).
+*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass signatureoptions and [SpreadsheetSaveOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/SpreadsheetSaveOptions) object to it.
     
 
 Following example demonstrates how to save signed Spreadsheet document with different output type

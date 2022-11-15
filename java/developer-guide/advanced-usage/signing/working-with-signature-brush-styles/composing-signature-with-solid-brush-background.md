@@ -8,14 +8,14 @@ keywords:
 productName: GroupDocs.Signature for Java
 hideChildren: False
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [SolidBrush](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.extensions/SolidBrush) class to specify solid filling signature background for Text and Stamp signature types
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [SolidBrush](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.extensions/SolidBrush) class to specify solid filling signature background for Text and Stamp signature types
 
  Here are the steps to add Text signature into document with GroupDocs.Signature:
 
-*   Create new instance of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path or stream as a constructor parameter.    
-*   Instantiate the [SignOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/SignOptions) object with all required additional options and setup [Background.setBrush](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain/Background#setBrush(com.groupdocs.signature.domain.extensions.Brush)) property with instance of [SolidBrush](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions/SolidBrush)
-*   Call [sign](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [SignOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/SignOptions) to it. 
-*   Analyze [SignResult](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain/SignResult) result to check newly created signatures if needed. 
+*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path or stream as a constructor parameter.    
+*   Instantiate the [SignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/SignOptions) object with all required additional options and setup [Background.setBrush](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain/Background#setBrush(com.groupdocs.signature.domain.extensions.Brush)) property with instance of [SolidBrush](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions/SolidBrush)
+*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [SignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/SignOptions) to it. 
+*   Analyze [SignResult](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain/SignResult) result to check newly created signatures if needed. 
     
 
 ```java

@@ -25,10 +25,10 @@ structuredData:
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) allows to get document information which includes:
 
-*   [getFileType](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/DocumentInfo#getFileType())
-*   [getSize](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/DocumentInfo#getSize())
-*   [getPageCount](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/DocumentInfo#getPageCount())
-*   Pages dimensions - [getHeight](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain/PageInfo#getHeight()) and [getWidth](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain/PageInfo#getWidth()) for each page in a document [Pages](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/DocumentInfo#getPages()) collection.
+*   [getFileType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/DocumentInfo#getFileType())
+*   [getSize](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/DocumentInfo#getSize())
+*   [getPageCount](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/DocumentInfo#getPageCount())
+*   Pages dimensions - [getHeight](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/PageInfo#getHeight()) and [getWidth](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/PageInfo#getWidth()) for each page in a document [Pages](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/DocumentInfo#getPages()) collection.
 
 ## Get document information from file on local disk
 

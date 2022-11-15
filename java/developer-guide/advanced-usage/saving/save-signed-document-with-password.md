@@ -27,14 +27,14 @@ structuredData:
         - name: Obtain protected document
           text: Get the protected signed document with password.
 ---
-[Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature)  class supports saving signed document with password protection. This ability is supported over [setPassword](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/SaveOptions#setPassword(java.lang.String)) property of [SaveOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/SaveOptions) class that should be passed to [sign](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method.
+[Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature)  class supports saving signed document with password protection. This ability is supported over [setPassword](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/SaveOptions#setPassword(java.lang.String)) property of [SaveOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/SaveOptions) class that should be passed to [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method.
 
 Here are the steps to protect signed document with password with GroupDocs.Signature:
 
-*   Create new instance of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path or stream as a constructor parameter.    
+*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path or stream as a constructor parameter.    
 *   Instantiate required signature options.    
-*   Instantiate the [SaveOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/SaveOptions) object and specify [setPassword](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/SaveOptions#setPassword(java.lang.String)) property with required password string.      
-*   Call [sign](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass signatureoptions and [SaveOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/SaveOptions) object to it.
+*   Instantiate the [SaveOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/SaveOptions) object and specify [setPassword](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/SaveOptions#setPassword(java.lang.String)) property with required password string.      
+*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass signatureoptions and [SaveOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/SaveOptions) object to it.
     
 Following example demonstrates how to save signed document with password.
 

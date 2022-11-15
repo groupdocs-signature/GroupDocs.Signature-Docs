@@ -8,22 +8,22 @@ keywords:
 productName: GroupDocs.Signature for Java
 hideChildren: False
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [ImageSignOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions) class to specify different options for Image signature as follow
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [ImageSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions) class to specify different options for Image signature as follow
 
-*   signature alignment ([setHorizontalAlignment](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions#setHorizontalAlignment(int)), [setVerticalAlignment](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions#setVerticalAlignment(int)))
-*   margins ([setMargin](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions#setMargin(com.groupdocs.signature.domain.Padding)))
-*   additional extensions and appearances ([setExtensions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/SignOptions#setExtensions(java.util.List)), [setAppearance](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/SignOptions#setAppearance(com.groupdocs.signature.options.appearances.SignatureAppearance)))
+*   signature alignment ([setHorizontalAlignment](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions#setHorizontalAlignment(int)), [setVerticalAlignment](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions#setVerticalAlignment(int)))
+*   margins ([setMargin](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions#setMargin(com.groupdocs.signature.domain.Padding)))
+*   additional extensions and appearances ([setExtensions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/SignOptions#setExtensions(java.util.List)), [setAppearance](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/SignOptions#setAppearance(com.groupdocs.signature.options.appearances.SignatureAppearance)))
 
 Here are the steps to add Image signature into document with GroupDocs.Signature:
 
-*   Create new instance of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.    
-*   Instantiate the [ImageSignOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions) object according to your requirements and specify image signature options.    
-*   Call [sign](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [ImageSignOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions) to it.      
-*   Analyze [SignResult](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain/SignResult) result to check newly created signatures if needed.
+*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.    
+*   Instantiate the [ImageSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions) object according to your requirements and specify image signature options.    
+*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [ImageSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions) to it.      
+*   Analyze [SignResult](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain/SignResult) result to check newly created signatures if needed.
 
   
 
-This example shows how to specify different Image signature options. See [SignResult](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain/SignResult) 
+This example shows how to specify different Image signature options. See [SignResult](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain/SignResult) 
 
 ```java
 Signature signature = new Signature(sample.xlsx);

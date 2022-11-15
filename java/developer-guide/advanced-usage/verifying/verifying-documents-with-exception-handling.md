@@ -28,11 +28,11 @@ structuredData:
           text: Put around the code above try-catch block with the common and specific GroupDocsSignatureException expection hanndlings
 ---
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides different error messages due to validation issues, missing required data, files etc. For handling these exceptions class [GroupDocsSignatureException](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.exception/GroupDocsSignatureException) should be used.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides different error messages due to validation issues, missing required data, files etc. For handling these exceptions class [GroupDocsSignatureException](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.exception/GroupDocsSignatureException) should be used.
 
 Here are the steps to handle exceptions from GroupDocs.Signature while document verification:
 
-*   Compose try-catch block above [verify](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#verify(com.groupdocs.signature.options.verify.VerifyOptions)) method with catching [GroupDocsSignatureException](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.exception/GroupDocsSignatureException) type error.
+*   Compose try-catch block above [verify](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#verify(com.groupdocs.signature.options.verify.VerifyOptions)) method with catching [GroupDocsSignatureException](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.exception/GroupDocsSignatureException) type error.
     
 
 This example shows how to handle GroupDocs.Signature exceptions.

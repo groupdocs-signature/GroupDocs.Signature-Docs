@@ -8,18 +8,18 @@ keywords:
 productName: GroupDocs.Signature for Java
 hideChildren: False
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) supports locating signature on document page with different measure units. Enumeration [MeasureType](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/MeasureType) handles following types 
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) supports locating signature on document page with different measure units. Enumeration [MeasureType](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/MeasureType) handles following types 
 
-*   [MeasureType.Pixels](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/MeasureType#Pixels) allows to locate signature position and size with pixels (default value)
-*   [MeasureType.Millimeters](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/MeasureType#Millimeters) allows to locate signature on page and setup size by setting millimeters
-*   [MeasureType.Percents](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/MeasureType#Percents) allows to locate signature position, size with percentage of page size  
+*   [MeasureType.Pixels](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/MeasureType#Pixels) allows to locate signature position and size with pixels (default value)
+*   [MeasureType.Millimeters](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/MeasureType#Millimeters) allows to locate signature on page and setup size by setting millimeters
+*   [MeasureType.Percents](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/MeasureType#Percents) allows to locate signature position, size with percentage of page size  
       
 
 Here are the steps to locate and size signature area with different measure unit types:
 
-*   Set property [setLocationMeasureType](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions#setLocationMeasureType(int)) with of one values above to specify how to implement values in properties [setLeft](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.interfaces/IRectangle#setLeft(int)), [setTop](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.interfaces/IRectangle#setTop(int))    
-*   Set property [setSizeMeasureType](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions#setSizeMeasureType(int)) with of one values above to specify how to implement size of signature values in properties [setWidth](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.interfaces/IRectangle#setWidth(int)), [setHeight](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.interfaces/IRectangle#setHeight(int))    
-*   Set property [setMarginMeasureType](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions#setMarginMeasureType(int)) with of one values above to specify how to implement values in property [setMargin](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions#setMargin(com.groupdocs.signature.domain.Padding))
+*   Set property [setLocationMeasureType](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions#setLocationMeasureType(int)) with of one values above to specify how to implement values in properties [setLeft](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.interfaces/IRectangle#setLeft(int)), [setTop](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.interfaces/IRectangle#setTop(int))    
+*   Set property [setSizeMeasureType](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions#setSizeMeasureType(int)) with of one values above to specify how to implement size of signature values in properties [setWidth](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.interfaces/IRectangle#setWidth(int)), [setHeight](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.interfaces/IRectangle#setHeight(int))    
+*   Set property [setMarginMeasureType](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions#setMarginMeasureType(int)) with of one values above to specify how to implement values in property [setMargin](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions#setMargin(com.groupdocs.signature.domain.Padding))
 
 ## Set signature positioning in millimeters
 

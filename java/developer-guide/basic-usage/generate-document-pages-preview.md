@@ -27,18 +27,18 @@ structuredData:
         - name: Get pages images
           text: Invoke GeneratePreview method passing options and save page images by method from CreatePageStream delegate.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [PreviewOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options/PreviewOptions) class to specify different options to manage document pages preview generation process.  
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [PreviewOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options/PreviewOptions) class to specify different options to manage document pages preview generation process.  
   
 Here are the steps to generate document preview with GroupDocs.Signature:
-*   Create new instance of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.
-*   Instantiate the[ PreviewOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options/PreviewOptions) object with:     
-    *   interface for each page stream creation (see [PageStreamFactory](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options/PageStreamFactory));         
+*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.
+*   Instantiate the[ PreviewOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options/PreviewOptions) object with:     
+    *   interface for each page stream creation (see [PageStreamFactory](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options/PageStreamFactory));         
     *   image preview format - PNG / JPG / BMP,         
     *   page numbers to process;        
     *   custom size of preview images (if needed).         
-*   Call [generatePreview](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#generatePreview(com.groupdocs.signature.options.PreviewOptions)) method of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [PreviewOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options/PreviewOptions) to it.       
+*   Call [generatePreview](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#generatePreview(com.groupdocs.signature.options.PreviewOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [PreviewOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options/PreviewOptions) to it.       
 {{< alert style="info" >}}
-Important note! Stream that were created by [createPageStream](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options/PageStreamFactory#createPageStream(int)) method will be disposed automatically once after generation of preview image. If you need to implement custom image preview stream disposing you have to pass additional method [closePageStream](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options/PageStreamFactory#closePageStream(int,%20java.io.OutputStream)) to clean up resources.  
+Important note! Stream that were created by [createPageStream](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options/PageStreamFactory#createPageStream(int)) method will be disposed automatically once after generation of preview image. If you need to implement custom image preview stream disposing you have to pass additional method [closePageStream](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options/PageStreamFactory#closePageStream(int,%20java.io.OutputStream)) to clean up resources.  
 {{< /alert >}}
 
 
@@ -58,7 +58,7 @@ Important note! Stream that were created by [createPageStream](https://apirefer
 
 ## createPageStream method implementation
 
-GroupDocs.Signature expects [createPageStream](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options/PageStreamFactory#createPageStream(int)) method to obtain each page stream for image preview generation process
+GroupDocs.Signature expects [createPageStream](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options/PageStreamFactory#createPageStream(int)) method to obtain each page stream for image preview generation process
 
 ```java
 @Override

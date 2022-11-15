@@ -27,24 +27,24 @@ structuredData:
         - name: Process document with event listeners. 
           text: Invoke method Search of Signature instance and process all appearing events.
 ---
-[Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class contains several events that are being called for different search process stages
+[Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class contains several events that are being called for different search process stages
 
-*   [SearchStarted](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#SearchStarted) to handle process start event. This event is occur once [search](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method is called
-*   [SearchProgress](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#SearchProgress) to handle progress event. This event occurs each time on searching each document page.
-*   [SearchCompleted](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#SearchCompleted) to handle completion event. This event occurs once [search](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions))process was completed.    
+*   [SearchStarted](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#SearchStarted) to handle process start event. This event is occur once [search](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method is called
+*   [SearchProgress](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#SearchProgress) to handle progress event. This event occurs each time on searching each document page.
+*   [SearchCompleted](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#SearchCompleted) to handle completion event. This event occurs once [search](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions))process was completed.    
 
 Here are the steps to subscribe for searching process with GroupDocs.Signature:
 
 *   Define required handler delegates to process searching events.    
-*   Create new instance of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path or stream as a constructor parameter.    
+*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path or stream as a constructor parameter.    
 *   Subscribe for required events      
-*   Instantiate required [SearchOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/SearchOptions) object       
-*   Call [search](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass search options in it.
+*   Instantiate required [SearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/SearchOptions) object       
+*   Call [search](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass search options in it.
     
 
 ## Implement method for SearchStarted event
 
-GroupDocs.Signature expects [ProcessStartEventHandler](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.handler.events/ProcessStartEventHandler) delegate to subscribe for [SearchStarted](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#SearchStarted) event
+GroupDocs.Signature expects [ProcessStartEventHandler](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.handler.events/ProcessStartEventHandler) delegate to subscribe for [SearchStarted](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#SearchStarted) event
 
 ```java
 private static void onSearchStarted(Signature sender, ProcessStartEventArgs args)

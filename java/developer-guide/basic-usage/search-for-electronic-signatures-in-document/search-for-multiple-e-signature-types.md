@@ -29,25 +29,25 @@ Sometimes you may want to search for electronic signatures of different types si
 
 Here are the steps to search for multiple signatures types within the document with GroupDocs.Signature:
 
-*   Create new instance of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.
+*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.
     
-*   Instantiate search options for required signature types and them to collection of List<[SearchOptions](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/SearchOptions)\>  type.
+*   Instantiate search options for required signature types and them to collection of List<[SearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/SearchOptions)\>  type.
     The possible options are: 
     
-    *   [BarcodeSearchOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/BarcodeSearchOptions) - to search for Barcode signatures;
+    *   [BarcodeSearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/BarcodeSearchOptions) - to search for Barcode signatures;
         
-    *   [DigitalSearchOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/DigitalSearchOptions) -  to search for Digital signatures;
+    *   [DigitalSearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/DigitalSearchOptions) -  to search for Digital signatures;
         
-    *   [FormFieldSearchOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/FormFieldSearchOptions) - to search for Form-field signatures;
-    *   [ImageSearchOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/ImageSearchOptions) - to search for Image signatures;
+    *   [FormFieldSearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/FormFieldSearchOptions) - to search for Form-field signatures;
+    *   [ImageSearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/ImageSearchOptions) - to search for Image signatures;
         
-    *   [MetadataSearchOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/MetadataSearchOptions) - to search for Metadata signatures;
+    *   [MetadataSearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/MetadataSearchOptions) - to search for Metadata signatures;
         
-    *   [QrCodeSearchOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/QrCodeSearchOptions) - to search for QR-code signatures;
+    *   [QrCodeSearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/QrCodeSearchOptions) - to search for QR-code signatures;
         
-    *   [TextSearchOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/TextSearchOptions) to search for Text signatures.
+    *   [TextSearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/TextSearchOptions) to search for Text signatures.
         
-*   Call [search](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.util.List)) method of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass collection of [search](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/SearchOptions) options to it.
+*   Call [search](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.util.List)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass collection of [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/SearchOptions) options to it.
     
 
 This example shows how to search for multiple electronic signature types in the document.

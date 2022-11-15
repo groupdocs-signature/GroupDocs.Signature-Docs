@@ -10,23 +10,23 @@ hideChildren: False
 structuredData:
     showOrganization: True
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides additional features when searching for Metadata Signatures ([MetadataSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/MetadataSignature)) that were previously encrypted or contains custom data objects. 
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides additional features when searching for Metadata Signatures ([MetadataSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/MetadataSignature)) that were previously encrypted or contains custom data objects. 
 
 *   Ability to search for embedded custom objects into metadata and decrypt them to original source values.
 *   Ability to search for encrypted text of metadata signature and decrypt it.  
 
 Here are the steps to search and decrypt previously encrypted text of metadata and decrypt custom object from metadata signature with GroupDocs.Signature API:
 
-*   Implement if needed custom data serialization class that implement [IDataSerializer](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/IDataSerializer) interface. By default Signature uses embedded json format serialization but allows user to customize it. if object of class was serialized by custom serialization when searching for it, this class should also has same serialization attribute.      
-*   Implement if needed custom data encryption class that implements [IDataEncryption](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.encryption/IDataEncryption) interface. By default Signature has several encryption implementation you can use but allows user to customize it. There's ability to specify inline encryption to use.      
-*   Instantiate the[MetadataSearchOptions](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/MetadataSearchOptions) object value.    
-*   Call [search](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method of [Signature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) class instance and pass [MetadataSearchOptions](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/MetadataSearchOptions) to it.    
-*   Process each Metadata signature and set property [setDataEncryption](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/MetadataSearchOptions#setDataEncryption(com.groupdocs.signature.domain.extensions.encryption.IDataEncryption)) to specify data encryption and call [getData](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/MetadataSignature#getData(java.lang.Class)) method to retrieve object. 
+*   Implement if needed custom data serialization class that implement [IDataSerializer](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/IDataSerializer) interface. By default Signature uses embedded json format serialization but allows user to customize it. if object of class was serialized by custom serialization when searching for it, this class should also has same serialization attribute.      
+*   Implement if needed custom data encryption class that implements [IDataEncryption](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.encryption/IDataEncryption) interface. By default Signature has several encryption implementation you can use but allows user to customize it. There's ability to specify inline encryption to use.      
+*   Instantiate the[MetadataSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/MetadataSearchOptions) object value.    
+*   Call [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) class instance and pass [MetadataSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/MetadataSearchOptions) to it.    
+*   Process each Metadata signature and set property [setDataEncryption](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/MetadataSearchOptions#setDataEncryption(com.groupdocs.signature.domain.extensions.encryption.IDataEncryption)) to specify data encryption and call [getData](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/MetadataSignature#getData(java.lang.Class)) method to retrieve object. 
     
 
 ## Implementation of custom data serialization
 
-This example shows how to specify custom serialization class. This class should be implemented as Attribute and [IDataSerializer](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/IDataSerializer)interface.
+This example shows how to specify custom serialization class. This class should be implemented as Attribute and [IDataSerializer](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/IDataSerializer)interface.
 
 ```java
 /** 
@@ -153,7 +153,7 @@ public static class DocumentSignatureData
 
 ## Search for embedded custom objects in metadata signatures
 
- This example shows how to decrypt previously embedded encrypted custom objects into metadata signature. MetadataSignature contains method [getData](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/MetadataSignature#getData(java.lang.Class)) to retrieve object
+ This example shows how to decrypt previously embedded encrypted custom objects into metadata signature. MetadataSignature contains method [getData](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/MetadataSignature#getData(java.lang.Class)) to retrieve object
 
 ```java
 // instantiating the signature object

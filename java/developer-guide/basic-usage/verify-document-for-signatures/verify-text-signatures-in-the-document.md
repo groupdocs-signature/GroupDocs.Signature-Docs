@@ -25,12 +25,12 @@ structuredData:
         - name: Get verification result
           text: Call method Verify passing options. Obtain verification result whose property IsValid must be true if verification succeed.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [TextVerifyOptions](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.verify/TextVerifyOptions) class to specify different options for verification of Text signatures.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [TextVerifyOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.verify/TextVerifyOptions) class to specify different options for verification of Text signatures.
 
 Here are the steps to verify Text signature within the document with GroupDocs.Signature:
-*   Create new instance of [Signature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.
-*   Instantiate the [TextVerifyOptions](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.verify/TextVerifyOptions) object according to your requirements and specify verification options
-*   Call [verify](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#verify(com.groupdocs.signature.options.verify.VerifyOptions)) method of [Signature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) class instance and pass [TextVerifyOptions](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.verify/TextVerifyOptions) to it.
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.
+*   Instantiate the [TextVerifyOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.verify/TextVerifyOptions) object according to your requirements and specify verification options
+*   Call [verify](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#verify(com.groupdocs.signature.options.verify.VerifyOptions)) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) class instance and pass [TextVerifyOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.verify/TextVerifyOptions) to it.
 
 This example shows how to verify Text signature in the document.
 

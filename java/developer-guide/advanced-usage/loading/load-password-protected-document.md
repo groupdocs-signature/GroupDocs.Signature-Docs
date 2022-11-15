@@ -31,9 +31,9 @@ structuredData:
 
 The following are the steps to work with password protected documents.
 
-*   Instantiate the [LoadOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.loadoptions/LoadOptions) object;
-*   Set password in [LoadOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.loadoptions/LoadOptions) the [setPassword](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.loadoptions/LoadOptions#setPassword(java.lang.String))property;
-*   Create [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) object and call any method.
+*   Instantiate the [LoadOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.loadoptions/LoadOptions) object;
+*   Set password in [LoadOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.loadoptions/LoadOptions) the [setPassword](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.loadoptions/LoadOptions#setPassword(java.lang.String))property;
+*   Create [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) object and call any method.
 
 The following code sample shows how to process password protected documents.
 

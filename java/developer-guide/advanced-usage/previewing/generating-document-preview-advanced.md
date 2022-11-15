@@ -27,17 +27,17 @@ structuredData:
         - name: Get pages images
           text: Invoke GeneratePreview method passing preview options and save pages images by method defined in CreatePageStream method.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [PreviewOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options/PreviewOptions) class to specify different options to manage document pages preview generation process. Since 20.3 version there's ability to hide signatures from documents. Using property [setHideSignature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options/PreviewOptions#setHideSignatures(boolean)) of [PreviewOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options/PreviewOptions) will allow to hide signatures from document preview.  
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [PreviewOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options/PreviewOptions) class to specify different options to manage document pages preview generation process. Since 20.3 version there's ability to hide signatures from documents. Using property [setHideSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options/PreviewOptions#setHideSignatures(boolean)) of [PreviewOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options/PreviewOptions) will allow to hide signatures from document preview.  
   
 Here are the steps to generate document preview with GroupDocs.Signature with hidden signatures:
 
-*   Create new instance of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.
+*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.
     
-*   Instantiate the [PreviewOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options/PreviewOptions) object with:
+*   Instantiate the [PreviewOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options/PreviewOptions) object with:
     
-    *   delegate for each page stream creation (see [PageStreamFactory](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options/PageStreamFactory));   
+    *   delegate for each page stream creation (see [PageStreamFactory](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options/PageStreamFactory));   
         
-    *   property [setHideSignature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options/PreviewOptions#setHideSignatures(boolean)) set to true  
+    *   property [setHideSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options/PreviewOptions#setHideSignatures(boolean)) set to true  
         
     *   image preview format - PNG / JPG / BMP, 
         
@@ -46,7 +46,7 @@ Here are the steps to generate document preview with GroupDocs.Signature with hi
     *   custom size of preview images (if needed).   
         
         {{< alert style="info" >}} Stream that were created by createPageStream delegate will be disposed automatically once after generation of preview image. If you need to implement custom image preview stream disposing you have to pass additional argument closePageStream to clean up resources.{{< /alert >}}
-*   Call [generatePreview](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#generatePreview(com.groupdocs.signature.options.PreviewOptions)) method of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [PreviewOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options/PreviewOptions) to it.
+*   Call [generatePreview](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#generatePreview(com.groupdocs.signature.options.PreviewOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [PreviewOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options/PreviewOptions) to it.
     
 
 ## Generate document preview without signatures on it

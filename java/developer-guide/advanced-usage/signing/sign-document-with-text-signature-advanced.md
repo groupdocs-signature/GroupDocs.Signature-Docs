@@ -8,22 +8,22 @@ keywords:
 productName: GroupDocs.Signature for Java
 hideChildren: False
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [TextSignOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions) class to specify additional options for text signature to specify following signature appearance
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [TextSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions) class to specify additional options for text signature to specify following signature appearance
 
-*   signature alignment ([setHorizontalAlignment](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions#setHorizontalAlignment(int)), [setVerticalAlignment](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions#setVerticalAlignment(int)))
-*   margins ([setMargin](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions#setMargin(com.groupdocs.signature.domain.Padding)))
-*   border and background settings ([setBorder,](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions#setBorder(com.groupdocs.signature.domain.Border))[setBackground](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions#setBackground(com.groupdocs.signature.domain.Background)))
-*   font and colors ([setFont](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions#setFont(com.groupdocs.signature.domain.SignatureFont)), [setForeColor](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions#setForeColor(java.awt.Color)))
-*   text signature implementation ([stamp, text as image, watermark, annotation, shaped](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions#setSignatureImplementation(int)) etc)
+*   signature alignment ([setHorizontalAlignment](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions#setHorizontalAlignment(int)), [setVerticalAlignment](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions#setVerticalAlignment(int)))
+*   margins ([setMargin](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions#setMargin(com.groupdocs.signature.domain.Padding)))
+*   border and background settings ([setBorder,](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions#setBorder(com.groupdocs.signature.domain.Border))[setBackground](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions#setBackground(com.groupdocs.signature.domain.Background)))
+*   font and colors ([setFont](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions#setFont(com.groupdocs.signature.domain.SignatureFont)), [setForeColor](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions#setForeColor(java.awt.Color)))
+*   text signature implementation ([stamp, text as image, watermark, annotation, shaped](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions#setSignatureImplementation(int)) etc)
 
 Here are the steps to add Text signature into document with GroupDocs.Signature:
 
-*   *   Create new instance of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.        
-    *   Instantiate the [TextSignOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions) object with all required additional options.        
-    *   Call [sign](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [TextSignOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions) to it. 
-    *   Analyze [SignResult](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain/SignResult) result to check newly created signatures if needed.
+*   *   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.        
+    *   Instantiate the [TextSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions) object with all required additional options.        
+    *   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [TextSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions) to it. 
+    *   Analyze [SignResult](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain/SignResult) result to check newly created signatures if needed.
 
-This example shows how to add Text signature to document with advanced setup and analyzing result of method. See [SignResult](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain/SignResult)
+This example shows how to add Text signature to document with advanced setup and analyzing result of method. See [SignResult](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/SignResult)
 
 ```java
 Signature signature = new Signature("sample.pdf");

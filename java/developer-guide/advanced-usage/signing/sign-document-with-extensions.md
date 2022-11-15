@@ -8,17 +8,17 @@ keywords:
 productName: GroupDocs.Signature for Java
 hideChildren: False
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides with [SignOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/SignOptions) property Extensions that expects list of different extensions classes. At this moment here are few of them
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides with [SignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/SignOptions) property Extensions that expects list of different extensions classes. At this moment here are few of them
 
-*   [SpreadsheetPosition](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.extensions/SpreadsheetPosition) that allows to specify for Spreadsheet documents signature position as Row and Column numbers
-*   [TextShadow](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.extensions/TextShadow) alternative extension for Text signature property
+*   [SpreadsheetPosition](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.extensions/SpreadsheetPosition) that allows to specify for Spreadsheet documents signature position as Row and Column numbers
+*   [TextShadow](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.extensions/TextShadow) alternative extension for Text signature property
 
 Here are the steps to add extensions to signature into document with GroupDocs.Signature:
 
-*   Create new instance of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.    
-*   Instantiate the [SignOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/SignOptions) object with all required additional options.    
-*   Create instance of required Extension and call [SignOptions.getExtensions().add](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/SignOptions#getExtensions()) method with passed object      
-*   Call [sign](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of  [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [SignOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/SignOptions) to it.
+*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.    
+*   Instantiate the [SignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/SignOptions) object with all required additional options.    
+*   Create instance of required Extension and call [SignOptions.getExtensions().add](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/SignOptions#getExtensions()) method with passed object      
+*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of  [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [SignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/SignOptions) to it.
     
 
 ## Sign document with Text signature

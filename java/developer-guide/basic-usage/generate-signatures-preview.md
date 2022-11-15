@@ -27,24 +27,24 @@ structuredData:
         - name: Get signatures preview images
           text: Invoke GenerateSignaturePreview method passing options and save signatures images by method defined in CreateSignatureStream delegate.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [PreviewSignatureOptions](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options/PreviewSignatureOptions) class to specify different options to manage signatures preview generation process.  
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [PreviewSignatureOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options/PreviewSignatureOptions) class to specify different options to manage signatures preview generation process.  
   
 Here are the steps to generate signature preview with GroupDocs.Signature:
 
-* Instantiate the required [SignOptions](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/SignOptions) object with the settings you want to generate the preview
-* Instantiate the [PreviewSignatureOptions](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options/PreviewSignatureOptions) object with:
-* delegate for signature stream creation (see interface [PageSignatureStreamFactory](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options/PageSignatureStreamFactory));
+* Instantiate the required [SignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/SignOptions) object with the settings you want to generate the preview
+* Instantiate the [PreviewSignatureOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options/PreviewSignatureOptions) object with:
+* delegate for signature stream creation (see interface [PageSignatureStreamFactory](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options/PageSignatureStreamFactory));
 * image preview format - PNG / JPG / BMP,
 * unique signature identifier.
 
 {{< alert style="info" >}}
-Stream that were created by [createSignatureStream](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options/PageSignatureStreamFactory#createSignatureStream(com.groupdocs.signature.options.PreviewSignatureOptions)) delegate will be disposed automatically once after generation of preview image. If you need to implement custom image preview stream disposing you have to pass additional argument [closeSignatureStream](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options/PageSignatureStreamFactory#createSignatureStream(com.groupdocs.signature.options.PreviewSignatureOptions)) to clean up resources.  
+Stream that were created by [createSignatureStream](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options/PageSignatureStreamFactory#createSignatureStream(com.groupdocs.signature.options.PreviewSignatureOptions)) delegate will be disposed automatically once after generation of preview image. If you need to implement custom image preview stream disposing you have to pass additional argument [closeSignatureStream](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options/PageSignatureStreamFactory#createSignatureStream(com.groupdocs.signature.options.PreviewSignatureOptions)) to clean up resources.  
 {{< /alert >}}
-* Call the static method [generateSignaturePreview](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#generateSignaturePreview(com.groupdocs.signature.options.PreviewSignatureOptions)) method of [Signature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) and pass [PreviewSignatureOptions](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options/PreviewSignatureOptions) to it.
+* Call the static method [generateSignaturePreview](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#generateSignaturePreview(com.groupdocs.signature.options.PreviewSignatureOptions)) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) and pass [PreviewSignatureOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options/PreviewSignatureOptions) to it.
 
 ## CreateSignatureStream delegate implementation
 
-GroupDocs.Signature expects [createSignatureStream](https://apireference.groupdocs.com/https://apireference-qa.groupdocs.com/signature/java/com.groupdocs.signature.options/PageSignatureStreamFactory#createSignatureStream(com.groupdocs.signature.options.PreviewSignatureOptions)) delegate to obtain each signature stream for image preview generation process
+GroupDocs.Signature expects [createSignatureStream](https://reference.groupdocs.com/https://apireference-qa.groupdocs.com/signature/java/com.groupdocs.signature.options/PageSignatureStreamFactory#createSignatureStream(com.groupdocs.signature.options.PreviewSignatureOptions)) delegate to obtain each signature stream for image preview generation process
 
 ```java
 private static OutputStream createSignatureStream(PreviewSignatureOptions previewOptions)

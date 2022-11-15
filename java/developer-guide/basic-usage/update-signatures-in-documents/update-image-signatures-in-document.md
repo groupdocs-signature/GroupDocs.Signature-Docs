@@ -27,20 +27,20 @@ structuredData:
         - name: Update document
           text: Call method Update passing updated signature.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [ImageSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/ImageSignature) class to manipulate barcode signatures location, size and textual content. 
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [ImageSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/ImageSignature) class to manipulate barcode signatures location, size and textual content. 
 
-Please be aware that [update](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#update(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature)) method modifies the same document that was passed to constructor of [Signature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) class.
+Please be aware that [update](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#update(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature)) method modifies the same document that was passed to constructor of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) class.
 
 Here are the steps to update Barcode signature in the document with GroupDocs.Signature:
 
-*   Create new instance of [Signature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter;    
-*   Instantiate [ImageSearchOptions](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/ImageSearchOptions) object with desired properties;    
-*   Call [search](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method to obtain list of [ImageSignatures](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/ImageSignature);      
-*   Select from list [ImageSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/ImageSignature) object(s) that should be updated;     
-*   Call [Signature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) object [update](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#update(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature)) method and pass one or several signatures to it.
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter;    
+*   Instantiate [ImageSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/ImageSearchOptions) object with desired properties;    
+*   Call [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method to obtain list of [ImageSignatures](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/ImageSignature);      
+*   Select from list [ImageSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/ImageSignature) object(s) that should be updated;     
+*   Call [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) object [update](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#update(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature)) method and pass one or several signatures to it.
     
 
-This example shows how to update Image signature that was found using  [search](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method.
+This example shows how to update Image signature that was found using  [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method.
 
 ```java
 using (Signature signature = new Signature("sampleSigned.pdf"))

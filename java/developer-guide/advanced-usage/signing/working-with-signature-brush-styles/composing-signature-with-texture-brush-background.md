@@ -8,16 +8,16 @@ keywords:
 productName: GroupDocs.Signature for Java
 hideChildren: False
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [TextureBrush](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.extensions/TextureBrush) class to specify filling signature background with image for Text and Image signature types
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [TextureBrush](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.extensions/TextureBrush) class to specify filling signature background with image for Text and Image signature types
 
  Here are the steps to use Texture brush with GroupDocs.Signature:
 
-*   Create new instance of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path or stream as a constructor parameter.    
-*   Instantiate the [SignOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/SignOptions) object with all required additional options and setup [Background.setBrush](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain/Background#setBrush(com.groupdocs.signature.domain.extensions.Brush)) property with instance of [TextureBrush](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.extensions/TextureBrush)   
-*   Call [sign](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [SignOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/SignOptions) to it.  
-*   Analyze [SignResult](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain/SignResult) result to check newly created signatures if needed.
+*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path or stream as a constructor parameter.    
+*   Instantiate the [SignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/SignOptions) object with all required additional options and setup [Background.setBrush](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain/Background#setBrush(com.groupdocs.signature.domain.extensions.Brush)) property with instance of [TextureBrush](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.extensions/TextureBrush)   
+*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [SignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/SignOptions) to it.  
+*   Analyze [SignResult](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain/SignResult) result to check newly created signatures if needed.
 
-This example shows how to use Texture brush for signature background. See [SignResult](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain/SignResult) 
+This example shows how to use Texture brush for signature background. See [SignResult](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain/SignResult) 
 
 ```java
 Signature signature = new Signature("sample.pdf");

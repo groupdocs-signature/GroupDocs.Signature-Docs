@@ -27,7 +27,7 @@ structuredData:
         - name: Process list of found items
           text: Process in desired way list of found items.
 ---
-GroupDocs.Signature provides following abilities to search for embedded data objects in QR-code signatures ([QrCodeSignature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/QrCodeSignature)) that were embedded with custom encryption and serialization 
+GroupDocs.Signature provides following abilities to search for embedded data objects in QR-code signatures ([QrCodeSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/QrCodeSignature)) that were embedded with custom encryption and serialization 
 
 *   ability to search for embedded custom objects into metadata and decrypt them to original source values
 *   ability to search for custom encrypted QR-code signature and decrypt it
@@ -35,15 +35,15 @@ GroupDocs.Signature provides following abilities to search for embedded data obj
 
 Here are the steps to search and decrypt previously encrypted text of QR-Code and decrypt custom object from QR-Code signature with GroupDocs.Signature API:
 
-*   Implement (use) custom data serialization class that implements [IDataEncryption](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.domain.extensions.encryption/IDataEncryption) interface.    
+*   Implement (use) custom data serialization class that implements [IDataEncryption](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.extensions.encryption/IDataEncryption) interface.    
 *   Ensure that data class if defined with custom serialization attribute      
-*   Instantiate the [QrCodeSearchOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/QrCodeSearchOptions) object and setup [setDataEncryption](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/QrCodeSearchOptions#setDataEncryption(com.groupdocs.signature.domain.extensions.encryption.IDataEncryption)) value with custom encryption object implementation      
-*   Call [search](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method of [Signature](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [QrCodeSearchOptions](https://apireference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/QrCodeSearchOptions) to it.
+*   Instantiate the [QrCodeSearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/QrCodeSearchOptions) object and setup [setDataEncryption](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/QrCodeSearchOptions#setDataEncryption(com.groupdocs.signature.domain.extensions.encryption.IDataEncryption)) value with custom encryption object implementation      
+*   Call [search](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [QrCodeSearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/QrCodeSearchOptions) to it.
      
 
 ## Implementation of custom data serialization
 
- This example shows how to specify custom serialization class. This class should be implemented as Attribute and [IDataSerializer](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/IDataSerializer) interface.
+ This example shows how to specify custom serialization class. This class should be implemented as Attribute and [IDataSerializer](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/IDataSerializer) interface.
 
 ```java
 /**
@@ -170,7 +170,7 @@ public static class DocumentSignatureData
 
 ## Search for embedded custom objects in QR-code signatures
 
-This example shows how to decrypt previously embedded encrypted custom objects into [QrCodeSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/QrCodeSignature) contains method [getData](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/QrCodeSignature#getData(java.lang.Class)) to retrieve object
+This example shows how to decrypt previously embedded encrypted custom objects into [QrCodeSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/QrCodeSignature) contains method [getData](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/QrCodeSignature#getData(java.lang.Class)) to retrieve object
 
 ```java
 Signature signature = new Signature("QRCodeCustomSerializationObject.pdf");
