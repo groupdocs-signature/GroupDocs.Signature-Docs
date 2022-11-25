@@ -92,7 +92,7 @@ Following topics from Developer Guide were added
 
 ## Public API and Backward Incompatible Changes
 
-### New class [PdfDigitalSignatureAppearance](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.appearances/PdfDigitalSignatureAppearance) was added with several properties that allow to customize appearance of digital sigantures on the PDF Document pages. 
+### New class [PdfDigitalSignatureAppearance](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.appearances/PdfDigitalSignatureAppearance) was added with several properties that allow to customize appearance of digital sigantures on the PDF Document pages. 
 
 New class PdfDigitalSignatureAppearance contains follow properties.
 
@@ -233,11 +233,11 @@ SignResult signResult = signature.sign("signed_out.pdf", options);
 
 ```
 
-#### Public class [Signature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) was updated with 2 new overload Delete methods
+#### Public class [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) was updated with 2 new overload Delete methods
 
-Method [delete](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#delete(java.lang.String,%20int)) expects enumeration [SignatureType](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/SignatureType).
+Method [delete](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#delete(java.lang.String,%20int)) expects enumeration [SignatureType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/SignatureType).
 
-Alternative overload method [deleteByTypes](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#deleteByTypes(java.io.OutputStream,%20java.util.List)) expects list of the [SignatureType](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/SignatureType) enumeration.
+Alternative overload method [deleteByTypes](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#deleteByTypes(java.io.OutputStream,%20java.util.List)) expects list of the [SignatureType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/SignatureType) enumeration.
 
 **New overload Delete methods of Signature class**
 
@@ -284,12 +284,12 @@ Following example demonstrates how to remove all digital signatures from the doc
 	}
 ```
 
-#### New public class [PreviewSignatureOptions](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options/PreviewSignatureOptions) was added to collect settings for signature preview
+#### New public class [PreviewSignatureOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options/PreviewSignatureOptions) was added to collect settings for signature preview
 
 This class contains following properties
 
 * unique signature identifier SignatureId.
-* instance of the [SignOptions](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/SignOptions).
+* instance of the [SignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/SignOptions).
 * enumeration of the preview image format
 
 **New static method GenerateSignaturePreview of Signature class**
@@ -370,9 +370,9 @@ public class PreviewFormats extends Object
 }
 ```
 
-#### Public class [Signature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) was updated with static method to generate Signature preview with specified SignOptions
+#### Public class [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) was updated with static method to generate Signature preview with specified SignOptions
 
-Static method [generateSignaturePreview](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#generateSignaturePreview(com.groupdocs.signature.options.PreviewSignatureOptions)) expects [PreviewSignatureOptions](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options/PreviewSignatureOptions) to generate signature preview and control creation and deletion signature image stream.
+Static method [generateSignaturePreview](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#generateSignaturePreview(com.groupdocs.signature.options.PreviewSignatureOptions)) expects [PreviewSignatureOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options/PreviewSignatureOptions) to generate signature preview and control creation and deletion signature image stream.
 
 **New static method GenerateSignaturePreview of Signature class**
 
@@ -494,7 +494,7 @@ Following example demonstrates how to generate signature.
         }
     }
 ```
-#### New public enumeration [DocumentType](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/DocumentType) was added to distinct supported document types
+#### New public enumeration [DocumentType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/DocumentType) was added to distinct supported document types
 
 This enumeration keeps supported Document types.
 
@@ -532,12 +532,12 @@ This enumeration keeps supported Document types.
 }
 ```
 
-#### Public class [SignOptions](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/SignOptions) was updated with 2 new properties that allow to distinct signature type and document type
+#### Public class [SignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/SignOptions) was updated with 2 new properties that allow to distinct signature type and document type
 
-Public class [SignOptions](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/SignOptions) was updated with properties
+Public class [SignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/SignOptions) was updated with properties
 
-* readonly property [SignatureType](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/SignatureType).
-* property [DocumentType](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/DocumentType).
+* readonly property [SignatureType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/SignatureType).
+* property [DocumentType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/DocumentType).
 
 **New properties of SignOptions class**
 

@@ -54,9 +54,9 @@ Following topics from Developer Guide were updated:
 
 ## Public API and Backward Incompatible Changes
 
-#### Public class [EPC](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/EPC) was added to represent European Payments Council Quick Response Code to be encoded to QR-Code embedded objects.
+#### Public class [EPC](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/EPC) was added to represent European Payments Council Quick Response Code to be encoded to QR-Code embedded objects.
 
-Public class **[EPC](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/EPC) **was added to represent European Payments Council Quick Response Code to be encoded to QR-Code embedded objects.
+Public class **[EPC](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/EPC) **was added to represent European Payments Council Quick Response Code to be encoded to QR-Code embedded objects.
 
 **New public class EFC**
 
@@ -165,7 +165,7 @@ public final class EPC
 }
 ```
 
-Following example demonstrates using **[sign](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions))** method to design PDF document with embedded **[EFC](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/EPC)** object into the QR-code
+Following example demonstrates using **[sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions))** method to design PDF document with embedded **[EFC](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/EPC)** object into the QR-code
 
 **eSign Pdf with embedded EPC QR-Code**
 
@@ -201,9 +201,9 @@ Signature signature = new Signature("sample.pdf");
 }
 ```
 
-#### Public class [Event](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/Event) was added to represent Event standard entry as QR-Code embedded objects.
+#### Public class [Event](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/Event) was added to represent Event standard entry as QR-Code embedded objects.
 
-Public class **[Event](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/Event)** was added to represent Event standard entry as QR-Code embedded objects.
+Public class **[Event](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/Event)** was added to represent Event standard entry as QR-Code embedded objects.
 
 **New public class Event**
 
@@ -266,7 +266,7 @@ public final class Event
 
 ```
 
-Following example demonstrates using **[sign](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions))**method to design PDF document with embedded **[Event](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/Event)** object into the QR-code
+Following example demonstrates using **[sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions))**method to design PDF document with embedded **[Event](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/Event)** object into the QR-code
 
 **eSign Pdf with embedded Event QR-Code**
 
@@ -310,9 +310,9 @@ Signature signature = new Signature("sample.pdf");
 }
 ```
 
-#### Public class [MeCard](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/MeCard) was added to represent standard contact details to be encoded to QR-Code embedded object.
+#### Public class [MeCard](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/MeCard) was added to represent standard contact details to be encoded to QR-Code embedded object.
 
-Public class **[MeCard](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/MeCard)** was added to represent standard contact details to be encoded to QR-Code embedded object.
+Public class **[MeCard](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/MeCard)** was added to represent standard contact details to be encoded to QR-Code embedded object.
 
 **New public class DeleteResult**
 
@@ -413,7 +413,7 @@ public final class MeCard
 }
 ```
 
-Following example demonstrates using **[sign](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions))**method to design PDF document with embedded **[MeCard](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/MeCard)** object into the QR-code
+Following example demonstrates using **[sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions))**method to design PDF document with embedded **[MeCard](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/MeCard)** object into the QR-code
 
 **eSign Pdf with embedded MeCard QR-Code**
 
@@ -457,9 +457,9 @@ Signature signature = new Signature("sample.pdf");
 }
 ```
 
-#### Public class [VCard](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/VCard) was updated with new property CellPhone.
+#### Public class [VCard](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/VCard) was updated with new property CellPhone.
 
-Public class **[VCard](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/VCard)** was update with new string property CellPhone to get or set cellular phone number for contact details.
+Public class **[VCard](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/VCard)** was update with new string property CellPhone to get or set cellular phone number for contact details.
 
 **New property CellPhone**
 
@@ -481,9 +481,9 @@ public class VCard
  }
 ```
 
-#### Public enumaration [FormFieldType](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/FormFieldType) was updated with new option **Radio**.
+#### Public enumaration [FormFieldType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/FormFieldType) was updated with new option **Radio**.
 
-Enumeration **[FormFieldType](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/FormFieldType)** was updated with new options Radio to specify Radio button type for signature [RadiobuttonFormFieldSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.formfield/RadiobuttonFormFieldSignature).
+Enumeration **[FormFieldType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/FormFieldType)** was updated with new options Radio to specify Radio button type for signature [RadiobuttonFormFieldSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.formfield/RadiobuttonFormFieldSignature).
 
 **New option Radio**
 
@@ -506,9 +506,9 @@ public class FormFieldType
 
 ```
 
-#### Public class [RadiobuttonFormFieldSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.formfield/RadiobuttonFormFieldSignature) was added to implement radio buttons form field type for Pdf documents.
+#### Public class [RadiobuttonFormFieldSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.formfield/RadiobuttonFormFieldSignature) was added to implement radio buttons form field type for Pdf documents.
 
-Public class **[RadioButtonFormFieldSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.formfield/RadiobuttonFormFieldSignature)** was added
+Public class **[RadioButtonFormFieldSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.formfield/RadiobuttonFormFieldSignature)** was added
 
 **New public class RadioButtonFormFieldSignature**
 
@@ -565,7 +565,7 @@ public final class RadioButtonFormFieldSignature extends FormFieldSignature
 }
 ```
 
-Following example demonstrates using **[sign](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions))** method with **[RadioButtonFormFieldSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.formfield/RadiobuttonFormFieldSignature)**
+Following example demonstrates using **[sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions))** method with **[RadioButtonFormFieldSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.formfield/RadiobuttonFormFieldSignature)**
 
 **eSign Pdf with RadioButtonFormFieldSignature**
 
@@ -593,9 +593,9 @@ Signature signature = new Signature("sample.pdf");
 }
 ```
 
-#### Public class [ComboboxFormFieldSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.formfield/ComboboxFormFieldSignature) was updated with new properties and ability to add this form field type to Pdf documents.
+#### Public class [ComboboxFormFieldSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.formfield/ComboboxFormFieldSignature) was updated with new properties and ability to add this form field type to Pdf documents.
 
-Public class **[ComboboxFormFieldSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.formfield/ComboboxFormFieldSignature)** was updated with new properties.
+Public class **[ComboboxFormFieldSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.formfield/ComboboxFormFieldSignature)** was updated with new properties.
 
 *   property **Selected** as string returns the value which is selected at combo-box field;
 *   property **Items** as list of strings keeps list of values at combo-box field;
@@ -659,7 +659,7 @@ public final class ComboboxFormFieldSignature extends FormFieldSignature
 }
 ```
 
-Following example demonstrates using **[sign](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions))** method with **[ComboboxFormFieldSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.formfield/ComboboxFormFieldSignature)**
+Following example demonstrates using **[sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions))** method with **[ComboboxFormFieldSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.formfield/ComboboxFormFieldSignature)**
 
 **Sign document with Combobox Form field siganture**
 

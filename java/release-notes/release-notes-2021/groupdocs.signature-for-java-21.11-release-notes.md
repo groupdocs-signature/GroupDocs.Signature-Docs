@@ -33,9 +33,9 @@ Full List of Issues Covering all Changes in this Release
 
 ## Public API and Backward Incompatible Changes
 
-#### Public class [SignatureSettings](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/SignatureSettings) was updated with new properties that allow to skip document saving when modification methods had no effect
+#### Public class [SignatureSettings](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/SignatureSettings) was updated with new properties that allow to skip document saving when modification methods had no effect
 
-Public class [SignatureSettings](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/SignatureSettings) was updated with properties
+Public class [SignatureSettings](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/SignatureSettings) was updated with properties
 
 * property boolean [getSaveDocumentOnEmptyUpdate()] that allows to specify if document should not be saved when Update method had no affected signatures. By default this value equals to true.
 * property boolean [getSaveDocumentOnEmptyDelete()] that allows to specify if document should not be saved when Delete method had no affected signatures. By default this value equals to true.
@@ -68,7 +68,7 @@ Public class [SignatureSettings](https://apireference.groupdocs.com/signature/ja
    }
 ```
 
-#### New public enumeration [CryptoCurrencyType](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/CryptoCurrencyType) was added to specify various cryptocurrency types
+#### New public enumeration [CryptoCurrencyType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/CryptoCurrencyType) was added to specify various cryptocurrency types
 
 This enumeration keeps supported cryptocurrency types.
 
@@ -115,11 +115,11 @@ This enumeration keeps supported cryptocurrency types.
 	}
 ```
 
-#### New public class [CryptoCurrencyTransfer](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/CryptoCurrencyTransfer) was added to keep properties of cryptocurrency data for QR-code embedded object
+#### New public class [CryptoCurrencyTransfer](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/CryptoCurrencyTransfer) was added to keep properties of cryptocurrency data for QR-code embedded object
 
 This class contains following properties
 
-* int Type - the type of cryptocurency trasnfer [CryptoCurrencyType](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/CryptoCurrencyType)
+* int Type - the type of cryptocurency trasnfer [CryptoCurrencyType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/CryptoCurrencyType)
 * BigDecimal Amount is the value as amount of trasnfer.
 * String Address is the address of the trasnfer.
 * String Message to keep transfer message.
