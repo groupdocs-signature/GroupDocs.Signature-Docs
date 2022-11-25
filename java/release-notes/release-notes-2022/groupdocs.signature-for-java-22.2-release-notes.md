@@ -37,9 +37,9 @@ Full List of Issues Covering all Changes in this Release
 
 ## Public API and Backward Incompatible Changes
 
-#### Public class [PdfDigitalSignatureAppearance](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.appearances/PdfDigitalSignatureAppearance) was updated with new property that allows to specify foreground color of Digital Signature appearance on Pdf document page
+#### Public class [PdfDigitalSignatureAppearance](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.appearances/PdfDigitalSignatureAppearance) was updated with new property that allows to specify foreground color of Digital Signature appearance on Pdf document page
 
-Public class [PdfDigitalSignatureAppearance](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.appearances/PdfDigitalSignatureAppearance) was updated with propery
+Public class [PdfDigitalSignatureAppearance](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.appearances/PdfDigitalSignatureAppearance) was updated with propery
 
 * property Color [Foreground] that allows to specify foreground text color of signature labels.
 
@@ -60,7 +60,7 @@ Public class [PdfDigitalSignatureAppearance](https://apireference.groupdocs.com/
 ```
 
 
-#### Public enum [SpreadsheetSaveFileFormat](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/SpreadsheetSaveFileFormat) was updated with new supported save format types like Emf, Jpg and Png
+#### Public enum [SpreadsheetSaveFileFormat](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/SpreadsheetSaveFileFormat) was updated with new supported save format types like Emf, Jpg and Png
 
 Newly added format types SpreadsheetSaveFileFormat.Emf, SpreadsheetSaveFileFormat.Jpg and SpreadsheetSaveFileFormat.Png allow to save signed document to rquired format.
 
@@ -89,7 +89,7 @@ Newly added format types SpreadsheetSaveFileFormat.Emf, SpreadsheetSaveFileForma
 }
 ```
 
-#### Public class [ImageSignOption](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/ImageSignOptions) was extended with static method to create ImageSignOptions instance from base64 image string content 
+#### Public class [ImageSignOption](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/ImageSignOptions) was extended with static method to create ImageSignOptions instance from base64 image string content 
 
 The ImageSignOptions class implements IDisposable interface and contains static method fromBase64(String base64Content) to create ImageSignOptions from base64 string
 

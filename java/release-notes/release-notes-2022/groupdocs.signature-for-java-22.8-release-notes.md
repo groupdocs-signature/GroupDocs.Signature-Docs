@@ -49,9 +49,9 @@ The following topics from Developer Guide were changed
 
 ## Public API and Backward Incompatible Changes
 
-#### Public class [SignOptions](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options/package-frame) was updated with ZOrder property
+#### Public class [SignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options/package-frame) was updated with ZOrder property
 
-Property [ZOrder](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/SignOptions#setZOrder-int-) expects integer values to put the signatures on document page in proper order.
+Property [ZOrder](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/SignOptions#setZOrder-int-) expects integer values to put the signatures on document page in proper order.
 
 The following example demonstrates how to setup special ordering of the signatures on the document page.
 
@@ -99,7 +99,7 @@ public static void run()
 } 
 ```
 
-#### New public enumeration [WiFiEncryptionType](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/WiFiEncryptionType) was added to specify various encryption types for the WiFi QR Code entities
+#### New public enumeration [WiFiEncryptionType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/WiFiEncryptionType) was added to specify various encryption types for the WiFi QR Code entities
 
 This enumeration keeps supported WiFi encryption types.
 
@@ -141,9 +141,9 @@ This enumeration keeps supported WiFi encryption types.
     }
 ```
 
-#### Public class [WiFi](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/WiFi) was added to provide WiFi QR Code object properties
+#### Public class [WiFi](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/WiFi) was added to provide WiFi QR Code object properties
 
-Class [WiFi](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/WiFi) contains following properties to get or set.
+Class [WiFi](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/WiFi) contains following properties to get or set.
 
 The following example demonstrates how to create WiFi QR Code standard entry.
 

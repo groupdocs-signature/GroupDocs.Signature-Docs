@@ -78,13 +78,13 @@ Full List of Issues Covering all Changes in this Release 
 
 ## Public API and Backward Incompatible Changes
 
-#### Public class [BarcodeSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/BarcodeSignature) was updated with new properties and ability to contain Barcode image content.
+#### Public class [BarcodeSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/BarcodeSignature) was updated with new properties and ability to contain Barcode image content.
 
-Public class [BarcodeSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/BarcodeSignature) was updated with new properties.
+Public class [BarcodeSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/BarcodeSignature) was updated with new properties.
 
-*	new property [getFormat()](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/BarcodeSignature#getFormat()) of type [FileType](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/FileType) was added to specify the original image data format;
-*	new property byte[] [getContent()](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/BarcodeSignature#getContent()) was added to keep original Barcode image raw data content
-Since 20.9 version there's ability to grab content of Barcode signatures. To enable this feature the property [getReturnContent()](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/BarcodeSearchOptions#getReturnContent()) of [BarcodeSearchOptions](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/BarcodeSearchOptions) must be set to true. Also there is ability to specify output image content format type over property [getReturnContentType()](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/BarcodeSearchOptions#getReturnContentType()).
+*	new property [getFormat()](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/BarcodeSignature#getFormat()) of type [FileType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/FileType) was added to specify the original image data format;
+*	new property byte[] [getContent()](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/BarcodeSignature#getContent()) was added to keep original Barcode image raw data content
+Since 20.9 version there's ability to grab content of Barcode signatures. To enable this feature the property [getReturnContent()](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/BarcodeSearchOptions#getReturnContent()) of [BarcodeSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/BarcodeSearchOptions) must be set to true. Also there is ability to specify output image content format type over property [getReturnContentType()](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/BarcodeSearchOptions#getReturnContentType()).
 
 **New properties of BarcodeSignature**
 
@@ -152,13 +152,13 @@ Following example demonstrates how to specify Barcode Search with various option
 }
 ```
 
-#### Public class [BaseSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/BaseSignature) was updated with new properties to keep creation and modification dates.
+#### Public class [BaseSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/BaseSignature) was updated with new properties to keep creation and modification dates.
 
-Public class [BaseSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/BaseSignature) was updated with new properties.
+Public class [BaseSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/BaseSignature) was updated with new properties.
 
-*	new property [setCreatedOn()](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/BaseSignature#setCreatedOn(java.util.Date)) of type Date was added to specify the date when signature was created;
-*	new property [setModifiedOn()](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/BaseSignature#setModifiedOn(java.util.Date)) of type Date was added to specify the date when signature was updated
-Since 20.9 version there's ability to grab content of Barcode signatures. To enable this feature the property [getReturnContent()](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/BarcodeSearchOptions#getReturnContent()) of [BarcodeSearchOptions](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/BarcodeSearchOptions) must be set to true. Also there is ability to specify output image content format type over property [getReturnContentType()](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/BarcodeSearchOptions#getReturnContentType()).
+*	new property [setCreatedOn()](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/BaseSignature#setCreatedOn(java.util.Date)) of type Date was added to specify the date when signature was created;
+*	new property [setModifiedOn()](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/BaseSignature#setModifiedOn(java.util.Date)) of type Date was added to specify the date when signature was updated
+Since 20.9 version there's ability to grab content of Barcode signatures. To enable this feature the property [getReturnContent()](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/BarcodeSearchOptions#getReturnContent()) of [BarcodeSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/BarcodeSearchOptions) must be set to true. Also there is ability to specify output image content format type over property [getReturnContentType()](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/BarcodeSearchOptions#getReturnContentType()).
 
 **New properties of BaseSignature**
 
@@ -234,13 +234,13 @@ catch (Exception ex)
 }
 ```
 
-#### Public class [QrCodeSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/QrCodeSignature) was updated with new properties and ability to contain QrCode image content.
+#### Public class [QrCodeSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/QrCodeSignature) was updated with new properties and ability to contain QrCode image content.
 
 Public class QrCodeSignature was updated with new properties.
 
-*	new property [getFormat](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/QrCodeSignature#getFormat()) of type [FileType](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/FileType) was added to specify the original image data format;
-*	new property byte[] [getContent](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/QrCodeSignature#getContent()) was added to keep original QRCode image raw data content
-Since 20.9 version there's ability to grab content of QRCode signatures. To enable this feature the property [getReturnContent()](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/QrCodeSearchOptions#getReturnContent()) of [QrCodeSearchOptions](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/QrCodeSearchOptions) must be set to true. Also there is ability to specify output image content format type over property [getReturnContentType()](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/QrCodeSearchOptions#getReturnContentType()).
+*	new property [getFormat](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/QrCodeSignature#getFormat()) of type [FileType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/FileType) was added to specify the original image data format;
+*	new property byte[] [getContent](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/QrCodeSignature#getContent()) was added to keep original QRCode image raw data content
+Since 20.9 version there's ability to grab content of QRCode signatures. To enable this feature the property [getReturnContent()](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/QrCodeSearchOptions#getReturnContent()) of [QrCodeSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/QrCodeSearchOptions) must be set to true. Also there is ability to specify output image content format type over property [getReturnContentType()](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/QrCodeSearchOptions#getReturnContentType()).
 
  **New properties of QrCodeSignature**
  
@@ -308,12 +308,12 @@ for (QrCodeSignature qrCodeSignature : signatures)
 }
 ```
 
-#### Public class [BarcodeSearchOptions](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/BarcodeSearchOptions) was updated with new properties for getting Barcode image content.
+#### Public class [BarcodeSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/BarcodeSearchOptions) was updated with new properties for getting Barcode image content.
 
 Public class BarcodeSearchOptions was updated with new properties.
 
-*	new property boolean [setReturnContent()](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/BarcodeSearchOptions#setReturnContent(boolean)) was added to specify if returned Barcode signatures objects should keep original or converted (if property [setReturnContentType()](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/BarcodeSearchOptions#setReturnContentType(com.groupdocs.signature.domain.documentpreview.FileType)) was specified) Barcode image raw data. By default this value is set to false. 
-*	new property [setReturnContentType()](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/BarcodeSearchOptions#setReturnContentType(com.groupdocs.signature.domain.documentpreview.FileType)) of [FileType](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/FileType) type was added to specify non default returned Barcode image content type. By default this value is set to null that means original Barcode image format will be returned.
+*	new property boolean [setReturnContent()](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/BarcodeSearchOptions#setReturnContent(boolean)) was added to specify if returned Barcode signatures objects should keep original or converted (if property [setReturnContentType()](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/BarcodeSearchOptions#setReturnContentType(com.groupdocs.signature.domain.documentpreview.FileType)) was specified) Barcode image raw data. By default this value is set to false. 
+*	new property [setReturnContentType()](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/BarcodeSearchOptions#setReturnContentType(com.groupdocs.signature.domain.documentpreview.FileType)) of [FileType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/FileType) type was added to specify non default returned Barcode image content type. By default this value is set to null that means original Barcode image format will be returned.
 
 **New properties of BarcodeSearchOptions**
 
@@ -392,12 +392,12 @@ for (BarcodeSignature barcodeSignature : signatures) {
 }
 ```
 
-#### Public class [BarcodeSignOptions](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/BarcodeSignOptions) was updated with new properties for getting Barcode image content.
+#### Public class [BarcodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/BarcodeSignOptions) was updated with new properties for getting Barcode image content.
 
-Public class [BarcodeSignOptions](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/BarcodeSignOptions) was updated with new properties.
+Public class [BarcodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/BarcodeSignOptions) was updated with new properties.
 
-*	new property boolean [setReturnContent()](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/BarcodeSignOptions#setReturnContent(boolean)) was added to specify if returned Barcode signatures objects in [SignResult](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain/SignResult) should keep original or converted (if property [setReturnContentType()](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/BarcodeSignOptions#setReturnContentType(com.groupdocs.signature.domain.documentpreview.FileType)) was specified) Barcode image raw data. By default this value is set to false. 
-*	new property [setReturnContentType()](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/BarcodeSignOptions#setReturnContentType(com.groupdocs.signature.domain.documentpreview.FileType)) of [FileType](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/FileType) type was added to specify non default returned Barcode image content type. By default this value is set to null that means original Barcode image format will be returned.
+*	new property boolean [setReturnContent()](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/BarcodeSignOptions#setReturnContent(boolean)) was added to specify if returned Barcode signatures objects in [SignResult](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/SignResult) should keep original or converted (if property [setReturnContentType()](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/BarcodeSignOptions#setReturnContentType(com.groupdocs.signature.domain.documentpreview.FileType)) was specified) Barcode image raw data. By default this value is set to false. 
+*	new property [setReturnContentType()](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/BarcodeSignOptions#setReturnContentType(com.groupdocs.signature.domain.documentpreview.FileType)) of [FileType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/FileType) type was added to specify non default returned Barcode image content type. By default this value is set to null that means original Barcode image format will be returned.
 
 **New properties of BarcodeSignOptions**
 
@@ -513,12 +513,12 @@ for(BaseSignature o : signResult.getSucceeded()) {
 
 ```
 
-#### Public class [QrCodeSearchOptions](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/QrCodeSearchOptions) was updated with new properties for getting Barcode image content.
+#### Public class [QrCodeSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/QrCodeSearchOptions) was updated with new properties for getting Barcode image content.
 
 Public class QrCodeSearchOptions was updated with new properties.
 
-*	new property boolean [setReturnContent()](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/QrCodeSearchOptions#setReturnContent(boolean)) was added to specify if returned QrCode signatures objects should keep original or converted (if property [setReturnContentType()](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/QrCodeSearchOptions#setReturnContentType(com.groupdocs.signature.domain.documentpreview.FileType)) was specified)  QrCode image raw data. By default this value is set to false. 
-*	new property [setReturnContentType()]() of [FileType](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/FileType) type was added to specify non default returned QrCode image content type. By default this value is set to null that means original QrCode image format will be returned.
+*	new property boolean [setReturnContent()](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/QrCodeSearchOptions#setReturnContent(boolean)) was added to specify if returned QrCode signatures objects should keep original or converted (if property [setReturnContentType()](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/QrCodeSearchOptions#setReturnContentType(com.groupdocs.signature.domain.documentpreview.FileType)) was specified)  QrCode image raw data. By default this value is set to false. 
+*	new property [setReturnContentType()]() of [FileType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/FileType) type was added to specify non default returned QrCode image content type. By default this value is set to null that means original QrCode image format will be returned.
 
 **New properties of QrCodeSearchOptions**
 
@@ -601,12 +601,12 @@ for (QrCodeSignature qrCodeSignature : signatures)
 
 ```
 
-#### Public class [QrCodeSignOptions](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/QrCodeSignOptions) was updated with new properties for getting Barcode image content.
+#### Public class [QrCodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/QrCodeSignOptions) was updated with new properties for getting Barcode image content.
 
-Public class [QrCodeSignOptions](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/QrCodeSignOptions) was updated with new properties.
+Public class [QrCodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/QrCodeSignOptions) was updated with new properties.
 
-*	new property boolean [setReturnContent()](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/QrCodeSignOptions#setReturnContent(boolean)) was added to specify if returned QrCode signatures objects in SignResult should keep original or converted (if property [setReturnContentType()](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/QrCodeSignOptions#setReturnContentType(com.groupdocs.signature.domain.documentpreview.FileType)) was specified) QrCode image raw data. By default this value is set to false. 
-*	new property [setReturnContentType()](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/QrCodeSignOptions#setReturnContentType(com.groupdocs.signature.domain.documentpreview.FileType)) of [FileType](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/FileType) type was added to specify non default returned QrCode image content type. By default this value is set to null that means original QrCode image format will be returned.
+*	new property boolean [setReturnContent()](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/QrCodeSignOptions#setReturnContent(boolean)) was added to specify if returned QrCode signatures objects in SignResult should keep original or converted (if property [setReturnContentType()](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/QrCodeSignOptions#setReturnContentType(com.groupdocs.signature.domain.documentpreview.FileType)) was specified) QrCode image raw data. By default this value is set to false. 
+*	new property [setReturnContentType()](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/QrCodeSignOptions#setReturnContentType(com.groupdocs.signature.domain.documentpreview.FileType)) of [FileType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/FileType) type was added to specify non default returned QrCode image content type. By default this value is set to null that means original QrCode image format will be returned.
 
 **New properties of QrCodeSignOptions**
 
@@ -727,11 +727,11 @@ for(BaseSignature o : signResult.getSucceeded())
 }
 ```
 
-#### Public class  [DigitalSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/DigitalSignature) was updated with new properties and ability to set XAdES type. Supported only for Spreadsheets documents.
+#### Public class  [DigitalSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/DigitalSignature) was updated with new properties and ability to set XAdES type. Supported only for Spreadsheets documents.
 
 Public class DigitalSignature was updated with new property.
 
-*	new property [setXAdESType()](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/DigitalSignature#setXAdESType(int)) of type [XAdESType](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/XAdESType) was added to specify alternative digital signature format XML Advanced Electronic Signature (see more details here [XAdES on Wiki](https://en.wikipedia.org/wiki/XAdES));
+*	new property [setXAdESType()](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/DigitalSignature#setXAdESType(int)) of type [XAdESType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/XAdESType) was added to specify alternative digital signature format XML Advanced Electronic Signature (see more details here [XAdES on Wiki](https://en.wikipedia.org/wiki/XAdES));
 
 **New properties of DigitalSignature**
 
@@ -791,13 +791,13 @@ Signature signature = new Signature("sample.xlsx");
 }
 ```
 
-#### Public class [MetadataSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/MetadataSignature) was updated with new conversion methods to retrieve its values with various data types.
+#### Public class [MetadataSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/MetadataSignature) was updated with new conversion methods to retrieve its values with various data types.
 
 Public class MetadataSignature was updated with new data conversion methods
 
-*	new method [toSingle()](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/MetadataSignature#toSingle()) converts metadata signature value to float;
-*	new method [toSingle(Locale provider)](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/MetadataSignature#toSingle(java.util.Locale)) converts metadata signature value to float based provided format provider;
-All inherited classes ([ImageMetadataSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/ImageMetadataSignature), [PdfMetadataSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/PdfMetadataSignature), [PresentationMetadataSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/PresentationMetadataSignature), [SpreadsheetMetadataSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/SpreadsheetMetadataSignature), [WordProcessingMetadataSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/WordProcessingMetadataSignature)) are extended with there methods.
+*	new method [toSingle()](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/MetadataSignature#toSingle()) converts metadata signature value to float;
+*	new method [toSingle(Locale provider)](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/MetadataSignature#toSingle(java.util.Locale)) converts metadata signature value to float based provided format provider;
+All inherited classes ([ImageMetadataSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/ImageMetadataSignature), [PdfMetadataSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/PdfMetadataSignature), [PresentationMetadataSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/PresentationMetadataSignature), [SpreadsheetMetadataSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/SpreadsheetMetadataSignature), [WordProcessingMetadataSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/WordProcessingMetadataSignature)) are extended with there methods.
 
 **New methods of MetadataSignature**
 
@@ -835,7 +835,7 @@ All inherited classes ([ImageMetadataSignature](https://apireference.groupdocs.c
 
 ```
 
-#### Public class [PdfDigitalSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/PdfDigitalSignature) property String [getAuthority()](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/PdfDigitalSignature#getAuthority()) was marked as deprecated and will be removed since 20.10 version.
+#### Public class [PdfDigitalSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/PdfDigitalSignature) property String [getAuthority()](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/PdfDigitalSignature#getAuthority()) was marked as deprecated and will be removed since 20.10 version.
 
 
 **PdfDigitalSignature properties**
@@ -867,11 +867,11 @@ public class PdfDigitalSignature extends DigitalSignature
 
 ```
 
-#### Public class [TextSignOptions](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/TextSignOptions) was updated with new property for document specific signatures. Supported only for text watermarks for WordProcessing documents yet.
+#### Public class [TextSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/TextSignOptions) was updated with new property for document specific signatures. Supported only for text watermarks for WordProcessing documents yet.
 
-Public class [TextSignOptions](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/TextSignOptions) was updated with new property.
+Public class [TextSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/TextSignOptions) was updated with new property.
 
-*	new property [setNative](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/TextSignOptions#setNative(boolean)) of type boolean was added to specify document specific signatures implementations. Now it influences only text watermarks for WordProcessing, but it's application area could be widened soon.
+*	new property [setNative](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/TextSignOptions#setNative(boolean)) of type boolean was added to specify document specific signatures implementations. Now it influences only text watermarks for WordProcessing, but it's application area could be widened soon.
 
 **New properties of TextSignOptions**
 

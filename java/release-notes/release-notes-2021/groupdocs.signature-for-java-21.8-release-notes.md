@@ -41,7 +41,7 @@ Full List of Issues Covering all Changes in this Release
 
 ## Public API and Backward Incompatible Changes
 
-#### New public static FileType [FileType](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/FileType) were added to support new Spreadsheet file formats
+#### New public static FileType [FileType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/FileType) were added to support new Spreadsheet file formats
 
 These FileType static objects describe new supported Spreadsheet document types.
 
@@ -68,9 +68,9 @@ These FileType static objects describe new supported Spreadsheet document types.
     };
 ```
 
-#### Public class [SignatureSettings](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/SignatureSettings) was updated with new property that allow to exclude deleted Signatures from Document information result
+#### Public class [SignatureSettings](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/SignatureSettings) was updated with new property that allow to exclude deleted Signatures from Document information result
 
-Public class [SignatureSettings](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature/SignatureSettings) was updated with property
+Public class [SignatureSettings](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/SignatureSettings) was updated with property
 
 * property bool [ShowDeletedSiganturesInfo] that allows to specify if deleted Signature information should be included into the Document Information structure. By default this value is enabled.
 
@@ -90,9 +90,9 @@ Public class [SignatureSettings](https://apireference.groupdocs.com/signature/ja
 		
 ```
 
-### Public interface [IDocumentInfo](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/IDocumentInfo) was extended with new property Signatures
+### Public interface [IDocumentInfo](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/IDocumentInfo) was extended with new property Signatures
 
-Public interface **[IDocumentInfo](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/IDocumentInfo)** was extended with new property Signatures.
+Public interface **[IDocumentInfo](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/IDocumentInfo)** was extended with new property Signatures.
 
 * Signatures property as IList of BaseSignature objects to keep the list of all document signatures.
 
@@ -113,9 +113,9 @@ Public interface **[IDocumentInfo](https://apireference.groupdocs.com/signature
 	}
 ```
 
-### Public class [DocumentInfo](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/DocumentInfo) was extended with new property Signatures
+### Public class [DocumentInfo](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/DocumentInfo) was extended with new property Signatures
 
-Public interface **[DocumentInfo](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/DocumentInfo)** was extended with new property **Signatures** to keep the list of document signatures of all types.
+Public interface **[DocumentInfo](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/DocumentInfo)** was extended with new property **Signatures** to keep the list of document signatures of all types.
 
 **New property Signatures of DocumentInfo class**
 

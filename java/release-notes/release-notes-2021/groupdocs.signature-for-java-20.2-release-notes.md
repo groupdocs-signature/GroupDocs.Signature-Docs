@@ -63,9 +63,9 @@ Full List of Issues Covering all Changes in this Release
 
 ## Public API and Backward Incompatible Changes
 
-### New public enumeration type [PdfDigitalSignatureType](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/PdfDigitalSignatureType ) was added.
+### New public enumeration type [PdfDigitalSignatureType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/PdfDigitalSignatureType ) was added.
 
-New public enumeration type **[PdfDigitalSignatureType](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/PdfDigitalSignatureType )** was added. This type describes possible values of PDF digital signature types.
+New public enumeration type **[PdfDigitalSignatureType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/PdfDigitalSignatureType )** was added. This type describes possible values of PDF digital signature types.
 
 * At this moment enumeration contains two options Signature and Certificate. In first case a PDF document is signed digitally in second one it is digitally certified.
 
@@ -97,9 +97,9 @@ public final class PdfDigitalSignatureType extends Object
 }
 ```
 
-### New public struct [TimeStamp](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.structs/TimeStamp ) was added.
+### New public struct [TimeStamp](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.structs/TimeStamp ) was added.
 
-New public struct **[TimeStamp](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.structs/TimeStamp )** was added. This struct could be used for getting time stamp from third-party site to PDF digital signature.
+New public struct **[TimeStamp](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.structs/TimeStamp )** was added. This struct could be used for getting time stamp from third-party site to PDF digital signature.
 
 *   At this moment enumeration struct contains Url, User and Password properties.
 
@@ -151,9 +151,9 @@ public class TimeStamp
 }
 ```
 
-### Public class [PdfDigitalSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/PdfDigitalSignature ) was updated with new property.
+### Public class [PdfDigitalSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/PdfDigitalSignature ) was updated with new property.
 
-Public class **[PdfDigitalSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/PdfDigitalSignature )** was updated with new property for PDF document specific signatures. Supported only for digital signatures.
+Public class **[PdfDigitalSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/PdfDigitalSignature )** was updated with new property for PDF document specific signatures. Supported only for digital signatures.
 
 * new property Type of type PdfDigitalSignatureType was added to specify PDF document specific type of digital signatures.
 * new property TimeStamp of type TimeStamp was added to add possibility for getting time stamp from third-party site to PDF digital signatures.
@@ -226,9 +226,9 @@ public class PdfDigitalSignature extends DigitalSignature
 }
 ```
 
-### New public enumeration type [ProcessType](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/ProcessType ) was added.
+### New public enumeration type [ProcessType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/ProcessType ) was added.
 
-New public enumeration type **[ProcessType](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/ProcessType )** was added. This type describes document process type of supported operations.
+New public enumeration type **[ProcessType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/ProcessType )** was added. This type describes document process type of supported operations.
 
 **Enumeration of processing types**
 
@@ -275,9 +275,9 @@ public final class ProcessType extends Object
 }
 ```
 
-### New public class [ProcessLog](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain/ProcessLog) was added.
+### New public class [ProcessLog](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/ProcessLog) was added.
 
-New public class type **[ProcessLog](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain/ProcessLog)** was added to keep document process information like date/time, type of the process (**[ProcessType](https://apireference.groupdocs.com/signature/java/groupdocs.signature.domain/processtype)**), message, quantity of succeeded and quantity of failed signatures.
+New public class type **[ProcessLog](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/ProcessLog)** was added to keep document process information like date/time, type of the process (**[ProcessType](https://reference.groupdocs.com/signature/java/groupdocs.signature.domain/processtype)**), message, quantity of succeeded and quantity of failed signatures.
 
 **ProcessLog class properties**
 
@@ -334,9 +334,9 @@ public final class ProcessLog
 }
 ```
 
-### Public interface [IDocumentInfo](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/IDocumentInfo ) was extended with new property
+### Public interface [IDocumentInfo](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/IDocumentInfo ) was extended with new property
 
-Public interface **[IDocumentInfo](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/IDocumentInfo )** was extended with new properties. 
+Public interface **[IDocumentInfo](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/IDocumentInfo )** was extended with new properties. 
 
 * ProcessLogs property as IList of ProcessLog objects to keep the list of document process history log records.
 
@@ -359,9 +359,9 @@ public interface IDocumentInfo
 }
 ```
 
-### Public class [DocumentInfo](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/DocumentInfo ) was extended with new property.
+### Public class [DocumentInfo](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/DocumentInfo ) was extended with new property.
 
-Public interface **[DocumentInfo](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/DocumentInfo )** was extended with new property **ProcessLogs** to keep the list of document process history log records.
+Public interface **[DocumentInfo](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/DocumentInfo )** was extended with new property **ProcessLogs** to keep the list of document process history log records.
 
 **New property ProcessLogs of DocumentInfo class**
 
@@ -380,9 +380,9 @@ public class DocumentInfo implements IDocumentInfo
 ```
 
 
-### New property Deleted of [BaseSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/BaseSignature ) was added.
+### New property Deleted of [BaseSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/BaseSignature ) was added.
 
-New boolean property Deleted was added to class **[BaseSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/BaseSignature )**. This property signals if Signature object was deleted from the Document.
+New boolean property Deleted was added to class **[BaseSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/BaseSignature )**. This property signals if Signature object was deleted from the Document.
 
 ```java 
 public abstract class BaseSignature
@@ -399,15 +399,15 @@ public abstract class BaseSignature
 }
 ```
 
-### Obsolete member Stamp was removed from enumeration [TextSignatureImplementation](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/TextSignatureImplementation ).
+### Obsolete member Stamp was removed from enumeration [TextSignatureImplementation](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/TextSignatureImplementation ).
 
-Obsolete member Stamp of enumeration **[TextSignatureImplementation](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/TextSignatureImplementation )** was removed and no longer supported. Please use enumeration value Native instead.
+Obsolete member Stamp of enumeration **[TextSignatureImplementation](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/TextSignatureImplementation )** was removed and no longer supported. Please use enumeration value Native instead.
 
-**Obsolete member Border was removed from [ImageAppearance](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.options.appearances/ImageAppearance )**
+**Obsolete member Border was removed from [ImageAppearance](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.appearances/ImageAppearance )**
 
-Obsolete member Stamp of enumeration **[TextSignatureImplementation](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/TextSignatureImplementation )** was removed and no longer supported. Please use enumeration value Native instead.
+Obsolete member Stamp of enumeration **[TextSignatureImplementation](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/TextSignatureImplementation )** was removed and no longer supported. Please use enumeration value Native instead.
 
-### New constructor with string signature unique identifier for class [DigitalSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/DigitalSignature ) is the list of processed signatures
+### New constructor with string signature unique identifier for class [DigitalSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/DigitalSignature ) is the list of processed signatures
 
 New constructor class DigitalSignature allows to create instance with predefined signature identifier.
 
@@ -446,9 +446,9 @@ final Signature signature = new Signature("signedSample.pdf");
 }
 ```
 
-### New boolean property ShowProperties of class [PdfDigitalSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/PdfDigitalSignature ) was added
+### New boolean property ShowProperties of class [PdfDigitalSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/PdfDigitalSignature ) was added
 
-New boolean property ShowProperties was added to class **[PdfDigitalSignature](https://apireference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/PdfDigitalSignature )**. This property allow to adjust appearance of Digital signture on Pdf document page.
+New boolean property ShowProperties was added to class **[PdfDigitalSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/PdfDigitalSignature )**. This property allow to adjust appearance of Digital signture on Pdf document page.
 
 ```java
 public class PdfDigitalSignature extends DigitalSignature
