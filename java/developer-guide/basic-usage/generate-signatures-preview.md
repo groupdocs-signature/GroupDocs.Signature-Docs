@@ -44,7 +44,7 @@ Stream that were created by [createSignatureStream](https://reference.groupdocs
 
 ## CreateSignatureStream delegate implementation
 
-GroupDocs.Signature expects [createSignatureStream](https://reference.groupdocs.com/https://apireference-qa.groupdocs.com/signature/java/com.groupdocs.signature.options/PageSignatureStreamFactory#createSignatureStream(com.groupdocs.signature.options.PreviewSignatureOptions)) delegate to obtain each signature stream for image preview generation process
+GroupDocs.Signature expects [createSignatureStream](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options/PageSignatureStreamFactory#createSignatureStream(com.groupdocs.signature.options.PreviewSignatureOptions)) delegate to obtain each signature stream for image preview generation process
 
 ```java
 private static OutputStream createSignatureStream(PreviewSignatureOptions previewOptions)
