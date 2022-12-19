@@ -1,22 +1,26 @@
 ---
 id: installation
 url: signature/java/installation
-title: Development Environment Installation and Configuration
+title: Installation
 weight: 4
-description: "This guide explains how to install GroupDocs.Signature for Java to your environment"
-keywords:
+description: "GroupDocs.Signature for Java installation"
+keywords: "groupdocs signature java, installation, maven"
 productName: GroupDocs.Signature for Java
 hideChildren: False
+toc: True
 ---
-## Installation from GroupDocs Repository using Maven
 
-GroupDocs hosts all Java APIs on [GroupDocs Repository](https://releases.groupdocs.com/java/repo/). You can easily use [GroupDocs.Signature for Java](https://releases.groupdocs.com/java/repo/com/groupdocs/groupdocs-signature/) API directly in your Maven projects with simple configurations.
+## Install using Maven
 
-### Specify GroupDocs Repository Configuration
+All Java packages are hosted at [GroupDocs Artifact Repository](https://repository.groupdocs.com/). You can easily reference GroupDocs.Signature for Java API directly in your Maven project using following steps.
 
-First, you need to specify GroupDocs repository configuration/location in your Maven `pom.xml` as follows: 
+### Add GroupDocs Artifact Repository
 
-```java
+First, you need to specify repository configuration/location in your Maven `pom.xml` as follows:
+
+{{< tabs "example1">}}
+{{< tab "pom.xml" >}}
+```xml
 <repositories>
 	<repository>
 		<id>GroupDocs Artifact Repository</id>
@@ -25,12 +29,16 @@ First, you need to specify GroupDocs repository configuration/location in your M
 	</repository>
 </repositories>
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
-### Define GroupDocs.Signature for Java API Dependency
+### Add GroupDocs.Signature as a ependency
 
 Then define GroupDocs.Signature for Java API dependency in your `pom.xml` as follows:
 
-```java
+{{< tabs "example2">}}
+{{< tab "pom.xml" >}}
+```xml
 <dependencies>
     <dependency>
         <groupId>com.groupdocs</groupId>
@@ -39,14 +47,5 @@ Then define GroupDocs.Signature for Java API dependency in your `pom.xml` as 
     </dependency>
 </dependencies>
 ```
-
-After performing above-mentioned steps, GroupDocs.Signature for Java dependency will finally be added to your Maven project.
-
-## Install from official GroupDocs website
-
-You can follow the steps below to reference GroupDocs.Signature for Java downloaded from official website [Downloads section](https://releases.groupdocs.com/signature/java/):
-
-1.  Unpack zip archive .
-2.  Switch to **lib** folder.
-3.  Run **install.bat** (for Windows) or **install.sh** (for Linux) file to install the library in your local maven repository.
-4.  After this you should add the signature **dependency** block to your pom.xml project file.
+{{< /tab >}}
+{{< /tabs >}}
