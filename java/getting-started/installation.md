@@ -32,7 +32,7 @@ First, you need to specify repository configuration/location in your Maven `pom
 {{< /tab >}}
 {{< /tabs >}}
 
-### Add GroupDocs.Signature as a ependency
+### Add GroupDocs.Signature as a dependency
 
 Then define GroupDocs.Signature for Java API dependency in your `pom.xml` as follows:
 
