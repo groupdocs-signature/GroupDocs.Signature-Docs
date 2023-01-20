@@ -15,10 +15,10 @@ structuredData:
         productPlatform: net 
     showVideo: True
     howTo:
-        name: How to obtain document pages as image with C# 
+        name: How to obtain document page as image with C# 
         description: Getting document pages saved as images of various types in C#
         steps:
-        - name: Implementing auxiliary delegates.
+        - name: Implement delegates to create and release image stream for each page.
           text: We don't know how you are going to process and release generated previews, so you need to provide CreatePageStream and ReleasePageStream methods. 
         - name: Load particular file of supported type.
           text: Construct Signature class instance by passing either file path or stream. 

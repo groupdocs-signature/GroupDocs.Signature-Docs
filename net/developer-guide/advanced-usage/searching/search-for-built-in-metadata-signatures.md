@@ -53,7 +53,7 @@ using (Signature signature = new Signature("sample.xlsx"))
     Console.WriteLine("\nSource document contains following signatures.");
     foreach (var metadataSignature in signatures)
     {
-        Console.WriteLine("Metadata signature found. Name : {0}. Value: {1}", metadataSignature.Name, metadataSignature.Value);
+        Console.WriteLine("Metadata signature found. Name : {0}. Value: {1}. Type: {2}", metadataSignature.Name, metadataSignature.Value,metadataSignature.Type);
     }
 }
 ```

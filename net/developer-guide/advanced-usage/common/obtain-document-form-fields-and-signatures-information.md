@@ -99,7 +99,7 @@ using (Signature signature = new Signature("sampleSigned.pdf"))
     Console.WriteLine($"Document Metadata signatures : {documentInfo.MetadataSignatures.Count}");
     foreach (MetadataSignature metadataSignature in documentInfo.MetadataSignatures)
     {
-        Console.WriteLine($" - #{metadataSignature.Name} = {metadataSignature.Value}");
+        Console.WriteLine($" - #{metadataSignature.Name} = {metadataSignature.Value}.Type:{metadataSignature.Type}");
     }
 }
 ```

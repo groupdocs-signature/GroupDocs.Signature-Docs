@@ -18,7 +18,7 @@ structuredData:
         name: How to create signatures artifacts of documents with C# 
         description: Get previews images of signatures for various document types in C#
         steps:
-        - name: Implementing auxiliary delegates.
+        - name: Implement delegates to create and release image stream for each page.
           text: We don't know how you are going to process and release generated previews, so you need to provide CreateSignatureStream and ReleaseSignatureStream delegates. 
         - name: Load particular file with supported type.
           text: Construct Signature class instance by passing either file path or stream. 
