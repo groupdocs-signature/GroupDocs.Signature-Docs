@@ -1,10 +1,10 @@
 ---
-id: groupdocs-signature-for-net-latest-release-notes
-url: signature/net/groupdocs-signature-for-net-latest-release-notes
-title: Latest release (March 2023)
-weight: 0
-description: "Changes that shipped in the latest version of GroupDocs.Signature for .NET"
-keywords: release notes, groupdocs.signature for .net, latest
+id: groupdocs-signature-for-net-23-3-release-notes
+url: signature/net/groupdocs-signature-for-net-23-3-release-notes
+title: GroupDocs.Signature for .NET 23.3 Release Notes
+weight: 16
+description: "Features and fixes that are shipped in GroupDocs.Signature for .NET 23.3"
+keywords: release notes, groupdocs.signature, .net, 23.3
 productName: GroupDocs.Signature for .NET
 hideChildren: False
 toc: True
