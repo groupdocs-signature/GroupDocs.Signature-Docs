@@ -12,7 +12,7 @@ hideChildren: False
 
 ## Major Features
 
-The main features of this release are improvements with logging, fixes the issues under Linux platform and new property DataType of the metadata signatures. The updates with logging are related to extended messages for Trace log level that allow to log information events. Below the list of most notable changes in release of GroupDocs.Signature for .NET 21.12:
+The main features of this release are improvements with logging, fixes the issues under Linux platform and new property DataType of the metadata signatures. The updates with logging are related to extended messages for Trace log level that allow to log information events. Below the list of most notable changes in release of GroupDocs.Signature for .NET 22.12:
 
 * Fixed the error with previewing Word Processing documents on the Linux platform
 * Fixed unexpected QRCode Signature verification result under Linux OS
