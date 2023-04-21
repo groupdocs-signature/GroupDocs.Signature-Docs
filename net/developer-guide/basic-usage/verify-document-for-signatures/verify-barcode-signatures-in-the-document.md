@@ -2,6 +2,7 @@
 id: verify-barcode-signatures-in-the-document
 url: signature/net/verify-barcode-signatures-in-the-document
 title: Verify Barcode signatures in the document
+linkTitle: 🛡 ✅ Barcodes
 weight: 1
 description: "This topic explains how to verify document for Barcode electronic signatures with GroupDocs.Signature API."
 keywords: 

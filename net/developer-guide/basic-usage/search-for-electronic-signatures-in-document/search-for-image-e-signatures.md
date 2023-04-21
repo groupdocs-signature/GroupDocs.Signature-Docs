@@ -2,6 +2,7 @@
 id: search-for-image-e-signatures
 url: signature/net/search-for-image-e-signatures
 title: How to search for Image signatures
+linkTitle: 🔍 Images
 weight: 7
 description: "This article explains how to search for Image electronic signatures with GroupDocs.Signature API."
 keywords: 

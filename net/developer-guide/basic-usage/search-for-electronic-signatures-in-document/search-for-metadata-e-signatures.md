@@ -2,6 +2,7 @@
 id: search-for-metadata-e-signatures
 url: signature/net/search-for-metadata-e-signatures
 title: How to search for Metadata signatures
+linkTitle: 🔍 Metadata
 weight: 4
 description: "This topic explains how to search for metadata signatures within the documents with GroupDocs.Signature API."
 keywords: 

@@ -2,6 +2,7 @@
 id: esign-image-with-metadata-signature
 url: signature/net/esign-image-with-metadata-signature
 title: eSign Image with Metadata signature
+linkTitle: eSign Image
 weight: 1
 description: "This article shows how to add metadata signatures to the image exif metadata layer with various data types"
 keywords: image exif, image metadata, image meta exif, image exif signature

@@ -1,7 +1,8 @@
 ---
 id: esign-document-with-qr-code-signature
 url: signature/net/esign-document-with-qr-code-signature
-title: eSign document with QR-code signature
+title: eSign document with QR code signature
+linkTitle: QR Code signature
 weight: 6
 description: "This article explains how sign documents with electronic signature as QR code on document page with GroupDocs.Signature API."
 keywords: electronic signature, QR code 

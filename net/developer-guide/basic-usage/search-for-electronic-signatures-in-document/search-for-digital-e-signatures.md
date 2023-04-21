@@ -2,6 +2,7 @@
 id: search-for-digital-e-signatures
 url: signature/net/search-for-digital-e-signatures
 title: How to search for Digital signatures
+linkTitle: 🔍 Digital certificates
 weight: 2
 description: "This topic explains how to search for digital electronic signatures across the documents with GroupDocs.Signature API."
 keywords: 

@@ -2,6 +2,7 @@
 id: verify-text-signatures-in-the-document
 url: signature/net/verify-text-signatures-in-the-document
 title: Verify Text signatures in the document
+linkTitle: 🛡 ✅ Texts
 weight: 4
 description: "This topic explains how to verify Text electronic signatures with GroupDocs.Signature API."
 keywords: 

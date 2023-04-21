@@ -2,6 +2,7 @@
 id: esign-document-with-digital-signature
 url: signature/net/esign-document-with-digital-signature
 title: eSign document with Digital signature
+linkTitle: Digital signature
 weight: 2
 description: "This article explains how digitally esign documents with certificates using GroupDocs.Signature API"
 keywords: digital signature, certificate, digitally esign, esign with certificate, pfx, pfx certifiate
