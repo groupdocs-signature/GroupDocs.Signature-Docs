@@ -2,7 +2,7 @@
 id: verify-digital-signatures-in-the-document
 url: signature/net/verify-digital-signatures-in-the-document
 title: Verify Digital signatures in the document
-linkTitle: 🛡 ✅ Digital certificates
+linkTitle: 🛡 Digital certificates
 weight: 2
 description: "This topic explains how to verify digital electronic signatures with GroupDocs.Signature API."
 keywords: 

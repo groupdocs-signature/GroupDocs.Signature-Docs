@@ -2,6 +2,7 @@
 id: update-image-signatures-in-document
 url: signature/net/update-image-signatures-in-document
 title: Update Image signatures in document
+linkTitle: ✎ Image
 weight: 2
 description: "This article explains how to update Image electronic signatures with GroupDocs.Signature API."
 keywords: 

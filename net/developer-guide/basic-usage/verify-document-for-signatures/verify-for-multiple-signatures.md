@@ -2,7 +2,7 @@
 id: verify-for-multiple-signatures
 url: signature/net/verify-for-multiple-signatures
 title: Verify for multiple signatures
-linkTitle: 🛡 ✅ Multiple types
+linkTitle: 🛡 Multiple types
 weight: 5
 description: "This topic explains how to verify electronic signatures of various types with GroupDocs.Signature API."
 keywords: 

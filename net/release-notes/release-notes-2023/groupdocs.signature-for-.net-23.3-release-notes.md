@@ -47,7 +47,7 @@ This release includes three features and one enhancement:
 {{< tab "C#" >}}
 ```cs
 /// <summary>
-/// Verify document and list Succeded signatures
+/// Sign azw3 file type
 /// </summary>
 using (var signature = new Signature("sample.azw3"))
 {
