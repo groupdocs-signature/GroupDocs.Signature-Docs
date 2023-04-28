@@ -75,7 +75,7 @@ using (var signature = new Signature("sample.zip"))
 
 🌐 [FileTypes](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/filetype/#properties) was extended with new [TAR](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/filetype/tar/) supported file type.
 
-{{< tabs "example1">}}
+{{< tabs "example2">}}
 {{< tab "C#" >}}
 ```cs
 /// <summary>
@@ -112,7 +112,7 @@ using (var signature = new Signature("sample.tar"))
 
 🌐 [FileTypes](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/filetype/#properties) was extended with new [SevenZip](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/filetype/sevenzip/) supported file type.
 
-{{< tabs "example1">}}
+{{< tabs "example3">}}
 {{< tab "C#" >}}
 ```cs
 /// <summary>
@@ -144,7 +144,7 @@ using (var signature = new Signature("sample.7z"))
 
 🌐 Class [DocumentInfo](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/idocumentinfo/) was extended with the new property [Documents](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/idocumentinfo/documents/) to represent the list of the document info with the archives.
 
-{{< tabs "example1">}}
+{{< tabs "example4">}}
 {{< tab "C#" >}}
 ```cs
 /// <summary>
@@ -174,7 +174,7 @@ using (var signature = new Signature("sample.zip"))
 
 🌐 The [SignResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult) will keep the list of succeeded and failed [DocumentResultSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/documentresultsignature/#properties) elements in the result of the [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method.
 
-{{< tabs "example1">}}
+{{< tabs "example5">}}
 {{< tab "C#" >}}
 ```cs
 /// <summary>

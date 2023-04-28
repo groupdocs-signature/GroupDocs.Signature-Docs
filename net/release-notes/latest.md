@@ -10,46 +10,46 @@ hideChildren: False
 toc: True
 ---
 
-{{< alert style="info" >}}NOTE: From this release we no longer support .NET Framework 4.0. The minimal supported versions is NET Framework 4.6.2 and higher{{< /alert >}}
+{{< alert style="info" >}} ⓘ INFORMATION: Starting with this release, we now support processing documents within archive files. Currently, supported formats include ZIP, TAR, and 7Z for signing documents contained in these archives. In the upcoming version, we will introduce additional operations such as verification, searching, modification, and more.{{< /alert >}}
 
-There are 10+ features, enhancements, and bug fixes in this release.
+There are about ten features, enhancements, and bug fixes in this release.
 
 ## Full list of changes in this release
 
 | Key | Category | Summary |
 | --- | --- | --- |
-|SIGNATURENET-4387|Feature|[Implement support of AZW3 File Type](#implement-support-of-azw3-file-type)|
-|SIGNATURENET-4553|Feature|[Added HIBC PAS QR Codes QR, Aztec and DataMatrix](#added-hibc-pas-qa-codes-qa-aztec-and-datamatrix)|
-|SIGNATURENET-4551|Feature|[Added HIBC PASCode39 and PASCode128 Barcodes](#added-hibc-pascode39-and-pascode128-barcodes)|
-|SIGNATURENET-4413|Enhancement|[Implement AZW3 as new export save file format for Word Processing documents](#implement-azw3-as-new-export-save-file-format-for-word-processing-documents)|
-|SIGNATURENET-4417|Enhancement|Migrate product from .NET 40 to NET 462 frameworks|
-|SIGNATURENET-4428|Enhancement|Replace DateTime Now values with the Universal format UTC-now|
-|SIGNATURENET-4428|Fix|The exception is thrown when .ps document is being opened|
-|SIGNATURENET-4314|Fix|Exception with UTC DateTime format with Digital PDF signatures|
-|SIGNATURENET-4313|Fix|Implicit using of third party Org.BouncyCastle in referenced libraries|
-|SIGNATURENET-4312|Fix|Fixed issue with casting object types on Open Office documents|
+|SIGNATURENET-4369| ★ Feature|[Implement support of ZIP File Type](#implement-support-of-zip-file-type)|
+|SIGNATURENET-4442| ★ Feature|[Implement support of TAR File Type](#implement-support-of-tar-file-type)|
+|SIGNATURENET-4452| ★ Feature|[Implement support of 7z File Type](#implement-support-of-7z-file-type)|
+|SIGNATURENET-4479| ★ Feature|[Implement Document Info for archives](#implement-document-info-for-archives)|
+|SIGNATURENET-4476| ⚙️ Enhancement|[Support Succeeded and Failed list as result of processing archives](#support-succeeded-and-failed-list-as-result-of-processing-archives)|
+|SIGNATURENET-4374| 🔧 Fix|Error on signing Wordprocessing documents digitally with Linux generated certificates|
+|SIGNATURENET-4373| 🔧 Fix|Exception on processing Spreadsheets file with Digital signatures with non Win-OS certificates|
+|SIGNATURENET-4203| 🔧 Fix|Some tests for PDF throw "Invalid provider type specified" exception|
+|SIGNATURENET-4169| 🔧 Fix|Some files couldn't be processed with curent version of the product|
 
 ## Major Features
 
-This release includes three features and one enhancement:
+This release includes four new archive features and one enhancement:
 
-* [Implement support of AZW3 File Type](#implement-support-of-azw3-file-type)
-* [Added HIBC PAS QR Codes QR, Aztec and DataMatrix](#added-hibc-pas-qa-codes-qa-aztec-and-datamatrix)
-* [Added HIBC PASCode39 and PASCode128 Barcodes](#added-hibc-pascode39-and-pascode128-barcodes)
-* [Implement AZW3 as new export save file format for Word Processing documents](#implement-azw3-as-new-export-save-file-format-for-word-processing-documents)
+* [Implement support of ZIP File Type](#implement-support-of-zip-file-type)
+* [Implement support of TAR File Type](#implement-support-of-tar-file-type)
+* [Implement support of 7z File Type](#implement-support-of-7z-file-type)
+* [Implement Document Info for archives](#implement-document-info-for-archives)
+* [Support Succeeded and Failed list as result of processing archives](#support-succeeded-and-failed-list-as-result-of-processing-archives)
 
+### Implement support of ZIP File Type
 
-### Implement support of AZW3 File Type
-
-[FileTypes](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/filetype/#properties) was extended with new [AZW3](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/filetype/azw3/) supported file type.
+🌐 New class [DocumentResultSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/documentresultsignature/#properties) was added to describe the processed document within the archive file. This class extends [BaseSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/basesignature/) and implements [IResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/iresult/) interface as container of the process (sign, verify, search) over this particular document. See example below.
+🌐 [FileTypes](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/filetype/#properties) was extended with new [ZIP](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/filetype/zip/) supported file type.
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```cs
 /// <summary>
-/// Verify document and list Succeded signatures
+/// Get ZIP file and sign all documents within the archive
 /// </summary>
-using (var signature = new Signature("sample.azw3"))
+using (var signature = new Signature("sample.zip"))
 {
     // create sign options
     var options = new TextSignOptions("signed!")
@@ -58,118 +58,153 @@ using (var signature = new Signature("sample.azw3"))
         Left = 100,
         Top = 100
     };
-    // sign document to file
-    SignResult result = signature.Sign("output.azw3", options);
+    // sign archive to new zip file
+    SignResult result = signature.Sign("output.zip", options);
+    // analyze signed documents
+    Console.WriteLine("\nList of successfully signed documents:");
+    foreach (DocumentResultSignature document in signResult.Succeeded)
+    {
+        Console.WriteLine($"Document {document.FileName} was signed with. Processing time: {document.ProcessingTime}, mls");
+    }
 }
 ```
 {{< /tab >}}
 {{< /tabs >}}
 
-### Added HIBC PAS QR Codes QR, Aztec and DataMatrix
+### Implement support of TAR File Type
 
-[QRCodeTypes](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodetypes/) static class was updated with new types to support [HIBC PAS QR](https://en.wikipedia.org/wiki/Health_Industry_Business_Communications_Council). 
+🌐 [FileTypes](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/filetype/#properties) was extended with new [TAR](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/filetype/tar/) supported file type.
 
 {{< tabs "example2">}}
-{{< tab "C# QR-Code Types" >}}
+{{< tab "C#" >}}
 ```cs
 /// <summary>
-/// HIBC PAS QR-Code Type object.
+/// Get TAR file and sign all documents within the archive
 /// </summary>
-public static readonly QrCodeType HIBCPASQR;
-
-/// <summary>
-/// HIBC PAS Data Matrix QR-Code Type object.
-/// </summary>
-public static readonly QrCodeType HIBCPASDataMatrix;
-
-/// <summary>
-/// HIBC PAS Aztec QR-Code Type object.
-/// </summary>
-public static readonly QrCodeType HIBCPASAztec;
-```
-{{< /tab >}}
-{{< tab "C# Usage example" >}}
-```cs
-using (Signature signature = new Signature("sample.pdf""))
+using (var signature = new Signature("sample.tar"))
 {
-    // create barcode option with predefined QR-Code text that follow HIBC LIC standard
-    var options = new QrCodeSignOptions("A123PROD30917/75#422011907#GP293")
+    // create list of signature options
+    BarcodeSignOptions bcOptions1 = new BarcodeSignOptions("12345678", BarcodeTypes.Code128)
     {
-        // setup Barcode encoding type
-        EncodeType = QrCodeTypes.HIBCPASQR,
-        // set signature position
         Left = 100,
         Top = 100
     };
-    // sign document to file
-    SignResult result = signature.Sign("output.pdf", options);
+    QrCodeSignOptions qrOptions2 = new QrCodeSignOptions("12345678", QrCodeTypes.QR)
+    {
+        Left = 400,
+        Top = 400
+    };
+    List<SignOptions> listOptions = new List<SignOptions>() { bcOptions1, qrOptions2 };
+    // sign archive to new tar file with list of options
+    SignResult result = signature.Sign("output.tar", listOptions);
+    // analyze signed documents
+    Console.WriteLine("\nList of successfully signed documents:");
+    foreach (DocumentResultSignature document in signResult.Succeeded)
+    {
+        Console.WriteLine($"Document {document.FileName} was signed with. Processing time: {document.ProcessingTime}, mls");
+    }
 }
 ```
 {{< /tab >}}
 {{< /tabs >}}
 
-### Added HIBC PASCode39 and PASCode128 Barcodes
+### Implement support of 7z File Type
 
-[BarcodeTypes](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/barcodetypes/) static class was updated with new types to support [HIBC PAS Barcodes](https://en.wikipedia.org/wiki/Health_Industry_Business_Communications_Council). 
+🌐 [FileTypes](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/filetype/#properties) was extended with new [SevenZip](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/filetype/sevenzip/) supported file type.
 
 {{< tabs "example3">}}
-{{< tab "C# Barcode Types" >}}
+{{< tab "C#" >}}
 ```cs
 /// <summary>
-/// HIBC PAS 39 Barcode Type object.
+/// Get 7z file and sign all documents within the archive
 /// </summary>
-public static readonly BarcodeType HIBCCode39PAS;
-
-/// <summary>
-/// HIBC PAS 128 Barcode Type object.
-/// </summary>
-public static readonly BarcodeType HIBCCode128PAS;
-```
-{{< /tab >}}
-{{< tab "C# Usage example" >}}
-```cs
-using (Signature signature = new Signature("sample.pdf""))
+using (var signature = new Signature("sample.7z"))
 {
-    // create barcode option with predefined barcode text that follow HIBC PAS standard
-    BarcodeSignOptions options = new BarcodeSignOptions("+A99912345/$$52001510X3")
+    // create sign options
+    var options = new TextSignOptions("signed!")
     {
-        // setup Barcode encoding type
-        EncodeType = BarcodeTypes.HIBCCode39PAS,
         // set signature position
         Left = 100,
         Top = 100
     };
-    // sign document to file
-    SignResult result = signature.Sign(outputFilePath, options);
+    // sign archive to new 7z file
+    SignResult result = signature.Sign("output.7z", options);
+    // analyze signed documents
+    Console.WriteLine("\nList of successfully signed documents:");
+    foreach (DocumentResultSignature document in signResult.Succeeded)
+    {
+        Console.WriteLine($"Document {document.FileName} was signed with. Processing time: {document.ProcessingTime}, mls");
+    }
 }
 ```
 {{< /tab >}}
 {{< /tabs >}}
 
-### Implement AZW3 as new export save file format for Word Processing documents
+### Implement Document Info for archives
 
-[WordProcessingSaveOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/wordprocessingsaveoptions/) was updated with new types to support AZW3 save file format [File Format](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/wordprocessingsavefileformat/). 
+🌐 Class [DocumentInfo](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/idocumentinfo/) was extended with the new property [Documents](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/idocumentinfo/documents/) to represent the list of the document info with the archives.
 
 {{< tabs "example4">}}
 {{< tab "C#" >}}
 ```cs
-using (var signature = new Signature("sample.docx"))
+/// <summary>
+/// Get zip file and obtain documents information with the archive
+/// </summary>
+using (var signature = new Signature("sample.zip"))
 {
-    // create QRCode option with predefined QRCode text
-    var signOptions = new TextSignOptions("JohnSmith")
+    IDocumentInfo documentInfo = signature.GetDocumentInfo();
+    Console.WriteLine($"Archive properties {Path.GetFileName(certificatePath)}:");
+    Console.WriteLine($" - format : {documentInfo.FileType.FileFormat}");
+    Console.WriteLine($" - extension : {documentInfo.FileType.Extension}");
+    Console.WriteLine($" - size : {documentInfo.Size}");
+    Console.WriteLine($" - documents count : {documentInfo.PageCount}");
+
+    // display each document information
+    Console.WriteLine($"Documents information:");
+    foreach (DocumentResultSignature document in documentInfo.Documents)
+    {
+        Console.WriteLine($"Document: {document.FileName}. {document.SourceDocumentSize} /{document.DestinDocumentSize}");
+    }
+}
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+### Support Succeeded and Failed list as result of processing archives
+
+🌐 The [SignResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult) will keep the list of succeeded and failed [DocumentResultSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/documentresultsignature/#properties) elements in the result of the [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method.
+
+{{< tabs "example5">}}
+{{< tab "C#" >}}
+```cs
+/// <summary>
+/// Support Succeeded and Failed list as result of processing archives
+/// </summary>
+using (var signature = new Signature("sample.zip"))
+{
+    // create sign options
+    var options = new TextSignOptions("signed!")
     {
         // set signature position
         Left = 100,
         Top = 100
     };
-
-    var saveOptions = new WordProcessingSaveOptions()
+    // sign archive to new 7z file
+    SignResult result = signature.Sign("output.7z", options);
+    // analyze signed documents
+    foreach (DocumentResultSignature document in result.Succeeded)
     {
-        FileFormat = WordProcessingSaveFileFormat.Azw3,
-        OverwriteExistingFiles = true
-    };
-    // sign document to file
-    SignResult result = signature.Sign("output.azw3", signOptions, saveOptions);
+        Console.WriteLine($"Document {document.FileName}. Processed: {document.ProcessingTime}, mls");
+    }
+    if (signResult.Failed.Count > 0)
+    {
+        Console.WriteLine("\nList of failed documents:");
+        number = 1;
+        foreach (DocumentResultSignature document in result.Failed)
+        {
+            Console.WriteLine($"Document {document.FileName}. Processed: {document.ProcessingTime}, mls");
+        }
+    }
 }
 ```
 {{< /tab >}}
