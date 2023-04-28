@@ -2,6 +2,7 @@
 id: sign-document-with-xades-digital-signature
 url: signature/net/sign-document-with-xades-digital-signature
 title: Sign document with XAdES Digital signature
+linkTitle: ✎ XAdES
 weight: 15
 description: " This article explains how to sign Spreadsheet document with XAdES Digital electronic signatures using advanced options with GroupDocs.Signature API."
 keywords: 

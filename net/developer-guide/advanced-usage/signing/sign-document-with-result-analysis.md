@@ -2,6 +2,7 @@
 id: sign-document-with-result-analysis
 url: signature/net/sign-document-with-result-analysis.md
 title: Sign document with analysis of the Sign process result
+linkTitle: ✎ Analysis
 weight: 16
 description: "This article shows how to analyse the sign processing of the document"
 keywords: 

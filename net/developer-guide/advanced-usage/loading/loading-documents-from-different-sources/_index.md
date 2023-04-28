@@ -2,6 +2,7 @@
 id: loading-documents-from-different-sources
 url: signature/net/loading-documents-from-different-sources
 title: Loading documents from different sources
+linkTitle: Sources
 weight: 1
 description: "This section explains how to load document from various sources and data storage like file on disk, data stream, remote web resources, FTP servers, Amazon Cloud or Azure storage etc."
 keywords: 

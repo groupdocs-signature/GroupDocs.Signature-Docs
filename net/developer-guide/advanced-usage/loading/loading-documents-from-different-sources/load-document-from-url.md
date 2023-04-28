@@ -2,6 +2,7 @@
 id: load-document-from-url
 url: signature/net/load-document-from-url
 title: Load document from URL
+linkTitle: → URL
 weight: 6
 description: "This section explains how to load document from URL with GroupDocs.Signature API."
 keywords: 

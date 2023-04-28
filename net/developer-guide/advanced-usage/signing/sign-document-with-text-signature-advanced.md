@@ -2,6 +2,7 @@
 id: sign-document-with-text-signature-advanced
 url: signature/net/sign-document-with-text-signature-advanced
 title: Sign document with Text signature - advanced
+linkTitle: ✎ Text
 weight: 14
 description: " This article explains how to sign document with Text electronic signatures using advanced options with GroupDocs.Signature API."
 keywords: 

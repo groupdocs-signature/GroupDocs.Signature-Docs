@@ -2,6 +2,7 @@
 id: searching-for-document-signatures-with-exception-handling
 url: signature/net/searching-for-document-signatures-with-exception-handling
 title: Searching for document signatures with exception handling
+linkTitle: 🌐 Handling errors
 weight: 11
 description: "This article explains how to handle exceptions when searching for electronic signatures with GroupDocs.Signature API."
 keywords: 

@@ -2,6 +2,7 @@
 id: advanced-search-for-qr-code-standard-entries
 url: signature/net/advanced-search-for-qr-code-standard-entries
 title: Search for QR Code standard entries
+linkTitle: 🌐 QR Enties
 weight: 3
 description: "This article explains how to provide advanced search for standard QR Code embedded objects like WiFi, Event, Contact, SMS, EMail, EPC or SEPA payment, VCard or MeCard entries, etc with GroupDocs.Signature API."
 keywords: 

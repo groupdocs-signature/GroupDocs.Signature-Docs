@@ -2,6 +2,7 @@
 id: load-document-from-azure-blob-storage
 url: signature/net/load-document-from-azure-blob-storage
 title: Hot to load document from Azure Blob Storage
+linkTitle: → Amazon Blob
 weight: 2
 description: "This section explains how to load document from Azure Blob Storage with GroupDocs.Signature API."
 keywords: 

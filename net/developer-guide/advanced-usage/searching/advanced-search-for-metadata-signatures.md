@@ -2,6 +2,7 @@
 id: advanced-search-for-metadata-signatures
 url: signature/net/advanced-search-for-metadata-signatures
 title: Advanced search for Metadata signatures
+linkTitle: 🌐 Metadata
 weight: 12
 description: " This article explains how to search various data values types within electronic signatures in the document metadata by GroupDocs.Signature API."
 keywords: 

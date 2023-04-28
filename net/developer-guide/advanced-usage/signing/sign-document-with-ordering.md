@@ -2,6 +2,7 @@
 id: sign-document-with-ordering
 url: signature/net/sign-document-with-ordering
 title: Sign document with ordering the signatures
+linkTitle: ✎ Ordering
 weight: 15
 description: "This article shows how to create electronic signatures with specific ordering on the document page"
 keywords: 

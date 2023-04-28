@@ -2,6 +2,7 @@
 id: advanced-search-for-digital-signatures
 url: signature/net/advanced-search-for-digital-signatures
 title: Advanced search for Digital signatures
+linkTitle: 🌐 Digital
 weight: 2
 description: " This article explains how to make advanced search for digital electronic signatures with GroupDocs.Signature API."
 keywords: 

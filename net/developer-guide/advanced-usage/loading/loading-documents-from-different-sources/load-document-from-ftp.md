@@ -2,6 +2,7 @@
 id: load-document-from-ftp
 url: signature/net/load-document-from-ftp
 title: How to load document from FTP
+linkTitle: → FTP
 weight: 3
 description: "This section explains how to load document from FTP with GroupDocs.Signature API."
 keywords: 
