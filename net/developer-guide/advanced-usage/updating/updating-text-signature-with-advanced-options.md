@@ -2,6 +2,7 @@
 id: updating-text-signature-with-advanced-options
 url: signature/net/updating-text-signature-with-advanced-options
 title: Updating Text signature with advanced options
+linkTitle: ✜ Text
 weight: 5
 description: " This article explains how to provide advanced options when updating Text electronic signatures with GroupDocs.Signature API."
 keywords: 

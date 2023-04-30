@@ -2,6 +2,7 @@
 id: composing-signature-with-solid-brush-background
 url: signature/net/composing-signature-with-solid-brush-background
 title: Composing signature with solid brush background
+linkTitle: ✜ Solid brush
 weight: 3
 description: " This article explains how to fill signature background with solid brush"
 keywords: 

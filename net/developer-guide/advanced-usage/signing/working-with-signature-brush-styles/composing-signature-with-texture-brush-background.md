@@ -2,6 +2,7 @@
 id: composing-signature-with-texture-brush-background
 url: signature/net/composing-signature-with-texture-brush-background
 title: Composing signature with texture brush background
+linkTitle: ✜ Texture brush
 weight: 4
 description: " This article explains how to fill signature background with texture brush"
 keywords: 

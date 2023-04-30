@@ -2,6 +2,7 @@
 id: sign-documents-with-standard-encryption-for-qr-code
 url: signature/net/sign-documents-with-standard-encryption-for-qr-code
 title: Sign documents with standard encryption for QR-code
+linkTitle: ✎ QR Encryption
 weight: 4
 description: "This article explains how to create encrypted QR-code electronic signature"
 keywords: 

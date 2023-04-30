@@ -1,7 +1,7 @@
 ---
 id: groupdocs-signature-for-net-latest-release-notes
 url: signature/net/groupdocs-signature-for-net-latest-release-notes
-title: Latest release (March 2023)
+title: Latest release (April 2023)
 weight: 0
 description: "Changes that shipped in the latest version of GroupDocs.Signature for .NET"
 keywords: release notes, groupdocs.signature for .net, latest
@@ -22,7 +22,7 @@ There are about ten features, enhancements, and bug fixes in this release.
 |SIGNATURENET-4442| ★ Feature|[Implement support of TAR File Type](#implement-support-of-tar-file-type)|
 |SIGNATURENET-4452| ★ Feature|[Implement support of 7z File Type](#implement-support-of-7z-file-type)|
 |SIGNATURENET-4479| ★ Feature|[Implement Document Info for archives](#implement-document-info-for-archives)|
-|SIGNATURENET-4476| ⚙️ Enhancement|[Support Succeeded and Failed list as result of processing archives](#support-succeeded-and-failed-list-as-result-of-processing-archives)|
+|SIGNATURENET-4476| ✜ Enhancement|[Support Succeeded and Failed list as result of processing archives](#support-succeeded-and-failed-list-as-result-of-processing-archives)|
 |SIGNATURENET-4374| 🔧 Fix|Error on signing Wordprocessing documents digitally with Linux generated certificates|
 |SIGNATURENET-4373| 🔧 Fix|Exception on processing Spreadsheets file with Digital signatures with non Win-OS certificates|
 |SIGNATURENET-4203| 🔧 Fix|Some tests for PDF throw "Invalid provider type specified" exception|

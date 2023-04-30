@@ -2,6 +2,7 @@
 id: sign-documents-with-encrypted-qr-code-text
 url: signature/net/sign-documents-with-encrypted-qr-code-text
 title: Sign documents with encrypted QR-code text
+linkTitle: ✎ Encrypted QR Text
 weight: 3
 description: "This article explains how to create encrypted QR-code electronic signature with GroupDocs.Signature API"
 keywords: 

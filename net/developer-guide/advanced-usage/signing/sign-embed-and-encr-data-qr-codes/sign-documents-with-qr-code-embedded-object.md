@@ -2,6 +2,7 @@
 id: sign-documents-with-qr-code-embedded-object
 url: signature/net/sign-documents-with-qr-code-embedded-object
 title: Sign documents with QR-code embedded object
+linkTitle: ✎ Embedded QR data
 weight: 4
 description: "This article explains how to create encrypted QR-code electronic signature with embedded custom object"
 keywords: 
