@@ -2,6 +2,7 @@
 id: esign-document-with-stamp-signature
 url: signature/java/esign-document-with-stamp-signature
 title: eSign document with Stamp signature
+linkTitle: ✎ Stamp
 weight: 8
 description: "This article explains how to sign document electronically with generated Stamp signatures by GroupDocs.Signature API."
 keywords: sign document electronically, Stamp signatures

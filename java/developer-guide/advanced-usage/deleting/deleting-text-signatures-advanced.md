@@ -2,6 +2,7 @@
 id: deleting-text-signatures-advanced
 url: signature/java/deleting-text-signatures-advanced
 title: Deleting Text signatures - advanced
+linkTitle: ✖ Text
 weight: 5
 description: "This article shows how to delete Text electronic signatures different ways with GroupDocs.Signature API."
 keywords: 

@@ -2,6 +2,7 @@
 id: save-signed-word-processing-with-different-output-file-type
 url: signature/net/save-signed-word-processing-with-different-output-file-type
 title: Save signed Word Processing with different output file type
+linkTitle: Words → format
 weight: 5
 description: "This article explains how to save signed Word Processing documents with various file formats by GroupDocs.Signature API."
 keywords: 

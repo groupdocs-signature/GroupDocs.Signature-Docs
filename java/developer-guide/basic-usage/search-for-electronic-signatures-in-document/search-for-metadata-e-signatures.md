@@ -2,6 +2,7 @@
 id: search-for-metadata-e-signatures
 url: signature/java/search-for-metadata-e-signatures
 title: Search for Metadata e-signatures
+linkTitle: 🔍 Metadata
 weight: 3
 description: "This topic explains how to search for metadata signatures within the documents with GroupDocs.Signature API."
 keywords: 

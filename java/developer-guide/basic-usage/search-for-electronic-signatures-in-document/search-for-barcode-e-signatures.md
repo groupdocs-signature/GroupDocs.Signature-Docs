@@ -2,6 +2,7 @@
 id: search-for-barcode-e-signatures
 url: signature/java/search-for-barcode-e-signatures
 title: Search for Barcode e-signatures
+linkTitle: 🔍 Barcodes
 weight: 1
 description: "This article explains how to search for Barcode in the document with few lines of code over GroupDocs.Signature API."
 keywords: search for barcode, how to search for Barcode

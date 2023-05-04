@@ -2,6 +2,7 @@
 id: save-signed-presentation-with-different-output-file-type
 url: signature/java/save-signed-presentation-with-different-output-file-type
 title: Save signed Presentation with different output file type
+linkTitle: Presentaion → format
 weight: 3
 description: "This article explains how to save signed Presentation documents with various file formats by GroupDocs.Signature API."
 keywords: 

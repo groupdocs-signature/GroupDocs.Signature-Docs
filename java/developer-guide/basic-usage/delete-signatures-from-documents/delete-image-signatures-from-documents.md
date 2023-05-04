@@ -2,6 +2,7 @@
 id: delete-image-signatures-from-documents
 url: signature/java/delete-image-signatures-from-documents
 title: Delete Image signatures from documents
+linkTitle: ✖ Image
 weight: 2
 description: "This article explains how to delete Image electronic signatures with GroupDocs.Signature API."
 keywords: delete Image electronic signatures, how to delete Image electronic signatures

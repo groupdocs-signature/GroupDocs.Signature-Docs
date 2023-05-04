@@ -2,6 +2,7 @@
 id: locating-signature-with-stretch-mode
 url: signature/java/locating-signature-with-stretch-mode
 title: Locating signature with stretch mode
+linkTitle: 🌐 Stretch Mode
 weight: 3
 description: " This article explains how to use stretch mode values to adjust signature area positions on document page with GroupDocs.Signature API."
 keywords: 

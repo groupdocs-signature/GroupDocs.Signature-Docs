@@ -2,6 +2,7 @@
 id: delete-barcode-signatures-from-documents
 url: signature/java/delete-barcode-signatures-from-documents
 title: Delete Barcode signatures from documents
+linkTitle: ✖ Barcode
 weight: 1
 description: "This article explains how to delete Barcode electronic signatures with GroupDocs.Signature API."
 keywords: delete Barcode,delete Barcode electronic signatures, how to delete Barcode electronic signatures

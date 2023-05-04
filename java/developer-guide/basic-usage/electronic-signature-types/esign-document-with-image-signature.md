@@ -2,6 +2,7 @@
 id: esign-document-with-image-signature
 url: signature/java/esign-document-with-image-signature
 title: eSign document with Image signature
+linkTitle: ✎ Image
 weight: 4
 description: "This article demonstrates how to add signature image on document page with GroupDocs.Signature."
 keywords: signature image, add signature image, how to add signature image

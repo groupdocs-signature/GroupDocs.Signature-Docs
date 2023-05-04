@@ -2,6 +2,7 @@
 id: search-for-built-in-metadata-signatures
 url: signature/java/search-for-built-in-metadata-signatures
 title: Search for built-in Metadata signatures
+linkTitle: 🌐 Build Metadata
 weight: 6
 description: " This article explains how to provide advanced search for metadata electronic signatures with GroupDocs.Signature API."
 keywords: 

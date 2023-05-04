@@ -2,6 +2,7 @@
 id: esign-spreadsheet-with-metadata-signature
 url: signature/java/esign-spreadsheet-with-metadata-signature
 title: eSign Spreadsheet with Metadata signature
+linkTitle: ✎ Spreadsheet Metadata
 weight: 4
 description: "This article explains how to add metadata signatures to Spreadsheet document with GroupDocs.Signature"
 keywords: 

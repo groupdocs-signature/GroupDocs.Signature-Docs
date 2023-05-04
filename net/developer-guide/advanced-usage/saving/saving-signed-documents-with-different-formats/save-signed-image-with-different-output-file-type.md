@@ -2,7 +2,7 @@
 id: save-signed-image-with-different-output-file-type
 url: signature/net/save-signed-image-with-different-output-file-type
 title: How to save signed Image with different output file type
-linkTitle: Image
+linkTitle: Image → format
 weight: 1
 description: "This article explains how to save signed image with various image formats by GroupDocs.Signature API."
 keywords: 

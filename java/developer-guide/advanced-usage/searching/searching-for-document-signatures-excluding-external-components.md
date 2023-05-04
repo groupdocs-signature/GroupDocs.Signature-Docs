@@ -2,6 +2,7 @@
 id: searching-for-document-signatures-excluding-external-components
 url: signature/java/searching-for-document-signatures-excluding-external-components
 title: Searching for document signatures excluding external components
+linkTitle: 🌐 External components
 weight: 10
 description: "This article explains how to search with excluding non-signature components like native documents text, images or barcodes that are the part of document content."
 keywords: 

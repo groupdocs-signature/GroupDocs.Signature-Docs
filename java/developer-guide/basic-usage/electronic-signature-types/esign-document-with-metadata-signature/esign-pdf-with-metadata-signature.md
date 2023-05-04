@@ -2,6 +2,7 @@
 id: esign-pdf-with-metadata-signature
 url: signature/java/esign-pdf-with-metadata-signature
 title: eSign PDF with Metadata signature
+linkTitle: ✎ PDF Metadata
 weight: 2
 description: "This article explains how to add metadata signatures to PDF document meta info layer with GroupDocs.Signature"
 keywords: Pdf metadata, Pdf metadata signatures

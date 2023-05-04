@@ -2,6 +2,7 @@
 id: search-for-text-e-signatures
 url: signature/java/search-for-text-e-signatures
 title: Search for Text e-signatures
+linkTitle: 🔍 Text
 weight: 5
 description: "This topic explains how to search for text electronic signatures within the document pages by GroupDocs.Signature API."
 keywords: 

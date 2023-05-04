@@ -2,6 +2,7 @@
 id: delete-signatures-of-the-certain-type
 url: signature/java/delete-signatures-of-the-certain-type
 title: Delete Signatures of the certain type
+linkTitle: ✖ By Type
 weight: 6
 description: "This article explains how to delete signature of the certain type with GroupDocs.Signature API."
 keywords: delete signature, how to delete signature of the certain type

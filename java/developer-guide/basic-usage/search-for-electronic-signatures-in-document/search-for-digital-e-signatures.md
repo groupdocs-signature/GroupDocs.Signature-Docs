@@ -2,6 +2,7 @@
 id: search-for-digital-e-signatures
 url: signature/java/search-for-digital-e-signatures
 title: Search for Digital e-signatures
+linkTitle: 🔍 Digital
 weight: 2
 description: "This topic explains how to search for digital electronic signatures across the documents with GroupDocs.Signature API."
 keywords: 

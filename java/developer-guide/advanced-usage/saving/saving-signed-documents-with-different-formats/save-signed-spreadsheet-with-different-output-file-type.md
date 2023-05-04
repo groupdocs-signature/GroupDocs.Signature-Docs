@@ -2,6 +2,7 @@
 id: save-signed-spreadsheet-with-different-output-file-type
 url: signature/java/save-signed-spreadsheet-with-different-output-file-type
 title: Save signed Spreadsheet with different output file type
+linkTitle: Spreadsheet → format
 weight: 4
 description: "This article explains how to save signed Spreadsheet document with various file formats by GroupDocs.Signature API."
 keywords: 

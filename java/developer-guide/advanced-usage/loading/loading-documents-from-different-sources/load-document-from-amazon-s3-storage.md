@@ -2,6 +2,7 @@
 id: load-document-from-amazon-s3-storage
 url: signature/java/load-document-from-amazon-s3-storage
 title: Load document from Amazon S3 Storage
+linkTitle: → Amazon S3
 weight: 1
 description: "This section explains how to load document from Amazon S3 Storage with GroupDocs.Signature API."
 keywords: 

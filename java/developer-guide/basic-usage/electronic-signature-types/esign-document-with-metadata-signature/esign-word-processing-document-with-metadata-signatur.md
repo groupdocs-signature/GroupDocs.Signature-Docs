@@ -2,6 +2,7 @@
 id: esign-word-processing-document-with-metadata-signatur
 url: signature/java/esign-word-processing-document-with-metadata-signatur
 title: eSign Word Processing document with Metadata signatur
+linkTitle: ✎ Words Metadata
 weight: 5
 description: "This article explains how to sign Word Processing document with metadata signatures by GroupDocs.Signature."
 keywords: 

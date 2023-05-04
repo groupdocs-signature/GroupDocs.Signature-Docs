@@ -2,6 +2,7 @@
 id: advanced-search-for-image-signatures
 url: signature/java/advanced-search-for-image-signatures
 title: Advanced search for Image signatures
+linkTitle: 🌐 Images
 weight: 5
 description: " This article explains how to make advanced search for Image electronic signatures with GroupDocs.Signature API."
 keywords: 

@@ -2,6 +2,7 @@
 id: update-barcode-signatures-in-document
 url: signature/java/update-barcode-signatures-in-document
 title: Update Barcode signatures in document
+linkTitle: ✎ Barcode
 weight: 1
 description: "This article explains how to update Barcode electronic signatures with GroupDocs.Signature API."
 keywords: 

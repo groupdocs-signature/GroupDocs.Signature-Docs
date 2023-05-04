@@ -189,8 +189,8 @@ using (var signature = new Signature("sample.zip"))
         Left = 100,
         Top = 100
     };
-    // sign archive to new 7z file
-    SignResult result = signature.Sign("output.7z", options);
+    // sign archive to new zip file
+    SignResult result = signature.Sign("output.zip", options);
     // analyze signed documents
     foreach (DocumentResultSignature document in result.Succeeded)
     {

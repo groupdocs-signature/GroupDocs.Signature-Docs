@@ -2,6 +2,7 @@
 id: update-qr-code-signatures-in-document
 url: signature/java/update-qr-code-signatures-in-document
 title: Update QR-code signatures in document
+linkTitle: ✎ QR Code
 weight: 3
 description: "This article explains how to update QR-code electronic signatures with GroupDocs.Signature API."
 keywords: 

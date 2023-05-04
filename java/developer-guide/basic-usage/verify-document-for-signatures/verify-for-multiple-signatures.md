@@ -2,6 +2,7 @@
 id: verify-for-multiple-signatures
 url: signature/java/verify-for-multiple-signatures
 title: Verify for multiple signatures
+linkTitle: 🛡 Mutiple
 weight: 5
 description: "This topic explains how to verify electronic signatures of various types with GroupDocs.Signature API."
 keywords: 

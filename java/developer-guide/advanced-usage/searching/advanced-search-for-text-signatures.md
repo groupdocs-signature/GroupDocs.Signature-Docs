@@ -2,6 +2,7 @@
 id: advanced-search-for-text-signatures
 url: signature/java/advanced-search-for-text-signatures
 title: Advanced search for Text signatures
+linkTitle: 🌐 Text
 weight: 4
 description: " This article explains how to make advanced search for Text electronic signatures with GroupDocs.Signature API."
 keywords: 

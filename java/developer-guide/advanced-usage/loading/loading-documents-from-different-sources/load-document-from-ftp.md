@@ -2,6 +2,7 @@
 id: load-document-from-ftp
 url: signature/java/load-document-from-ftp
 title: Load document from FTP
+linkTitle: → FTP
 weight: 3
 description: "This section explains how to load document from FTP with GroupDocs.Signature API."
 keywords: 

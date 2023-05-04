@@ -2,6 +2,7 @@
 id: advanced-search-for-qr-code-signatures
 url: signature/java/advanced-search-for-qr-code-signatures
 title: Advanced search for QR-code signatures
+linkTitle: 🌐 QR Code
 weight: 3
 description: " This article explains how to provide advanced search for QR-code electronic signatures with GroupDocs.Signature API."
 keywords: 

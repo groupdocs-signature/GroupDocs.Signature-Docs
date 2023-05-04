@@ -2,6 +2,7 @@
 id: load-document-from-local-disk
 url: signature/java/load-document-from-local-disk
 title: Load document from local disk
+linkTitle: → Local
 weight: 4
 description: "This section explains how to load document from local disk with GroupDocs.Signature API."
 keywords: 

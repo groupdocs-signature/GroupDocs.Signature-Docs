@@ -2,6 +2,7 @@
 id: locating-signature-with-different-alignments
 url: signature/java/locating-signature-with-different-alignments
 title: Locating signature with different alignments
+linkTitle: 🌐 Alignments
 weight: 2
 description: " This article explains how to use different alignment values to locate signature on document page with GroupDocs.Signature API."
 keywords: 
