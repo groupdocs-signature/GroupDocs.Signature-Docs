@@ -55,17 +55,14 @@ options.setMargin(padding);
 // set rotation
 options.setRotationAngle(45);
  
-// setup image additional appearance as Brightness and Border
-ImageAppearance imageAppearance = new ImageAppearance();
+//setup signature border
 Border border = new Border();
 border.setColor(Color.GREEN);
 border.setDashStyle(DashStyle.DashLongDashDot);
-border.setWeight(2);
-border.setTransparency(0.5);
+border.setWeight(5);
 border.setVisible(true);
-imageAppearance.setBorder(border);
-imageAppearance.setBrightness(0.9f);
-options.setAppearance(imageAppearance);
+
+options.setBorder(border);
  
 // sign document to file
 SignResult signResult = signature.sign("sgnedSample.xlsx", options);
