@@ -9,7 +9,7 @@ keywords: document, signature, certificate, digitally, sign, pfx, c#, net
 productName: GroupDocs.Signature for .NET
 ---
 
-## Introduction:
+## Introduction
 
 In today's digital age, ensuring the authenticity and integrity of electronic documents is crucial. One highly effective method for achieving this is through the use of digital signatures. In this guide, we will explore the world of digital signatures, explaining what they are, why they are essential, and how you can utilize GroupDocs.Signature to seamlessly eSign your documents.
 

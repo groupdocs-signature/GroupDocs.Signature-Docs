@@ -1,6 +1,6 @@
 ---
 id: sign-document-with-result-analysis
-url: signature/net/sign-document-with-result-analysis.md
+url: signature/net/sign-document-with-result-analysis
 title: Sign document with analysis of the Sign process result
 linkTitle: ✎ Analysis
 weight: 16

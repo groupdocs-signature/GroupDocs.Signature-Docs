@@ -3,33 +3,14 @@ id: generate-signature-preview
 url: signature/net/generate-signature-preview
 title: Generate signature preview
 weight: 7
-description: "This topic explains how to get signature preview with the SignOptions by GroupDocs.Signature API."
+description: "This topic explains how to get document signature preview in c#"
 keywords: signature preview, how to get signature preview
 productName: GroupDocs.Signature for .NET
-structuredData:
-    showOrganization: True
-    application:    
-        name: Generate signatures previews using C#    
-        description: Getting signatures previews using C# language and GroupDocs.Signature for .NET APIs
-        productCode: signature
-        productPlatform: net 
-    showVideo: True
-    howTo:
-        name: How to create signatures artifacts of documents with C# 
-        description: Get previews images of signatures for various document types in C#
-        steps:
-        - name: Implement delegates to create and release image stream for each page.
-          text: We don't know how you are going to process and release generated previews, so you need to provide CreateSignatureStream and ReleaseSignatureStream delegates. 
-        - name: Load particular file with supported type.
-          text: Construct Signature class instance by passing either file path or stream. 
-        - name: Provide sign options. 
-          text: Instantiate desirable sign options like QrCodeSignOptions or other. Set up all important properties.
-        - name: Get signatures preview images
-          text: Invoke GenerateSignaturePreview method passing options and save signatures images by method defined in CreateSignatureStream delegate.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [PreviewSignatureOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewsignatureoptions) class to specify different options to manage signatures preview generation process.  
+
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) [PreviewSignatureOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewsignatureoptions) class to specify different options to manage signatures preview generation process.  
   
-Here are the steps to generate signature preview with GroupDocs.Signature:
+Here are the steps how to generate signature preview with GroupDocs.Signature:
 
 * Instantiate the required [SignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions) object with the settings you want to generate the preview
 * Instantiate the [PreviewSignatureOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewsignatureoptions) object with:
@@ -41,34 +22,6 @@ Here are the steps to generate signature preview with GroupDocs.Signature:
 Stream that were created by [CreateSignatureStream](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/createsignaturestream) delegate will be disposed automatically once after generation of preview image. If you need to implement custom image preview stream disposing you have to pass additional argument [ReleaseSignatureStream](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/releasesignaturestream) to clean up resources.  
 {{< /alert >}}
 * Call the static method [GenerateSignaturePreview](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/generatesignaturepreview) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) and pass [PreviewSignatureOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewsignatureoptions) to it.
-
-## CreateSignatureStream delegate implementation
-
-GroupDocs.Signature expects [CreateSignatureStream](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/createsignaturestream) delegate to obtain each signature stream for image preview generation process
-
-```csharp
-private static CreateSignatureStream(PreviewSignatureOptions previewOptions)
-{
-    SignOptions signOptions = previewOptions.SignOptions;
-    string imageFilePath = Path.Combine(Constants.OutputPath, "GenerateSignaturePreview", $"signature-{previewOptions.SignatureId}-{previewOptions.SignOptions.GetType().Name}.jpg");
-    var folder = Path.GetDirectoryName(imageFilePath);
-    if (!Directory.Exists(folder))
-    {
-        Directory.CreateDirectory(folder);
-    }
-    return new FileStream(imageFilePath, FileMode.Create);
-}
-```
-
-## ReleaseSignatureStream delegate implementation
-
-```csharp
-private static void ReleaseSignatureStream(PreviewSignatureOptions previewOptions, Stream signatureStream)
-{
-     signatureStream.Dispose();
-     Console.WriteLine($"Signature {previewOptions.SignatureId}-{previewOptions.SignOptions.GetType().Name} is ready for preview");
-}
-```
 
 ## Generate signature preview
 
