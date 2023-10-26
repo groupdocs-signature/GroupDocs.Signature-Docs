@@ -12,5 +12,6 @@ GroupDocs.Signature provides ability to put into QR-code signature comlex data o
 
 * ability to embed Royal Mail Mailmark 2D Barcode
 * ability to embed HIBCC LIC, HIBC Labeler Identification Code, HIBC Supplier Labeling Standard Barcode
+* ability to embed Swiss QR symbology
 
 Please find in topics below examples and details for each of these features
