@@ -27,7 +27,7 @@ structuredData:
         - name: Get pages images
           text: Invoke GeneratePreview method passing options and save page images by method from CreatePageStream delegate.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [PreviewOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions) class to specify different options to manage document pages preview generation process.  
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [PreviewOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions) class to specify different options to manage document pages preview generation process. The feature also supports archives previewing.
   
 Here are the steps to generate document preview with GroupDocs.Signature:
 
