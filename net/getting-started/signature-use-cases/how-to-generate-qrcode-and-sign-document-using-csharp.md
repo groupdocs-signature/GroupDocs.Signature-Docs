@@ -82,20 +82,20 @@ Sometimes it is needed to inform workers about business events. In such cases Ev
             }
 ```
 
-Result of signing may looks like the picture below. Such QR-code can be very useful for events organization.
+The result of signing a document may look like the picture below. Such QR codes can be very useful for organizing events.
 
-![Signed with Event QR-code document](/signature/net/images/signature-use-cases/how-to-generate-barcode-and-sign-document-using-csharp/signed_event.png)
+![Document signed with an Event QR code](/signature/net/images/signature-use-cases/how-to-generate-barcode-and-sign-document-using-csharp/signed_event.png)
 
-[GroupDocs.Signature App](https://products.groupdocs.app/signature/generate/qrcode) gives opportunity to try document signing with QR-codes for free.
+To try signing documents with QR codes for free, you may use the [QR Code Generator](https://products.groupdocs.app/signature/generate/qrcode) Online App.
 
 ## QR Code image generation in C\#
 
-Another way to improve documents is to generate QR Code firstly and add it to documents using third-party tools. For this case it is possible to generate code as an image.
+Another way to improve documents is to generate the QR code first and then add it to documents using third-party tools. For this case, it is possible to generate code as an image.
 
-* Create the QRCodeSignOptions instance and set up all demanded fields.
-* Instantiate the PreviewSignatureOptions providing methods for creation and releasing.
-* Invoke GenerateSignaturePreview method to obtain QR Code image as a stream.
-* Use result QR Code stream in any possible way.
+* Create the `QRCodeSignOptions` instance and set up all demanded fields.
+* Instantiate the `PreviewSignatureOptions` object providing the methods for creation and releasing.
+* Invoke the `GenerateSignaturePreview` method to obtain the QR code image as a stream.
+* Use the resultant QR Code stream in any possible way.
 
 ```cs
             MemoryStream result = new MemoryStream();
@@ -117,21 +117,21 @@ Another way to improve documents is to generate QR Code firstly and add it to do
             GroupDocs.Signature.Signature.GenerateSignaturePreview(previewOptions);
 
 ```
-Image containing generated QR Code might looks in this way:
+An image with the generated QR Code may look as below:
 
-![Generated QRCode](/signature/net/images/signature-use-cases/how-to-generate-barcode-and-sign-document-using-csharp/signed_event.png)
+![Generated QR Code](/signature/net/images/signature-use-cases/how-to-generate-barcode-and-sign-document-using-csharp/textqrcode.png)
 
 ## Get a Free API License
-
-In order to use the API without evaluation limitations, you can get a free [temporary license](https://purchase.groupdocs.com/temporary-license).
+To use the API without evaluation limitations, you can get a free [temporary license](https://purchase.groupdocs.com/temporary-license).
 
 ## Conclusion
 
-To sum up, some useful ways of processing documents, barcodes and QR-codes were discussed in this article. Using C# with .NET applications improves productivity of such actions dramatically.
-In addition, you can use [Online Applications to sign your files](https://products.groupdocs.app/signature/family) from GroupDocs.Signature for free.
+To sum up, some useful ways of processing documents with QR codes were discussed in this article. Using C# with .NET applications greatly improves the productivity of such actions.
+In addition, you can use the [QR Code Generator](https://products.groupdocs.app/signature/generate/qrcode) Online App to generate QR codes and/or sign your files with QR codes for free.
 
-Moreover, it is possible to learn how to use GroupDocs.Signature in your .NET applications with [documentation](https://docs.groupdocs.com/signature/net/). Also, you may discuss any questions or issues at [Groupdocs forum](https://forum.groupdocs.com/).
+Read the [documentation](https://docs.groupdocs.com/signature/net/) to learn how to use GroupDocs.Signature in your .NET applications. Also, you may discuss any questions or issues at the [GroupDocs forum](https://forum.groupdocs.com/).
 
 ## See also
 
-* [How to sign documents with barcodes using C#](signature/net/how-to-generate-barcode-and-sign-document-using-csharp/)
+* [How to sign documents with barcodes using C#](/signature/net/how-to-generate-barcode-and-sign-document-using-csharp)
+* [How to sign Excel spreadsheets and their macros using C#](/signature/net/how-to-sign-excel-macros-using-csharp)

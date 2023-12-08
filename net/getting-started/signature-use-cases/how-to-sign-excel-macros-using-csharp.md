@@ -147,6 +147,6 @@ In order to use the API without evaluation limitations, you can get a free [temp
 ## Conclusion
 
 In this article, we learned the reasons for signing Excel spreadsheets and macros embedded into them. Leveraging C# within .NET applications significantly enhances the efficiency of these tasks.
-In addition, you can use [Online Applications to sign your files](https://products.groupdocs.app/signature/family) from GroupDocs.Signature for free.
+In addition, you can use the [Digital Signature - XLSX](https://products.groupdocs.app/signature/xlsx) online application to sign your Excel files with GroupDocs.Signature for free.
 
-Moreover, it is possible to learn how to use GroupDocs.Signature in your .NET applications with [documentation](https://docs.groupdocs.com/signature/net/). Also, you may discuss any questions or issues at [Groupdocs forum](https://forum.groupdocs.com/).
+Read the [documentation](https://docs.groupdocs.com/signature/net/) to learn how to use GroupDocs.Signature in your .NET applications. Also, you may discuss any questions or issues at the [GroupDocs forum](https://forum.groupdocs.com/).

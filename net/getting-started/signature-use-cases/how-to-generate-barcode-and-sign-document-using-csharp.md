@@ -77,22 +77,20 @@ To sign a particular document with just generated barcode:
             }
 ```
 
-Signed with Codabar document might looks like in the picture below. Codabar format was developed for printed documents and might be useful in office document flow.
+A document signed with a Codabar might look like in the picture below. The Codabar format was developed for printed documents and might be useful in office document flow.
 
-![Signed with Codabar document](/signature/net/images/signature-use-cases/how-to-generate-barcode-and-sign-document-using-csharp/signed_codabar.png)
+![A document signed with a Codabar](/signature/net/images/signature-use-cases/how-to-generate-barcode-and-sign-document-using-csharp/signed_codabar.png)
 
-[GroupDocs.Signature App](https://products.groupdocs.app/signature/generate/barcode/codabar) provides opportunity to try document signing with barcodes for free.
-
-[GroupDocs.Signature App](https://products.groupdocs.app/signature/generate/qrcode) gives opportunity to try document signing with QR-codes for free.
+The [Barcode Generator](https://products.groupdocs.app/signature/generate/barcode) Online App provides an opportunity to try document signing with barcodes for free.
 
 ## Barcode and image generation in C\#
 
-Another way to improve documents is to generate barcode firstly and add it to documents using third-party tools. For this case it is possible to generate code as an image.
+Another way to improve documents is to generate the barcode first and then add it to documents using third-party tools. For this case, it is possible to generate code as an image.
 
-* Create the BarcodeSignOptions instance and set up all demanded fields.
-* Instantiate the PreviewSignatureOptions providing methods for creation and releasing.
-* Invoke GenerateSignaturePreview method to obtain barcode image as a stream.
-* Use result barcode stream in any possible way.
+* Create the `BarcodeSignOptions` class instance and set up all the demanded fields.
+* Instantiate the `PreviewSignatureOptions` object providing the methods for creation and releasing.
+* Invoke the `GenerateSignaturePreview` method to obtain the barcode image as a stream.
+* Use the resultant barcode stream in any possible way.
 
 ```cs
             MemoryStream result = new MemoryStream();
@@ -124,11 +122,12 @@ In order to use the API without evaluation limitations, you can get a free [temp
 
 ## Conclusion
 
-To sum up, some useful ways of processing documents and barcodes were discussed in this article. Using C# with .NET applications improves productivity of such actions dramatically.
-In addition, you can use [Online Applications to sign your files](https://products.groupdocs.app/signature/family) from GroupDocs.Signature for free.
+To sum up, some useful ways of processing documents and barcodes were discussed in this article. Using C# with .NET applications improves the productivity of such actions dramatically.
+In addition, you can use the [Barcode Generator](https://products.groupdocs.app/signature/generate/barcode) Online App to generate barcodes and/or sign your files with barcodes for free.
 
-Moreover, it is possible to learn how to use GroupDocs.Signature in your .NET applications with [documentation](https://docs.groupdocs.com/signature/net/). Also, you may discuss any questions or issues at [Groupdocs forum](https://forum.groupdocs.com/).
+Read the [documentation](https://docs.groupdocs.com/signature/net/) to learn how to use GroupDocs.Signature in your .NET applications. Also, you may discuss any questions or issues at the [GroupDocs forum](https://forum.groupdocs.com/).
 
 ## See also
 
-* [How to sign documents with barcodes using C#](signature/net/how-to-generate-barcode-and-sign-document-using-csharp/)
+* [How to sign documents with QR codes using C#](/signature/net/how-to-generate-qrcode-and-sign-document-using-csharp/)
+* [How to sign Excel spreadsheets and their macros using C#](/signature/net/how-to-sign-excel-macros-using-csharp)
