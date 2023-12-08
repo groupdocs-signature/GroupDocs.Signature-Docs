@@ -4,7 +4,7 @@ url: signature/net/esign-document-with-multiple-signatures
 title: eSign document with multiple signatures
 linkTitle: Multiple types eSign
 weight: 9
-description: "This article explains how to sign document with multiple signatures of various type by GroupDocs.Signature API"
+description: "This article explains how to sign a document with multiple signatures of various types by GroupDocs.Signature API"
 keywords: multiple signatures, sign document, how to sign document with multiple signatures
 productName: GroupDocs.Signature for .NET
 structuredData:
@@ -20,29 +20,30 @@ structuredData:
         description: Learn all about signing a document by using multiple signatures and C#
         steps:
         - name: Load file which is planned to be signed
-          text: Create Signature object by passing file path or stream as a constructor parameter.
+          text: Create the Signature object by passing file path or stream as a constructor parameter.
         - name: Set up signing options 
-          text: Instantiate and set up BarcodeSignOptions, QrCodeSignOptions and DigitalSignOptions objects and add them to List.
-        - name: Sign source file with form fields and save result 
-          text: Invoke Sign method with signing options and output file path or stream.
+          text: Instantiate and set up BarcodeSignOptions, QrCodeSignOptions and DigitalSignOptions objects and add them to the List.
+        - name: Sign the source file with form fields and save the result 
+          text: Invoke the Sign method with signing options and output file path or stream.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) allows to sign document with several signatures simultaneously and even apply signatures of different types to the same document.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) allows signing a document with several signatures simultaneously and even apply signatures of different types to the same document.
+
 Doing this is as simple as:
 
-* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
-* Instantiate required all required sign options objects dependent on signature type:
-* [BarcodeSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/barcodesignoptions) - for Barcode signatures;
-* [DigitalSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/) - for Digital signatures;
-* [FormFieldSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/formfieldsignoptions) - for Form-field signatures;
-* [ImageSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/imagesignoptions) - for Image signatures;
-* [MetadataSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasignoptions) - for Metadata signatures;
-* [QrCodeSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesignoptions) - for QR-code signatures
-* [StampSIgnOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/stampsignoptions) - for Stamp signatures;
-* [TextSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions) - for Text signatures.
-* Fill collection with sign options from previous step.  
-* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass collection of sign options to it.
+* Create a new instance of the [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass the source document path or stream as a constructor parameter.
+* Instantiate all required sign options objects depending on signature type:
+    * [BarcodeSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/barcodesignoptions) - for Barcode signatures;
+    * [DigitalSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/) - for Digital signatures;
+    * [FormFieldSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/formfieldsignoptions) - for Form-field signatures;
+    * [ImageSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/imagesignoptions) - for Image signatures;
+    * [MetadataSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasignoptions) - for Metadata signatures;
+    * [QrCodeSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesignoptions) - for QR-code signatures
+    * [StampSIgnOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/stampsignoptions) - for Stamp signatures;
+    * [TextSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions) - for Text signatures.
+* Fill the collection with sign options from the previous step.  
+* Call the [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of the [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass the collection of sign options to it.
 
-This code snippet below demonstrates how to eSign PDF document with multiple signatures at the same time.
+This code snippet below demonstrates how to eSign a PDF document with multiple signatures at the same time.
 
 ```csharp
 using (Signature signature = new Signature("sample.pdf"))
@@ -82,6 +83,7 @@ using (Signature signature = new Signature("sample.pdf"))
 
     // sign document to file
     signature.Sign("signed.pdf", listOptions);
+}    
 ```
 
 ### Advanced Usage Topics
@@ -101,8 +103,8 @@ You may easily run the code above and see the feature in action in our GitHub e
 * [Document Signature for Java App Dropwizard UI Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java-Dropwizard)
 * [Document Signature for Java Spring UI Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java-Spring)
 
-### Free Online App
+### Free Online Apps
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.
+Along with the full-featured .NET library, we provide simple but powerful free online apps.
 
-You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.
+To sign PDF, Word, Excel, PowerPoint, and other documents you can use the online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.

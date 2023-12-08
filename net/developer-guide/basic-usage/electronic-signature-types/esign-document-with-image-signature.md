@@ -10,38 +10,39 @@ productName: GroupDocs.Signature for .NET
 structuredData:
     showOrganization: True
     application:    
-        name: Sign documents with image in C#    
-        description: Sign documents with various images fastly and easily with C# language and GroupDocs.Signature for .NET APIs
+        name: Sign documents with an image in C#    
+        description: Sign documents with various images quickly and easily with C# language and GroupDocs.Signature for .NET APIs
         productCode: signature
         productPlatform: net 
     showVideo: True
     howTo:
-        name: How to sign any documents with image using C# 
+        name: How to sign any documents with an image using C# 
         description: Learn all about signing a document with image by C#
         steps:
         - name: Load file which is belongs to various supported file types
-          text: Instantiate Signature object by passing file as a constructor parameter. You may provide either file path or file stream. 
+          text: Instantiate the Signature object by passing file as a constructor parameter. You may provide either a file path or a file stream. 
         - name: Specify signing options 
-          text: Create an instance of ImageSignOptions class.
+          text: Create an instance of the ImageSignOptions class.
         - name: Sign source file and save result 
-          text: Invoke Sign method with signing options and file path for signed file. File stream can be used as well.
+          text: Invoke the Sign method with signing options and a file path for the resulting file. File stream can be used as well.
 ---
-## What is a Image Signature?
+## What is an Image Signature?
 
-An **image** as signature is alternative way to put any presenting data in a visual form. This electronic signature type allows to create custom image with company logo, sender' initials, names or make a company stamp icon in it,  
+An **image** as a signature is an alternative way to put any presenting data in a visual form. This electronic signature type allows the creation of custom images with a company logo, sender's initials, names and so forth.
+
 ![Images](/signature/net/images/esign-document-with-image-signature.png)
 
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [ImageSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/imagesignoptions) class to specify different settings for Image signature such as image content by file or stream, location, colors and advanced effects.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides the [ImageSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/imagesignoptions) class to specify different settings for image signature such as image content by file or stream, location, colors and advanced effects.
 
-Here are the steps to create Image signature on document page:
+Here are the steps to create an image signature on a document page:
 
-* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter;
+* Create a new instance of the [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass the source document path as a constructor parameter;
 * Instantiate the [ImageSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/imagesignoptions) object according to your requirements and specify Image signature options;
-* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [ImageSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/imagesignoptions) to it.
+* Call the [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of the [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass the [ImageSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/imagesignoptions) to it.
 
 ## How to eSign document with Image signature
 
-This example shows how to sign PDF with Image signature.
+This example shows how to sign a PDF document with the image signature.
 
 ```csharp
 using (Signature signature = new Signature("sample.pdf"))
@@ -75,8 +76,10 @@ You may easily run the code above and see the feature in action in our GitHub e
 * [Document Signature for Java App Dropwizard UI Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java-Dropwizard)
 * [Document Signature for Java Spring UI Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java-Spring)
 
-### Free Online App
+### Free Online Apps
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.
+Along with the full-featured .NET library, we provide simple but powerful free online apps.
 
-You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.
+To generate image signatures and/or sign your files with them for free, you can use the [Generate Image](https://products.groupdocs.app/signature/generate/image) online app.
+
+To sign PDF, Word, Excel, PowerPoint, and other documents you can use the other online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.

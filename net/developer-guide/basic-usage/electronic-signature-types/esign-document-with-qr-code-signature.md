@@ -11,30 +11,30 @@ structuredData:
     showOrganization: True
     application:    
         name: Sign documents with QR code using C#    
-        description: Add QR code on any document with C# language by GroupDocs.Signature for .NET APIs
+        description: Add a QR code on any document with C# language by GroupDocs.Signature for .NET APIs
         productCode: signature
         productPlatform: net 
     showVideo: True
     howTo:
-        name: How to add generated QR-code to any document using C# 
-        description: Learn how to sign any document with QR-code and C#
+        name: How to add generated QR code to any document using C# 
+        description: Learn how to sign any document with QR code and C#
         steps:
         - name: Provide source file
-          text: Create an instance of Signature object by passing file as a constructor parameter. You may provide either file path or file stream. 
+          text: Create an instance of the Signature object by passing file as a constructor parameter. You may provide either a file path or a file stream. 
         - name: Specify signing options 
           text: Instantiate QrCodeSignOptions class. Set up all needed data.
         - name: Sign file and get result 
-          text: Call Sign method with signing options and file path for result file. You also is able to use stream as output.
+          text: Call Sign method with signing options and file path for result file. You also may use a stream as output.
 ---
-## What is a QR-code?
+## What is a QR code?
 
-QR-code (or Quick Response code) is a sort of two-dimensional [barcode]({{< ref "signature/net/developer-guide/basic-usage/electronic-signature-types/esign-document-with-barcode-signature.md" >}}) that consists of black squares arranged in a square grid on a white background. QR-code can be read by smartphone camera or specialized devices that are dedicated to QR reading - hand-held scanners, handy terminals, fixed scanners that are used after placing it on a desktop, or embedding it in other devices. Usually QR-codes contain data that points to a website or application, emails, or phone numbers, product identifiers, or trackers. Therefore QR-code application scope extends general marketing and item identification to document management.
+QR code (or Quick Response code) is a sort of two-dimensional [barcode]({{< ref "signature/net/developer-guide/basic-usage/electronic-signature-types/esign-document-with-barcode-signature.md" >}}) that consists of black squares arranged in a square grid on a white background. QR codes can be read by smartphone cameras or specialized devices that are dedicated to QR reading - hand-held scanners, handy terminals, desktop scanners, embedded scanners, and so on. Usually QR codes contain data that points to a website or application, emails, or phone numbers, product identifiers, or trackers. Therefore, the scope of QR code applications extends from general marketing and item identification to document management.
 
-![QR-code](/signature/net/images/esign-document-with-qr-code-signature.png)
+![QR code](/signature/net/images/esign-document-with-qr-code-signature.png)
 
 ## How to eSign document with QR-Code signature
 
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) allows to eSign documents with QR-codes of various types that is listed in a table below. 
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) can sign the documents with QR codes of the following types. 
 
 | |Aztec code | DataMatrix code | GS1 DataMatrix  | GS1 QR code  | QR |
 | --- | --- | --- | --- | --- | --- |
@@ -42,17 +42,17 @@ QR-code (or Quick Response code) is a sort of two-dimensional [barcode]({{< ref
 | **Length** | 3067 alphanumeric,<br> 3832 numeric,<br> 1914 bytes | 2335 alphanumeric,<br> 3116 numeric | 2335 alphanumeric,<br> 3116 numeric,<br> 1556 bytes | 7089 alphanumeric,<br> 4296 numeric,<br> 2953 bytes | 4296 alphanumeric,<br> 7089 numeric,<br> 2953 bytes |
 | **Example** | ![Aztec](/signature/net/images/esign-document-with-qr-code-signature_1.png) | ![DataMatrix](/signature/net/images/esign-document-with-qr-code-signature_2.png) | ![GS1 DataMatrix](/signature/net/images/esign-document-with-qr-code-signature_3.png) | ![GS1 QR code](/signature/net/images/esign-document-with-qr-code-signature_4.png) | ![QR](/signature/net/images/esign-document-with-qr-code-signature_5.png)
 
-While adding QR-code electronic signature to document GroupDocs.Signature the main settings are text to be encoded and QR-code [type](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodetypes/#fields) which should be specified via [QrCodeSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesignoptions) class.  
+When adding QR code electronic signature to a document, the main settings are the text to be encoded and the [type of the QR code](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodetypes/#fields) which should be specified via the [QrCodeSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesignoptions) class.  
 
-Here are the steps to eSign document with QR-code signature:
+Here are the steps to eSign a document with the QR code signature:
 
-* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
+* Create a new instance of the [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass the source document path as a constructor parameter.
 
-* Instantiate the [QrCodeSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesignoptions) object according to your requirements and specify [EncodeType](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesignoptions/encodetype) and [Text](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions/text) properties.
+* Instantiate the [QrCodeSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesignoptions) object according to your requirements and specify the [EncodeType](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesignoptions/encodetype) and the [Text](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions/text) properties.
   
-* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [QrCodeSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesignoptions) to it.
+* Call the [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of the [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass the [QrCodeSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesignoptions) to it.
 
-The code snippet below demonstrates how to sign PDF document with QR-code signature.
+The code snippet below demonstrates how to sign a PDF document with the QR code signature.
 
 ```csharp
 using (Signature signature = new Signature("sample.pdf"))
@@ -87,8 +87,10 @@ You may easily run the code above and see the feature in action in our GitHub e
 * [Document Signature for Java App Dropwizard UI Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java-Dropwizard)
 * [Document Signature for Java Spring UI Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java-Spring)
 
-### Free Online App
+### Free Online Apps
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.
+Along with the full-featured .NET library, we provide simple but powerful free online apps.
 
-You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.
+To generate QR codes and/or sign your files with QR codes for free, you can use the [QR Code Generator](https://products.groupdocs.app/signature/generate/qrcode) online app.
+
+To sign PDF, Word, Excel, PowerPoint, and other documents you can use the other online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.

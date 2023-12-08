@@ -4,14 +4,14 @@ url: signature/net/esign-document-with-stamp-signature
 title: eSign document with Stamp signature
 linkTitle: Stamp signature
 weight: 8
-description: "This article explains how to sign document electronically with generated Stamp signatures by GroupDocs.Signature API."
+description: "This article explains how to sign a document electronically with generated Stamp signatures by GroupDocs.Signature API."
 keywords: sign document electronically, Stamp signatures
 productName: GroupDocs.Signature for .NET
 structuredData:
     showOrganization: True
     application:    
-        name: Documents signing with stamps in C#    
-        description: Sign documents with generate stamps and C# language by GroupDocs.Signature for .NET APIs
+        name: Signing documents with stamps in C#    
+        description: Sign documents with generated stamps and C# language by GroupDocs.Signature for .NET APIs
         productCode: signature
         productPlatform: net 
     showVideo: True
@@ -20,37 +20,37 @@ structuredData:
         description: Learn all about signing a document by using stamps and C#
         steps:
         - name: Load file which is planned to be signed
-          text: Create Signature object by passing file path or stream as a constructor parameter.
+          text: Create the Signature object by passing the file path or stream as a constructor parameter.
         - name: Set up signing options 
           text: Provide new FormFieldSignature class instance and fill all demanded data.
         - name: Sign source file with just painted stamp and save result 
-          text: Invoke Sign method with signing options and output file path or stream.
+          text: Invoke the Sign method with signing options and output file path or stream.
 ---
 ## What is a Stamp signature?
 
-A **stamp** signature is a special type of electronic signature that have visual appearance of round seal and its visual parameters can be set programmatically.
-Every stamp signature can have multiple "stamp lines" with custom text and different line thickness, color, font weight and size. Here is an example of how stamp signature created with [**GroupDocs.Siganture**](https://products.groupdocs.com/signature/net) may look like:
+A **stamp** signature is a special type of electronic signature that has the visual appearance of a round seal and its visual parameters can be set programmatically.
+Every stamp signature can have multiple "stamp lines" with custom text and different line thicknesses, colors, font weights and sizes. Here is an example of how a stamp signature created with [**GroupDocs.Siganture**](https://products.groupdocs.com/signature/net) may look like:
 
 ![Stamp](/signature/net/images/esign-document-with-stamp-signature.png)
 
-GroupDocs.Signature provides [StampSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/stampsignoptions) class to specify different options for Stamp signature:
+GroupDocs.Signature provides the [StampSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/stampsignoptions) class to specify different options for Stamp signature:
 
 * Stamp type - Round or Square;
 * Height and width in pixels;
 * Alignment and position within the document page;
 * and many more.
 
-Each Stamp option contains inner and outer lines. Inner lines represent vertical lines inside the stamp, when outer lines represent circles (or rectangles based on stamp type) around stamp with own text, border settings, background etc.
+Each Stamp option contains inner and outer lines. Inner lines represent vertical lines inside the stamp, while outer lines represent circles (or rectangles based on stamp type) around the stamp with their own text, border settings, background etc.
 
-Here are the steps to add Stamp signature into document with GroupDocs.Signature:
+Here are the steps to add a Stamp signature to a document with GroupDocs.Signature:
 
-* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
+* Create a new instance of the [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass the source document path as a constructor parameter.
 * Instantiate the [StampSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/stampsignoptions) object according to your requirements and specify appropriate options.
-* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [StampSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/stampsignoptions) to it.
+* Call the [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of the [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass the [StampSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/stampsignoptions) to it.
 
 ## How to eSign document with Stamp signature
 
-This example shows how to add Stamp signature to document.
+This example shows how to add a Stamp signature to a document.
 
 ```csharp
 using (Signature signature = new Signature("sample.docx"))
@@ -100,8 +100,8 @@ You may easily run the code above and see the feature in action in our GitHub e
 * [Document Signature for Java App Dropwizard UI Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java-Dropwizard)
 * [Document Signature for Java Spring UI Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java-Spring)
 
-### Free Online App
+### Free Online Apps
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.
+Along with the full-featured .NET library, we provide simple but powerful free online apps.
 
-You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.
+To sign PDF, Word, Excel, PowerPoint, and other documents you can use the online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.
