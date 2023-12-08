@@ -3,13 +3,14 @@ id: how-to-generate-qrcode-and-sign-document-using-csharp
 url: signature/net/how-to-generate-qrcode-and-sign-document-using-csharp
 title: How to generate QR Code and sign document using C#
 weight: 3
-description: "This guide describes how to improve your document with generated QR code using C#. Sign your documents with QR Code and various standard QR code elements like Event QR Code, contact QR Code as VCard or MeCard, SEPA payment QR Code using GroupDocs.Signature .NET API by GroupDocs."
-keywords: QR Code creation, generate QR Code, add QR Code to document in CSharp, Sign document with QR Event in CSharp, VCard or MeCard QR Code.
+description: "This guide describes how to improve your document with generated QR code using C#. Sign your documents with a QR Code and various standard QR code elements like Event QR Code, contact QR Code as VCard or MeCard, SEPA payment QR Code using GroupDocs.Signature .NET API by GroupDocs."
+keywords: QR Code creation, generate QR Code, add QR Code to document in CSharp, Sign document with QR Event in CSharp, VCard, or MeCard QR Code.
 productName: GroupDocs.Signature for .NET
+toc: True
 structuredData:
     showOrganization: True
     application:    
-        name: Generate QR Code and sign document with it using C#    
+        name: Generate a QR Code and sign a document with it using C#    
         description: Creating QR Code signature and it to document with C# language by GroupDocs.Signature for .NET APIs
         productCode: signature
         productPlatform: net 
@@ -19,39 +20,33 @@ structuredData:
         description: Get known how to create QR and add it to the document using C#
         steps:
         - name: Load source document
-          text: Creating Signature instance with file path or stream as a constructor parameter will load the document. 
+          text: Creating the Signature instance with file path or stream as a constructor parameter will load the document. 
         - name: Provide QR Code options. 
-          text: Set specific properties of the QRCodeSignOption instance like a QR Code type, QR code text and signature appearance settings.
+          text: Set specific properties of the QRCodeSignOption instance like a QR Code type, QR code text, and signature appearance settings.
         - name: Sign source and obtain result 
-          text: Invoke method Sign with passing created options and output file data. You can save signed file using file path or stream.
+          text: Invoke method Sign with passing created options and output file data. You can save signed files using a file path or a stream.
 ---
 
-The generated QR Code can be downloaded and use to add to the business contracts and official documents. Any QR Code contains unique textual information that confirms the identity of the signer or authorizes the business document. QR Code verification can take place automatically by reading the contents of the QR Code embedded data. These signatures could be scanned automatically. The QR Code allows to keep over 2 Kbytes of data.
-
-There are following topics could be read in this article:
-
-* [eSign document with QR-code signature](signature/net/esign-document-with-qr-code-signature/)
-* [Sign document with QR-code signature - advanced](signature/net/sign-document-with-qr-code-signature-advanced/)
-* [Improve QR Code with custom encrypted data#](signature/net/sign-document-with-embedded-and-encrypted-data-in-qr-code-signatures/)
+The generated QR Code can be downloaded and used to add to the business contracts and official documents. Any QR Code contains unique textual information that confirms the identity of the signer or authorizes the business document. QR Code verification could be performed automatically by reading the contents of the QR Code embedded data. These signatures could be scanned automatically. The QR Code allows keeping over 2 Kilobytes of data.
 
 ## Native .NET API for Electronic Signatures
 
-[GroupDocs.Signature for .NET](https://products.groupdocs.com/signature/net) provides API for signing wide range of documents formats like PDF, MS Word, MS Presentations, PNG, JPEG, and other. Moreover, API includes special abilities for additional documents content processing. Supported formats are PDF, MS Word, MS Presentations, MS Excel, PNG, JPEG, and [many others](https://docs.groupdocs.com/signature/net/supported-document-formats/).
+[GroupDocs.Signature for .NET](https://products.groupdocs.com/signature/net) provides API for signing a wide range of document formats. Moreover, API includes special abilities for additional document content processing. Supported formats are PDF, Microsoft Word, Microsoft PowerPoint, Microsoft Excel, PNG, JPEG, and [many others](/signature/net/supported-document-formats/).
 
-Use the [downloads section](https://downloads.groupdocs.com/signature/net) to obtain API DLLs or MSI installer or NuGet:
+Use the [downloads section](https://downloads.groupdocs.com/signature/net) to obtain API DLLs or MSI installer or use the NuGet package manager:
 
 ```nuget
 PM> Install-Package GroupDocs.Signature
 ```
 
-### Signing document with Event QR-code in C\#
+## Signing a document with an Event QR-code in C\#
 
-Sometimes it is needed to inform workers about business events. In such cases Event QR-code can provide all demanded information in a very effective way. This topic describes how to sign Pdf document with generated Event QR-code.
+Sometimes it is needed to inform coworkers about business events. In such cases, an Event QR code can provide all the required information in a very effective way. This topic describes how to sign a PDF document with the generated Event QR code.
 
-* Instantiate Signature class providing path to source document or document stream.
-* Set event data in Event object instance.
-* Create the QrCodeSignOptions object and set up all demanded fields.
-* Invoke Sign method to process the document, providing output file path and sign options.
+* Instantiate the `Signature` class providing the path to the source document or document stream.
+* Set event data in the `Event` object instance.
+* Create the `QrCodeSignOptions` object and set up all demanded fields.
+* Invoke the `Sign` method to process the document, providing output file path and sign options.
 
 ```cs
             // instantiating the signature object

@@ -2,10 +2,11 @@
 id: how-to-sign-excel-macros-using-csharp
 url: signature/net/how-to-sign-excel-macros-using-csharp
 title: How to sign Excel spreadsheets and their macros using C#
-weight: 3
+weight: 4
 description: "This guide describes how to sign Excel workbooks and/or macros in them using C#. Sign your spreadsheets with digital certificate using GroupDocs.Signature .NET API by GroupDocs."
 keywords: Sign spreadsheets in CSharp, Sign workbooks in CSharp, Sign VBA macros with digital certificate in CSharp, Sign Excel document with digital certificate in CSharp
 productName: GroupDocs.Signature for .NET
+toc: True
 ---
 
 You can sign spreadsheets, as well as, Visual Basic for Applications (VBA) macro embedded into spreadsheets with digital certificates. Signing a workbook confirms the identity of the signer and the validity of the content. This enhances security and authentication. Modifying a signed spreadsheet invalidates the signature. When opening a signed workbook, other users could be sure that it came from a reliable source and no one has modified it since. 
