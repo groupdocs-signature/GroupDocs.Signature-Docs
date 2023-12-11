@@ -16,7 +16,7 @@ In today's digital age, ensuring the authenticity and integrity of electronic do
 ## What is a Digital Signature?
 
 A digital signature is a cryptographic mechanism for verifying the authenticity and integrity of electronic documents. It provides strong assurance that the document originated from a known sender and has not been tampered with by unauthorized sources. Digital signatures are typically represented by certificates containing private (for signing) and public (for verification) keys. Various public key cryptography standards, such as PFX format, are commonly used for this purpose.
-Picture below shows how digital signature looks by default on PDF document page.
+The picture below shows how a digital signature looks on a PDF document page by default.
 
 ![Digital](/signature/net/images/esign-document-with-digital-signature.png)
 
@@ -27,24 +27,24 @@ Picture below shows how digital signature looks by default on PDF document page.
 - **Non-repudiation:** Digital signatures prevent senders from denying the authenticity of the signed document.
 
 
-## How to Sign document with Digital signature
+## How to Sign a document with a Digital Signature
 
-**[GroupDocs.Signature](https://products.groupdocs.com/signature/net)** supports creation of digital signature based on existing PFX certificate. To specify different settings library provides [DigitalSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/) class that allows to adjust digital signature properties in the document:
+**[GroupDocs.Signature](https://products.groupdocs.com/signature/net)** supports the creation of digital signatures based on existing PFX certificates. To specify various settings the library provides the [DigitalSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/) class that allows adjusting digital signature properties in the document:
 
-* Certificate source from [FilePath](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/certificatefilepath/) or [Stream](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/certificatestream/);
-* Certificate [password](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/password/);
-* [Contact](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/contact/), [Reason](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/reason/) and [Location](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/location/) properties to set additional description;
-* [Visible](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/visible/) property to specify whether signature should be visible on document page or not;
-* [XAdES type](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/xadestype/) to specify whether e-signature should be of Xml Advanced Electronic Signature type.
+* The [FilePath](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/certificatefilepath/) or [Stream](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/certificatestream/) properties define the certificate source;
+* The [password](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/password/) property specifies the certificate password;
+* The [Contact](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/contact/), [Reason](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/reason/) and [Location](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/location/) properties specify additional descriptions;
+* The [Visible](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/visible/) property specifies whether the signature should be visible on the document page or not;
+* The [XAdES type](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/xadestype/) property defines whether the e-signature should be of an XML Advanced Electronic Signature type.
 
-### Follow these steps to sign your documents with digital signature
+### Follow these steps to sign your documents with a digital signature
 
-1. Install in your .NET application GroupDocs.Signature NuGet [package](https://www.nuget.org/packages/groupdocs.signature).
-2. Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
-3. Instantiate the [DigitalSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/) object with required certificate and its password.
-4. Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [DigitalSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/) to it.
+1. Install the GroupDocs.Signature [NuGet package](https://www.nuget.org/packages/groupdocs.signature) to your .NET application.
+2. Create a new instance of the [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass the source document path as a constructor parameter.
+3. Instantiate the [DigitalSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/) object with the required certificate and its password.
+4. Call the [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of the [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass the [DigitalSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/) to it.
 
-Example shows how to sign PDF document with digital e-signature using C# language. We can sign any other supported document format in the same way.
+The example below shows how to sign a PDF document with a digital e-signature using C# language. We can sign any other supported document format in the same way.
 
 ```csharp
 using (Signature signature = new Signature("sample.pdf"))
@@ -83,8 +83,8 @@ You may easily run the code above and see the feature in action in our GitHub e
 * [Document Signature for Java App Dropwizard UI Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java-Dropwizard)
 * [Document Signature for Java Spring UI Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java-Spring)
 
-### Free Online App
+### Free Online Apps
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.
+Along with the full-featured .NET library, we provide simple but powerful free online apps.
 
-You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.
+To sign PDF, Word, Excel, PowerPoint, and other documents you can use the online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.

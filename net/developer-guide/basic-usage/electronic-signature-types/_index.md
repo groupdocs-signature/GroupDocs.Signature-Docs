@@ -10,7 +10,7 @@ hideChildren: False
 structuredData:
     showOrganization: True
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) for .NET supports wide range of electronic signature types that are listed below:
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) for .NET supports a wide range of electronic signature types that are listed below:
 
 * Barcode signatures;
 * Digital signatures based on certificate files;
@@ -21,4 +21,4 @@ structuredData:
 * Stamp signatures;
 * Text signatures.  
 
-The following articles containing examples how to eSign documents with each supported signature type.
+The following articles contain examples of how to eSign documents with each supported signature type.

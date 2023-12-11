@@ -4,7 +4,7 @@ url: signature/net/esign-document-with-text-signature
 title: eSign document with Text signature
 linkTitle: Text signature
 weight: 7
-description: "This article explains how to sign document with Text signature by GroupDocs.Signature API. Let's try to add digital signature to a PDF programmatically."
+description: "This article explains how to sign a document with Text signature by GroupDocs.Signature API. Let's try to add a digital signature to a PDF programmatically."
 keywords: Add digital signature to a PDF programmatically, Text signature
 productName: GroupDocs.Signature for .NET
 structuredData:
@@ -20,29 +20,29 @@ structuredData:
         description: Learn all about signing a document by using a text and C#
         steps:
         - name: Load file which is planned to be signed
-          text: Create Signature object by passing file path or stream as a constructor parameter.
+          text: Create the Signature object by passing file path or stream as a constructor parameter.
         - name: Set up signing options 
           text: Provide new ImageSignOptions class instance and fill all demanded data.
-        - name: Put text on source file and save result 
-          text: Invoke Sign method with signing options and output file path or stream.
+        - name: Put text on the source file and save the result 
+          text: Invoke the Sign method with signing options and output file path or stream.
 ---
 ## What is a Text signature?
 
-A **Text** electronic signature is an arbitrary text that is added to a document in a native way dependent on document type. GroupDocs.Signature provides text signature feature and allows to customize wide range of text settings - from font name, size and color to alignment, borders, shadow effects etc. This is how text signature may look like:  
+A **Text** electronic signature is an arbitrary text that is added to a document in a native way depending on the type of the document. GroupDocs.Signature provides the text signature feature and allows customizing a wide range of text settings - from font name, size and color to alignment, borders, shadow effects etc. This is how a text signature may look like:  
 
 ![Text](/signature/net/images/esign-document-with-text-signature.png)
 
 ## How to eSign document with Text signature
 
-Let's try to add digital signature to a PDF programmatically.
+Let's try to add a text signature to a PDF programmatically.
 
-To manipulate with text signatures programmatically [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [TextSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions) class and the whole workflow as easy as follows:
+To manipulate text signatures programmatically [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides the [TextSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions) class and the whole workflow is as easy as follows:
 
-* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
-* Instantiate the [TextSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions) object according to your requirements and specify Text signature options.
-* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [TextSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions) to it.
+* Create a new instance of the [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass the source document path as a constructor parameter.
+* Instantiate the [TextSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions) object according to your requirements and specify the signature options.
+* Call the [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of the [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass the [TextSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions) to it.
 
-This example shows how to add Text signature to document.
+This example shows how to add a text signature to a document.
 
 ```csharp
 using (Signature signature = new Signature("sample.pdf"))
@@ -81,8 +81,8 @@ You may easily run the code above and see the feature in action in our GitHub e
 * [Document Signature for Java App Dropwizard UI Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java-Dropwizard)
 * [Document Signature for Java Spring UI Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java-Spring)
 
-### Free Online App
+### Free Online Apps
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.
+Along with the full-featured .NET library, we provide simple but powerful free online apps.
 
-You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.
+To sign PDF, Word, Excel, PowerPoint, and other documents you can use the online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.
