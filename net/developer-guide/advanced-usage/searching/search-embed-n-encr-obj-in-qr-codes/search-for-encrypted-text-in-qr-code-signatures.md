@@ -81,8 +81,8 @@ You may easily run the code above and see the feature in action in our GitHub e
 * [Document Signature for Java App Dropwizard UI Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java-Dropwizard)
 * [Document Signature for Java Spring UI Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java-Spring)
 
-### Free Online App
+### Free Online Apps
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.
+Along with the full-featured .NET library, we provide simple but powerful free online apps.
 
-You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.
+To sign PDF, Word, Excel, PowerPoint, and other documents you can use the online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.

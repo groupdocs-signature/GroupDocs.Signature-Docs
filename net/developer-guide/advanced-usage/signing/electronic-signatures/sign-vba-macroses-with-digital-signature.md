@@ -47,8 +47,8 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 * [Sign Spreadsheet document with macro support and VBA Project in it](https://github.com/groupdocs-signature/GroupDocs.Signature-for-.NET/blob/master/Examples/GroupDocs.Signature.Examples.CSharp/AdvancedUsage/Sign/SignSpreadsheetsVBAProject.cs)
 
-### Free Online App
+### Free Online Apps
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.
+Along with the full-featured .NET library, we provide simple but powerful free online apps.
 
-You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.
+To sign PDF, Word, Excel, PowerPoint, and other documents you can use the online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.
