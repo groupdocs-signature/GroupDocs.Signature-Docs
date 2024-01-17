@@ -131,7 +131,7 @@ public static void Run()
     using (Signature signature = new Signature("sampleSigned.pdf"))
     {
         signature.SearchProgress += OnSearchProgress;
-        QRCodeSearchOptions options = new QRCodeSearchOptions(QRCodeTypes.QR)
+        QrCodeSearchOptions options = new QrCodeSearchOptions(QRCodeTypes.QR)
         {
             // ...
         };
