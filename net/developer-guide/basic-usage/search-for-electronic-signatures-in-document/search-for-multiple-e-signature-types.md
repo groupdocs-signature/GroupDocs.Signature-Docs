@@ -54,7 +54,7 @@ using (Signature signature = new Signature("SingedSample.pdf"))
     {
         EncodeType = BarcodeTypes.Code128
     };
-    QRCodeSearchOptions qrCodeOptions = new QRCodeSearchOptions()
+    QrCodeSearchOptions qrCodeOptions = new QrCodeSearchOptions()
     {
         EncodeType = QRCodeTypes.QR,
         Text = "John",
