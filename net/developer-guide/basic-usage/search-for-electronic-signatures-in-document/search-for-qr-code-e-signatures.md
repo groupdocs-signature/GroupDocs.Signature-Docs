@@ -39,12 +39,12 @@ The code snippet below demonstrates search for QR-code signature in the document
             using (Signature signature = new Signature("sample.pdf"))
             {
                 // search for signatures in document
-                List<QRCodeSignature> signatures = signature.Search<QRCodeSignature>(SignatureType.QrCode);
+                List<QrCodeSignature> signatures = signature.Search<QrCodeSignature>(SignatureType.QrCode);
 
                 Console.WriteLine("\nSource document contains following signatures.");
-                foreach (var QRCodeSignature in signatures)
+                foreach (var QrCodeSignature in signatures)
                 {
-                    Console.WriteLine("QRCode signature found at page {0} with type {1} and text {2}", QRCodeSignature.PageNumber, QRCodeSignature.EncodeType, QRCodeSignature.Text);
+                    Console.WriteLine("QRCode signature found at page {0} with type {1} and text {2}", QrCodeSignature.PageNumber, QrCodeSignature.EncodeType, QrCodeSignature.Text);
                 }
             }
 ```

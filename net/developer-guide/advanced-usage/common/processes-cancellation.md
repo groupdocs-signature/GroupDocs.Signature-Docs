@@ -136,11 +136,11 @@ public static void Run()
             // ...
         };
         // search for signatures in document
-        List<QRCodeSignature> signatures = signature.Search<QRCodeSignature>(options);
+        List<QrCodeSignature> signatures = signature.Search<QrCodeSignature>(options);
         Console.WriteLine("\nSource document contains following signatures.");
-        foreach (var QRCodeSignature in signatures)
+        foreach (var QrCodeSignature in signatures)
         {
-            Console.WriteLine("QRCode signature found at page {0} with type {1} and text {2}", QRCodeSignature.PageNumber, QRCodeSignature.EncodeType, QRCodeSignature.Text);
+            Console.WriteLine("QRCode signature found at page {0} with type {1} and text {2}", QrCodeSignature.PageNumber, QrCodeSignature.EncodeType, QrCodeSignature.Text);
         }
     }
 }

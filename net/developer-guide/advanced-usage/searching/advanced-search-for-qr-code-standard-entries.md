@@ -43,8 +43,8 @@ structuredData:
 Here are the steps to extract standard entry frmo the QR-code signature with GroupDocs.Signature:  
 
 * Create new instance of  [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
-* Call the generic [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search/#search_2/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) with the [QRCodeSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodesignature/) generic type and pass [SignatureType.QRCode](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signaturetype/) to it.
-* Enumarate the response with the list of the [QRCodeSignature] (https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodesignature/) signatures and call generic [GetData] (https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodesignature/getdata/#getdata) method to retrieve the required instance of the object
+* Call the generic [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search/#search_2/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) with the [QrCodeSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodesignature/) generic type and pass [SignatureType.QRCode](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signaturetype/) to it.
+* Enumarate the response with the list of the [QrCodeSignature] (https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodesignature/) signatures and call generic [GetData] (https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodesignature/getdata/#getdata) method to retrieve the required instance of the object
 
 ## Example 1: How to get Address QR Code object in the document 
 
