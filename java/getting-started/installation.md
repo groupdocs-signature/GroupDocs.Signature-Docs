@@ -10,16 +10,34 @@ hideChildren: False
 toc: True
 ---
 
-## Install using Maven
+## Operating Systems
 
-All Java packages are hosted at [GroupDocs Artifact Repository](https://repository.groupdocs.com/). You can easily reference GroupDocs.Signature for Java API directly in your Maven project using following steps.
+**[GroupDocs.Signature for Java](https://products.groupdocs.com/signature/java)** can be executed on any Operating System with Java JDK installed.
+
+- Windows Desktops and Servers
+- Linux
+- Mac OS
+
+## Supported Runtime
+
+**[GroupDocs.Signature for Java](https://products.groupdocs.com/signature/java)** supports Java run-time version 8 and above (Kotlin is supported as well).
+
+## Development Environments
+
+- NetBeans
+- IntelliJ IDEA
+- Eclipse
+
+## Installation from GroupDocs Repository
+
+All Java packages are hosted at [GroupDocs Artifact Repository](https://releases.groupdocs.com/java/repo/). You can easily reference [GroupDocs.Signature for Java API](https://releases.groupdocs.com/java/repo/com/groupdocs/groupdocs-signature/) directly in your project using following steps.
 
 ### Add GroupDocs Artifact Repository
 
-First, you need to specify repository configuration/location in your Maven `pom.xml` as follows:
+First, you need to specify repository configuration/location in your project as follows:
 
 {{< tabs "example1">}}
-{{< tab "pom.xml" >}}
+{{< tab "Maven" >}}
 ```xml
 <repositories>
 	<repository>
@@ -30,22 +48,84 @@ First, you need to specify repository configuration/location in your Maven `pom
 </repositories>
 ```
 {{< /tab >}}
+{{< tab "Gradle" >}}
+```xml
+repositories {
+    maven {
+        url "https://repository.groupdocs.com/repo/"
+    }
+}
+```
+{{< /tab >}}
+{{< tab "Kotlin" >}}
+```xml
+repositories {
+    maven(url = "https://repository.groupdocs.com/repo/")
+}
+```
+{{< /tab >}}
+{{< tab "Ivy" >}}
+```xml
+<ivysettings>
+    <settings defaultResolver="chain"/>
+    <resolvers>
+        <chain name="chain">
+            <ibiblio name="GroupDocs Repository" m2compatible="true" root="https://releases.groupdocs.com/java/repo/"/>
+        </chain>
+    </resolvers>
+</ivysettings>
+```
+{{< /tab >}}
+{{< tab "Sbt" >}}
+```xml
+resolvers += Resolver.url("GroupDocs Repository", url("https://releases.groupdocs.com/java/repo/"))
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 ### Add GroupDocs.Signature as a dependency
 
-Then define GroupDocs.Signature for Java API dependency in your `pom.xml` as follows:
+Then define GroupDocs.Signature for Java API dependency in your project as follows:
 
 {{< tabs "example2">}}
-{{< tab "pom.xml" >}}
+{{< tab "Maven" >}}
 ```xml
 <dependencies>
     <dependency>
         <groupId>com.groupdocs</groupId>
         <artifactId>groupdocs-signature</artifactId>
-        <version>22.11</version>
+        <version>24.3</version>
     </dependency>
 </dependencies>
 ```
 {{< /tab >}}
+{{< tab "Gradle" >}}
+```xml
+dependencies {
+    implementation 'com.groupdocs:groupdocs-signature:24.3'
+}
+```
+{{< /tab >}}
+{{< tab "Kotlin" >}}
+```xml
+dependencies {
+    implementation("com.groupdocs:groupdocs-signature:24.3")
+}
+```
+{{< /tab >}}
+{{< tab "Ivy" >}}
+```xml
+<dependency org="com.groupdocs" name="groupdocs-signature" rev="24.3">
+   <artifact name="groupdocs-signature" ext="jar"/>
+</dependency>
+```
+{{< /tab >}}
+{{< tab "Sbt" >}}
+```xml
+libraryDependencies += "com.groupdocs" % "groupdocs-signature" % "24.3"
+```
+{{< /tab >}}
 {{< /tabs >}}
+
+_The latest version of Signature API can be [found here](https://releases.groupdocs.com/java/repo/com/groupdocs/groupdocs-signature/)_
+
