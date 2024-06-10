@@ -1,0 +1,82 @@
+---
+id: iterative-digital-signing-of-the-pdf-document
+url: signature/net/iterative-digital-signing-of-the-pdf-document
+title: Iterative Digital signing of the PDF document
+linkTitle: ✎ Iterative Digital signing of the PDF document
+weight: 1
+description: "This article explains how to iteratively sign a PDF document with multiple digital certificates using advanced options with GroupDocs.Signature API."
+keywords: 
+productName: GroupDocs.Signature for .NET
+hideChildren: False
+---
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [DigitalSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/) class to specify different amount of settings for Digital signature
+
+* digital certificate (file on local disk [CertificateFilePath](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/certificatefilepath/) or stream [CertificateStream](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/certificatestream/)) (required)
+* password of digital certificate [Password](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/password/) (required)
+* digital signature details ([Reason](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/reason/), [Contact](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/contact/), [Location](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/location/))
+
+Here are the steps to add Digital signature into document with GroupDocs.Signature:
+
+* Define the paths for the input PDF file, the digital certificates, and specify the output path where the signed documents will be saved.
+* Create a new instance of the [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass the source document path as a constructor parameter.
+* Instantiate the [DigitalSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/) object with the required certificate and its password, and configure additional properties such as reason, contact, location, and position.
+* Call the [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [DigitalSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/) to it.
+* After signing, update the document path for the next iteration.
+* Analyze the [SignResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult) to check the newly created signatures if needed.
+* Iterate through each certificate, repeating the above steps for each one.
+
+This example demonstrates how to iteratively sign a PDF document with multiple digital certificates. See [SignResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult)
+
+```csharp
+string filePath = "sample.pdf";
+string fileName = Path.GetFileName(filePath);
+
+string[] certificatePaths = new string[] { "certificate1.pfx", "certificate2.pfx" };
+
+string outputFilePath = Path.Combine("output folder path", "SignWithDigitalIterative", fileName);
+int iteration = 1;
+string documentFile = filePath;
+
+foreach (var certificatePath in certificatePaths)
+{
+    using (Signature signature = new Signature(documentFile))
+    {
+        DigitalSignOptions options = new DigitalSignOptions(certificatePath)
+        {
+            Password = "1234567890", // Certificate password
+            Reason = $"Approved-{iteration}", // Digital certificate details
+            Contact = $"John{iteration} Smith{iteration}",
+            Location = $"Location-{iteration}",
+            AllPages = true, // Sign all pages
+            Left = 10 + 100 * (iteration - 1),
+            Top = 10 + 100 * (iteration - 1),
+            Width = 160,
+            Height = 80,
+            Margin = new Padding() { Bottom = 10, Right = 10 }
+        };
+
+        SignResult signResult = signature.Sign(outputFilePath, options);
+        documentFile = outputFilePath;
+        Console.WriteLine($"\nSource document signed successfully {iteration++}-time with {signResult.Succeeded.Count} signature(s).\nFile saved at {outputFilePath}.");
+    }
+}
+```
+
+## More resources
+
+### GitHub Examples
+
+You may easily run the code above and see the feature in action in our GitHub examples:
+
+* [GroupDocs.Signature for .NET examples, plugins, and showcase](https://github.com/groupdocs-signature/GroupDocs.Signature-for-.NET)
+* [GroupDocs.Signature for Java examples, plugins, and showcase](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java)
+* [Document Signature for .NET MVC UI Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-.NET-MVC)
+* [Document Signature for .NET App WebForms UI Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-.NET-WebForms)
+* [Document Signature for Java App Dropwizard UI Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java-Dropwizard)
+* [Document Signature for Java Spring UI Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java-Spring)
+
+### Free Online Apps
+
+Along with the full-featured .NET library, we provide simple but powerful free online apps.
+
+To sign PDF, Word, Excel, PowerPoint, and other documents you can use the online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.
