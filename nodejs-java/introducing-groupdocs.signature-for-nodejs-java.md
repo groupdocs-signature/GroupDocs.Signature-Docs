@@ -1,6 +1,6 @@
 ---
 id: introducing-groupdocs-signature-for-nodejs
-url: signature/nodejs/introducing-groupdocs-signature-for-nodejs
+url: signature/nodejs-java/introducing-groupdocs-signature-for-nodejs
 title: Introducing GroupDocs.Signature for Node.js
 weight: 1
 description: "Introduction to GroupDocs.Signature for Node.js - what is it and why to use"

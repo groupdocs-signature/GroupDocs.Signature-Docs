@@ -1,6 +1,6 @@
 ---
 id: getting-started
-url: signature/nodejs/getting-started
+url: signature/nodejs-java/getting-started
 title: Getting Started
 weight: 2
 description: "This section decsribes how to get started with GroupDocs.Signature for Node.js library"

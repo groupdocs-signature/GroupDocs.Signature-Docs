@@ -1,6 +1,6 @@
 ---
 id: home
-url: signature/nodejs
+url: signature/nodejs-java
 title: GroupDocs.Signature for Node.js
 weight: 1
 description: "GroupDocs.Signature for Node.js is an easy to use electronic signature API designed for Node.js applications"
@@ -18,9 +18,9 @@ GroupDocs.Signature for Node.js allows developers to write applications with the
 
 Following are the links to some useful resources you may need to accomplish your tasks.
 
-* [GroupDocs.Signature for Node.js Online Documentation]({{< ref "signature/nodejs" >}})
-* [GroupDocs.Signature for Node.js Features]({{< ref "signature/nodejs/getting-started/features-overview.md" >}})
-* [GroupDocs.Signature for Node.js Limitations]({{< ref "signature/nodejs/getting-started/evaluation-limitations-and-licensing-of-groupdocs.signature.md" >}})
+* [GroupDocs.Signature for Node.js Online Documentation]({{< ref "signature/nodejs-java" >}})
+* [GroupDocs.Signature for Node.js Features]({{< ref "signature/nodejs-java/getting-started/features-overview.md" >}})
+* [GroupDocs.Signature for Node.js Limitations]({{< ref "signature/nodejs-java/getting-started/evaluation-limitations-and-licensing-of-groupdocs.signature.md" >}})
 * [GroupDocs.Signature for Node.js Release Notes](https://releases.groupdocs.com/signature/java/release-notes/)
 * [GroupDocs.Signature for Node.js Product Page](https://products.groupdocs.com/signature/nodejs-java)
 * [Install GroupDocs.Signature for Node.js NuGet Package](https://www.nuget.org/packages/GroupDocs.Signature/)

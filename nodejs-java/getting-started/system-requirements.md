@@ -1,6 +1,6 @@
 ---
 id: system-requirements
-url: signature/nodejs/system-requirements
+url: signature/nodejs-java/system-requirements
 title: System Requirements
 weight: 2
 description: "GroupDocs.Signature for Node.js supports any 32-bit or 64-bit operating system where Node.js or Mono framework is installed"
@@ -10,7 +10,7 @@ hideChildren: False
 ---
 ## Overview
 
-GroupDocs.Signature for Node.js does not require any external software or third party tool to be installed. Just follow one of the way as described in [Development Environment, Installation and Configuration]({{< ref "signature/nodejs/getting-started/installation.md" >}}).
+GroupDocs.Signature for Node.js does not require any external software or third party tool to be installed. Just follow one of the way as described in [Development Environment, Installation and Configuration]({{< ref "signature/nodejs-java/getting-started/installation.md" >}}).
 
 ## Requirements
 

@@ -1,6 +1,6 @@
 ---
 id: installation
-url: signature/nodejs/installation
+url: signature/nodejs-java/installation
 title: Installation
 weight: 4
 description: "This guide explains how to install GroupDocs.Signature for Node.js to your environment"
