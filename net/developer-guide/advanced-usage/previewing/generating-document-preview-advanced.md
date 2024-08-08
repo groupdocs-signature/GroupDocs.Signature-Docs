@@ -27,21 +27,21 @@ structuredData:
         - name: Get pages images
           text: Invoke GeneratePreview method passing preview options and save pages images by method defined in CreatePageStream method.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net)Â providesÂ [PreviewOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions)Â classÂ to specify different options to manage document pages preview generation process. Since 19.12 version there's ability to hide signatures from documents. Using property [HideSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions/hidesignatures)Â ofÂ [PreviewOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions)Â will allow to hide signatures from document preview.  
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [PreviewOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions) class to specify different options to manage document pages preview generation process. Since 19.12 version there's ability to hide signatures from documents. Using property [HideSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions/hidesignatures) of [PreviewOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions) will allow to hide signatures from document preview.  
   
 Here are the steps to generate document preview with GroupDocs.Signature with hidden signatures:
 
-* Create new instance ofÂ [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature)Â class and pass source document path as a constructor parameter.
-* Instantiate theÂ [PreviewOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions)Â object with:
-* delegate forÂ each pageÂ stream creation (see event handlerÂ [CreatePageStream](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/createpagestream));Â  
-* propertyÂ [HideSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions/hidesignatures) set toÂ true;
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
+* Instantiate the [PreviewOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions) object with:
+* delegate for each page stream creation (see event handler [CreatePageStream](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/createpagestream));  
+* property [HideSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions/hidesignatures) set to true;
 * image preview format - PNG / JPG / BMP;
 * page numbers to process;
-* custom size of preview images (if needed).Â  
+* custom size of preview images (if needed).  
 {{< alert style="info" >}}
 Stream that were created by [CreatePageStream](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/createpagestream) delegate will be disposed automatically once after generation of preview image. If you need to implement custom image preview stream disposing you have to pass additional argument [ReleasePageStream](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/releasepagestream) to clean up resources.  
 {{< /alert >}}  
-* CallÂ [GeneratePreview](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/generatepreview)Â method ofÂ [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature)Â class instance and passÂ [PreviewOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions)Â to it.
+* Call [GeneratePreview](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/generatepreview) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [PreviewOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions) to it.
 
 ## Generate document preview without signatures on it
 
@@ -64,22 +64,22 @@ public static void GetPreview()
     }
 }
 
-private static Stream CreatePageStream(int pageNumber)
+private static Stream CreatePageStream(PreviewPageData pageData)
 {
-    string imageFilePath = Path.Combine("GeneratePreviewFolder", "image-" + pageNumber.ToString() + ".jpg");
+    string imageFilePath = Path.Combine("GeneratePreviewFolder", "image-" + pageData.PageNumber.ToString() + ".jpg");
     var folder = Path.GetDirectoryName(imageFilePath);
     if(!Directory.Exists(folder))
     {
-        Directory.CreateDirectory(folder);
+                Directory.CreateDirectory(folder);
     }
     return new System.IO.FileStream(imageFilePath, FileMode.Create);
 }
 
-private static void ReleasePageStream(int pageNumber, Stream pageStream)
+private static void ReleasePageStream(PreviewPageData pageData, Stream pageStream)
 {
-     pageStream.Dispose();
-     string imageFilePath = Path.Combine("GeneratePreviewFolder", "image-" + pageNumber.ToString() + ".jpg");
-     Console.WriteLine("Image file {0} is ready for preview", imageFilePath);
+    pageStream.Dispose();
+    string imageFilePath = Path.Combine("GeneratePreviewFolder", "image-" + pageData.PageNumber.ToString() + ".jpg");
+    Console.WriteLine("Image file {0} is ready for preview", imageFilePath);
 }
 ```
 
@@ -87,7 +87,7 @@ private static void ReleasePageStream(int pageNumber, Stream pageStream)
 
 ### GitHub Examples
 
-You may easily run the code above and see the feature in action in ourÂ GitHub examples:
+You may easily run the code above and see the feature in action in our GitHub examples:
 
 * [GroupDocs.Signature for .NET examples, plugins, and showcase](https://github.com/groupdocs-signature/GroupDocs.Signature-for-.NET)
 * [GroupDocs.Signature for Java examples, plugins, and showcase](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java)
