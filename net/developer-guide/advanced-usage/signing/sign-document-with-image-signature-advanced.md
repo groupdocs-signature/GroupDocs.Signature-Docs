@@ -48,15 +48,15 @@ using (Signature signature = new Signature("sample.xlsx"))
         // setup image additional appearance as Brightness and Border
         Appearance = new ImageAppearance()
         {
-            Brightness = 0.9f,
-            Border = new Border()
-            {
-                Color = Color.DarkGreen,
-                DashStyle = DashStyle.DashLongDashDot,
-                Transparency = 0.5,
-                Visible = true,
-                Weight = 2
-            },
+            Brightness = 0.9f          
+        },
+        Border = new Border()
+        {
+            Color = Color.DarkGreen,
+            DashStyle = DashStyle.DashLongDashDot,
+            Transparency = 0.5,
+            Visible = true,
+            Weight = 2
         }
     };
 
