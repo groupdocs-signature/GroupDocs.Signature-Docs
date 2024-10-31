@@ -39,7 +39,7 @@ public static void Run()
     {
         using (Signature signature = new Signature(stream))
         {
-            QRCodeSignOptions options = new QRCodeSignOptions("JohnSmith")
+            QrCodeSignOptions options = new QrCodeSignOptions("JohnSmith")
             {
                 EncodeType = QRCodeTypes.QR,
                 Left = 100,

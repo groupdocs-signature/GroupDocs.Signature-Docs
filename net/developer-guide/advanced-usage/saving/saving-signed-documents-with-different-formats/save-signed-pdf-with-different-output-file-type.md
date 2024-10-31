@@ -43,7 +43,7 @@ Following example demonstrates how to save signed PDF document with different ou
 using (Signature signature = new Signature("sample.pdf"))
 {
     // create QRCode option with predefined QRCode text
-    QRCodeSignOptions signOptions = new QRCodeSignOptions("JohnSmith")
+    QrCodeSignOptions signOptions = new QrCodeSignOptions("JohnSmith")
     {
         EncodeType = QRCodeTypes.QR,
         Left = 100,

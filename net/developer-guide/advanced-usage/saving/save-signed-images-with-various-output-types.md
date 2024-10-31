@@ -31,7 +31,7 @@ Here are the steps to save signed Image document to special image output type wi
 ```csharp
 using (Signature signature = new Signature("sample.jpg"))
 {
-    QRCodeSignOptions signOptions = new QRCodeSignOptions("JohnSmith")
+    QrCodeSignOptions signOptions = new QrCodeSignOptions("JohnSmith")
     {
         EncodeType = QRCodeTypes.QR, Left = 100, Top = 100
     };
@@ -56,7 +56,7 @@ using (Signature signature = new Signature("sample.jpg"))
 ```csharp
 using (Signature signature = new Signature("sample.jpg"))
 {
-    QRCodeSignOptions signOptions = new QRCodeSignOptions("JohnSmith")
+    QrCodeSignOptions signOptions = new QrCodeSignOptions("JohnSmith")
     {
         EncodeType = QRCodeTypes.QR, Left = 100, Top = 100
     };
@@ -83,7 +83,7 @@ using (Signature signature = new Signature("sample.jpg"))
 ```csharp
 using (Signature signature = new Signature("sample.jpg"))
 {
-    QRCodeSignOptions signOptions = new QRCodeSignOptions("JohnSmith")
+    QrCodeSignOptions signOptions = new QrCodeSignOptions("JohnSmith")
     {
         EncodeType = QRCodeTypes.QR, Left = 100, Top = 100
     };
@@ -109,7 +109,7 @@ using (Signature signature = new Signature("sample.jpg"))
 ```csharp
 using (Signature signature = new Signature("sample.jpg"))
 {
-    QRCodeSignOptions signOptions = new QRCodeSignOptions("JohnSmith")
+    QrCodeSignOptions signOptions = new QrCodeSignOptions("JohnSmith")
     {
         EncodeType = QRCodeTypes.QR, Left = 100, Top = 100
     };
@@ -134,7 +134,7 @@ using (Signature signature = new Signature("sample.jpg"))
 ```csharp
 using (Signature signature = new Signature("sample.jpg"))
 {
-    QRCodeSignOptions signOptions = new QRCodeSignOptions("JohnSmith")
+    QrCodeSignOptions signOptions = new QrCodeSignOptions("JohnSmith")
     {
         EncodeType = QRCodeTypes.QR, Left = 100, Top = 100
     };

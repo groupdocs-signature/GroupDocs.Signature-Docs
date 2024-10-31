@@ -87,7 +87,7 @@ To try signing documents with QR codes for free, you may use the [QR Code Genera
 
 Another way to improve documents is to generate the QR code first and then add it to documents using third-party tools. For this case, it is possible to generate code as an image.
 
-* Create the `QRCodeSignOptions` instance and set up all demanded fields.
+* Create the `QrCodeSignOptions` instance and set up all demanded fields.
 * Instantiate the `PreviewSignatureOptions` object providing the methods for creation and releasing.
 * Invoke the `GenerateSignaturePreview` method to obtain the QR code image as a stream.
 * Use the resultant QR Code stream in any possible way.
@@ -95,7 +95,7 @@ Another way to improve documents is to generate the QR code first and then add i
 ```cs
             MemoryStream result = new MemoryStream();
             // setup QR Code signature options
-            QRCodeSignOptions signOptions = new QRCodeSignOptions()
+            QrCodeSignOptions signOptions = new QrCodeSignOptions()
             {
                 EncodeType = QRCodeTypes.Code93Extended,
                 Text = "Case 148.01"

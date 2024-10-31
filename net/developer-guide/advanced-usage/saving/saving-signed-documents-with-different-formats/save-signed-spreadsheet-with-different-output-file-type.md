@@ -44,7 +44,7 @@ Following example demonstrates how to save signed Spreadsheet document with diff
 using (Signature signature = new Signature("sample.xlsx"))
 {
     // create QRCode option with predefined QRCode text
-    QRCodeSignOptions signOptions = new QRCodeSignOptions("JohnSmith")
+    QrCodeSignOptions signOptions = new QrCodeSignOptions("JohnSmith")
     {
         // setup QRCode encoding type
         EncodeType = QRCodeTypes.QR,

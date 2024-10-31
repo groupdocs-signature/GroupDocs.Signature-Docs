@@ -43,7 +43,7 @@ Following example demonstrates how to save signed Image document with different 
 using (Signature signature = new Signature("sample.jpg"))
 {
     // create QRCode option with predefined QRCode text
-    QRCodeSignOptions signOptions = new QRCodeSignOptions("JohnSmith")
+    QrCodeSignOptions signOptions = new QrCodeSignOptions("JohnSmith")
     {
         // setup QRCode encoding type
         EncodeType = QRCodeTypes.QR,

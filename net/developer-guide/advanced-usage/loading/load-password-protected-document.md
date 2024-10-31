@@ -44,7 +44,7 @@ LoadOptions loadOptions = new LoadOptions()
 };
 using (Signature signature = new Signature("sampleProtected.pdf", loadOptions))
 {
-    QRCodeSignOptions options = new QRCodeSignOptions("JohnSmith")
+    QrCodeSignOptions options = new QrCodeSignOptions("JohnSmith")
     {
         EncodeType = QRCodeTypes.QR,
         Left = 100,
