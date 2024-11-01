@@ -16,7 +16,7 @@ structuredData:
     showVideo: True
     howTo:
         name: How to save document with password using C# 
-        description: This article explains how to ptotected signed document with password using C#
+        description: This article explains how to protected signed document with password using C#
         steps:
         - name: Load document for signing from the local file or stream.
           text: Create Signature class instance by passing either local or network file path or stream. 
