@@ -6,6 +6,7 @@ weight: 1
 description: "This article shows how to generate document pages preview with advanced options."
 keywords: 
 productName: GroupDocs.Signature for .NET
+toc: True
 structuredData:
     showOrganization: True
     application:    
@@ -70,7 +71,7 @@ private static Stream CreatePageStream(PreviewPageData pageData)
     var folder = Path.GetDirectoryName(imageFilePath);
     if(!Directory.Exists(folder))
     {
-                Directory.CreateDirectory(folder);
+       Directory.CreateDirectory(folder);
     }
     return new System.IO.FileStream(imageFilePath, FileMode.Create);
 }

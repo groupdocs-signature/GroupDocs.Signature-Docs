@@ -6,6 +6,7 @@ weight: 6
 description: "This topic explains how to get document pages preview as images with various options by GroupDocs.Signature API."
 keywords: preview as images, get document pages preview as images
 productName: GroupDocs.Signature for .NET
+toc: True
 structuredData:
     showOrganization: True
     application:    
@@ -130,11 +131,30 @@ private static Stream CreatePageStream(PreviewPageData pageData)
     return new System.IO.FileStream(imageFilePath, FileMode.Create);
 }
 
-private static void ReleasePageStream(int pageNumber, Stream pageStream)
+private static void ReleasePageStream(PreviewPageData pageData, Stream pageStream)
+{        
+    pageStream.Dispose();
+    string imageFilePath = Path.Combine("GeneratePreviewFolder", "image-" + pageData.PageNumber.ToString() + ".jpg");
+    Console.WriteLine("Image file {0} is ready for preview", imageFilePath);
+}
+```
+
+## Creating a document preview with custom Resolution
+
+```csharp
+// The path to the documents
+string filePath = "sample.pdf";
+using (Signature signature = new Signature(filePath))
 {
-     pageStream.Dispose();
-     string imageFilePath = Path.Combine("GeneratePreviewFolder", "image-" + pageNumber.ToString() + ".jpg");
-     Console.WriteLine("Image file {0} is ready for preview", imageFilePath);
+    int resolution = 96;
+    // create preview options object
+    // You can reuse CreatePageStream and ReleasePageStream methods from the previous example
+    PreviewOptions previewOption = new PreviewOptions(CreatePageStream, ReleasePageStream, resolution)
+    {
+        PreviewFormat = PreviewOptions.PreviewFormats.JPEG
+    };
+    // generate preview
+    signature.GeneratePreview(previewOption);
 }
 ```
 
