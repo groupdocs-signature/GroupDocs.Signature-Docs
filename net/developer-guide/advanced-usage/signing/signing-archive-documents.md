@@ -5,9 +5,10 @@ title: Signing archive documents in batch
 linkTitle: ✎ Archives
 weight: 20
 description: "This article shows how to sign documents in batch mode within the archive files with one or multiple electronic signatures"
-keywords: ZIP archive, TAR archive, 7z archive
+keywords: ZIP archive, TAR archive, 7z archive, GZIP archive and LZ archive
 productName: GroupDocs.Signature for .NET
 hideChildren: False
+toc: True
 structuredData:
     showOrganization: True
     application:    
@@ -27,10 +28,9 @@ structuredData:
         - name: Sign source file with form fields and save result 
           text: Invoke Sign method with signing options and output file path or stream.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) supports signing archive files with formats like ZIP, TAR, 7Z the same way as usual documents. The only difference in the [SignResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult/) of the [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method will contain for archive files the lists of [Succeeded](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult/succeeded) and [Failed](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult/failed) signatures as the  
-list of the [DocumentResultSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/documentresultsignature/) instances.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) supports signing archive files with formats like ZIP, TAR, 7Z, LZ, GZIP the same way as usual documents. The only difference in the [SignResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult/) of the [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method will contain for archive files the lists of [Succeeded](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult/succeeded) and [Failed](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult/failed) signatures as the list of the [DocumentResultSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/documentresultsignature/) instances.
 
-Here are the steps to sign the archive files like ZIP, TAR, 7z with GroupDocs.Signature:
+Here are the steps to sign the archive files like ZIP, TAR, 7z, LZ, GZIP with GroupDocs.Signature:
 
 * Create a new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass the source archive path or stream of the archive as a constructor parameter.
 * Instantiate the single [SignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions) object or list of this class with the required options.
@@ -70,6 +70,35 @@ using (var signature = new Signature("sample.zip"))
         {
             Console.WriteLine($"Document {document.FileName}. Processed: {document.ProcessingTime}, mls");
         }
+    }
+}
+```
+
+## Sign single-file archive documents
+LZ and GZIP formats compress individual files into single-file archives, optimizing them for storage and transmission.
+
+{{< alert style="note" >}}
+The name of the archive file should match the name of the file contained.
+{{< /alert >}}
+
+This example shows how to sign GZIP archive document with SignOptions.
+
+```csharp
+using (Signature signature = new Signature("sample.pdf.gz"))
+{
+    // create sign options
+    TextSignOptions options = new TextSignOptions("signed!")
+    {
+        // set signature position
+        Left = 100,
+        Top = 100
+    };
+    // sign archive to new zip file
+    SignResult result = signature.Sign("output.pdf.gz", options);
+    // analyze signed documents
+    foreach (DocumentResultSignature document in result.Succeeded)
+    {
+        Console.WriteLine($"Document {document.FileName}. Processed: {document.ProcessingTime}, mls");
     }
 }
 ```

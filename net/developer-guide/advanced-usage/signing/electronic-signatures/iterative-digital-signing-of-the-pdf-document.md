@@ -68,7 +68,7 @@ foreach (var certificatePath in certificatePaths)
 
 This example demonstrates how to iteratively sign a PDF document with multiple digital certificates, customizing the appearance and adding an image to each signature. See [SignResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult)
 
-#### Here are the steps:
+Here are the steps:
 * Setting up variables: define the paths for the input PDF file, the digital certificates, and specify the output path where the signed documents will be saved.
 ```csharp
 // File paths for source document, image, and output files
