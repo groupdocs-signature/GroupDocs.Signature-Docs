@@ -8,14 +8,17 @@ description: "This article explains how to iteratively sign a PDF document with 
 keywords: 
 productName: GroupDocs.Signature for .NET
 hideChildren: False
+toc: True
 ---
+ 
+### How to apply digital signatures iteratively to a PDF document
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [DigitalSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/) class to specify different amount of settings for Digital signature
 
 * digital certificate (file on local disk [CertificateFilePath](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/certificatefilepath/) or stream [CertificateStream](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/certificatestream/)) (required)
 * password of digital certificate [Password](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/password/) (required)
 * digital signature details ([Reason](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/reason/), [Contact](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/contact/), [Location](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/location/))
 
-Here are the steps to add Digital signature into document with GroupDocs.Signature:
+### Here are the steps to add Digital signature into document with GroupDocs.Signature:
 
 * Define the paths for the input PDF file, the digital certificates, and specify the output path where the signed documents will be saved.
 * Create a new instance of the [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass the source document path as a constructor parameter.
@@ -58,6 +61,76 @@ foreach (var certificatePath in certificatePaths)
         SignResult signResult = signature.Sign(outputFilePath, options);
         documentFile = outputFilePath;
         Console.WriteLine($"\nSource document signed successfully {iteration++}-time with {signResult.Succeeded.Count} signature(s).\nFile saved at {outputFilePath}.");
+    }
+}
+```
+### How to apply digital signatures iteratively to a PDF document with custom appearance and image
+
+This example demonstrates how to iteratively sign a PDF document with multiple digital certificates, customizing the appearance and adding an image to each signature. See [SignResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult)
+
+#### Here are the steps:
+* Setting up variables: define the paths for the input PDF file, the digital certificates, and specify the output path where the signed documents will be saved.
+```csharp
+// File paths for source document, image, and output files
+string sourceFile = "sample.pdf";
+string imageFilePath = "image.jpg";
+string signedFile = "signed.pdf";
+string resultOutputFile = "result.pdf";
+
+// Paths to digital certificates for signing
+string[] certificatePaths = new string[] { certificateFilePath1, certificateFilePath2 };
+int iteration = 0;
+```
+
+* Helper method to generate the [DigitalSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/) object with the required certificate and its password, and configure additional properties such as reason, contact, location, and position. An image and custom appearance labels are also set.
+
+```csharp
+private static DigitalSignOptions CreateDigitalSignOptions(string certificatePath, string imageFilePath, int iteration)
+{
+    return new DigitalSignOptions(certificatePath)
+    {
+        Password = "1234567890",             // Certificate password
+        Reason = "Sign",                     // Signature reason
+        Contact = $"JohnSmith{iteration}",   // Contact details
+        Location = $"Office{iteration}",     // Signature location
+        Visible = true,
+        Left = 80 + iteration * 5,           // Positioning for visibility
+        Top = 600 + iteration * 5,
+        Height = 50 + iteration * 5,
+        Width = 200 + iteration * 5,
+        ImageFilePath = imageFilePath,       // Image appearance for signature
+        Appearance = new PdfDigitalSignatureAppearance
+        {
+            ReasonLabel = "Reason Label",
+            DigitalSignedLabel = "Digital Signed Label"
+        }
+    };
+}
+```
+
+* Create a new instance of the [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass the source document path as a constructor parameter.
+* Call the [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [DigitalSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/) to it.
+* After signing, update the document path for the next iteration.
+* Analyze the [SignResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult) to check the newly created signatures if needed.
+* Iterate through each certificate, repeating the above steps for each one.
+
+```csharp
+foreach (var certificatePath in certificatePaths)
+{
+    using (Signature signature = new Signature("sample.pdf"))
+    {
+        // Generate signature options with helper method
+        DigitalSignOptions options = CreateDigitalSignOptions(certificatePath, imageFilePath, iteration);
+
+        // Update output file name on second iteration
+        if (iteration == 1) signedFile = resultOutputFile;
+
+        // Sign document and display result
+        SignResult signResult = signature.Sign(signedFile, options);
+        Console.WriteLine(
+            $"\nDocument signed successfully {iteration + 1}-time with " +
+            $"{signResult.Succeeded.Count} signature(s).\nFile saved at {signedFile}.");
+        iteration++;
     }
 }
 ```

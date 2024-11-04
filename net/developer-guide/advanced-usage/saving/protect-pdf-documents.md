@@ -1,7 +1,7 @@
 ---
 id: protect-pdf-documents
 url: signature/net/protect-pdf-documents
-title: How to Protect a Signed PDF Document
+title: How to protect a signed PDF document
 weight: 3
 description: "This article explains how to protect a signed PDF document."
 keywords: 
@@ -29,6 +29,9 @@ structuredData:
             text: Retrieve the signed and protected PDF document with restricted permissions and access settings.
 
 ---
+
+### How to secure PDF document with permissions
+
 [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class supports saving signed documents with permission settings and password protection for access and modification. This capability is achieved using the [PermissionsPassword](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/pdfsaveoptions/permissionspassword/) and [Permissions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/pdfsaveoptions/permissions/) properties of the [PdfSaveOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/pdfsaveoptions/) class, which should be passed to [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method.
 
 You can secure a PDF document by setting the following parameters:
