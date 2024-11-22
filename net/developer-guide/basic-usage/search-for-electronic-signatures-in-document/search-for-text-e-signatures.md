@@ -37,7 +37,7 @@ Here are the steps to search for Text e-signatures using GroupDocs.Signature AP
 This example shows how to search for Text e-signature in the document.
 
 ```csharp
-using (Signature signature = new Signature(sample.pdf))
+using (Signature signature = new Signature("sample.pdf"))
 {
     // setup search options
     TextSearchOptions searchOptions = new TextSearchOptions()
@@ -56,11 +56,10 @@ using (Signature signature = new Signature(sample.pdf))
     // output signatures
     foreach (TextSignature textSignature in signatures)
     {
-        if (textSignature != null)
-        {
-            Console.Write($"Found Text signature: {textSignature.SignatureImplementation} with text {textSignature.Text}.");
-            Console.WriteLine($"Location at {textSignature.Left}-{textSignature.Top}. Size is {textSignature.Width}x{textSignature.Height}.");
-        }
+         Console.Write($"Found Text signature: {textSignature.SignatureImplementation} " +
+                       $"with text {textSignature.Text}.");
+         Console.WriteLine($"Location at {textSignature.Left}-{textSignature.Top}. " +
+                           $"Size is {textSignature.Width}x{textSignature.Height}.");
     }
 }
 ```

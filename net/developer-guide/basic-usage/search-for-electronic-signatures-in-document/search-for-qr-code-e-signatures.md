@@ -36,17 +36,18 @@ Here are the quick guide of how to search for QR-code signatures:
 The code snippet below demonstrates search for QR-code signature in the document.
 
 ```csharp
-            using (Signature signature = new Signature("sample.pdf"))
-            {
-                // search for signatures in document
-                List<QrCodeSignature> signatures = signature.Search<QrCodeSignature>(SignatureType.QrCode);
+using (Signature signature = new Signature("sample.pdf"))
+{
+    // search for signatures in document
+    List<QrCodeSignature> signatures = signature.Search<QrCodeSignature>(SignatureType.QrCode);
 
-                Console.WriteLine("\nSource document contains following signatures.");
-                foreach (var QrCodeSignature in signatures)
-                {
-                    Console.WriteLine("QRCode signature found at page {0} with type {1} and text {2}", QrCodeSignature.PageNumber, QrCodeSignature.EncodeType, QrCodeSignature.Text);
-                }
-            }
+    Console.WriteLine("\nSource document contains following signatures.");
+    foreach (var QrCodeSignature in signatures)
+    {
+        Console.WriteLine("QRCode signature found at page {0} with type {1} and text {2}",
+            QrCodeSignature.PageNumber, QrCodeSignature.EncodeType, QrCodeSignature.Text);
+    }
+}
 ```
 
 ### Advanced Usage Topics

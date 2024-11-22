@@ -43,7 +43,8 @@ using (Signature signature = new Signature("signed.pdf"))
 
     foreach (var formFieldSignature in signatures)
     {
-        Console.WriteLine("FormField signature found. Name : {0}. Value: {1}", formFieldSignature.Name, formFieldSignature.Value);
+        Console.WriteLine("FormField signature found. Name : {0}. Value: {1}", 
+            formFieldSignature.Name, formFieldSignature.Value);
     }
 }
 ```

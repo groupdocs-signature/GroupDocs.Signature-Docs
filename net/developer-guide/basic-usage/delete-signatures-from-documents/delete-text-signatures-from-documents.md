@@ -46,19 +46,26 @@ This example shows how to delete Text signature that was found using [Search](h
 using (Signature signature = new Signature("signed.pptx"))
 {
     TextSearchOptions options = new TextSearchOptions();
-    // search for text signatures in document
-    List<TextSignature> signatures = signature.Search<TextSignature>(options);
-    if(signatures.Count > 0)
+    
+    // Search for text signatures in the document
+    List<TextSignature> signatures = 
+        signature.Search<TextSignature>(options);
+
+    if (signatures.Count > 0)
     {
         TextSignature textSignature = signatures[0];
         bool result = signature.Delete(textSignature);
-        if(result)
+
+        if (result)
         {
-            Console.WriteLine($"Signature with Text '{textSignature.Text}' was deleted from document.");
+            Console.WriteLine(
+                $"Signature with text '{textSignature.Text}' " +
+                $"was deleted from the document."
+            );
         }
         else
         {
-            Console.WriteLine($"Signature was not deleted from the document!");
+            Console.WriteLine("Signature was not deleted from the document!");
         }
     }
 }

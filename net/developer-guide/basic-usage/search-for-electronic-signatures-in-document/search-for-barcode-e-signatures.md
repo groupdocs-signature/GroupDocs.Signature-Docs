@@ -40,15 +40,15 @@ This example shows how to search for Barcode signature in the document.
 ```csharp
 using (Signature signature = new Signature("sample.pdf"))
 {
-        // search for signatures in document
-        List<BarcodeSignature> signatures = signature.Search<BarcodeSignature>(SignatureType.Barcode);
+    // search for signatures in document
+    List<BarcodeSignature> signatures = signature.Search<BarcodeSignature>(SignatureType.Barcode);
 
-        Console.WriteLine("\nSource document contains following signatures.");
-        foreach (var barcodeSignature in signatures)
-        {
-            Console.WriteLine("Barcode signature found at page {0} with type {1} and text {2}",
-                barcodeSignature.PageNumber, barcodeSignature.EncodeType, barcodeSignature.Text);
-        }
+    Console.WriteLine("\nSource document contains following signatures.");
+    foreach (var barcodeSignature in signatures)
+    {
+        Console.WriteLine("Barcode signature found at page {0} with type {1} and text {2}",
+            barcodeSignature.PageNumber, barcodeSignature.EncodeType, barcodeSignature.Text);
+    }
 }
 ```
 

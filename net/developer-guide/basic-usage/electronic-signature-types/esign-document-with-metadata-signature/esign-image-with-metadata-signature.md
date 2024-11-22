@@ -54,7 +54,7 @@ using (Signature signature = new Signature("sample.png"))
     // Create several Image Metadata signatures with different types
     options
         .Add(new ImageMetadataSignature(imgsMetadataId++, "Mr.Scherlock Holmes")) // String value
-        .Add(new ImageMetadataSignature(imgsMetadataId++, DateTime.Now))          // Date Time valu
+        .Add(new ImageMetadataSignature(imgsMetadataId++, DateTime.Now))          // Date Time value
         .Add(new ImageMetadataSignature(imgsMetadataId++, 123456))                // Integer value
         .Add(new ImageMetadataSignature(imgsMetadataId++, 123.456D))              // Double value
         .Add(new ImageMetadataSignature(imgsMetadataId++, 123.456M))              // Decimal value

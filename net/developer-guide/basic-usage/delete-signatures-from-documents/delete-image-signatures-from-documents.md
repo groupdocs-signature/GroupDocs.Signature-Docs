@@ -46,19 +46,30 @@ This example shows how to delete Image signature that was found using [Search](
 using (Signature signature = new Signature("signed.pptx"))
 {
     ImageSearchOptions options = new ImageSearchOptions();
-    // search for image signatures in document
-    List<ImageSignature> signatures = signature.Search<ImageSignature>(options);
+    
+    // Search for image signatures in the document
+    List<ImageSignature> signatures = 
+        signature.Search<ImageSignature>(options);
+
     if (signatures.Count > 0)
     {
         ImageSignature imageSignature = signatures[3];
         bool result = signature.Delete(imageSignature);
+
         if (result)
         {
-            Console.WriteLine($"Image signature at location {imageSignature.Left}x{imageSignature.Top} and Size {imageSignature.Size}' was deleted from document ['{fileName}'].");
+            Console.WriteLine(
+                $"Image signature at location {imageSignature.Left}x{imageSignature.Top} " +
+                $"and size {imageSignature.Size} was deleted from document ['{fileName}']."
+            );
         }
         else
         {
-            Console.WriteLine($"Signature was not deleted from the document! Signature at location {imageSignature.Left}x{imageSignature.Top} and Size {imageSignature.Size} was not found!");
+            Console.WriteLine(
+                $"Signature was not deleted from the document! " +
+                $"Signature at location {imageSignature.Left}x{imageSignature.Top} " +
+                $"and size {imageSignature.Size} was not found!"
+            );
         }
     }
 }

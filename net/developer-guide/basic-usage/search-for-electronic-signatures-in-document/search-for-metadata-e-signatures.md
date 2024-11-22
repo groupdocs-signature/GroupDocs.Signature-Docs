@@ -43,7 +43,8 @@ using (Signature signature = new Signature("sample.pdf"))
     List<MetadataSignature> signatures = signature.Search<MetadataSignature>(options);
     foreach (var metadataSignature in signatures)
     {
-        Console.WriteLine("Metadata signature found. Name : {0}. Value: {1}. Type: {2}", metadataSignature.Name, metadataSignature.Value,metadataSignature.Type);
+        Console.WriteLine("Metadata signature found. Name : {0}. Value: {1}. Type: {2}",
+            metadataSignature.Name, metadataSignature.Value,metadataSignature.Type);
     }
 }
 ```

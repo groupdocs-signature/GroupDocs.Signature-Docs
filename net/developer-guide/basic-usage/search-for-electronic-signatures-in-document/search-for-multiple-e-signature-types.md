@@ -56,13 +56,13 @@ using (Signature signature = new Signature("SingedSample.pdf"))
     };
     QrCodeSearchOptions qrCodeOptions = new QrCodeSearchOptions()
     {
-        EncodeType = QRCodeTypes.QR,
+        EncodeType = QrCodeTypes.QR,
         Text = "John",
         MatchType = TextMatchType.Contains
     };
     MetadataSearchOptions metadataOptions = new MetadataSearchOptions()
     {
-     IncludeBuiltinProperties = true
+        IncludeBuiltinProperties = true
     };
 
     // add options to list
@@ -78,7 +78,9 @@ using (Signature signature = new Signature("SingedSample.pdf"))
         Console.WriteLine("\nSource document contains following signatures.");
         foreach (var resSignature in result.Signatures)
         {
-            Console.WriteLine("Signature found at page {0} with type {1}", resSignature.PageNumber, resSignature.SignatureType);
+            Console.WriteLine("Signature found at page {0} with type {1}", 
+                resSignature.PageNumber,
+                resSignature.SignatureType);
         }
     }
     else

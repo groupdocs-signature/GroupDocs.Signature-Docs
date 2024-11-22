@@ -36,18 +36,18 @@ Please follow these steps to search for Digital signatures within the document:
 This example shows how to search for Digital signature in the document and analyze digital signature certificate.
 
 ```csharp
-            using (Signature signature = new Signature("spreadsheet.xlsx"))
-            {
-                // search for signatures in document
-                List<DigitalSignature> signatures = signature.Search<DigitalSignature>(SignatureType.Digital);
+using (Signature signature = new Signature("spreadsheet.xlsx"))
+{
+    // search for signatures in document
+    List<DigitalSignature> signatures = signature.Search<DigitalSignature>(SignatureType.Digital);
 
-                Console.WriteLine("\nSource document contains following signatures.");
-                foreach (var digitalSignature in signatures)
-                {
-                    Console.WriteLine("Digital signature found from {0} with validation flag {1}. Certificate SN {2}",
-                    digitalSignature.SignTime, digitalSignature.IsValid, digitalSignature.Certificate?.SerialNumber);
-                }
-            }
+    Console.WriteLine("\nSource document contains following signatures.");
+    foreach (var digitalSignature in signatures)
+    {
+        Console.WriteLine("Digital signature found from {0} with validation flag {1}. Certificate SN {2}",
+        digitalSignature.SignTime, digitalSignature.IsValid, digitalSignature.Certificate?.SerialNumber);
+    }
+}
 ```
 
 ### Advanced Usage Topics

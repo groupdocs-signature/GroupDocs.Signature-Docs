@@ -52,8 +52,9 @@ GroupDocs.Signature expects [CreatePageStream](https://reference.groupdocs.com/
 ```csharp
 private static Stream CreatePageStream(PreviewPageData pageData)
 {
-    string imageFilePath = Path.Combine("GeneratePreviewFolder", "image-" + pageData.PageNumber.ToString() + ".jpg");
-    var folder = Path.GetDirectoryName(imageFilePath);
+    string imageName = "image-" + pageData.PageNumber + ".jpg";
+    string imageFilePath = Path.Combine("GeneratePreviewFolder", imageName);
+    string folder = Path.GetDirectoryName(imageFilePath);
     if(!Directory.Exists(folder))
     {
         Directory.CreateDirectory(folder);
@@ -68,7 +69,8 @@ private static Stream CreatePageStream(PreviewPageData pageData)
 private static void ReleasePageStream(PreviewPageData pageData, Stream pageStream)
 {
      pageStream.Dispose();
-     string imageFilePath = Path.Combine("GeneratePreviewFolder", "image-" + pageData.PageNumber.ToString() + ".jpg");
+     string imageName = "image-" + pageData.PageNumber + ".jpg";
+     string imageFilePath = Path.Combine("GeneratePreviewFolder", imageName);
      Console.WriteLine("Image file {0} is ready for preview", imageFilePath);
 }
 ```
@@ -92,7 +94,8 @@ public static void GetPreview()
 
 private static Stream CreatePageStream(PreviewPageData pageData)
 {
-    string imageFilePath = Path.Combine("GeneratePreviewFolder", "image-" + pageData.PageNumber.ToString() + ".jpg");
+    string imageName = "image-" + pageData.PageNumber + ".jpg";
+    string imageFilePath = Path.Combine("GeneratePreviewFolder", imageName);
     var folder = Path.GetDirectoryName(imageFilePath);
     if(!Directory.Exists(folder))
     {
@@ -124,7 +127,8 @@ public static void GetPreview()
 
 private static Stream CreatePageStream(PreviewPageData pageData)
 {
-    string imageFilePath = Path.Combine("GeneratePreviewFolder", "image-" + pageData.PageNumber.ToString() + ".jpg");
+    string imageName = "image-" + pageData.PageNumber + ".jpg";
+    string imageFilePath = Path.Combine("GeneratePreviewFolder", imageName);
     var folder = Path.GetDirectoryName(imageFilePath);
     if(!Directory.Exists(folder))
     {
@@ -136,7 +140,8 @@ private static Stream CreatePageStream(PreviewPageData pageData)
 private static void ReleasePageStream(PreviewPageData pageData, Stream pageStream)
 {        
     pageStream.Dispose();
-    string imageFilePath = Path.Combine("GeneratePreviewFolder", "image-" + pageData.PageNumber.ToString() + ".jpg");
+    string imageName = "image-" + pageData.PageNumber + ".jpg";
+    string imageFilePath = Path.Combine("GeneratePreviewFolder", imageName);
     Console.WriteLine("Image file {0} is ready for preview", imageFilePath);
 }
 ```

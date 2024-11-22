@@ -39,20 +39,25 @@ This example shows how to delete QR-Code signatures from the document.
 ```csharp
 using (Signature signature = new Signature("signed.pdf"))
 {
-    // deleting QR-Code signatures from the document
+    // Deleting QR-Code signatures from the document
     DeleteResult result = signature.Delete(SignatureType.QrCode);
+
     if (result.Succeeded.Count > 0)
     {
-        Console.WriteLine("Following QR-Code signatures were deleted:");                    
+        Console.WriteLine("Following QR-Code signatures were deleted:");
+
         int number = 1;
         foreach (QrCodeSignature temp in result.Succeeded)
         {
-            Console.WriteLine($"Signature #{number++}: Type: {temp.SignatureType} Id:{temp.SignatureId}, Text: {temp.Text}");
+            Console.WriteLine(
+                $"Signature #{number++}: Type: {temp.SignatureType}, " +
+                $"Id: {temp.SignatureId}, Text: {temp.Text}"
+            );
         }
     }
     else
     {
-        Helper.WriteError("No one QR-Code signature was deleted.");
+        Console.WriteLine("No QR-Code signatures were deleted.");
     }
 }
 ```

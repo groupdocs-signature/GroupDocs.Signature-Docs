@@ -40,23 +40,23 @@ This example shows how to verify Text signature in the document.
 ```csharp
 using (Signature signature = new Signature("sample.pdf"))
 {
-        TextVerifyOptions options = new TextVerifyOptions()
-        {
-            AllPages = true, // this value is set by default
-            SignatureImplementation = TextSignatureImplementation.Stamp,
-            Text = "John",
-            MatchType = TextMatchType.Contains
-        };
-        // verify document signatures
-        VerificationResult result = signature.Verify(options);
-        if(result.IsValid)
-        {
-            Console.WriteLine("\nDocument was verified successfully!");
-        }
-        else
-        {
-            Console.WriteLine("\nDocument failed verification process.");
-        }
+    TextVerifyOptions options = new TextVerifyOptions()
+    {
+        AllPages = true, // this value is set by default
+        SignatureImplementation = TextSignatureImplementation.Stamp,
+        Text = "John",
+        MatchType = TextMatchType.Contains
+    };
+    // verify document signatures
+    VerificationResult result = signature.Verify(options);
+    if(result.IsValid)
+    {
+        Console.WriteLine("\nDocument was verified successfully!");
+    }
+    else
+    {
+        Console.WriteLine("\nDocument failed verification process.");
+    }
 }
 ```
 

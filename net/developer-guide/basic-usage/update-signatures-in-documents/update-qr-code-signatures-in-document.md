@@ -7,7 +7,6 @@ weight: 3
 description: "This article explains how to update QR-code electronic signatures with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET 
-toc: True
 structuredData:
     showOrganization: True
     application:    
@@ -58,11 +57,14 @@ using (Signature signature = new Signature("signed.pdf"))
         bool result = signature.Update(qrCodeSignature);
         if (result)
         {
-            Console.WriteLine($"Signature with QR-Code '{qrCodeSignature.Text}' was updated in the document.");
+            Console.WriteLine(
+                $"Signature with QR-Code '{qrCodeSignature.Text}' " +
+                $"was updated in the document."
+            );
         }
         else
         {
-            Console.WriteLine($"Signature was not deleted from the document!");
+            Console.WriteLine("Signature was not deleted from the document!");
         }
     }
 }

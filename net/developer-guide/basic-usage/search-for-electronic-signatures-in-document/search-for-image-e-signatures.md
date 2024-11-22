@@ -37,7 +37,8 @@ structuredData:
 The code snippet below demonstrates how to search for Image electronic signature in the document.
 
 ```csharp
-using (Signature signature = new Signature("sample.pdf"))
+string fileName = "sample.pdf";
+using (Signature signature = new Signature(fileName))
 {
     // search document
     List<ImageSignature> signatures = signature.Search<ImageSignature>(SignatureType.Image);
@@ -45,7 +46,9 @@ using (Signature signature = new Signature("sample.pdf"))
     // output signatures
     foreach (ImageSignature imageSignature in signatures)
     {
-        Console.WriteLine($"Image signature found at page {imageSignature.PageNumber} with size {imageSignature.Size}. Created {imageSignature.CreatedOn}, modified {imageSignature.ModifiedOn}");
+        Console.WriteLine($"Image signature found at page {imageSignature.PageNumber} " +
+                          $"with size {imageSignature.Size}. Created {imageSignature.CreatedOn}, " +
+                          $"modified {imageSignature.ModifiedOn}");
     }
 }
 ```

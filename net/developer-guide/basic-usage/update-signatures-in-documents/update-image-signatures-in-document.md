@@ -7,7 +7,6 @@ weight: 2
 description: "This article explains how to update Image electronic signatures with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET 
-toc: True
 structuredData:
     showOrganization: True
     application:    
@@ -58,13 +57,19 @@ using (Signature signature = new Signature("sampleSigned.pdf"))
         signatureToUpdate.Height = 150;
 
         bool result = signature.Update(imageSignature);
-        if(result)
+        if (result)
         {
-            Console.WriteLine($"Signature with Top '{imageSignature.Top}' was updated in the document ['{fileName}'].");
+            Console.WriteLine(
+                $"Signature with Top '{imageSignature.Top}' " +
+                $"was updated in the document ['{fileName}']."
+            );
         }
         else
         {
-            Console.WriteLine($"Signature was not updated in  the document! Signature with Top '{imageSignature.Top}' was not found!");
+            Console.WriteLine(
+                $"Signature was not updated in the document! " +
+                $"Signature with Top '{imageSignature.Top}' was not found!"
+            );
         }
     }
 }

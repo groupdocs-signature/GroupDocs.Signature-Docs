@@ -54,11 +54,20 @@ using (Signature signature = new Signature("signed.docx"))
         bool result = signature.Delete(barcodeSignature);
         if (result)
         {
-            Console.WriteLine($"Signature with Barcode '{barcodeSignature.Text}' and encode type '{barcodeSignature.EncodeType.TypeName}' was deleted from document ['{fileName}'].");
+            Console.WriteLine(
+                $"Signature with Barcode '{barcodeSignature.Text}' and " +
+                $"encode type '{barcodeSignature.EncodeType.TypeName}' " +
+                $"was deleted from document ['{fileName}']."
+            );
         }
         else
         {
-            Console.WriteLine($"Signature was not deleted from the document! Signature with Barcode '{barcodeSignature.Text}' and encode type '{barcodeSignature.EncodeType.TypeName}' was not found!");
+            Console.WriteLine(
+                $"Signature was not deleted from the document! " +
+                $"Signature with Barcode '{barcodeSignature.Text}' and " +
+                $"encode type '{barcodeSignature.EncodeType.TypeName}' " +
+                $"was not found!"
+            );
         }
     }
 }

@@ -47,19 +47,28 @@ This example shows how to delete Digital signature that was found using [Search
 ```csharp
 using (Signature signature = new Signature("signed.pdf"))
 {
-    // search for electronic Digital signatures in the document
-    List<DigitalSignature> signatures = signature.Search<DigitalSignature>(SignatureType.Digital);
+    // Search for electronic Digital signatures in the document
+    List<DigitalSignature> signatures = 
+        signature.Search<DigitalSignature>(SignatureType.Digital);
+
     if (signatures.Count > 0)
     {
         DigitalSignature digitalSignature = signatures[0];
         bool result = signature.Delete(digitalSignature);
+
         if (result)
         {
-            Console.WriteLine($"Digital signature #{digitalSignature.Thumbprint} from the {digitalSignature.SignTime.ToShortDateString()} was deleted.");
+            Console.WriteLine(
+                $"Digital signature #{digitalSignature.Thumbprint} from " +
+                $"{digitalSignature.SignTime.ToShortDateString()} was deleted."
+            );
         }
         else
         {
-            Helper.WriteError($"Signature was not deleted from the document! Signature# {digitalSignature.Thumbprint} was not found!");
+            Console.WriteLine(
+                $"Signature was not deleted from the document! " +
+                $"Signature# {digitalSignature.Thumbprint} was not found!"
+            );
         }
     }
 }

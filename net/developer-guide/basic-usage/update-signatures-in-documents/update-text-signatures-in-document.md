@@ -7,7 +7,6 @@ weight: 4
 description: "This article explains how to update Text electronic signatures with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET 
-toc: True
 structuredData:
     showOrganization: True
     application:    
@@ -60,14 +59,20 @@ using (Signature signature = new Signature("sampleSigned.pdf"))
         textSignature.Width = 200;
         textSignature.Height = 100;
         bool result = signature.Update(textSignature);
-        if(result)
-        {
-            Console.WriteLine($"Signature with Text '{textSignature.Text}' was updated in the document ['{fileName}'].");
-        }
-        else
-        {
-            Console.WriteLine($"Signature was not updated in  the document! Signature with Text '{textSignature.Text}' was not found!");
-        }
+       if (result)
+       {
+           Console.WriteLine(
+               $"Signature with Text '{textSignature.Text}' " +
+               $"was updated in the document ['{fileName}']."
+           );
+       }
+       else
+       {
+           Console.WriteLine(
+               $"Signature was not updated in the document! " +
+               $"Signature with Text '{textSignature.Text}' was not found!"
+           );
+       }
     }
 }
 ```

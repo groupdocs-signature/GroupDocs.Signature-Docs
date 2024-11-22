@@ -30,12 +30,11 @@ Stream that were created by [CreateSignatureStream](https://reference.groupdocs
 ```csharp
 public static void GetPreview()
 {
-    // create options
+    // Create QR code sign options
     QrCodeSignOptions signOptions = new QrCodeSignOptions
     {
         EncodeType = QrCodeTypes.QR,
-        // setup Data property with Address object
-        Data = new GroupDocs.Signature.Domain.Extensions.Address()
+        Data = new GroupDocs.Signature.Domain.Extensions.Address
         {
             Street = "221B Baker Street",
             City = "London",
@@ -43,7 +42,6 @@ public static void GetPreview()
             ZIP = "NW16XE",
             Country = "England"
         },
-        // set right bottom corner
         HorizontalAlignment = HorizontalAlignment.Left,
         VerticalAlignment = VerticalAlignment.Center,
         Width = 100,
@@ -51,27 +49,38 @@ public static void GetPreview()
         Margin = new Padding(10)
     };
 
-    // create signature preview options object
-    PreviewSignatureOptions previewOption = new PreviewSignatureOptions(signOptions, CreateSignatureStream, ReleaseSignatureStream)
+    // Create signature preview options
+    PreviewSignatureOptions previewOption = new PreviewSignatureOptions(
+        signOptions, 
+        CreateSignatureStream, 
+        ReleaseSignatureStream
+    )
     {
         SignatureId = Guid.NewGuid().ToString(),
-        PreviewFormat = PreviewSignatureOptions.PreviewFormats.JPEG,
+        PreviewFormat = PreviewSignatureOptions.PreviewFormats.JPEG
     };
-    // generate preview
+
+    // Generate signature preview
     Signature.GenerateSignaturePreview(previewOption);
 }
 
 private static Stream CreateSignatureStream(PreviewSignatureOptions previewOptions)
 {
-    SignOptions signOptions = previewOptions.SignOptions;
-    string imageFilePath = $"signature-{previewOptions.SignatureId}-{previewOptions.SignOptions.GetType().Name}.jpg";
+    string imageFilePath = 
+        $"signature-{previewOptions.SignatureId}-" +
+        $"{previewOptions.SignOptions.GetType().Name}.jpg";
+
     return new FileStream(imageFilePath, FileMode.Create);
 }
 
-private static void ReleaseSignatureStream(PreviewSignatureOptions previewOptions, Stream signatureStream)
+private static void ReleaseSignatureStream(PreviewSignatureOptions previewOptions, 
+    Stream signatureStream)
 {
     signatureStream.Dispose();
-    Console.WriteLine($"Signature {previewOptions.SignatureId}-{previewOptions.SignOptions.GetType().Name} is ready for preview");
+    Console.WriteLine(
+        $"Signature {previewOptions.SignatureId}-" +
+        $"{previewOptions.SignOptions.GetType().Name} is ready for preview"
+    );
 }
 ```
 
