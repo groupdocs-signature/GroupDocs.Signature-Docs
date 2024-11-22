@@ -6,7 +6,8 @@ linkTitle: ✎ XAdES
 weight: 15
 description: " This article explains how to sign Spreadsheet document with XAdES Digital electronic signatures using advanced options with GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 {{< alert style="info" >}}This feature is supported only for Spreadsheet document types{{< /alert >}}

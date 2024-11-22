@@ -6,7 +6,8 @@ linkTitle: ✜ Multiple types
 weight: 3
 description: " This article explains how to provide advanced options when updating different multiple electronic signatures with GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides different classes of signatures to manipulate them by changing its properties over [Update](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/update/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class. This method returns [UpdateResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/updateresult) object to analyze if signatures were successfully processed.

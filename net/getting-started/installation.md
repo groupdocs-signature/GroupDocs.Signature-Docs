@@ -6,7 +6,8 @@ weight: 4
 description: "This guide explains how to install GroupDocs.Signature for .NET to your environment"
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+hideChildren: False 
+toc: True
 ---
 ## Install from Nuget
 

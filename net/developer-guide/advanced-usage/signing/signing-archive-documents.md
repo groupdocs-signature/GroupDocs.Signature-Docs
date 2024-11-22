@@ -6,7 +6,8 @@ linkTitle: ✎ Archives
 weight: 20
 description: "This article shows how to sign documents in batch mode within the archive files with one or multiple electronic signatures"
 keywords: ZIP archive, TAR archive, 7z archive, GZIP archive and LZ archive
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 toc: True
 structuredData:

@@ -6,7 +6,8 @@ linkTitle: Stamp signature
 weight: 8
 description: "This article explains how to sign a document electronically with generated Stamp signatures by GroupDocs.Signature API."
 keywords: sign document electronically, Stamp signatures
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

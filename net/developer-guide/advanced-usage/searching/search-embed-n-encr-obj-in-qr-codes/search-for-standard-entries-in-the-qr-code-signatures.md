@@ -5,7 +5,8 @@ title: Search for standard entries in the QR-Code signatures
 weight: 5
 description: "This article explains how to search for VCard, MeCard, Email, Address, EPC, SEPA, Event data in QR-code electronic signatures from previously signed documents with GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

@@ -6,7 +6,8 @@ linkTitle: Metadata signatures
 weight: 5
 description: "This article shows how to add Metadata signature to the each document type meta layer with different data types over with GroupDocs.Signature"
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 structuredData:
     showOrganization: True

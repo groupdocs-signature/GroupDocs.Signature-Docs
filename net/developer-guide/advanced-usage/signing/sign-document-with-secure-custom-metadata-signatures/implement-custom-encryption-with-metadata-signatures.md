@@ -5,7 +5,8 @@ title: Implement custom encryption with Metadata signatures
 weight: 1
 description: "This article explains how to implement custom encryption for Metadata electronic signatures."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides ability to embed into Metadata signature custom objects. This feature is implemented over object serialization to string and further encryption. By default library uses json format serialization and symmetric encryption but allows to provide custom encryption. This procedure requires implementation of interface [IDataEncryption](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/idataencryption) with two methods to encrypt and decrypt data.

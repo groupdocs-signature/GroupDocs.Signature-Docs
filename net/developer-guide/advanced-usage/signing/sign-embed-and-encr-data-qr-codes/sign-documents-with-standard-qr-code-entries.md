@@ -6,7 +6,8 @@ linkTitle: ✎ QR objects
 weight: 5
 description: "This article explains how to create QR-code electronic signature with standard encoded entries like Address, Email, V-Card, MeCard, EPC/SEPA, Event etc"
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

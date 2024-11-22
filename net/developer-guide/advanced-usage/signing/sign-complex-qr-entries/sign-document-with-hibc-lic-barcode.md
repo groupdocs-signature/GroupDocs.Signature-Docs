@@ -6,7 +6,8 @@ linkTitle: ✎ HIBC LIC
 weight: 2
 description: "This article explains how to sign document with HIBC LIC barcode Symbology signatures"
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [HIBCLICCombinedData](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/hibcliccombineddata/) class to create HIBC LIC barcode. It is used by manufacturers of health care products for identification purpose. Labelers can encode Primary Data and Secondary Data.

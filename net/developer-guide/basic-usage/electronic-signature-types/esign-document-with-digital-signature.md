@@ -6,7 +6,8 @@ linkTitle: Digital signature
 weight: 2
 description: "Learn about the benefits of using digital signatures to sign documents securely. Discover how to add programmatically digital signatures in C# with step-by-step instructions."
 keywords: document, signature, certificate, digitally, sign, pfx, c#, net
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 ---
 
 ## Introduction

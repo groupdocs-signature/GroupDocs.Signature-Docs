@@ -6,7 +6,8 @@ linkTitle: eSign Words
 weight: 5
 description: "This article explains how to sign Word Processing document with metadata signatures by GroupDocs.Signature."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

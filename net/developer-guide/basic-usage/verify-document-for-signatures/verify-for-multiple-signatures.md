@@ -6,7 +6,8 @@ linkTitle: 🛡 Multiple types
 weight: 5
 description: "This topic explains how to verify electronic signatures of various types with GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

@@ -6,7 +6,8 @@ linkTitle: 🛡 QR Codes
 weight: 3
 description: "This topic explains how to verify QR-code electronic signatures with GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

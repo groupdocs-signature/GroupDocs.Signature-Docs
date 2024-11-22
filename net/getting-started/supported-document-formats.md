@@ -6,7 +6,8 @@ weight: 3
 description: "It supports DOCX, DOCM, DOC, DOT, DOTM, XLS, XLSX, PDF, PPT, JPG, PNG, HTML, EML and many more."
 keywords: DOCX, DOCM, DOC, DOT, DOTM, XLS, XLSX, PDF, PPT, JPG, PNG, HTML, EML
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+hideChildren: False 
+toc: True
 ---
 The following table indicates the file formats that GroupDocs.Signature can work with.
 

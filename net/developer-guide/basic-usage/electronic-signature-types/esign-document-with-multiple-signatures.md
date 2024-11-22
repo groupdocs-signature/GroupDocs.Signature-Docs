@@ -6,7 +6,8 @@ linkTitle: Multiple types eSign
 weight: 9
 description: "This article explains how to sign a document with multiple signatures of various types by GroupDocs.Signature API"
 keywords: multiple signatures, sign document, how to sign document with multiple signatures
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

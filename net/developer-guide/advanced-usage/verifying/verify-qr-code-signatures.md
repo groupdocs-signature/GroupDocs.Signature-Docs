@@ -5,7 +5,8 @@ title: Verifying QR Code signatures in advance
 weight: 2
 description: " This article explains how to provide advanced verification of QR Code electronic signatures with GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

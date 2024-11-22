@@ -7,6 +7,7 @@ weight: 3
 description: " This article explains how to sign document with Barcode electronic signatures using extended options with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
+toc: True
 hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [BarcodeSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/barcodesignoptions) class to specify additional options for Barcode signature to specify following signature appearance

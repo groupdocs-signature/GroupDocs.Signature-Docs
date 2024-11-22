@@ -6,7 +6,8 @@ linkTitle: eSign Image
 weight: 1
 description: "This article shows how to add metadata signatures to the image exif metadata layer with various data types"
 keywords: image exif, image metadata, image meta exif, image exif signature
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

@@ -5,7 +5,8 @@ title: Locating signature in the Word header or footer
 weight: 4
 description: "This article explains how to locate signature in the footer and header of Word document."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 

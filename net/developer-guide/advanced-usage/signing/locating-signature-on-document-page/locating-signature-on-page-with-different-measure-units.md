@@ -5,7 +5,8 @@ title: Locating signature on page with different measure units
 weight: 1
 description: " This article explains using measure units to locate signature and its size on document page with GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) supports locating signature on document page with different measure units. Enumeration [MeasureType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/measuretype) handles following types

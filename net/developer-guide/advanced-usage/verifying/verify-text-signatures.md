@@ -5,7 +5,8 @@ title: Verifying Text signatures in advance
 weight: 3
 description: " This article explains how to provide advanced verification of Text electronic signatures with GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

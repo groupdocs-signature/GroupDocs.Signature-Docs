@@ -6,7 +6,8 @@ linkTitle: ✜ Text
 weight: 5
 description: " This article explains how to provide advanced options when updating Text electronic signatures with GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [TextSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/textsignature) class to manipulate text signatures location, size and textual content over [Update](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/update/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class. This method returns [UpdateResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/updateresult) object to analyze if signatures were successfully processed.

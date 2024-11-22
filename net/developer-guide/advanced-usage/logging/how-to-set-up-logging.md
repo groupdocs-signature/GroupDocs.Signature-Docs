@@ -5,7 +5,8 @@ title: Set up logging
 weight: 1
 description: "This article explains how to set up logging when processing a document with GroupDocs.Signature within your .NET applications."
 keywords: logging, logger, document esign, converting
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 

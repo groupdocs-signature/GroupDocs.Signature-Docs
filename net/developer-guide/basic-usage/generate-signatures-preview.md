@@ -5,7 +5,8 @@ title: Generate signature preview
 weight: 7
 description: "This topic explains how to get document signature preview in c#"
 keywords: signature preview, how to get signature preview
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 ---
 
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) [PreviewSignatureOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewsignatureoptions) class to specify different options to manage signatures preview generation process.  

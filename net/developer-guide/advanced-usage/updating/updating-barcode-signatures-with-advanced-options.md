@@ -6,7 +6,8 @@ linkTitle: ✜ Barcode
 weight: 1
 description: " This article explains how to provide advanced options when updating Barcode electronic signatures with GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [BarcodeSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/barcodesignature) class to manipulate barcode signatures location, size, textual content and encode type over [Update](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/update/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class. This method returns [UpdateResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/updateresult) object to analyze if signatures were successfully processed.

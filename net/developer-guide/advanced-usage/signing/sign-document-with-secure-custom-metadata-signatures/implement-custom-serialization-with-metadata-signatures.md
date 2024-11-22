@@ -5,7 +5,8 @@ title: Implement custom serialization with Metadata signatures
 weight: 2
 description: "This article explains how to implement custom serialization for Metadata electronic signatures."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides ability to embed into Metadata signature custom objects. This feature is implemented over object serialization to string and further encryption. By default library uses json format serialization and symmetric encryption but allows to provide custom serialization and encryption. Customization of serialization requires implementation of interface [IDataSerializer](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/idataserializer) with two methods to serialize and de-serialize data.

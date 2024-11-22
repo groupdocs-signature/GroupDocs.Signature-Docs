@@ -5,7 +5,8 @@ title: Sign Pdf documents with special appearance
 weight: 3
 description: " This article explains how to use PDF digital electronic signature features on document page."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) contains classes that implements for Pdf document special signature appearances.

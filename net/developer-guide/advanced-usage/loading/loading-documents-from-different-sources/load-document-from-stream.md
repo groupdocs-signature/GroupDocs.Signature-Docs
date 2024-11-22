@@ -6,7 +6,8 @@ linkTitle: → Stream
 weight: 5
 description: "This section explains how to load document from stream with GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

@@ -6,7 +6,7 @@ weight: 9
 description: " This article explains how to sign document with Image electronic signatures using extended options with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for Java
-hideChildren: False
+hideChildren: False toc:True
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [ImageSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions) class to specify different options for Image signature as follow
 

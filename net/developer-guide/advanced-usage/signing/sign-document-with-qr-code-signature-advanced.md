@@ -6,7 +6,8 @@ linkTitle: ✎ QR Code
 weight: 11
 description: " This article explains how to sign document with QR-code electronic signatures using extended options with GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 GroupDocs.Signature provides [QrCodeSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesignoptions) class to specify additional options for QR-code signature with following signature appearance

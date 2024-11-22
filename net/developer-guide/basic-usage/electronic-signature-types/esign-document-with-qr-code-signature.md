@@ -6,7 +6,8 @@ linkTitle: QR Code signature
 weight: 6
 description: "This article explains how sign documents with electronic signature as QR code on document page with GroupDocs.Signature API."
 keywords: electronic signature, QR code 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

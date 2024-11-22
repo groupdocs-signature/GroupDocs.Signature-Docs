@@ -5,7 +5,8 @@ title: Signing specific pages in the multipage document
 weight: 5
 description: "This article explains how to sign specific pages in the multipage documents"
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 Base signature options [SignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions) contains property [SignOptions.PagesSetup](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/pagessetup/) which allows to set up specific page numbers.

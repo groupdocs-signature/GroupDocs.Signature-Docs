@@ -6,7 +6,8 @@ linkTitle: Presentaion → format
 weight: 3
 description: "This article explains how to save signed Presentation documents with various file formats by GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

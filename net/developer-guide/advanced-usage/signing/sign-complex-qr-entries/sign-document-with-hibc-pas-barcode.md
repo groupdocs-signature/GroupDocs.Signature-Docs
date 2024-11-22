@@ -6,7 +6,8 @@ linkTitle: ✎ HIBC PAS
 weight: 4
 description: "This article explains how to sign document with HIBC PAS barcode Symbology signatures"
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [HIBCPASData](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/hibcpasdata/) class to create HIBC PAS barcode, designed specifically to meet the stringent requirements of the healthcare industry.

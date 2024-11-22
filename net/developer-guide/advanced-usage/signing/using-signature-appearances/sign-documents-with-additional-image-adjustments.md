@@ -5,7 +5,8 @@ title: Sign documents with additional image adjustments
 weight: 1
 description: " This article explains how to use different image adjustment with electronic signatures on document page."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) contains [ImageAppearance](https://reference.groupdocs.com/signature/net/groupdocs.signature.options.appearances/imageappearance) class that implements extra image adjustment setting like

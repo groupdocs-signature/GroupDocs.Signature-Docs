@@ -5,7 +5,8 @@ title: Obtain document form fields and signatures information
 weight: 1
 description: "This article shows how to get information about electronic signatures in the document and its form fields with GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

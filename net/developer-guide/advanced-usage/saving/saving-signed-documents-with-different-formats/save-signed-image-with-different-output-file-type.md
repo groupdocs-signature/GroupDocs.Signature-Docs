@@ -6,7 +6,8 @@ linkTitle: Image → format
 weight: 1
 description: "This article explains how to save signed image with various image formats by GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

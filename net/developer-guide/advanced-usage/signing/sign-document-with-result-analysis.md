@@ -6,7 +6,8 @@ linkTitle: ✎ Analysis
 weight: 16
 description: "This article shows how to analyse the sign processing of the document"
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides the each method result as the implementation of the [IResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/iresult/) interface which contains the process metrics.

@@ -6,7 +6,8 @@ linkTitle: 🔍 Multiple types
 weight: 8
 description: "This article explains how to search for multiple electronic signatures across document pages with GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

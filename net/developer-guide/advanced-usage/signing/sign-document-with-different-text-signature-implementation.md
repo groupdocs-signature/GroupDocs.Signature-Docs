@@ -6,7 +6,8 @@ linkTitle: ✎ Text
 weight: 4
 description: " This article explains how to sign document with Text electronic signatures using extended options with GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [TextSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions) class with property [SignatureImplementation](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions/signatureimplementation) of enumeration type [TextSignatureImplementation](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/textsignatureimplementation) to specify various implementations of Text Signatures with following values and its meaning

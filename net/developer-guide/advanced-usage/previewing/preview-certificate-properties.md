@@ -5,7 +5,8 @@ title: Preview Digital Certificates properties
 weight: 2
 description: "This article shows how to receive digital certificates properties over Document Info method."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

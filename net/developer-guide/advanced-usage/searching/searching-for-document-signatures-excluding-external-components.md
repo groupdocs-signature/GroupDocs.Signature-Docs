@@ -6,7 +6,8 @@ linkTitle: 🌐 Skip external
 weight: 10
 description: "This article explains how to search with excluding non-signature components like native documents text, images or barcodes that are the part of document content."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

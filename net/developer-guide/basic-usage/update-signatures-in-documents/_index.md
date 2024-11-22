@@ -5,7 +5,7 @@ title: Update signatures in documents
 weight: 7
 description: "This section shows how to update electronic signatures in the documents."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
 hideChildren: False
 structuredData:
     showOrganization: True

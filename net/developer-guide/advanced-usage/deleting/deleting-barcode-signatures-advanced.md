@@ -6,7 +6,8 @@ linkTitle: ✖ Barcode
 weight: 1
 description: "This article shows how to delete Barcode electronic signatures different ways with GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

@@ -6,7 +6,8 @@ linkTitle: ✜ Radial gradient
 weight: 2
 description: " This article explains how to fill signature background with radial gradient brush"
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [RadialGradientBrush](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/radialgradientbrush) class to specify filling signature background with radial gradients

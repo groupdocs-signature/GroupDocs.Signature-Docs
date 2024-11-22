@@ -6,7 +6,8 @@ linkTitle: ✎ Image
 weight: 9
 description: " This article explains how to sign document with Image electronic signatures using extended options with GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [ImageSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/imagesignoptions) class to specify different options for Image signature as follow

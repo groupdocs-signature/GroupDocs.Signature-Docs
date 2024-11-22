@@ -7,7 +7,7 @@ weight: 2
 description: "This article explains how digitally esign documents with certificates using GroupDocs.Signature API"
 keywords: digital signature, certificate, digitally esign, esign with certificate, pfx, pfx certifiate
 productName: GroupDocs.Signature for Java
-hideChildren: False
+hideChildren: False toc:True
 structuredData:
     showOrganization: True
     application:    

@@ -7,6 +7,7 @@ weight: 2
 description: "This article explains how to add metadata signatures to PDF document meta info layer with GroupDocs.Signature"
 keywords: Pdf metadata, Pdf metadata signatures
 productName: GroupDocs.Signature for .NET
+toc: True
 structuredData:
     showOrganization: True
     application:    

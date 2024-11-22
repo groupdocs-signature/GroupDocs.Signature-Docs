@@ -6,7 +6,8 @@ linkTitle: Image signature
 weight: 4
 description: "This article demonstrates how to add signature image on document page with GroupDocs.Signature."
 keywords: signature image, add signature image, how to add signature image
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

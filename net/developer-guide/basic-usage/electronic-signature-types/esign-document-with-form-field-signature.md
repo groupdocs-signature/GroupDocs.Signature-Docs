@@ -6,7 +6,8 @@ linkTitle: Form field signature
 weight: 3
 description: "This article explains how to add various types of Form Field signatures on document page with options on component positioning, alignment and other visual options with GroupDocs.Signature"
 keywords: form fields, add various types of Form Field signature, component positioning
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

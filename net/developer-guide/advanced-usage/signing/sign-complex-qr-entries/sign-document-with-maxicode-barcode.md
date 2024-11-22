@@ -6,7 +6,8 @@ linkTitle: ✎ MaxiCode
 weight: 4
 description: "This article explains how to sign document with MaxiCode barcode Symbology signatures"
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [MaxiCodeMode2](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/maxicodemode2/) class to create MaxiCode barcode, designed for tracking and managing the shipment of packages

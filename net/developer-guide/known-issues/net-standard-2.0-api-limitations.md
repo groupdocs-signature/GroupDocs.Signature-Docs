@@ -7,6 +7,7 @@ description: "This section describes GroupDocs.Signature for .NET limitations wh
 keywords: 
 productName: GroupDocs.Signature for .NET
 hideChildren: False
+toc: True
 ---
 ## Limitations of .NET Standard 2.0 compared to .NET API
 

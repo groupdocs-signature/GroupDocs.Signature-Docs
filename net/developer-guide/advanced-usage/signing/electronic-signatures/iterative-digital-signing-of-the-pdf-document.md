@@ -6,7 +6,7 @@ linkTitle: ✎ Iterative Digital signing of the PDF document
 weight: 1
 description: "This article explains how to iteratively sign a PDF document with multiple digital certificates using advanced options with GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
 hideChildren: False
 toc: True
 ---

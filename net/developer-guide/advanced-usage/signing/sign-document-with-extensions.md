@@ -6,7 +6,8 @@ linkTitle: ✎ Extensions
 weight: 7
 description: "This article shows how to create electronic signatures with additional visual extensions"
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides with [SignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions) property Extensions that expects list of different extensions classes. At this moment here are few of them

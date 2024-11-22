@@ -6,7 +6,8 @@ linkTitle: Barcode signature
 weight: 1
 description: "This article explains how to add Barcode signature on document page with various options like barcode type, barcode text, positioning, alignment and other visual settings with GroupDocs.Signature"
 keywords: barcode, barcode signature, GroupDocs.Signature barcode, GroupDocs.Signature barcode signature
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

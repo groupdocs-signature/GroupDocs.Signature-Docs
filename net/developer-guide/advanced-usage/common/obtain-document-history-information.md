@@ -5,7 +5,8 @@ title: Obtain document history information
 weight: 2
 description: "This article shows how to obtain the history of document changes with GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

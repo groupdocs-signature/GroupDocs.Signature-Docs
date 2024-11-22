@@ -7,6 +7,7 @@ weight: 4
 description: "This topic explains how to search for metadata signatures within the documents with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET
+toc: True
 structuredData:
     showOrganization: True
     application:    

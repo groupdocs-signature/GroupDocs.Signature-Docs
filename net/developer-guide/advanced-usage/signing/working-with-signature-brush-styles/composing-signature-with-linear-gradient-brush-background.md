@@ -6,7 +6,8 @@ linkTitle: ✜ Linear gradient
 weight: 1
 description: " This article explains how to fill signature background with linear gradient brush"
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---  
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [LInearGradientBrush](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/lineargradientbrush) class to specify filling signature background with linear gradients

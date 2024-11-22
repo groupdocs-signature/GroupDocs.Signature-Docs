@@ -6,7 +6,8 @@ linkTitle: 🛡 Digital certificates
 weight: 2
 description: "This topic explains how to verify digital electronic signatures with GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

@@ -5,7 +5,8 @@ title: How to load password-protected document
 weight: 2
 description: "This article explains how to load password protected document with GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

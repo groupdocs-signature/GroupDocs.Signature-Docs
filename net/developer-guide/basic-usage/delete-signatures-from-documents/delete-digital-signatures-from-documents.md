@@ -6,7 +6,8 @@ linkTitle: ✖ Digital
 weight: 5
 description: "This article explains how to delete Digital electronic signatures with GroupDocs.Signature API."
 keywords:  Digital electronic signatures, delete Digital electronic signatures, how to delete Digital electronic signatures
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

@@ -5,7 +5,8 @@ title: Sign documents with extra Digital Signature properties
 weight: 2
 description: " This article explains how to use extended Digital electronic signatures options and adjustment on document page."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) contains [DigitalSignatureAppearance](https://reference.groupdocs.com/signature/net/groupdocs.signature.options.appearances/digitalsignatureappearance) class that implements extra settings for digital signature of Word Processing and Spreadsheets documents

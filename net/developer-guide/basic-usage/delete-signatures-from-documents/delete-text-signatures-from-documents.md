@@ -6,7 +6,8 @@ linkTitle: ✖ Text
 weight: 4
 description: "This article explains how to delete Text electronic signatures with GroupDocs.Signature API."
 keywords: delete text signature, how to delete Text electronic signatures
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

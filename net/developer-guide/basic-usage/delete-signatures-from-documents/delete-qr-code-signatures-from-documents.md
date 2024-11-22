@@ -6,7 +6,8 @@ linkTitle: ✖ QR Code
 weight: 3
 description: "This article explains how to delete QR code electronic signatures with GroupDocs.Signature API."
 keywords: delete QR code, how to delete QR code
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

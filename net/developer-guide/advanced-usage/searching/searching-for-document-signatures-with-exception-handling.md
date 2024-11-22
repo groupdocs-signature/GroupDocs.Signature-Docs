@@ -6,7 +6,8 @@ linkTitle: 🌐 Handling errors
 weight: 11
 description: "This article explains how to handle exceptions when searching for electronic signatures with GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

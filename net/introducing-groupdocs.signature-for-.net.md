@@ -7,6 +7,7 @@ description: "Introduction to GroupDocs.Signature for .NET - what is it and why 
 keywords: 
 productName: GroupDocs.Signature for .NET
 hideChildren: False
+toc: True
 ---
 ## What Is GroupDocs.Signature?
 

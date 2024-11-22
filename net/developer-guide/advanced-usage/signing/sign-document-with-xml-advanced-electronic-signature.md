@@ -6,7 +6,8 @@ linkTitle: ✎ Advanced
 weight: 16
 description: " This article explains how to sign document with XML advanced electronic signatures (XAdES) using GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 {{< alert style="info" >}}XML Advanced Electronic Signature feature is now supported under .Net Framework only for Spreadsheet documents{{< /alert >}}

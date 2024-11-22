@@ -5,7 +5,7 @@ title: Generating document preview - advanced
 weight: 1
 description: "This article shows how to generate document pages preview with advanced options."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
 toc: True
 structuredData:
     showOrganization: True

@@ -5,7 +5,8 @@ title: Search for embedded object with custom serialization of Metadata signatur
 weight: 2
 description: " This article explains how to search for embedded electronic signatures with custom serialization in document metadata. This topic contains example of custom serialization, class definition and search for serialized objects in the document metadata with GroupDocs.Signature."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

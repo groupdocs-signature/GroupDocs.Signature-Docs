@@ -6,7 +6,8 @@ linkTitle: ✜ Texture brush
 weight: 4
 description: " This article explains how to fill signature background with texture brush"
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [TextureBrush](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/texturebrush) class to specify filling signature background with image for Text and Image signature types

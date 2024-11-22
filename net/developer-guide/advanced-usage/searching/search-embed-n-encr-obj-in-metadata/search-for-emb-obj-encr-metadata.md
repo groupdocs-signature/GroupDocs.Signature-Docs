@@ -5,7 +5,8 @@ title: Search for embedded object with custom encryption of Metadata signatures
 weight: 1
 description: "This article explains how to search for embedded electronic signatures with custom encryption in document metadata. This topic contains example of custom encryption, class definition and search for encrypted objects in the document metadata with GroupDocs.Signature."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

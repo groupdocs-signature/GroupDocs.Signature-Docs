@@ -6,7 +6,8 @@ linkTitle: Spreadsheet → format
 weight: 4
 description: "This article explains how to save signed Spreadsheet document with various file formats by GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

@@ -5,7 +5,7 @@ title: Search for electronic signatures in document
 weight: 4
 description: "This topic learns how to search for document electronic signature and its details"
 keywords: electronic signature, search for document electronic signature
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
 hideChildren: False
 structuredData:
     showOrganization: True

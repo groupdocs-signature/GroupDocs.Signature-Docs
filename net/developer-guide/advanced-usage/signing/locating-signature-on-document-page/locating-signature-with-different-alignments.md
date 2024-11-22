@@ -5,7 +5,8 @@ title: Locating signature with different alignments
 weight: 2
 description: " This article explains how to use different alignment values to locate signature on document page with GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides ability to align signature on page with horizontal and vertical alignment settings. Signature options that implement interface [IAlignment](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/ialignment) contain following properties:

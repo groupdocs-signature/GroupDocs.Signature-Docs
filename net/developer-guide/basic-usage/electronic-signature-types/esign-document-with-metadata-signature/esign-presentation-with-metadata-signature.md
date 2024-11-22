@@ -6,7 +6,8 @@ linkTitle: eSign Presentation
 weight: 3
 description: "This article explains how to add metadata signatures to Presentation document with GroupDocs.Signature"
 keywords: Presentation metadata, Presentation metadata signature
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

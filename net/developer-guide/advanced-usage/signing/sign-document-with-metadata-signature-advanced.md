@@ -6,7 +6,8 @@ linkTitle: ✎ Metadata
 weight: 10
 description: " This article explains how to sign document with Metadata electronic signatures using extended options with GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides ability to secure Metadata signatures, same as embed into it data objects. These feature are implemented over data serialization and encryption. Also there is ability to provide custom data serialization and encryption to secure your signature data the most. Here are feature summary

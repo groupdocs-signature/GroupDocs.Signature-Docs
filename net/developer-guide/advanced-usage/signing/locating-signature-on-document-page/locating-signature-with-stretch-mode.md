@@ -5,7 +5,8 @@ title: Locating signature with stretch mode
 weight: 3
 description: " This article explains how to use stretch mode values to adjust signature area positions on document page with GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides ability to stretch signature area along page width or height. Use enumeration [StretchMode](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/stretchmode) contains following values

@@ -6,7 +6,8 @@ linkTitle: ✎ QR Encryption
 weight: 4
 description: "This article explains how to create encrypted QR-code electronic signature"
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides ability to encrypt QR-code signature with symmetric algorithms. Class [SymmetricEncryption](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/symmetricencryption) implements one of the following values algorithms ([DES, TripleDES, RC2, Rijndael or AES](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/symmetricalgorithmtype)), string value key and string value salt.

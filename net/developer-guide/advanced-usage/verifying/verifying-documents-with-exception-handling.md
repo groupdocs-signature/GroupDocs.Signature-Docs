@@ -5,7 +5,8 @@ title: Verifying documents with exception handling
 weight: 1
 description: " This article explains how to handle specific exceptions when verifying document electronic signatures with GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

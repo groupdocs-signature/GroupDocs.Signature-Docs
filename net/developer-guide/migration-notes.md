@@ -6,7 +6,7 @@ weight: 3
 description: "How to migrate from earlier versions of GroupDocs.Signature for .NET"
 keywords: 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+
 ---
 ### Why To Migrate?
   

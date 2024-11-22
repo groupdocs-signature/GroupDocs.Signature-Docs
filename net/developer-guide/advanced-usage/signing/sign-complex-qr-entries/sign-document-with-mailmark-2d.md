@@ -7,6 +7,7 @@ weight: 1
 description: "This article explains how to sign document with Royal Mail Mailmark 2D Barcode electronic signatures"
 keywords: 
 productName: GroupDocs.Signature for .NET
+toc: True
 hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [Mailmark2D](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/mailmark2d/mailmark2d) class to create Royal Mail Mailmark 2D barcode. These barcodes can store various data, including information about the sender, recipient, postage, and destination. The use of Mailmark 2D barcodes allows for more accurate and detailed tracking of mail items throughout their journey in the postal system.

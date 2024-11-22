@@ -5,7 +5,8 @@ title: Sign document with secure custom Metadata signatures
 weight: 12
 description: "This section contains articles with explanation how to create Metadata electronic signatures and embed into metadata custom object with its serialization and encryption. The examples show how to customize object serialization and encryption."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides additional features with [MetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/metadatasignature) class like following

@@ -5,7 +5,8 @@ title: Handling incorrect document password exception
 weight: 1
 description: "This article shows how to handle incorrect document password exception with GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

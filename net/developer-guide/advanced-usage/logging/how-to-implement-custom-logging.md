@@ -5,7 +5,8 @@ title: Custom logging
 weight: 2
 description: "This article explains how to implement custom logging and use it while document processing with GroupDocs.Signature within your .NET applications."
 keywords: logging, logger, document esign, converting
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 

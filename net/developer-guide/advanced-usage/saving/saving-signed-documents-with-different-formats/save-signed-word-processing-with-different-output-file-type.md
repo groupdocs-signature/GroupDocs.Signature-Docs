@@ -6,7 +6,8 @@ linkTitle: Words → format
 weight: 5
 description: "This article explains how to save signed Word Processing documents with various file formats by GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

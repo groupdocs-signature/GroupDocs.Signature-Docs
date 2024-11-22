@@ -6,7 +6,8 @@ linkTitle: ✜ Solid brush
 weight: 3
 description: " This article explains how to fill signature background with solid brush"
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [SolidBrush](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/solidbrush) class to specify solid filling signature background for Text and Stamp signature types

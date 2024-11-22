@@ -6,7 +6,8 @@ linkTitle: Text signature
 weight: 7
 description: "This article explains how to sign a document with Text signature by GroupDocs.Signature API. Let's try to add a digital signature to a PDF programmatically."
 keywords: Add digital signature to a PDF programmatically, Text signature
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

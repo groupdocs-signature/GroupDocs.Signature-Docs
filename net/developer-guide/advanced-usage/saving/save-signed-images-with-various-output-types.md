@@ -5,7 +5,8 @@ title: Saving signed images with various output types
 weight: 2
 description: "This article explains how to save images with various image format types."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class supports saving of Image signed documents with various image format types and extended options.

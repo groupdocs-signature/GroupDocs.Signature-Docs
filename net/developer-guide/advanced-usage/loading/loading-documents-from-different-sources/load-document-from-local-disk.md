@@ -6,7 +6,8 @@ linkTitle: → Local
 weight: 4
 description: "This section explains how to load document from local disk with GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

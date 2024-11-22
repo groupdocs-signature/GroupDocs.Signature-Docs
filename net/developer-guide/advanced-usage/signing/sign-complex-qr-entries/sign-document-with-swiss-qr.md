@@ -6,7 +6,8 @@ linkTitle: ✎ Swiss QR
 weight: 3
 description: "This article explains how to sign document with Swiss QR Barcode electronic signatures"
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [SwissQR](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/swissqr/) class to create Swiss QR. The Swiss QR Barcode is used mostly in the QR-bill, which is a document designed to replace the payment slips and currently used in payment transactions in Switzerland.

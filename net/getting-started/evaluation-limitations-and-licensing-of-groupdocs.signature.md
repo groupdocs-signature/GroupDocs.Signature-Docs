@@ -6,7 +6,8 @@ weight: 5
 description: "free electronic signature api version is available to evaluate the API which will be similar as licensed but with few limitations"
 keywords: electronic signature api, ee electronic signature api, signature api
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+hideChildren: False 
+toc: True
 ---
 {{< alert style="info" >}}
 You can use GroupDocs.Signature without the license. The usage and functionalities are pretty much same as the licensed one but you will face few limitations while using the non-licensed API.

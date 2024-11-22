@@ -6,7 +6,8 @@ linkTitle: ✖ By type
 weight: 6
 description: "This article explains how to delete electronic signatures of the certain types with GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for .NET 
+toc: True
 structuredData:
     showOrganization: True
     application:    

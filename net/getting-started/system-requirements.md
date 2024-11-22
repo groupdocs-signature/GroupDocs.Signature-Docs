@@ -6,7 +6,8 @@ weight: 2
 description: "GroupDocs.Signature for .NET supports any 32-bit or 64-bit operating system where .NET or Mono framework is installed"
 keywords: GroupDocs.Signature for .NET,Signature 
 productName: GroupDocs.Signature for .NET
-hideChildren: False
+hideChildren: False 
+toc: True
 ---
 ## Overview
 
