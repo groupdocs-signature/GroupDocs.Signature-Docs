@@ -27,9 +27,11 @@ structuredData:
         - name: Delete one of found barcodes and save result 
           text: Invoke Delete method passing found barcode and file path for signed file. File stream can be used as well.
 ---
+## Overview
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [BarcodeSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/barcodesignature) class to manipulate barcode signatures and delete them from the documents over [Delete](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/delete) method.  
 Please be aware that [Delete](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/delete) method modifies the same document that was passed to constructor of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class.
 
+## How to delete Barcode signature from the document
 Here are the steps to delete Barcode signature from the document with GroupDocs.Signature:
 
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter;

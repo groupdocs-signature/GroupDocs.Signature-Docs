@@ -7,7 +7,6 @@ weight: 2
 description: "This topic explains how to search for digital electronic signatures across the documents with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET 
-toc: True
 structuredData:
     showOrganization: True
     application:    

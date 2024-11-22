@@ -7,7 +7,6 @@ weight: 6
 description: "This topic explains how to search for text electronic signatures within the document pages by GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET 
-toc: True
 structuredData:
     showOrganization: True
     application:    

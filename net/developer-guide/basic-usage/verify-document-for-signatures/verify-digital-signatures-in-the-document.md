@@ -27,6 +27,7 @@ structuredData:
         - name: Get verification result
           text: Call method Verify passing options. Obtain verification result whose property IsValid must be true if verification succeed.
 ---
+## Overview
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [DigitalVerifyOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalverifyoptions) class to specify different options for digital signatures verification.
 
 Here are the steps to verify Digital signature within the document with GroupDocs.Signature:

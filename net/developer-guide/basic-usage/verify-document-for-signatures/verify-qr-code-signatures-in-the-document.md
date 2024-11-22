@@ -27,6 +27,8 @@ structuredData:
         - name: Get verification result
           text: Call method Verify passing options. Obtain verification result whose property IsValid must be true if verification succeed.
 ---
+## Overview
+
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [QrCodeVerifyOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodeverifyoptions) class to specify different options for verification of QR-code signatures.
 
 Here are the steps to verify qr-code signature within the document with GroupDocs.Signature for .NET API:

@@ -27,6 +27,8 @@ structuredData:
         - name: Get verification result
           text: Call method Verify passing options. Obtain verification result whose property IsValid must be true if verification succeed.
 ---
+## Overview
+
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [BarcodeVerifyOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/barcodeverifyoptions) class to specify different options for verification of Barcode signatures.
 
 Here are the steps to verify Barcode signature within the document with GroupDocs.Signature:

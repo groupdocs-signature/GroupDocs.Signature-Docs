@@ -7,7 +7,6 @@ weight: 5
 description: "This article explains how to search for Form Fields signatures with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET 
-toc: True
 structuredData:
     showOrganization: True
     application:    

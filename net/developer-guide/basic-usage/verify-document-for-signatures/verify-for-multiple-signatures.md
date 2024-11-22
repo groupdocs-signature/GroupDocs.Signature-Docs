@@ -27,6 +27,8 @@ structuredData:
         - name: Get verification result
           text: Call method Verify passing options. Obtain verification result whose property IsValid must be true if verification succeed.
 ---
+## Overview
+
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) supports verification of documents for different signature types. This approach requires to add all required verification options to list.
 
 Here are the steps to verify document for multiple signatures with GroupDocs.Signature:

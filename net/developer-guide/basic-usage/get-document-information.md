@@ -24,6 +24,8 @@ structuredData:
         - name: Get document information
           text: Call GetDocumentInfo method save process information such as page count or document format.
 ---
+## Overview
+
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) allows to get document information which includes:
 
 * [FileType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/documentinfo/filetype)

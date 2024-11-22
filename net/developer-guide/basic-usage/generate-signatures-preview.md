@@ -8,6 +8,7 @@ keywords: signature preview, how to get signature preview
 productName: GroupDocs.Signature for .NET 
 toc: True
 ---
+## Overview
 
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) [PreviewSignatureOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewsignatureoptions) class to specify different options to manage signatures preview generation process.  
   

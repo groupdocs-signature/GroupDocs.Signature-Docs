@@ -66,6 +66,8 @@ using (Signature signature = new Signature("sample.pdf"))
     signature.Sign("sampleSigned.pdf", options);
 }
 ```
+### Summary
+This guide demonstrates how to use [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) to sign documents with digital signatures. It explains how to load documents, configure certificate-based signatures, and save signed files securely. Advanced features, including signature appearance customization and validation, are also covered. Refer to related resources for additional details on digital signing workflows.
 
 ### Advanced Usage Topics
 

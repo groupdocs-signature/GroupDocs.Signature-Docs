@@ -70,6 +70,8 @@ using (Signature signature = new Signature("sample.pdf"))
     signature.Sign("SampleSigned.pdf", options);
 }
 ```
+### Summary
+This guide demonstrates how to add QR code signatures to documents using [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) . It includes steps for generating a QR code signature, configuring its properties like size and encoding, and applying it to a document. QR code signatures can be used for quick verification of the signed document.
 
 ### Advanced Usage Topics
 

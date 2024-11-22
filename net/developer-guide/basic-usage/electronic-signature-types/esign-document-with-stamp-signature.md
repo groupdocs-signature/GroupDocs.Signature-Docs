@@ -83,6 +83,8 @@ using (Signature signature = new Signature("sample.docx"))
     signature.Sign("SampleSigned.docx", options);
 }
 ```
+### Summary
+This guide explains how to apply stamp-based signatures to documents using [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) . It covers the process of creating a stamp signature, customizing its appearance, and positioning it on the document. The signed document can then be saved with the stamp signature applied.
 
 ### Advanced Usage Topics
 

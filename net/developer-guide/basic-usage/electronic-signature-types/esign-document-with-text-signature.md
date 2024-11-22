@@ -64,6 +64,8 @@ using (Signature signature = new Signature("sample.pdf"))
     signature.Sign("sample_signed.pdf", options);
 }
 ```
+### Summary
+This guide explains how to add text-based signatures to documents with [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) . It covers configuring text properties such as font, color, size, and position, and applying the text signature to a document. The signed document is then saved with the added text signature.
 
 ### Advanced Usage Topics
 

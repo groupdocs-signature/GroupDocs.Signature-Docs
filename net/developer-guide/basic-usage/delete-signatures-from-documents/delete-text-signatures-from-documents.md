@@ -28,9 +28,10 @@ structuredData:
           text: Invoke Delete method passing found text electronic signature and file path for signed file. File stream can be used as well.
 
 ---
+## Overview
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [TextSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/textsignature) class to manipulate text signatures and delete them from the documents.
 Please be aware that [Delete](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/delete) method modifies the same document that was passed to constructor of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class.
-
+## How to delete Text signature from the document
 Here are the steps to delete Text signature from the document with GroupDocs.Signature:
 
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter;

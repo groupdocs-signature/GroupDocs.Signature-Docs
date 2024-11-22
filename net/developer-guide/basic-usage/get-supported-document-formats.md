@@ -25,6 +25,8 @@ structuredData:
           text: Process all selected file types in demanded way. 
 ---
 
+## Overview
+
 With [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) you can get the [list of file formats]({{< ref "signature/net/getting-started/supported-document-formats.md" >}}) that allow adding electronic signatures by following the below steps:
 
 * Call static function [GetSupportedFileTypes](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/filetype/getsupportedfiletypes) of [FileType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/filetype) class;

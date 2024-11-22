@@ -86,7 +86,8 @@ using (Signature signature = new Signature("sample.pdf"))
     signature.Sign("signed.pdf", listOptions);
 }    
 ```
-
+### Summary
+This guide demonstrates how to apply multiple types of electronic signatures (e.g., text, barcode, image) to a document using [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) . It explains how to combine different signature types, configure each one, and save the signed document with multiple signature styles.
 ### Advanced Usage Topics
 
 To learn more about document eSign features, please refer to the [advanced usage section]({{< ref "signature/net/developer-guide/advanced-usage/_index.md" >}}).

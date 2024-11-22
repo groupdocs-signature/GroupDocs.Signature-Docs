@@ -27,12 +27,13 @@ structuredData:
         - name: Sign source file and save result 
           text: Invoke Sign method with array of signing options and output file path or stream.
 ---
+## Overview
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [PresentationMetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/presentationmetadatasignature) class to specify different Metadata signature objects for [MetadataSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasignoptions) instance to sign Presentation document files.
 Presentation document metadata is hidden attributes, some of them are visible only over viewing standard document properties like Author, Creation Date, Producer, Entry, Keywords etc.  
 Presentation document metadata contains pair of Name and Value, Name should be unique within the document.  
 Presentation document metadata could keep big amount of data that allows provides ability to keep serialized custom objects with additional encryption in there.
 
-Here are the steps to add metadata signatures into Presentation document with GroupDocs.Signature:
+### Here are the steps to add metadata signatures into Presentation document with GroupDocs.Signature:
 
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
 * Instantiate the [MetadataSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasignoptions) object according to your requirements.

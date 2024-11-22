@@ -7,7 +7,6 @@ weight: 1
 description: "This article explains how to search for Barcode in the document with few lines of code over GroupDocs.Signature API."
 keywords: search for barcode, how to search for Barcode
 productName: GroupDocs.Signature for .NET 
-toc: True
 structuredData:
     showOrganization: True
     application:    
