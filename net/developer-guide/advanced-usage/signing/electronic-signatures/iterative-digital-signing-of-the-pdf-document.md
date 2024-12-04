@@ -18,7 +18,7 @@ toc: True
 * password of digital certificate [Password](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/password/) (required)
 * digital signature details ([Reason](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/reason/), [Contact](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/contact/), [Location](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/location/))
 
-### Here are the steps to add Digital signature into document with GroupDocs.Signature:
+### How to add Digital signature:
 
 * Define the paths for the input PDF file, the digital certificates, and specify the output path where the signed documents will be saved.
 * Create a new instance of the [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass the source document path as a constructor parameter.
@@ -66,7 +66,7 @@ foreach (var certificatePath in certificatePaths)
     }
 }
 ```
-### How to apply digital signatures iteratively to a PDF document with custom appearance and image
+### Iteratively sign with custom appearance and image
 
 This example demonstrates how to iteratively sign a PDF document with multiple digital certificates, customizing the appearance and adding an image to each signature. See [SignResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult)
 
@@ -138,7 +138,7 @@ foreach (var certificatePath in certificatePaths)
     }
 }
 ```
-### Adding Digital Signature with Custom Foreground Color, Image, and Font Settings
+### Customize digital appearance with color, image and font
 
 This example demonstrates how to apply a digital signature with a customized appearance, including a foreground color, image, and specific font settings.
 
