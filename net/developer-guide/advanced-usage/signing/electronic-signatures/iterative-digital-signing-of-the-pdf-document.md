@@ -222,7 +222,7 @@ foreach (var certificatePath in certificatePaths)
     }
 }
 ```
-
+The following image demonstrates the result:
 ![Digital](/signature/net/images/iterative-digital-signing-of-the-pdf-document_custom_colors.png)
 
 ## More resources
