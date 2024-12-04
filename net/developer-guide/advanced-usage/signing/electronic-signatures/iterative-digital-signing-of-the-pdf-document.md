@@ -60,7 +60,9 @@ foreach (var certificatePath in certificatePaths)
 
         SignResult signResult = signature.Sign(outputFilePath, options);
         documentFile = outputFilePath;
-        Console.WriteLine($"\nSource document signed successfully {iteration++}-time with {signResult.Succeeded.Count} signature(s).\nFile saved at {outputFilePath}.");
+        Console.WriteLine($"\nSource document signed successfully {iteration++}-" +
+                          $"time with {signResult.Succeeded.Count} signature(s).\n" +
+                          $"File saved at {outputFilePath}.");
     }
 }
 ```
@@ -85,7 +87,8 @@ int iteration = 0;
 * Helper method to generate the [DigitalSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/) object with the required certificate and its password, and configure additional properties such as reason, contact, location, and position. An image and custom appearance labels are also set.
 
 ```csharp
-private static DigitalSignOptions CreateDigitalSignOptions(string certificatePath, string imageFilePath, int iteration)
+private static DigitalSignOptions CreateDigitalSignOptions(string certificatePath, 
+    string imageFilePath, int iteration)
 {
     return new DigitalSignOptions(certificatePath)
     {
@@ -120,7 +123,8 @@ foreach (var certificatePath in certificatePaths)
     using (Signature signature = new Signature("sample.pdf"))
     {
         // Generate signature options with helper method
-        DigitalSignOptions options = CreateDigitalSignOptions(certificatePath, imageFilePath, iteration);
+        DigitalSignOptions options = CreateDigitalSignOptions(certificatePath, imageFilePath,
+            iteration);
 
         // Update output file name on second iteration
         if (iteration == 1) signedFile = resultOutputFile;
@@ -155,7 +159,8 @@ int iteration = 0;
 * Helper method to generate the [DigitalSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/) object with the required certificate and its password, and configure additional properties such as reason, contact, location, and position. An image and custom appearance labels are also set.
 
 ```csharp
-private static DigitalSignOptions CreateDigitalSignOptions(string certificatePath, string imageFilePath, int iteration)
+private static DigitalSignOptions CreateDigitalSignOptions(string certificatePath, 
+    string imageFilePath, int iteration)
 {
     return new DigitalSignOptions(certificatePath)
     {
@@ -208,7 +213,8 @@ foreach (var certificatePath in certificatePaths)
     using (Signature signature = new Signature("sample.pdf"))
     {
         // Generate signature options with helper method
-        DigitalSignOptions options = CreateDigitalSignOptions(certificatePath, imageFilePath, iteration);
+        DigitalSignOptions options = CreateDigitalSignOptions(certificatePath, imageFilePath, 
+            iteration);
 
         // Update output file name on second iteration
         if (iteration == 1) signedFile = resultOutputFile;
