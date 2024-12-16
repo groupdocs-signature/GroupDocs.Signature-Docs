@@ -63,12 +63,6 @@ The following code snippet demonstrates how to obtain information about document
   }
 ```
 
-{{< alert style="info" >}}
-**GroupDocs.Signature** also provides an abilityto obtain extended information of document form fields and existing signatures.  
-To learn more about please refer to the following guides:
-[Obtain document form fields and signatures information]({{< ref "signature/nodejs-java/developer-guide/advanced-usage/common/obtain-document-form-fields-and-signatures-information.md" >}})
-{{< /alert >}}
-
 ## More resources
 
 ### GitHub Examples

@@ -82,9 +82,6 @@ GroupDocs.Signature expects [CreatePageStream](https://reference.groupdocs.com/
   }
 ```
 
-### Advanced Usage Topics
-
-To learn more about document eSign features, please refer to the [Advanced Usage section]({{< ref "signature/nodejs-java/developer-guide/advanced-usage/_index.md" >}}).
 ## More resources
 
 ### GitHub Examples
