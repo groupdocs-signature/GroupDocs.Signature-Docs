@@ -69,10 +69,6 @@ To learn more about please refer to the following guides:
 [Obtain document form fields and signatures information]({{< ref "signature/nodejs-java/developer-guide/advanced-usage/common/obtain-document-form-fields-and-signatures-information.md" >}})
 {{< /alert >}}
 
-### Advanced Usage Topics
-
-To learn more about document eSign features, please refer to the [advanced usage section]({{< ref "signature/nodejs-java/developer-guide/advanced-usage/_index.md" >}}).
-
 ## More resources
 
 ### GitHub Examples

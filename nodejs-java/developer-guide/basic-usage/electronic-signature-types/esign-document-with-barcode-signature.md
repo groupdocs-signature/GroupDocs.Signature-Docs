@@ -52,9 +52,9 @@ Here are the steps to eSign a document with the Barcode signature using GroupDoc
 
 This example shows how to sign a PDF document with a Barcode signature.
 
-```csharp
+```javascript
   // The path to the documents directory.
-  const filePath = Constants.SAMPLE_PDF; // Assuming Constants.SAMPLE_PDF is defined elsewhere
+  const filePath = Constants.SAMPLE_PDF; 
   const fileName = path.basename(filePath);
 
   const outputFilePath = path.join(Constants.OutputPath, 'SignPdfWithBarcode', fileName);
@@ -77,10 +77,6 @@ This example shows how to sign a PDF document with a Barcode signature.
 
 ### Summary
 This guide demonstrates how to use [**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) to add barcode-based signatures to documents. It covers creating, configuring, and applying barcode signatures with support for various barcode types and customization options. For further exploration, refer to related guides on document information and advanced signing techniques.
-
-### Advanced Usage Topics
-
-To learn more about document eSign features, please refer to the [advanced usage section]({{< ref "signature/nodejs-java/developer-guide/advanced-usage/_index.md" >}}).
 
 ## More resources
 

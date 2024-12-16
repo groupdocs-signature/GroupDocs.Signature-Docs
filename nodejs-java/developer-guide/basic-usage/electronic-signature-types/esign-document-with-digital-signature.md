@@ -69,9 +69,7 @@ using (Signature signature = new Signature("sample.pdf"))
 ### Summary
 This guide demonstrates how to use [**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) to sign documents with digital signatures. It explains how to load documents, configure certificate-based signatures, and save signed files securely. Advanced features, including signature appearance customization and validation, are also covered. Refer to related resources for additional details on digital signing workflows.
 
-### Advanced Usage Topics
 
-To learn more about document eSign features, please refer to the [advanced usage section]({{< ref "signature/nodejs-java/developer-guide/advanced-usage/_index.md" >}}).
 
 ## More resources
 

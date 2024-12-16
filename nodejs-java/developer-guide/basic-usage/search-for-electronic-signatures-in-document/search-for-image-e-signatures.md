@@ -52,9 +52,6 @@ The code snippet below demonstrates how to search for Image electronic signature
   }
 ```
 
-### Advanced Usage Topics
-
-To learn more about document eSign features, please refer to the [advanced usage section]({{< ref "signature/nodejs-java/developer-guide/advanced-usage/_index.md" >}}).
 
 ## More resources
 

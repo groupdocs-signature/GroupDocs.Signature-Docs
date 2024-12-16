@@ -96,9 +96,7 @@ This example shows how to add a Stamp signature to a document.
 ### Summary
 This guide explains how to apply stamp-based signatures to documents using [**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) . It covers the process of creating a stamp signature, customizing its appearance, and positioning it on the document. The signed document can then be saved with the stamp signature applied.
 
-### Advanced Usage Topics
 
-To learn more about document eSign features, please refer to the [advanced usage section]({{< ref "signature/nodejs-java/developer-guide/advanced-usage/_index.md" >}}).
 
 ## More resources
 

@@ -80,9 +80,7 @@ The code snippet below demonstrates how to sign a PDF document with the QR code 
 ### Summary
 This guide demonstrates how to add QR code signatures to documents using [**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) . It includes steps for generating a QR code signature, configuring its properties like size and encoding, and applying it to a document. QR code signatures can be used for quick verification of the signed document.
 
-### Advanced Usage Topics
 
-To learn more about document eSign features, please refer to the [advanced usage section]({{< ref "signature/nodejs-java/developer-guide/advanced-usage/_index.md" >}}).
 
 ## More resources
 

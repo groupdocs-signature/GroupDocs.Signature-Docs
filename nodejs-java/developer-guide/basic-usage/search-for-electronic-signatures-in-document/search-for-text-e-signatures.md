@@ -56,9 +56,6 @@ This example shows how to search for Text e-signature in the document.
   }
 ```
 
-### Advanced Usage Topics
-
-To learn more about document eSign features, please refer to the [advanced usage section]({{< ref "signature/nodejs-java/developer-guide/advanced-usage/_index.md" >}}).
 
 ## More resources
 

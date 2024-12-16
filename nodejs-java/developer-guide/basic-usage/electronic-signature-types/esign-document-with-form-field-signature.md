@@ -123,9 +123,7 @@ This example shows how to sign a PDF document with the existing Form Field elect
 ### Summary
 This guide explains how to use [**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) to add form field signatures to documents. It covers loading a document, configuring form field properties such as name, type, and value, and saving the signed document. Advanced options, like customizing field appearance and placement, are also included. For more details, refer to related guides on document signing techniques.
 
-### Advanced Usage Topics
 
-To learn more about document eSign features, please refer to the [advanced usage section]({{< ref "signature/nodejs-java/developer-guide/advanced-usage/_index.md" >}}).
 
 ## More resources
 

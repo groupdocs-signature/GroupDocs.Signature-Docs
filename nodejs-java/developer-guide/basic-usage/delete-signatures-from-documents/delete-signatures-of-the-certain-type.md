@@ -66,9 +66,6 @@ This example shows how to delete QR-Code signatures from the document.
   }
 ```
 
-### Advanced Usage Topics
-
-To learn more about document eSign features, please refer to the [Advanced usage section]({{< ref "signature/nodejs-java/developer-guide/advanced-usage/_index.md" >}}).
 
 ## More resources
 
