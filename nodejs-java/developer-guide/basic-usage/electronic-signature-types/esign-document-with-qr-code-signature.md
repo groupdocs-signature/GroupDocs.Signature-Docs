@@ -46,12 +46,15 @@ QR code (or Quick Response code) is a sort of two-dimensional [barcode]({{< ref
 When adding QR code electronic signature to a document, the main settings are the text to be encoded and the [type of the QR code](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/qrcodetypes/#fields) which should be specified via the [QrCodeSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/qrcodesignoptions) class.  
 
 Here are the steps to eSign a document with the QR code signature:
+Here is the corrected text with accurate links:
 
-* Create a new instance of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class and pass the source document path as a constructor parameter.
+---
 
-* Instantiate the [QrCodeSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/qrcodesignoptions) object according to your requirements and specify the [EncodeType](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/qrcodesignoptions/encodetype) and the [Text](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/textsignoptions/text) properties.
-  
-* Call the [Sign](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/sign/) method of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class instance and pass the [QrCodeSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/qrcodesignoptions) to it.
+* Create a new instance of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class and pass the source document path as a constructor parameter.
+
+* Instantiate the [QrCodeSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/qrcodesignoptions) object according to your requirements and specify the [EncodeType](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/qrcodesignoptions/encodetype) and the [Text](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/textsignoptions/text) properties.
+
+* Call the [Sign](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/sign) method of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class instance and pass the [QrCodeSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/qrcodesignoptions) to it.
 
 The code snippet below demonstrates how to sign a PDF document with the QR code signature.
 

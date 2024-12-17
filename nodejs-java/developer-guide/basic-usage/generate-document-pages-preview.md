@@ -30,20 +30,22 @@ structuredData:
 ---
 ## Overview
 
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) provides [PreviewOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/previewoptions) class to specify different options to manage document pages preview generation process. The feature also supports archives previewing.
-  
-Here are the steps to generate document preview with GroupDocs.Signature:
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) provides the [PreviewOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/previewoptions) class to specify different options for managing document pages preview generation. The feature also supports archive previewing.
 
-* Create new instance of [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class and pass source document path as a constructor parameter.
-* Instantiate the [PreviewOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/previewoptions) object with:
-* delegate for each page stream creation (see event handler [CreatePageStream](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/createpagestream));
-* image preview format - PNG / JPG / BMP,
-* page numbers to process;
-* custom size of preview images (if needed).
+Here are the steps to generate a document preview with GroupDocs.Signature:
+
+* Create a new instance of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class and pass the source document path as a constructor parameter.
+* Instantiate the [PreviewOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/previewoptions) object with:
+    * A delegate for each page stream creation (see event handler [CreatePageStream](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/createpagestream));
+    * Image preview format - PNG / JPG / BMP;
+    * Page numbers to process;
+    * Custom size for preview images (if needed).
+
 {{< alert style="info" >}}
-Stream that were created by [CreatePageStream](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/createpagestream) delegate will be disposed automatically once after generation of preview image. If you need to implement custom image preview stream disposing you have to pass additional argument [ReleaseStream](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/releasepagestream) to clean up resources.  
+Streams created by the [CreatePageStream](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/createpagestream) delegate will be disposed of automatically after the preview image generation. If you need to implement custom image preview stream disposal, pass an additional argument [ReleaseStream](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/releasepagestream) to clean up resources.
 {{< /alert >}}
-* Call [GeneratePreview](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/generatepreview) method of [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class instance and pass [PreviewOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/previewoptions) to it.
+
+* Call the [GeneratePreview](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/generatepreview) method of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class instance and pass the [PreviewOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/previewoptions) to it.
 
 ## CreatePageStream delegate implementation
 

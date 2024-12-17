@@ -9,38 +9,38 @@ keywords: delete Barcode,delete Barcode electronic signatures, how to delete Bar
 productName: GroupDocs.Signature for Node.Js via Java
 toc: True
 structuredData:
-    showOrganization: True
-    application:    
-        name: Remove Barcodes from documents in Node.Js    
-        description: Delete Barcodes presented in documents in convenient way with Node.Js language and GroupDocs.Signature for Node.Js via Java APIs
-        productCode: signature
-        productPlatform: net 
-    showVideo: True
-    howTo:
-        name: How to clear any documents from barcodes using Node.Js 
-        description: Information about removing barcodes from documents by Node.Js
-        steps:
-        - name: Load file which is belongs to various supported file types
-          text: Instantiate Signature object by passing file as a constructor parameter. You may provide either file path or file stream. 
-        - name: Get list of barcodes presented in document 
-          text: Create an instance of BarcodeSearchOptions class, fill data and call Search method of signature.
-        - name: Delete one of found barcodes and save result 
-          text: Invoke Delete method passing found barcode and file path for signed file. File stream can be used as well.
+  showOrganization: True
+  application:
+    name: Remove Barcodes from documents in Node.Js
+    description: Delete Barcodes presented in documents in convenient way with Node.Js language and GroupDocs.Signature for Node.Js via Java APIs
+    productCode: signature
+    productPlatform: net
+  showVideo: True
+  howTo:
+    name: How to clear any documents from barcodes using Node.Js
+    description: Information about removing barcodes from documents by Node.Js
+    steps:
+      - name: Load file which is belongs to various supported file types
+        text: Instantiate Signature object by passing file as a constructor parameter. You may provide either file path or file stream.
+      - name: Get list of barcodes presented in document
+        text: Create an instance of BarcodeSearchOptions class, fill data and call Search method of signature.
+      - name: Delete one of found barcodes and save result
+        text: Invoke Delete method passing found barcode and file path for signed file. File stream can be used as well.
 ---
 ## Overview
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) provides [BarcodeSignature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/barcodesignature) class to manipulate barcode signatures and delete them from the documents over [Delete](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/delete) method.  
-Please be aware that [Delete](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/delete) method modifies the same document that was passed to constructor of [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) provides [BarcodeSignature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/barcodesignature) class to manipulate barcode signatures and delete them from the documents over [Delete](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/delete) method.  
+Please be aware that [Delete](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/delete) method modifies the same document that was passed to constructor of [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class.
 
 ## How to delete Barcode signature from the document
 Here are the steps to delete Barcode signature from the document with GroupDocs.Signature:
 
-* Create new instance of [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class and pass source document path as a constructor parameter;
-* Instantiate [BarcodeSearchOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/barcodesearchoptions) object with desired properties;
-* Call [Search](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/search) method to obtain list of [BarcodeSignature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/barcodesignature);
-* Select from list [BarcodeSignature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/barcodesignature) object(s) that should be removed from the document;
-* Call [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) object [Delete](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/delete) method and pass one or several signatures to it.
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class and pass source document path as a constructor parameter;
+* Instantiate [BarcodeSearchOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options.search/barcodesearchoptions/) object with desired properties;
+* Call [Search](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/#search(com.groupdocs.signature.options.search.SearchOptions)) method to obtain list of [BarcodeSignature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/barcodesignature);
+* Select from list [BarcodeSignature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/barcodesignature) object(s) that should be removed from the document;
+* Call [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) object [Delete](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/delete) method and pass one or several signatures to it.
 
-This example shows how to delete Barcode signature that was found using [Search](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/search) method.
+This example shows how to delete Barcode signature that was found using [Search](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/#search(com.groupdocs.signature.options.search.SearchOptions)) method.
 
 ```javascript
   const filePath = Constants.SAMPLE_PDF_SIGNED; 
@@ -86,7 +86,7 @@ This example shows how to delete Barcode signature that was found using [Search
 
 ### GitHub Examples
 
-You may easily run the code above and see the feature in action in our GitHub examples:
+You may easily run the code above and see the feature in action in our GitHub examples:
 
 * [GroupDocs.Signature for .NET examples, plugins, and showcase](https://github.com/groupdocs-signature/GroupDocs.Signature-for-.NET)
 * [GroupDocs.Signature for Java examples, plugins, and showcase](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java)

@@ -26,14 +26,11 @@ structuredData:
         - name: Process list of found signatures
           text: Loop through list of found images.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) provides [ImageSearchOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/imagesearchoptions) class to specify different options to search for Image e-signatures.
+Here are the steps to search for Image signatures within the document using [**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java):
 
- Here are the steps to search for Image signatures within the document with GroupDocs.Signature API:
-
-* Create new instance of [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class and pass source document path as a constructor parameter;
-* Instantiate the [ImageSearchOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/imagesearchoptions) object according to your requirements and specify additional search options (if needed);
-* Call [Search](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/search) method of [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class instance and pass [ImageSearchOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/imagesearchoptions) to it.
-
+* Create a new instance of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class and pass the source document path as a constructor parameter.
+* Instantiate the [ImageSearchOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/imagesearchoptions) object according to your requirements and specify additional search options (if needed).
+* Call the [Search](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/#search) method of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class instance and pass the [ImageSearchOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/imagesearchoptions) to it.
 The code snippet below demonstrates how to search for Image electronic signature in the document.
 
 ```javascript

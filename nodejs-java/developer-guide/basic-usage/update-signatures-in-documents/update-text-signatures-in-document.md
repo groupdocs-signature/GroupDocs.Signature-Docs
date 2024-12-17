@@ -28,19 +28,17 @@ structuredData:
         - name: Update document
           text: Call method Update passing updated signature.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) provides [TextSignature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/textsignature) class to manipulate text signatures location, size and textual content.  
-Please be aware that [Update](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/update/) method modifies the same document that was passed to constructor of [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) provides the [TextSignature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/textsignature) class to manipulate text signatures' location, size, and textual content. Please note that the [Update](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/update/) method modifies the same document that was passed to the constructor of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class.
 
-Here are the steps to update Text signature in the document with GroupDocs.Signature:
+### Here are the steps to update a Text signature in the document with GroupDocs.Signature:
 
-* Create new instance of [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class and pass source document path as a constructor parameter;
-* Instantiate [TextSearchOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/textsearchoptions) object with desired properties;
-* Call [Search](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/search) method to obtain list of [TextSignatures](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/textsignature);
-* Select from list [TextSignature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/textsignature) object(s) that should be updated;
-* Call [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) object [Update](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/update/) method and pass one or several signatures to it.
+* Create a new instance of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class and pass the source document path as a constructor parameter.
+* Instantiate the [TextSearchOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/textsearchoptions) object with the desired properties.
+* Call the [Search](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/#search) method to obtain a list of [TextSignatures](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/textsignature).
+* Select from the list the [TextSignature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/textsignature) object(s) that should be updated.
+* Call the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) object's [Update](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/update/) method and pass one or several signatures to it.
 
-This example shows how to update Text signature that was found using  [Search](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/search) method.
-
+This example shows how to update a Text signature that was found using the [Search](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/#search) method.
 ```csharp
   // The path to the documents directory.
   const filePath = Constants.SAMPLE_SIGNED_MULTI; 

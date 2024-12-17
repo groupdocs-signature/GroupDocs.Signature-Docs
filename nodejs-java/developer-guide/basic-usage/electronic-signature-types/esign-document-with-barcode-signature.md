@@ -38,17 +38,16 @@ Barcodes allow storing of product-related data like manufacturing and expiry da
 
 ## How to eSign document with Barcode signature
 
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) supports a wide range of Barcode types that can be used to create electronic signatures within the documents. Please refer to the [BarcodeTypes](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/barcodetypes/#fields) description to get the full list of supported barcodes.  
-To specify different options for Barcode signature GroupDocs.Signature for Node.Js via Java provides [BarcodeSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/barcodesignoptions) class. The main fields are:
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) supports a wide range of Barcode types that can be used to create electronic signatures within the documents. Please refer to the [BarcodeTypes](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain.barcodetypes#fields) description to get the full list of supported barcodes.  
+To specify different options for Barcode signature, GroupDocs.Signature for Node.Js via Java provides [BarcodeSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options.barcodesignoptions) class. The main fields are:
 
 * [EncodeType](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/barcodesignoptions/encodetype) - specifies the Barcode type (AustralianPost, Codabar, EAN13, OPC, etc.);
 * [Text](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/textsignoptions/text) - specifies the Barcode text.
 
-
 Here are the steps to eSign a document with the Barcode signature using GroupDocs.Signature for Node.Js via Java API:
-* Create a new instance of [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class and pass the source document path as a constructor parameter.
-* Instantiate the [BarcodeSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/barcodesignoptions) object according to your requirements and specify the Barcode type by setting the [EncodeType](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/barcodesignoptions/encodetype) property with one of the predefined supported types. Set the [Text](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/textsignoptions/text) property value.
-* Call the [Sign](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/sign/) method of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class instance and pass the [BarcodeSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/barcodesignoptions) to it.
+* Create a new instance of [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.signature) class and pass the source document path as a constructor parameter.
+* Instantiate the [BarcodeSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options.barcodesignoptions) object according to your requirements and specify the Barcode type by setting the [EncodeType](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options.barcodesignoptions#encodetype) property with one of the predefined supported types. Set the [Text](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options.barcodesignoptions#text) property value.
+* Call the [sign](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.signature#sign) method of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.signature) class instance and pass the [BarcodeSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options.barcodesignoptions) to it.
 
 This example shows how to sign a PDF document with a Barcode signature.
 

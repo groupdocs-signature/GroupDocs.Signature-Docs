@@ -29,13 +29,13 @@ structuredData:
 ---
 ## Overview
 
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) supports verification of documents for different signature types. This approach requires to add all required verification options to list.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) supports verification of documents for different signature types. This approach requires adding all required verification options to a list.
 
-Here are the steps to verify document for multiple signatures with GroupDocs.Signature:
+Here are the steps to verify a document for multiple signatures with GroupDocs.Signature:
 
-* Create new instance of [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
-* Instantiate required several [VerifyOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/verifyoptions) objects ([BarcodeVerifyOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/barcodeverifyoptions), [QrCodeVerifyOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/qrcodeverifyoptions), [DigitalVerifyOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/digitalverifyoptions), [TextVerifyOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/textverifyoptions)) and add instances to List<[VerifyOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/verifyoptions)\> collection.
-* Call [Verify](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/verify) method of [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class instance and pass filled list of List<[VerifyOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/verifyoptions)\> to it.
+* Create a new instance of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class and pass the source document path or stream as a constructor parameter.
+* Instantiate the required several [VerifyOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/verifyoptions) objects ([BarcodeVerifyOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/barcodeverifyoptions), [QrCodeVerifyOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/qrcodeverifyoptions), [DigitalVerifyOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/digitalverifyoptions), [TextVerifyOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/textverifyoptions)) and add instances to a list of `List<VerifyOptions>`.
+* Call the [Verify](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/verify) method of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class instance and pass the filled list of `List<VerifyOptions>` to it.
 
 This example shows how to search for different signature types in the document.
 

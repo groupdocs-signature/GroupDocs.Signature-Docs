@@ -26,16 +26,15 @@ structuredData:
         - name: Process list of found signatures
           text: Loop through list of found digital signatures.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) offers an ability to find Digital signatures that are applied to document and returns its digital signature certificate.  
-Please follow these steps to search for Digital signatures within the document:
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) offers the ability to find Digital signatures that are applied to a document and returns its digital signature certificate.  
+Please follow these steps to search for Digital signatures within the document:
 
-* Create new instance of [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class and pass source document path as a constructor parameter.
-* Instantiate the [DigitalSearchOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/digitalsearchoptions) object according to your requirements and specify search options
-* Call [Search](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/search) method of [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class instance and pass [DigitalSearchOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/digitalsearchoptions) to it.
-
+* Create a new instance of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class and pass the source document path as a constructor parameter.
+* Instantiate the [DigitalSearchOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/digitalsearchoptions) object according to your requirements and specify search options.
+* Call the [Search](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/#search) method of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class instance and pass the [DigitalSearchOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/digitalsearchoptions) to it.
 This example shows how to search for Digital signature in the document and analyze digital signature certificate.
 
-``` javascript
+```javascript
   // The path to the documents directory.
   const filePath = Constants.SAMPLE_SIGNED_MULTI; 
 

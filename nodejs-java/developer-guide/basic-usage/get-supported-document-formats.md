@@ -27,11 +27,12 @@ structuredData:
 
 ## Overview
 
-With [**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) you can get the [list of file formats]({{< ref "signature/nodejs-java/developer-guide/basic-usage/get-supported-document-formats.md" >}}) that allow adding electronic signatures by following the below steps:
+With [**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java), you can retrieve the list of file formats that allow adding electronic signatures by following these steps:
 
-* Call static function [GetSupportedFileTypes](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/filetype/getsupportedfiletypes) of [FileType](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/filetype) class;
-* Enumerate through the collection of [FileType](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/filetype) objects.
+1. Call the static function [GetSupportedFileTypes](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/filetype/getsupportedfiletypes) of the [FileType](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/filetype) class.
+2. Enumerate through the collection of [FileType](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/filetype) objects.
 
+This will give you the supported document formats for adding electronic signatures.
 The following code sample demonstrates how to get supported file formats list.
 
 ```javascript

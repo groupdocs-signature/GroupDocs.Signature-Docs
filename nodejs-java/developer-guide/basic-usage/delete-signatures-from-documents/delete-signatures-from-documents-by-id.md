@@ -29,18 +29,18 @@ structuredData:
 
 ---
 ## Overview
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) provides [TextSignature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/textsignature) class to manipulate text signatures and delete them from the documents.
-Please be aware that [Delete](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/delete) method modifies the same document that was passed to constructor of [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) provides [TextSignature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/textsignature/) class to manipulate text signatures and delete them from the documents.
+Please be aware that [Delete](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/delete/) method modifies the same document that was passed to constructor of [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class.
 ## How to delete Text signature from the document
 Here are the steps to delete Text signature from the document with GroupDocs.Signature:
 
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class and pass source document path as a constructor parameter;
-* Instantiate [TextSearchOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/textsearchoptions) object with desired properties;
-* Call [Search](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/search) method to obtain list of [TextSignatures](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/textsignature);
-* Select from list [TextSignature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/textsignature) object(s) that should be removed from the document;
-* Call [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) object [Delete](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/delete) method and pass one or several signatures to it.
+* Instantiate [TextSearchOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/textsearchoptions/) object with desired properties;
+* Call [Search](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/#search(com.groupdocs.signature.options.search.SearchOptions)) method to obtain list of [TextSignatures](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/textsignature/);
+* Select from list [TextSignature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/textsignature/) object(s) that should be removed from the document;
+* Call [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) object [Delete](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/delete/) method and pass one or several signatures to it.
 
-This example shows how to delete Text signature that was found using [Search](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/search) method.
+This example shows how to delete Text signature that was found using [Search](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/#search(com.groupdocs.signature.options.search.SearchOptions)) method.
 
 ```javascript
   // The path to the documents directory.  

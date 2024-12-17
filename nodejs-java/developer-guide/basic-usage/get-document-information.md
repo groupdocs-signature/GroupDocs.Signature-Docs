@@ -25,13 +25,16 @@ structuredData:
           text: Call GetDocumentInfo method save process information such as page count or document format.
 ---
 ## Overview
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) allows you to retrieve document information, which includes the following:
 
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) allows to get document information which includes:
+- [FileType](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/documentinfo/filetype): The type of the document.
+- [Size](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/documentinfo/size): The size of the document.
+- [PageCount](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/documentinfo/pagecount): The total number of pages in the document.
+- Page dimensions for each page in a document:
+    - [Height](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/pageinfo/height)
+    - [Width](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/pageinfo/width)
 
-* [FileType](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/documentinfo/filetype)
-* [Size](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/documentinfo/size)
-* [PageCount](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/documentinfo/pagecount)
-* Pages dimensions - [Height](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/pageinfo/height) and [Width](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/pageinfo/width) for each page in a document [Pages](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/idocumentinfo/pages) collection.
+These properties are available through the [Pages](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/idocumentinfo/pages) collection for each page in the document.
 
 ## Get document information from a file
 

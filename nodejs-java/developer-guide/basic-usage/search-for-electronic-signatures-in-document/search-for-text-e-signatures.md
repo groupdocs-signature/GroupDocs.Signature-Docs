@@ -28,11 +28,11 @@ structuredData:
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) provides [TextSearchOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/textsearchoptions) class to specify different options to search for Text electronic signatures within document.
 
-Here are the steps to search for Text e-signatures using GroupDocs.Signature API:
+Here are the steps to search for Text e-signatures using GroupDocs.Signature API:
 
-* Create new instance of [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class and pass source document path as a constructor parameter;
-* Instantiate the [TextSearchOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/textsearchoptions) object according to your requirements and specify additional search options (if needed);  
-* Call [Search](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/search) method of [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature)  class instance and pass [TextSearchOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/textsearchoptions) to it.
+* Create a new instance of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class and pass the source document path as a constructor parameter.
+* Instantiate the [TextSearchOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/textsearchoptions) object according to your requirements and specify additional search options (if needed).
+* Call the [Search](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/#search) method of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class instance and pass the [TextSearchOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/textsearchoptions) to it.
 
 This example shows how to search for Text e-signature in the document.
 

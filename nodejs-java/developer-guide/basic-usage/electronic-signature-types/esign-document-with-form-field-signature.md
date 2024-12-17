@@ -33,9 +33,7 @@ A **form field** is an interactive element located on a document page that allow
 
 ![FormField](/signature/nodejs-java/images/esign-document-with-form-field-signature.png)
 
-## How to eSign document with Form Field signature
-
-With [**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) you can create new form fields or update the existing ones within the documents. The [FormFieldSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/formfieldsignoptions) class specifies different options for Form Field signature. The [FormFieldSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/formfieldsignoptions) class contains one [FormFieldSignature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/formfieldsignature/) object that specifies the properties of the desired signature.
+With [**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) you can create new form fields or update the existing ones within the documents. The [FormFieldSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/formfieldsignoptions) class specifies different options for Form Field signature. The [FormFieldSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/formfieldsignoptions) class contains one [FormFieldSignature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/formfieldsignature) object that specifies the properties of the desired signature.
 
 Below are listed different Form Field signature classes that could be set to [FormFieldSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/formfieldsignoptions):
 
@@ -43,15 +41,15 @@ Below are listed different Form Field signature classes that could be set to [Fo
 * [CheckboxFormFieldSignature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/checkboxformfieldsignature) - represents a checkbox field on a document page.
 * [ComboboxFormFieldSignature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/comboboxformfieldsignature) - represents a combo box field signature input with a list of possible options.
 * [RadioButtonFormFieldSignature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/radiobuttonformfieldsignature) - represents a radio button signature on a document page.
-* [DigitalFormFieldSignature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/digitalformfieldsignature) - represents a digital signature input form on a document page.  
+* [DigitalFormFieldSignature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/digitalformfieldsignature) - represents a digital signature input form on a document page.
 
 Here are the steps to add Form Field signatures into a document with GroupDocs.Signature:
 
 * Create a new instance of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class and pass the source document path as a constructor parameter;
 * Instantiate the [FormFieldSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/formfieldsignoptions) object according to your requirements;
-* Instantiate one of the objects - [TextFormFieldSignature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/textformfieldsignature), [CheckboxFormFieldSignature,](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/checkboxformfieldsignature) [ComboboxFormFieldSignature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/comboboxformfieldsignature), [RadioButtonFormFieldSignature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/radiobuttonformfieldsignature) or [DigitalFormFieldSignature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/digitalformfieldsignature);
+* Instantiate one of the objects - [TextFormFieldSignature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/textformfieldsignature), [CheckboxFormFieldSignature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/checkboxformfieldsignature), [ComboboxFormFieldSignature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/comboboxformfieldsignature), [RadioButtonFormFieldSignature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/radiobuttonformfieldsignature) or [DigitalFormFieldSignature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/digitalformfieldsignature);
 * Assign the [FormFieldSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/formfieldsignoptions) property with the object created in a previous step;
-* Call the [Sign](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/sign/) method of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class instance and pass the [FormFieldSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/formfieldsignoptions) object to it.
+* Call the [Sign](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/sign) method of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class instance and pass the [FormFieldSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/formfieldsignoptions) object to it.
 
 {{< alert style="note" >}}
 Currently GroupDocs.Signature supports the creation of Form Field signatures for PDF documents only.
@@ -60,29 +58,24 @@ Currently GroupDocs.Signature supports the creation of Form Field signatures for
 This example shows how to sign a PDF document with a Form Field electronic signature.
 
 ```javascript
-            // The path to the documents directory.
-            string filePath = "sample.pdf";
-            string fileName = Path.GetFileName(filePath);
+// The path to the documents directory.
+const filePath = Constants.SAMPLE_PDF; // Assuming Constants.SAMPLE_PDF is defined elsewhere
+const fileName = path.basename(filePath);
 
-            string outputFilePath = Path.Combine("C:\output", fileName);
+const outputFilePath = path.join(Constants.OutputPath, 'SignPdfWithFormField', fileName);
+const signature = new signatureLib.Signature(filePath);
 
-            using (Signature signature = new Signature(filePath))
-            {
-                // Instantiate text form field signature
-                FormFieldSignature textSignature = new TextFormFieldSignature("FieldText", "Value1");
+// Instantiate text form field signature
+const textSignature = new signatureLib.TextFormFieldSignature('FieldText', 'Value1');
+// Instantiate options based on text form field signature
+const options = new signatureLib.FormFieldSignOptions(textSignature);
+options.setMargin(new signatureLib.Padding(10, 20, 0, 0));
+options.setHeight(10);
+options.setWidth(100);
 
-                // Instantiate options based on text form field signature
-                FormFieldSignOptions options = new FormFieldSignOptions(textSignature)
-                {
-                    HorizontalAlignment = HorizontalAlignment.Left,
-                    VerticalAlignment = VerticalAlignment.Top,
-                    Margin = new Padding(10, 20, 0, 0),
-                    Height = 10,
-                    Width = 100
-                };
-                // Sign document and save to the file
-                signature.Sign(outputFilePath, options);
-            }
+// Sign document to file
+signature.sign(outputFilePath, options);
+console.log(`\nSource document signed successfully.\nFile saved at ${outputFilePath}`);
 ```
 
 ## How to eSign document with existing Form Field signatures
@@ -95,8 +88,8 @@ To update an existing form field signature within the document with GroupDocs.Si
 * Instantiate the [TextSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/textsignoptions) object with all required additional options.
 * Set the [TextSignOptions.SignatureImplementation](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/textsignoptions/signatureimplementation) property with the [TextSignatureImplementation.FormField](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/textsignatureimplementation) value.
 * Set the [FormTextFieldTitle](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/textsignoptions/formtextfieldtitle) and [FormTextFieldType](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/textsignoptions/formtextfieldtype) properties with the proper values of form fields to be updated.
-* Call the [Sign](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/sign/) method of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class instance and pass the initialized [TextSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/textsignoptions) instance to it.
-* Analyze the [SignResult](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/signresult) object to check the newly created signatures if needed.  
+* Call the [Sign](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/sign) method of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class instance and pass the initialized [TextSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/textsignoptions) instance to it.
+* Analyze the [SignResult](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/signresult) object to check the newly created signatures if needed.
 
 This example shows how to sign a PDF document with the existing Form Field electronic signature and update its value.
 

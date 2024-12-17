@@ -29,14 +29,14 @@ structuredData:
 ---
 ## Overview
 
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) provides [BarcodeVerifyOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/barcodeverifyoptions) class to specify different options for verification of Barcode signatures.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) provides the [BarcodeVerifyOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/barcodeverifyoptions) class to specify different options for verifying Barcode signatures.
 
-Here are the steps to verify Barcode signature within the document with GroupDocs.Signature:
+Here are the steps to verify a Barcode signature within the document with GroupDocs.Signature:
 
-* Create new instance of [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class and pass source document path as a constructor parameter.
-* Instantiate the [BarcodeVerifyOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/barcodeverifyoptions) object according to your requirements and specify verification options
-* Call [Verify](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/verify) method of [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class instance and pass [BarcodeVerifyOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/barcodeverifyoptions) to it.
-  
+* Create a new instance of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class and pass the source document path as a constructor parameter.
+* Instantiate the [BarcodeVerifyOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/barcodeverifyoptions) object according to your requirements and specify the verification options.
+* Call the [Verify](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/verify) method of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class instance and pass the [BarcodeVerifyOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/barcodeverifyoptions) to it.
+
 This example shows how to verify Barcode signature in the document.
 
 ```csharp

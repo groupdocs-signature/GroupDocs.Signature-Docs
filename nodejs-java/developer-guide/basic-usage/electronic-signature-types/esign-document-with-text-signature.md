@@ -37,11 +37,11 @@ A **Text** electronic signature is an arbitrary text that is added to a documen
 
 Let's try to add a text signature to a PDF programmatically.
 
-To manipulate text signatures programmatically [**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) provides the [TextSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/textsignoptions) class and the whole workflow is as easy as follows:
+To manipulate text signatures programmatically, [**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) provides the [TextSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/textsignoptions) class, and the whole workflow is as easy as follows:
 
-* Create a new instance of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class and pass the source document path as a constructor parameter.
-* Instantiate the [TextSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/textsignoptions) object according to your requirements and specify the signature options.
-* Call the [Sign](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/sign/) method of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class instance and pass the [TextSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/textsignoptions) to it.
+* Create a new instance of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class and pass the source document path as a constructor parameter.
+* Instantiate the [TextSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/textsignoptions) object according to your requirements and specify the signature options.
+* Call the [Sign](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/sign/) method of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class instance and pass the [TextSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/textsignoptions) to it.
 
 This example shows how to add a text signature to a document.
 
