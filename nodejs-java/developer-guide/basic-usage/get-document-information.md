@@ -28,10 +28,10 @@ structuredData:
 
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) allows to get document information which includes:
 
-* [FileType](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature.domain/documentinfo/filetype)
-* [Size](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature.domain/documentinfo/size)
-* [PageCount](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature.domain/documentinfo/pagecount)
-* Pages dimensions - [Height](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature.domain/pageinfo/height) and [Width](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature.domain/pageinfo/width) for each page in a document [Pages](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature.domain/idocumentinfo/pages) collection.
+* [FileType](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/documentinfo/filetype)
+* [Size](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/documentinfo/size)
+* [PageCount](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/documentinfo/pagecount)
+* Pages dimensions - [Height](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/pageinfo/height) and [Width](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/pageinfo/width) for each page in a document [Pages](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/idocumentinfo/pages) collection.
 
 ## Get document information from a file
 

@@ -28,18 +28,18 @@ structuredData:
         - name: Update document
           text: Call method Update passing updated signature.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) provides [BarcodeSignature](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature.domain/barcodesignature) class to manipulate barcode signatures location, size and textual content.
-Please be aware that [Update](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature/signature/update/) method modifies the same document that was passed to constructor of [Signature](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature/signature) class.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) provides [BarcodeSignature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/barcodesignature) class to manipulate barcode signatures location, size and textual content.
+Please be aware that [Update](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/update/) method modifies the same document that was passed to constructor of [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class.
 
 ### Here are the steps to update Barcode signature in the document with GroupDocs.Signature:
 
-* Create new instance of [Signature](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature/signature) class and pass source document path as a constructor parameter;
-* Instantiate [BarcodeSearchOptions](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature.options/barcodesearchoptions) object with desired properties;
-* Call [Search](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature/signature/search) method to obtain list of [BarcodeSignatures](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature.domain/barcodesignature);
-* Select from list [BarcodeSignature](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature.domain/barcodesignature) object(s) that should be updated;
-* Call [Signature](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature/signature) object [Update](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature/signature/update/) method and pass one or several signatures to it.
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class and pass source document path as a constructor parameter;
+* Instantiate [BarcodeSearchOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/barcodesearchoptions) object with desired properties;
+* Call [Search](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/search) method to obtain list of [BarcodeSignatures](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/barcodesignature);
+* Select from list [BarcodeSignature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.domain/barcodesignature) object(s) that should be updated;
+* Call [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) object [Update](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/update/) method and pass one or several signatures to it.
 
-This example shows how to update Barcode signature that was found using  [Search](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature/signature/search) method.
+This example shows how to update Barcode signature that was found using  [Search](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/search) method.
 
 ```csharp
   // The path to the documents directory.

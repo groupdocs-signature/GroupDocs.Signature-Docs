@@ -30,20 +30,20 @@ The picture below shows how a digital signature looks on a PDF document page by 
 
 ## How to Sign a document with a Digital Signature
 
-**[GroupDocs.Signature](https://products.groupdocs.com/signature/nodejs-java)** supports the creation of digital signatures based on existing PFX certificates. To specify various settings the library provides the [DigitalSignOptions](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature.options/digitalsignoptions/) class that allows adjusting digital signature properties in the document:
+**[GroupDocs.Signature](https://products.groupdocs.com/signature/nodejs-java)** supports the creation of digital signatures based on existing PFX certificates. To specify various settings the library provides the [DigitalSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/digitalsignoptions/) class that allows adjusting digital signature properties in the document:
 
-* The [FilePath](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature.options/digitalsignoptions/certificatefilepath/) or [Stream](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature.options/digitalsignoptions/certificatestream/) properties define the certificate source;
-* The [password](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature.options/digitalsignoptions/password/) property specifies the certificate password;
-* The [Contact](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature.options/digitalsignoptions/contact/), [Reason](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature.options/digitalsignoptions/reason/) and [Location](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature.options/digitalsignoptions/location/) properties specify additional descriptions;
-* The [Visible](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature.options/digitalsignoptions/visible/) property specifies whether the signature should be visible on the document page or not;
-* The [XAdES type](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature.options/digitalsignoptions/xadestype/) property defines whether the e-signature should be of an XML Advanced Electronic Signature type.
+* The [FilePath](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/digitalsignoptions/certificatefilepath/) or [Stream](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/digitalsignoptions/certificatestream/) properties define the certificate source;
+* The [password](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/digitalsignoptions/password/) property specifies the certificate password;
+* The [Contact](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/digitalsignoptions/contact/), [Reason](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/digitalsignoptions/reason/) and [Location](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/digitalsignoptions/location/) properties specify additional descriptions;
+* The [Visible](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/digitalsignoptions/visible/) property specifies whether the signature should be visible on the document page or not;
+* The [XAdES type](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/digitalsignoptions/xadestype/) property defines whether the e-signature should be of an XML Advanced Electronic Signature type.
 
 ### Follow these steps to sign your documents with a digital signature
 
 1. Install the GroupDocs.Signature [NuGet package](https://www.nuget.org/packages/groupdocs.signature) to your .NET application.
-2. Create a new instance of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature/signature) class and pass the source document path as a constructor parameter.
-3. Instantiate the [DigitalSignOptions](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature.options/digitalsignoptions/) object with the required certificate and its password.
-4. Call the [Sign](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature/signature/sign/) method of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature/signature) class instance and pass the [DigitalSignOptions](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature.options/digitalsignoptions/) to it.
+2. Create a new instance of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class and pass the source document path as a constructor parameter.
+3. Instantiate the [DigitalSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/digitalsignoptions/) object with the required certificate and its password.
+4. Call the [Sign](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/sign/) method of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class instance and pass the [DigitalSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/digitalsignoptions/) to it.
 
 The example below shows how to sign a PDF document with a digital e-signature using Node.Js language. We can sign any other supported document format in the same way.
 

@@ -29,13 +29,13 @@ structuredData:
 ---
 ## Overview
 
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) provides [QrCodeVerifyOptions](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature.options/qrcodeverifyoptions) class to specify different options for verification of QR-code signatures.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) provides [QrCodeVerifyOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/qrcodeverifyoptions) class to specify different options for verification of QR-code signatures.
 
 Here are the steps to verify qr-code signature within the document with GroupDocs.Signature for Node.Js via Java API:
 
-* Create new instance of [Signature](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
-* Instantiate the [QrCodeVerifyOptions](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature.options/qrcodeverifyoptions) object according to your requirements and specify verification options
-* Call [Verify](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature/signature/verify) method of [Signature](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature/signature) class instance and pass [QrCodeVerifyOptions](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature.options/qrcodeverifyoptions) to it.
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class and pass source document path as a constructor parameter.
+* Instantiate the [QrCodeVerifyOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/qrcodeverifyoptions) object according to your requirements and specify verification options
+* Call [Verify](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/verify) method of [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class instance and pass [QrCodeVerifyOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/qrcodeverifyoptions) to it.
 
 This example shows how to verify QR-code signature in the document.
 

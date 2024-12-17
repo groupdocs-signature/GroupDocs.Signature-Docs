@@ -34,7 +34,7 @@ Every stamp signature can have multiple "stamp lines" with custom text and diffe
 
 ![Stamp](/signature/nodejs-java/images/esign-document-with-stamp-signature.png)
 
-GroupDocs.Signature provides the [StampSignOptions](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature.options/stampsignoptions) class to specify different options for Stamp signature:
+GroupDocs.Signature provides the [StampSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/stampsignoptions) class to specify different options for Stamp signature:
 
 * Stamp type - Round or Square;
 * Height and width in pixels;
@@ -45,9 +45,9 @@ Each Stamp option contains inner and outer lines. Inner lines represent vertical
 
 Here are the steps to add a Stamp signature to a document with GroupDocs.Signature:
 
-* Create a new instance of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature/signature) class and pass the source document path as a constructor parameter.
-* Instantiate the [StampSignOptions](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature.options/stampsignoptions) object according to your requirements and specify appropriate options.
-* Call the [Sign](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature/signature/sign/) method of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature/signature) class instance and pass the [StampSignOptions](https://reference.groupdocs.com/signature/nodejs-java/groupdocs.signature.options/stampsignoptions) to it.
+* Create a new instance of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class and pass the source document path as a constructor parameter.
+* Instantiate the [StampSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/stampsignoptions) object according to your requirements and specify appropriate options.
+* Call the [Sign](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature/sign/) method of the [Signature](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature/signature) class instance and pass the [StampSignOptions](https://reference.groupdocs.com/signature/nodejs-java/com.groupdocs.signature.options/stampsignoptions) to it.
 
 ## How to eSign document with Stamp signature
 
