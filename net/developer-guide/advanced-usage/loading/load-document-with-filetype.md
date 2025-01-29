@@ -1,5 +1,5 @@
 ---
-id: load-password-protected-document
+id: load-document-with-filetype
 url: signature/net/load-document-with-filetype
 title: Specify file type when loading a document
 weight: 3
