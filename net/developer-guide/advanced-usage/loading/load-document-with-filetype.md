@@ -15,24 +15,24 @@ structuredData:
         productCode: signature
         productPlatform: net 
     showVideo: True
-   howTo:
-    name: How to sign a document with QR code and specify file type via C#
-    description: Learn how to sign a document with a QR code and specify file type while loading the document using C#.
-    steps:
-    - name: Set up file paths
-      text: Define the path to the sample PDF document and output directory. Use `Path.GetFileName(filePath)` to extract the file name and combine it with the output directory path for saving the signed document.
-    - name: Open the document as a stream
-      text: Open the document file as a stream for reading using `File.OpenRead(filePath)`.
-    - name: Specify the file type
-      text: Instantiate the [LoadOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/loadoptions) object and specify the file type (e.g., `FileType.PDF`).
-    - name: Create Signature instance
-      text: Instantiate the [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) object by passing the file stream and load options as constructor parameters.
-    - name: Define QR code signing options
-      text: Instantiate the [QrCodeSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options.qrcodesignoptions) object and set properties like signer name, QR code type, and position.
-    - name: Sign the document
-      text: Call the [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign) method to sign the document and save it to the specified output path.
-    - name: Verify the result
-      text: Print a success message with the file path of the signed document using `Console.WriteLine`.
+    howTo:
+        name: How to sign a document with QR code and specify file type via C#
+        description: Learn how to sign a document with a QR code and specify file type while loading the document using C#.
+        steps:
+        - name: Set up file paths
+          text: Define the path to the sample PDF document and output directory. Use `Path.GetFileName(filePath)` to extract the file name and combine it with the output directory path for saving the signed document.
+        - name: Open the document as a stream
+          text: Open the document file as a stream for reading using `File.OpenRead(filePath)`.
+        - name: Specify the file type
+          text: Instantiate the [LoadOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/loadoptions) object and specify the file type (e.g., `FileType.PDF`).
+        - name: Create Signature instance
+          text: Instantiate the [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) object by passing the file stream and load options as constructor parameters.
+        - name: Define QR code signing options
+          text: Instantiate the [QrCodeSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options.qrcodesignoptions) object and set properties like signer name, QR code type, and position.
+        - name: Sign the document
+          text: Call the [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign) method to sign the document and save it to the specified output path.
+        - name: Verify the result
+          text: Print a success message with the file path of the signed document using `Console.WriteLine`.
 
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) supports specifing the file type when loading a documents. When loading a document via a file path or FileStream, GroupDocs.Signature checks the file extension to determine the file type, which can take some time. with the new feature, you can specify the file type directly in LoadOptions, and GroupDocs.Signature will skip the detection process and use the specified type right away.
