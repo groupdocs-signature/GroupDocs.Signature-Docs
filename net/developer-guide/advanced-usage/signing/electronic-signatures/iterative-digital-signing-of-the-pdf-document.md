@@ -18,7 +18,7 @@ toc: True
 * password of digital certificate [Password](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/password/) (required)
 * digital signature details ([Reason](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/reason/), [Contact](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/contact/), [Location](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/location/))
 
-### Here are the steps to add Digital signature into document with GroupDocs.Signature:
+### How to add Digital signature:
 
 * Define the paths for the input PDF file, the digital certificates, and specify the output path where the signed documents will be saved.
 * Create a new instance of the [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass the source document path as a constructor parameter.
@@ -60,11 +60,13 @@ foreach (var certificatePath in certificatePaths)
 
         SignResult signResult = signature.Sign(outputFilePath, options);
         documentFile = outputFilePath;
-        Console.WriteLine($"\nSource document signed successfully {iteration++}-time with {signResult.Succeeded.Count} signature(s).\nFile saved at {outputFilePath}.");
+        Console.WriteLine($"\nSource document signed successfully {iteration++}-" +
+                          $"time with {signResult.Succeeded.Count} signature(s).\n" +
+                          $"File saved at {outputFilePath}.");
     }
 }
 ```
-### How to apply digital signatures iteratively to a PDF document with custom appearance and image
+### Iteratively sign with custom appearance and image
 
 This example demonstrates how to iteratively sign a PDF document with multiple digital certificates, customizing the appearance and adding an image to each signature. See [SignResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult)
 
@@ -85,7 +87,8 @@ int iteration = 0;
 * Helper method to generate the [DigitalSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/) object with the required certificate and its password, and configure additional properties such as reason, contact, location, and position. An image and custom appearance labels are also set.
 
 ```csharp
-private static DigitalSignOptions CreateDigitalSignOptions(string certificatePath, string imageFilePath, int iteration)
+private static DigitalSignOptions CreateDigitalSignOptions(string certificatePath, 
+    string imageFilePath, int iteration)
 {
     return new DigitalSignOptions(certificatePath)
     {
@@ -120,7 +123,8 @@ foreach (var certificatePath in certificatePaths)
     using (Signature signature = new Signature("sample.pdf"))
     {
         // Generate signature options with helper method
-        DigitalSignOptions options = CreateDigitalSignOptions(certificatePath, imageFilePath, iteration);
+        DigitalSignOptions options = CreateDigitalSignOptions(certificatePath, imageFilePath,
+            iteration);
 
         // Update output file name on second iteration
         if (iteration == 1) signedFile = resultOutputFile;
@@ -134,7 +138,7 @@ foreach (var certificatePath in certificatePaths)
     }
 }
 ```
-### Adding Digital Signature with Custom Foreground Color, Image, and Font Settings
+### Customize digital appearance with color, image and font
 
 This example demonstrates how to apply a digital signature with a customized appearance, including a foreground color, image, and specific font settings.
 
@@ -155,7 +159,8 @@ int iteration = 0;
 * Helper method to generate the [DigitalSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/) object with the required certificate and its password, and configure additional properties such as reason, contact, location, and position. An image and custom appearance labels are also set.
 
 ```csharp
-private static DigitalSignOptions CreateDigitalSignOptions(string certificatePath, string imageFilePath, int iteration)
+private static DigitalSignOptions CreateDigitalSignOptions(string certificatePath, 
+    string imageFilePath, int iteration)
 {
     return new DigitalSignOptions(certificatePath)
     {
@@ -208,7 +213,8 @@ foreach (var certificatePath in certificatePaths)
     using (Signature signature = new Signature("sample.pdf"))
     {
         // Generate signature options with helper method
-        DigitalSignOptions options = CreateDigitalSignOptions(certificatePath, imageFilePath, iteration);
+        DigitalSignOptions options = CreateDigitalSignOptions(certificatePath, imageFilePath, 
+            iteration);
 
         // Update output file name on second iteration
         if (iteration == 1) signedFile = resultOutputFile;
