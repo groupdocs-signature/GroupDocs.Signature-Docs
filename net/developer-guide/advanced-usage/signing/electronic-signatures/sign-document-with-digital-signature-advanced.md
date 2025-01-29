@@ -53,6 +53,48 @@ using (Signature signature = new Signature("sample.pdf"))
 }
 ```
 
+### Add Long-Term Validation (LTV)(Long-Term Validation) information for a signature
+
+What is Long-Term Validation (LTV) for Digital Signatures?
+
+Long-Term Validation (LTV) is a method used to ensure the continued validity of digital signatures over time, even after the signing certificate expires or is revoked. LTV embeds additional information within the signed document, such as the certificate’s revocation status, timestamp, and the certificate chain, which allows anyone verifying the signature in the future to determine its authenticity, even if the original certificate is no longer available.
+
+Why is LTV Important?
+
+Digital signatures rely on certificates, which have expiration dates. Once the signing certificate expires or is revoked, the signature may no longer be considered valid. However, many legal, financial, and regulatory scenarios require documents to remain valid for years or decades. LTV solves this problem by embedding validation data directly into the signed document, ensuring that the signature’s authenticity can be verified at any point in the future.
+
+Here is an example of how to implement Long-Term Validation (LTV) for a PDF document using GroupDocs.Signature:
+
+```csharp
+using (Signature signature = new Signature("sample.pdf"))
+{
+    // initialize digital option with certificate file path
+    DigitalSignOptions options = new DigitalSignOptions("certificate.pfx")
+    {
+        // certifiate password
+        Password = "1234567890",
+        // digital certificate details
+        Reason = "Sign",
+        Contact = "JohnSmith",
+        Location = "Office1",
+        AllPages = true,
+        Width = 80,
+        Height = 60,
+        VerticalAlignment = VerticalAlignment.Bottom,
+        HorizontalAlignment = HorizontalAlignment.Right,
+        Margin = new Padding() {Bottom = 10, Right = 10},
+        
+        // Enable Long-Term Validation (LTV) to ensure signature validity over time
+        UseLtv = true
+    };
+    signature.Sign("signed.pdf", options);
+}
+```
+After signing a document with LTV support, you can check whether the signature includes LTV data using Adobe Acrobat.
+Here is the example of signature detailes in Adobe Acrobat:
+![LTV](/signature/net/images/sign-document-with-ltv-advanced.png.png) 
+
+
 ## More resources
 
 ### GitHub Examples
