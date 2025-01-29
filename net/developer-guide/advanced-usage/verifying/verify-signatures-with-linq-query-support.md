@@ -28,6 +28,8 @@ structuredData:
         - name: Analyze the verification result.
           text: Inspect the returned list of verified signatures to determine their validity and review additional signature details.
 ---
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides LINQ query support for verification process.
+
 Here are the steps to verify Barcode signature within the document with GroupDocs.Signature:
 
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
