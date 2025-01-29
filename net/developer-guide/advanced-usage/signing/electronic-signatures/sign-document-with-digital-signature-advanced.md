@@ -92,7 +92,7 @@ using (Signature signature = new Signature("sample.pdf"))
 ```
 After signing a document with LTV support, you can check whether the signature includes LTV data using Adobe Acrobat.
 Here is the example of signature detailes in Adobe Acrobat:
-![LTV](/signature/net/images/sign-document-with-ltv-advanced.png.png) 
+![LTV](/signature/net/images/sign-document-with-ltv-advanced.png) 
 
 
 ## More resources
