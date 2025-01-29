@@ -2,7 +2,7 @@
 id: verify-signatures-with-linq-query-support
 url: signature/net/verify-signatures-with-linq-query-support
 title: How to verify signatures with LINQ queries
-weight: 4
+weight: 19
 description: " This article explains how to verify signatures with LINQ query with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET 

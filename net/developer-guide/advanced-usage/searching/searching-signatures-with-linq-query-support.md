@@ -37,7 +37,7 @@ Here are the steps to search Barcode signature within the document with GroupDoc
 * Execute the search by calling the [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) method and passing the query.
 * Process the found signatures if needed, such as reviewing their properties or performing additional operations.
 
-This example shows how to search Barcode signature with LINQ query in the document
+This example shows how to search Text signature with LINQ query in the document
 
 ```csharp
 // Define the path to the documents directory.
