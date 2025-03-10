@@ -90,7 +90,7 @@ Another way to improve documents is to generate the barcode first and then add i
             // setup barcode signature options
             BarcodeSignOptions signOptions = new BarcodeSignOptions()
             {
-                EncodeType = BarcodeTypes.Code93Extended,
+                EncodeType = BarcodeTypes.Code93,
                 Text = "Case 148.01"
             };
 

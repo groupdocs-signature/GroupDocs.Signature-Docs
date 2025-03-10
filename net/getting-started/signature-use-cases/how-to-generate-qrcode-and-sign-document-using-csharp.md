@@ -97,7 +97,7 @@ Another way to improve documents is to generate the QR code first and then add i
             // setup QR Code signature options
             QrCodeSignOptions signOptions = new QrCodeSignOptions()
             {
-                EncodeType = QRCodeTypes.Code93Extended,
+                EncodeType = QRCodeTypes.Code93,
                 Text = "Case 148.01"
             };
 
