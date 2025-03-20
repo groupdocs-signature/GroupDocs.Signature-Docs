@@ -39,7 +39,7 @@ public void SignDocument()
             Height = 60,
             VerticalAlignment = VerticalAlignment.Bottom,
             HorizontalAlignment = HorizontalAlignment.Right,
-            Margin = new Padding() {  Bottom = 10, Right = 10},
+            Margin = new Padding() { Bottom = 10, Right = 10 },
             HashAlgorithm = HashAlgorithm.Sha256
         };
         options.CustomSignHash = new CustomDigitalSigner();
@@ -50,11 +50,17 @@ public void SignDocument()
 
 public class CustomDigitalSigner : ICustomSignHash
 {
-    public byte[] CustomSignHash(byte[] signableHash, HashAlgorithm hashAlgorithm, SignatureContext signatureContext)
+    public byte[] CustomSignHash(
+        byte[] signableHash, 
+        HashAlgorithm hashAlgorithm, 
+        SignatureContext signatureContext)
     {
         string inputP12 = "";
         var inputPfxPassword = "1234567890";
-        X509Certificate2 signerCert = new X509Certificate2(inputP12, inputPfxPassword, X509KeyStorageFlags.Exportable);
+        X509Certificate2 signerCert = new X509Certificate2(
+            inputP12, 
+            inputPfxPassword, 
+            X509KeyStorageFlags.Exportable);
         RSACryptoServiceProvider rsaCSP = new RSACryptoServiceProvider();
         var xmlString = signerCert.PrivateKey.ToXmlString(true);
         rsaCSP.FromXmlString(xmlString);
@@ -91,7 +97,7 @@ Let's break down the implementation into clear steps:
        Height = 60,
        VerticalAlignment = VerticalAlignment.Bottom,
        HorizontalAlignment = HorizontalAlignment.Right,
-       Margin = new Padding() { Bottom = 10, Right = 10},
+       Margin = new Padding() { Bottom = 10, Right = 10 },
        HashAlgorithm = HashAlgorithm.Sha256
    };
    ```
@@ -110,12 +116,18 @@ Let's break down the implementation into clear steps:
    ```csharp
    public class CustomDigitalSigner : ICustomSignHash
    {
-       public byte[] CustomSignHash(byte[] signableHash, HashAlgorithm hashAlgorithm, SignatureContext signatureContext)
+       public byte[] CustomSignHash(
+           byte[] signableHash, 
+           HashAlgorithm hashAlgorithm, 
+           SignatureContext signatureContext)
        {
            // Load certificate
            string inputP12 = "";
            var inputPfxPassword = "1234567890";
-           X509Certificate2 signerCert = new X509Certificate2(inputP12, inputPfxPassword, X509KeyStorageFlags.Exportable);
+           X509Certificate2 signerCert = new X509Certificate2(
+               inputP12, 
+               inputPfxPassword, 
+               X509KeyStorageFlags.Exportable);
            
            // Setup RSA provider
            RSACryptoServiceProvider rsaCSP = new RSACryptoServiceProvider();
@@ -215,7 +227,7 @@ public static void SignUsingAzureKeyVault()
             Height = 60,
             VerticalAlignment = VerticalAlignment.Bottom,
             HorizontalAlignment = HorizontalAlignment.Right,
-            Margin = new Padding() {  Bottom = 10, Right = 10},
+            Margin = new Padding() { Bottom = 10, Right = 10 },
             HashAlgorithm = HashAlgorithm.Sha256
         };
         var azureSigner = new AzureSigner();
@@ -228,7 +240,10 @@ public static void SignUsingAzureKeyVault()
 
 public class AzureSigner : ICustomSignHash
 {
-    public byte[] CustomSignHash(byte[] hash, HashAlgorithm hashAlgorithm, SignatureContext signatureContext)
+    public byte[] CustomSignHash(
+        byte[] hash, 
+        HashAlgorithm hashAlgorithm, 
+        SignatureContext signatureContext)
     {
         return SignWithAzure(hash);
     }
@@ -237,7 +252,9 @@ public class AzureSigner : ICustomSignHash
     {
         var credential = GetAzureSecretCredential();
         var certificateKeyId = "https://...";
-        CryptographyClient client = new CryptographyClient(new Uri(certificateKeyId), credential);
+        CryptographyClient client = new CryptographyClient(
+            new Uri(certificateKeyId), 
+            credential);
         var result = client.Sign(SignatureAlgorithm.RS256, signableHash);
         return result.Signature;
     }
@@ -247,7 +264,10 @@ public class AzureSigner : ICustomSignHash
         string tenantId = "your tenantId";
         string clientId = "your clientId";
         string secret = "your secret";
-        ClientSecretCredential credential = new ClientSecretCredential(tenantId, clientId, secret);
+        ClientSecretCredential credential = new ClientSecretCredential(
+            tenantId, 
+            clientId, 
+            secret);
         return credential;
     }
 
@@ -255,16 +275,24 @@ public class AzureSigner : ICustomSignHash
     {
         string vaultUri = "https://test.vault.azure.net/";
         var credential = GetAzureSecretCredential();
-        X509Certificate2 pubCertificate = GetPublicCertificateFromAzureStorage(credential, vaultUri);
+        X509Certificate2 pubCertificate = GetPublicCertificateFromAzureStorage(
+            credential, 
+            vaultUri);
         return pubCertificate;
     }
 
-    static X509Certificate2 GetPublicCertificateFromAzureStorage(ClientSecretCredential credential, string uri)
+    static X509Certificate2 GetPublicCertificateFromAzureStorage(
+        ClientSecretCredential credential, 
+        string uri)
     {
         //Create certificate client.
-        CertificateClient certificateClient = new CertificateClient(new Uri(uri), credential);
+        CertificateClient certificateClient = new CertificateClient(
+            new Uri(uri), 
+            credential);
         //Get the certificate with public key.
-        KeyVaultCertificateWithPolicy certificate = certificateClient.GetCertificateAsync("Certificate").Result;
+        KeyVaultCertificateWithPolicy certificate = certificateClient
+            .GetCertificateAsync("Certificate")
+            .Result;
         //Create and return the X509Certificate2.
         return new X509Certificate2(certificate.Cer);
     }
