@@ -74,10 +74,9 @@ using (Signature signature = new Signature("signed.pdf"))
 }
 ```
 
-### Advanced Usage Topics
+<!-- ### Advanced Usage Topics
 
-To learn more about document eSign features, please refer to the [Advanced usage section]({{< ref "signature/net/developer-guide/advanced-usage/_index.md" >}}).
-
+To learn more about document eSign features, please refer to the [advanced usage section]({{< ref "signature/net/developer-guide/advanced-usage/_index.md" >}}). -->
 ## More resources
 
 ### GitHub Examples

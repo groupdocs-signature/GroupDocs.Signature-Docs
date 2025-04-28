@@ -107,10 +107,9 @@ with signature.Signature("sample.pdf") as sign:
         print(f"Color: {text_signature.fore_color}")
 ```
 
-### Advanced Usage Topics
+<!-- ### Advanced Usage Topics
 
-To learn more about document eSign features, please refer to the [advanced usage section]({{< ref "signature/python-net/developer-guide/advanced-usage/_index.md" >}}).
-
+To learn more about document eSign features, please refer to the [advanced usage section]({{< ref "signature/python-net/developer-guide/advanced-usage/_index.md" >}}). -->
 ## More Resources
 
 ### GitHub Examples

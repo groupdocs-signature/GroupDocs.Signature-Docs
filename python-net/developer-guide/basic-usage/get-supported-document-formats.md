@@ -42,9 +42,9 @@ for file_type in sorted(supported_file_types, key=lambda x: x.extension):
     print(file_type)
 ```
 
-### Advanced Usage Topics
+<!-- ### Advanced Usage Topics
 
-To learn more about document eSign features, please refer to the [advanced usage section]({{< ref "signature/net/developer-guide/advanced-usage/_index.md" >}}).
+To learn more about document eSign features, please refer to the [advanced usage section]({{< ref "signature/net/developer-guide/advanced-usage/_index.md" >}}). -->
 
 ## More resources
 
