@@ -70,9 +70,7 @@ with signature.Signature("sample_signed.pdf") as sign:
             print("Signature was not updated in the document!")
 ```
 
-<!-- ### Advanced Usage Topics
 
-To learn more about document eSign features, please refer to the [advanced usage section]({{< ref "signature/python-net/developer-guide/advanced-usage/_index.md" >}}). -->
 ## More Resources
 
 ### GitHub Examples

@@ -66,9 +66,7 @@ using (Signature signature = new Signature("sample.png"))
 }
 ```
 
-<!-- ### Advanced Usage Topics
 
-To learn more about document eSign features, please refer to the [advanced usage section]({{< ref "signature/net/developer-guide/advanced-usage/_index.md" >}}). -->
 ## More resources
 
 ### GitHub Examples

@@ -154,9 +154,7 @@ with signature.Signature("sample.docx") as sign:
 ### Summary
 This guide explains how to apply stamp-based signatures to documents using [**GroupDocs.Signature for Python via .NET**](https://products.groupdocs.com/signature/python-net). It covers the process of creating a stamp signature, customizing its appearance, and positioning it on the document. The signed document can then be saved with the stamp signature applied.
 
-<!-- ### Advanced Usage Topics
 
-To learn more about document eSign features, please refer to the [advanced usage section]({{< ref "signature/python-net/developer-guide/advanced-usage/_index.md" >}}). -->
 ## More Resources
 
 ### GitHub Examples

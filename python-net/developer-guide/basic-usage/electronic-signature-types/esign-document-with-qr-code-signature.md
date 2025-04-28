@@ -113,9 +113,7 @@ with signature.Signature("sample.pdf") as sign:
 ### Summary
 This guide demonstrates how to add QR code signatures to documents using [**GroupDocs.Signature for Python via .NET**](https://products.groupdocs.com/signature/python-net). It includes steps for generating a QR code signature, configuring its properties like size and encoding, and applying it to a document. QR code signatures can be used for quick verification of the signed document.
 
-<!-- ### Advanced Usage Topics
 
-To learn more about document eSign features, please refer to the [advanced usage section]({{< ref "signature/python-net/developer-guide/advanced-usage/_index.md" >}}). -->
 ## More Resources
 
 ### GitHub Examples

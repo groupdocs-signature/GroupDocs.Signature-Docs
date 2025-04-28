@@ -73,9 +73,7 @@ with signature.Signature("sample_signed.pdf") as sign:
                   f"Signature with top position '{image_signature.top}' was not found!")
 ```
 
-<!-- ### Advanced Usage Topics
 
-To learn more about document eSign features, please refer to the [advanced usage section]({{< ref "signature/python-net/developer-guide/advanced-usage/_index.md" >}}). -->
 ## More Resources
 
 ### GitHub Examples

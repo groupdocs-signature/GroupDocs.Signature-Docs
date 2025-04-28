@@ -127,9 +127,7 @@ with signature.Signature("sample.pdf") as sign:
 ### Summary
 This guide demonstrates how to use [**GroupDocs.Signature for Python via .NET**](https://products.groupdocs.com/signature/python-net) to add image-based signatures to documents. It covers loading a document, configuring the image signature's properties (such as size, position, and opacity), and saving the signed document. Advanced customization options, like adjusting image appearance and aligning the signature, are also discussed. For further insights, explore related document signing resources.
 
-<!-- ### Advanced Usage Topics
 
-To learn more about document eSign features, please refer to the [advanced usage section]({{< ref "signature/python-net/developer-guide/advanced-usage/_index.md" >}}). -->
 ## More Resources
 
 ### GitHub Examples
