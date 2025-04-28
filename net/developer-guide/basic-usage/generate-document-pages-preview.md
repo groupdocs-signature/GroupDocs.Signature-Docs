@@ -41,9 +41,9 @@ Here are the steps to generate document preview with GroupDocs.Signature:
 * page numbers to process;
 * custom size of preview images (if needed).
 {{< alert style="info" >}}
-Stream that were created by [CreatePageStream](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/createpagestream) delegate will be disposed automatically once after generation of preview image. If you need to implement custom image preview stream disposing you have to pass additional argument [ReleaseStream](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/releasepagestream) to clean up resources.  
+Stream that were created by CreatePageStreamdelegate will be disposed automatically once after generation of preview image. If you need to implement custom image preview stream disposing you have to pass additional argument ReleaseStream to clean up resources.  
 {{< /alert >}}
-* Call [GeneratePreview](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/generatepreview) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [PreviewOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions) to it.
+* Call GeneratePreview method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [PreviewOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions) to it.
 
 ## CreatePageStream delegate implementation
 
