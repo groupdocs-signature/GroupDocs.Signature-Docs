@@ -67,14 +67,6 @@ with open("sample.pdf", "rb") as stream:
             print(f" - page-{page_info.page_number} Width {page_info.width}, Height {page_info.height}")
 ```
 
-{{< alert style="info" >}}
-**GroupDocs.Signature** also provides an ability to obtain extended information of document form fields and existing signatures.  
-To learn more about please refer to the following guides:
-[Obtain document form fields and signatures information]({{< ref "signature/net/developer-guide/advanced-usage/common/obtain-document-form-fields-and-signatures-information.md" >}})
-{{< /alert >}}
-
-
-
 ## More resources
 
 ### GitHub Examples
