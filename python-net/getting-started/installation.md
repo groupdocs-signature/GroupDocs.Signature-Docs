@@ -18,7 +18,7 @@ PyPI (Python Package Index) is the easiest way to download and install GroupDocs
 The simplest way to install GroupDocs.Signature is using pip, Python's package installer:
 
 ```bash
-pip install groupdocs-signature
+pip install groupdocs-signature-net
 ```
 
 ### Install in a Virtual Environment
@@ -36,7 +36,7 @@ venv\Scripts\activate
 source venv/bin/activate
 
 # Install the package
-pip install groupdocs-signature
+pip install groupdocs-signature-net
 ```
 
 ### Install with Specific Version
@@ -44,7 +44,7 @@ pip install groupdocs-signature
 To install a specific version of the package:
 
 ```bash
-pip install groupdocs-signature==25.4.0
+pip install groupdocs-signature-net==25.4.0
 ```
 
 ## Install from Wheel File
@@ -55,9 +55,9 @@ You can also install GroupDocs.Signature using a wheel file downloaded from the 
 2. Install using pip:
 
 ```bash
-pip install path/to/groupdocs_signature-25.4.0-py3-none-any.whl
+pip install path/to/groupdocs_signature_net-25.4.0-py3-none-any.whl
 ```
-
+  
 ## Verify Installation
 
 To verify that the installation was successful, you can run this Python code:

@@ -2,7 +2,7 @@
 id: licensing
 url: signature/python-net/licensing
 title: Licensing 
-weight: 5
+weight: 6
 description: GroupDocs.Signature for Python via .NET free signature API version is available to evaluate the API which will be similar to licensed version but with few limitations.
 keywords: free signature, license, signature, API
 productName: GroupDocs.Signature for Python via .NET

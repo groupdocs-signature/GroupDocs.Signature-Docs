@@ -2,7 +2,7 @@
 id: getting-started
 url: signature/python-net/getting-started
 title: Getting Started
-weight: 2
+weight: 4
 description: "This section describes how to get started with GroupDocs.Signature for Python via .NET library"
 keywords: create digital signature, python signature, python digital signature
 productName: GroupDocs.Signature for Python via .NET

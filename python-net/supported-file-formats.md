@@ -2,7 +2,7 @@
 id: supported-file-formats
 url: signature/python-net/supported-file-formats
 title: Supported File Formats
-weight: 2
+weight: 3
 description: "GroupDocs.Signature for Python via .NET supports DOCX, DOCM, DOC, DOT, DOTM, XLS, XLSX, PDF, PPT, JPG, PNG, HTML, EML and many more formats."
 keywords: DOCX, DOCM, DOC, DOT, DOTM, XLS, XLSX, PDF, PPT, JPG, PNG, HTML, EML, Python signature formats
 productName: GroupDocs.Signature for Python via .NET
@@ -21,7 +21,8 @@ else:
     print(f"File format {file_path} is not supported")
 ```
 
-{{< table-filter placeholder="Start typing to find file format" forumUrl="https://forum.groupdocs.com/c/conversion/11">}}
+{{< table-filter placeholder="Start typing to find file format" column="1" forumUrl="https://forum.groupdocs.com/c/signature/11">}}
+
 
 {{< include file="/signature/python-net/_includes/supported-signature/formats-brief.md" type="page" >}}
 
