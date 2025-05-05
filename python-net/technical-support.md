@@ -3,7 +3,7 @@ id: technical-support
 url: /signature/python-net/technical-support
 title: Technical Support
 description: "GroupDocs.Signature for Python via .NET provides free technical support available to all users. Please report your question, issue, or feature request using GroupDocs Free Support Forum."
-weight: 6
+weight: 7
 productName: GroupDocs.Signature for Python via .NET
 toc: true
 ---

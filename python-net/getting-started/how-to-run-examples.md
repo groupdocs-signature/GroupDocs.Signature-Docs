@@ -2,7 +2,7 @@
 id: how-to-run-examples
 url: signature/python-net/how-to-run-examples
 title: How to Run Examples
-weight: 6
+weight: 3
 description: "This article describes how to run Python digital signature API code examples. We offer multiple solutions on how you can run GroupDocs.Signature examples, by building your own or using our examples out-of-the-box."
 keywords: digital signature API, python signature examples
 productName: GroupDocs.Signature for Python via .NET
