@@ -80,7 +80,7 @@ Ensure the package is installed successfully. You should see the message
 Successfully installed groupdocs-signature-net-*
 ```
 
-## Example 1: "Hello, word" sample
+## Example "Hello, world!"
 
 To quickly test the library, let’s sing a PDF file with text signature. You can also download the app that we're going to buid [here](/signature/python-net/_sample_files/getting-started/quick-start-guide/sign_pdf_with_text_signature.zip).
 
@@ -137,9 +137,9 @@ Your folder tree should look similar to the following directory structure:
 
 ```Directory
 📂 demo-app
- ├──sample.pdf.py
- ├──business-plan.docx
- └──GroupDocs.Signature.lic (Optionally)
+ ├──hello_world.py
+ ├──sample.pdf
+ └──GroupDocs.Signature.PythonViaNET.lic (Optionally)
 ```
 
 ### Run the App

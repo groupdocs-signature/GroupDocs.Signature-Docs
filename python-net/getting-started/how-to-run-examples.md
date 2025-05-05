@@ -10,7 +10,7 @@ hideChildren: False
 toc: True
 ---
 This article describes how to run Python digital signature API code examples.
-{{< alert style="warning" >}}Before running an example make sure that GroupDocs.Signature has been installed successfully.{{< /alert >}}
+{{< alert style="warning" >}} Before running an example make sure that GroupDocs.Signature has been installed successfully.{{< /alert >}}
 
 We offer multiple solutions on how you can run GroupDocs.Signature examples, by building your own or using our examples out-of-the-box.
 
@@ -33,7 +33,7 @@ venv\Scripts\activate
 source venv/bin/activate
 
 # Install GroupDocs.Signature
-pip install groupdocs-signature
+pip install groupdocs-signature-net
 ```
 
 * Create a new Python file (e.g., `main.py`) and code your first application with **GroupDocs.Signature for Python** like this:
@@ -60,25 +60,11 @@ python main.py
 
 ## Run examples from GitHub
 
-The complete examples package of **GroupDocs.Signature for Python** is hosted on [GitHub](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Python). You can either download the ZIP file or clone the repository:
+The complete examples package of **GroupDocs.Signature for Python** is hosted on [GitHub](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Python-via-.NET). You can either download the ZIP file or clone the repository:
 
 ```bash
-git clone https://github.com/groupdocs-signature/GroupDocs.Signature-for-Python
-cd GroupDocs.Signature-for-Python
-```
-
-The repository structure will look like this:
-```
-GroupDocs.Signature-for-Python/
-├── Examples/
-│   ├── BasicUsage/
-│   ├── AdvancedUsage/
-│   └── ...
-├── Resources/
-│   ├── sample.docx
-│   ├── sample.pdf
-│   └── ...
-└── requirements.txt
+git clone https://github.com/groupdocs-signature/GroupDocs.Signature-for-Python-via-.NET.git
+cd GroupDocs.Signature-for-Python-via-.NET
 ```
 
 To run the examples:
@@ -94,31 +80,11 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-2. Navigate to the example you want to run and execute it:
+2. Navigate to the examples or select example which you like and execute:
 ```bash
-cd Examples/BasicUsage
-python sign_document_with_text.py
+cd Examples
+python run_examples.py
 ```
-
-## Run Web API examples
-
-You can run [GroupDocs.Signature for Python Web API Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Python-WebAPI) following these steps:
-
-* Clone the repository:
-```bash
-git clone https://github.com/groupdocs-signature/GroupDocs.Signature-for-Python-WebAPI
-cd GroupDocs.Signature-for-Python-WebAPI
-```
-
-* Install dependencies and run the application:
-```bash
-pip install -r requirements.txt
-python app.py
-```
-
-* Open http://localhost:5000 in your favorite browser
-
-For more details about project configuration please refer to this [guide](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Python-WebAPI#configuration).
 
 ## Run from Docker
 

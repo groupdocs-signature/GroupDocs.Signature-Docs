@@ -21,7 +21,7 @@ else:
     print(f"File format {file_path} is not supported")
 ```
 
-{{< table-filter placeholder="Start typing to find file format" column="1" forumUrl="https://forum.groupdocs.com/c/signature/11">}}
+{{< table-filter placeholder="Start typing to find file format" forumUrl="https://forum.groupdocs.com/c/signature/11">}}
 
 
 {{< include file="/signature/python-net/_includes/supported-signature/formats-brief.md" type="page" >}}
