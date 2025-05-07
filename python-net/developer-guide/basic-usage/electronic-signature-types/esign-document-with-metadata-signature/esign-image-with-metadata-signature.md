@@ -31,7 +31,7 @@ structuredData:
 Metadata signature for Image document is an electronic signature based on image metadata standard. Most image formats support metadata specification or [EXIF](https://en.wikipedia.org/wiki/Exif). Image metadata is dictionary map with unique whole short identifier in range 0-65535, Some identifiers are reserved by [EXIF specification.](https://www.exiv2.org/tags.html) From signature perspective image metadata may content any hidden value of standard (int,char, string) or custom type (user defined class), be encrypted and decrypted back by known key over Search method.
 
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/python-net) provides [ImageMetadataSignature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/imagemetadatasignature) class to specify Metadata e-signature for image documents. Image document metadata contains pair with unique identifier Id and its Value.  
-Image document metadata could keep big amount of data that provides ability to keep serialized custom objects with additional encryption in there. See more examples [here]({{< ref "signature/python-net/developer-guide/advanced-usage/signing/sign-document-with-secure-custom-metadata-signatures/_index.md" >}}).
+Image document metadata could keep big amount of data that provides ability to keep serialized custom objects with additional encryption in there.
 
 ### Here are the steps to add metadata signatures into Image with GroupDocs.Signature:
 
