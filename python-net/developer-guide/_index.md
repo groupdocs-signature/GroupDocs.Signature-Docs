@@ -1,7 +1,7 @@
 ---
 id: developer-guide
 url: signature/python-net/developer-guide
-title: Developer Guide
+title: 👨‍💻 Developer Guide
 weight: 5
 description: "This section decsribes how to add digital signature to pdf, docx, pptx, xlsx and many more with GroupDocs.Signature for .NET library"
 keywords: how to add digital signature to pdf, docx, pptx, xlsx

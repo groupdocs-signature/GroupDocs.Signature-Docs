@@ -2,7 +2,7 @@
 id: delete-digital-signatures-from-documents
 url: signature/python-net/delete-digital-signatures-from-documents
 title: Delete Digital signatures from documents
-linkTitle: ✖ Digital
+linkTitle: ❌ Digital
 weight: 6
 description: "This article explains how to delete Digital electronic signatures with GroupDocs.Signature API."
 keywords: delete Digital electronic signatures, how to delete Digital electronic signatures

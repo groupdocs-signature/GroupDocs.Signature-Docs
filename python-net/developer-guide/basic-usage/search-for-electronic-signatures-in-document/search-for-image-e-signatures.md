@@ -2,14 +2,31 @@
 id: search-for-image-e-signatures
 url: signature/python-net/search-for-image-e-signatures
 title: Search for Image e-Signatures
-weight: 5
-description: "This article explains how to search for image electronic signatures within document pages using GroupDocs.Signature for Python via .NET API"
-keywords: image signature search, python signature search, search image signatures
+linkTitle: 🔍 Images
+weight: 3
+description: "This article explains how to search for image electronic signatures within document pages using GroupDocs.Signature for Python via .NET API."
+keywords: image signature search, python image signature, search image signatures
 productName: GroupDocs.Signature for Python via .NET
 hideChildren: False
+structuredData:
+    showOrganization: True
+    application:    
+        name: Search for image signatures in documents using Python    
+        description: Search image signatures in various documents fast and easily with Python language and GroupDocs.Signature for Python via .NET APIs
+        productCode: signature
+        productPlatform: python-net 
+    showVideo: True
+    howTo:
+        name: How to search any image signatures in documents using Python 
+        description: Get additional information of searching image signatures in documents with Python
+        steps:
+        - name: Load file which belongs to various supported file types
+          text: Create an instance of the Signature object by passing file path or stream as a constructor parameter.
+        - name: Get list of image signatures 
+          text: Call the search method providing appropriate signature type.
+        - name: Process list of found signatures
+          text: Loop through list of found image signatures.
 ---
-# Search for Image e-Signatures
-
 [GroupDocs.Signature](https://products.groupdocs.com/signature/python-net) provides the ability to search for image electronic signatures in documents. Image signatures allow you to add visual elements like logos, stamps, or handwritten signatures to your documents.
 
 ## What is an Image Signature?
@@ -97,4 +114,4 @@ Along with full Python library we provide simple but powerful free Apps.
 
 You are welcome to search for image signatures in documents with our free online apps:
 
-* [Search for Image Signatures Online](https://products.groupdocs.app/signature/search/image)
+* [Search for Image Signatures Online](https://products.groupdocs.app/signature/search/family)

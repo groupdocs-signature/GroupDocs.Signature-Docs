@@ -2,13 +2,31 @@
 id: search-for-digital-e-signatures
 url: signature/python-net/search-for-digital-e-signatures
 title: Search for Digital e-Signatures
-weight: 7
-description: "This article explains how to search for digital electronic signatures within document pages using GroupDocs.Signature for Python via .NET API"
-keywords: digital signature search, python signature search, search digital signatures
+linkTitle: 🔍 Digital
+weight: 6
+description: "This article explains how to search for digital electronic signatures within document pages using GroupDocs.Signature for Python via .NET API."
+keywords: digital signature search, python digital signature, search digital signatures
 productName: GroupDocs.Signature for Python via .NET
+structuredData:
+    showOrganization: True
+    application:    
+        name: Search for digital signatures in documents using Python    
+        description: Search digital signatures in various documents fast and easily with Python language and GroupDocs.Signature for Python via .NET APIs
+        productCode: signature
+        productPlatform: python-net 
+    showVideo: True
+    howTo:
+        name: How to search any digital signatures in documents using Python 
+        description: Get additional information of searching digital signatures in documents with Python
+        steps:
+        - name: Load file which belongs to various supported file types
+          text: Create an instance of the Signature object by passing file path or stream as a constructor parameter.
+        - name: Get list of digital signatures 
+          text: Call the search method providing appropriate signature type.
+        - name: Process list of found signatures
+          text: Loop through list of found digital signatures.
 hideChildren: False
 ---
-# Search for Digital e-Signatures
 
 [GroupDocs.Signature](https://products.groupdocs.com/signature/python-net) provides the ability to search for digital electronic signatures in documents. Digital signatures provide a way to verify the authenticity and integrity of a document by using cryptographic techniques.
 
@@ -91,4 +109,4 @@ Along with full Python library we provide simple but powerful free Apps.
 
 You are welcome to search for digital signatures in documents with our free online apps:
 
-* [Search for Digital Signatures Online](https://products.groupdocs.app/signature/search/digital)
+* [Search for Digital Signatures Online](https://products.groupdocs.app/signature/search/family)

@@ -2,14 +2,31 @@
 id: search-for-multiple-e-signature-types
 url: signature/python-net/search-for-multiple-e-signature-types
 title: Search for Multiple e-Signature Types
-weight: 9
-description: "This article explains how to search for multiple types of electronic signatures within document pages using GroupDocs.Signature for Python via .NET API"
-keywords: multiple signature search, python signature search, search multiple signatures
+linkTitle: 🔍 Multiple Types
+weight: 4
+description: "This article explains how to search for multiple electronic signature types within document pages using GroupDocs.Signature for Python via .NET API."
+keywords: multiple signature search, python multiple signatures, search multiple signatures
 productName: GroupDocs.Signature for Python via .NET
+structuredData:
+    showOrganization: True
+    application:    
+        name: Search for multiple signature types in documents using Python    
+        description: Search multiple signature types in various documents fast and easily with Python language and GroupDocs.Signature for Python via .NET APIs
+        productCode: signature
+        productPlatform: python-net 
+    showVideo: True
+    howTo:
+        name: How to search any multiple signature types in documents using Python 
+        description: Get additional information of searching multiple signature types in documents with Python
+        steps:
+        - name: Load file which belongs to various supported file types
+          text: Create an instance of the Signature object by passing file path or stream as a constructor parameter.
+        - name: Get list of multiple signature types 
+          text: Call the search method providing appropriate signature types.
+        - name: Process list of found signatures
+          text: Loop through list of found signatures of different types.
 hideChildren: False
 ---
-# Search for Multiple e-Signature Types
-
 [GroupDocs.Signature](https://products.groupdocs.com/signature/python-net) provides the ability to search for multiple types of electronic signatures in documents simultaneously. This allows you to find different types of signatures like text, image, digital, barcode, QR code, and form field signatures in a single search operation.
 
 ## How to Search for Multiple Signature Types
@@ -127,4 +144,4 @@ Along with full Python library we provide simple but powerful free Apps.
 
 You are welcome to search for multiple types of signatures in documents with our free online apps:
 
-* [Search for Multiple Signature Types Online](https://products.groupdocs.app/signature/search/multiple)
+* [Search for Multiple Signature Types Online](https://products.groupdocs.app/signature/family)

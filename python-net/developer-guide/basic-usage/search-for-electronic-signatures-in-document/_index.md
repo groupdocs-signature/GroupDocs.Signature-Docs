@@ -2,6 +2,7 @@
 id: search-for-electronic-signatures-in-document
 url: signature/python-net/search-for-electronic-signatures-in-document
 title: Search for Electronic Signatures in Document
+linkTitle: 🔍 Search
 weight: 4
 description: "This topic explains how to search for document electronic signatures and their details using Python"
 keywords: electronic signature, search for document electronic signature, python signature search

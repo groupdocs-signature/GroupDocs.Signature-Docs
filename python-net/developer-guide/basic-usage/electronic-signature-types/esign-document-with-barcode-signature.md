@@ -2,7 +2,7 @@
 id: esign-document-with-barcode-signature
 url: signature/python-net/esign-document-with-barcode-signature
 title: eSign Document with Barcode Signature
-linkTitle: Barcode Signature
+linktitle: ✍️ Barcode Signature
 weight: 1
 description: "This article explains how to add Barcode signature on document page with various options like barcode type, barcode text, positioning, alignment and other visual settings with GroupDocs.Signature for Python via .NET"
 keywords: barcode, barcode signature, GroupDocs.Signature barcode, GroupDocs.Signature barcode signature, python barcode signature
@@ -185,7 +185,7 @@ This guide demonstrates how to use [**GroupDocs.Signature for Python via .NET**]
 You may easily run the code above and see the feature in action in our GitHub examples:
 
 * [GroupDocs.Signature for Python via .NET examples](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Python-via-.NET)
-* [Document Signature for Python Web API Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Python-via-.NET-Web-API)
+
 
 ### Free Online Apps
 

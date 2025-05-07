@@ -2,7 +2,7 @@
 id: esign-pdf-with-metadata-signature
 url: signature/python-net/esign-pdf-with-metadata-signature
 title: eSign PDF with Metadata signature
-linkTitle: eSign PDF
+linktitle: ✍️ eSign PDF
 weight: 2
 description: "This article explains how to add metadata signatures to PDF document meta info layer with GroupDocs.Signature"
 keywords: Pdf metadata, Pdf metadata signatures

@@ -2,7 +2,7 @@
 id: verify-digital-signatures-in-the-document
 url: signature/python-net/verify-digital-signatures-in-the-document
 title: Verify Digital Signatures in Document
-linkTitle: 🔒 Digital Signatures
+linkTitle: 🛡️ Digital Signatures
 weight: 5
 description: "This article explains how to verify digital electronic signatures with GroupDocs.Signature for Python via .NET API"
 keywords: python digital signature verification, verify digital signatures, python digital signature

@@ -2,6 +2,7 @@
 id: delete-qr-code-signatures-from-documents
 url: signature/python-net/delete-qr-code-signatures-from-documents
 title: Delete QR-Code signatures from documents
+linkTitle: ❌ Image
 weight: 3
 description: "This article explains how to delete QR-Code electronic signatures with GroupDocs.Signature API."
 keywords: delete QR-Code electronic signatures, how to delete QR-Code electronic signatures

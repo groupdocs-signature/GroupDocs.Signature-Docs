@@ -1,8 +1,8 @@
 ---
 id: esign-document-with-stamp-signature
 url: signature/python-net/esign-document-with-stamp-signature
-title: eSign Document with Stamp Signature
-linkTitle: Stamp Signature
+title:  eSign Document with Stamp Signature
+linktitle: ✍️ Stamp Signature
 weight: 8
 description: "This article explains how to sign a document electronically with generated Stamp signatures by GroupDocs.Signature for Python via .NET API."
 keywords: sign document electronically, Stamp signatures, python stamp signature
@@ -167,7 +167,6 @@ This guide explains how to apply stamp-based signatures to documents using [**Gr
 You may easily run the code above and see the feature in action in our GitHub examples:
 
 * [GroupDocs.Signature for Python via .NET examples](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Python-via-.NET)
-* [Document Signature for Python Web API Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Python-via-.NET-Web-API)
 
 ### Free Online Apps
 

@@ -1,7 +1,7 @@
 ---
 id: basic-usage
 url: signature/python-net/basic-usage
-title: Basic Usage
+title: 🧰 Basic Usage
 weight: 1
 description: "Quick Start section about main features of GroupDocs.Signature for Python via .NET, describes how to sign documents with just a few lines of Python code."
 keywords: GroupDocs.Signature Quick Start, GroupDocs.Signature Python Basic Usage, GroupDocs.Signature Quick Start Python, GroupDocs.Signature Get Started, Python signature examples

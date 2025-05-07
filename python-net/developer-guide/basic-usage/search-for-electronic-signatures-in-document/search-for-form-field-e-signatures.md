@@ -2,13 +2,31 @@
 id: search-for-form-field-e-signatures
 url: signature/python-net/search-for-form-field-e-signatures
 title: Search for Form Field e-Signatures
-weight: 7
-description: "This article explains how to search for form field electronic signatures within document pages using GroupDocs.Signature for Python via .NET API"
-keywords: form field signature search, python signature search, search form field signatures
+linkTitle: 🔍 Form Fields
+weight: 2
+description: "This article explains how to search for form field electronic signatures within document pages using GroupDocs.Signature for Python via .NET API."
+keywords: form field signature search, python form field signature, search form field signatures
 productName: GroupDocs.Signature for Python via .NET
+structuredData:
+    showOrganization: True
+    application:    
+        name: Search for form field signatures in documents using Python    
+        description: Search form field signatures in various documents fast and easily with Python language and GroupDocs.Signature for Python via .NET APIs
+        productCode: signature
+        productPlatform: python-net 
+    showVideo: True
+    howTo:
+        name: How to search any form field signatures in documents using Python 
+        description: Get additional information of searching form field signatures in documents with Python
+        steps:
+        - name: Load file which belongs to various supported file types
+          text: Create an instance of the Signature object by passing file path or stream as a constructor parameter.
+        - name: Get list of form field signatures 
+          text: Call the search method providing appropriate signature type.
+        - name: Process list of found signatures
+          text: Loop through list of found form field signatures.
 hideChildren: False
 ---
-# Search for Form Field e-Signatures
 
 [GroupDocs.Signature](https://products.groupdocs.com/signature/python-net) provides the ability to search for form field electronic signatures in documents. Form field signatures allow you to add interactive form elements like text boxes, checkboxes, and radio buttons to your documents.
 
@@ -92,4 +110,4 @@ Along with full Python library we provide simple but powerful free Apps.
 
 You are welcome to search for form field signatures in documents with our free online apps:
 
-* [Search for Form Field Signatures Online](https://products.groupdocs.app/signature/search/form-field)
+* [Search for Form Field Signatures Online](https://products.groupdocs.app/signature/family)

@@ -2,7 +2,7 @@
 id: esign-document-with-metadata-signature
 url: signature/python-net/esign-document-with-metadata-signature
 title: eSign document with Metadata signature
-linkTitle: Metadata signatures
+linktitle: ✍️ Metadata signatures
 weight: 5
 description: "This article shows how to add Metadata signature to the each document type meta layer with different data types over with GroupDocs.Signature"
 keywords: 

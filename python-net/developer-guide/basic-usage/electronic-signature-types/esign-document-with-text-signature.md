@@ -1,8 +1,8 @@
 ---
 id: esign-document-with-text-signature
 url: signature/python-net/esign-document-with-text-signature
-title: eSign Document with Text Signature
-linkTitle: Text Signature
+title:  eSign Document with Text Signature
+linktitle: ✍️ Text Signature
 weight: 7
 description: "This article explains how to sign a document with Text signature using GroupDocs.Signature for Python via .NET API. Learn how to add a digital signature to a PDF programmatically in Python."
 keywords: Add digital signature to a PDF programmatically, Text signature, python text signature, python digital signature
@@ -134,7 +134,6 @@ This guide explains how to add text-based signatures to documents with [**GroupD
 You may easily run the code above and see the feature in action in our GitHub examples:
 
 * [GroupDocs.Signature for Python via .NET examples](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Python-via-.NET)
-* [Document Signature for Python Web API Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Python-via-.NET-Web-API)
 
 ### Free Online Apps
 

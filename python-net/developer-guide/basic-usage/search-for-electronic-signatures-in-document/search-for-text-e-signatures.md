@@ -115,7 +115,6 @@ with signature.Signature("sample.pdf") as sign:
 You may easily run the code above and see the feature in action in our GitHub examples:
 
 * [GroupDocs.Signature for Python via .NET examples](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Python-via-.NET)
-* [Document Signature for Python Web API Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Python-via-.NET-Web-API)
 
 ### Free Online Apps
 

@@ -2,6 +2,7 @@
 id: electronic-signature-types
 url: signature/python-net/electronic-signature-types
 title: Electronic Signature Types
+linktitle: ✍️ Electronic Signature Types
 weight: 3
 description: "This documentation section describes different types of signatures implemented for signing, updating, deleting, searching and verifying with GroupDocs.Signature for Python"
 keywords: text signature, image signature, digital signature, stamp signature, barcode signature, qr-code signatures, form-field signature, metadata signature, python signature examples
@@ -74,7 +75,7 @@ Each signature type supports various customization options and can be used in co
 You may easily run the code above and see the feature in action in our GitHub examples:
 
 * [GroupDocs.Signature for Python examples](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Python)
-* [Document Signature for Python Web API Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Python-Web-API)
+
 
 ### Free Online Apps
 

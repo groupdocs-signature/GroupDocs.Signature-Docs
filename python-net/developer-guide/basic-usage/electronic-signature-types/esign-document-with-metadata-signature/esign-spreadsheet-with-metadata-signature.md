@@ -2,7 +2,7 @@
 id: esign-spreadsheet-with-metadata-signature
 url: signature/python-net/esign-spreadsheet-with-metadata-signature
 title: eSign Spreadsheet with Metadata signature
-linkTitle: eSign Spreadsheet
+linktitle: ✍️ eSign Spreadsheet
 weight: 4
 description: "This article explains how to add metadata signatures to Spreadsheet document with GroupDocs.Signature"
 keywords: 

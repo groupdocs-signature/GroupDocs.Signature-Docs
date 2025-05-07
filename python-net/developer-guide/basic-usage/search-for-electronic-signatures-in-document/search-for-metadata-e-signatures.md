@@ -2,14 +2,31 @@
 id: search-for-metadata-e-signatures
 url: signature/python-net/search-for-metadata-e-signatures
 title: Search for Metadata e-Signatures
-weight: 8
-description: "This article explains how to search for metadata electronic signatures within document pages using GroupDocs.Signature for Python via .NET API"
-keywords: metadata signature search, python signature search, search metadata signatures
+linkTitle: 🔍 Metadata
+weight: 5
+description: "This article explains how to search for metadata electronic signatures within document pages using GroupDocs.Signature for Python via .NET API."
+keywords: metadata signature search, python metadata signature, search metadata signatures
 productName: GroupDocs.Signature for Python via .NET
+structuredData:
+    showOrganization: True
+    application:    
+        name: Search for metadata signatures in documents using Python    
+        description: Search metadata signatures in various documents fast and easily with Python language and GroupDocs.Signature for Python via .NET APIs
+        productCode: signature
+        productPlatform: python-net 
+    showVideo: True
+    howTo:
+        name: How to search any metadata signatures in documents using Python 
+        description: Get additional information of searching metadata signatures in documents with Python
+        steps:
+        - name: Load file which belongs to various supported file types
+          text: Create an instance of the Signature object by passing file path or stream as a constructor parameter.
+        - name: Get list of metadata signatures 
+          text: Call the search method providing appropriate signature type.
+        - name: Process list of found signatures
+          text: Loop through list of found metadata signatures.
 hideChildren: False
 ---
-# Search for Metadata e-Signatures
-
 [GroupDocs.Signature](https://products.groupdocs.com/signature/python-net) provides the ability to search for metadata electronic signatures in documents. Metadata signatures allow you to add custom metadata properties to your documents, which can be used to store additional information about the document or its signatures.
 
 ## How to Search for Metadata Signatures
@@ -87,4 +104,4 @@ Along with full Python library we provide simple but powerful free Apps.
 
 You are welcome to search for metadata signatures in documents with our free online apps:
 
-* [Search for Metadata Signatures Online](https://products.groupdocs.app/signature/search/metadata)
+* [Search for Metadata Signatures Online](https://products.groupdocs.app/signature/search/family)

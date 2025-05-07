@@ -1,8 +1,8 @@
 ---
 id: esign-document-with-form-field-signature
 url: signature/python-net/esign-document-with-form-field-signature
-title: eSign Document with Form Field Signature
-linkTitle: Form Field Signature
+title:  eSign Document with Form Field Signature
+linktitle: ✍️ Form Field Signature
 weight: 3
 description: "This article explains how to add various types of Form Field signatures on document page with options on component positioning, alignment and other visual options with GroupDocs.Signature for Python via .NET"
 keywords: form fields, add various types of Form Field signature, component positioning, python form field signature
@@ -137,7 +137,6 @@ This guide explains how to use [**GroupDocs.Signature for Python via .NET**](htt
 You may easily run the code above and see the feature in action in our GitHub examples:
 
 * [GroupDocs.Signature for Python via .NET examples](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Python-via-.NET)
-* [Document Signature for Python Web API Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Python-via-.NET-Web-API)
 
 ### Free Online Apps
 

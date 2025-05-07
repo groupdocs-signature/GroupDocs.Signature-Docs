@@ -2,7 +2,7 @@
 id: delete-signatures-of-the-certain-type
 url: signature/python-net/delete-signatures-of-the-certain-type
 title: Delete signatures of the certain type
-linkTitle: ✖ Certain Type
+linkTitle: ❌ Certain Type
 weight: 5
 description: "This article explains how to delete electronic signatures of the certain type with GroupDocs.Signature API."
 keywords: delete signatures of the certain type, how to delete signatures of the certain type

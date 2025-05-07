@@ -1,8 +1,8 @@
 ---
 id: esign-document-with-image-signature
 url: signature/python-net/esign-document-with-image-signature
-title: eSign Document with Image Signature
-linkTitle: Image Signature
+title:  eSign Document with Image Signature
+linktitle: ✍️ Image Signature
 weight: 4
 description: "This article demonstrates how to add signature image on document page with GroupDocs.Signature for Python via .NET."
 keywords: signature image, add signature image, how to add signature image, python image signature, python digital signature
@@ -155,7 +155,6 @@ This guide demonstrates how to use [**GroupDocs.Signature for Python via .NET**]
 You may easily run the code above and see the feature in action in our GitHub examples:
 
 * [GroupDocs.Signature for Python via .NET examples](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Python-via-.NET)
-* [Document Signature for Python Web API Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Python-via-.NET-Web-API)
 
 ### Free Online Apps
 

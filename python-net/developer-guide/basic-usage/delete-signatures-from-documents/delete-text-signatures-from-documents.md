@@ -2,7 +2,7 @@
 id: delete-text-signatures-from-documents
 url: signature/python-net/delete-text-signatures-from-documents
 title: Delete Text signatures from documents
-linkTitle: ✖ Text
+linkTitle: ❌ Text
 weight: 4
 description: "This article explains how to delete Text electronic signatures with GroupDocs.Signature API."
 keywords: delete Text electronic signatures, how to delete Text electronic signatures

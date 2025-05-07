@@ -50,6 +50,8 @@ Sometimes it is needed to inform coworkers about business events. In such cases,
 
 ```python
 import groupdocs.signature as signature
+import groupdocs.signature.domain as gsd
+from groupdocs.signature.options import QrCodeSignOptions
 from datetime import datetime
 
 # Initialize signature handler
@@ -64,10 +66,10 @@ event_qr.start_date = datetime(2022, 6, 19, 15, 30, 0)
 event_qr.end_date = datetime(2022, 6, 19, 17, 0, 0)
 
 # Setup QR code signature options
-qr_options = signature.QrCodeSignOptions()
-qr_options.horizontal_alignment = signature.HorizontalAlignment.RIGHT
-qr_options.vertical_alignment = signature.VerticalAlignment.BOTTOM
-qr_options.encode_type = signature.QrCodeTypes.QR
+qr_options = QrCodeSignOptions()
+qr_options.horizontal_alignment = gsd.HorizontalAlignment.RIGHT
+qr_options.vertical_alignment = gsd.VerticalAlignment.BOTTOM
+qr_options.encode_type = gsd.QrCodeTypes.QR
 qr_options.text = ""
 qr_options.data = event_qr
 
@@ -93,17 +95,19 @@ Another way to improve documents is to generate the QR code first and then add i
 ```python
 import groupdocs.signature as signature
 from io import BytesIO
+import groupdocs.signature.domain as gsd
+from groupdocs.signature.options import QrCodeSignOptions,PreviewSignatureOptions
 
 # Create a memory stream to store the QR code image
 result = BytesIO()
 
 # Setup QR code signature options
-qr_options = signature.QrCodeSignOptions()
-qr_options.encode_type = signature.QrCodeTypes.CODE93
+qr_options = QrCodeSignOptions()
+qr_options.encode_type = gsd.QrCodeTypes.CODE93
 qr_options.text = "Case 148.01"
 
 # Create preview options
-preview_options = signature.PreviewSignatureOptions(
+preview_options = PreviewSignatureOptions(
     qr_options,
     lambda options: result,  # Create page stream
     lambda options, stream: None  # Release page stream

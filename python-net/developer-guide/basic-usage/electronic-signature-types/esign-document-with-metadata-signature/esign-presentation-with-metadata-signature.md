@@ -2,7 +2,7 @@
 id: esign-presentation-with-metadata-signature
 url: signature/python-net/esign-presentation-with-metadata-signature
 title: eSign Presentation with Metadata signature
-linkTitle: eSign Presentation
+linktitle: ✍️ eSign Presentation
 weight: 3
 description: "This article explains how to add metadata signatures to Presentation document with GroupDocs.Signature"
 keywords: Presentation metadata, Presentation metadata signature
