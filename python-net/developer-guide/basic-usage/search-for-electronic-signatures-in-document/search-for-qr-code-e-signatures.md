@@ -39,11 +39,11 @@ The code snippet below demonstrates how to search for QR-code signatures in a do
 ```python
 import groupdocs.signature as signature
 from groupdocs.signature.options import QrCodeSearchOptions
-
+import groupdocs.signature.domain as gsd
 # Initialize signature
 with signature.Signature("sample.pdf") as sign:
     # Search for signatures in document
-    signatures = sign.search(signature.SignatureType.QR_CODE)
+    signatures = sign.search(gsd.SignatureType.QR_CODE)
     
     print("\nSource document contains the following signatures:")
     for qr_code_signature in signatures:
