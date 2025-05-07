@@ -1,7 +1,7 @@
 ---
 id: introducing
 url: signature/python-net/introducing
-title: 📘 Introducing GroupDocs.Signature for Python via .NET
+title: Introducing GroupDocs.Signature for Python via .NET
 weight: 1
 description: "Introduction to GroupDocs.Signature for Python via .NET - what is it and why to use"
 keywords: 

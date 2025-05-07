@@ -1,7 +1,7 @@
 ---
 id: system-requirements
 url: signature/python-net/system-requirements
-title: ⚙️ System Requirements
+title: System Requirements
 weight: 2
 description: GroupDocs.Signature for Python via .NET sustem requirements.
 keywords: GroupDocs.Signature for Python via .NET, Signature
