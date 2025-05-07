@@ -48,21 +48,41 @@ This example shows how to sign a PDF document with the image signature using Pyt
 ```python
 import groupdocs.signature as signature
 from groupdocs.signature.options import ImageSignOptions
+import groupdocs.signature.domain as gsd
+import sys 
+import os
 
-# Initialize signature
-with signature.Signature("sample.pdf") as sign:
-    # Create image signature options
-    image_options = ImageSignOptions("signature.jpg")
-    
-    # Set signature position
-    image_options.left = 100
-    image_options.top = 100
-    
-    # Apply to all pages
-    image_options.all_pages = True
-    
-    # Sign document
-    sign.sign("SampleSigned.pdf", image_options)
+def run():
+    with signature.Signature("./sample.pdf") as sign:
+        # Create image signature options
+        image_options = ImageSignOptions("./signature.jpg")
+        
+        # Set signature position
+        image_options.left = 100
+        image_options.top = 100
+        
+        # Set signature size
+        image_options.width = 100
+        image_options.height = 100
+        
+        # Set signature opacity
+        image_options.opacity = 0.8
+        
+        # Set signature rotation angle
+        image_options.rotation_angle = 45
+        
+        # Set signature alignment
+        image_options.horizontal_alignment = gsd.HorizontalAlignment.CENTER
+        image_options.vertical_alignment = gsd.VerticalAlignment.CENTER
+        
+        # Set signature border
+        image_options.border_visiblity = True
+        image_options.border_dash_style = gsd.DashStyle.DASH
+        image_options.border_color = gsd.Color.BLACK
+        image_options.border_weight = 2
+        
+        # Sign document
+        sign.sign("./SampleSigned.pdf", image_options)
 ```
 
 ### Advanced Image Signature Options

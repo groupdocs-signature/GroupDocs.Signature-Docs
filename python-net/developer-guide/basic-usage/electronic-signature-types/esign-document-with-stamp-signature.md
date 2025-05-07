@@ -57,38 +57,40 @@ This example shows how to add a Stamp signature to a document using Python:
 import groupdocs.signature as signature
 from groupdocs.signature.options import StampSignOptions
 from groupdocs.signature.domain import StampLine
+import groupdocs.signature.domain as gsd
+import sys 
+import os
 
-# Initialize signature
-with signature.Signature("sample.docx") as sign:
-    # Create stamp signature options
-    options = StampSignOptions()
-    
-    # Set stamp signature position
-    options.left = 100
-    options.top = 100
-    
-    # Setup first external line of Stamp
-    outer_line = StampLine()
-    outer_line.text = " * European Union * European Union  * European Union  *"
-    outer_line.font.font_size = 12
-    outer_line.height = 22
-    outer_line.text_bottom_intent = 6
-    outer_line.text_color = signature.Color.WHITE_SMOKE
-    outer_line.background_color = signature.Color.DARK_SLATE_BLUE
-    options.outer_lines.add(outer_line)
-    
-    # Inner square lines - horizontal lines inside the rings
-    inner_line = StampLine()
-    inner_line.text = "John"
-    inner_line.text_color = signature.Color.MEDIUM_VIOLET_RED
-    inner_line.font.font_size = 20
-    inner_line.font.bold = True
-    inner_line.height = 40
-    options.inner_lines.add(inner_line)
-    
-    # Sign document
-    sign.sign("SampleSigned.docx", options)
-```
+def run():
+    with signature.Signature("./sample.docx") as sign:
+        # Create stamp signature options
+        options = StampSignOptions()
+        
+        # Set stamp signature position
+        options.left = 100
+        options.top = 100
+        
+        # Setup first external line of Stamp
+        outer_line = StampLine()
+        outer_line.text = " * European Union * European Union  * European Union  *"
+        outer_line.font.font_size = 12
+        outer_line.height = 22
+        outer_line.text_bottom_intent = 6
+        outer_line.text_color = gsd.Color.WHITE_SMOKE
+        outer_line.background_color = gsd.Color.DARK_SLATE_BLUE
+        options.outer_lines.add(outer_line)
+        
+        # Inner square lines - horizontal lines inside the rings
+        inner_line = StampLine()
+        inner_line.text = "John"
+        inner_line.text_color = gsd.Color.MEDIUM_VIOLET_RED
+        inner_line.font.font_size = 20
+        inner_line.font.bold = True
+        inner_line.height = 40
+        options.inner_lines.add(inner_line)
+        
+        # Sign document
+        sign.sign("./SampleSigned.docx", options)
 
 ### Advanced Stamp Signature Options
 
@@ -98,57 +100,60 @@ Here's an example showing how to create a more complex stamp signature with mult
 import groupdocs.signature as signature
 from groupdocs.signature.options import StampSignOptions
 from groupdocs.signature.domain import StampLine
+import groupdocs.signature.domain as gsd
+import sys 
+import os
 
-# Initialize signature
-with signature.Signature("sample.docx") as sign:
-    # Create stamp signature options
-    options = StampSignOptions()
-    
-    # Set stamp signature position and size
-    options.left = 100
-    options.top = 100
-    options.width = 200
-    options.height = 200
-    
-    # Set stamp type (Round or Square)
-    options.stamp_type = signature.StampType.ROUND
-    
-    # Setup outer lines
-    outer_line1 = StampLine()
-    outer_line1.text = " * APPROVED * "
-    outer_line1.font.font_size = 14
-    outer_line1.font.bold = True
-    outer_line1.height = 30
-    outer_line1.text_color = signature.Color.WHITE
-    outer_line1.background_color = signature.Color.DARK_BLUE
-    options.outer_lines.add(outer_line1)
-    
-    outer_line2 = StampLine()
-    outer_line2.text = " * 2024 * "
-    outer_line2.font.font_size = 12
-    outer_line2.height = 25
-    outer_line2.text_color = signature.Color.WHITE
-    outer_line2.background_color = signature.Color.DARK_BLUE
-    options.outer_lines.add(outer_line2)
-    
-    # Setup inner lines
-    inner_line1 = StampLine()
-    inner_line1.text = "John Smith"
-    inner_line1.font.font_size = 20
-    inner_line1.font.bold = True
-    inner_line1.height = 40
-    inner_line1.text_color = signature.Color.DARK_BLUE
-    options.inner_lines.add(inner_line1)
-    
-    inner_line2 = StampLine()
-    inner_line2.text = "CEO"
-    inner_line2.font.font_size = 16
-    inner_line2.height = 30
-    inner_line2.text_color = signature.Color.DARK_BLUE
-    options.inner_lines.add(inner_line2)
-    
-    # Sign document
-    sign.sign("SampleSigned.docx", options)
+def run():
+    with signature.Signature("./sample.docx") as sign:
+        # Create stamp signature options
+        options = StampSignOptions()
+        
+        # Set stamp signature position and size
+        options.left = 100
+        options.top = 100
+        options.width = 200
+        options.height = 200
+        
+        # Set stamp type (Round or Square)
+        options.stamp_type = gsd.StampType.ROUND
+        
+        # Setup outer lines
+        outer_line1 = StampLine()
+        outer_line1.text = " * APPROVED * "
+        outer_line1.font.font_size = 14
+        outer_line1.font.bold = True
+        outer_line1.height = 30
+        outer_line1.text_color = gsd.Color.WHITE
+        outer_line1.background_color = gsd.Color.DARK_BLUE
+        options.outer_lines.add(outer_line1)
+        
+        outer_line2 = StampLine()
+        outer_line2.text = " * 2024 * "
+        outer_line2.font.font_size = 12
+        outer_line2.height = 25
+        outer_line2.text_color = gsd.Color.WHITE
+        outer_line2.background_color = gsd.Color.DARK_BLUE
+        options.outer_lines.add(outer_line2)
+        
+        # Setup inner lines
+        inner_line1 = StampLine()
+        inner_line1.text = "John Smith"
+        inner_line1.font.font_size = 20
+        inner_line1.font.bold = True
+        inner_line1.height = 40
+        inner_line1.text_color = gsd.Color.DARK_BLUE
+        options.inner_lines.add(inner_line1)
+        
+        inner_line2 = StampLine()
+        inner_line2.text = "CEO"
+        inner_line2.font.font_size = 16
+        inner_line2.height = 30
+        inner_line2.text_color = gsd.Color.DARK_BLUE
+        options.inner_lines.add(inner_line2)
+        
+        # Sign document
+        sign.sign("./SampleSigned.docx", options)
 ```
 
 ### Summary

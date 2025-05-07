@@ -55,21 +55,41 @@ This example shows how to sign a PDF document with a Barcode signature using Pyt
 import groupdocs.signature as signature
 from groupdocs.signature.options import BarcodeSignOptions
 from groupdocs.signature.domain import BarcodeTypes
+import groupdocs.signature.domain as gsd
+import sys 
+import os
 
-# Initialize signature
-with signature.Signature("sample.pdf") as sign:
-    # Create barcode signature options
-    options = BarcodeSignOptions("JohnSmith")
-    
-    # Setup Barcode encoding type
-    options.encode_type = BarcodeTypes.CODE_128
-    
-    # Set signature position
-    options.left = 100
-    options.top = 100
-    
-    # Sign document
-    sign.sign("SampleSigned.pdf", options)
+def run():
+    with signature.Signature("./sample.pdf") as sign:
+        # Create barcode signature options
+        options = BarcodeSignOptions()
+        
+        # Set barcode text
+        options.text = "John Smith"
+        
+        # Set barcode type
+        options.encode_type = BarcodeTypes.QR
+        
+        # Set barcode position
+        options.left = 100
+        options.top = 100
+        
+        # Set barcode size
+        options.width = 100
+        options.height = 100
+        
+        # Set barcode colors
+        options.fore_color = gsd.Color.BLUE
+        options.back_color = gsd.Color.WHITE
+        options.border_color = gsd.Color.BLACK
+        
+        # Set barcode border
+        options.border_visiblity = True
+        options.border_dash_style = gsd.DashStyle.DASH
+        options.border_weight = 2
+        
+        # Sign document
+        sign.sign("./SampleSigned.pdf", options)
 ```
 
 ### Advanced Barcode Signature Options
@@ -80,38 +100,41 @@ You can customize the barcode signature further with additional options:
 import groupdocs.signature as signature
 from groupdocs.signature.options import BarcodeSignOptions
 from groupdocs.signature.domain import BarcodeTypes
+import groupdocs.signature.domain as gsd
+import sys 
+import os
 
-# Initialize signature
-with signature.Signature("sample.pdf") as sign:
-    # Create barcode signature options
-    options = BarcodeSignOptions("JohnSmith")
-    
-    # Setup Barcode encoding type
-    options.encode_type = BarcodeTypes.QR
-    
-    # Set signature position and size
-    options.left = 100
-    options.top = 100
-    options.width = 200
-    options.height = 100
-    
-    # Set advanced options
-    options.fore_color = signature.Color.BLUE
-    options.back_color = signature.Color.WHITE
-    options.opacity = 0.8
-    options.rotation_angle = 45
-    
-    # Set barcode alignment
-    options.horizontal_alignment = signature.HorizontalAlignment.CENTER
-    options.vertical_alignment = signature.VerticalAlignment.CENTER
-    
-    # Add border
-    options.border_color = signature.Color.BLACK
-    options.border_style = signature.DashStyle.SOLID
-    options.border_width = 2
-    
-    # Sign document
-    sign.sign("SampleSigned.pdf", options)
+def run():
+    with signature.Signature("./sample.pdf") as sign:
+        # Create barcode signature options
+        options = BarcodeSignOptions("JohnSmith")
+        
+        # Setup Barcode encoding type
+        options.encode_type = BarcodeTypes.QR
+        
+        # Set signature position and size
+        options.left = 100
+        options.top = 100
+        options.width = 200
+        options.height = 100
+        
+        # Set advanced options
+        options.fore_color = gsd.Color.BLUE
+        options.back_color = gsd.Color.WHITE
+        options.opacity = 0.8
+        options.rotation_angle = 45
+        
+        # Set barcode alignment
+        options.horizontal_alignment = gsd.HorizontalAlignment.CENTER
+        options.vertical_alignment = gsd.VerticalAlignment.CENTER
+        
+        # Add border
+        options.border_color = gsd.Color.BLACK
+        options.border_dash_style = gsd.DashStyle.SOLID
+        options.border_weight = 2
+        
+        # Sign document
+        sign.sign("./SampleSigned.pdf", options)
 ```
 
 ### Different Barcode Types

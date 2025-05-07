@@ -50,38 +50,41 @@ This code snippet below demonstrates how to eSign a PDF document with multiple s
 import groupdocs.signature as signature
 from groupdocs.signature.options import TextSignOptions, BarcodeSignOptions, QrCodeSignOptions, DigitalSignOptions
 from groupdocs.signature.domain import BarcodeTypes, QrCodeTypes
+import groupdocs.signature.domain as gsd
+import sys 
+import os
 
-# Initialize signature
-with signature.Signature("sample.pdf") as sign:
-    # Define text signature options
-    text_options = TextSignOptions("This is test message")
-    text_options.vertical_alignment = signature.VerticalAlignment.TOP
-    text_options.horizontal_alignment = signature.HorizontalAlignment.LEFT
-    
-    # Define barcode signature options
-    barcode_options = BarcodeSignOptions("123456")
-    barcode_options.encode_type = BarcodeTypes.CODE_128
-    barcode_options.left = 100
-    barcode_options.top = 100
-    
-    # Define QR code signature options
-    qrcode_options = QrCodeSignOptions("JohnSmith")
-    qrcode_options.encode_type = QrCodeTypes.QR
-    qrcode_options.left = 100
-    qrcode_options.top = 200
-    
-    # Define digital signature options
-    digital_options = DigitalSignOptions("certificate.pfx")
-    digital_options.image_file_path = "signature.jpg"
-    digital_options.vertical_alignment = signature.VerticalAlignment.CENTER
-    digital_options.horizontal_alignment = signature.HorizontalAlignment.CENTER
-    digital_options.password = "1234567890"
-    
-    # Define list of signature options
-    list_options = [text_options, barcode_options, qrcode_options, digital_options]
-    
-    # Sign document
-    sign.sign("signed.pdf", list_options)
+def run():
+    with signature.Signature("./sample.pdf") as sign:
+        # Define text signature options
+        text_options = TextSignOptions("This is test message")
+        text_options.vertical_alignment = gsd.VerticalAlignment.TOP
+        text_options.horizontal_alignment = gsd.HorizontalAlignment.LEFT
+        
+        # Define barcode signature options
+        barcode_options = BarcodeSignOptions("123456")
+        barcode_options.encode_type = BarcodeTypes.CODE_128
+        barcode_options.left = 100
+        barcode_options.top = 100
+        
+        # Define QR code signature options
+        qrcode_options = QrCodeSignOptions("JohnSmith")
+        qrcode_options.encode_type = QrCodeTypes.QR
+        qrcode_options.left = 100
+        qrcode_options.top = 200
+        
+        # Define digital signature options
+        digital_options = DigitalSignOptions("./certificate.pfx")
+        digital_options.image_file_path = "./signature.jpg"
+        digital_options.vertical_alignment = gsd.VerticalAlignment.CENTER
+        digital_options.horizontal_alignment = gsd.HorizontalAlignment.CENTER
+        digital_options.password = "1234567890"
+        
+        # Define list of signature options
+        list_options = [text_options, barcode_options, qrcode_options, digital_options]
+        
+        # Sign document
+        sign.sign("./signed.pdf", list_options)
 ```
 
 ### Advanced Multiple Signatures Example
@@ -92,39 +95,43 @@ Here's a more advanced example showing how to add multiple signatures with diffe
 import groupdocs.signature as signature
 from groupdocs.signature.options import TextSignOptions, ImageSignOptions, QrCodeSignOptions
 from groupdocs.signature.domain import QrCodeTypes
+import groupdocs.signature.domain as gsd
+import sys 
+import os
 
-# Initialize signature
-with signature.Signature("sample.pdf") as sign:
-    # Create text signature options
-    text_options = TextSignOptions("Approved by John Smith")
-    text_options.font = signature.SignatureFont(size=20, family_name="Arial", bold=True)
-    text_options.fore_color = signature.Color.BLUE
-    text_options.vertical_alignment = signature.VerticalAlignment.TOP
-    text_options.horizontal_alignment = signature.HorizontalAlignment.RIGHT
-    text_options.margin = signature.Padding(10, 10, 0, 0)
-    
-    # Create image signature options
-    image_options = ImageSignOptions("signature.jpg")
-    image_options.width = 200
-    image_options.height = 100
-    image_options.vertical_alignment = signature.VerticalAlignment.BOTTOM
-    image_options.horizontal_alignment = signature.HorizontalAlignment.LEFT
-    image_options.margin = signature.Padding(0, 0, 10, 10)
-    
-    # Create QR code signature options
-    qrcode_options = QrCodeSignOptions("https://www.example.com/verify")
-    qrcode_options.encode_type = QrCodeTypes.QR
-    qrcode_options.width = 100
-    qrcode_options.height = 100
-    qrcode_options.vertical_alignment = signature.VerticalAlignment.CENTER
-    qrcode_options.horizontal_alignment = signature.HorizontalAlignment.CENTER
-    
-    # Define list of signature options
-    list_options = [text_options, image_options, qrcode_options]
-    
-    # Sign document
-    sign.sign("signed.pdf", list_options)
-```
+def run():
+    with signature.Signature("./sample.pdf") as sign:
+        # Create text signature options
+        text_options = TextSignOptions("Approved by John Smith")
+        text_options.font = gsd.SignatureFont()
+        text_options.font.bold = True 
+        text_options.font.size = 20.0
+        text_options.font.family_name = "Arial"
+        text_options.vertical_alignment = gsd.VerticalAlignment.TOP
+        text_options.horizontal_alignment = gsd.HorizontalAlignment.RIGHT
+        text_options.margin = gsd.Padding(10, 10, 0, 0)
+        
+        # Create image signature options
+        image_options = ImageSignOptions("./stamp.png")
+        image_options.width = 200
+        image_options.height = 100
+        image_options.vertical_alignment = gsd.VerticalAlignment.BOTTOM
+        image_options.horizontal_alignment = gsd.HorizontalAlignment.LEFT
+        image_options.margin = gsd.Padding(0, 0, 10, 10)
+        
+        # Create QR code signature options
+        qrcode_options = QrCodeSignOptions("https://www.example.com/verify")
+        qrcode_options.encode_type = QrCodeTypes.QR
+        qrcode_options.width = 100
+        qrcode_options.height = 100
+        qrcode_options.vertical_alignment = gsd.VerticalAlignment.CENTER
+        qrcode_options.horizontal_alignment = gsd.HorizontalAlignment.CENTER
+        
+        # Define list of signature options
+        list_options = [text_options, image_options, qrcode_options]
+        
+        # Sign document
+        sign.sign("./signed.pdf", list_options)
 
 ### Summary
 This guide demonstrates how to apply multiple types of electronic signatures (e.g., text, barcode, image) to a document using [**GroupDocs.Signature for Python via .NET**](https://products.groupdocs.com/signature/python-net). It explains how to combine different signature types, configure each one, and save the signed document with multiple signature styles.

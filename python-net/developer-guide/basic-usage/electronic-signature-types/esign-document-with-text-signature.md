@@ -48,27 +48,38 @@ This example shows how to add a text signature to a document using Python:
 ```python
 import groupdocs.signature as signature
 from groupdocs.signature.options import TextSignOptions
-from groupdocs.signature.domain import SignatureFont
+from groupdocs.signature.domain import SignatureFont, TextSignature
+import groupdocs.signature.domain as gsd
+import sys 
+import os
 
-# Initialize signature
-with signature.Signature("sample.pdf") as sign:
-    # Create text signature options
-    text_options = TextSignOptions("John Smith")
-    
-    # Set signature position
-    text_options.left = 100
-    text_options.top = 100
-    
-    # Set signature rectangle
-    text_options.width = 100
-    text_options.height = 30
-    
-    # Set text color and font
-    text_options.font = SignatureFont(size=12, family_name="Comic Sans MS")
-    text_options.fore_color = signature.Color.RED
-    
-    # Sign document to file
-    sign.sign("sample_signed.pdf", text_options)
+def run():
+    with signature.Signature("./sample.pdf") as sign:
+        # Create text signature options
+        text_options = TextSignOptions("John Smith")
+        
+        # Set advanced options
+        text_options.font = gsd.SignatureFont()
+        text_options.font.size = 20
+        text_options.font.family_name = "Arial"
+        text_options.font.bold = True
+        text_options.font.italic = True
+        text_options.fore_color = gsd.Color.BLUE
+        text_options.back_color = gsd.Color.WHITE
+        text_options.opacity = 0.8
+        text_options.rotation_angle = 45
+        
+        # Set text alignment
+        text_options.horizontal_alignment = gsd.HorizontalAlignment.CENTER
+        text_options.vertical_alignment = gsd.VerticalAlignment.CENTER
+        
+        # Add border
+        text_options.border_color = gsd.Color.BLACK
+        text_options.border_style = gsd.DashStyle.SOLID
+        text_options.border_width = 2
+        
+        # Sign document
+        sign.sign("./sample_signed.pdf", text_options)
 ```
 
 ### Advanced Text Signature Options
@@ -79,35 +90,37 @@ You can customize the text signature further with additional options:
 import groupdocs.signature as signature
 from groupdocs.signature.options import TextSignOptions
 from groupdocs.signature.domain import SignatureFont, TextSignature
+import groupdocs.signature.domain as gsd
+import sys 
+import os
 
-# Initialize signature
-with signature.Signature("sample.pdf") as sign:
-    # Create text signature options
-    text_options = TextSignOptions("John Smith")
-    
-    # Set advanced options
-    text_options.font = SignatureFont(
-        size=20,
-        family_name="Arial",
-        bold=True,
-        italic=True
-    )
-    text_options.fore_color = signature.Color.BLUE
-    text_options.back_color = signature.Color.WHITE
-    text_options.opacity = 0.8
-    text_options.rotation_angle = 45
-    
-    # Set text alignment
-    text_options.horizontal_alignment = signature.HorizontalAlignment.CENTER
-    text_options.vertical_alignment = signature.VerticalAlignment.CENTER
-    
-    # Add border
-    text_options.border_color = signature.Color.BLACK
-    text_options.border_style = signature.DashStyle.SOLID
-    text_options.border_width = 2
-    
-    # Sign document
-    sign.sign("sample_signed.pdf", text_options)
+def run():
+    with signature.Signature("./sample.pdf") as sign:
+        # Create text signature options
+        text_options = TextSignOptions("John Smith")
+        
+        # Set advanced options
+        text_options.font = gsd.SignatureFont()
+        text_options.font.size = 20
+        text_options.font.family_name = "Arial"
+        text_options.font.bold = True
+        text_options.font.italic = True
+        text_options.fore_color = gsd.Color.BLUE
+        text_options.back_color = gsd.Color.WHITE
+        text_options.opacity = 0.8
+        text_options.rotation_angle = 45
+        
+        # Set text alignment
+        text_options.horizontal_alignment = gsd.HorizontalAlignment.CENTER
+        text_options.vertical_alignment = gsd.VerticalAlignment.CENTER
+        
+        # Add border
+        text_options.border_color = gsd.Color.BLACK
+        text_options.border_style = gsd.DashStyle.SOLID
+        text_options.border_width = 2
+        
+        # Sign document
+        sign.sign("./sample_signed.pdf", text_options)
 ```
 
 ### Summary

@@ -59,21 +59,35 @@ The code snippet below demonstrates how to sign a PDF document with the QR code 
 import groupdocs.signature as signature
 from groupdocs.signature.options import QrCodeSignOptions
 from groupdocs.signature.domain import QrCodeTypes
+import groupdocs.signature.domain as gsd
+import sys 
+import os
 
-# Initialize signature
-with signature.Signature("sample.pdf") as sign:
-    # Create QR code options with predefined QR code text
-    options = QrCodeSignOptions("JohnSmith")
-    
-    # Setup QR code encoding type
-    options.encode_type = QrCodeTypes.QR
-    
-    # Set signature position
-    options.left = 100
-    options.top = 100
-    
-    # Sign document
-    sign.sign("SampleSigned.pdf", options)
+def run():
+    with signature.Signature("./sample.pdf") as sign:
+        # Create QR code signature options
+        options = QrCodeSignOptions()
+        
+        # Set QR code text
+        options.text = "John Smith"
+        
+        # Set QR code type
+        options.encode_type = QrCodeTypes.QR
+        
+        # Set QR code position
+        options.left = 100
+        options.top = 100
+        
+        # Set QR code size
+        options.width = 100
+        options.height = 100
+        
+        # Set QR code colors
+        options.foreground_color = gsd.Color.BLUE
+        options.background_color = gsd.Color.WHITE
+        
+        # Sign document
+        sign.sign("./SampleSigned.pdf", options)
 ```
 
 ### Advanced QR Code Options
@@ -84,30 +98,33 @@ Here's an example showing how to create a more complex QR code signature with ad
 import groupdocs.signature as signature
 from groupdocs.signature.options import QrCodeSignOptions
 from groupdocs.signature.domain import QrCodeTypes
+import groupdocs.signature.domain as gsd
+import sys 
+import os
 
-# Initialize signature
-with signature.Signature("sample.pdf") as sign:
-    # Create QR code options
-    options = QrCodeSignOptions("https://www.example.com/verify-document")
-    
-    # Setup QR code encoding type
-    options.encode_type = QrCodeTypes.QR
-    
-    # Set signature position and size
-    options.left = 100
-    options.top = 100
-    options.width = 200
-    options.height = 200
-    
-    # Set QR code appearance
-    options.foreground_color = signature.Color.BLUE
-    options.background_color = signature.Color.WHITE
-    
-    # Set QR code error correction level (L, M, Q, H)
-    options.error_correction_level = signature.QrCodeErrorCorrectionLevel.H
-    
-    # Sign document
-    sign.sign("SampleSigned.pdf", options)
+def run():
+    with signature.Signature("./sample.pdf") as sign:
+        # Create QR code options
+        options = QrCodeSignOptions("https://www.example.com/verify-document")
+        
+        # Setup QR code encoding type
+        options.encode_type = QrCodeTypes.QR
+        
+        # Set signature position and size
+        options.left = 100
+        options.top = 100
+        options.width = 200
+        options.height = 200
+        
+        # Set QR code appearance
+        options.foreground_color = gsd.Color.BLUE
+        options.background_color = gsd.Color.WHITE
+        
+        # Set QR code error correction level (L, M, Q, H)
+        options.error_correction_level = gsd.QrCodeErrorCorrectionLevel.H
+        
+        # Sign document
+        sign.sign("./SampleSigned.pdf", options)
 ```
 
 ### Summary

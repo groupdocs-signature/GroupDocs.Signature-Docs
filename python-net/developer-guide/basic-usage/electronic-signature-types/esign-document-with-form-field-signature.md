@@ -63,24 +63,27 @@ This example shows how to sign a PDF document with a Form Field electronic signa
 import groupdocs.signature as signature
 from groupdocs.signature.options import FormFieldSignOptions
 from groupdocs.signature.domain import TextFormFieldSignature
+import groupdocs.signature.domain as gsd
+import sys 
+import os
 
-# Initialize signature
-with signature.Signature("sample.pdf") as sign:
-    # Create text form field signature
-    text_signature = TextFormFieldSignature("FieldText", "Value1")
-    
-    # Create form field options
-    options = FormFieldSignOptions(text_signature)
-    
-    # Set signature position and size
-    options.horizontal_alignment = signature.HorizontalAlignment.LEFT
-    options.vertical_alignment = signature.VerticalAlignment.TOP
-    options.margin = signature.Padding(10, 20, 0, 0)
-    options.height = 10
-    options.width = 100
-    
-    # Sign document
-    sign.sign("SampleSigned.pdf", options)
+def run():
+    with signature.Signature("./sample.pdf") as sign:
+        # Create text form field signature
+        text_signature = TextFormFieldSignature("FieldText", "Value1")
+        
+        # Create form field options
+        options = FormFieldSignOptions(text_signature)
+        
+        # Set signature position and size
+        options.horizontal_alignment = gsd.HorizontalAlignment.LEFT
+        options.vertical_alignment = gsd.VerticalAlignment.TOP
+        options.margin = gsd.Padding(10, 20, 0, 0)
+        options.height = 10
+        options.width = 100
+        
+        # Sign document
+        sign.sign("./SampleSigned.pdf", options)
 ```
 
 ## How to eSign Document with Existing Form Field Signatures

@@ -3,14 +3,14 @@ id: electronic-signature-types
 url: signature/python-net/electronic-signature-types
 title: Electronic Signature Types
 weight: 3
-description: "This documentation section describes different types of signatures implemented for signing, updating, deleting, searching and verifying with GroupDocs.Signature for Python via .NET"
+description: "This documentation section describes different types of signatures implemented for signing, updating, deleting, searching and verifying with GroupDocs.Signature for Python"
 keywords: text signature, image signature, digital signature, stamp signature, barcode signature, qr-code signatures, form-field signature, metadata signature, python signature examples
-productName: GroupDocs.Signature for Python via .NET
+productName: GroupDocs.Signature for Python
 hideChildren: False
 structuredData:
     showOrganization: True
 ---
-[**GroupDocs.Signature for Python via .NET**](https://products.groupdocs.com/signature/python-net) supports a wide range of electronic signature types that are listed below:
+[**GroupDocs.Signature for Python**](https://products.groupdocs.com/signature/python) supports a wide range of electronic signature types that are listed below:
 
 * Barcode signatures
 * Digital signatures based on certificate files
@@ -28,16 +28,28 @@ Here's a simple example showing how to add a text signature to a document using 
 ```python
 import groupdocs.signature as signature
 from groupdocs.signature.options import TextSignOptions
+import groupdocs.signature.domain as gsd
+import sys 
+import os
 
-# Initialize signature
-with signature.Signature("sample.docx") as sign:
-    # Create text signature options
-    text_options = TextSignOptions("John Smith")
-    text_options.font.color = signature.Color.BLUE
-    text_options.font.size = 20
-    
-    # Sign document
-    sign.sign("signed_sample.docx", text_options)
+def run():
+    with signature.Signature("./sample.pdf") as sign:
+        # Create text signature options
+        text_options = TextSignOptions("John Smith")
+        
+        # Set text signature position
+        text_options.left = 100
+        text_options.top = 100
+        
+        # Set text signature font
+        text_options.font = gsd.SignatureFont()
+        text_options.font.size = 20
+        text_options.font.family_name = "Arial"
+        text_options.font.bold = True
+        text_options.font.color = gsd.Color.BLUE
+        
+        # Sign document
+        sign.sign("./SampleSigned.pdf", text_options)
 ```
 
 ## Supported Signature Types
@@ -54,3 +66,18 @@ The following articles contain detailed examples of how to eSign documents with 
 8. [Metadata Signatures](esign-document-with-metadata-signature.md) - Add metadata information as signatures
 
 Each signature type supports various customization options and can be used in combination with other signature types to create complex document signing solutions.
+
+## More Resources
+
+### GitHub Examples
+
+You may easily run the code above and see the feature in action in our GitHub examples:
+
+* [GroupDocs.Signature for Python examples](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Python)
+* [Document Signature for Python Web API Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Python-Web-API)
+
+### Free Online Apps
+
+Along with the full-featured Python library, we provide simple but powerful free online apps.
+
+To sign PDF, Word, Excel, PowerPoint, and other documents you can use the online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.
