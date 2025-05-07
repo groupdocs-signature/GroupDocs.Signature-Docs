@@ -32,7 +32,7 @@ structuredData:
 PDF document metadata is hidden attributes, some of them are visible only over viewing standard document properties like Author, Creation Date, Producer, Entry, Keywords etc.  
 PDF document metadata contains 3 fields: Name, Value and TagPrefix, combination of Name and Tag prefix should be unique.
 
-PDF document metadata could keep big amount of data that provides ability to keep serialized custom objects with additional encryption in there. See [Advanced examples how to embed secure data]({{< ref "signature/python-net/developer-guide/advanced-usage/signing/sign-document-with-secure-custom-metadata-signatures/_index.md" >}}).
+PDF document metadata could keep big amount of data that provides ability to keep serialized custom objects with additional encryption in there. 
 
 ### Here are the steps to add metadata signatures into PDF document with GroupDocs.Signature:
 
