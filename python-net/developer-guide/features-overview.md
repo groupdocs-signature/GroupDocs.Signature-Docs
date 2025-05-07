@@ -1,6 +1,6 @@
 ---
 id: features-overview
-url: signature\python-net\developer-guide\features-overview
+url: signature/python-net/features-overview
 title: Features Overview
 linkTitle: 🛠️ Features Overview
 weight: 1
