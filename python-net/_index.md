@@ -18,12 +18,11 @@ GroupDocs.Signature for Python via .NET allows developers to write applications 
 
 Following are the links to some useful resources you may need to accomplish your tasks.
 
-* [GroupDocs.Signature for Python via .NET Online Documentation]({{< ref "signature/net" >}})
-* [GroupDocs.Signature for Python via .NET Features]({{< ref "signature/net/getting-started/features-overview.md" >}})
-* [GroupDocs.Signature for Python via .NET Limitations]({{< ref "signature/net/getting-started/evaluation-limitations-and-licensing-of-groupdocs.signature.md" >}})
-* [GroupDocs.Signature for Python via .NET Release Notes](https://releases.groupdocs.com/signature/java/release-notes/)
-* [GroupDocs.Signature for Python via .NET Product Page](https://products.groupdocs.com/signature/net)
-* [Install GroupDocs.Signature for Python via .NET NuGet Package](https://www.nuget.org/packages/GroupDocs.Signature/)
-* [GroupDocs.Signature for Python via .NET API Reference Guide](https://reference.groupdocs.com/signature/net/)
+* [GroupDocs.Signature for Python via .NET Online Documentation]({{< ref "signature/python-net" >}})
+* [GroupDocs.Signature for Python via .NET Features]({{< ref "signature/python-net/getting-started/features-overview.md" >}})
+* [GroupDocs.Signature for Python via .NET Limitations]({{< ref "signature/python-net/getting-started/evaluation-limitations-and-licensing-of-groupdocs.signature.md" >}})
+* [GroupDocs.Signature for Python via .NET Release Notes](https://releases.groupdocs.com/signature/python-net/release-notes/)
+* [GroupDocs.Signature for Python via .NET Product Page](https://products.groupdocs.com/signature/python-net)
+* [GroupDocs.Signature for Python via .NET API Reference Guide](https://reference.groupdocs.com/signature/python-net/)
 * [GroupDocs.Signature for Python via .NET Free Support Forum](https://forum.groupdocs.com/c/signature)
 * [GroupDocs.Signature for Python via .NET Paid Support Helpdesk](https://helpdesk.groupdocs.com/)
