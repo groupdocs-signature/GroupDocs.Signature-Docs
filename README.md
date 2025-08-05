@@ -159,11 +159,6 @@ GroupDocs.Signature implements industry-standard security measures:
 - [🎫 Paid Support](https://helpdesk.groupdocs.com/) - Priority technical support
 - [📧 Contact Sales](https://purchase.groupdocs.com/contact-sales) - Licensing inquiries
 
-### Stay Connected
-- [📺 YouTube Channel](https://www.youtube.com/channel/UCV9m4QP7g7kLt0wCCAAyuPQ) - Video tutorials
-- [📱 Social Media](https://www.facebook.com/GroupDocs) - Latest updates and news
-- [📰 Newsletter](https://newsletter.groupdocs.com/) - Product announcements
-
 ## 🆓 Free Resources
 
 ### Trial & Evaluation
@@ -215,14 +210,6 @@ GroupDocs.Signature is designed for high-performance scenarios:
 - [ ] Explore code examples in your preferred programming language
 - [ ] Test with your document formats and signature requirements
 - [ ] Join the community forum for ongoing support
-
-## 📞 Contact Information
-
-**GroupDocs Team**
-- Website: [https://www.groupdocs.com](https://www.groupdocs.com)
-- Sales: [sales@groupdocs.com](mailto:sales@groupdocs.com)
-- Support: [support@groupdocs.com](mailto:support@groupdocs.com)
-- Documentation: [https://docs.groupdocs.com/signature/](https://docs.groupdocs.com/signature/)
 
 ---
 
