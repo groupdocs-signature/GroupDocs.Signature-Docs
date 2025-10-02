@@ -10,8 +10,8 @@ hideChildren: False
 toc: True
 ---
 
-> 💡For the **complete working code** and detailed explanations, please refer to the [full repository here](https://github.com/groupdocs-signature/esign-documents-with-pkcs11-using-groupdocs-signature-dotnet).  
-This repository contains all source files, helper classes, and configuration examples to implement PKCS#11 digital signing in your .NET applications.
+{{< alert style="info" >}} 💡For the **complete working code** and detailed explanations, please refer to the [full repository here](https://github.com/groupdocs-signature/esign-documents-with-pkcs11-using-groupdocs-signature-dotnet).  
+This repository contains all source files, helper classes, and configuration examples to implement PKCS#11 digital signing in your .NET applications.{{< /alert >}}
 
 
 This article demonstrates how to sign documents with **PKCS#11 hardware tokens** (HSMs, smart cards, USB tokens) using **GroupDocs.Signature for .NET**.\
@@ -28,9 +28,9 @@ With GroupDocs.Signature for .NET, you can use a dongle in the same way as other
 
 Before proceeding, make sure you have:
 
--   **GroupDocs.Signature for .NET** installed. [Get a free trial](https://releases.groupdocs.com/signature/net/).\
--   A PKCS#11--compatible device (HSM, smart card, or token).\
--   [Pkcs11Interop](https://github.com/Pkcs11Interop/Pkcs11Interop) library.\
+-   **GroupDocs.Signature for .NET** installed. [Get a free trial](https://releases.groupdocs.com/signature/net/).
+-   A PKCS#11--compatible device (HSM, smart card, or token).
+-   [Pkcs11Interop](https://github.com/Pkcs11Interop/Pkcs11Interop) library.
 -   .NET 6.0 or later (the sample also supports .NET Framework 4.6.2).
 
 
@@ -136,23 +136,22 @@ class Program
 
 ## Notes
 
--   Replace `<PKCS11_LIBRARY_PATH>`, `<TOKEN_PIN>`, and `<CERT_SUBJECT>` with your actual values.\
--   Both PKCS#11 and Windows certificate store flows are supported. Choose the one that matches your infrastructure.\
+-   Replace `<PKCS11_LIBRARY_PATH>`, `<TOKEN_PIN>`, and `<CERT_SUBJECT>` with your actual values.
+-   Both PKCS#11 and Windows certificate store flows are supported. Choose the one that matches your infrastructure.
 -   For detailed helper methods and advanced scenarios, see the [full repository](https://github.com/groupdocs-signature/esign-documents-with-pkcs11-using-groupdocs-signature-dotnet).
 
 
-> ⚠️ **Early Implementation Notice**  
-> 
-> This solution is currently provided as an early implementation for using PKCS#11 digital signature dongles with GroupDocs.Signature.  
-> While it enables document signing with hardware tokens, we strongly recommend performing additional testing in your own environment to ensure it meets your compliance and security requirements.
->
-> We would greatly appreciate your feedback, test results, and suggestions for improvements.  
-> Your input will help us refine this functionality and explore new ideas to make it more robust and user-friendly.
-
+{{< alert style="warning" >}}
+ **Early Implementation Notice**  
+ This solution is currently provided as an early implementation for using PKCS#11 digital signature dongles with GroupDocs.Signature.  
+ While it enables document signing with hardware tokens, we strongly recommend performing additional testing in your own environment to ensure it meets your compliance and security requirements.
+ We would greatly appreciate your feedback, test results, and suggestions for improvements.  
+ Your input will help us refine this functionality and explore new ideas to make it more robust and user-friendly.
+{{< /alert >}}
 
 ## See Also
 
--   [Digital Signatures in GroupDocs.Signature](https://docs.groupdocs.com/signature/net/sign-document-with-digital-signature-advanced/)\
--   [Iterative Digital Signing](https://blog.groupdocs.com/signature/iterative-digital-signing/)\
+-   [Digital Signatures in GroupDocs.Signature](https://docs.groupdocs.com/signature/net/sign-document-with-digital-signature-advanced/)
+-   [Iterative Digital Signing](https://blog.groupdocs.com/signature/iterative-digital-signing/)
 -   [Custom Hash Signing with Azure Key Vault](https://blog.groupdocs.com/signature/custom-hash-sign-with-azure-key-vault/)
 
