@@ -44,6 +44,9 @@ Spreadsheet document metadata could keep big amount of data that allows provides
 
 This example shows how to add Metadata e-signature to a Spreadsheet document.
 
+{{< tabs "example-1" >}}
+{{< tab "Python" >}}
+
 ```python
 import groupdocs.signature as signature
 from groupdocs.signature.options import MetadataSignOptions
@@ -69,6 +72,14 @@ with signature.Signature("sample.xlsx") as sign:
     # Sign document
     sign.sign("SampleSigned.xlsx", options)
 ```
+
+{{< /tab >}}
+{{< tab "sample.xlsx" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [sample.xlsx](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-metadata-signature/esign-spreadsheet-with-metadata-signature/sample.xlsx)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
 
 ## More resources
 

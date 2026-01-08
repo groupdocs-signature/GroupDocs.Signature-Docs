@@ -31,6 +31,9 @@ The [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.s
 
 Here's an example of how to search for barcode signatures in a document:
 
+{{< tabs "example-1" >}}
+{{< tab "Python" >}}
+
 ```python
 from groupdocs.signature import Signature
 from groupdocs.signature.options import BarcodeSearchOptions
@@ -55,9 +58,20 @@ with Signature("sample.pdf") as signature:
         print(f"Size: Width={barcode_signature.width}, Height={barcode_signature.height}")
 ```
 
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-barcode-e-signatures/sample.pdf)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
+
 ## Advanced Search Options
 
 The [BarcodeSearchOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/barcodesearchoptions/) class provides various properties to customize the search process:
+
+{{< tabs "example-2" >}}
+{{< tab "Python" >}}
 
 ```python
 from groupdocs.signature import Signature
@@ -88,6 +102,14 @@ with Signature("sample.pdf") as signature:
         print(f"Position: X={barcode_signature.left}, Y={barcode_signature.top}")
         print(f"Size: Width={barcode_signature.width}, Height={barcode_signature.height}")
 ```
+
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-barcode-e-signatures/sample.pdf)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Additional Resources
 

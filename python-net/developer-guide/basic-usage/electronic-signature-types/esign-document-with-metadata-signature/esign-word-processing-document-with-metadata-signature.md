@@ -44,6 +44,9 @@ Word Processing document metadata could keep big amount of data that allows prov
 
 This example shows how to sign Word Processing document with Metadata e-signature.
 
+{{< tabs "example-1" >}}
+{{< tab "Python" >}}
+
 ```python
 import groupdocs.signature as signature
 from groupdocs.signature.options import MetadataSignOptions
@@ -69,6 +72,14 @@ with signature.Signature("sample.docx") as sign:
     # Sign document
     sign.sign("SampleSigned.docx", options)
 ```
+
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [sample.docx](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-metadata-signature/esign-word-processing-document-with-metadata-signature/sample.docx)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
 
 ## More resources
 

@@ -44,6 +44,9 @@ Image document metadata could keep big amount of data that provides ability to k
 
 This example shows how to sign png image with metadata e-signatures
 
+{{< tabs "example-1" >}}
+{{< tab "Python" >}}
+
 ```python
 import groupdocs.signature as signature
 from groupdocs.signature.options import MetadataSignOptions
@@ -74,6 +77,14 @@ with signature.Signature("sample.png") as sign:
     # Sign document
     sign.sign("SampleSigned.png", options)
 ```
+
+{{< /tab >}}
+{{< tab "sample.png" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [sample.png](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-metadata-signature/esign-image-with-metadata-signature/sample.png)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
 
 ## More resources
 

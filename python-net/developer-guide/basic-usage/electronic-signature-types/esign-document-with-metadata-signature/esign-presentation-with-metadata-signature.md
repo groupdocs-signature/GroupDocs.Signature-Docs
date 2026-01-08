@@ -44,6 +44,9 @@ Presentation document metadata could keep big amount of data that allows provide
 
 This example shows how to add Metadata signature to Presentation document.
 
+{{< tabs "example-1" >}}
+{{< tab "Python" >}}
+
 ```python
 import groupdocs.signature as signature
 from groupdocs.signature.options import MetadataSignOptions
@@ -69,6 +72,14 @@ with signature.Signature("sample.ppsx") as sign:
     # Sign document
     sign.sign("SampleSigned.ppsx", options)
 ```
+
+{{< /tab >}}
+{{< tab "sample.ppsx" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [sample.ppsx](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-metadata-signature/esign-presentation-with-metadata-signature/sample.ppsx)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
 
 ## More resources
 

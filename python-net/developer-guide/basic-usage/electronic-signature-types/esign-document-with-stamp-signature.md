@@ -53,6 +53,9 @@ Here are the steps to add a Stamp signature to a document with GroupDocs.Signatu
 
 This example shows how to add a Stamp signature to a document using Python:
 
+{{< tabs "example-1" >}}
+{{< tab "Python" >}}
+
 ```python
 import groupdocs.signature as signature
 from groupdocs.signature.options import StampSignOptions
@@ -91,10 +94,22 @@ def run():
         
         # Sign document
         sign.sign("./SampleSigned.docx", options)
+```
+
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [sample.docx](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-stamp-signature/sample.docx)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Advanced Stamp Signature Options
 
 Here's an example showing how to create a more complex stamp signature with multiple lines and custom styling:
+
+{{< tabs "example-2" >}}
+{{< tab "Python" >}}
 
 ```python
 import groupdocs.signature as signature
@@ -155,6 +170,14 @@ def run():
         # Sign document
         sign.sign("./SampleSigned.docx", options)
 ```
+
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [sample.docx](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-stamp-signature/sample.docx)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Summary
 This guide explains how to apply stamp-based signatures to documents using [**GroupDocs.Signature for Python via .NET**](https://products.groupdocs.com/signature/python-net). It covers the process of creating a stamp signature, customizing its appearance, and positioning it on the document. The signed document can then be saved with the stamp signature applied.

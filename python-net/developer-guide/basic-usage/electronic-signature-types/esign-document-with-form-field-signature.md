@@ -59,6 +59,9 @@ Currently GroupDocs.Signature supports the creation of Form Field signatures for
 
 This example shows how to sign a PDF document with a Form Field electronic signature using Python:
 
+{{< tabs "example-1" >}}
+{{< tab "Python" >}}
+
 ```python
 import groupdocs.signature as signature
 from groupdocs.signature.options import FormFieldSignOptions
@@ -86,6 +89,14 @@ def run():
         sign.sign("./SampleSigned.pdf", options)
 ```
 
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-form-field-signature/sample.pdf)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
+
 ## How to eSign Document with Existing Form Field Signatures
 
 GroupDocs.Signature for Python via .NET also provides a mechanism to update the existing form field signatures within the documents.
@@ -100,6 +111,9 @@ To update an existing form field signature within the document with GroupDocs.Si
 * Analyze the [SignResult](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/signresult) object to check the newly created signatures if needed.  
 
 This example shows how to sign a PDF document with the existing Form Field electronic signature and update its value using Python:
+
+{{< tabs "example-2" >}}
+{{< tab "Python" >}}
 
 ```python
 import groupdocs.signature as signature
@@ -125,6 +139,14 @@ with signature.Signature("sample.pdf") as sign:
     # Sign document
     sign_result = sign.sign("SampleSigned.pdf", list_options)
 ```
+
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-form-field-signature/sample.pdf)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Summary
 This guide explains how to use [**GroupDocs.Signature for Python via .NET**](https://products.groupdocs.com/signature/python-net) to add form field signatures to documents. It covers loading a document, configuring form field properties such as name, type, and value, and saving the signed document. Advanced options, like customizing field appearance and placement, are also included. For more details, refer to related guides on document signing techniques.

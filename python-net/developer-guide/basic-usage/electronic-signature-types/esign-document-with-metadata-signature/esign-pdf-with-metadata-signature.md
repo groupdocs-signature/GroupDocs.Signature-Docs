@@ -45,6 +45,9 @@ PDF document metadata could keep big amount of data that provides ability to kee
 
 This example shows how to sign PDF document with several e-signatures as metadata.
 
+{{< tabs "example-1" >}}
+{{< tab "Python" >}}
+
 ```python
 import groupdocs.signature as signature
 from groupdocs.signature.options import MetadataSignOptions
@@ -68,9 +71,20 @@ with signature.Signature("sample.pdf") as sign:
     sign.sign("SampleSigned.pdf", options)
 ```
 
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-metadata-signature/esign-pdf-with-metadata-signature/sample.pdf)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
+
 ## How to eSign PDF with standard metadata signatures
 
 This example shows how to sign PDF document with standard embedded PDF document metadata signatures. If PDF metadata signature already exists with same name its value will be overwritten.
+
+{{< tabs "example-2" >}}
+{{< tab "Python" >}}
 
 ```python
 import groupdocs.signature as signature
@@ -105,6 +119,14 @@ with signature.Signature("sample.pdf") as sign:
     # Sign document
     sign.sign("sample_signed.pdf", options)
 ```
+
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-metadata-signature/esign-pdf-with-metadata-signature/sample.pdf)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
 
 ## More resources
 

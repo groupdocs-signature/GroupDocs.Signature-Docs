@@ -36,6 +36,9 @@ Here's a quick guide on how to search for QR-code signatures:
 
 The code snippet below demonstrates how to search for QR-code signatures in a document using Python:
 
+{{< tabs "example-1" >}}
+{{< tab "Python" >}}
+
 ```python
 import groupdocs.signature as signature
 from groupdocs.signature.options import QrCodeSearchOptions
@@ -51,9 +54,20 @@ with signature.Signature("sample.pdf") as sign:
               f"with type {qr_code_signature.encode_type} and text {qr_code_signature.text}")
 ```
 
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-qr-code-e-signatures/sample.pdf)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
+
 ### Advanced Search Options
 
 Here's an example showing how to use more advanced search options for QR codes:
+
+{{< tabs "example-2" >}}
+{{< tab "Python" >}}
 
 ```python
 import groupdocs.signature as signature
@@ -87,6 +101,14 @@ with signature.Signature("sample.pdf") as sign:
         print(f"Encode type: {qr_code_signature.encode_type}")
         print(f"Error correction level: {qr_code_signature.error_correction_level}")
 ```
+
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-qr-code-e-signatures/sample.pdf)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
 
 
 ## More Resources
