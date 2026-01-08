@@ -36,6 +36,9 @@ Here are the steps to search for Text e-signatures using GroupDocs.Signature API
 
 This example shows how to search for Text e-signatures in a document using Python:
 
+{{< tabs "example-1" >}}
+{{< tab "Python" >}}
+
 ```python
 import groupdocs.signature as signature
 from groupdocs.signature.options import TextSearchOptions
@@ -69,9 +72,20 @@ with signature.Signature("sample.pdf") as sign:
               f"Size is {text_signature.width}x{text_signature.height}.")
 ```
 
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-text-e-signatures/sample.pdf)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
+
 ### Advanced Search Options
 
 Here's an example showing how to use more advanced search options:
+
+{{< tabs "example-2" >}}
+{{< tab "Python" >}}
 
 ```python
 import groupdocs.signature as signature
@@ -106,6 +120,14 @@ with signature.Signature("sample.pdf") as sign:
         print(f"Font: {text_signature.font.family_name}, Size: {text_signature.font.size}")
         print(f"Color: {text_signature.fore_color}")
 ```
+
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-text-e-signatures/sample.pdf)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
 
 
 ## More Resources

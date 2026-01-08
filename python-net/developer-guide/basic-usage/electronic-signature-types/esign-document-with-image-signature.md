@@ -45,6 +45,9 @@ Here are the steps to create an image signature on a document page:
 
 This example shows how to sign a PDF document with the image signature using Python:
 
+{{< tabs "example-1" >}}
+{{< tab "Python" >}}
+
 ```python
 import groupdocs.signature as signature
 from groupdocs.signature.options import ImageSignOptions
@@ -85,9 +88,25 @@ def run():
         sign.sign("./SampleSigned.pdf", image_options)
 ```
 
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-image-signature/sample.pdf)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "signature.jpg" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [signature.jpg](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-image-signature/signature.jpg)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
+
 ### Advanced Image Signature Options
 
 You can customize the image signature further with additional options:
+
+{{< tabs "example-2" >}}
+{{< tab "Python" >}}
 
 ```python
 import groupdocs.signature as signature
@@ -121,9 +140,25 @@ with signature.Signature("sample.pdf") as sign:
     sign.sign("SampleSigned.pdf", image_options)
 ```
 
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-image-signature/sample.pdf)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "signature.jpg" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [signature.jpg](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-image-signature/signature.jpg)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
+
 ### Loading Image from Stream
 
 You can also load the signature image from a stream:
+
+{{< tabs "example-3" >}}
+{{< tab "Python" >}}
 
 ```python
 import groupdocs.signature as signature
@@ -143,6 +178,19 @@ with signature.Signature("sample.pdf") as sign:
         # Sign document
         sign.sign("SampleSigned.pdf", image_options)
 ```
+
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-image-signature/sample.pdf)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "signature.jpg" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [signature.jpg](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-image-signature/signature.jpg)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Summary
 This guide demonstrates how to use [**GroupDocs.Signature for Python via .NET**](https://products.groupdocs.com/signature/python-net) to add image-based signatures to documents. It covers loading a document, configuring the image signature's properties (such as size, position, and opacity), and saving the signed document. Advanced customization options, like adjusting image appearance and aligning the signature, are also discussed. For further insights, explore related document signing resources.

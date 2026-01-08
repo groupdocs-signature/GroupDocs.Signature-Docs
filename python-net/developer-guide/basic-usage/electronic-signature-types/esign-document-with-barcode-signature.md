@@ -51,6 +51,9 @@ Here are the steps to eSign a document with the Barcode signature using GroupDoc
 
 This example shows how to sign a PDF document with a Barcode signature using Python:
 
+{{< tabs "example-1" >}}
+{{< tab "Python" >}}
+
 ```python
 import groupdocs.signature as signature
 from groupdocs.signature.options import BarcodeSignOptions
@@ -92,9 +95,20 @@ def run():
         sign.sign("./SampleSigned.pdf", options)
 ```
 
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-barcode-signature/sample.pdf)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
+
 ### Advanced Barcode Signature Options
 
 You can customize the barcode signature further with additional options:
+
+{{< tabs "example-2" >}}
+{{< tab "Python" >}}
 
 ```python
 import groupdocs.signature as signature
@@ -137,9 +151,20 @@ def run():
         sign.sign("./SampleSigned.pdf", options)
 ```
 
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-barcode-signature/sample.pdf)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
+
 ### Different Barcode Types
 
 GroupDocs.Signature supports various barcode types. Here's an example showing how to use different barcode types:
+
+{{< tabs "example-3" >}}
+{{< tab "Python" >}}
 
 ```python
 import groupdocs.signature as signature
@@ -171,6 +196,14 @@ with signature.Signature("sample.pdf") as sign:
     # Sign document
     sign.sign("SampleSigned.pdf", options)
 ```
+
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-barcode-signature/sample.pdf)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Summary
 This guide demonstrates how to use [**GroupDocs.Signature for Python via .NET**](https://products.groupdocs.com/signature/python-net) to add barcode-based signatures to documents. It covers creating, configuring, and applying barcode signatures with support for various barcode types and customization options. For further exploration, refer to related guides on document information and advanced signing techniques.

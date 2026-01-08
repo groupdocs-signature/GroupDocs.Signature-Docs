@@ -42,6 +42,9 @@ Here are the steps to delete Text signature from the document with GroupDocs.Sig
 
 This example shows how to delete Text signature that was found using [Search](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/search) method.
 
+{{< tabs "example-1" >}}
+{{< tab "Python" >}}
+
 ```python
 import groupdocs.signature as signature
 from groupdocs.signature.options import TextSearchOptions
@@ -70,6 +73,14 @@ with signature.Signature("signed.docx") as sign:
                 f"and size {text_signature.size} was not found!"
             )
 ```
+
+{{< /tab >}}
+{{< tab "signed.docx" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [signed.docx](/signature/python-net/_sample_files/developer-guide/basic-usage/delete-signatures-from-documents/delete-text-signatures-from-documents/signed.docx)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
 
 ## More resources
 

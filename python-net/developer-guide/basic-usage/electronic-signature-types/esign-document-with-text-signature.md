@@ -45,6 +45,9 @@ To manipulate text signatures programmatically [**GroupDocs.Signature for Python
 
 This example shows how to add a text signature to a document using Python:
 
+{{< tabs "example-1" >}}
+{{< tab "Python" >}}
+
 ```python
 import groupdocs.signature as signature
 from groupdocs.signature.options import TextSignOptions
@@ -81,11 +84,22 @@ def run():
         # Sign document
         sign.sign("./sample_signed.pdf", text_options)
 ```
+
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-text-signature/sample.pdf)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Advanced Text Signature Options
 
 You can customize the text signature further with additional options:
 
+{{< tabs "example-2" >}}
+{{< tab "Python" >}}
+
 ```python
 import groupdocs.signature as signature
 from groupdocs.signature.options import TextSignOptions
@@ -122,6 +136,14 @@ def run():
         # Sign document
         sign.sign("./sample_signed.pdf", text_options)
 ```
+
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-text-signature/sample.pdf)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Summary
 This guide explains how to add text-based signatures to documents with [**GroupDocs.Signature for Python via .NET**](https://products.groupdocs.com/signature/python-net). It covers configuring text properties such as font, color, size, and position, and applying the text signature to a document. The signed document is then saved with the added text signature.

@@ -50,6 +50,9 @@ pip install groupdocs-signature
 
 The example below shows how to sign a PDF document with a digital e-signature using Python. We can sign any other supported document format in the same way.
 
+{{< tabs "example-1" >}}
+{{< tab "Python" >}}
+
 ```python
 import groupdocs.signature as signature
 from groupdocs.signature.options import DigitalSignOptions
@@ -73,9 +76,30 @@ with signature.Signature("sample.pdf") as sign:
     sign.sign("sampleSigned.pdf", options)
 ```
 
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/sample.pdf)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "certificate.pfx" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [certificate.pfx](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/certificate.pfx)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sample.jpg" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [sample.jpg](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/sample.jpg)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
+
 ### Advanced Digital Signature Options
 
 You can customize the digital signature further with additional options:
+
+{{< tabs "example-2" >}}
+{{< tab "Python" >}}
 
 ```python
 import groupdocs.signature as signature
@@ -111,9 +135,30 @@ with signature.Signature("sample.pdf") as sign:
     sign.sign("sampleSigned.pdf", options)
 ```
 
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/sample.pdf)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "certificate.pfx" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [certificate.pfx](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/certificate.pfx)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "signature.jpg" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [signature.jpg](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/signature.jpg)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
+
 ### Loading Certificate from Stream
 
 You can also load the certificate from a stream:
+
+{{< tabs "example-3" >}}
+{{< tab "Python" >}}
 
 ```python
 import groupdocs.signature as signature
@@ -136,6 +181,19 @@ with signature.Signature("sample.pdf") as sign:
         # Sign document
         sign.sign("sampleSigned.pdf", options)
 ```
+
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/sample.pdf)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "certificate.pfx" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [certificate.pfx](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/certificate.pfx)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Summary
 This guide demonstrates how to use [**GroupDocs.Signature for Python via .NET**](https://products.groupdocs.com/signature/python-net) to sign documents with digital signatures. It explains how to load documents, configure certificate-based signatures, and save signed files securely. Advanced features, including signature appearance customization and validation, are also covered. Refer to related resources for additional details on digital signing workflows.

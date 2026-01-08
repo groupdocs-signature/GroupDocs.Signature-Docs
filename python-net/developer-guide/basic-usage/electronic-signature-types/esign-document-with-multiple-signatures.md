@@ -46,6 +46,9 @@ Doing this is as simple as:
 
 This code snippet below demonstrates how to eSign a PDF document with multiple signatures at the same time using Python:
 
+{{< tabs "example-1" >}}
+{{< tab "Python" >}}
+
 ```python
 import groupdocs.signature as signature
 from groupdocs.signature.options import TextSignOptions, BarcodeSignOptions, QrCodeSignOptions, DigitalSignOptions
@@ -87,9 +90,30 @@ def run():
         sign.sign("./signed.pdf", list_options)
 ```
 
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-multiple-signatures/sample.pdf)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "certificate.pfx" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [certificate.pfx](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-multiple-signatures/certificate.pfx)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "signature.jpg" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [signature.jpg](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-multiple-signatures/signature.jpg)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
+
 ### Advanced Multiple Signatures Example
 
 Here's a more advanced example showing how to add multiple signatures with different styles and positions:
+
+{{< tabs "example-2" >}}
+{{< tab "Python" >}}
 
 ```python
 import groupdocs.signature as signature
@@ -132,6 +156,20 @@ def run():
         
         # Sign document
         sign.sign("./signed.pdf", list_options)
+```
+
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-multiple-signatures/sample.pdf)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "stamp.png" >}}
+{{< tab-text >}}
+The following sample file is used in this example: [stamp.png](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-multiple-signatures/stamp.png)
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Summary
 This guide demonstrates how to apply multiple types of electronic signatures (e.g., text, barcode, image) to a document using [**GroupDocs.Signature for Python via .NET**](https://products.groupdocs.com/signature/python-net). It explains how to combine different signature types, configure each one, and save the signed document with multiple signature styles.
