@@ -96,11 +96,6 @@ def run():
 The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-multiple-signatures/sample.pdf)
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "certificate.pfx" >}}
-{{< tab-text >}}
-The following sample file is used in this example: [certificate.pfx](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-multiple-signatures/certificate.pfx)
-{{< /tab-text >}}
-{{< /tab >}}
 {{< tab "signature.jpg" >}}
 {{< tab-text >}}
 The following sample file is used in this example: [signature.jpg](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-multiple-signatures/signature.jpg)
@@ -162,11 +157,6 @@ def run():
 {{< tab "sample.pdf" >}}
 {{< tab-text >}}
 The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-multiple-signatures/sample.pdf)
-{{< /tab-text >}}
-{{< /tab >}}
-{{< tab "stamp.png" >}}
-{{< tab-text >}}
-The following sample file is used in this example: [stamp.png](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-multiple-signatures/stamp.png)
 {{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}

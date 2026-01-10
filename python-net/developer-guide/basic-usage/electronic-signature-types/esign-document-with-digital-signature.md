@@ -82,11 +82,6 @@ with signature.Signature("sample.pdf") as sign:
 The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/sample.pdf)
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "certificate.pfx" >}}
-{{< tab-text >}}
-The following sample file is used in this example: [certificate.pfx](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/certificate.pfx)
-{{< /tab-text >}}
-{{< /tab >}}
 {{< tab "sample.jpg" >}}
 {{< tab-text >}}
 The following sample file is used in this example: [sample.jpg](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/sample.jpg)
@@ -141,11 +136,6 @@ with signature.Signature("sample.pdf") as sign:
 The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/sample.pdf)
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "certificate.pfx" >}}
-{{< tab-text >}}
-The following sample file is used in this example: [certificate.pfx](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/certificate.pfx)
-{{< /tab-text >}}
-{{< /tab >}}
 {{< tab "signature.jpg" >}}
 {{< tab-text >}}
 The following sample file is used in this example: [signature.jpg](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/signature.jpg)
@@ -186,11 +176,6 @@ with signature.Signature("sample.pdf") as sign:
 {{< tab "sample.pdf" >}}
 {{< tab-text >}}
 The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/sample.pdf)
-{{< /tab-text >}}
-{{< /tab >}}
-{{< tab "certificate.pfx" >}}
-{{< tab-text >}}
-The following sample file is used in this example: [certificate.pfx](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/certificate.pfx)
 {{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
