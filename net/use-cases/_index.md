@@ -16,3 +16,4 @@ Here you will find examples on signing PDFs and other documents using different 
 ### Pages in this section
 
 - [Sign Documents with PKCS#11 in .NET](signature/net/signing-pdf-with-pkcs11-standard) – Learn how to use PKCS#11 devices such as HSMs, smart cards, and USB dongles to securely sign documents.
+- [How to Sign ODT and OTT documents in .NET - 2 Practical Tutorials](signature/net/sign-odt-ott-documents) – Learn two ways to sign ODT and OTT documents using GroupDocs.Signature for .NET. Step-by-step tutorials with code examples, best practices, and troubleshooting tips.
