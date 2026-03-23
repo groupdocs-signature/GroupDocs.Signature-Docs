@@ -12,7 +12,3 @@ structuredData:
 
 This section showcases practical use cases for **GroupDocs.Signature for .NET**, guiding you through common scenarios and advanced implementations.  
 Here you will find examples on signing PDFs and other documents using different methods, including **hardware tokens, smart cards, and USB dongles**.
-
-### Pages in this section
-
-- [Sign Documents with PKCS#11 in .NET](signature/net/signing-pdf-with-pkcs11-standard) – Learn how to use PKCS#11 devices such as HSMs, smart cards, and USB dongles to securely sign documents.
