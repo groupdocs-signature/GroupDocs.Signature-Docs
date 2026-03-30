@@ -1,4 +1,5 @@
 ---
+---
 id: sign-document-with-stamp-signature-advanced
 url: signature/net/sign-document-with-stamp-signature-advanced
 title: Sign document with Stamp signature - advanced
@@ -10,13 +11,13 @@ productName: GroupDocs.Signature for .NET
 toc: True
 hideChildren: False
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [StampSIgnOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/stampsignoptions) class with additional properties to specify different options for Stamp Signature. This signature type implements stamps with different implementation, forms, lines etc. Each Stamp option contains inner and outer lines. Inner lines represent vertical lines inside the stamp, when outer lines represent circles (or rectangles based on stamp type) around stamp with own text, border settings, background etc
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [StampSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/stampsignoptions) class with additional properties to specify different options for Stamp Signature. This signature type implements stamps with different implementation, forms, lines etc. Each Stamp option contains inner and outer lines. Inner lines represent vertical lines inside the stamp, when outer lines represent circles (or rectangles based on stamp type) around stamp with own text, border settings, background etc
 
 Here are the steps to add Stamp signature into document with GroupDocs.Signature:
 
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
-* Instantiate the [StampSIgnOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/stampsignoptions) object according to your requirements and specify Text Signature options.
-* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [StampSIgnOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/stampsignoptions) to it.
+* Instantiate the [StampSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/stampsignoptions) object according to your requirements and specify Text Signature options.
+* Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [StampSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/stampsignoptions) to it.
 * Analyze [SignResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult) result to check newly created signatures if needed.
 
 This example shows how to add Stamp signature to document. See [SignResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult)
@@ -122,3 +123,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 Along with the full-featured .NET library, we provide simple but powerful free online apps.
 
 To sign PDF, Word, Excel, PowerPoint, and other documents you can use the online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.
+
+---
