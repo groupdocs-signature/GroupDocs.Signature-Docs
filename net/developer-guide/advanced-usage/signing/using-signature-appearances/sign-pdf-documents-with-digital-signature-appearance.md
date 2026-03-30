@@ -1,4 +1,5 @@
 ---
+---
 id: sign-pdf-documents-with-digital-signature-appearance
 url: signature/net/sign-pdf-documents-with-digital-signature-appearance
 title: Sign Pdf documents with custom digital signature appearance
@@ -13,7 +14,7 @@ hideChildren: False
 
 Base signature options [SignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions) contains property [SignOptions.Appearance](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions/appearance) that could be assigned with the instance of following class
 
-* [PdfDigitalSignatureAppearance](https://reference.groupdocs.com/signature/net/groupdocs.signature.options.appearances/pdfdigitalsignatureappearance) class implements properties to customize digital siganture appearance. 
+* [PdfDigitalSignatureAppearance](https://reference.groupdocs.com/signature/net/groupdocs.signature.options.appearances/pdfdigitalsignatureappearance) class implements properties to customize digital signature appearance. 
 
 Here are the steps to add digital signature to PDF document and customize signature appearance with GroupDocs.Signature:
 
@@ -87,3 +88,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 Along with the full-featured .NET library, we provide simple but powerful free online apps.
 
 To sign PDF, Word, Excel, PowerPoint, and other documents you can use the online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.
+
+---

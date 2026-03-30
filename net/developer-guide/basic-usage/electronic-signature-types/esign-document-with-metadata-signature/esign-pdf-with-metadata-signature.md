@@ -1,8 +1,9 @@
 ---
+---
 id: esign-pdf-with-metadata-signature
 url: signature/net/esign-pdf-with-metadata-signature
-title: eSign PDF with Metadata signature
-linkTitle: eSign PDF
+title: Electronic Signature PDF with Metadata signature
+linkTitle: Electronic Signature PDF
 weight: 2
 description: "This article explains how to add metadata signatures to PDF document meta info layer with GroupDocs.Signature"
 keywords: Pdf metadata, Pdf metadata signatures
@@ -41,7 +42,7 @@ PDF document metadata could keep big amount of data that provides ability to ke
 * Instantiate one or several[PdfMetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/pdfmetadatasignature) objects and add them into [MetadataSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasignoptions) to metadata signatures collection ([Signatures](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasignoptions/signatures)) via [Add](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/metadatasignaturecollection/add) or [AddRange](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/metadatasignaturecollection/addrange) method.
 * Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [MetadataSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasignoptions) to it.
 
-## How to eSign PDF with Metadata signature
+## How to Electronic Signature PDF with Metadata signature
 
 This example shows how to sign PDF document with several e-signatures as metadata.
 
@@ -63,7 +64,7 @@ using (Signature signature = new Signature("sample.pdf"))
 }
 ```
 
-## How to eSign PDF with standard metadata signatures
+## How to Electronic Signature PDF with standard metadata signatures
 
 This example shows how to sign PDF document with standard standard embedded PDF document metadata signatures. If PDF metadata signature already exists with same name its value will be overwritten.
 
@@ -95,7 +96,7 @@ using (Signature signature = new Signature("sample.pdf"))
 
 ### Advanced Usage Topics
 
-To learn more about document eSign features, please refer to the [advanced usage section]({{< ref "signature/net/developer-guide/advanced-usage/_index.md" >}}).
+To learn more about document Electronic Signature features, please refer to the [advanced usage section]({{< ref "signature/net/developer-guide/advanced-usage/_index.md" >}}).
 
 ## More resources
 
@@ -115,3 +116,4 @@ You may easily run the code above and see the feature in action in our GitHub e
 Along with the full-featured .NET library, we provide simple but powerful free online apps.
 
 To sign PDF, Word, Excel, PowerPoint, and other documents you can use the online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.
+---

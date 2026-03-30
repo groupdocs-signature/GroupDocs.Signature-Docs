@@ -1,4 +1,5 @@
 ---
+---
 id: advanced-search-certificate-documents
 url: signature/net/advanced-search-certificate-documents
 title: Advanced search certificate documents
@@ -29,7 +30,7 @@ structuredData:
         - name: Process list of found items
           text: Loop through list of found items and process in demanded way.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [CertificateSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/certificatesearchoptions) class to specify different options to search text data within the certificate docuemnts. 
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [CertificateSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/certificatesearchoptions) class to specify different options to search text data within the certificate documents. 
 Please be aware that the search result will be always as the MetadataSignature.
 
 Here are the steps to search for the values within the certificate document with GroupDocs.Signature:
@@ -91,3 +92,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 Along with the full-featured .NET library, we provide simple but powerful free online apps.
 
 To sign PDF, Word, Excel, PowerPoint, and other documents you can use the online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.
+
+---
