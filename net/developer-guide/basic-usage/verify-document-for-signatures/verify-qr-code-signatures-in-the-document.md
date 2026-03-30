@@ -1,4 +1,5 @@
 ---
+---
 id: verify-qr-code-signatures-in-the-document
 url: signature/net/verify-qr-code-signatures-in-the-document
 title: Verify QR-code signatures in the document
@@ -88,3 +89,5 @@ Along with the full-featured .NET library, we provide simple but powerful free o
 To generate QR codes and/or sign your files with QR codes for free, you can use the [QR Code Generator](https://products.groupdocs.app/signature/generate/qrcode) online app.
 
 To sign PDF, Word, Excel, PowerPoint, and other documents you can use the other online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.
+
+---
