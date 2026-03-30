@@ -1,4 +1,5 @@
 ---
+---
 id: digital-signing-with-custom-hash
 url: signature/net/digital-signing-with-custom-hash
 title: Digital signing with custom hash
@@ -23,7 +24,7 @@ public void SignDocument()
     string certFilePath = "cert.pfx";
     string sampleFilePath = "sample.pdf";
     string sampleOutputFilePath = "signed.pdf";
-    using (Signature.Signature signature = new Signature.Signature(sampleFilePath))
+    using (Signature signature = new Signature(sampleFilePath))
     {
         // initialize digital option with certificate file path
         DigitalSignOptions options = new DigitalSignOptions(certFilePath)
@@ -79,7 +80,7 @@ Let's break down the implementation into clear steps:
    string certFilePath = "cert.pfx";
    string sampleFilePath = "sample.pdf";
    string sampleOutputFilePath = "signed.pdf";
-   using (Signature.Signature signature = new Signature.Signature(sampleFilePath))
+   using (Signature signature = new Signature(sampleFilePath))
    ```
    - Define paths for your certificate, input document, and output file
    - Create a new `Signature` instance with your input document
@@ -395,3 +396,4 @@ You may easily run the code above and see the feature in action in our GitHub ex
 Along with the full-featured .NET library, we provide simple but powerful free online apps.
 
 To sign PDF, Word, Excel, PowerPoint, and other documents you can use the online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**. 
+---
