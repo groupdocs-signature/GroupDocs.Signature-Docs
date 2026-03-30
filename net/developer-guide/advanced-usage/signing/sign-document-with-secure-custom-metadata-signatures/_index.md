@@ -1,5 +1,6 @@
 ---
 ---
+---
 id: sign-document-with-secure-custom-metadata-signatures
 url: signature/net/sign-document-with-secure-custom-metadata-signatures
 title: Sign document with secure custom Metadata signatures
@@ -96,7 +97,7 @@ private class CustomXOREncryptionAttribute : Attribute, IDataEncryption
     /// Encode method to encrypt string.
     /// </summary>
     /// <param name="source">Source string to encode.</param>
-    /// <returns>Returns enccrypted string</returns>
+    /// <returns>Returns encrypted string</returns>
     public string Encode(string source)
     {
         return Process(source);
@@ -267,4 +268,5 @@ Along with the full-featured .NET library, we provide simple but powerful free o
 
 To sign PDF, Word, Excel, PowerPoint, and other documents you can use the online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.
 
+---
 ---
