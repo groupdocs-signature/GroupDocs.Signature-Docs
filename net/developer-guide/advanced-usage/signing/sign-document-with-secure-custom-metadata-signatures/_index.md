@@ -1,4 +1,5 @@
 ---
+---
 id: sign-document-with-secure-custom-metadata-signatures
 url: signature/net/sign-document-with-secure-custom-metadata-signatures
 title: Sign document with secure custom Metadata signatures
@@ -34,7 +35,7 @@ Following topics show more details of these features
 ```csharp
 /// <summary>
 /// Creates class that implements IDataSerializer interface
-/// It cam support common serialization like JSon or custom data format
+/// It can support common serialization like JSon or custom data format
 /// </summary>
 class CustomSerializationAttribute : Attribute, IDataSerializer
 {
@@ -265,3 +266,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 Along with the full-featured .NET library, we provide simple but powerful free online apps.
 
 To sign PDF, Word, Excel, PowerPoint, and other documents you can use the online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.
+
+---
