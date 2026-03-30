@@ -1,4 +1,5 @@
 ---
+---
 id: verify-qr-code-signatures
 url: signature/net/verify-qr-code-signatures
 title: Verifying QR Code signatures in advance
@@ -44,7 +45,7 @@ using (Signature signature = new Signature("sample.pdf"))
 {
     QrCodeVerifyOptions options = new QrCodeVerifyOptions()
     {
-        // specify if all pages shoudl be verified
+        // specify if all pages should be verified
         AllPages = false,
         PagesSetup = new PagesSetup() {  FirstPage = false, LastPage = true, OddPages = false, EvenPages = true },
         // specify text pattern
@@ -85,3 +86,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 Along with the full-featured .NET library, we provide simple but powerful free online apps.
 
 To sign PDF, Word, Excel, PowerPoint, and other documents you can use the online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.
+
+---
