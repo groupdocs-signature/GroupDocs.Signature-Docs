@@ -1,4 +1,5 @@
 ---
+---
 id: implement-custom-encryption-with-metadata-signatures
 url: signature/net/implement-custom-encryption-with-metadata-signatures
 title: Implement custom encryption with Metadata signatures
@@ -35,7 +36,7 @@ private class CustomXOREncryption : IDataEncryption
     /// Encode method to encrypt string.
     /// </summary>
     /// <param name="source">Source string to encode.</param>
-    /// <returns>Returns enccrypted string</returns>
+    /// <returns>Returns encrypted string</returns>
     public string Encode(string source)
     {
         return Process(source);
@@ -147,3 +148,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 Along with the full-featured .NET library, we provide simple but powerful free online apps.
 
 To sign PDF, Word, Excel, PowerPoint, and other documents you can use the online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.
+
+---
