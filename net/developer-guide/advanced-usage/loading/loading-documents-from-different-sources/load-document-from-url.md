@@ -1,4 +1,5 @@
 ---
+---
 id: load-document-from-url
 url: signature/net/load-document-from-url
 title: Load document from URL
@@ -29,6 +30,8 @@ structuredData:
         - name: Sign source and obtain result 
           text: Invoke method Sign with passing created options and output file data. You can save signed file using file path or stream.
 ---
+# Load a document from a URL using GroupDocs.Signature for .NET
+
 Following example demonstrates how to work with documents from URL.
 
 ```csharp
@@ -92,3 +95,4 @@ You may easily run the code above and see the feature in action in our GitHub e
 Along with the full-featured .NET library, we provide simple but powerful free online apps.
 
 To sign PDF, Word, Excel, PowerPoint, and other documents you can use the online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.
+---

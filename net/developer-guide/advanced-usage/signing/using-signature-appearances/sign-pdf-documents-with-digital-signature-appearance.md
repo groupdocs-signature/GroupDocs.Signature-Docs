@@ -1,4 +1,5 @@
 ---
+---
 id: sign-pdf-documents-with-digital-signature-appearance
 url: signature/net/sign-pdf-documents-with-digital-signature-appearance
 title: Sign Pdf documents with custom digital signature appearance
@@ -42,7 +43,7 @@ using (Signature signature = new Signature("sample.pdf"))
         // apply custom PDF signature appearance
         Appearance = new PdfDigitalSignatureAppearance()
         {
-            // do now show contact details
+            // do not show contact details
             ContactInfoLabel = string.Empty,
             // simplify reason label
             ReasonLabel = "?",
@@ -87,3 +88,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 Along with the full-featured .NET library, we provide simple but powerful free online apps.
 
 To sign PDF, Word, Excel, PowerPoint, and other documents you can use the online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.
+
+---

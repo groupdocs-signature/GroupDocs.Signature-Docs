@@ -1,4 +1,5 @@
 ---
+---
 id: signing-archive-documents
 url: signature/net/signing-archive-documents
 title: Signing archive documents in batch
@@ -63,7 +64,7 @@ using (var signature = new Signature("sample.zip"))
     {
         Console.WriteLine($"Document {document.FileName}. Processed: {document.ProcessingTime}, mls");
     }
-    if (signResult.Failed.Count > 0)
+    if (result.Failed.Count > 0)
     {
         Console.WriteLine("\nList of failed documents:");
         number = 1;
@@ -122,3 +123,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 Along with the full-featured .NET library, we provide simple but powerful free online apps.
 
 To sign PDF, Word, Excel, PowerPoint, and other documents you can use the online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.
+
+---

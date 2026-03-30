@@ -1,4 +1,7 @@
 ---
+---
+---
+---
 id: sign-document-with-secure-custom-metadata-signatures
 url: signature/net/sign-document-with-secure-custom-metadata-signatures
 title: Sign document with secure custom Metadata signatures
@@ -18,7 +21,7 @@ hideChildren: False
 Here are the steps to embed custom object into Metadata signature with GroupDocs.Signature:
 
 * Implement if needed custom data serialization class that implement [IDataSerializer](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/idataserializer)  interface. By default GroupDocs.Signature uses embedded json format serialization but allows user to customize it.
-* Implement if needed custom data encryption class that implements [IDataEncryption](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/idataencryption) interface. By default GroupDocs.Signature has several encryption implementation you can use but allows user to customize it.
+* Implement if needed custom data encryption class that implements [IDataEncryption](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/idataencryption) interface. By default GroupDocs.Signature has several encryption implementation. you can use but allows user to customize it.
 * Implement class with properties and specify if needed class attributes (like custom serialization attribute, custom encryption attribute), specify attributes for properties like [FormatAttribute](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/formatattribute)  to specify serialization name and display format, same as [SkipSerializationAttribute](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/skipserializationattribute) to mark property of class as not serialize  
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
 * Create one or several objects of proper [MetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/metadatasignature) object for document (like [PdfMetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/pdfmetadatasignature), [ImageMetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/imagemetadatasignature),  [PresentationMetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/presentationmetadatasignature), [SpreadsheetMetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/spreadsheetmetadatasignature), [WordProcessingMetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/wordprocessingmetadatasignature)) and setup
@@ -34,7 +37,7 @@ Following topics show more details of these features
 ```csharp
 /// <summary>
 /// Creates class that implements IDataSerializer interface
-/// It cam support common serialization like JSon or custom data format
+/// It can support common serialization like JSon or custom data format
 /// </summary>
 class CustomSerializationAttribute : Attribute, IDataSerializer
 {
@@ -95,7 +98,7 @@ private class CustomXOREncryptionAttribute : Attribute, IDataEncryption
     /// Encode method to encrypt string.
     /// </summary>
     /// <param name="source">Source string to encode.</param>
-    /// <returns>Returns enccrypted string</returns>
+    /// <returns>Returns encrypted string</returns>
     public string Encode(string source)
     {
         return Process(source);
@@ -265,3 +268,7 @@ You may easily run the code above and see the feature in action in our GitHub e
 Along with the full-featured .NET library, we provide simple but powerful free online apps.
 
 To sign PDF, Word, Excel, PowerPoint, and other documents you can use the online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.
+
+---
+---
+---

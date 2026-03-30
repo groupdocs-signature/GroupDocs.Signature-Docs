@@ -1,4 +1,5 @@
 ---
+---
 id: sign-document-with-form-field-signature-advanced
 url: signature/net/sign-document-with-form-field-signature-advanced
 title: Sign document with Form Field signature - advanced
@@ -12,7 +13,7 @@ hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [FormFieldSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/formfieldsignoptions) class to specify different options for Form Field signature. The Form Field signature is special document predefined input field control with unique name inside the document content that expects some input from user.
 
-At the moment GroupDocs.Siganture supports creation of Form Field signatures for Pdf documents only.
+At the moment GroupDocs.Signature supports creation of Form Field signatures for Pdf documents only.
 
 The [FormFieldSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/formfieldsignoptions) class contains one [FormFieldSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/formfieldsignature/) object to put to the document.
 
@@ -154,3 +155,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 Along with the full-featured .NET library, we provide simple but powerful free online apps.
 
 To sign PDF, Word, Excel, PowerPoint, and other documents you can use the online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.
+
+---

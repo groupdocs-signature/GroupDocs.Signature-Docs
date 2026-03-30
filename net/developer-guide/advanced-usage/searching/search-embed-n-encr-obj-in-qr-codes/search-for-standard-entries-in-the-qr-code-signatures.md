@@ -1,4 +1,5 @@
 ---
+---
 id: search-for-standard-entries-in-the-qr-code-signatures
 url: signature/net/search-for-standard-entries-in-the-qr-code-signatures
 title: Search for standard entries in the QR-Code signatures
@@ -28,7 +29,7 @@ structuredData:
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides additional features when searching for[QrCode Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodesignature)  that were previously added to document with embedded standard entry objects. Following standard entries are supported to search for and receive object back from Qr-Code
 
-* [Email](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/email) that keeps in the QR-code standard email information with recipient, subject and body.
+* [Email](https://reference.groupdocs.com/signature/groupdocs.signature.domain.extensions/email) that keeps in the QR-code standard email information with recipient, subject and body.
 * [Address](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/address) with address information.
 * [V-Card](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/vcard) entry of visit card 3.0 specification with visited card details. More info could be found [here](https://en.wikipedia.org/wiki/VCard).
 * [Me-Card](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/mecard) entry implements similar to V-Card contact details standard. More details could be found [here](https://en.wikipedia.org/wiki/MeCard_(QR_code)).
@@ -40,7 +41,7 @@ structuredData:
 
 ## Search for QR-code signatures and extract Email object
 
-This example shows how to search for QR-code signature and obtain [Email](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/email) object.  
+This example shows how to search for QR-code signature and obtain [Email](https://reference.groupdocs.com/signature/groupdocs.signature.domain.extensions/email) object.  
 
 ```csharp
 // instantiating the signature object
@@ -231,3 +232,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 Along with the full-featured .NET library, we provide simple but powerful free online apps.
 
 To sign PDF, Word, Excel, PowerPoint, and other documents you can use the online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.
+
+---

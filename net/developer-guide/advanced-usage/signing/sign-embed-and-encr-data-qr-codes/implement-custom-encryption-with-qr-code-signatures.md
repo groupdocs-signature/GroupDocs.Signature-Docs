@@ -1,4 +1,5 @@
 ---
+---
 id: implement-custom-encryption-with-qr-code-signatures
 url: signature/net/implement-custom-encryption-with-qr-code-signatures
 title: Implement custom encryption with QR-Code signatures
@@ -35,7 +36,7 @@ private class CustomXOREncryption : IDataEncryption
     /// Encode method to encrypt string.
     /// </summary>
     /// <param name="source">Source string to encode.</param>
-    /// <returns>Returns enccrypted string</returns>
+    /// <returns>Returns encrypted string</returns>
     public string Encode(string source)
     {
         return Process(source);
@@ -148,3 +149,5 @@ Along with the full-featured .NET library, we provide simple but powerful free o
 To generate QR codes and/or sign your files with QR codes for free, you can use the [QR Code Generator](https://products.groupdocs.app/signature/generate/qrcode) online app.
 
 To sign PDF, Word, Excel, PowerPoint, and other documents you can use the other online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.
+
+---
