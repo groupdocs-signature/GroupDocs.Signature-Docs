@@ -1,17 +1,20 @@
 ---
+---
+---
+---
 id: advanced-search-archive-documents
 url: signature/net/advanced-search-archive-documents
 title: Advanced search archive documents
 linkTitle: 🌐 Archive
 weight: 16
-description: "This article explains how to make advanced search withing the archive that contains several documents for any electronic signatures with GroupDocs.Signature API."
+description: "This article explains how to make advanced search within the archive that contains several documents for any electronic signatures with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET 
 toc: True
 structuredData:
     showOrganization: True
     application:    
-        name: Advanced search for varios signatures within the archive files in C#    
+        name: Advanced search for various signatures within the archive files in C#    
         description: Advanced search for all supported signatures within the archives fast and easily with C# language and GroupDocs.Signature for .NET APIs
         productCode: signature
         productPlatform: net 
@@ -29,13 +32,13 @@ structuredData:
         - name: Process list of found items
           text: Loop through list of found items and process in demanded way.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [archiveSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/archivesearchoptions) class to specify different options to search text data within the archive docuemnts. 
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [archiveSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/archivesearchoptions) class to specify different options to search text data within the archive documents. 
 Please be aware that the search result will be always as the MetadataSignature.
 
 Here are the steps to search for the values within the archive document with GroupDocs.Signature:
 
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
-* Instantiate the varios [SearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/searchoptions) objects according to your requirements. Here there's ability to compose list of any search options types.
+* Instantiate the various [SearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/searchoptions) objects according to your requirements. Here there's ability to compose list of any search options types.
 * Call [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass list of the [SearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/searchoptions) to it.
 
 This example shows how to make advanced search for any data within the archive documents.
@@ -94,3 +97,7 @@ You may easily run the code above and see the feature in action in our GitHub e
 Along with the full-featured .NET library, we provide simple but powerful free online apps.
 
 To sign PDF, Word, Excel, PowerPoint, and other documents you can use the online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.
+
+---
+---
+---

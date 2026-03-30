@@ -1,4 +1,5 @@
 ---
+---
 id: basic-usage
 url: signature/net/basic-usage
 title: Basic usage
@@ -10,7 +11,7 @@ hideChildren: False
 structuredData:
     showOrganization: True
 ---  
-[**GroupDocs Signature**](https://products.groupdocs.com/signature/net) library provides ability to manipulate with different electronic signature types such as Text, Image, Digital, Barcode, QR-code, Stamp, Form Field, Metadata. These e-signatures could be added to document, updated, deleted, verified or searched inside already signed documents. Our product also provides information about document type and structure - file type, size, pages count, etc. and generates document pages preview based on provided options.  
+[**GroupDocs Signature**](https://products.groupdocs.com/signature/net) library provides ability to manipulate with different electronic signature types such as text, image, digital, barcode, QR-code, stamp, form field, metadata. These e-signatures could be added to document, updated, deleted, verified or searched inside already signed documents. Our product also provides information about document type and structure - file type, size, pages count, etc. and generates document pages preview based on provided options.  
 
 Here are main GroupDocs Signature API concepts:
 
@@ -43,3 +44,5 @@ using (Signature signature = new Signature("sample.docx"))
 ```
 
 Please check detailed examples of how to eSign documents, search and verify document signatures in the following guides:
+
+---

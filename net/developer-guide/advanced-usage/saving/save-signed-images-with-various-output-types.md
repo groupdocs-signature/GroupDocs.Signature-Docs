@@ -1,4 +1,5 @@
 ---
+---
 id: save-signed-images-with-various-output-types
 url: signature/net/save-signed-images-with-various-output-types
 title: Saving signed images with various output types
@@ -40,7 +41,7 @@ using (Signature signature = new Signature("sample.jpg"))
     // create Bmp save options with advanced settings
     saveOptions = new BmpSaveOptions()
     {
-        AddMissingExtenstion = true,
+        AddMissingExtension = true,
         Compression = BitmapCompression.Rgb,
         HorizontalResolution = 7,
         VerticalResolution = 7,
@@ -65,7 +66,7 @@ using (Signature signature = new Signature("sample.jpg"))
     // create Gif save options with advanced settings
     saveOptions = new GifSaveOptions()
     {
-        AddMissingExtenstion = true,
+        AddMissingExtension = true,
         BackgroundColorIndex = 2,
         ColorResolution = 7,
         DoPaletteCorrection = true,
@@ -92,7 +93,7 @@ using (Signature signature = new Signature("sample.jpg"))
     // create Jpeg save options with advanced settings
     saveOptions = new JpegSaveOptions()
     {
-        AddMissingExtenstion = true,
+        AddMissingExtension = true,
         BitsPerChannel = 8,
         ColorType = JpegCompressionColorMode.Rgb,
         Comment = "signed jpeg file",
@@ -118,7 +119,7 @@ using (Signature signature = new Signature("sample.jpg"))
     // create png save options with advanced settings
     saveOptions = new PngSaveOptions()
     {
-        AddMissingExtenstion = true,
+        AddMissingExtension = true,
         BitDepth = 8,
         ColorType = PngColorType.Grayscale,
         CompressionLevel = 9,
@@ -143,7 +144,7 @@ using (Signature signature = new Signature("sample.jpg"))
     // create tiff save options with advanced settings
     saveOptions = new TiffSaveOptions()
     {
-        AddMissingExtenstion = true,
+        AddMissingExtension = true,
         ExpectedTiffFormat = TiffFormat.TiffNoCompressionBw
     };
     // sign document to file
@@ -171,3 +172,4 @@ Along with the full-featured .NET library, we provide simple but powerful free o
 To generate image signatures and/or sign your files with them for free, you can use the [Generate Image](https://products.groupdocs.app/signature/generate/image) online app.
 
 To sign PDF, Word, Excel, PowerPoint, and other documents you can use the other online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.
+---
