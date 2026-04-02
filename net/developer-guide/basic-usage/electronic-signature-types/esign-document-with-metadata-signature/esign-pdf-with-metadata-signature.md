@@ -1,5 +1,4 @@
 ---
----
 id: esign-pdf-with-metadata-signature
 url: signature/net/esign-pdf-with-metadata-signature
 title: Electronic Signature PDF with Metadata signature
@@ -116,4 +115,3 @@ You may easily run the code above and see the feature in action in our GitHub e
 Along with the full-featured .NET library, we provide simple but powerful free online apps.
 
 To sign PDF, Word, Excel, PowerPoint, and other documents you can use the online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.
----

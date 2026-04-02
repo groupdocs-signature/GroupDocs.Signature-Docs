@@ -1,7 +1,4 @@
 ---
----
----
----
 id: sign-document-with-stamp-signature-advanced
 url: signature/net/sign-document-with-stamp-signature-advanced
 title: Sign document with Stamp signature - advanced
@@ -126,6 +123,3 @@ Along with the full-featured .NET library, we provide simple but powerful free o
 
 To sign PDF, Word, Excel, PowerPoint, and other documents you can use the online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.
 
----
----
----

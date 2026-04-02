@@ -1,5 +1,4 @@
 ---
----
 id: save-signed-images-with-various-output-types
 url: signature/net/save-signed-images-with-various-output-types
 title: Saving signed images with various output types
@@ -172,4 +171,3 @@ Along with the full-featured .NET library, we provide simple but powerful free o
 To generate image signatures and/or sign your files with them for free, you can use the [Generate Image](https://products.groupdocs.app/signature/generate/image) online app.
 
 To sign PDF, Word, Excel, PowerPoint, and other documents you can use the other online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.
----

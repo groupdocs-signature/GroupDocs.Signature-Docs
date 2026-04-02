@@ -1,5 +1,4 @@
 ---
----
 id: sign-pdf-documents-with-digital-signature-appearance
 url: signature/net/sign-pdf-documents-with-digital-signature-appearance
 title: Sign Pdf documents with custom digital signature appearance
@@ -89,4 +88,3 @@ Along with the full-featured .NET library, we provide simple but powerful free o
 
 To sign PDF, Word, Excel, PowerPoint, and other documents you can use the online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.
 
----

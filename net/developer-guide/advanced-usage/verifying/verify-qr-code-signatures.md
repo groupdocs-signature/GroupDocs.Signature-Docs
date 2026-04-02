@@ -1,5 +1,4 @@
 ---
----
 id: verify-qr-code-signatures
 url: signature/net/verify-qr-code-signatures
 title: Verifying QR Code signatures in advance
@@ -87,4 +86,3 @@ Along with the full-featured .NET library, we provide simple but powerful free o
 
 To sign PDF, Word, Excel, PowerPoint, and other documents you can use the online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.
 
----

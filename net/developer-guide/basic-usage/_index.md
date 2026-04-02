@@ -1,5 +1,4 @@
 ---
----
 id: basic-usage
 url: signature/net/basic-usage
 title: Basic usage
@@ -45,4 +44,3 @@ using (Signature signature = new Signature("sample.docx"))
 
 Please check detailed examples of how to eSign documents, search and verify document signatures in the following guides:
 
----
