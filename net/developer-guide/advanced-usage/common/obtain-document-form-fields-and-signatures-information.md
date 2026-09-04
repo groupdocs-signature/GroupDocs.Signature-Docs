@@ -4,7 +4,7 @@ url: signature/net/obtain-document-form-fields-and-signatures-information
 title: Obtain document form fields and signatures information
 weight: 1
 description: "This article shows how to get information about electronic signatures in the document and its form fields with GroupDocs.Signature API."
-keywords: 
+keywords: form fields, form field signatures, document information, signatures information, get document form fields
 productName: GroupDocs.Signature for .NET 
 toc: True
 structuredData:
@@ -28,21 +28,22 @@ structuredData:
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) allows to get extended document information which includes:
 
-* list of all existing [Form Field Signatures](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/formfieldsignature/) in the document. This list will contain all Form Fields elements in the document no matter if these components were added by GroupDocs Signature or any other third party software. Please be aware only Pdf and Word processing documents support these elements.
+* list of the document form fields exposed as [FormFieldSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/formfieldsignature/) elements — the `FormFields` collection. This list will contain all Form Fields elements in the document no matter if these components were added by GroupDocs Signature or any other third party software. Please be aware only Pdf and Word processing documents support these elements.
 * list of [Text Signatures](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/textsignature) previously added to document over [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method or updated by [Update](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/update) method;
 * list of [Image Signatures](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/imagesignature) previously added to document over [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method or updated by [Update](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/update) method;
 * list of [DigitalSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/digitalsignature) previously added to document over [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method or updated by [Update](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/update) method;
 * list of [BarcodeSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/barcodesignature) previously added to document over [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method or updated by [Update](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/update) method;
 * list of [QrCodeSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodesignature) previously added to document over [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method or updated by [Update](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/update) method;
-* list of [FormFieldSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/formfieldsignature/) previously added to document over [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method or updated by [Update](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/update) method;
-* list of [MetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/metadatasignature/) previously added to document over [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method or updated by [Update](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/update) method;
+* list of [FormFieldSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/formfieldsignature/) previously added to document over [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method or updated by [Update](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/update) method — the `FormFieldSignatures` collection, which unlike `FormFields` holds only the form-field signatures added through GroupDocs.Signature;
+* list of [MetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/metadatasignature/) previously added to document over [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method — unlike the other signature types, metadata signatures cannot be modified by the Update method, so this collection reflects sign operations only;
 
 ## Analyze document form fields and signatures information
 
 The following code snippet demonstrates how to obtain information about document form fields, signatures and analyze them.
 
 ```csharp
-using (Signature signature = new Signature("sampleSigned.pdf"))
+string filePath = "sampleSigned.pdf";
+using (Signature signature = new Signature(filePath))
 {
     IDocumentInfo documentInfo = signature.GetDocumentInfo();
     Console.WriteLine($"Document properties {Path.GetFileName(filePath)}:");
@@ -92,7 +93,7 @@ using (Signature signature = new Signature("sampleSigned.pdf"))
     }
     // display document Form Fields signatures information
     Console.WriteLine($"Document Form Fields signatures : {documentInfo.FormFieldSignatures.Count}");
-    foreach (FormFieldSignature formFieldSignature in documentInfo.FormFields)
+    foreach (FormFieldSignature formFieldSignature in documentInfo.FormFieldSignatures)
     {
         Console.WriteLine($" - #{formFieldSignature.SignatureId} Type {formFieldSignature.Type}: Name: {formFieldSignature.Name} Value: {formFieldSignature.Value}");
     }
@@ -104,6 +105,12 @@ using (Signature signature = new Signature("sampleSigned.pdf"))
     }
 }
 ```
+
+{{< alert style="info" >}}
+**GroupDocs.Signature** also allows to add, search and read metadata signatures in documents.  
+To learn more about please refer to the following guide:
+[Work with document metadata]({{< ref "signature/net/developer-guide/basic-usage/work-with-document-metadata.md" >}})
+{{< /alert >}}
 
 ## More resources
 

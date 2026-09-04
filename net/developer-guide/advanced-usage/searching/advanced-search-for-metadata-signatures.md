@@ -5,7 +5,7 @@ title: Advanced search for Metadata signatures
 linkTitle: 🌐 Metadata
 weight: 12
 description: " This article explains how to search various data values types within electronic signatures in the document metadata by GroupDocs.Signature API."
-keywords: 
+keywords: search metadata signatures, metadata search options, convert metadata value, read pdf metadata in C#, typed metadata values
 productName: GroupDocs.Signature for .NET 
 toc: True
 structuredData:
@@ -23,7 +23,7 @@ structuredData:
         - name: Pass file of supported file types.
           text: Call constructor of Signature class passing file as a parameter. You can use either file path or file stream. 
         - name: Get list of items 
-          text: Invoke method Search passing SignatureType.Metadata type.
+          text: Create MetadataSearchOptions object, adjust its properties if needed and invoke method Search passing these options to it.
         - name: Process list of found items
           text: Loop through list of found items and process in demanded way.
 ---
@@ -32,7 +32,7 @@ structuredData:
 Here are the steps to search for Metadata signature and obtain required data type with GroupDocs.Signature:
 
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
-* Create objects of [MetadataSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasearchoptions) class
+* Create object of [MetadataSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasearchoptions) class. Adjust its properties if needed: set [Name](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasearchoptions/name) along with [NameMatchType](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasearchoptions/namematchtype) to keep only entries with matching names, or set [IncludeBuiltinProperties](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasearchoptions/includebuiltinproperties) to true to obtain built-in document properties as well (this flag makes sense for Word Processing, Spreadsheet and Presentation documents only).
 * Call [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [MetadataSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasearchoptions)  to it.
 * Call proper conversion method to obtain corresponding Metadata value to required data type.
 
@@ -43,8 +43,10 @@ This example shows how to search for Metadata signature values with various data
 ```csharp
 using (Signature signature = new Signature("signed.pdf"))
 {
+    // set up search options: default options return all metadata signatures of the document
+    MetadataSearchOptions searchOptions = new MetadataSearchOptions();
     // search for signatures in document
-    List<PdfMetadataSignature> signatures = signature.Search<PdfMetadataSignature>(SignatureType.Metadata);
+    List<PdfMetadataSignature> signatures = signature.Search<PdfMetadataSignature>(searchOptions);
     // try to get each Pdf signature with proper data type added in Basic usage example SignPdfWithMetadata
     PdfMetadataSignature mdSignature;
     // See example SignPdfWithMetadata with added various data type values to signatures
@@ -53,7 +55,7 @@ using (Signature signature = new Signature("signed.pdf"))
         mdSignature = signatures.FirstOrDefault(p => p.Name == "Author");
         Console.WriteLine($"\t[{mdSignature.Name}] as String = {mdSignature.ToString()}");
         mdSignature = signatures.FirstOrDefault(p => p.Name == "CreatedOn");
-        Console.WriteLine($"\t[{mdSignature.Name}] as String = {mdSignature.ToDateTime().ToShortDateString()}");
+        Console.WriteLine($"\t[{mdSignature.Name}] as DateTime = {mdSignature.ToDateTime().ToShortDateString()}");
         mdSignature = signatures.FirstOrDefault(p => p.Name == "DocumentId");
         Console.WriteLine($"\t[{mdSignature.Name}] as Integer = {mdSignature.ToInteger()}");
         mdSignature = signatures.FirstOrDefault(p => p.Name == "SignatureId");
@@ -65,10 +67,23 @@ using (Signature signature = new Signature("signed.pdf"))
     }
     catch (Exception ex)
     {
-        Helper.WriteError($"Error obtaining signature: {ex.Message}");
+        Console.WriteLine($"Error obtaining signature: {ex.Message}");
     }
+
+    // narrow the search down to metadata signatures whose names end with "Id"
+    MetadataSearchOptions filteredOptions = new MetadataSearchOptions
+    {
+        Name = "Id",
+        NameMatchType = TextMatchType.EndsWith
+    };
+    List<PdfMetadataSignature> filteredSignatures = signature.Search<PdfMetadataSignature>(filteredOptions);
+    Console.WriteLine($"Found {filteredSignatures.Count} metadata signature(s) with name ending with 'Id'");
 }
 ```
+
+{{< alert style="info" >}}
+Metadata search is one part of the overall document metadata workflow. See the [Work with document metadata]({{< ref "signature/net/developer-guide/basic-usage/work-with-document-metadata.md" >}}) page for the complete picture: adding metadata signatures, reading built-in properties, protecting values, and known limitations.
+{{< /alert >}}
 
 ## More resources
 

@@ -28,9 +28,9 @@ structuredData:
 
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) allows to get document information which includes:
 
-* [FileType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/documentinfo/filetype)
-* [Size](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/documentinfo/size)
-* [PageCount](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/documentinfo/pagecount)
+* [FileType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/idocumentinfo/filetype)
+* [Size](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/idocumentinfo/size)
+* [PageCount](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/idocumentinfo/pagecount)
 * Pages dimensions - [Height](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/pageinfo/height) and [Width](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/pageinfo/width) for each page in a document [Pages](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/idocumentinfo/pages) collection.
 
 ## Get document information from file on local disk
@@ -58,7 +58,8 @@ using (Signature signature = new Signature("sample.pdf"))
 The following code snippet demonstrates how to obtain information about document provided as a stream.
 
 ```csharp
-using (var stream = File.OpenRead("sample.pdf"))
+string filePath = "sample.pdf";
+using (var stream = File.OpenRead(filePath))
 {
     using (Signature signature = new Signature(stream))
     {
@@ -77,9 +78,10 @@ using (var stream = File.OpenRead("sample.pdf"))
 ```
 
 {{< alert style="info" >}}
-**GroupDocs.Signature** also provides an abilityto obtain extended information of document form fields and existing signatures.  
+**GroupDocs.Signature** also provides an ability to obtain extended information of document form fields and existing signatures.  
 To learn more about please refer to the following guides:
-[Obtain document form fields and signatures information]({{< ref "signature/net/developer-guide/advanced-usage/common/obtain-document-form-fields-and-signatures-information.md" >}})
+[Obtain document form fields and signatures information]({{< ref "signature/net/developer-guide/advanced-usage/common/obtain-document-form-fields-and-signatures-information.md" >}})  
+For a complete guide to reading, adding, and securing hidden document metadata, see [Work with document metadata]({{< ref "signature/net/developer-guide/basic-usage/work-with-document-metadata.md" >}}).
 {{< /alert >}}
 
 ### Advanced Usage Topics
