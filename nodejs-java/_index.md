@@ -10,7 +10,7 @@ hideChildren: True
 structuredData:
     showOrganization: True
 ---
-{{< alert style="info" >}}<img src="/signature/nodejs-java/images/home.png" width="110" height="110" alt="groupdocs-signature-nodejs-home" align="left" style="margin: 0 30px 30px 0"/> **Welcome to the GroupDocs.Signature for Node.js**  
+{{< alert style="info" >}}<img src="/logo/128x128/groupdocs-signature-nodejs.png" alt="groupdocs-signature-nodejs-java-home" align="left" style="width:110px; margin: 0 30px 30px 0"/> **Welcome to the GroupDocs.Signature for Node.js**  
 GroupDocs.Signature for Node.js allows developers to write applications with the ability to significantly sign electronic docs of various file formats. This e-signing API permits the users to add different types of signatures like text, image or digital signatures on electronic documents. The quite captivating fact about the API is, its UI less and independent calls can be made.
 {{< /alert >}}
 
