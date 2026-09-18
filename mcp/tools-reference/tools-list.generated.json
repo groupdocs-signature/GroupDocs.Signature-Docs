@@ -1,0 +1,497 @@
+{
+  "serverVersion": "26.9.0",
+  "capturedFrom": "GroupDocs.Signature.Mcp@26.9.0",
+  "tools": [
+    {
+      "name": "sign",
+      "description": "Signs a document with a text, QR code, barcode, or digital certificate signature and saves the signed file to storage. Supports PDF, DOCX, XLSX, PPTX, and 30+ more document formats. Call this tool immediately whenever the user asks to sign a document, add a signature, or apply a digital signature. Do NOT pre-check whether files exist — just pass the filenames the user provided. The tool resolves files from storage and returns an error with available files if a name is not found. Returns a saved-path message ('Signed <file> with <type> signature') and the download URL or storage path. On failure, the response text starts with 'Signing failed for' followed by the underlying exception type, message, and inner-exception chain.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "object",
+            "properties": {
+              "filePath": {
+                "description": "Name or path of a file in the configured storage, e.g. 'report.pdf' or 'output/report.pdf'. Use this for files the server can already see.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileContent": {
+                "description": "Base64-encoded file content, for passing a file that is not in storage. Must be accompanied by fileName so the format can be determined.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileName": {
+                "description": "Filename with extension, e.g. 'report.pdf'. Required alongside fileContent. May also be used on its own as an alias for filePath.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "type": {
+            "description": "Signature type: text, qrcode, barcode, digital",
+            "type": "string"
+          },
+          "text": {
+            "description": "Signature text (for text/qrcode/barcode types)",
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          },
+          "certificate": {
+            "description": "Digital certificate file (for type 'digital')",
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "filePath": {
+                "description": "Name or path of a file in the configured storage, e.g. 'report.pdf' or 'output/report.pdf'. Use this for files the server can already see.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileContent": {
+                "description": "Base64-encoded file content, for passing a file that is not in storage. Must be accompanied by fileName so the format can be determined.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileName": {
+                "description": "Filename with extension, e.g. 'report.pdf'. Required alongside fileContent. May also be used on its own as an alias for filePath.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "default": null
+          },
+          "certificatePassword": {
+            "description": "Certificate password",
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          },
+          "password": {
+            "description": "Password for protected documents",
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          }
+        },
+        "required": [
+          "file",
+          "type"
+        ]
+      },
+      "execution": {
+        "taskSupport": "optional"
+      }
+    },
+    {
+      "name": "verify",
+      "description": "Verifies signatures in a document and returns the result (valid/invalid, counts) as JSON. Supports text, QR code, barcode, and digital signatures. Supports PDF, DOCX, XLSX, PPTX, and 30+ more document formats. Call this tool immediately whenever the user asks to verify a signature, check if a document is signed, or validate a signature. Do NOT pre-check whether files exist — just pass the filename the user provided. The tool resolves files from storage and returns an error with available files if a name is not found. Returns a JSON object with `isValid`, `succeeded` (count), and `failed` (count) fields. On failure, the response text starts with 'Verification failed for' followed by the underlying exception type, message, and inner-exception chain.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "object",
+            "properties": {
+              "filePath": {
+                "description": "Name or path of a file in the configured storage, e.g. 'report.pdf' or 'output/report.pdf'. Use this for files the server can already see.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileContent": {
+                "description": "Base64-encoded file content, for passing a file that is not in storage. Must be accompanied by fileName so the format can be determined.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileName": {
+                "description": "Filename with extension, e.g. 'report.pdf'. Required alongside fileContent. May also be used on its own as an alias for filePath.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "type": {
+            "description": "Signature type to verify: text, qrcode, barcode, digital, all",
+            "type": "string",
+            "default": "all"
+          },
+          "password": {
+            "description": "Password for protected documents",
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          }
+        },
+        "required": [
+          "file"
+        ]
+      },
+      "execution": {
+        "taskSupport": "optional"
+      }
+    },
+    {
+      "name": "search_digital_signatures",
+      "description": "Searches a document for digital certificate signatures and returns details for each: signer name, issuer, certificate serial number, validity period, sign timestamp, validity status, and any comments or reason attached to the signature. Supports PDF and Office documents (DOCX, XLSX, PPTX). Do NOT pre-check whether the file exists — pass the filename the user provided directly. Returns a JSON object with `found` (count) and `signatures` (array with `signTime`, `isValid`, `comments`, `thumbprint`, and a nested `certificate` object). On failure, the response text starts with 'Digital signature search failed for' followed by the underlying exception type, message, and inner-exception chain.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "object",
+            "properties": {
+              "filePath": {
+                "description": "Name or path of a file in the configured storage, e.g. 'report.pdf' or 'output/report.pdf'. Use this for files the server can already see.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileContent": {
+                "description": "Base64-encoded file content, for passing a file that is not in storage. Must be accompanied by fileName so the format can be determined.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileName": {
+                "description": "Filename with extension, e.g. 'report.pdf'. Required alongside fileContent. May also be used on its own as an alias for filePath.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "password": {
+            "description": "Password for protected documents.",
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          }
+        },
+        "required": [
+          "file"
+        ]
+      },
+      "execution": {
+        "taskSupport": "optional"
+      }
+    },
+    {
+      "name": "search_qr_codes",
+      "description": "Searches a document for QR code signatures and returns each QR code's decoded text, page, position, and — when returnImage is true — the QR code graphic as a base64-encoded PNG. Supports PDF, DOCX, XLSX, PPTX, and 30+ more document formats. Optionally filters results to QR codes whose decoded text contains a specific string. Do NOT pre-check whether the file exists — pass the filename the user provided directly. Returns a JSON object with `found` (count) and `signatures` (array with `page`, `type`, `text`, position, dimensions, and optional `imageBase64`). On failure, the response text starts with 'QR code search failed for' followed by the underlying exception type, message, and inner-exception chain.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "object",
+            "properties": {
+              "filePath": {
+                "description": "Name or path of a file in the configured storage, e.g. 'report.pdf' or 'output/report.pdf'. Use this for files the server can already see.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileContent": {
+                "description": "Base64-encoded file content, for passing a file that is not in storage. Must be accompanied by fileName so the format can be determined.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileName": {
+                "description": "Filename with extension, e.g. 'report.pdf'. Required alongside fileContent. May also be used on its own as an alias for filePath.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "text": {
+            "description": "Return only QR codes whose decoded text contains this string. Omit to return all QR codes.",
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          },
+          "returnImage": {
+            "description": "Include the QR code graphic as a base64 PNG in the response.",
+            "type": "boolean",
+            "default": false
+          },
+          "password": {
+            "description": "Password for protected documents.",
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          }
+        },
+        "required": [
+          "file"
+        ]
+      },
+      "execution": {
+        "taskSupport": "optional"
+      }
+    },
+    {
+      "name": "search_barcodes",
+      "description": "Searches a document for barcode signatures (Code39, Code128, EAN, QR-adjacent 1D barcodes, etc.) and returns each barcode's decoded text value, page, position, and — when returnImage is true — the barcode graphic as a base64-encoded PNG. Supports PDF, DOCX, XLSX, PPTX, and 30+ more document formats. Optionally filters results to barcodes whose text contains a specific string. Do NOT pre-check whether the file exists — pass the filename the user provided directly. Returns a JSON object with `found` (count) and `signatures` (array with `page`, `type`, `text`, position, dimensions, and optional `imageBase64`). On failure, the response text starts with 'Barcode search failed for' followed by the underlying exception type, message, and inner-exception chain.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "object",
+            "properties": {
+              "filePath": {
+                "description": "Name or path of a file in the configured storage, e.g. 'report.pdf' or 'output/report.pdf'. Use this for files the server can already see.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileContent": {
+                "description": "Base64-encoded file content, for passing a file that is not in storage. Must be accompanied by fileName so the format can be determined.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileName": {
+                "description": "Filename with extension, e.g. 'report.pdf'. Required alongside fileContent. May also be used on its own as an alias for filePath.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "text": {
+            "description": "Return only barcodes whose decoded text contains this string. Omit to return all barcodes.",
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          },
+          "returnImage": {
+            "description": "Include the barcode graphic as a base64 PNG in the response.",
+            "type": "boolean",
+            "default": false
+          },
+          "password": {
+            "description": "Password for protected documents.",
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          }
+        },
+        "required": [
+          "file"
+        ]
+      },
+      "execution": {
+        "taskSupport": "optional"
+      }
+    },
+    {
+      "name": "search_text_signatures",
+      "description": "Searches a document for embedded text signatures (stamps, labels, native text annotations) and returns each signature's text content, page, position, and implementation type. Supports PDF, DOCX, XLSX, PPTX, and 30+ more document formats. Optionally filters to signatures whose text contains a specific string. Note: this searches for signature objects — to search for arbitrary text inside document content use a text-extraction tool instead. Do NOT pre-check whether the file exists — pass the filename the user provided directly. Returns a JSON object with `found` (count) and `signatures` (array with `page`, `text`, `implementation`, `left`, `top`, `width`, `height` per signature). On failure, the response text starts with 'Text signature search failed for' followed by the underlying exception type, message, and inner-exception chain.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "object",
+            "properties": {
+              "filePath": {
+                "description": "Name or path of a file in the configured storage, e.g. 'report.pdf' or 'output/report.pdf'. Use this for files the server can already see.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileContent": {
+                "description": "Base64-encoded file content, for passing a file that is not in storage. Must be accompanied by fileName so the format can be determined.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileName": {
+                "description": "Filename with extension, e.g. 'report.pdf'. Required alongside fileContent. May also be used on its own as an alias for filePath.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "text": {
+            "description": "Return only text signatures whose content contains this string. Omit to return all text signatures.",
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          },
+          "password": {
+            "description": "Password for protected documents.",
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          }
+        },
+        "required": [
+          "file"
+        ]
+      },
+      "execution": {
+        "taskSupport": "optional"
+      }
+    },
+    {
+      "name": "search_image_signatures",
+      "description": "Searches a document for embedded image signatures (logo, stamp image, picture overlays) and returns each image's page, position, size, and content as a base64-encoded PNG ready for display. Supports PDF, DOCX, XLSX, PPTX, and 30+ more document formats. Do NOT pre-check whether the file exists — pass the filename the user provided directly. Returns a JSON object with `found` (count) and `signatures` (array with `index`, `page`, position, dimensions, `sizeBytes`, and `imageBase64`). On failure, the response text starts with 'Image signature search failed for' followed by the underlying exception type, message, and inner-exception chain.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "object",
+            "properties": {
+              "filePath": {
+                "description": "Name or path of a file in the configured storage, e.g. 'report.pdf' or 'output/report.pdf'. Use this for files the server can already see.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileContent": {
+                "description": "Base64-encoded file content, for passing a file that is not in storage. Must be accompanied by fileName so the format can be determined.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileName": {
+                "description": "Filename with extension, e.g. 'report.pdf'. Required alongside fileContent. May also be used on its own as an alias for filePath.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "password": {
+            "description": "Password for protected documents.",
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          }
+        },
+        "required": [
+          "file"
+        ]
+      },
+      "execution": {
+        "taskSupport": "optional"
+      }
+    },
+    {
+      "name": "get_document_info",
+      "description": "Returns the file type, page count, size, and per-page dimensions of a document as JSON, without modifying the file. Supports PDF, DOCX, XLSX, PPTX, images, and 30+ more document formats. Call this tool whenever the user asks to inspect a document, check its page count, or get its details — useful as a precondition check before sign / verify / search (e.g. 'how many pages does this PDF have?'). Do NOT pre-check whether the file exists — just pass the filename the user provided. Returns a JSON object with fields `fileName`, `fileType`, `pageCount`, `size`, and `pages` (array of `{ number, width, height }`). On failure, the response text starts with 'Document-info lookup failed for' followed by the underlying exception type, message, and inner-exception chain.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "object",
+            "properties": {
+              "filePath": {
+                "description": "Name or path of a file in the configured storage, e.g. 'report.pdf' or 'output/report.pdf'. Use this for files the server can already see.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileContent": {
+                "description": "Base64-encoded file content, for passing a file that is not in storage. Must be accompanied by fileName so the format can be determined.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileName": {
+                "description": "Filename with extension, e.g. 'report.pdf'. Required alongside fileContent. May also be used on its own as an alias for filePath.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "password": {
+            "description": "Password for protected documents",
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          }
+        },
+        "required": [
+          "file"
+        ]
+      },
+      "execution": {
+        "taskSupport": "optional"
+      }
+    },
+    {
+      "name": "get_license_status",
+      "description": "Returns how this MCP server is licensed, and — under metered licensing — how much has been consumed. Call this when the user asks about licensing, evaluation limitations, metered usage, remaining credit, or which product engine version is running. Returns a JSON object with `mode` (\"evaluation\", \"licensed\" or \"metered\"), `licensed` (true for both licensed and metered), `consumption` (null unless metered; otherwise `quantity` and `credit`, or `error` if the reading failed), and `server` / `engine` name and version. Takes no arguments and never modifies anything.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  ]
+}
