@@ -24,7 +24,7 @@ Here are the steps to setup extra image appearance with GroupDocs.Signature:
 This example shows how to setup extra digital signature look. See [SignResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult)
 
 ```csharp
-using (Signature signature = new Signature("sample.docs"))
+using (Signature signature = new Signature("sample.docx"))
 {
     DigitalSignOptions options = new DigitalSignOptions("certificate.pfx")
     {
@@ -61,7 +61,7 @@ using (Signature signature = new Signature("sample.docs"))
 This example shows how to add Text signature to Pdf document with sticker look. See [SignResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult)
 
 ```csharp
-using (Signature signature = new Signature("sample.docx"))
+using (Signature signature = new Signature("sample.pdf"))
 {
     TextSignOptions options = new TextSignOptions("John Smith")
     {
@@ -85,17 +85,43 @@ using (Signature signature = new Signature("sample.docx"))
             Title = "Sample Title"
         },
         // set signature alignment
-        VerticalAlignment = Domain.VerticalAlignment.Bottom,
-        HorizontalAlignment = Domain.HorizontalAlignment.Right,
+        VerticalAlignment = VerticalAlignment.Bottom,
+        HorizontalAlignment = HorizontalAlignment.Right,
         Margin = new Padding() { Bottom = 20, Right = 20 },
         // set text color and Font
         ForeColor = Color.Red,
         Font = new SignatureFont { Size = 12, FamilyName = "Comic Sans MS" },
     };
     // sign document to file
-    signature.Sign("signed.docx", options);
+    signature.Sign("signed.pdf", options);
 }
 ```
+
+## Sign Word documents with post-quantum (ML-DSA) certificates
+
+Starting with GroupDocs.Signature for .NET 26.9, Word Processing documents can be signed with a certificate that has a post-quantum ML-DSA key (ML-DSA-44, ML-DSA-65 or ML-DSA-87, defined in FIPS 204). The PFX file is used in the same way as any other certificate:
+
+```csharp
+using (Signature signature = new Signature("sample.docx"))
+{
+    // PFX file with an ML-DSA-65 key and its certificate
+    DigitalSignOptions options = new DigitalSignOptions("mldsa65.pfx")
+    {
+        Password = "1234567890"
+    };
+    SignResult result = signature.Sign("signed.docx", options);
+}
+```
+
+This works on every supported platform. .NET itself reads ML-DSA keys only on some systems (for example, it cannot on Linux with .NET 6 or .NET 8). Where it cannot, GroupDocs.Signature uses the certificate as read by the Word Processing engine. Verifying the signed document with [DigitalVerifyOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalverifyoptions/) and the PFX file, or its public `.cer` certificate, works in the same way.
+
+Limits:
+
+* Only Word Processing documents (for example DOCX, DOC and ODT) can be signed with ML-DSA. PDF, Spreadsheet and Presentation documents cannot yet.
+* ML-KEM keys are for key agreement and cannot sign.
+* There is no standard XML-DSig identifier for ML-DSA yet, so the signature names the algorithm by its object identifier (for example `urn:oid:2.16.840.1.101.3.4.3.18` for ML-DSA-65). Microsoft Word and LibreOffice may not validate such a signature. Check with the software your recipients use before you rely on it.
+* Where .NET cannot read the key, the certificate returned in [SignResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signresult) (`DigitalSignature.Certificate`) is the public certificate, without its private key.
+* Expired and not-yet-valid ML-DSA certificates are rejected in the same way as any other certificate. See "Certificates outside their validity period" in [Pdf Digitally signing]({{< ref "signature/net/developer-guide/advanced-usage/signing/electronic-signatures/sign-document-with-digital-signature-advanced.md" >}}).
 
 ## More resources
 

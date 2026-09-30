@@ -12,7 +12,7 @@ hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [TextSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions) class with property [SignatureImplementation](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions/signatureimplementation) of enumeration type [TextSignatureImplementation](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/textsignatureimplementation) to specify various implementations of Text Signatures with following values and its meaning
 
-* [TextSignatureImplementation.Stamp](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/textsignatureimplementation) - text stamp component (label) on the document page.
+* [TextSignatureImplementation.Native](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/textsignatureimplementation) - native text object (label) on the document page.
 * [TextSignatureImplementation.Annotation](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/textsignatureimplementation) - text annotation with different appearances settings. This implementation depends of document type.
 * [TextSignatureImplementation.Image](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/textsignatureimplementation) - text will be transformed to image and put to document page. This implementation makes sense when there's a need to adjust extended appearances effects that is possible with image adjustment only (like opacity, free rotation, fading, shadows etc).
 * [TextSignatureImplementation.Sticker](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/textsignatureimplementation) - text sticker icon with different appearances settings. This implementation depends of document type.
@@ -37,7 +37,7 @@ using (Signature signature = new Signature("sample.pdf"))
     TextSignOptions options = new TextSignOptions("John Smith")
     {
         // set alternative signature implementation on document page
-        SignatureImplementation = TextSignatureImplementation.Stamp,
+        SignatureImplementation = TextSignatureImplementation.Native,
         // set alignment
         VerticalAlignment = VerticalAlignment.Top,
         HorizontalAlignment = HorizontalAlignment.Right,
@@ -51,8 +51,7 @@ using (Signature signature = new Signature("sample.pdf"))
     int number = 1;
     foreach (BaseSignature temp in signResult.Succeeded)
     {
-        Console.WriteLine($"Signature #{number++}: Type: {temp.SignatureType} Id:{temp.SignatureId},
-            Location: {temp.Left}x{temp.Top}. Size: {temp.Width}x{temp.Height}");
+        Console.WriteLine($"Signature #{number++}: Type: {temp.SignatureType} Id:{temp.SignatureId}, Location: {temp.Left}x{temp.Top}. Size: {temp.Width}x{temp.Height}");
     }
 }
 ```
@@ -98,8 +97,7 @@ using (Signature signature = new Signature("sample.pdf"))
     int number = 1;
     foreach (BaseSignature temp in signResult.Succeeded)
     {
-        Console.WriteLine($"Signature #{number++}: Type: {temp.SignatureType} Id:{temp.SignatureId},
-            Location: {temp.Left}x{temp.Top}. Size: {temp.Width}x{temp.Height}");
+        Console.WriteLine($"Signature #{number++}: Type: {temp.SignatureType} Id:{temp.SignatureId}, Location: {temp.Left}x{temp.Top}. Size: {temp.Width}x{temp.Height}");
     }
 }
 ```
@@ -128,8 +126,7 @@ using (Signature signature = new Signature("sample.pdf"))
     int number = 1;
     foreach (BaseSignature temp in signResult.Succeeded)
     {
-        Console.WriteLine($"Signature #{number++}: Type: {temp.SignatureType} Id:{temp.SignatureId},
-            Location: {temp.Left}x{temp.Top}. Size: {temp.Width}x{temp.Height}");
+        Console.WriteLine($"Signature #{number++}: Type: {temp.SignatureType} Id:{temp.SignatureId}, Location: {temp.Left}x{temp.Top}. Size: {temp.Width}x{temp.Height}");
     }
 }
 ```
@@ -159,8 +156,7 @@ using (Signature signature = new Signature("sample.pdf"))
     int number = 1;
     foreach (BaseSignature temp in signResult.Succeeded)
     {
-        Console.WriteLine($"Signature #{number++}: Type: {temp.SignatureType} Id:{temp.SignatureId},
-            Location: {temp.Left}x{temp.Top}. Size: {temp.Width}x{temp.Height}");
+        Console.WriteLine($"Signature #{number++}: Type: {temp.SignatureType} Id:{temp.SignatureId}, Location: {temp.Left}x{temp.Top}. Size: {temp.Width}x{temp.Height}");
     }
 }
 ```
@@ -196,8 +192,7 @@ using (Signature signature = new Signature("sample.docx"))
     int number = 1;
     foreach (BaseSignature temp in signResult.Succeeded)
     {
-        Console.WriteLine($"Signature #{number++}: Type: {temp.SignatureType} Id:{temp.SignatureId},
-            Location: {temp.Left}x{temp.Top}. Size: {temp.Width}x{temp.Height}");
+        Console.WriteLine($"Signature #{number++}: Type: {temp.SignatureType} Id:{temp.SignatureId}, Location: {temp.Left}x{temp.Top}. Size: {temp.Width}x{temp.Height}");
     }
 }
 ```

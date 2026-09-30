@@ -13,6 +13,26 @@ toc: True
 
 NuGet is the easiest way to download and install GroupDocs.Signature for .NET. There are ways to install it in your project.
 
+### Choose a package
+
+| Package | Target frameworks |
+| --- | --- |
+| `GroupDocs.Signature` | .NET Framework 4.6.2, .NET 6, .NET 8 and .NET 10. Your project gets the build that matches its target framework |
+| `GroupDocs.Signature.Net462` | .NET Framework 4.6.2 |
+| `GroupDocs.Signature.Net60` | .NET 6 |
+| `GroupDocs.Signature.Net80` | .NET 8 |
+| `GroupDocs.Signature.Net100` | .NET 10 |
+
+Use `GroupDocs.Signature` unless you want to reference a single build. Starting with version 26.9 there is a .NET 10 package, and the `GroupDocs.Signature.NetStandard21` package is discontinued. See [System Requirements]({{< ref "signature/net/getting-started/system-requirements.md" >}}).
+
+### Install with the .NET CLI
+
+Run the following command in the folder of your project:
+
+```bash
+dotnet add package GroupDocs.Signature
+```
+
 ### Install via Package Manager GUI
 
 Follow these steps to reference GroupDocs.Signature using Package Manager GUI:

@@ -23,12 +23,16 @@ structuredData:
         - name: Load particular file with supported type.
           text: Construct Signature class instance by passing either file path or stream. 
         - name: Provide verification options. 
-          text: Set demanded data of the DigitalVerifyOptions instance such as comment text and type of text verification.
+          text: Set demanded data of the DigitalVerifyOptions instance such as the certificate, the subject name of the signer or the signing reason.
         - name: Get verification result
           text: Call method Verify passing options. Obtain verification result whose property IsValid must be true if verification succeed.
 ---
 ## Overview
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [DigitalVerifyOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalverifyoptions) class to specify different options for digital signatures verification.
+
+{{< alert style="info" >}}
+Verification performs two independent checks. First the signature itself is verified cryptographically: if the document was altered after signing, the result is not valid regardless of any other option. Then any criteria you set on `DigitalVerifyOptions` - certificate, subject name, issuer name, signing time, reason, contact or location - are matched. Both must pass for `IsValid` to be true. For PDF documents the cryptographic check was added in GroupDocs.Signature for .NET 26.9; earlier versions compared only the criteria.
+{{< /alert >}}
 
 Here are the steps to verify Digital signature within the document with GroupDocs.Signature:
 
@@ -43,7 +47,11 @@ using (Signature signature = new Signature("sample.pdf"))
 {
     DigitalVerifyOptions options = new DigitalVerifyOptions("certificate.pfx")
     {
-        Comments = "Test comment"
+        Password = "1234567890",
+        // the subject of the signing certificate must contain this text
+        SubjectName = "John Smith",
+        // the signing reason stored in the PDF signature must be equal to this text
+        Reason = "Approved"
     };
     // verify document signatures
     VerificationResult result = signature.Verify(options);
@@ -57,6 +65,20 @@ using (Signature signature = new Signature("sample.pdf"))
     }
 }
 ```
+
+### Verification criteria by document format
+
+Not every property of `DigitalVerifyOptions` applies to every document format. A property that does not apply is ignored, so it can neither reject nor accept a signature. For example, `Comments` has no effect on a PDF document, because PDF signatures have no comment field: use `Reason` instead.
+
+| Property | PDF | Word Processing | Spreadsheet | Presentation |
+| --- | --- | --- | --- | --- |
+| `Certificate` (serial number and thumbprint) | yes | yes | yes | yes |
+| `SubjectName`, `IssuerName` | yes | yes | no | no |
+| `SignDateTimeFrom`, `SignDateTimeTo` | yes | yes | yes | yes |
+| `Reason`, `Contact`, `Location` | yes | no | no | no |
+| `Comments` | no | yes | yes | yes |
+
+`SubjectName` and `IssuerName` match when the subject or issuer of the signing certificate contains the value, case-sensitive. They apply to PDF documents starting with GroupDocs.Signature for .NET 26.9; earlier versions ignored them there.
 
 ### Advanced Usage Topics
 

@@ -3,88 +3,58 @@ id: system-requirements
 url: signature/net/system-requirements
 title: System Requirements
 weight: 2
-description: "GroupDocs.Signature for .NET supports any 32-bit or 64-bit operating system where .NET or Mono framework is installed"
-keywords: GroupDocs.Signature for .NET,Signature 
+description: "GroupDocs.Signature for .NET runs on Windows, Linux and macOS with .NET Framework 4.6.2 or later, .NET 6, .NET 8 or .NET 10"
+keywords: GroupDocs.Signature for .NET,Signature,system requirements,.NET 10,.NET 8,.NET 6,.NET Framework 4.6.2,Linux,macOS
 productName: GroupDocs.Signature for .NET
 hideChildren: False 
 toc: True
 ---
 ## Overview
 
-GroupDocs.Signature for .NET does not require any external software or third party tool to be installed. Just follow one of the way as described in [Development Environment, Installation and Configuration]({{< ref "signature/net/getting-started/installation.md" >}}).
+GroupDocs.Signature for .NET does not require any external software or third party tool to be installed. Just follow one of the ways described in [Installation]({{< ref "signature/net/getting-started/installation.md" >}}).
+
+## Supported Frameworks
+
+| Framework | NuGet package with this build only |
+| --- | --- |
+| .NET Framework 4.6.2 or later | `GroupDocs.Signature.Net462` |
+| .NET 6 | `GroupDocs.Signature.Net60` |
+| .NET 8 | `GroupDocs.Signature.Net80` |
+| .NET 10 | `GroupDocs.Signature.Net100` |
+
+The `GroupDocs.Signature` package references all four builds, and your project gets the one that matches its target framework.
+
+{{< alert style="info" >}}
+Starting with version 26.9, GroupDocs.Signature for .NET ships a .NET 10 build and no longer ships a .NET Standard 2.1 build. A library that targets `netstandard2.1` and references GroupDocs.Signature must target one of the frameworks above instead.
+{{< /alert >}}
 
 ## Supported Operating Systems
 
-GroupDocs.Signature for .NET supports any 32-bit or 64-bit operating system where .NET or Mono framework is installed including, but not limited to:
+GroupDocs.Signature for .NET runs on the operating systems that the framework you use supports.
 
 ### Windows
 
-* Microsoft Windows 2003 Server ( x64, x86)
-* Microsoft Windows 2008 Server ( x64, x86)
-* Microsoft Windows 2012 Server ( x64, x86)
-* Microsoft Windows 2012 R2 Server ( x64, x86)
-* Microsoft Windows 2016 Server ( x64, x86)
-* Microsoft Windows 2019 Server ( x64, x86)
-* Microsoft Windows Vista ( x64, x86)
-* Microsoft Windows XP ( x64, x86)
-* Microsoft Windows 7 ( x64, x86)
-* Microsoft Windows 8, 8.1 ( x64, x86)
-* Microsoft Windows 10 ( x64, x86)
+* Windows 10 and Windows 11
+* Windows Server 2016 and later
 * Microsoft Azure
 
 ### Linux
 
-* Linux (Ubuntu, OpenSUSE, CentOS and others)
+* Ubuntu, Debian, Red Hat Enterprise Linux, CentOS, openSUSE and other distributions supported by .NET 6, .NET 8 or .NET 10, including Docker containers
 
-### Mac
+### macOS
 
-* Mac OS X
+* macOS versions supported by .NET 6, .NET 8 or .NET 10
 
-## Supported Frameworks
-
-GroupDocs.Signature for .NET supports .NET and Mono frameworks as follows:
-
-### .NET Standard 2.0
-
-Any type of .NET Standard 2.0 application is supported.
-
-### .NET Frameworks
-
-* .NET Framework 2.0
-* .NET Framework 3.5
-* .NET Framework 4.0
-* .NET Framework 4.0\_ClientProfile
-* .NET Framework 4.5.0
-* .NET Framework 4.5.1
-* .NET Framework 4.5.2
-* .NET Framework 4.6.0
-* .NET Framework 4.6.2
-* .NET Framework 4.5.0
-* .NET Framework 4.5.1
-* .NET Framework 4.6.0
-* .NET Framework 4.6.2
-* .NET Framework 4.7
-* .NET Framework 4.7.2
-* .NET Standard 2.0
-* .NET Core 2.0
-* .NET Core 2.1
-
-### Mono Framework
-
-* Mono 2.6.7 or later
+The .NET Framework build runs on Windows only. On Linux and macOS, see the font recommendations in [Known issues]({{< ref "signature/net/developer-guide/known-issues/net-standard-2.0-api-limitations.md" >}}).
 
 ## Development Environments
 
-GroupDocs.Signature for .NET can be used to develop applications in any development environment that targets the .NET platform, but the following environments are explicitly supported:
+GroupDocs.Signature for .NET can be used to develop applications in any development environment that targets the supported frameworks, for example:
 
-* Microsoft Visual Studio 2010
-* Microsoft Visual Studio 2011
-* Microsoft Visual Studio 2012
-* Microsoft Visual Studio 2013
-* Microsoft Visual Studio 2015
-* Microsoft Visual Studio 2017
-* Microsoft Visual Studio 2019
-* Xamarin.Android
-* Xamarin.IOS
-* Xamarin.Mac
-* MonoDevelop 2.4 and later
+* Microsoft Visual Studio 2022 and later
+* Visual Studio Code
+* JetBrains Rider
+* the .NET CLI (`dotnet`)
+
+To build for .NET 10, use the .NET 10 SDK and a development environment that supports it.

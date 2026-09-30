@@ -36,7 +36,7 @@ The picture below shows how a digital signature looks on a PDF document page by 
 * The [password](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/password/) property specifies the certificate password;
 * The [Contact](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/contact/), [Reason](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/reason/) and [Location](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/location/) properties specify additional descriptions;
 * The [Visible](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/visible/) property specifies whether the signature should be visible on the document page or not;
-* The [XAdES type](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/xadestype/) property defines whether the e-signature should be of an XML Advanced Electronic Signature type.
+* The [XAdES type](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/digitalsignoptions/xadestype/) property defines whether the e-signature should be of an XML Advanced Electronic Signature type. This applies to Spreadsheet documents only and has no effect on PDF.
 
 ### Follow these steps to sign your documents with a digital signature
 

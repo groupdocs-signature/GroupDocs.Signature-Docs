@@ -9,6 +9,10 @@ productName: GroupDocs.Signature for .NET
 hideChildren: False
 toc: True
 ---
+{{< alert style="warning" >}}
+Starting with version 26.9, GroupDocs.Signature for .NET no longer ships a .NET Standard build. On Linux and macOS use the .NET 6, .NET 8 or .NET 10 build; see [System Requirements]({{< ref "signature/net/getting-started/system-requirements.md" >}}). The font recommendations below can still help when documents are rendered on Linux or macOS.
+{{< /alert >}}
+
 ## Limitations of .NET Standard 2.0 compared to .NET API
 
 ### Limitations

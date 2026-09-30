@@ -15,6 +15,18 @@ toc: True
 
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides the ability to customize the hash algorithm used for digital signatures. This is particularly useful when you need to use specific cryptographic standards or have compliance requirements.
 
+`HashAlgorithm` applies to ordinary certificate-based PDF signing as well as to custom-hash scenarios: you do not need `ICustomSignHash` to choose a digest. Starting with GroupDocs.Signature for .NET 26.9, PDF signatures use SHA-256 when `HashAlgorithm` is not set.
+
+```csharp
+DigitalSignOptions options = new DigitalSignOptions("certificate.pfx")
+{
+    Password = "1234567890",
+    HashAlgorithm = HashAlgorithm.Sha512
+};
+```
+
+With `ICustomSignHash`, the `hashAlgorithm` parameter of `CustomSignHash` tells you the algorithm that was actually used to compute the hash. With the default setting it is `Sha256`, never `Auto`.
+
 Here's how to implement digital signing with a custom hash algorithm:
 
 ```csharp
@@ -173,12 +185,13 @@ Hash algorithms are cryptographic functions that convert data of any size into a
 
 GroupDocs.Signature provides several hash algorithms for digital signing, each offering different levels of security and performance. Here are the available options:
 
-* **Auto Selection**: The system automatically chooses the most appropriate hash algorithm based on your document type and security requirements.
+* **Auto Selection** (the default): resolves to SHA-256 for RSA keys. For ECDSA keys the digest size follows the key size. Leave `HashAlgorithm` unset to use this.
 
 * **SHA-1**: 
   - Produces a 160-bit (20-byte) hash value
   - Widely supported but considered less secure for modern applications
   - Best for legacy system compatibility
+  - Remains selectable for compatibility with legacy validators, but it is not suitable for new signatures and many validators now reject it
 
 * **SHA-256**: 
   - Produces a 256-bit (32-byte) hash value

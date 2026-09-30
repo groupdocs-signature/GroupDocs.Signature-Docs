@@ -52,7 +52,7 @@ using (Signature signature = new Signature("signedSample.pdf"))
         // specify verification text pattern
         MatchType = TextMatchType.Contains,
         // specify types of QR code to verify
-        SignatureImplementation = TextSignatureImplementation.Stamp,
+        SignatureImplementation = TextSignatureImplementation.Native,
         // specify if form fielsd should be verified
         FormTextFieldTitle = "Sample",
         FormTextFieldType = FormTextFieldType.RichText

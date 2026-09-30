@@ -44,6 +44,12 @@ catch (Exception ex)
 }
 ```
 
+### Digital certificate errors
+
+Starting with GroupDocs.Signature for .NET 26.9, `Sign` also throws [GroupDocsSignatureException](https://reference.groupdocs.com/signature/net/groupdocs.signature/groupdocssignatureexception) when the signing certificate has expired or is not valid yet, and nothing is signed or saved. See "Certificates outside their validity period" in [Pdf Digitally signing]({{< ref "signature/net/developer-guide/advanced-usage/signing/electronic-signatures/sign-document-with-digital-signature-advanced.md" >}}) for the message and for the `AllowExpired` and `AllowNotYetValid` properties that allow such a certificate.
+
+`Sign` also throws when the time-stamp authority set in `PdfDigitalSignature.TimeStamp` cannot be reached or rejects the request. See [Sign PDF document with a time stamp]({{< ref "signature/net/developer-guide/advanced-usage/signing/electronic-signatures/sign-pdf-document-with-timestamp.md" >}}).
+
 ## More resources
 
 ### GitHub Examples

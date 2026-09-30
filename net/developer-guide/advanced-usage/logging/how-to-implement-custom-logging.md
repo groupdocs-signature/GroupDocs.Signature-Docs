@@ -14,7 +14,7 @@ By default logging is disabled when processing documents but product provides a 
 
 There is an interface that we can utilize:
 
-* [ILogger](https://reference.groupdocs.com/net/signature/groupdocs.signature.logging/ilogger) - defines the interface for logging different process event like errors, warnings and information messages (traces).
+* [ILogger](https://reference.groupdocs.com/signature/net/groupdocs.signature.logging/ilogger) - defines the interface for logging different process event like errors, warnings and information messages (traces).
 
 There are 3 types of messages in the log file:
 
@@ -24,20 +24,20 @@ There are 3 types of messages in the log file:
 
 ## Implementing custom logger
 
-To make your logger you should implement [ILogger](https://reference.groupdocs.com/net/signature/groupdocs.signature.logging/ilogger) interface.
+To make your logger you should implement [ILogger](https://reference.groupdocs.com/signature/net/groupdocs.signature.logging/ilogger) interface.
 
 For trace messages - implement public void Trace(string message) method \
 For warning messages - implement public void Warning(string message) method \
-For error messages - implement public void Error(string message) method
+For error messages - implement public void Error(string message, Exception exception) method
 
-In this example, we'll implement a simple file logger.
+In this example, we'll implement a logger that posts messages to an HTTP endpoint.
 
 ```csharp
-// Create logger and specify the output file
-var logger = new CustomLogger("output.log");
+// Create the custom logger
+var logger = new APILogger();
 
-// Create SignatureSettings and specify FileLogger
-var settings = new SignatureSettings(fileLogger);
+// Create SignatureSettings and specify the custom logger
+var settings = new SignatureSettings(logger);
 
 using (var signature = new Signature("sample.docx", settings))
 {

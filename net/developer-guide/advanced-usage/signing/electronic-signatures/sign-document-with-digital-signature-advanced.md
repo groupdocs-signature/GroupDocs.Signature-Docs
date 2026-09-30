@@ -53,7 +53,62 @@ using (Signature signature = new Signature("sample.pdf"))
 }
 ```
 
-### Add Long-Term Validation (LTV)(Long-Term Validation) information for a signature
+### Choose the hash algorithm
+
+Starting with GroupDocs.Signature for .NET 26.9, PDF digital signatures use SHA-256 by default, in the `adbe.pkcs7.detached` format. Set the [HashAlgorithm](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions/hashalgorithm/) property to use SHA-384 or SHA-512 instead:
+
+```csharp
+using (Signature signature = new Signature("sample.pdf"))
+{
+    DigitalSignOptions options = new DigitalSignOptions("certificate.pfx")
+    {
+        Password = "1234567890",
+        // SHA-256 is the default. SHA-384 and SHA-512 are also available.
+        HashAlgorithm = HashAlgorithm.Sha512
+    };
+    signature.Sign("signed.pdf", options);
+}
+```
+
+A time stamp, when you add one, uses the same digest. `HashAlgorithm.Sha1` is still available for legacy validators, but it is not suitable for new signatures and many validators reject it. See [Digital signing with custom hash]({{< ref "signature/net/developer-guide/advanced-usage/signing/electronic-signatures/digital-signing-with-custom-hash.md" >}}) for all values.
+
+### Certificates outside their validity period
+
+A certificate is valid from its `NotBefore` date to its `NotAfter` date, and validators report a signature made outside that period as not valid. So, starting with GroupDocs.Signature for .NET 26.9, the `Sign` method does not sign with such a certificate by default: it throws [GroupDocsSignatureException](https://reference.groupdocs.com/signature/net/groupdocs.signature/groupdocssignatureexception/), and nothing is signed or saved. The message names the certificate and the property that allows it:
+
+```text
+The signing certificate expired on 2019-05-01 12:00 UTC (subject "CN=...", thumbprint ...). Validators report a signature made with an expired certificate as not valid, so the document is not signed. To sign anyway, set DigitalSignOptions.AllowExpired to true.
+```
+
+To sign anyway, for example to test with an old certificate, set the property for the case you need. The document is then signed, and a warning is written to the logger set in [SignatureSettings](https://reference.groupdocs.com/signature/net/groupdocs.signature/signaturesettings/):
+
+```csharp
+using (Signature signature = new Signature("sample.pdf", new SignatureSettings(new ConsoleLogger())))
+{
+    DigitalSignOptions options = new DigitalSignOptions("certificate.pfx")
+    {
+        Password = "1234567890",
+        // Sign even though the certificate has expired. A warning is written to the logger.
+        AllowExpired = true
+    };
+    signature.Sign("signed.pdf", options);
+}
+```
+
+| Property | Default | Allows |
+| --- | --- | --- |
+| `AllowExpired` | `false` | a certificate whose validity period has ended |
+| `AllowNotYetValid` | `false` | a certificate whose validity period has not started yet. This usually means the certificate was issued for a later date, or the computer's clock is wrong |
+
+The two properties are independent: `AllowExpired` does not allow a certificate that is not valid yet. Also note:
+
+* The certificate is compared with the current time in UTC, not with `DigitalSignature.SignTime`.
+* The check covers a certificate given as a file, a stream or a `DigitalSignature.Certificate` object, in every document format.
+* For spreadsheets it also covers the certificate of the first `DigitalVBA` extension, and the same two properties govern it. With `DigitalVBA.SignOnlyVBAProject` the spreadsheet itself is not signed, so its own certificate is not checked.
+* Digital signatures of images use no certificate and are not checked.
+* A certificate that cannot be read, for example because of a wrong password, gives its own error.
+
+### Add Long-Term Validation (LTV) information for a signature
 
 What is Long-Term Validation (LTV) for Digital Signatures?
 
@@ -93,6 +148,10 @@ using (Signature signature = new Signature("sample.pdf"))
 After signing a document with LTV support, you can check whether the signature includes LTV data using Adobe Acrobat.
 Here is the example of signature detailes in Adobe Acrobat:
 ![LTV](/signature/net/images/sign-document-with-ltv-advanced.png) 
+
+{{< alert style="info" >}}
+The validation data that can be embedded depends on your signing certificate. While it saves the document, GroupDocs.Signature collects revocation information from the OCSP or CRL addresses that the certificate authority publishes in the certificates, so those addresses must be reachable from the signing machine at signing time. A certificate whose authority publishes neither cannot produce complete validation data. See [Network access and data privacy]({{< ref "signature/net/getting-started/network-access-and-data-privacy.md" >}}).
+{{< /alert >}}
 
 
 ## More resources
