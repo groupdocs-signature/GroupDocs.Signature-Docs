@@ -10,8 +10,20 @@ hideChildren: False
 toc: True
 ---
 {{< alert style="warning" >}}
-Starting with version 26.9, GroupDocs.Signature for .NET no longer ships a .NET Standard build. On Linux and macOS use the .NET 6, .NET 8 or .NET 10 build; see [System Requirements]({{< ref "signature/net/getting-started/system-requirements.md" >}}). The font recommendations below can still help when documents are rendered on Linux or macOS.
+Starting with version 26.9, GroupDocs.Signature for .NET no longer ships a .NET Standard build. On Linux and macOS use the .NET 6, .NET 8 or .NET 10 build; see [System Requirements]({{< ref "signature/net/getting-started/system-requirements.md" >}}).
 {{< /alert >}}
+
+## Linux and macOS
+
+The .NET 6, .NET 8 and .NET 10 builds use System.Drawing for some image operations, for example image, stamp, barcode and QR-code signatures. On Linux and macOS this needs libgdiplus (see the recommendations below) and the `System.Drawing.EnableUnixSupport` switch in your application project:
+
+```xml
+<ItemGroup>
+  <RuntimeHostConfigurationOption Include="System.Drawing.EnableUnixSupport" Value="true" />
+</ItemGroup>
+```
+
+Without them, these operations throw `GroupDocsSignatureException` with the message "The type initializer for 'Gdip' threw an exception". Install the fonts your documents and signatures use as well: a font that is not installed can also stop signing, with a "Font ... was not found" message.
 
 ## Limitations of .NET Standard 2.0 compared to .NET API
 

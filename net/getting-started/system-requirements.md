@@ -46,7 +46,7 @@ GroupDocs.Signature for .NET runs on the operating systems that the framework yo
 
 * macOS versions supported by .NET 6, .NET 8 or .NET 10
 
-The .NET Framework build runs on Windows only. On Linux and macOS, see the font recommendations in [Known issues]({{< ref "signature/net/developer-guide/known-issues/net-standard-2.0-api-limitations.md" >}}).
+The .NET Framework build runs on Windows only. On Linux and macOS, install libgdiplus and the fonts your documents use, and set the `System.Drawing.EnableUnixSupport` switch; see [Known issues]({{< ref "signature/net/developer-guide/known-issues/net-standard-2.0-api-limitations.md" >}}).
 
 ## Development Environments
 
