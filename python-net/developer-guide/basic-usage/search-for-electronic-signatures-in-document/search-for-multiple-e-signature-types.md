@@ -31,102 +31,123 @@ hideChildren: False
 
 ## How to Search for Multiple Signature Types
 
-The [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/) class provides the [Search](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/search/) method which allows you to search for multiple types of signatures in documents. Here's how to use it:
+The [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/) class provides the [search](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/search/) method which allows you to search for multiple types of signatures in documents. Here's how to use it:
 
 1. Create a new instance of the [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/) class and pass the source document path as a parameter.
 2. Create search options for each type of signature you want to search for.
-3. Call the [Search](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/search/) method of the [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/) class instance and pass the search options to it.
-4. Process the search results.
+3. Call the [search](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/search/) method of the [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/) class instance and pass the list of search options to it.
+4. Process the search results: the `signatures` property of the returned [SearchResult](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/searchresult/) holds the signatures of all requested types. The `signature_type` property of each one tells its [SignatureType](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/signaturetype/).
 
 Here's an example of how to search for multiple types of signatures in a document:
 
+{{< tabs "search_types" >}}
+{{< tab "Python" >}}
 ```python
 from groupdocs.signature import Signature
-from groupdocs.signature.options import TextSearchOptions, ImageSearchOptions, BarcodeSearchOptions, QrCodeSearchOptions, FormFieldSearchOptions
-from groupdocs.signature.domain import TextSignature, ImageSignature, BarcodeSignature, QrCodeSignature, FormFieldSignature
+from groupdocs.signature.options import (BarcodeSearchOptions, FormFieldSearchOptions, ImageSearchOptions,
+                                         QrCodeSearchOptions, TextSearchOptions)
 
-# Initialize Signature with input document
-with Signature("sample.pdf") as signature:
-    # Create search options for different signature types
-    text_options = TextSearchOptions()
-    image_options = ImageSearchOptions()
-    barcode_options = BarcodeSearchOptions()
-    qr_code_options = QrCodeSearchOptions()
-    form_field_options = FormFieldSearchOptions()
-    
-    # Search for signatures
-    text_result = signature.search(text_options)
-    image_result = signature.search(image_options)
-    barcode_result = signature.search(barcode_options)
-    qr_code_result = signature.search(qr_code_options)
-    form_field_result = signature.search(form_field_options)
-    
-    # Process found signatures
-    print(f"Found {len(text_result)} text signatures")
-    for text_signature in text_result:
-        print(f"Text: {text_signature.text}")
-        print(f"Page: {text_signature.page_number}")
-    
-    print(f"\nFound {len(image_result)} image signatures")
-    for image_signature in image_result:
-        print(f"Image Size: {image_signature.width}x{image_signature.height}")
-        print(f"Page: {image_signature.page_number}")
-    
-    print(f"\nFound {len(barcode_result)} barcode signatures")
-    for barcode_signature in barcode_result:
-        print(f"Barcode Type: {barcode_signature.encode_type}")
-        print(f"Barcode Text: {barcode_signature.text}")
-        print(f"Page: {barcode_signature.page_number}")
-    
-    print(f"\nFound {len(qr_code_result)} QR code signatures")
-    for qr_code_signature in qr_code_result:
-        print(f"QR Code Text: {qr_code_signature.text}")
-        print(f"Page: {qr_code_signature.page_number}")
-    
-    print(f"\nFound {len(form_field_result)} form field signatures")
-    for form_field_signature in form_field_result:
-        print(f"Field Name: {form_field_signature.name}")
-        print(f"Field Type: {form_field_signature.type}")
-        print(f"Field Value: {form_field_signature.value}")
+
+def search_types():
+    with Signature("signed.pdf") as signature:
+        # One search call with options for every signature type to find
+        options = [
+            TextSearchOptions(),
+            ImageSearchOptions(),
+            BarcodeSearchOptions(),
+            QrCodeSearchOptions(),
+            FormFieldSearchOptions(),
+        ]
+        result = signature.search(options)
+
+        print(f"Found {len(result.signatures)} signature(s)")
+        for found in result.signatures:
+            print(f"{found.signature_type.name} signature on page {found.page_number} "
+                  f"at ({found.left}, {found.top})")
+
+
+if __name__ == "__main__":
+    search_types()
 ```
+{{< /tab >}}
+{{< tab "signed.pdf" >}}
+{{< tab-text >}}
+`signed.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-multiple-e-signature-types/signed.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "search-types.txt" >}}  
+```text
+Found 10 signature(s)
+TEXT signature on page 1 at (50, 480)
+TEXT signature on page 1 at (50, 530)
+TEXT signature on page 1 at (50, 379)
+IMAGE signature on page 1 at (50, 415)
+BARCODE signature on page 1 at (400, 375)
+BARCODE signature on page 1 at (400, 430)
+QR_CODE signature on page 1 at (270, 370)
+FORM_FIELD signature on page 1 at (50, 530)
+FORM_FIELD signature on page 1 at (270, 532)
+[TRUNCATED]
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-multiple-e-signature-types/search_types/search-types.txt)
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Advanced Search Options
 
-You can customize the search process for each signature type by setting specific options:
+You can customize the search process for each signature type by setting the properties of its search options:
 
+{{< tabs "search_types_with_filters" >}}
+{{< tab "Python" >}}
 ```python
 from groupdocs.signature import Signature
-from groupdocs.signature.options import TextSearchOptions, ImageSearchOptions, BarcodeSearchOptions, QrCodeSearchOptions, FormFieldSearchOptions
-from groupdocs.signature.domain import TextSignature, ImageSignature, BarcodeSignature, QrCodeSignature, FormFieldSignature
+from groupdocs.signature.domain import BarcodeTypes, QrCodeTypes, SignatureType, TextMatchType
+from groupdocs.signature.options import BarcodeSearchOptions, MetadataSearchOptions, QrCodeSearchOptions
 
-# Initialize Signature with input document
-with Signature("sample.pdf") as signature:
-    # Create search options for different signature types
-    text_options = TextSearchOptions()
-    text_options.text = "John Doe"  # Search for specific text
-    
-    image_options = ImageSearchOptions()
-    image_options.min_content_size = 100  # Minimum image size in pixels
-    
-    barcode_options = BarcodeSearchOptions()
-    barcode_options.encode_type = "Code128"  # Search for specific barcode type
-    
-    qr_code_options = QrCodeSearchOptions()
-    qr_code_options.text = "https://example.com"  # Search for specific QR code text
-    
-    form_field_options = FormFieldSearchOptions()
-    form_field_options.field_names = ["signature1", "signature2"]  # Search for specific form fields
-    
-    # Search for signatures
-    text_result = signature.search(text_options)
-    image_result = signature.search(image_options)
-    barcode_result = signature.search(barcode_options)
-    qr_code_result = signature.search(qr_code_options)
-    form_field_result = signature.search(form_field_options)
-    
-    # Process found signatures
-    # ... (same as above)
+
+def search_types_with_filters():
+    with Signature("signed.pdf") as signature:
+        # Code 128 barcodes only
+        barcode_options = BarcodeSearchOptions()
+        barcode_options.encode_type = BarcodeTypes.CODE128
+        # QR codes whose text contains "John"
+        qr_code_options = QrCodeSearchOptions()
+        qr_code_options.encode_type = QrCodeTypes.QR
+        qr_code_options.text = "John"
+        qr_code_options.match_type = TextMatchType.CONTAINS
+        # The "Author" metadata property
+        metadata_options = MetadataSearchOptions()
+        metadata_options.name = "Author"
+
+        result = signature.search([barcode_options, qr_code_options, metadata_options])
+
+        print(f"Found {len(result.signatures)} signature(s)")
+        for found in result.signatures:
+            if found.signature_type == SignatureType.METADATA:
+                print(f"METADATA: {found.name} = {found.value}")
+            else:
+                print(f"{found.signature_type.name} on page {found.page_number}: {found.text}")
+
+
+if __name__ == "__main__":
+    search_types_with_filters()
 ```
+{{< /tab >}}
+{{< tab "signed.pdf" >}}
+{{< tab-text >}}
+`signed.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-multiple-e-signature-types/signed.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "search-types-with-filters.txt" >}}  
+```text
+Found 3 signature(s)
+BARCODE on page 1: 123456789012
+QR_CODE on page 1: John Smith
+METADATA: Author = John Smith
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-multiple-e-signature-types/search_types_with_filters/search-types-with-filters.txt)
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Additional Resources
 

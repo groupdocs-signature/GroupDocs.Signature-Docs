@@ -45,155 +45,163 @@ Here are the steps to create an image signature on a document page:
 
 This example shows how to sign a PDF document with the image signature using Python:
 
-{{< tabs "example-1" >}}
+{{< tabs "sign_with_image_signature" >}}
 {{< tab "Python" >}}
-
 ```python
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
 from groupdocs.signature.options import ImageSignOptions
-import groupdocs.signature.domain as gsd
-import sys 
-import os
 
-def run():
-    with signature.Signature("./sample.pdf") as sign:
-        # Create image signature options
-        image_options = ImageSignOptions("./signature.jpg")
-        
-        # Set signature position
-        image_options.left = 100
-        image_options.top = 100
-        
-        # Set signature size
-        image_options.width = 100
-        image_options.height = 100
-        
-        # Set signature opacity
-        image_options.opacity = 0.8
-        
-        # Set signature rotation angle
-        image_options.rotation_angle = 45
-        
-        # Set signature alignment
-        image_options.horizontal_alignment = gsd.HorizontalAlignment.CENTER
-        image_options.vertical_alignment = gsd.VerticalAlignment.CENTER
-        
-        # Set signature border
-        image_options.border_visiblity = True
-        image_options.border_dash_style = gsd.DashStyle.DASH
-        image_options.border_color = gsd.Color.BLACK
-        image_options.border_weight = 2
-        
-        # Sign document
-        sign.sign("./SampleSigned.pdf", image_options)
+
+def sign_with_image_signature():
+    with Signature("sample.pdf") as signature:
+        # Create image signature options with the image file
+        options = ImageSignOptions("signature.jpg")
+
+        # Set signature position and size
+        options.left = 100
+        options.top = 400
+        options.width = 120
+        options.height = 100
+
+        # Sign the document and save the result
+        result = signature.sign("signed_image.pdf", options)
+        print(f"Signed with {len(result.succeeded)} image signature(s)")
+
+
+if __name__ == "__main__":
+    sign_with_image_signature()
 ```
-
 {{< /tab >}}
 {{< tab "sample.pdf" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-image-signature/sample.pdf)
+`sample.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-image-signature/sample.pdf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "signature.jpg" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [signature.jpg](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-image-signature/signature.jpg)
+`signature.jpg` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-image-signature/signature.jpg) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "signed_image.pdf" >}}  
+```text
+Binary file (PDF, 40 KB)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-image-signature/sign_with_image_signature/signed_image.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
 ### Advanced Image Signature Options
 
-You can customize the image signature further with additional options:
+You can customize the image signature further with additional options: alignment and margins, rotation, transparency and a border. When an alignment is set, it replaces the `left` or `top` coordinate, and the `margin` offsets the signature from the page edge.
 
-{{< tabs "example-2" >}}
+{{< tabs "sign_with_image_signature_advanced" >}}
 {{< tab "Python" >}}
-
 ```python
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
 from groupdocs.signature.options import ImageSignOptions
+from groupdocs.signature.domain import (
+    Border, DashStyle, HorizontalAlignment, Padding, VerticalAlignment)
+from groupdocs.pydrawing import Color
 
-# Initialize signature
-with signature.Signature("sample.pdf") as sign:
-    # Create image signature options
-    image_options = ImageSignOptions("signature.jpg")
-    
-    # Set signature position and size
-    image_options.left = 100
-    image_options.top = 100
-    image_options.width = 200
-    image_options.height = 100
-    
-    # Set advanced options
-    image_options.opacity = 0.8
-    image_options.rotation_angle = 45
-    
-    # Set image alignment
-    image_options.horizontal_alignment = signature.HorizontalAlignment.CENTER
-    image_options.vertical_alignment = signature.VerticalAlignment.CENTER
-    
-    # Add border
-    image_options.border_color = signature.Color.BLACK
-    image_options.border_style = signature.DashStyle.SOLID
-    image_options.border_width = 2
-    
-    # Sign document
-    sign.sign("SampleSigned.pdf", image_options)
+
+def sign_with_image_signature_advanced():
+    with Signature("sample.pdf") as signature:
+        options = ImageSignOptions("signature.jpg")
+
+        # Put the signature in the bottom right corner of the page
+        options.width = 160
+        options.height = 136
+        options.horizontal_alignment = HorizontalAlignment.RIGHT
+        options.vertical_alignment = VerticalAlignment.BOTTOM
+        options.margin = Padding(right=40, bottom=60)
+
+        # Rotate the image and make it 20% transparent
+        options.rotation_angle = 10
+        options.transparency = 0.2
+
+        # Draw a dashed border around the image
+        border = Border()
+        border.color = Color.dark_green
+        border.dash_style = DashStyle.DASH
+        border.weight = 2
+        border.visible = True
+        options.border = border
+
+        result = signature.sign("signed_image_advanced.pdf", options)
+        print(f"Signed with {len(result.succeeded)} image signature(s)")
+
+
+if __name__ == "__main__":
+    sign_with_image_signature_advanced()
 ```
-
 {{< /tab >}}
 {{< tab "sample.pdf" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-image-signature/sample.pdf)
+`sample.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-image-signature/sample.pdf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "signature.jpg" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [signature.jpg](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-image-signature/signature.jpg)
+`signature.jpg` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-image-signature/signature.jpg) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "signed_image_advanced.pdf" >}}  
+```text
+Binary file (PDF, 55 KB)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-image-signature/sign_with_image_signature_advanced/signed_image_advanced.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
 ### Loading Image from Stream
 
-You can also load the signature image from a stream:
+You can also load the signature image from a stream. Keep the stream open until `sign` returns:
 
-{{< tabs "example-3" >}}
+{{< tabs "sign_with_image_from_stream" >}}
 {{< tab "Python" >}}
-
 ```python
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
 from groupdocs.signature.options import ImageSignOptions
 
-# Initialize signature
-with signature.Signature("sample.pdf") as sign:
-    # Load image from stream
-    with open("signature.jpg", "rb") as image_stream:
-        # Create image signature options
-        image_options = ImageSignOptions(image_stream)
-        
-        # Set signature position
-        image_options.left = 100
-        image_options.top = 100
-        
-        # Sign document
-        sign.sign("SampleSigned.pdf", image_options)
-```
 
+def sign_with_image_from_stream():
+    with Signature("sample.pdf") as signature:
+        # Load the signature image from a stream
+        with open("signature.jpg", "rb") as image_stream:
+            options = ImageSignOptions(image_stream)
+            options.left = 100
+            options.top = 400
+            options.width = 120
+            options.height = 100
+
+            result = signature.sign("signed_image_stream.pdf", options)
+            print(f"Signed with {len(result.succeeded)} image signature(s)")
+
+
+if __name__ == "__main__":
+    sign_with_image_from_stream()
+```
 {{< /tab >}}
 {{< tab "sample.pdf" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-image-signature/sample.pdf)
+`sample.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-image-signature/sample.pdf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "signature.jpg" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [signature.jpg](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-image-signature/signature.jpg)
+`signature.jpg` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-image-signature/signature.jpg) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "signed_image_stream.pdf" >}}  
+```text
+Binary file (PDF, 40 KB)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-image-signature/sign_with_image_from_stream/signed_image_stream.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
 ### Summary
-This guide demonstrates how to use [**GroupDocs.Signature for Python via .NET**](https://products.groupdocs.com/signature/python-net) to add image-based signatures to documents. It covers loading a document, configuring the image signature's properties (such as size, position, and opacity), and saving the signed document. Advanced customization options, like adjusting image appearance and aligning the signature, are also discussed. For further insights, explore related document signing resources.
+This guide demonstrates how to use [**GroupDocs.Signature for Python via .NET**](https://products.groupdocs.com/signature/python-net) to add image-based signatures to documents. It covers loading a document, configuring the image signature's properties (such as size, position, and transparency), and saving the signed document. Advanced customization options, like adjusting image appearance and aligning the signature, are also discussed. For further insights, explore related document signing resources.
 
 
 ## More Resources

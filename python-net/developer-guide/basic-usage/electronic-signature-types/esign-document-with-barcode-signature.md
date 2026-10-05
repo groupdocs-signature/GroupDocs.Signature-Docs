@@ -51,157 +51,165 @@ Here are the steps to eSign a document with the Barcode signature using GroupDoc
 
 This example shows how to sign a PDF document with a Barcode signature using Python:
 
-{{< tabs "example-1" >}}
+{{< tabs "sign_with_barcode_signature" >}}
 {{< tab "Python" >}}
-
 ```python
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
 from groupdocs.signature.options import BarcodeSignOptions
 from groupdocs.signature.domain import BarcodeTypes
-import groupdocs.signature.domain as gsd
-import sys 
-import os
 
-def run():
-    with signature.Signature("./sample.pdf") as sign:
-        # Create barcode signature options
-        options = BarcodeSignOptions()
-        
-        # Set barcode text
-        options.text = "John Smith"
-        
-        # Set barcode type
-        options.encode_type = BarcodeTypes.QR
-        
-        # Set barcode position
+
+def sign_with_barcode_signature():
+    with Signature("sample.pdf") as signature:
+        # Create barcode signature options with the text to encode
+        options = BarcodeSignOptions("John Smith")
+
+        # Set the barcode type
+        options.encode_type = BarcodeTypes.CODE128
+
+        # Set barcode position and size
         options.left = 100
-        options.top = 100
-        
-        # Set barcode size
-        options.width = 100
+        options.top = 400
+        options.width = 300
         options.height = 100
-        
-        # Set barcode colors
-        options.fore_color = gsd.Color.BLUE
-        options.back_color = gsd.Color.WHITE
-        options.border_color = gsd.Color.BLACK
-        
-        # Set barcode border
-        options.border_visiblity = True
-        options.border_dash_style = gsd.DashStyle.DASH
-        options.border_weight = 2
-        
-        # Sign document
-        sign.sign("./SampleSigned.pdf", options)
-```
 
+        # Sign the document and save the result
+        result = signature.sign("signed_barcode.pdf", options)
+        print(f"Signed with {len(result.succeeded)} barcode signature(s)")
+
+
+if __name__ == "__main__":
+    sign_with_barcode_signature()
+```
 {{< /tab >}}
 {{< tab "sample.pdf" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-barcode-signature/sample.pdf)
+`sample.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-barcode-signature/sample.pdf) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "signed_barcode.pdf" >}}  
+```text
+Binary file (PDF, 49 KB)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-barcode-signature/sign_with_barcode_signature/signed_barcode.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
 ### Advanced Barcode Signature Options
 
-You can customize the barcode signature further with additional options:
+You can customize the barcode signature further with additional options: alignment and margins, bar color, the position of the encoded text, inner margins, background, border and transparency:
 
-{{< tabs "example-2" >}}
+{{< tabs "sign_with_barcode_signature_advanced" >}}
 {{< tab "Python" >}}
-
 ```python
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
 from groupdocs.signature.options import BarcodeSignOptions
-from groupdocs.signature.domain import BarcodeTypes
-import groupdocs.signature.domain as gsd
-import sys 
-import os
+from groupdocs.signature.domain import (
+    Background, BarcodeTypes, Border, CodeTextAlignment, DashStyle,
+    HorizontalAlignment, Padding, VerticalAlignment)
+from groupdocs.pydrawing import Color
 
-def run():
-    with signature.Signature("./sample.pdf") as sign:
-        # Create barcode signature options
-        options = BarcodeSignOptions("JohnSmith")
-        
-        # Setup Barcode encoding type
-        options.encode_type = BarcodeTypes.QR
-        
-        # Set signature position and size
-        options.left = 100
-        options.top = 100
-        options.width = 200
-        options.height = 100
-        
-        # Set advanced options
-        options.fore_color = gsd.Color.BLUE
-        options.back_color = gsd.Color.WHITE
-        options.opacity = 0.8
-        options.rotation_angle = 45
-        
-        # Set barcode alignment
-        options.horizontal_alignment = gsd.HorizontalAlignment.CENTER
-        options.vertical_alignment = gsd.VerticalAlignment.CENTER
-        
-        # Add border
-        options.border_color = gsd.Color.BLACK
-        options.border_dash_style = gsd.DashStyle.SOLID
-        options.border_weight = 2
-        
-        # Sign document
-        sign.sign("./SampleSigned.pdf", options)
+
+def sign_with_barcode_signature_advanced():
+    with Signature("sample.pdf") as signature:
+        # Pass the text and the barcode type to the constructor
+        options = BarcodeSignOptions("JohnSmith", BarcodeTypes.CODE128)
+
+        # Put the barcode in the bottom right corner of the page
+        options.width = 220
+        options.height = 80
+        options.horizontal_alignment = HorizontalAlignment.RIGHT
+        options.vertical_alignment = VerticalAlignment.BOTTOM
+        options.margin = Padding(right=40, bottom=60)
+
+        # Bar color, encoded text below the bars, space inside the border
+        options.fore_color = Color.dark_blue
+        options.code_text_alignment = CodeTextAlignment.BELOW
+        options.inner_margins = Padding(5)
+
+        # Background, border and transparency
+        background = Background()
+        background.color = Color.light_yellow
+        options.background = background
+        border = Border()
+        border.color = Color.dark_blue
+        border.dash_style = DashStyle.DASH
+        border.weight = 2
+        border.visible = True
+        options.border = border
+        options.transparency = 0.2
+
+        result = signature.sign("signed_barcode_advanced.pdf", options)
+        print(f"Signed with {len(result.succeeded)} barcode signature(s)")
+
+
+if __name__ == "__main__":
+    sign_with_barcode_signature_advanced()
 ```
-
 {{< /tab >}}
 {{< tab "sample.pdf" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-barcode-signature/sample.pdf)
+`sample.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-barcode-signature/sample.pdf) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "signed_barcode_advanced.pdf" >}}  
+```text
+Binary file (PDF, 58 KB)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-barcode-signature/sign_with_barcode_signature_advanced/signed_barcode_advanced.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
 ### Different Barcode Types
 
-GroupDocs.Signature supports various barcode types. Here's an example showing how to use different barcode types:
+GroupDocs.Signature supports various barcode types. Each type accepts its own set of characters and lengths, so pick the text to match the type. This example signs a document with four barcodes of different types in one call:
 
-{{< tabs "example-3" >}}
+{{< tabs "sign_with_different_barcode_types" >}}
 {{< tab "Python" >}}
-
 ```python
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
 from groupdocs.signature.options import BarcodeSignOptions
 from groupdocs.signature.domain import BarcodeTypes
 
-# Initialize signature
-with signature.Signature("sample.pdf") as sign:
-    # Create barcode signature options
-    options = BarcodeSignOptions("1234567890")
-    
-    # Setup different Barcode encoding types
-    # For numeric data
-    options.encode_type = BarcodeTypes.EAN_13
-    
-    # For alphanumeric data
-    # options.encode_type = BarcodeTypes.CODE_128
-    
-    # For QR codes
-    # options.encode_type = BarcodeTypes.QR
-    
-    # For 2D barcodes
-    # options.encode_type = BarcodeTypes.DATA_MATRIX
-    
-    # Set signature position
-    options.left = 100
-    options.top = 100
-    
-    # Sign document
-    sign.sign("SampleSigned.pdf", options)
-```
 
+def sign_with_different_barcode_types():
+    barcodes = [
+        (BarcodeTypes.EAN13, "123456789012"),            # 12 digits, check digit added
+        (BarcodeTypes.CODE39, "JOHN SMITH"),             # upper-case letters, digits
+        (BarcodeTypes.CODE128, "John Smith"),            # any ASCII text
+        (BarcodeTypes.PDF417, "John Smith, approved"),   # 2D barcode for longer text
+    ]
+
+    # One sign options object per barcode, placed one below another
+    options_list = []
+    for index, (encode_type, text) in enumerate(barcodes):
+        options = BarcodeSignOptions(text, encode_type)
+        options.left = 100
+        options.top = 340 + index * 100
+        options.width = 240
+        options.height = 80
+        options_list.append(options)
+
+    with Signature("sample.pdf") as signature:
+        result = signature.sign("signed_barcode_types.pdf", options_list)
+        for barcode in result.succeeded:
+            print(f"{barcode.encode_type.type_name}: {barcode.text}")
+
+
+if __name__ == "__main__":
+    sign_with_different_barcode_types()
+```
 {{< /tab >}}
 {{< tab "sample.pdf" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-barcode-signature/sample.pdf)
+`sample.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-barcode-signature/sample.pdf) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "signed_barcode_types.pdf" >}}  
+```text
+Binary file (PDF, 78 KB)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-barcode-signature/sign_with_different_barcode_types/signed_barcode_types.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 

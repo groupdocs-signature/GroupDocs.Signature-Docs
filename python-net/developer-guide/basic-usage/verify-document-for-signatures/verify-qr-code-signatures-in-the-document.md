@@ -32,61 +32,95 @@ structuredData:
 
 ## Basic Usage Example
 
-Here's a simple example showing how to verify QR code signatures in a document:
+Here's a simple example showing how to verify QR code signatures in a document. The `is_valid` property of the returned [VerificationResult](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/verificationresult/) is `True` when the document contains QR code signatures that match the [QrCodeVerifyOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/qrcodeverifyoptions/):
 
+{{< tabs "verify_qr_codes" >}}
+{{< tab "Python" >}}
 ```python
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
+from groupdocs.signature.domain import TextMatchType
 from groupdocs.signature.options import QrCodeVerifyOptions
-import groupdocs.signature.domain as gsd
-# Initialize signature
-with signature.Signature("sample_signed.pdf") as sign:
-    # Create verification options
-    options = QrCodeVerifyOptions()
-    options.text = "https://www.example.com"
-    options.match_type = gsd.TextMatchType.Contains
-    options.all_pages = True  # verify on all pages
-    
-    # Verify signatures
-    result = sign.verify(options)
-    
-    if result.is_valid:
-        print("Document was verified successfully!")
-    else:
-        print("Document failed verification process.")
+
+
+def verify_qr_codes():
+    with Signature("signed.pdf") as signature:
+        options = QrCodeVerifyOptions()
+        options.all_pages = True  # this value is set by default
+        options.text = "John"
+        options.match_type = TextMatchType.CONTAINS
+
+        result = signature.verify(options)
+
+        if result.is_valid:
+            print(f"Document was verified successfully: {len(result.succeeded)} matching QR code signature(s).")
+        else:
+            print("Document failed verification process.")
+
+
+if __name__ == "__main__":
+    verify_qr_codes()
 ```
+{{< /tab >}}
+{{< tab "signed.pdf" >}}
+{{< tab-text >}}
+`signed.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/verify-document-for-signatures/verify-qr-code-signatures-in-the-document/signed.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "verify-qr-codes.txt" >}}  
+```text
+Document was verified successfully: 1 matching QR code signature(s).
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/verify-document-for-signatures/verify-qr-code-signatures-in-the-document/verify_qr_codes/verify-qr-codes.txt)
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Advanced Usage Example
 
-Here's an example showing more advanced verification options:
+Here's an example showing more advanced verification options: an exact text match, the QR code type ([QrCodeTypes](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/qrcodetypes/)) and the page to verify. The `succeeded` property of the result lists the QR code signatures that passed verification:
 
+{{< tabs "verify_qr_codes_exact_match" >}}
+{{< tab "Python" >}}
 ```python
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
+from groupdocs.signature.domain import QrCodeTypes, TextMatchType
 from groupdocs.signature.options import QrCodeVerifyOptions
 
-# Initialize signature
-with signature.Signature("sample_signed.pdf") as sign:
-    # Create verification options with advanced settings
-    options = QrCodeVerifyOptions()
-    options.text = "https://www.example.com"
-    options.match_type = signature.TextMatchType.Exact  # require exact match
-    options.qr_code_type = signature.QrCodeType.QR  # specify QR code type
-    options.all_pages = False  # verify only on specific pages
-    options.page_numbers = [1, 2]  # verify on pages 1 and 2
-    
-    # Verify signatures
-    result = sign.verify(options)
-    
-    if result.is_valid:
-        print("Document was verified successfully!")
-        # Print verification details
-        for signature in result.succeeded:
-            print(f"Found valid QR code: {signature.text}")
-    else:
-        print("Document failed verification process.")
-        # Print failed verification details
-        for signature in result.failed:
-            print(f"Invalid QR code: {signature.text}")
+
+def verify_qr_codes_exact_match():
+    with Signature("signed.pdf") as signature:
+        options = QrCodeVerifyOptions()
+        options.text = "John Smith"
+        options.match_type = TextMatchType.EXACT  # require exact match
+        # If the encode type is not set, any QR code type is accepted
+        options.encode_type = QrCodeTypes.QR
+        # Verify the first page only (page numbers start at 1)
+        options.all_pages = False
+        options.page_number = 1
+
+        result = signature.verify(options)
+
+        print(f"Document is valid: {result.is_valid}")
+        for qr_code in result.succeeded:
+            print(f"Verified {qr_code.encode_type.type_name} code '{qr_code.text}'")
+
+
+if __name__ == "__main__":
+    verify_qr_codes_exact_match()
 ```
+{{< /tab >}}
+{{< tab "signed.pdf" >}}
+{{< tab-text >}}
+`signed.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/verify-document-for-signatures/verify-qr-code-signatures-in-the-document/signed.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "verify-qr-codes-exact-match.txt" >}}  
+```text
+Document is valid: True
+Verified QR code 'John Smith'
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/verify-document-for-signatures/verify-qr-code-signatures-in-the-document/verify_qr_codes_exact_match/verify-qr-codes-exact-match.txt)
+{{< /tab >}}
+{{< /tabs >}}
 
 ## More Resources
 

@@ -36,7 +36,7 @@ Barcodes represent textual information as a quite small image that could be auto
 Use pip to install the package:
 
 ```bash
-pip install groupdocs-signature
+pip install groupdocs-signature-net
 ```
 
 ## How to sign PDF files with a barcode
@@ -50,25 +50,50 @@ It is a common problem to add additional data to various types of business docum
 To generate a barcode and sign a particular document with it:
 
 * Instantiate the `Signature` class providing a path to the source document or document stream.
-* Create the `BarcodeSignOptions` instance and set up all demanded fields.
+* Create the [BarcodeSignOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/barcodesignoptions/) instance and set up all demanded fields.
 * Invoke the `sign` method to process the document, providing the output file path and sign options.
 
+{{< tabs "sign_pdf_with_codabar" >}}
+{{< tab "Python" >}}
 ```python
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
+from groupdocs.signature.domain import BarcodeTypes, HorizontalAlignment
+from groupdocs.signature.options import BarcodeSignOptions
 
-# Initialize signature handler
-signature_handler = signature.Signature("source.pdf")
 
-# Create barcode signature options
-barcode_options = signature.BarcodeSignOptions()
-barcode_options.horizontal_alignment = signature.HorizontalAlignment.RIGHT
-barcode_options.top = 150
-barcode_options.encode_type = signature.BarcodeTypes.CODABAR
-barcode_options.text = "Approved_19/06/2022"
+def sign_pdf_with_codabar():
+    # Initialize signature handler
+    with Signature("sample.pdf") as signature:
+        # Create barcode signature options
+        barcode_options = BarcodeSignOptions()
+        barcode_options.horizontal_alignment = HorizontalAlignment.RIGHT
+        barcode_options.top = 150
+        barcode_options.encode_type = BarcodeTypes.CODABAR
+        barcode_options.text = "19/06/2022"
 
-# Sign document
-signature_handler.sign("signed_codabar.pdf", barcode_options)
+        # Sign document
+        result = signature.sign("signed_codabar.pdf", barcode_options)
+        print(f"Barcodes added: {len(result.succeeded)}")
+
+
+if __name__ == "__main__":
+    sign_pdf_with_codabar()
 ```
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+`sample.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/signature-use-cases/how-to-generate-barcode-and-sign-document-using-python/sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "signed_codabar.pdf" >}}  
+```text
+Binary file (PDF, 46 KB)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/signature-use-cases/how-to-generate-barcode-and-sign-document-using-python/sign_pdf_with_codabar/signed_codabar.pdf)
+{{< /tab >}}
+{{< /tabs >}}
+
+Codabar encodes digits and the characters `- $ : / . +` only. Other characters are dropped without an error: the text `Approved_19/06/2022` would be encoded as `19/06/2022`. Pick a symbology such as Code 128 when the text contains letters.
 
 A document signed with a Codabar might look like in the picture below. The Codabar format was developed for printed documents and might be useful in office document flow.
 
@@ -81,32 +106,56 @@ The [Barcode Generator](https://products.groupdocs.app/signature/generate/barcod
 Another way to improve documents is to generate the barcode first and then add it to documents using third-party tools. For this case, it is possible to generate code as an image.
 
 * Create the `BarcodeSignOptions` class instance and set up all the demanded fields.
-* Instantiate the `PreviewSignatureOptions` object providing the methods for creation and releasing.
-* Invoke the `generate_signature_preview` method to obtain the barcode image as a stream.
+* Instantiate the [PreviewSignatureOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/previewsignatureoptions/) object providing the methods for creation and releasing of the image stream.
+* Invoke the static `Signature.generate_signature_preview` method to obtain the barcode image as a stream.
 * Use the resultant barcode stream in any possible way.
 
+{{< tabs "generate_barcode_image" >}}
+{{< tab "Python" >}}
 ```python
-import groupdocs.signature as signature
-from io import BytesIO
+import io
 
-# Create a memory stream to store the barcode image
-result = BytesIO()
+from groupdocs.signature import Signature
+from groupdocs.signature.domain import BarcodeTypes
+from groupdocs.signature.options import BarcodeSignOptions, PreviewSignatureOptions
 
-# Setup barcode signature options
-barcode_options = signature.BarcodeSignOptions()
-barcode_options.encode_type = signature.BarcodeTypes.CODE93
-barcode_options.text = "Case 148.01"
 
-# Create preview options
-preview_options = signature.PreviewSignatureOptions(
-    barcode_options,
-    lambda options: result,  # Create page stream
-    lambda options, stream: None  # Release page stream
-)
+def generate_barcode_image():
+    # Create a memory stream to store the barcode image
+    result = io.BytesIO()
 
-# Generate image to stream
-signature.Signature.generate_signature_preview(preview_options)
+    # Setup barcode signature options
+    barcode_options = BarcodeSignOptions()
+    barcode_options.encode_type = BarcodeTypes.CODE93
+    barcode_options.text = "Case 148-01"
+
+    # Create preview options
+    preview_options = PreviewSignatureOptions(
+        barcode_options,
+        lambda options: result,  # Create the image stream
+        lambda options, stream: None,  # Release the image stream
+    )
+
+    # Generate image to stream; no document is needed
+    Signature.generate_signature_preview(preview_options)
+
+    # Use the barcode image, for example save it for a third-party tool
+    with open("barcode_result.png", "wb") as image_file:
+        image_file.write(result.getvalue())
+    print(f"Barcode image: {len(result.getvalue())} bytes")
+
+
+if __name__ == "__main__":
+    generate_barcode_image()
 ```
+{{< /tab >}}
+{{< tab "barcode_result.png" >}}  
+```text
+Binary file (PNG, 2 KB)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/signature-use-cases/how-to-generate-barcode-and-sign-document-using-python/generate_barcode_image/barcode_result.png)
+{{< /tab >}}
+{{< /tabs >}}
 
 An image containing the generated barcode might look in this way:
 

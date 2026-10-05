@@ -26,87 +26,105 @@ structuredData:
         - name: Process list of found signatures
           text: Loop through list of found QR-code signatures.
 ---
-When you search for electronic signatures of QR-Code type inside a document with [**GroupDocs.Signature for Python via .NET**](https://products.groupdocs.com/signature/python-net), you only need to pass a [QrCodeSearchOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/qrcodesearchoptions) object to the search method.
+When you search for electronic signatures of QR-Code type inside a document with [**GroupDocs.Signature for Python via .NET**](https://products.groupdocs.com/signature/python-net), you only need to pass a list with a [QrCodeSearchOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/qrcodesearchoptions) object to the search method.
 
 Here's a quick guide on how to search for QR-code signatures:
 
 * Create a new instance of the [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature) class and pass the source document path as a constructor parameter.
 * Instantiate the [QrCodeSearchOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/qrcodesearchoptions) object according to your requirements and specify search options.
-* Call the [search](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/search) method of the [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature) class instance and pass the [QrCodeSearchOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/qrcodesearchoptions) to it.
+* Call the [search](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/search) method of the [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature) class instance and pass a list with the [QrCodeSearchOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/qrcodesearchoptions) to it. The `signatures` property of the returned [SearchResult](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/searchresult) holds the found [QrCodeSignature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/qrcodesignature) objects.
 
 The code snippet below demonstrates how to search for QR-code signatures in a document using Python:
 
-{{< tabs "example-1" >}}
+{{< tabs "search_qr_codes" >}}
 {{< tab "Python" >}}
-
 ```python
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
 from groupdocs.signature.options import QrCodeSearchOptions
-import groupdocs.signature.domain as gsd
-# Initialize signature
-with signature.Signature("sample.pdf") as sign:
-    # Search for signatures in document
-    signatures = sign.search(gsd.SignatureType.QR_CODE)
-    
-    print("\nSource document contains the following signatures:")
-    for qr_code_signature in signatures:
-        print(f"QR Code signature found at page {qr_code_signature.page_number} "
-              f"with type {qr_code_signature.encode_type} and text {qr_code_signature.text}")
-```
 
+
+def search_qr_codes():
+    with Signature("signed.pdf") as signature:
+        result = signature.search([QrCodeSearchOptions()])
+
+        print(f"Found {len(result.signatures)} QR code signature(s)")
+        for qr_code in result.signatures:
+            print(f"QR code signature found at page {qr_code.page_number} "
+                  f"with type {qr_code.encode_type.type_name} and text '{qr_code.text}'")
+
+
+if __name__ == "__main__":
+    search_qr_codes()
+```
 {{< /tab >}}
-{{< tab "sample.pdf" >}}
+{{< tab "signed.pdf" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-qr-code-e-signatures/sample.pdf)
+`signed.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-qr-code-e-signatures/signed.pdf) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "search-qr-codes.txt" >}}  
+```text
+Found 1 QR code signature(s)
+QR code signature found at page 1 with type QR and text 'John Smith'
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-qr-code-e-signatures/search_qr_codes/search-qr-codes.txt)
 {{< /tab >}}
 {{< /tabs >}}
 
 ### Advanced Search Options
 
-Here's an example showing how to use more advanced search options for QR codes:
+Here's an example showing how to use more advanced search options for QR codes: a page to search, the QR code type ([QrCodeTypes](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/qrcodetypes)) and the text to match.
 
-{{< tabs "example-2" >}}
+{{< tabs "search_qr_codes_with_filters" >}}
 {{< tab "Python" >}}
-
 ```python
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
+from groupdocs.signature.domain import QrCodeTypes, TextMatchType
 from groupdocs.signature.options import QrCodeSearchOptions
-from groupdocs.signature.domain import QrCodeTypes
 
-# Initialize signature
-with signature.Signature("sample.pdf") as sign:
-    # Create search options
-    search_options = QrCodeSearchOptions()
-    
-    # Search on specific pages
-    search_options.page_number = 1
-    search_options.all_pages = False
-    
-    # Search for specific QR code type
-    search_options.encode_type = QrCodeTypes.QR
-    
-    # Search for specific text in QR code
-    search_options.text = "John"
-    
-    # Search document
-    signatures = sign.search(search_options)
-    
-    # Process found signatures
-    for qr_code_signature in signatures:
-        print(f"Found QR Code signature: {qr_code_signature.text}")
-        print(f"Page number: {qr_code_signature.page_number}")
-        print(f"Position: X={qr_code_signature.left}, Y={qr_code_signature.top}")
-        print(f"Size: {qr_code_signature.width}x{qr_code_signature.height}")
-        print(f"Encode type: {qr_code_signature.encode_type}")
-        print(f"Error correction level: {qr_code_signature.error_correction_level}")
+
+def search_qr_codes_with_filters():
+    with Signature("signed.pdf") as signature:
+        options = QrCodeSearchOptions()
+        # Search the first page only (page numbers start at 1)
+        options.all_pages = False
+        options.page_number = 1
+        # Return only QR codes of the QR type...
+        options.encode_type = QrCodeTypes.QR
+        # ...whose text contains "John"
+        options.text = "John"
+        options.match_type = TextMatchType.CONTAINS
+
+        result = signature.search([options])
+
+        print(f"Found {len(result.signatures)} matching QR code signature(s)")
+        for qr_code in result.signatures:
+            print(f"Text: {qr_code.text}")
+            print(f"Page number: {qr_code.page_number}")
+            print(f"Position: X={qr_code.left}, Y={qr_code.top}")
+            print(f"Size: {qr_code.width}x{qr_code.height}")
+            print(f"Encode type: {qr_code.encode_type.type_name}")
+
+
+if __name__ == "__main__":
+    search_qr_codes_with_filters()
 ```
-
 {{< /tab >}}
-{{< tab "sample.pdf" >}}
+{{< tab "signed.pdf" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-qr-code-e-signatures/sample.pdf)
+`signed.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-qr-code-e-signatures/signed.pdf) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "search-qr-codes-with-filters.txt" >}}  
+```text
+Found 1 matching QR code signature(s)
+Text: John Smith
+Page number: 1
+Position: X=270, Y=370
+Size: 100x100
+Encode type: QR
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-qr-code-e-signatures/search_qr_codes_with_filters/search-qr-codes-with-filters.txt)
 {{< /tab >}}
 {{< /tabs >}}
 

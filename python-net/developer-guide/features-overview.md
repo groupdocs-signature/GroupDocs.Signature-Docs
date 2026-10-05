@@ -18,7 +18,7 @@ GroupDocs.Signature provides various electronic signature implementations as fol
 * Native text signatures as text stamps, text labels, annotation, stickers, watermarks with big amount of settings for visualization effects, opacity, colors, fonts, etc.;
 * Text as image signatures with big scope of additional options to specify how text will look, colors, and extra image effects;
 * Image signatures with options to specify extra image effects, rotation etc.;
-* Digital signatures based on digital certificate files and ability to support digital signature by document type (PDF, Microsoft Word documents and Microsoft Excel spreadsheets);
+* Digital signatures based on digital certificate files, for PDF, Microsoft Word, Microsoft Excel and Microsoft PowerPoint documents;
 * Barcode/QR-code signatures with variety of options;
 * Generated stamp looking image signatures based on predefined lines with custom text, colors, width, etc;
 * Metadata signatures to keep hidden signatures inside the document;
@@ -27,18 +27,17 @@ GroupDocs.Signature provides various electronic signature implementations as fol
 Signing documents in Python with our electronic signature (eSign) API is easy, reliable and secure. Here's a simple example of how to add a text signature:
 
 ```python
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
+from groupdocs.signature.options import TextSignOptions
 
-# Initialize signature handler
-signature_handler = signature.Signature("sample.pdf")
+with Signature("sample.pdf") as signature:
+    # Create text signature options
+    options = TextSignOptions("John Smith")
+    options.left = 100
+    options.top = 100
 
-# Create text signature options
-text_options = signature.TextSignOptions("John Smith")
-text_options.set_left(100)
-text_options.set_top(100)
-
-# Sign document with text signature
-signature_handler.sign("output.pdf", text_options)
+    # Sign the document and save the result to a new file
+    signature.sign("signed.pdf", options)
 ```
 
 ## Search for signatures
@@ -47,7 +46,7 @@ Obtain signatures list applied to document:
 
 * Text signatures information from all supported formats;
 * Image signatures information;
-* Digital signatures information from PDF, Microsoft Word documents and Microsoft Excel spreadsheets;
+* Digital signatures information from PDF, Microsoft Word, Microsoft Excel and Microsoft PowerPoint documents;
 * Barcode/QR-code signatures information from all supported formats;
 * Metadata signatures information from all supported formats;
 * Form-field signatures information from all supported formats.
@@ -55,15 +54,14 @@ Obtain signatures list applied to document:
 Example of searching for signatures:
 
 ```python
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
+from groupdocs.signature.options import TextSearchOptions
 
-# Initialize signature handler
-signature_handler = signature.Signature("signed.pdf")
-
-# Search for text signatures
-text_signatures = signature_handler.search(signature.TextSearchOptions())
-for text_signature in text_signatures:
-    print(f"Found text signature: {text_signature.text}")
+with Signature("signed.pdf") as signature:
+    # Pass a list of search options, one per signature type to look for
+    result = signature.search([TextSearchOptions()])
+    for text_signature in result.signatures:
+        print(f"Found text signature: {text_signature.text}")
 ```
 
 ## Verify signatures
@@ -80,16 +78,20 @@ Supported signature types are:
 Example of verifying signatures:
 
 ```python
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
+from groupdocs.signature.options import DigitalVerifyOptions
 
-# Initialize signature handler
-signature_handler = signature.Signature("signed.pdf")
-
-# Verify digital signatures
-verify_options = signature.DigitalVerifyOptions("certificate.pfx", "password")
-verify_result = signature_handler.verify(verify_options)
-print(f"Verification result: {verify_result.is_valid}")
+with Signature("signed.pdf") as signature:
+    # Verify the document's digital signatures against a certificate
+    options = DigitalVerifyOptions("certificate.pfx")
+    options.password = "1234567890"
+    result = signature.verify(options)
+    print(f"Verification result: {result.is_valid}")
 ```
+
+## Update and delete signatures
+
+Signatures found by a search can be changed and saved back to the document: moved, resized, or given new text. They can also be removed, one by one, by type, or all at once. See [Update signatures in documents]({{< ref "signature/python-net/developer-guide/basic-usage/update-signatures-in-documents/_index.md" >}}) and [Delete signatures from documents]({{< ref "signature/python-net/developer-guide/basic-usage/delete-signatures-from-documents/_index.md" >}}).
 
 ## Document information extraction
 
@@ -99,15 +101,16 @@ This may be quite useful for generating document preview and precise signature p
 Example of getting document information:
 
 ```python
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
 
-# Initialize signature handler
-signature_handler = signature.Signature("sample.pdf")
-
-# Get document info
-document_info = signature_handler.get_document_info()
-print(f"Pages count: {document_info.page_count}")
-print(f"File size: {document_info.file_size} bytes")
+with Signature("sample.pdf") as signature:
+    info = signature.get_document_info()
+    print(f"File type: {info.file_type.file_format}")
+    print(f"Pages count: {info.page_count}")
+    print(f"File size: {info.size} bytes")
+    for page in info.pages:
+        # page_number is 0-based here: 0 is the first page
+        print(f"Page {page.page_number}: {page.width} x {page.height}")
 ```
 
 ## Preview document pages
@@ -121,18 +124,27 @@ Supported image formats for document preview are:
 * JPG;
 * BMP.
 
+The library asks your code for a stream to write each page into, and hands the stream back when the page is done. Page numbers in previews are 0-based: `page_data.page_number` is 0 for the first page.
+
 Example of generating document preview:
 
 ```python
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
+from groupdocs.signature.options import PreviewOptions
 
-# Initialize signature handler
-signature_handler = signature.Signature("sample.pdf")
 
-# Create preview options
-preview_options = signature.PreviewOptions(lambda page_number: f"preview_{page_number}.png")
-preview_options.set_page_numbers([1, 2])  # Generate preview for pages 1 and 2
+def create_page_stream(page_data):
+    # Called once per page; return a writable binary stream
+    return open(f"preview_page_{page_data.page_number}.png", "wb")
 
-# Generate preview
-signature_handler.generate_preview(preview_options)
+
+def release_page_stream(page_data, stream):
+    # Called when the page is written; receives the stream returned above
+    stream.close()
+
+
+with Signature("sample.pdf") as signature:
+    options = PreviewOptions(create_page_stream, release_page_stream)
+    options.page_numbers = [0, 1]  # the first two pages
+    signature.generate_preview(options)
 ```

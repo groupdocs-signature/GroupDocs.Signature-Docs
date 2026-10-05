@@ -16,25 +16,26 @@ structuredData:
 
 * The `Signature` class is the main entry point that contains all required methods for manipulating document e-signatures.
 * Most methods expect different options objects for signing documents, verifying and searching electronic signatures.
-* The `Signature` class implements proper resource management to ensure all document streams are safely closed when operations are completed.
+* The `Signature` class is a context manager: use it in a `with` block to ensure all document streams are safely closed when operations are completed.
 
 ## Installation
 
 Install the package using pip:
 
 ```bash
-pip install groupdocs-signature
+pip install groupdocs-signature-net
 ```
 
 ## Required Imports
 
-The following code shows how to include required imports for all code examples:
+Import each class from the module that defines it. The package root exports `Signature`, `SignatureSettings`, `License` and the exception types; options, signatures and their helpers live in sub-modules:
 
 ```python
-import groupdocs.signature as signature
-from groupdocs.signature.domain import *
-from groupdocs.signature.options import *
-from groupdocs.signature.domain.extensions import *
+from groupdocs.signature import Signature, License                # entry point, licensing, exceptions
+from groupdocs.signature.options import TextSignOptions           # sign, search, verify and preview options
+from groupdocs.signature.domain import SignatureFont              # signatures, enumerations and helpers
+from groupdocs.signature.domain.extensions import TextShadow      # signature extensions
+from groupdocs.pydrawing import Color                             # colors
 ```  
 
 ## Basic Usage Example
@@ -42,10 +43,13 @@ from groupdocs.signature.domain.extensions import *
 The following code shows the most common pattern to define a `Signature` object and call its methods:
 
 ```python
+from groupdocs.signature import Signature
+from groupdocs.signature.options import TextSignOptions
+
 # Sign document with text signature
-with signature.Signature("sample.docx") as sign:
-    text_sign_options = signature.TextSignOptions("John Smith")
-    sign.sign("SampleSigned.docx", text_sign_options)
+with Signature("sample.docx") as signature:
+    text_sign_options = TextSignOptions("John Smith")
+    signature.sign("SampleSigned.docx", text_sign_options)
 ```
 
 ## Key Features
@@ -67,30 +71,35 @@ Please check the detailed examples in the following guides to learn how to:
 
 Here are main GroupDocs Signature API concepts:
 
-* [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) is the main class that contains all required methods for manipulating with document e-signatures.
+* [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/) is the main class that contains all required methods for manipulating with document e-signatures.
 * Most part of methods expects different options to eSign document, verify and search electronic signatures inside document.
-* [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class implements [IDisposable](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable) interface to correctly release used resources - like safely closing document streams when all operations completed.
+* [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/) class is a context manager: use it in a `with` block to correctly release used resources - like safely closing document streams when all operations completed.
 
 ## Referencing required namespaces
 
-The following code shows how to include required namespace for all code examples.
+You can also import the modules themselves and refer to the classes through them:
 
 ```python
-import groupdocs.signature as signature
-from groupdocs.signature.domain import *
-from groupdocs.signature.options import *
-from groupdocs.signature.domain.extensions import *
+import groupdocs.signature as gs
+import groupdocs.signature.options as gso
+import groupdocs.signature.domain as gsd
+import groupdocs.signature.domain.extensions as gsde
 ```  
 
 ## Signature object definition
 
-The following code shows most used code pattern to define [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) object and call its methods.  
+The following code shows most used code pattern to define [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/) object and call its methods.  
 
 ```python
-# Sign document with text signature.
-with signature.Signature("sample.docx") as sign:
-   text_sign_options = signature.TextSignOptions("John Smith")
-   sign.sign("SampleSigned.docx", text_sign_options)
+import groupdocs.signature as gs
+import groupdocs.signature.options as gso
+
+# Get document information and sign the document with a text signature
+with gs.Signature("sample.docx") as signature:
+    info = signature.get_document_info()
+    print(f"Pages: {info.page_count}")
+    result = signature.sign("SampleSigned.docx", gso.TextSignOptions("John Smith"))
+    print(f"Signatures added: {len(result.succeeded)}")
 ```
 
 Please check detailed examples of how to eSign documents, search and verify document signatures in the following guides:

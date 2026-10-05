@@ -1,0 +1,4 @@
+Found 3 text signature(s)
+ANNOTATION text signature 'Approved' on page 1 at (50, 480), size 90x22
+FORM_FIELD text signature 'John Smith' on page 1 at (50, 530), size 190x22
+NATIVE text signature 'John Smith' on page 1 at (50, 379), size 189x30

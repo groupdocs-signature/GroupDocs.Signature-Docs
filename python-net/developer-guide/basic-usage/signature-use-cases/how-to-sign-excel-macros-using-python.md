@@ -17,7 +17,7 @@ A digital certificate is a cryptographic key pair that consists of a public key 
 
 You can create your own digital certificate for personal use or testing purposes with the SelfCert.exe tool that is provided with Microsoft Office. However, this certificate is not authenticated by a Certificate Authority (CA).
 
-In this article, we will use a self-created test certificate.
+In this article, we will use a self-created test certificate, `certificate.pfx`, protected with the password `1234567890`.
 
 ![Test certificate](/signature/net/images/signature-use-cases/how-to-sign-excel-macros-using-csharp/MrSmithSignature.png)
 
@@ -37,32 +37,50 @@ You can sign the following files and projects:
 To sign the content of a particular spreadsheet or template:
 
 * Instantiate the `Signature` class providing a path to the source document or document stream.
-* Create the `DigitalSignOptions` object instance providing a path to the certificate. Specify the certificate password using the `password` property.
+* Create the [DigitalSignOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/digitalsignoptions/) object instance providing a path to the certificate. Specify the certificate password using the `password` property.
 * Invoke the `sign` method to process the document, providing the output file path and sign options.
 
+{{< tabs "sign_spreadsheet_with_certificate" >}}
+{{< tab "Python" >}}
 ```python
-import groupdocs.signature as signature
-import os
+from groupdocs.signature import Signature
+from groupdocs.signature.options import DigitalSignOptions
 
-# File paths
-file_path = "sample.xlsx"  # NOTE: Put here actual path for your document and certificate
-certificate_path = "MrSmithSignature.pfx"
-password = "1234567890"
-output_dir = "output"
-os.makedirs(output_dir, exist_ok=True)
-output_file_path = os.path.join(output_dir, os.path.basename(file_path))
 
-# Sign a spreadsheet
-signature_handler = signature.Signature(file_path)
+def sign_spreadsheet_with_certificate():
+    # Sign a spreadsheet
+    with Signature("sample.xlsx") as signature:
+        # Setup digital signature options
+        sign_options = DigitalSignOptions("certificate.pfx")
+        sign_options.password = "1234567890"
+        sign_options.signature.comments = "Test Signature"
 
-# Setup digital signature options
-sign_options = signature.DigitalSignOptions(certificate_path)
-sign_options.signature.comments = "Test Signature"
-sign_options.password = password
+        # Sign document
+        result = signature.sign("signed_spreadsheet.xlsx", sign_options)
+        print(f"Digital signatures added: {len(result.succeeded)}")
 
-# Sign document
-signature_handler.sign(output_file_path, sign_options)
+
+if __name__ == "__main__":
+    sign_spreadsheet_with_certificate()
 ```
+{{< /tab >}}
+{{< tab "sample.xlsx" >}}
+{{< tab-text >}}
+`sample.xlsx` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/signature-use-cases/how-to-sign-excel-macros-using-python/sample.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "certificate.pfx" >}}
+{{< tab-text >}}
+`certificate.pfx` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/signature-use-cases/how-to-sign-excel-macros-using-python/certificate.pfx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "signed_spreadsheet.xlsx" >}}  
+```text
+Binary file (XLSX, 45 KB)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/signature-use-cases/how-to-sign-excel-macros-using-python/sign_spreadsheet_with_certificate/signed_spreadsheet.xlsx)
+{{< /tab >}}
+{{< /tabs >}}
 
 A spreadsheet signed with a digital certificate would look like below:
 
@@ -76,39 +94,66 @@ To sign only the macros:
 
 * Instantiate the `Signature` class providing a path to the source document or document stream.
 * Create the `DigitalSignOptions` object instance.
-* Create the `DigitalVBA` object instance providing certificate path and password as constructor parameters.
+* Create the [DigitalVBA](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain.extensions/digitalvba/) object instance providing certificate path and password as constructor parameters.
 * Set the `sign_only_vba_project` property to `True`.
-* Add the `DigitalVBA` object instance as a sign options extension. 
+* Add the `DigitalVBA` object instance as a sign options extension with `extensions.append`. 
 * Invoke the `sign` method to process the document, providing the output file path and sign options.
 
+The macro signature is stored in the `xl/vbaProjectSignature.bin` part of the workbook package, next to the macros themselves. Searching the document for digital signatures does not report it, so the example below looks for that part to confirm the macros are signed.
+
+{{< tabs "sign_spreadsheet_macros_only" >}}
+{{< tab "Python" >}}
 ```python
-import groupdocs.signature as signature
-import os
+import zipfile
 
-# File paths
-file_path = "sample.xlsm"  # NOTE: Put here actual path for your document and certificate
-certificate_path = "MrSmithSignature.pfx"
-password = "1234567890"
-output_dir = "output"
-os.makedirs(output_dir, exist_ok=True)
-output_file_path = os.path.join(output_dir, os.path.basename(file_path))
+from groupdocs.signature import Signature
+from groupdocs.signature.domain.extensions import DigitalVBA
+from groupdocs.signature.options import DigitalSignOptions
 
-# Sign macros within the spreadsheet
-signature_handler = signature.Signature(file_path)
 
-# Create digital signature options without digital certificate
-sign_options = signature.DigitalSignOptions()
+def sign_spreadsheet_macros_only():
+    # Sign macros within the spreadsheet
+    with Signature("sample.xlsm") as signature:
+        # Create digital signature options without digital certificate
+        sign_options = DigitalSignOptions()
 
-# Add extension for signing VBA project digitally
-digital_vba = signature.DigitalVBA(certificate_path, password)
-# Set to true only for signing VBA project
-digital_vba.sign_only_vba_project = True
-digital_vba.comments = "Signed VBA macros"
-sign_options.extensions.add(digital_vba)
+        # Add extension for signing VBA project digitally
+        digital_vba = DigitalVBA("certificate.pfx", "1234567890")
+        # Set to True only for signing VBA project
+        digital_vba.sign_only_vba_project = True
+        digital_vba.comments = "Signed VBA macros"
+        sign_options.extensions.append(digital_vba)
 
-# Sign document
-signature_handler.sign(output_file_path, sign_options)
+        # Sign document
+        result = signature.sign("signed_macros.xlsm", sign_options)
+        print(f"Signatures added: {len(result.succeeded)}")
+
+    # The VBA project signature is a separate part of the package
+    with zipfile.ZipFile("signed_macros.xlsm") as package:
+        print("VBA project signed:", "xl/vbaProjectSignature.bin" in package.namelist())
+
+
+if __name__ == "__main__":
+    sign_spreadsheet_macros_only()
 ```
+{{< /tab >}}
+{{< tab "sample.xlsm" >}}
+{{< tab-text >}}
+`sample.xlsm` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/signature-use-cases/how-to-sign-excel-macros-using-python/sample.xlsm) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "certificate.pfx" >}}
+{{< tab-text >}}
+`certificate.pfx` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/signature-use-cases/how-to-sign-excel-macros-using-python/certificate.pfx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "signed_macros.xlsm" >}}  
+```text
+Binary file (XLSM, 94 KB)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/signature-use-cases/how-to-sign-excel-macros-using-python/sign_spreadsheet_macros_only/signed_macros.xlsm)
+{{< /tab >}}
+{{< /tabs >}}
 
 To sign both the content and macros:
 
@@ -116,37 +161,65 @@ To sign both the content and macros:
 * Create the `DigitalSignOptions` object instance providing a path to the certificate. Specify the certificate password using the `password` property.
 * Create the `DigitalVBA` object instance providing certificate path and password as constructor parameters.
 * Do not specify the `sign_only_vba_project` property, or set it to `False`.
-* Add the `DigitalVBA` object instance as a sign options extension. 
+* Add the `DigitalVBA` object instance as a sign options extension with `extensions.append`. 
 * Invoke the `sign` method to process the document, providing the output file path and sign options.
 
+The workbook signature is found by a search for digital signatures, while the macro signature again shows up as the `xl/vbaProjectSignature.bin` part.
+
+{{< tabs "sign_spreadsheet_and_macros" >}}
+{{< tab "Python" >}}
 ```python
-import groupdocs.signature as signature
-import os
+import zipfile
 
-# File paths
-file_path = "sample.xlsm"  # NOTE: Put here actual path for your document and certificate
-certificate_path = "MrSmithSignature.pfx"
-password = "1234567890"
-output_dir = "output"
-os.makedirs(output_dir, exist_ok=True)
-output_file_path = os.path.join(output_dir, os.path.basename(file_path))
+from groupdocs.signature import Signature
+from groupdocs.signature.domain.extensions import DigitalVBA
+from groupdocs.signature.options import DigitalSearchOptions, DigitalSignOptions
 
-# Sign macros within the spreadsheet
-signature_handler = signature.Signature(file_path)
 
-# Setup digital signature options
-sign_options = signature.DigitalSignOptions(certificate_path)
-sign_options.signature.comments = "Test Signature"
-sign_options.password = password
-    
-# Add extension for signing VBA project digitally
-digital_vba = signature.DigitalVBA(certificate_path, password)
-digital_vba.comments = "Signed VBA macros"
-sign_options.extensions.add(digital_vba)
+def sign_spreadsheet_and_macros():
+    # Sign the spreadsheet and the macros within it
+    with Signature("sample.xlsm") as signature:
+        # Setup digital signature options
+        sign_options = DigitalSignOptions("certificate.pfx")
+        sign_options.password = "1234567890"
+        sign_options.signature.comments = "Test Signature"
 
-# Sign document
-signature_handler.sign(output_file_path, sign_options)
+        # Add extension for signing VBA project digitally
+        digital_vba = DigitalVBA("certificate.pfx", "1234567890")
+        digital_vba.comments = "Signed VBA macros"
+        sign_options.extensions.append(digital_vba)
+
+        # Sign document
+        signature.sign("signed_spreadsheet_and_macros.xlsm", sign_options)
+
+    with Signature("signed_spreadsheet_and_macros.xlsm") as signed:
+        found = signed.search([DigitalSearchOptions()]).signatures
+        print(f"Workbook signatures found: {len(found)}")
+    with zipfile.ZipFile("signed_spreadsheet_and_macros.xlsm") as package:
+        print("VBA project signed:", "xl/vbaProjectSignature.bin" in package.namelist())
+
+
+if __name__ == "__main__":
+    sign_spreadsheet_and_macros()
 ```
+{{< /tab >}}
+{{< tab "sample.xlsm" >}}
+{{< tab-text >}}
+`sample.xlsm` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/signature-use-cases/how-to-sign-excel-macros-using-python/sample.xlsm) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "certificate.pfx" >}}
+{{< tab-text >}}
+`certificate.pfx` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/signature-use-cases/how-to-sign-excel-macros-using-python/certificate.pfx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "signed_spreadsheet_and_macros.xlsm" >}}  
+```text
+Binary file (XLSM, 99 KB)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/signature-use-cases/how-to-sign-excel-macros-using-python/sign_spreadsheet_and_macros/signed_spreadsheet_and_macros.xlsm)
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Get a Free API License
 

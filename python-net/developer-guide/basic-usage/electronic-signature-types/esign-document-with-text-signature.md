@@ -45,103 +45,123 @@ To manipulate text signatures programmatically [**GroupDocs.Signature for Python
 
 This example shows how to add a text signature to a document using Python:
 
-{{< tabs "example-1" >}}
+{{< tabs "sign_with_text_signature" >}}
 {{< tab "Python" >}}
-
 ```python
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
 from groupdocs.signature.options import TextSignOptions
-from groupdocs.signature.domain import SignatureFont, TextSignature
-import groupdocs.signature.domain as gsd
-import sys 
-import os
+from groupdocs.signature.domain import SignatureFont
+from groupdocs.pydrawing import Color
 
-def run():
-    with signature.Signature("./sample.pdf") as sign:
+
+def sign_with_text_signature():
+    with Signature("sample.pdf") as signature:
         # Create text signature options
-        text_options = TextSignOptions("John Smith")
-        
-        # Set advanced options
-        text_options.font = gsd.SignatureFont()
-        text_options.font.size = 20
-        text_options.font.family_name = "Arial"
-        text_options.font.bold = True
-        text_options.font.italic = True
-        text_options.fore_color = gsd.Color.BLUE
-        text_options.back_color = gsd.Color.WHITE
-        text_options.opacity = 0.8
-        text_options.rotation_angle = 45
-        
-        # Set text alignment
-        text_options.horizontal_alignment = gsd.HorizontalAlignment.CENTER
-        text_options.vertical_alignment = gsd.VerticalAlignment.CENTER
-        
-        # Add border
-        text_options.border_color = gsd.Color.BLACK
-        text_options.border_style = gsd.DashStyle.SOLID
-        text_options.border_width = 2
-        
-        # Sign document
-        sign.sign("./sample_signed.pdf", text_options)
-```
+        options = TextSignOptions("John Smith")
 
+        # Set signature position and size
+        options.left = 100
+        options.top = 400
+        options.width = 200
+        options.height = 50
+
+        # Set text color and font
+        options.fore_color = Color.red
+        font = SignatureFont()
+        font.family_name = "Arial"
+        font.size = 24
+        options.font = font
+
+        # Sign the document and save the result
+        result = signature.sign("signed_text.pdf", options)
+        print(f"Signed with {len(result.succeeded)} text signature(s)")
+
+
+if __name__ == "__main__":
+    sign_with_text_signature()
+```
 {{< /tab >}}
 {{< tab "sample.pdf" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-text-signature/sample.pdf)
+`sample.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-text-signature/sample.pdf) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "signed_text.pdf" >}}  
+```text
+Binary file (PDF, 122 KB)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-text-signature/sign_with_text_signature/signed_text.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
 ### Advanced Text Signature Options
 
-You can customize the text signature further with additional options:
+You can customize the text signature further with additional options: alignment and margins, font style, background, border, rotation and transparency. When an alignment is set, it replaces the `left` or `top` coordinate, and the `margin` offsets the signature from the page edge.
 
-{{< tabs "example-2" >}}
+{{< tabs "sign_with_text_signature_advanced" >}}
 {{< tab "Python" >}}
-
 ```python
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
 from groupdocs.signature.options import TextSignOptions
-from groupdocs.signature.domain import SignatureFont, TextSignature
-import groupdocs.signature.domain as gsd
-import sys 
-import os
+from groupdocs.signature.domain import (
+    Background, Border, DashStyle, HorizontalAlignment, Padding,
+    SignatureFont, TextSignatureImplementation, VerticalAlignment)
+from groupdocs.pydrawing import Color
 
-def run():
-    with signature.Signature("./sample.pdf") as sign:
-        # Create text signature options
-        text_options = TextSignOptions("John Smith")
-        
-        # Set advanced options
-        text_options.font = gsd.SignatureFont()
-        text_options.font.size = 20
-        text_options.font.family_name = "Arial"
-        text_options.font.bold = True
-        text_options.font.italic = True
-        text_options.fore_color = gsd.Color.BLUE
-        text_options.back_color = gsd.Color.WHITE
-        text_options.opacity = 0.8
-        text_options.rotation_angle = 45
-        
-        # Set text alignment
-        text_options.horizontal_alignment = gsd.HorizontalAlignment.CENTER
-        text_options.vertical_alignment = gsd.VerticalAlignment.CENTER
-        
-        # Add border
-        text_options.border_color = gsd.Color.BLACK
-        text_options.border_style = gsd.DashStyle.SOLID
-        text_options.border_width = 2
-        
-        # Sign document
-        sign.sign("./sample_signed.pdf", text_options)
+
+def sign_with_text_signature_advanced():
+    with Signature("sample.pdf") as signature:
+        options = TextSignOptions("John Smith")
+
+        # Put the signature in the bottom right corner of the page
+        options.width = 220
+        options.height = 60
+        options.horizontal_alignment = HorizontalAlignment.RIGHT
+        options.vertical_alignment = VerticalAlignment.BOTTOM
+        options.margin = Padding(right=40, bottom=60)
+
+        # Font style and text color
+        font = SignatureFont()
+        font.family_name = "Arial"
+        font.size = 20
+        font.bold = True
+        font.italic = True
+        options.font = font
+        options.fore_color = Color.dark_blue
+
+        # Background, border, rotation and transparency
+        background = Background()
+        background.color = Color.light_yellow
+        options.background = background
+        border = Border()
+        border.color = Color.dark_blue
+        border.dash_style = DashStyle.DASH
+        border.weight = 2
+        options.border = border
+        options.rotation_angle = -10
+        options.transparency = 0.2
+
+        # Render the text as an image, which also draws the border on PDF pages
+        options.signature_implementation = TextSignatureImplementation.IMAGE
+
+        result = signature.sign("signed_text_advanced.pdf", options)
+        print(f"Signed with {len(result.succeeded)} text signature(s)")
+
+
+if __name__ == "__main__":
+    sign_with_text_signature_advanced()
 ```
-
 {{< /tab >}}
 {{< tab "sample.pdf" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-text-signature/sample.pdf)
+`sample.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-text-signature/sample.pdf) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "signed_text_advanced.pdf" >}}  
+```text
+Binary file (PDF, 53 KB)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-text-signature/sign_with_text_signature_advanced/signed_text_advanced.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 

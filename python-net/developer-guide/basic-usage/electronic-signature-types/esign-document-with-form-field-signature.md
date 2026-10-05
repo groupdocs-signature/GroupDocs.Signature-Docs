@@ -59,41 +59,48 @@ Currently GroupDocs.Signature supports the creation of Form Field signatures for
 
 This example shows how to sign a PDF document with a Form Field electronic signature using Python:
 
-{{< tabs "example-1" >}}
+{{< tabs "sign_with_form_field_signature" >}}
 {{< tab "Python" >}}
-
 ```python
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
 from groupdocs.signature.options import FormFieldSignOptions
 from groupdocs.signature.domain import TextFormFieldSignature
-import groupdocs.signature.domain as gsd
-import sys 
-import os
 
-def run():
-    with signature.Signature("./sample.pdf") as sign:
-        # Create text form field signature
-        text_signature = TextFormFieldSignature("FieldText", "Value1")
-        
-        # Create form field options
-        options = FormFieldSignOptions(text_signature)
-        
-        # Set signature position and size
-        options.horizontal_alignment = gsd.HorizontalAlignment.LEFT
-        options.vertical_alignment = gsd.VerticalAlignment.TOP
-        options.margin = gsd.Padding(10, 20, 0, 0)
-        options.height = 10
-        options.width = 100
-        
-        # Sign document
-        sign.sign("./SampleSigned.pdf", options)
+
+def sign_with_form_field_signature():
+    with Signature("sample.pdf") as signature:
+        # Create a text form field named "FieldText" with the value "Value1"
+        text_field = TextFormFieldSignature("FieldText", "Value1")
+
+        # Create form field options for it
+        options = FormFieldSignOptions(text_field)
+
+        # Set form field position and size
+        options.left = 100
+        options.top = 400
+        options.width = 200
+        options.height = 20
+
+        # Sign the document and save the result
+        result = signature.sign("signed_form_field.pdf", options)
+        for field in result.succeeded:
+            print(f"Added form field '{field.name}' with value '{field.value}'")
+
+
+if __name__ == "__main__":
+    sign_with_form_field_signature()
 ```
-
 {{< /tab >}}
 {{< tab "sample.pdf" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-form-field-signature/sample.pdf)
+`sample.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-form-field-signature/sample.pdf) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "signed_form_field.pdf" >}}  
+```text
+Binary file (PDF, 37 KB)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-form-field-signature/sign_with_form_field_signature/signed_form_field.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -110,46 +117,54 @@ To update an existing form field signature within the document with GroupDocs.Si
 * Call the [Sign](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/sign/) method of the [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature) class instance and pass the initialized [TextSignOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/textsignoptions) instance to it.
 * Analyze the [SignResult](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/signresult) object to check the newly created signatures if needed.  
 
-This example shows how to sign a PDF document with the existing Form Field electronic signature and update its value using Python:
+This example shows how to sign a PDF document with the existing Form Field electronic signature and update its value using Python. The `sample_form.pdf` form has two text fields: `ApprovalNote` (plain text) and `UserSignatureFullName` (rich text). The `form_text_field_title` property names the field to fill; when it is not set, the text goes into every text field of the given `form_text_field_type`.
 
-{{< tabs "example-2" >}}
+{{< tabs "fill_existing_form_fields" >}}
 {{< tab "Python" >}}
-
 ```python
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
 from groupdocs.signature.options import TextSignOptions
-from groupdocs.signature.domain import FormTextFieldType
+from groupdocs.signature.domain import FormTextFieldType, TextSignatureImplementation
 
-# Initialize signature
-with signature.Signature("sample.pdf") as sign:
-    # Create first form field options
-    ff_options1 = TextSignOptions("Document is approved")
-    ff_options1.signature_implementation = signature.TextSignatureImplementation.FORM_FIELD
-    ff_options1.form_text_field_type = FormTextFieldType.PLAIN_TEXT
-    
-    # Create second form field options
-    ff_options2 = TextSignOptions("John Smith")
-    ff_options2.signature_implementation = signature.TextSignatureImplementation.FORM_FIELD
-    ff_options2.form_text_field_type = FormTextFieldType.RICH_TEXT
-    ff_options2.form_text_field_title = "UserSignatureFullName"
-    
-    # Create list of options
-    list_options = [ff_options1, ff_options2]
-    
-    # Sign document
-    sign_result = sign.sign("SampleSigned.pdf", list_options)
+
+def fill_existing_form_fields():
+    with Signature("sample_form.pdf") as signature:
+        # Put a note into the plain-text field "ApprovalNote"
+        note_options = TextSignOptions("Document is approved")
+        note_options.signature_implementation = TextSignatureImplementation.FORM_FIELD
+        note_options.form_text_field_type = FormTextFieldType.PLAIN_TEXT
+        note_options.form_text_field_title = "ApprovalNote"
+
+        # Put the signer's name into the rich-text field "UserSignatureFullName"
+        name_options = TextSignOptions("John Smith")
+        name_options.signature_implementation = TextSignatureImplementation.FORM_FIELD
+        name_options.form_text_field_type = FormTextFieldType.RICH_TEXT
+        name_options.form_text_field_title = "UserSignatureFullName"
+
+        # Sign the document with both options at once
+        result = signature.sign("filled_form.pdf", [note_options, name_options])
+        print(f"Filled {len(result.succeeded)} form field(s)")
+
+
+if __name__ == "__main__":
+    fill_existing_form_fields()
 ```
-
 {{< /tab >}}
-{{< tab "sample.pdf" >}}
+{{< tab "sample_form.pdf" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-form-field-signature/sample.pdf)
+`sample_form.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-form-field-signature/sample_form.pdf) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "filled_form.pdf" >}}  
+```text
+Binary file (PDF, 40 KB)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-form-field-signature/fill_existing_form_fields/filled_form.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
 ### Summary
-This guide explains how to use [**GroupDocs.Signature for Python via .NET**](https://products.groupdocs.com/signature/python-net) to add form field signatures to documents. It covers loading a document, configuring form field properties such as name, type, and value, and saving the signed document. Advanced options, like customizing field appearance and placement, are also included. For more details, refer to related guides on document signing techniques.
+This guide explains how to use [**GroupDocs.Signature for Python via .NET**](https://products.groupdocs.com/signature/python-net) to add form field signatures to documents. It covers loading a document, configuring form field properties such as name, type, and value, and saving the signed document. Advanced options, like placing the field on the page and filling the existing fields of a PDF form, are also included. For more details, refer to related guides on document signing techniques.
 
 
 ## More Resources

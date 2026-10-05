@@ -37,52 +37,57 @@ Image document metadata could keep big amount of data that provides ability to k
 
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
 * Instantiate the [MetadataSignOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/metadatasignoptions) object according to your requirements.
-* Instantiate one or several [ImageMetadataSignature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/imagemetadatasignature) objects and add them into [MetadataSignOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/metadatasignoptions) to metadata signatures collection ([Signatures](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/metadatasignoptions/signatures)) via [Add](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/metadatasignaturecollection/add) or [AddRange](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/metadatasignaturecollection/addrange) method.
+* Instantiate one or several [ImageMetadataSignature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/imagemetadatasignature) objects and add them to the options with the [add](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/metadatasignoptions/add) method, or to its [signatures](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/metadatasignoptions/signatures) collection with the [append](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/metadatasignaturecollection/append) or [add_range](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/metadatasignaturecollection/add_range) method.
 * Call [Sign](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature) class instance and pass [MetadataSignOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/metadatasignoptions) to it.
 
 ## How to eSign Image with Metadata signature
 
 This example shows how to sign png image with metadata e-signatures
 
-{{< tabs "example-1" >}}
+{{< tabs "sign_png" >}}
 {{< tab "Python" >}}
-
 ```python
-import groupdocs.signature as signature
-from groupdocs.signature.options import MetadataSignOptions
-from groupdocs.signature.domain import ImageMetadataSignature
 from datetime import datetime
 
-# Initialize signature
-with signature.Signature("sample.png") as sign:
-    # Create metadata options
-    options = MetadataSignOptions()
-    
-    # Specify different Metadata Signatures and add them to options signature collection
-    imgs_metadata_id = 41996
-    
-    # Create several Image Metadata signatures with different types
-    options.add(ImageMetadataSignature(imgs_metadata_id, "Mr.Scherlock Holmes"))  # String value
-    imgs_metadata_id += 1
-    options.add(ImageMetadataSignature(imgs_metadata_id, datetime.now()))         # Date Time value
-    imgs_metadata_id += 1
-    options.add(ImageMetadataSignature(imgs_metadata_id, 123456))                 # Integer value
-    imgs_metadata_id += 1
-    options.add(ImageMetadataSignature(imgs_metadata_id, 123.456))                # Double value
-    imgs_metadata_id += 1
-    options.add(ImageMetadataSignature(imgs_metadata_id, 123.456))                # Decimal value
-    imgs_metadata_id += 1
-    options.add(ImageMetadataSignature(imgs_metadata_id, 123.456))                # Float value
-    
-    # Sign document
-    sign.sign("SampleSigned.png", options)
-```
+from groupdocs.signature import Signature
+from groupdocs.signature.options import MetadataSignOptions
+from groupdocs.signature.domain import ImageMetadataSignature
 
+
+def sign_png():
+    with Signature("sample.png") as signature:
+        options = MetadataSignOptions()
+
+        # Image metadata entries are identified by a number, not a name
+        metadata_id = 41996
+
+        # Add several Image Metadata signatures with values of different types
+        options.add(ImageMetadataSignature(metadata_id, "Mr.Scherlock Holmes"))  # text
+        options.add(ImageMetadataSignature(metadata_id + 1, datetime.now()))      # date and time
+        options.add(ImageMetadataSignature(metadata_id + 2, 123456))              # whole number
+        options.add(ImageMetadataSignature(metadata_id + 3, 123.456))             # floating-point number
+
+        # Sign the image and save the result
+        result = signature.sign("signed.png", options)
+        print(f"Signed with {len(result.succeeded)} metadata signature(s):")
+        for item in result.succeeded:
+            print(f"  {item.id}")
+
+
+if __name__ == "__main__":
+    sign_png()
+```
 {{< /tab >}}
 {{< tab "sample.png" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [sample.png](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-metadata-signature/esign-image-with-metadata-signature/sample.png)
+`sample.png` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-metadata-signature/esign-image-with-metadata-signature/sample.png) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "signed.png" >}}  
+```text
+Binary file (PNG, 77 KB)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-metadata-signature/esign-image-with-metadata-signature/sign_png/signed.png)
 {{< /tab >}}
 {{< /tabs >}}
 

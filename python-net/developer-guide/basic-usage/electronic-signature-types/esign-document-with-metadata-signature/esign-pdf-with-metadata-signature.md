@@ -38,44 +38,54 @@ PDF document metadata could keep big amount of data that provides ability to kee
 
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
 * Instantiate the [MetadataSignOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/metadatasignoptions) object according to your requirements.
-* Instantiate one or several [PdfMetadataSignature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/pdfmetadatasignature) objects and add them into [MetadataSignOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/metadatasignoptions) to metadata signatures collection ([Signatures](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/metadatasignoptions/signatures)) via [Add](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/metadatasignaturecollection/add) or [AddRange](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/metadatasignaturecollection/addrange) method.
+* Instantiate one or several [PdfMetadataSignature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/pdfmetadatasignature) objects and add them to the options with the [add](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/metadatasignoptions/add) method, or to its [signatures](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/metadatasignoptions/signatures) collection with the [append](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/metadatasignaturecollection/append) or [add_range](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/metadatasignaturecollection/add_range) method.
 * Call [Sign](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature) class instance and pass [MetadataSignOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/metadatasignoptions) to it.
 
 ## How to eSign PDF with Metadata signature
 
 This example shows how to sign PDF document with several e-signatures as metadata.
 
-{{< tabs "example-1" >}}
+{{< tabs "sign_pdf" >}}
 {{< tab "Python" >}}
-
 ```python
-import groupdocs.signature as signature
-from groupdocs.signature.options import MetadataSignOptions
-from groupdocs.signature.domain import PdfMetadataSignature
 from datetime import datetime
 
-# Initialize signature
-with signature.Signature("sample.pdf") as sign:
-    # Create metadata options
-    options = MetadataSignOptions()
-    
-    # Add metadata signatures
-    options.add(PdfMetadataSignature("Author", "Mr.Scherlock Holmes"))  # String value
-    options.add(PdfMetadataSignature("CreatedOn", datetime.now()))      # DateTime values
-    options.add(PdfMetadataSignature("DocumentId", 123456))            # Integer value
-    options.add(PdfMetadataSignature("SignatureId", 123.456))          # Double value
-    options.add(PdfMetadataSignature("Amount", 123.456))               # Decimal value
-    options.add(PdfMetadataSignature("Total", 123.456))                # Float value
-    
-    # Sign document
-    sign.sign("SampleSigned.pdf", options)
-```
+from groupdocs.signature import Signature
+from groupdocs.signature.options import MetadataSignOptions
+from groupdocs.signature.domain import PdfMetadataSignature
 
+
+def sign_pdf():
+    with Signature("sample.pdf") as signature:
+        options = MetadataSignOptions()
+
+        # Add metadata signatures with values of different types
+        options.add(PdfMetadataSignature("Author", "Mr.Scherlock Holmes"))  # text
+        options.add(PdfMetadataSignature("CreatedOn", datetime.now()))      # date and time
+        options.add(PdfMetadataSignature("DocumentId", 123456))             # whole number
+        options.add(PdfMetadataSignature("SignatureId", 123.456))           # floating-point number
+
+        # Sign the document and save the result
+        result = signature.sign("signed.pdf", options)
+        print(f"Signed with {len(result.succeeded)} metadata signature(s):")
+        for item in result.succeeded:
+            print(f"  {item.name}")
+
+
+if __name__ == "__main__":
+    sign_pdf()
+```
 {{< /tab >}}
 {{< tab "sample.pdf" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-metadata-signature/esign-pdf-with-metadata-signature/sample.pdf)
+`sample.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-metadata-signature/esign-pdf-with-metadata-signature/sample.pdf) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "signed.pdf" >}}  
+```text
+Binary file (PDF, 36 KB)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-metadata-signature/esign-pdf-with-metadata-signature/sign_pdf/signed.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -83,48 +93,59 @@ The following sample file is used in this example: [sample.pdf](/signature/pytho
 
 This example shows how to sign PDF document with standard embedded PDF document metadata signatures. If PDF metadata signature already exists with same name its value will be overwritten.
 
-{{< tabs "example-2" >}}
+{{< tabs "sign_pdf_standard" >}}
 {{< tab "Python" >}}
-
 ```python
-import groupdocs.signature as signature
-from groupdocs.signature.options import MetadataSignOptions
-from groupdocs.signature.domain import PdfMetadataSignature, PdfMetadataSignatures
 from datetime import datetime, timedelta
 
-# Initialize signature
-with signature.Signature("sample.pdf") as sign:
-    # Create metadata options
-    options = MetadataSignOptions()
-    
-    # Using standard Pdf Metadata Signatures with new values
-    signatures = [
-        PdfMetadataSignatures.AUTHOR.clone("Mr.Scherlock Holmes"),
-        PdfMetadataSignatures.CREATE_DATE.clone(datetime.now() - timedelta(days=1)),
-        PdfMetadataSignatures.METADATA_DATE.clone(datetime.now() - timedelta(days=2)),
-        PdfMetadataSignatures.CREATOR_TOOL.clone("GD.Signature-Test"),
-        PdfMetadataSignatures.MODIFY_DATE.clone(datetime.now() - timedelta(days=13)),
-        PdfMetadataSignatures.PRODUCER.clone("GroupDocs-Producer"),
-        PdfMetadataSignatures.ENTRY.clone("Signature"),
-        PdfMetadataSignatures.KEYWORDS.clone("GroupDocs, Signature, Metadata, Creation Tool"),
-        PdfMetadataSignatures.TITLE.clone("Metadata Example"),
-        PdfMetadataSignatures.SUBJECT.clone("Metadata Test Example"),
-        PdfMetadataSignatures.DESCRIPTION.clone("Metadata Test example description"),
-        PdfMetadataSignatures.CREATOR.clone("GroupDocs.Signature")
-    ]
-    
-    # Add signatures to options
-    options.signatures.extend(signatures)
-    
-    # Sign document
-    sign.sign("sample_signed.pdf", options)
-```
+from groupdocs.signature import Signature
+from groupdocs.signature.options import MetadataSignOptions
+from groupdocs.signature.domain import PdfMetadataSignatures
 
+
+def sign_pdf_standard():
+    with Signature("sample.pdf") as signature:
+        options = MetadataSignOptions()
+
+        # Copy the standard PDF metadata signatures with new values
+        now = datetime.now()
+        signatures = [
+            PdfMetadataSignatures.AUTHOR.clone("Mr.Scherlock Holmes"),
+            PdfMetadataSignatures.CREATE_DATE.clone(now - timedelta(days=1)),
+            PdfMetadataSignatures.METADATA_DATE.clone(now - timedelta(days=2)),
+            PdfMetadataSignatures.CREATOR_TOOL.clone("GD.Signature-Test"),
+            PdfMetadataSignatures.MODIFY_DATE.clone(now - timedelta(days=13)),
+            PdfMetadataSignatures.PRODUCER.clone("GroupDocs-Producer"),
+            PdfMetadataSignatures.ENTRY.clone("Signature"),
+            PdfMetadataSignatures.KEYWORDS.clone("GroupDocs, Signature, Metadata, Creation Tool"),
+            PdfMetadataSignatures.TITLE.clone("Metadata Example"),
+            PdfMetadataSignatures.SUBJECT.clone("Metadata Test Example"),
+            PdfMetadataSignatures.DESCRIPTION.clone("Metadata Test example description"),
+            PdfMetadataSignatures.CREATOR.clone("GroupDocs.Signature"),
+        ]
+
+        # Add all of them to the options at once
+        options.signatures.add_range(signatures)
+
+        # Sign the document and save the result
+        result = signature.sign("signed_standard.pdf", options)
+        print(f"Signed with {len(result.succeeded)} metadata signature(s)")
+
+
+if __name__ == "__main__":
+    sign_pdf_standard()
+```
 {{< /tab >}}
 {{< tab "sample.pdf" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-metadata-signature/esign-pdf-with-metadata-signature/sample.pdf)
+`sample.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-metadata-signature/esign-pdf-with-metadata-signature/sample.pdf) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "signed_standard.pdf" >}}  
+```text
+Binary file (PDF, 36 KB)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-metadata-signature/esign-pdf-with-metadata-signature/sign_pdf_standard/signed_standard.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 

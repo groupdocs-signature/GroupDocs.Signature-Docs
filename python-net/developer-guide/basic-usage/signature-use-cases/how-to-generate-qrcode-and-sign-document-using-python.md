@@ -36,7 +36,7 @@ The generated QR Code can be downloaded and used to add to the business contract
 Use pip to install the package:
 
 ```bash
-pip install groupdocs-signature
+pip install groupdocs-signature-net
 ```
 
 ## Signing a document with an Event QR-code in Python
@@ -44,38 +44,60 @@ pip install groupdocs-signature
 Sometimes it is needed to inform coworkers about business events. In such cases, an Event QR code can provide all the required information in a very effective way. This topic describes how to sign a PDF document with the generated Event QR code.
 
 * Instantiate the `Signature` class providing the path to the source document or document stream.
-* Set event data in the `Event` object instance.
-* Create the `QrCodeSignOptions` object and set up all demanded fields.
+* Set event data in the [Event](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain.extensions/event/) object instance.
+* Create the [QrCodeSignOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/qrcodesignoptions/) object and set up all demanded fields. The event goes into the `data` property; the QR code then carries it in the iCalendar `VEVENT` format.
 * Invoke the `sign` method to process the document, providing output file path and sign options.
 
+{{< tabs "sign_pdf_with_event_qr_code" >}}
+{{< tab "Python" >}}
 ```python
-import groupdocs.signature as signature
-import groupdocs.signature.domain as gsd
-from groupdocs.signature.options import QrCodeSignOptions
 from datetime import datetime
 
-# Initialize signature handler
-signature_handler = signature.Signature("source.pdf")
+from groupdocs.signature import Signature
+from groupdocs.signature.domain import HorizontalAlignment, QrCodeTypes, VerticalAlignment
+from groupdocs.signature.domain.extensions import Event
+from groupdocs.signature.options import QrCodeSignOptions
 
-# Provide event data
-event_qr = signature.Event()
-event_qr.title = "Meeting"
-event_qr.description = "Productivity issues"
-event_qr.location = "room 408"
-event_qr.start_date = datetime(2022, 6, 19, 15, 30, 0)
-event_qr.end_date = datetime(2022, 6, 19, 17, 0, 0)
 
-# Setup QR code signature options
-qr_options = QrCodeSignOptions()
-qr_options.horizontal_alignment = gsd.HorizontalAlignment.RIGHT
-qr_options.vertical_alignment = gsd.VerticalAlignment.BOTTOM
-qr_options.encode_type = gsd.QrCodeTypes.QR
-qr_options.text = ""
-qr_options.data = event_qr
+def sign_pdf_with_event_qr_code():
+    # Initialize signature handler
+    with Signature("sample.pdf") as signature:
+        # Provide event data
+        event_qr = Event()
+        event_qr.title = "Meeting"
+        event_qr.description = "Productivity issues"
+        event_qr.location = "room 408"
+        event_qr.start_date = datetime(2022, 6, 19, 15, 30, 0)
+        event_qr.end_date = datetime(2022, 6, 19, 17, 0, 0)
 
-# Sign document
-signature_handler.sign("signed_event.pdf", qr_options)
+        # Setup QR code signature options
+        qr_options = QrCodeSignOptions()
+        qr_options.horizontal_alignment = HorizontalAlignment.RIGHT
+        qr_options.vertical_alignment = VerticalAlignment.BOTTOM
+        qr_options.encode_type = QrCodeTypes.QR
+        qr_options.data = event_qr
+
+        # Sign document
+        result = signature.sign("signed_event.pdf", qr_options)
+        print(f"QR codes added: {len(result.succeeded)}")
+
+
+if __name__ == "__main__":
+    sign_pdf_with_event_qr_code()
 ```
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+`sample.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/signature-use-cases/how-to-generate-qrcode-and-sign-document-using-python/sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "signed_event.pdf" >}}  
+```text
+Binary file (PDF, 122 KB)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/signature-use-cases/how-to-generate-qrcode-and-sign-document-using-python/sign_pdf_with_event_qr_code/signed_event.pdf)
+{{< /tab >}}
+{{< /tabs >}}
 
 The result of signing a document may look like the picture below. Such QR codes can be very useful for organizing events.
 
@@ -88,34 +110,56 @@ To try signing documents with QR codes for free, you may use the [QR Code Genera
 Another way to improve documents is to generate the QR code first and then add it to documents using third-party tools. For this case, it is possible to generate code as an image.
 
 * Create the `QrCodeSignOptions` instance and set up all demanded fields.
-* Instantiate the `PreviewSignatureOptions` object providing the methods for creation and releasing.
-* Invoke the `generate_signature_preview` method to obtain the QR code image as a stream.
+* Instantiate the [PreviewSignatureOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/previewsignatureoptions/) object providing the methods for creation and releasing of the image stream.
+* Invoke the static `Signature.generate_signature_preview` method to obtain the QR code image as a stream.
 * Use the resultant QR Code stream in any possible way.
 
+{{< tabs "generate_qr_code_image" >}}
+{{< tab "Python" >}}
 ```python
-import groupdocs.signature as signature
-from io import BytesIO
-import groupdocs.signature.domain as gsd
-from groupdocs.signature.options import QrCodeSignOptions,PreviewSignatureOptions
+import io
 
-# Create a memory stream to store the QR code image
-result = BytesIO()
+from groupdocs.signature import Signature
+from groupdocs.signature.domain import QrCodeTypes
+from groupdocs.signature.options import PreviewSignatureOptions, QrCodeSignOptions
 
-# Setup QR code signature options
-qr_options = QrCodeSignOptions()
-qr_options.encode_type = gsd.QrCodeTypes.CODE93
-qr_options.text = "Case 148.01"
 
-# Create preview options
-preview_options = PreviewSignatureOptions(
-    qr_options,
-    lambda options: result,  # Create page stream
-    lambda options, stream: None  # Release page stream
-)
+def generate_qr_code_image():
+    # Create a memory stream to store the QR code image
+    result = io.BytesIO()
 
-# Generate image to stream
-signature.Signature.generate_signature_preview(preview_options)
+    # Setup QR code signature options
+    qr_options = QrCodeSignOptions()
+    qr_options.encode_type = QrCodeTypes.QR
+    qr_options.text = "Case 148-01"
+
+    # Create preview options
+    preview_options = PreviewSignatureOptions(
+        qr_options,
+        lambda options: result,  # Create the image stream
+        lambda options, stream: None,  # Release the image stream
+    )
+
+    # Generate image to stream; no document is needed
+    Signature.generate_signature_preview(preview_options)
+
+    # Use the QR code image, for example save it for a third-party tool
+    with open("qr_code_result.png", "wb") as image_file:
+        image_file.write(result.getvalue())
+    print(f"QR code image: {len(result.getvalue())} bytes")
+
+
+if __name__ == "__main__":
+    generate_qr_code_image()
 ```
+{{< /tab >}}
+{{< tab "qr_code_result.png" >}}  
+```text
+Binary file (PNG, 2 KB)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/signature-use-cases/how-to-generate-qrcode-and-sign-document-using-python/generate_qr_code_image/qr_code_result.png)
+{{< /tab >}}
+{{< /tabs >}}
 
 An image with the generated QR Code may look as below:
 

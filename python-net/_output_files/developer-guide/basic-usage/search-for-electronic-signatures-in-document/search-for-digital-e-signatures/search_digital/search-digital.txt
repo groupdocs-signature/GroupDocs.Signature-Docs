@@ -1,0 +1,3 @@
+Found 1 digital signature(s)
+Signed on 2026-10-05 08:08:35 with the certificate of E=moriarty@ex.ex, CN=ProfJamesMoriarty, O=ProfMoriarty, C=AS
+Valid: True

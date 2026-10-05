@@ -25,53 +25,68 @@ structuredData:
         - name: Get list of Digital signatures presented in document 
           text: Create an instance of DigitalSearchOptions class, fill data and call Search method of signature.
         - name: Delete one of found Digital signatures and save result 
-          text: Invoke Delete method passing found Digital signatures and file path for signed file. File stream can be used as well.
+          text: Invoke the delete method passing the found Digital signature. The document opened by the Signature object is changed in place.
 ---
 ## Overview
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/python-net) provides [DigitalSignature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/digitalsignature) class to manipulate digital signatures and delete them from the documents over [Delete](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/delete) method.  
-Please be aware that [Delete](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/delete) method modifies the same document that was passed to constructor of [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature) class.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/python-net) provides [DigitalSignature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/digitalsignature) class to manipulate digital signatures and delete them from the documents over [delete](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/delete) method.  
+Please be aware that [delete](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/delete) method modifies the same document that was passed to constructor of [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature) class, so the example below copies the signed document first and deletes the signature from the copy.
 
-*Important information*. Please be aware that digitally signed documents with valid certificates (pfx files) are secured and verified. Changing digitally signed document makes them untrusted from the digital verification perspective. At this moment only Pdf documents support deletion of the specific digital signatures in case of many ones were added. Most documents support deletion of all digital signatures at once without separate certificates removal. It's strongly recommened to use deletion of electronic digital signatures by signature type Digital. See example [Delete Signatures of the certain type]
+*Important information*. Please be aware that digitally signed documents with valid certificates (pfx files) are secured and verified. Changing digitally signed document makes them untrusted from the digital verification perspective. At this moment only Pdf documents support deletion of the specific digital signatures in case of many ones were added. Most documents support deletion of all digital signatures at once without separate certificates removal. It's strongly recommended to delete digital signatures by the `SignatureType.DIGITAL` signature type. See the example [Delete signatures of the certain type]({{< ref "signature/python-net/developer-guide/basic-usage/delete-signatures-from-documents/delete-signatures-of-the-certain-type.md" >}}).
 
 ## How to delete Digital signature from the document
 Here are the steps to delete Digital signature from the document with GroupDocs.Signature:
 
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature) class and pass source document path as a constructor parameter;
 * Instantiate [DigitalSearchOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/digitalsearchoptions) object with desired properties;
-* Call [Search](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/search) method to obtain list of [DigitalSignature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/digitalsignature);
+* Call [search](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/search) method; the `signatures` property of the returned [SearchResult](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/searchresult/) holds the found [DigitalSignature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/digitalsignature) objects;
 * Select from list [DigitalSignature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/digitalsignature) object(s) that should be removed from the document;
-* Call [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature) object [Delete](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/delete) method and pass one or several signatures to it.  
+* Call [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature) object [delete](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/delete) method and pass one or several signatures to it; for a single signature it returns `True` when the signature was deleted.
 
-This example shows how to delete Digital signature that was found using [Search](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/search) method.
+This example shows how to delete Digital signature that was found using [search](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/search) method.
 
+{{< tabs "delete_digital_signature" >}}
+{{< tab "Python" >}}
 ```python
-import groupdocs.signature as signature
+import shutil
+
+from groupdocs.signature import Signature
 from groupdocs.signature.options import DigitalSearchOptions
 
-# Initialize signature
-with signature.Signature("signed.pdf") as sign:
-    # Create search options
-    options = DigitalSearchOptions()
-    
-    # Search for digital signatures in the document
-    signatures = sign.search(options)
-    
-    if len(signatures) > 0:
+
+def delete_digital_signature():
+    # delete() saves the changes into the opened document, so work on a copy
+    shutil.copy("signed.pdf", "digital_signature_deleted.pdf")
+
+    with Signature("digital_signature_deleted.pdf") as signature:
+        signatures = signature.search([DigitalSearchOptions()]).signatures
+        print(f"Found {len(signatures)} digital signature(s)")
+        if not signatures:
+            return
+
         digital_signature = signatures[0]
-        result = sign.delete(digital_signature)
-        
-        if result:
-            print(
-                f"Digital signature with certificate subject {digital_signature.certificate.subject} "
-                f"was deleted from document ['{fileName}']."
-            )
+        subject = digital_signature.certificate.subject
+        if signature.delete(digital_signature):
+            print(f"Deleted the digital signature of '{subject}', signed on {digital_signature.sign_time}")
         else:
-            print(
-                f"Signature was not deleted from the document! "
-                f"Digital signature with certificate subject {digital_signature.certificate.subject} "
-                f"was not found!"
-            )
+            print(f"Digital signature of '{subject}' was not deleted")
+
+
+if __name__ == "__main__":
+    delete_digital_signature()
 ```
+{{< /tab >}}
+{{< tab "signed.pdf" >}}
+{{< tab-text >}}
+`signed.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/delete-signatures-from-documents/delete-digital-signatures-from-documents/signed.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "digital_signature_deleted.pdf" >}}  
+```text
+Binary file (PDF, 197 KB)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/delete-signatures-from-documents/delete-digital-signatures-from-documents/delete_digital_signature/digital_signature_deleted.pdf)
+{{< /tab >}}
+{{< /tabs >}}
 
 ## More resources
 

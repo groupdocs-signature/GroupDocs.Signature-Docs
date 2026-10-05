@@ -1,0 +1,6 @@
+Found 1 matching QR code signature(s)
+Text: John Smith
+Page number: 1
+Position: X=270, Y=370
+Size: 100x100
+Encode type: QR

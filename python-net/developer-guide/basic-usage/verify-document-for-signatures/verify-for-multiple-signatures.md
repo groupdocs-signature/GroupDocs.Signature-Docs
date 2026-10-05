@@ -35,61 +35,78 @@ Here are the steps to verify document for multiple signatures with GroupDocs.Sig
 
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
 * Instantiate required several [VerifyOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/verifyoptions) objects ([BarcodeVerifyOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/barcodeverifyoptions), [QrCodeVerifyOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/qrcodeverifyoptions), [DigitalVerifyOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/digitalverifyoptions), [TextVerifyOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/textverifyoptions)) and add instances to list of [VerifyOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/verifyoptions).
-* Call [Verify](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/verify) method of [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature) class instance and pass filled list of [VerifyOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/verifyoptions) to it.
+* Call [verify](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/verify) method of [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature) class instance and pass filled list of [VerifyOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/verifyoptions) to it. The `is_valid` property of the returned [VerificationResult](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/verificationresult) is `True` only when every options object in the list matches a valid signature; `succeeded` lists the signatures that passed.
 
-This example shows how to search for different signature types in the document.
+This example shows how to verify the document for different signature types.
 
+{{< tabs "verify_multiple_signature_types" >}}
+{{< tab "Python" >}}
 ```python
-import groupdocs.signature as signature
-from groupdocs.signature.options import (
-    TextVerifyOptions,
-    BarcodeVerifyOptions,
-    QrCodeVerifyOptions,
-    DigitalVerifyOptions
-)
-from groupdocs.signature.domain.enums import TextMatchType, TextSignatureImplementation
+from groupdocs.signature import Signature
+from groupdocs.signature.domain import TextMatchType, TextSignatureImplementation
+from groupdocs.signature.options import (BarcodeVerifyOptions, DigitalVerifyOptions, QrCodeVerifyOptions,
+                                         TextVerifyOptions)
 
-# Initialize signature
-with signature.Signature("sampleSigned.pdf") as sign:
-    # Create text verification options
-    text_verify_options = TextVerifyOptions()
-    text_verify_options.all_pages = True  # this value is set by default
-    text_verify_options.signature_implementation = TextSignatureImplementation.STAMP
-    text_verify_options.text = "John"
-    text_verify_options.match_type = TextMatchType.CONTAINS
 
-    # Create barcode verification options
-    barcode_verify_options = BarcodeVerifyOptions()
-    barcode_verify_options.all_pages = True  # this value is set by default
-    barcode_verify_options.text = "John"
-    barcode_verify_options.match_type = TextMatchType.CONTAINS
+def verify_multiple_signature_types():
+    with Signature("signed.pdf") as signature:
+        # Text signature that contains "John"
+        text_options = TextVerifyOptions()
+        text_options.all_pages = True  # this value is set by default
+        text_options.signature_implementation = TextSignatureImplementation.NATIVE
+        text_options.text = "John"
+        text_options.match_type = TextMatchType.CONTAINS
 
-    # Create QR code verification options
-    qrcode_verify_options = QrCodeVerifyOptions()
-    qrcode_verify_options.all_pages = True  # this value is set by default
-    qrcode_verify_options.text = "John"
-    qrcode_verify_options.match_type = TextMatchType.CONTAINS
+        # Barcode signature that contains "12345"
+        barcode_options = BarcodeVerifyOptions()
+        barcode_options.text = "12345"
+        barcode_options.match_type = TextMatchType.CONTAINS
 
-    # Create digital verification options
-    digital_verify_options = DigitalVerifyOptions("certificate.pdf")
-    digital_verify_options.comments = "Test comment"
+        # QR code signature that contains "John"
+        qr_code_options = QrCodeVerifyOptions()
+        qr_code_options.text = "John"
+        qr_code_options.match_type = TextMatchType.CONTAINS
 
-    # Create list of verification options
-    verify_options = [
-        text_verify_options,
-        barcode_verify_options,
-        qrcode_verify_options,
-        digital_verify_options
-    ]
+        # Digital signature made with this certificate for the reason "Approved"
+        digital_options = DigitalVerifyOptions("certificate.pfx")
+        digital_options.password = "1234567890"
+        digital_options.reason = "Approved"
 
-    # Verify document signatures
-    result = sign.verify(verify_options)
-    
-    if result.is_valid:
-        print("\nDocument was verified successfully!")
-    else:
-        print("\nDocument failed verification process.")
+        result = signature.verify([text_options, barcode_options, qr_code_options, digital_options])
+
+        if result.is_valid:
+            print("Document was verified successfully!")
+        else:
+            print("Document failed verification process.")
+        for verified in result.succeeded:
+            print(f"Verified {verified.signature_type.name} signature")
+
+
+if __name__ == "__main__":
+    verify_multiple_signature_types()
 ```
+{{< /tab >}}
+{{< tab "signed.pdf" >}}
+{{< tab-text >}}
+`signed.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/verify-document-for-signatures/verify-for-multiple-signatures/signed.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "certificate.pfx" >}}
+{{< tab-text >}}
+`certificate.pfx` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/verify-document-for-signatures/verify-for-multiple-signatures/certificate.pfx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "verify-multiple-signature-types.txt" >}}  
+```text
+Document was verified successfully!
+Verified TEXT signature
+Verified BARCODE signature
+Verified QR_CODE signature
+Verified DIGITAL signature
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/verify-document-for-signatures/verify-for-multiple-signatures/verify_multiple_signature_types/verify-multiple-signature-types.txt)
+{{< /tab >}}
+{{< /tabs >}}
 
 ## More resources
 

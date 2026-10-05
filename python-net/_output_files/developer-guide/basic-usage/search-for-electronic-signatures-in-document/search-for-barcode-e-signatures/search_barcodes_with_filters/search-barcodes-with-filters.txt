@@ -1,0 +1,2 @@
+Found 1 matching barcode signature(s)
+Page 1: Code128 barcode '123456789012'

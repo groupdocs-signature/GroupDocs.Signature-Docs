@@ -1,0 +1,628 @@
+{
+  "developer-guide/basic-usage/delete-signatures-from-documents/delete-barcode-signatures-from-documents#delete_barcode_signature": {
+    "type": "file",
+    "file": "barcode_signature_deleted.docx",
+    "path": "developer-guide/basic-usage/delete-signatures-from-documents/delete-barcode-signatures-from-documents/delete_barcode_signature/barcode_signature_deleted.docx",
+    "preview": "Binary file (DOCX, 146 KB)",
+    "function": "delete_barcode_signature"
+  },
+  "developer-guide/basic-usage/delete-signatures-from-documents/delete-digital-signatures-from-documents#delete_digital_signature": {
+    "type": "file",
+    "file": "digital_signature_deleted.pdf",
+    "path": "developer-guide/basic-usage/delete-signatures-from-documents/delete-digital-signatures-from-documents/delete_digital_signature/digital_signature_deleted.pdf",
+    "preview": "Binary file (PDF, 197 KB)",
+    "function": "delete_digital_signature"
+  },
+  "developer-guide/basic-usage/delete-signatures-from-documents/delete-image-signatures-from-documents#delete_image_signature": {
+    "type": "file",
+    "file": "image_signature_deleted.pptx",
+    "path": "developer-guide/basic-usage/delete-signatures-from-documents/delete-image-signatures-from-documents/delete_image_signature/image_signature_deleted.pptx",
+    "preview": "Binary file (PPTX, 142 KB)",
+    "function": "delete_image_signature"
+  },
+  "developer-guide/basic-usage/delete-signatures-from-documents/delete-qr-code-signatures-from-documents#delete_qr_code_signature": {
+    "type": "file",
+    "file": "qr_code_signature_deleted.pptx",
+    "path": "developer-guide/basic-usage/delete-signatures-from-documents/delete-qr-code-signatures-from-documents/delete_qr_code_signature/qr_code_signature_deleted.pptx",
+    "preview": "Binary file (PPTX, 143 KB)",
+    "function": "delete_qr_code_signature"
+  },
+  "developer-guide/basic-usage/delete-signatures-from-documents/delete-signatures-of-the-certain-type#delete_signatures_by_type": {
+    "type": "file",
+    "file": "all_text_signatures_deleted.docx",
+    "path": "developer-guide/basic-usage/delete-signatures-from-documents/delete-signatures-of-the-certain-type/delete_signatures_by_type/all_text_signatures_deleted.docx",
+    "preview": "Binary file (DOCX, 147 KB)",
+    "function": "delete_signatures_by_type"
+  },
+  "developer-guide/basic-usage/delete-signatures-from-documents/delete-text-signatures-from-documents#delete_text_signature": {
+    "type": "file",
+    "file": "text_signature_deleted.docx",
+    "path": "developer-guide/basic-usage/delete-signatures-from-documents/delete-text-signatures-from-documents/delete_text_signature/text_signature_deleted.docx",
+    "preview": "Binary file (DOCX, 147 KB)",
+    "function": "delete_text_signature"
+  },
+  "developer-guide/basic-usage/electronic-signature-types/esign-document-with-barcode-signature#sign_with_barcode_signature": {
+    "type": "file",
+    "file": "signed_barcode.pdf",
+    "path": "developer-guide/basic-usage/electronic-signature-types/esign-document-with-barcode-signature/sign_with_barcode_signature/signed_barcode.pdf",
+    "preview": "Binary file (PDF, 49 KB)",
+    "function": "sign_with_barcode_signature"
+  },
+  "developer-guide/basic-usage/electronic-signature-types/esign-document-with-barcode-signature#sign_with_barcode_signature_advanced": {
+    "type": "file",
+    "file": "signed_barcode_advanced.pdf",
+    "path": "developer-guide/basic-usage/electronic-signature-types/esign-document-with-barcode-signature/sign_with_barcode_signature_advanced/signed_barcode_advanced.pdf",
+    "preview": "Binary file (PDF, 58 KB)",
+    "function": "sign_with_barcode_signature_advanced"
+  },
+  "developer-guide/basic-usage/electronic-signature-types/esign-document-with-barcode-signature#sign_with_different_barcode_types": {
+    "type": "file",
+    "file": "signed_barcode_types.pdf",
+    "path": "developer-guide/basic-usage/electronic-signature-types/esign-document-with-barcode-signature/sign_with_different_barcode_types/signed_barcode_types.pdf",
+    "preview": "Binary file (PDF, 78 KB)",
+    "function": "sign_with_different_barcode_types"
+  },
+  "developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature#sign_with_digital_signature": {
+    "type": "file",
+    "file": "signed_digital.pdf",
+    "path": "developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/sign_with_digital_signature/signed_digital.pdf",
+    "preview": "Binary file (PDF, 616 KB)",
+    "function": "sign_with_digital_signature"
+  },
+  "developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature#sign_with_digital_signature_advanced": {
+    "type": "file",
+    "file": "signed_digital_advanced.pdf",
+    "path": "developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/sign_with_digital_signature_advanced/signed_digital_advanced.pdf",
+    "preview": "Binary file (PDF, 616 KB)",
+    "function": "sign_with_digital_signature_advanced"
+  },
+  "developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature#sign_with_certificate_from_stream": {
+    "type": "file",
+    "file": "signed_digital_stream.pdf",
+    "path": "developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/sign_with_certificate_from_stream/signed_digital_stream.pdf",
+    "preview": "Binary file (PDF, 612 KB)",
+    "function": "sign_with_certificate_from_stream"
+  },
+  "developer-guide/basic-usage/electronic-signature-types/esign-document-with-form-field-signature#sign_with_form_field_signature": {
+    "type": "file",
+    "file": "signed_form_field.pdf",
+    "path": "developer-guide/basic-usage/electronic-signature-types/esign-document-with-form-field-signature/sign_with_form_field_signature/signed_form_field.pdf",
+    "preview": "Binary file (PDF, 37 KB)",
+    "function": "sign_with_form_field_signature"
+  },
+  "developer-guide/basic-usage/electronic-signature-types/esign-document-with-form-field-signature#fill_existing_form_fields": {
+    "type": "file",
+    "file": "filled_form.pdf",
+    "path": "developer-guide/basic-usage/electronic-signature-types/esign-document-with-form-field-signature/fill_existing_form_fields/filled_form.pdf",
+    "preview": "Binary file (PDF, 40 KB)",
+    "function": "fill_existing_form_fields"
+  },
+  "developer-guide/basic-usage/electronic-signature-types/esign-document-with-image-signature#sign_with_image_signature": {
+    "type": "file",
+    "file": "signed_image.pdf",
+    "path": "developer-guide/basic-usage/electronic-signature-types/esign-document-with-image-signature/sign_with_image_signature/signed_image.pdf",
+    "preview": "Binary file (PDF, 40 KB)",
+    "function": "sign_with_image_signature"
+  },
+  "developer-guide/basic-usage/electronic-signature-types/esign-document-with-image-signature#sign_with_image_signature_advanced": {
+    "type": "file",
+    "file": "signed_image_advanced.pdf",
+    "path": "developer-guide/basic-usage/electronic-signature-types/esign-document-with-image-signature/sign_with_image_signature_advanced/signed_image_advanced.pdf",
+    "preview": "Binary file (PDF, 55 KB)",
+    "function": "sign_with_image_signature_advanced"
+  },
+  "developer-guide/basic-usage/electronic-signature-types/esign-document-with-image-signature#sign_with_image_from_stream": {
+    "type": "file",
+    "file": "signed_image_stream.pdf",
+    "path": "developer-guide/basic-usage/electronic-signature-types/esign-document-with-image-signature/sign_with_image_from_stream/signed_image_stream.pdf",
+    "preview": "Binary file (PDF, 40 KB)",
+    "function": "sign_with_image_from_stream"
+  },
+  "developer-guide/basic-usage/electronic-signature-types/esign-document-with-metadata-signature/esign-image-with-metadata-signature#sign_png": {
+    "type": "file",
+    "file": "signed.png",
+    "path": "developer-guide/basic-usage/electronic-signature-types/esign-document-with-metadata-signature/esign-image-with-metadata-signature/sign_png/signed.png",
+    "preview": "Binary file (PNG, 77 KB)",
+    "function": "sign_png"
+  },
+  "developer-guide/basic-usage/electronic-signature-types/esign-document-with-metadata-signature/esign-pdf-with-metadata-signature#sign_pdf": {
+    "type": "file",
+    "file": "signed.pdf",
+    "path": "developer-guide/basic-usage/electronic-signature-types/esign-document-with-metadata-signature/esign-pdf-with-metadata-signature/sign_pdf/signed.pdf",
+    "preview": "Binary file (PDF, 36 KB)",
+    "function": "sign_pdf"
+  },
+  "developer-guide/basic-usage/electronic-signature-types/esign-document-with-metadata-signature/esign-pdf-with-metadata-signature#sign_pdf_standard": {
+    "type": "file",
+    "file": "signed_standard.pdf",
+    "path": "developer-guide/basic-usage/electronic-signature-types/esign-document-with-metadata-signature/esign-pdf-with-metadata-signature/sign_pdf_standard/signed_standard.pdf",
+    "preview": "Binary file (PDF, 36 KB)",
+    "function": "sign_pdf_standard"
+  },
+  "developer-guide/basic-usage/electronic-signature-types/esign-document-with-metadata-signature/esign-presentation-with-metadata-signature#sign_ppsx": {
+    "type": "file",
+    "file": "signed.ppsx",
+    "path": "developer-guide/basic-usage/electronic-signature-types/esign-document-with-metadata-signature/esign-presentation-with-metadata-signature/sign_ppsx/signed.ppsx",
+    "preview": "Binary file (PPSX, 67 KB)",
+    "function": "sign_ppsx"
+  },
+  "developer-guide/basic-usage/electronic-signature-types/esign-document-with-metadata-signature/esign-spreadsheet-with-metadata-signature#sign_xlsx": {
+    "type": "file",
+    "file": "signed.xlsx",
+    "path": "developer-guide/basic-usage/electronic-signature-types/esign-document-with-metadata-signature/esign-spreadsheet-with-metadata-signature/sign_xlsx/signed.xlsx",
+    "preview": "Binary file (XLSX, 39 KB)",
+    "function": "sign_xlsx"
+  },
+  "developer-guide/basic-usage/electronic-signature-types/esign-document-with-metadata-signature/esign-word-processing-document-with-metadata-signature#sign_docx": {
+    "type": "file",
+    "file": "signed.docx",
+    "path": "developer-guide/basic-usage/electronic-signature-types/esign-document-with-metadata-signature/esign-word-processing-document-with-metadata-signature/sign_docx/signed.docx",
+    "preview": "Binary file (DOCX, 45 KB)",
+    "function": "sign_docx"
+  },
+  "developer-guide/basic-usage/electronic-signature-types/esign-document-with-multiple-signatures#sign_with_multiple_signatures": {
+    "type": "file",
+    "file": "signed_multiple.pdf",
+    "path": "developer-guide/basic-usage/electronic-signature-types/esign-document-with-multiple-signatures/sign_with_multiple_signatures/signed_multiple.pdf",
+    "preview": "Binary file (PDF, 740 KB)",
+    "function": "sign_with_multiple_signatures"
+  },
+  "developer-guide/basic-usage/electronic-signature-types/esign-document-with-multiple-signatures#sign_with_multiple_signatures_advanced": {
+    "type": "file",
+    "file": "signed_multiple_advanced.pdf",
+    "path": "developer-guide/basic-usage/electronic-signature-types/esign-document-with-multiple-signatures/sign_with_multiple_signatures_advanced/signed_multiple_advanced.pdf",
+    "preview": "Binary file (PDF, 178 KB)",
+    "function": "sign_with_multiple_signatures_advanced"
+  },
+  "developer-guide/basic-usage/electronic-signature-types/esign-document-with-qr-code-signature#sign_with_qr_code_signature": {
+    "type": "file",
+    "file": "signed_qr_code.pdf",
+    "path": "developer-guide/basic-usage/electronic-signature-types/esign-document-with-qr-code-signature/sign_with_qr_code_signature/signed_qr_code.pdf",
+    "preview": "Binary file (PDF, 57 KB)",
+    "function": "sign_with_qr_code_signature"
+  },
+  "developer-guide/basic-usage/electronic-signature-types/esign-document-with-qr-code-signature#sign_with_qr_code_signature_advanced": {
+    "type": "file",
+    "file": "signed_qr_code_advanced.pdf",
+    "path": "developer-guide/basic-usage/electronic-signature-types/esign-document-with-qr-code-signature/sign_with_qr_code_signature_advanced/signed_qr_code_advanced.pdf",
+    "preview": "Binary file (PDF, 102 KB)",
+    "function": "sign_with_qr_code_signature_advanced"
+  },
+  "developer-guide/basic-usage/electronic-signature-types/esign-document-with-stamp-signature#sign_with_stamp_signature": {
+    "type": "file",
+    "file": "signed_stamp.docx",
+    "path": "developer-guide/basic-usage/electronic-signature-types/esign-document-with-stamp-signature/sign_with_stamp_signature/signed_stamp.docx",
+    "preview": "Binary file (DOCX, 55 KB)",
+    "function": "sign_with_stamp_signature"
+  },
+  "developer-guide/basic-usage/electronic-signature-types/esign-document-with-stamp-signature#sign_with_stamp_signature_advanced": {
+    "type": "file",
+    "file": "signed_stamp_advanced.docx",
+    "path": "developer-guide/basic-usage/electronic-signature-types/esign-document-with-stamp-signature/sign_with_stamp_signature_advanced/signed_stamp_advanced.docx",
+    "preview": "Binary file (DOCX, 62 KB)",
+    "function": "sign_with_stamp_signature_advanced"
+  },
+  "developer-guide/basic-usage/electronic-signature-types/esign-document-with-text-signature#sign_with_text_signature": {
+    "type": "file",
+    "file": "signed_text.pdf",
+    "path": "developer-guide/basic-usage/electronic-signature-types/esign-document-with-text-signature/sign_with_text_signature/signed_text.pdf",
+    "preview": "Binary file (PDF, 122 KB)",
+    "function": "sign_with_text_signature"
+  },
+  "developer-guide/basic-usage/electronic-signature-types/esign-document-with-text-signature#sign_with_text_signature_advanced": {
+    "type": "file",
+    "file": "signed_text_advanced.pdf",
+    "path": "developer-guide/basic-usage/electronic-signature-types/esign-document-with-text-signature/sign_with_text_signature_advanced/signed_text_advanced.pdf",
+    "preview": "Binary file (PDF, 53 KB)",
+    "function": "sign_with_text_signature_advanced"
+  },
+  "developer-guide/basic-usage/generate-document-pages-preview#generate_document_preview": {
+    "type": "zip",
+    "file": "generate-document-preview-outputs.zip",
+    "path": "developer-guide/basic-usage/generate-document-pages-preview/generate_document_preview/generate-document-preview-outputs.zip",
+    "contents": [
+      "preview_page_0.png",
+      "preview_page_1.png"
+    ],
+    "preview": "preview_page_0.png (75 KB)\npreview_page_1.png (64 KB)",
+    "function": "generate_document_preview"
+  },
+  "developer-guide/basic-usage/generate-document-pages-preview#generate_document_preview_from_stream": {
+    "type": "text",
+    "file": "generate-document-preview-from-stream.txt",
+    "path": "developer-guide/basic-usage/generate-document-pages-preview/generate_document_preview_from_stream/generate-document-preview-from-stream.txt",
+    "preview": "Page 0: 276044 bytes of JPEG\nPage 1: 224194 bytes of JPEG",
+    "function": "generate_document_preview_from_stream"
+  },
+  "developer-guide/basic-usage/generate-document-pages-preview#generate_document_preview_of_selected_pages": {
+    "type": "file",
+    "file": "preview_page_1.png",
+    "path": "developer-guide/basic-usage/generate-document-pages-preview/generate_document_preview_of_selected_pages/preview_page_1.png",
+    "preview": "Binary file (PNG, 64 KB)",
+    "function": "generate_document_preview_of_selected_pages"
+  },
+  "developer-guide/basic-usage/generate-document-pages-preview#generate_document_preview_with_resolution": {
+    "type": "zip",
+    "file": "generate-document-preview-with-resolution-outputs.zip",
+    "path": "developer-guide/basic-usage/generate-document-pages-preview/generate_document_preview_with_resolution/generate-document-preview-with-resolution-outputs.zip",
+    "contents": [
+      "preview_page_0_150dpi.jpg",
+      "preview_page_1_150dpi.jpg"
+    ],
+    "preview": "preview_page_0_150dpi.jpg (495 KB)\npreview_page_1_150dpi.jpg (425 KB)",
+    "function": "generate_document_preview_with_resolution"
+  },
+  "developer-guide/basic-usage/generate-signatures-preview#generate_signature_preview_to_file": {
+    "type": "file",
+    "file": "text_signature.png",
+    "path": "developer-guide/basic-usage/generate-signatures-preview/generate_signature_preview_to_file/text_signature.png",
+    "preview": "Binary file (PNG, 983 bytes)",
+    "function": "generate_signature_preview_to_file"
+  },
+  "developer-guide/basic-usage/generate-signatures-preview#generate_signature_preview_to_memory": {
+    "type": "text",
+    "file": "generate-signature-preview-to-memory.txt",
+    "path": "developer-guide/basic-usage/generate-signatures-preview/generate_signature_preview_to_memory/generate-signature-preview-to-memory.txt",
+    "preview": "QR code preview: 918 bytes, PNG image: True",
+    "function": "generate_signature_preview_to_memory"
+  },
+  "developer-guide/basic-usage/generate-signatures-preview#generate_signature_previews_in_different_formats": {
+    "type": "zip",
+    "file": "generate-signature-previews-in-different-formats-outputs.zip",
+    "path": "developer-guide/basic-usage/generate-signatures-preview/generate_signature_previews_in_different_formats/generate-signature-previews-in-different-formats-outputs.zip",
+    "contents": [
+      "barcode.jpeg",
+      "barcode_vector.svg",
+      "qr_code.gif"
+    ],
+    "preview": "barcode.jpeg (8 KB)\nbarcode_vector.svg (3 KB)\nqr_code.gif (4 KB)",
+    "function": "generate_signature_previews_in_different_formats"
+  },
+  "developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-barcode-e-signatures#search_barcodes": {
+    "type": "text",
+    "file": "search-barcodes.txt",
+    "path": "developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-barcode-e-signatures/search_barcodes/search-barcodes.txt",
+    "preview": "Found 2 barcode signature(s)\nPage 1: Code128 barcode '123456789012' at (400, 375), size 170x45\nPage 1: Code39 barcode 'JS-2026' at (400, 430), size 170x45",
+    "function": "search_barcodes"
+  },
+  "developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-barcode-e-signatures#search_barcodes_with_filters": {
+    "type": "text",
+    "file": "search-barcodes-with-filters.txt",
+    "path": "developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-barcode-e-signatures/search_barcodes_with_filters/search-barcodes-with-filters.txt",
+    "preview": "Found 1 matching barcode signature(s)\nPage 1: Code128 barcode '123456789012'",
+    "function": "search_barcodes_with_filters"
+  },
+  "developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-digital-e-signatures#search_digital": {
+    "type": "text",
+    "file": "search-digital.txt",
+    "path": "developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-digital-e-signatures/search_digital/search-digital.txt",
+    "preview": "Found 1 digital signature(s)\nSigned on 2026-10-05 08:08:35 with the certificate of E=moriarty@ex.ex, CN=ProfJamesMoriarty, O=ProfMoriarty, C=AS\nValid: True",
+    "function": "search_digital"
+  },
+  "developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-digital-e-signatures#search_digital_by_criteria": {
+    "type": "text",
+    "file": "search-digital-by-criteria.txt",
+    "path": "developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-digital-e-signatures/search_digital_by_criteria/search-digital-by-criteria.txt",
+    "preview": "Found 1 matching digital signature(s)\nSigned on 2026-10-05 08:21:06+00:00, comment: 'Approved by John Smith', valid: True",
+    "function": "search_digital_by_criteria"
+  },
+  "developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-form-field-e-signatures#search_form_fields": {
+    "type": "text",
+    "file": "search-form-fields.txt",
+    "path": "developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-form-field-e-signatures/search_form_fields/search-form-fields.txt",
+    "preview": "Found 3 form field signature(s)\nPage 1: TEXT field 'ApprovedBy', value: 'John Smith'\nPage 1: CHECKBOX field 'Confirmed', value: True\nPage 1: DIGITAL_SIGNATURE field None, value: None",
+    "function": "search_form_fields"
+  },
+  "developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-form-field-e-signatures#search_form_fields_by_name": {
+    "type": "text",
+    "file": "search-form-fields-by-name.txt",
+    "path": "developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-form-field-e-signatures/search_form_fields_by_name/search-form-fields-by-name.txt",
+    "preview": "Found 1 matching form field signature(s)\nField 'ApprovedBy' on page 1, value: John Smith",
+    "function": "search_form_fields_by_name"
+  },
+  "developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-image-e-signatures#search_images": {
+    "type": "text",
+    "file": "search-images.txt",
+    "path": "developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-image-e-signatures/search_images/search-images.txt",
+    "preview": "Found 1 image signature(s)\nPage 1: 14552 bytes at (50, 415), size 150x50",
+    "function": "search_images"
+  },
+  "developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-image-e-signatures#extract_image_signatures": {
+    "type": "file",
+    "file": "image_signature_1.png",
+    "path": "developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-image-e-signatures/extract_image_signatures/image_signature_1.png",
+    "preview": "Binary file (PNG, 14 KB)",
+    "function": "extract_image_signatures"
+  },
+  "developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-metadata-e-signatures#search_metadata": {
+    "type": "text",
+    "file": "search-metadata.txt",
+    "path": "developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-metadata-e-signatures/search_metadata/search-metadata.txt",
+    "preview": "Found 10 metadata signature(s)\nProducer = Microsoft® Word 2016 (STRING)\ncreator = DrNasmork (STRING)\nCreatorTool = Microsoft® Word 2016 (STRING)\nCreateDate = 2020-08-03 20:04:25+03:00 (DATE_TIME)\nModifyDate = 2020-08-03 20:04:25+03:00 (DATE_TIME)\nAuthor = John Smith (STRING)\nDocumentId = DOC-2026-0042 (STRING)\nDepartment = Sales (STRING)\nDocumentID = uuid:D7DC5B44-D1CC-453B-BC66-B0362EAE6617 (STRING)\n[TRUNCATED]",
+    "function": "search_metadata"
+  },
+  "developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-metadata-e-signatures#search_metadata_by_name": {
+    "type": "text",
+    "file": "search-metadata-by-name.txt",
+    "path": "developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-metadata-e-signatures/search_metadata_by_name/search-metadata-by-name.txt",
+    "preview": "Found 1 matching metadata signature(s)\nAuthor = John Smith",
+    "function": "search_metadata_by_name"
+  },
+  "developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-multiple-e-signature-types#search_types": {
+    "type": "text",
+    "file": "search-types.txt",
+    "path": "developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-multiple-e-signature-types/search_types/search-types.txt",
+    "preview": "Found 10 signature(s)\nTEXT signature on page 1 at (50, 480)\nTEXT signature on page 1 at (50, 530)\nTEXT signature on page 1 at (50, 379)\nIMAGE signature on page 1 at (50, 415)\nBARCODE signature on page 1 at (400, 375)\nBARCODE signature on page 1 at (400, 430)\nQR_CODE signature on page 1 at (270, 370)\nFORM_FIELD signature on page 1 at (50, 530)\nFORM_FIELD signature on page 1 at (270, 532)\n[TRUNCATED]",
+    "function": "search_types"
+  },
+  "developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-multiple-e-signature-types#search_types_with_filters": {
+    "type": "text",
+    "file": "search-types-with-filters.txt",
+    "path": "developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-multiple-e-signature-types/search_types_with_filters/search-types-with-filters.txt",
+    "preview": "Found 3 signature(s)\nBARCODE on page 1: 123456789012\nQR_CODE on page 1: John Smith\nMETADATA: Author = John Smith",
+    "function": "search_types_with_filters"
+  },
+  "developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-qr-code-e-signatures#search_qr_codes": {
+    "type": "text",
+    "file": "search-qr-codes.txt",
+    "path": "developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-qr-code-e-signatures/search_qr_codes/search-qr-codes.txt",
+    "preview": "Found 1 QR code signature(s)\nQR code signature found at page 1 with type QR and text 'John Smith'",
+    "function": "search_qr_codes"
+  },
+  "developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-qr-code-e-signatures#search_qr_codes_with_filters": {
+    "type": "text",
+    "file": "search-qr-codes-with-filters.txt",
+    "path": "developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-qr-code-e-signatures/search_qr_codes_with_filters/search-qr-codes-with-filters.txt",
+    "preview": "Found 1 matching QR code signature(s)\nText: John Smith\nPage number: 1\nPosition: X=270, Y=370\nSize: 100x100\nEncode type: QR",
+    "function": "search_qr_codes_with_filters"
+  },
+  "developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-text-e-signatures#search_text": {
+    "type": "text",
+    "file": "search-text.txt",
+    "path": "developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-text-e-signatures/search_text/search-text.txt",
+    "preview": "Found 3 text signature(s)\nANNOTATION text signature 'Approved' on page 1 at (50, 480), size 90x22\nFORM_FIELD text signature 'John Smith' on page 1 at (50, 530), size 190x22\nNATIVE text signature 'John Smith' on page 1 at (50, 379), size 189x30",
+    "function": "search_text"
+  },
+  "developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-text-e-signatures#search_text_with_filters": {
+    "type": "text",
+    "file": "search-text-with-filters.txt",
+    "path": "developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-text-e-signatures/search_text_with_filters/search-text-with-filters.txt",
+    "preview": "Found 1 matching text signature(s)\n'John Smith' on page 1 at (50, 379), size 189x30",
+    "function": "search_text_with_filters"
+  },
+  "developer-guide/basic-usage/signature-use-cases/how-to-generate-barcode-and-sign-document-using-python#sign_pdf_with_codabar": {
+    "type": "file",
+    "file": "signed_codabar.pdf",
+    "path": "developer-guide/basic-usage/signature-use-cases/how-to-generate-barcode-and-sign-document-using-python/sign_pdf_with_codabar/signed_codabar.pdf",
+    "preview": "Binary file (PDF, 46 KB)",
+    "function": "sign_pdf_with_codabar"
+  },
+  "developer-guide/basic-usage/signature-use-cases/how-to-generate-barcode-and-sign-document-using-python#generate_barcode_image": {
+    "type": "file",
+    "file": "barcode_result.png",
+    "path": "developer-guide/basic-usage/signature-use-cases/how-to-generate-barcode-and-sign-document-using-python/generate_barcode_image/barcode_result.png",
+    "preview": "Binary file (PNG, 2 KB)",
+    "function": "generate_barcode_image"
+  },
+  "developer-guide/basic-usage/signature-use-cases/how-to-generate-qrcode-and-sign-document-using-python#sign_pdf_with_event_qr_code": {
+    "type": "file",
+    "file": "signed_event.pdf",
+    "path": "developer-guide/basic-usage/signature-use-cases/how-to-generate-qrcode-and-sign-document-using-python/sign_pdf_with_event_qr_code/signed_event.pdf",
+    "preview": "Binary file (PDF, 122 KB)",
+    "function": "sign_pdf_with_event_qr_code"
+  },
+  "developer-guide/basic-usage/signature-use-cases/how-to-generate-qrcode-and-sign-document-using-python#generate_qr_code_image": {
+    "type": "file",
+    "file": "qr_code_result.png",
+    "path": "developer-guide/basic-usage/signature-use-cases/how-to-generate-qrcode-and-sign-document-using-python/generate_qr_code_image/qr_code_result.png",
+    "preview": "Binary file (PNG, 2 KB)",
+    "function": "generate_qr_code_image"
+  },
+  "developer-guide/basic-usage/signature-use-cases/how-to-sign-excel-macros-using-python#sign_spreadsheet_with_certificate": {
+    "type": "file",
+    "file": "signed_spreadsheet.xlsx",
+    "path": "developer-guide/basic-usage/signature-use-cases/how-to-sign-excel-macros-using-python/sign_spreadsheet_with_certificate/signed_spreadsheet.xlsx",
+    "preview": "Binary file (XLSX, 45 KB)",
+    "function": "sign_spreadsheet_with_certificate"
+  },
+  "developer-guide/basic-usage/signature-use-cases/how-to-sign-excel-macros-using-python#sign_spreadsheet_macros_only": {
+    "type": "file",
+    "file": "signed_macros.xlsm",
+    "path": "developer-guide/basic-usage/signature-use-cases/how-to-sign-excel-macros-using-python/sign_spreadsheet_macros_only/signed_macros.xlsm",
+    "preview": "Binary file (XLSM, 94 KB)",
+    "function": "sign_spreadsheet_macros_only"
+  },
+  "developer-guide/basic-usage/signature-use-cases/how-to-sign-excel-macros-using-python#sign_spreadsheet_and_macros": {
+    "type": "file",
+    "file": "signed_spreadsheet_and_macros.xlsm",
+    "path": "developer-guide/basic-usage/signature-use-cases/how-to-sign-excel-macros-using-python/sign_spreadsheet_and_macros/signed_spreadsheet_and_macros.xlsm",
+    "preview": "Binary file (XLSM, 99 KB)",
+    "function": "sign_spreadsheet_and_macros"
+  },
+  "developer-guide/basic-usage/update-signatures-in-documents/update-barcode-signatures-in-document#update_barcode_signature": {
+    "type": "file",
+    "file": "updated_barcode_signature.docx",
+    "path": "developer-guide/basic-usage/update-signatures-in-documents/update-barcode-signatures-in-document/update_barcode_signature/updated_barcode_signature.docx",
+    "preview": "Binary file (DOCX, 147 KB)",
+    "function": "update_barcode_signature"
+  },
+  "developer-guide/basic-usage/update-signatures-in-documents/update-image-signatures-in-document#update_image_signature": {
+    "type": "file",
+    "file": "updated_image_signature.docx",
+    "path": "developer-guide/basic-usage/update-signatures-in-documents/update-image-signatures-in-document/update_image_signature/updated_image_signature.docx",
+    "preview": "Binary file (DOCX, 147 KB)",
+    "function": "update_image_signature"
+  },
+  "developer-guide/basic-usage/update-signatures-in-documents/update-qr-code-signatures-in-document#update_qr_code_signature": {
+    "type": "file",
+    "file": "updated_qr_code_signature.docx",
+    "path": "developer-guide/basic-usage/update-signatures-in-documents/update-qr-code-signatures-in-document/update_qr_code_signature/updated_qr_code_signature.docx",
+    "preview": "Binary file (DOCX, 147 KB)",
+    "function": "update_qr_code_signature"
+  },
+  "developer-guide/basic-usage/update-signatures-in-documents/update-text-signatures-in-document#update_text_signature": {
+    "type": "file",
+    "file": "updated_text_signature.docx",
+    "path": "developer-guide/basic-usage/update-signatures-in-documents/update-text-signatures-in-document/update_text_signature/updated_text_signature.docx",
+    "preview": "Binary file (DOCX, 147 KB)",
+    "function": "update_text_signature"
+  },
+  "developer-guide/basic-usage/verify-document-for-signatures/verify-barcode-signatures-in-the-document#verify_barcode_signatures": {
+    "type": "text",
+    "file": "verify-barcode-signatures.txt",
+    "path": "developer-guide/basic-usage/verify-document-for-signatures/verify-barcode-signatures-in-the-document/verify_barcode_signatures/verify-barcode-signatures.txt",
+    "preview": "Document was verified successfully: 1 matching barcode signature(s).",
+    "function": "verify_barcode_signatures"
+  },
+  "developer-guide/basic-usage/verify-document-for-signatures/verify-barcode-signatures-in-the-document#verify_code128_barcode_signature": {
+    "type": "text",
+    "file": "verify-code128-barcode-signature.txt",
+    "path": "developer-guide/basic-usage/verify-document-for-signatures/verify-barcode-signatures-in-the-document/verify_code128_barcode_signature/verify-code128-barcode-signature.txt",
+    "preview": "Document is valid: True\nVerified Code128 barcode '123456789012'",
+    "function": "verify_code128_barcode_signature"
+  },
+  "developer-guide/basic-usage/verify-document-for-signatures/verify-digital-signatures-in-the-document#verify_digital_signatures": {
+    "type": "text",
+    "file": "verify-digital-signatures.txt",
+    "path": "developer-guide/basic-usage/verify-document-for-signatures/verify-digital-signatures-in-the-document/verify_digital_signatures/verify-digital-signatures.txt",
+    "preview": "Document was verified successfully: 1 valid digital signature(s).",
+    "function": "verify_digital_signatures"
+  },
+  "developer-guide/basic-usage/verify-document-for-signatures/verify-digital-signatures-in-the-document#verify_document_modified_after_signing": {
+    "type": "file",
+    "file": "modified.pdf",
+    "path": "developer-guide/basic-usage/verify-document-for-signatures/verify-digital-signatures-in-the-document/verify_document_modified_after_signing/modified.pdf",
+    "preview": "Binary file (PDF, 210 KB)",
+    "function": "verify_document_modified_after_signing"
+  },
+  "developer-guide/basic-usage/verify-document-for-signatures/verify-for-multiple-signatures#verify_multiple_signature_types": {
+    "type": "text",
+    "file": "verify-multiple-signature-types.txt",
+    "path": "developer-guide/basic-usage/verify-document-for-signatures/verify-for-multiple-signatures/verify_multiple_signature_types/verify-multiple-signature-types.txt",
+    "preview": "Document was verified successfully!\nVerified TEXT signature\nVerified BARCODE signature\nVerified QR_CODE signature\nVerified DIGITAL signature",
+    "function": "verify_multiple_signature_types"
+  },
+  "developer-guide/basic-usage/verify-document-for-signatures/verify-qr-code-signatures-in-the-document#verify_qr_codes": {
+    "type": "text",
+    "file": "verify-qr-codes.txt",
+    "path": "developer-guide/basic-usage/verify-document-for-signatures/verify-qr-code-signatures-in-the-document/verify_qr_codes/verify-qr-codes.txt",
+    "preview": "Document was verified successfully: 1 matching QR code signature(s).",
+    "function": "verify_qr_codes"
+  },
+  "developer-guide/basic-usage/verify-document-for-signatures/verify-qr-code-signatures-in-the-document#verify_qr_codes_exact_match": {
+    "type": "text",
+    "file": "verify-qr-codes-exact-match.txt",
+    "path": "developer-guide/basic-usage/verify-document-for-signatures/verify-qr-code-signatures-in-the-document/verify_qr_codes_exact_match/verify-qr-codes-exact-match.txt",
+    "preview": "Document is valid: True\nVerified QR code 'John Smith'",
+    "function": "verify_qr_codes_exact_match"
+  },
+  "developer-guide/basic-usage/verify-document-for-signatures/verify-text-signatures-in-the-document#verify_text_signatures": {
+    "type": "text",
+    "file": "verify-text-signatures.txt",
+    "path": "developer-guide/basic-usage/verify-document-for-signatures/verify-text-signatures-in-the-document/verify_text_signatures/verify-text-signatures.txt",
+    "preview": "Document was verified successfully: 1 matching text signature(s).",
+    "function": "verify_text_signatures"
+  },
+  "developer-guide/basic-usage/verify-document-for-signatures/verify-text-signatures-in-the-document#verify_text_signature_exact_match": {
+    "type": "text",
+    "file": "verify-text-signature-exact-match.txt",
+    "path": "developer-guide/basic-usage/verify-document-for-signatures/verify-text-signatures-in-the-document/verify_text_signature_exact_match/verify-text-signature-exact-match.txt",
+    "preview": "Document is valid: True\nVerified NATIVE text signature 'John Smith'",
+    "function": "verify_text_signature_exact_match"
+  },
+  "getting-started/quick-start-guide#sign_pdf_with_text_signature": {
+    "type": "file",
+    "file": "signed_sample.pdf",
+    "path": "getting-started/quick-start-guide/sign_pdf_with_text_signature/signed_sample.pdf",
+    "preview": "Binary file (PDF, 125 KB)",
+    "function": "sign_pdf_with_text_signature"
+  },
+  "getting-started/quick-start-guide#search_document_for_signatures": {
+    "type": "text",
+    "file": "search-document-signatures.txt",
+    "path": "getting-started/quick-start-guide/search_document_for_signatures/search-document-signatures.txt",
+    "preview": "Text signature 'John Smith' on page 1",
+    "function": "search_document_for_signatures"
+  },
+  "getting-started/quick-start-guide#verify_text_signature": {
+    "type": "text",
+    "file": "verify-text-signature.txt",
+    "path": "getting-started/quick-start-guide/verify_text_signature/verify-text-signature.txt",
+    "preview": "Document is signed by John Smith: True",
+    "function": "verify_text_signature"
+  },
+  "use-cases/sign-password-protected-pdf#sign_protected_pdf_without_password": {
+    "type": "text",
+    "file": "sign-protected-pdf-without-password.txt",
+    "path": "use-cases/sign-password-protected-pdf/sign_protected_pdf_without_password/sign-protected-pdf-without-password.txt",
+    "preview": "PasswordRequiredException: the document needs a password\nOutput written: False",
+    "function": "sign_protected_pdf_without_password"
+  },
+  "use-cases/sign-password-protected-pdf#sign_protected_pdf_with_wrong_password": {
+    "type": "text",
+    "file": "sign-protected-pdf-with-wrong-password.txt",
+    "path": "use-cases/sign-password-protected-pdf/sign_protected_pdf_with_wrong_password/sign-protected-pdf-with-wrong-password.txt",
+    "preview": "IncorrectPasswordException: the password is wrong",
+    "function": "sign_protected_pdf_with_wrong_password"
+  },
+  "use-cases/sign-password-protected-pdf#sign_protected_pdf_keeping_password": {
+    "type": "file",
+    "file": "signed_original_password.pdf",
+    "path": "use-cases/sign-password-protected-pdf/sign_protected_pdf_keeping_password/signed_original_password.pdf",
+    "preview": "Binary file (PDF, 68 KB)",
+    "function": "sign_protected_pdf_keeping_password"
+  },
+  "use-cases/sign-password-protected-pdf#sign_protected_pdf_with_new_password": {
+    "type": "file",
+    "file": "signed_new_password.pdf",
+    "path": "use-cases/sign-password-protected-pdf/sign_protected_pdf_with_new_password/signed_new_password.pdf",
+    "preview": "Binary file (PDF, 69 KB)",
+    "function": "sign_protected_pdf_with_new_password"
+  },
+  "use-cases/sign-password-protected-pdf#inspect_protected_pdf": {
+    "type": "text",
+    "file": "inspect-protected-pdf.txt",
+    "path": "use-cases/sign-password-protected-pdf/inspect_protected_pdf/inspect-protected-pdf.txt",
+    "preview": "Portable Document Format File, 1 page(s), 38869 bytes",
+    "function": "inspect_protected_pdf"
+  },
+  "use-cases/sign-password-protected-pdf#verify_signed_protected_pdf": {
+    "type": "text",
+    "file": "verify-signed-protected-pdf.txt",
+    "path": "use-cases/sign-password-protected-pdf/verify_signed_protected_pdf/verify-signed-protected-pdf.txt",
+    "preview": "Verified: True, matching QR codes: 1",
+    "function": "verify_signed_protected_pdf"
+  },
+  "use-cases/signing-documents-linux-container-fonts#count_font_files": {
+    "type": "text",
+    "file": "count-font-files.txt",
+    "path": "use-cases/signing-documents-linux-container-fonts/count_font_files/count-font-files.txt",
+    "preview": "Font files found: 191",
+    "function": "count_font_files"
+  },
+  "use-cases/signing-documents-linux-container-fonts#probe_font_family": {
+    "type": "file",
+    "file": "font_probe.pdf",
+    "path": "use-cases/signing-documents-linux-container-fonts/probe_font_family/font_probe.pdf",
+    "preview": "Binary file (PDF, 123 KB)",
+    "function": "probe_font_family"
+  },
+  "use-cases/signing-documents-linux-container-fonts#sign_with_resolved_fonts": {
+    "type": "zip",
+    "file": "sign-with-resolved-fonts-outputs.zip",
+    "path": "use-cases/signing-documents-linux-container-fonts/sign_with_resolved_fonts/sign-with-resolved-fonts-outputs.zip",
+    "contents": [
+      "font_probe.pdf",
+      "signed_fonts.pdf"
+    ],
+    "preview": "font_probe.pdf (140 KB)\nsigned_fonts.pdf (254 KB)",
+    "function": "sign_with_resolved_fonts"
+  },
+  "use-cases/signing-documents-linux-container-fonts#verify_text_signatures": {
+    "type": "text",
+    "file": "verify-text-signatures.txt",
+    "path": "use-cases/signing-documents-linux-container-fonts/verify_text_signatures/verify-text-signatures.txt",
+    "preview": "Latin signature verified: True (1 match)\nCJK signature verified: True (1 match)",
+    "function": "verify_text_signatures"
+  }
+}

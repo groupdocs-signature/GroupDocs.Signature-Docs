@@ -24,7 +24,7 @@ structuredData:
           text: Create the Signature object by passing file path or stream as a constructor parameter.
         - name: Set up signing options 
           text: Instantiate and set up BarcodeSignOptions, QrCodeSignOptions and DigitalSignOptions objects and add them to the List.
-        - name: Sign the source file with form fields and save the result 
+        - name: Sign the source file and save the result 
           text: Invoke the Sign method with signing options and output file path or stream.
 ---
 [**GroupDocs.Signature for Python via .NET**](https://products.groupdocs.com/signature/python-net) allows signing a document with several signatures simultaneously and even apply signatures of different types to the same document.
@@ -46,118 +46,156 @@ Doing this is as simple as:
 
 This code snippet below demonstrates how to eSign a PDF document with multiple signatures at the same time using Python:
 
-{{< tabs "example-1" >}}
+{{< tabs "sign_with_multiple_signatures" >}}
 {{< tab "Python" >}}
-
 ```python
-import groupdocs.signature as signature
-from groupdocs.signature.options import TextSignOptions, BarcodeSignOptions, QrCodeSignOptions, DigitalSignOptions
+from groupdocs.signature import Signature
+from groupdocs.signature.options import (
+    BarcodeSignOptions, DigitalSignOptions, QrCodeSignOptions, TextSignOptions)
 from groupdocs.signature.domain import BarcodeTypes, QrCodeTypes
-import groupdocs.signature.domain as gsd
-import sys 
-import os
 
-def run():
-    with signature.Signature("./sample.pdf") as sign:
+
+def sign_with_multiple_signatures():
+    with Signature("sample.pdf") as signature:
         # Define text signature options
         text_options = TextSignOptions("This is test message")
-        text_options.vertical_alignment = gsd.VerticalAlignment.TOP
-        text_options.horizontal_alignment = gsd.HorizontalAlignment.LEFT
-        
+        text_options.left = 100
+        text_options.top = 360
+        text_options.width = 200
+        text_options.height = 30
+
         # Define barcode signature options
         barcode_options = BarcodeSignOptions("123456")
-        barcode_options.encode_type = BarcodeTypes.CODE_128
+        barcode_options.encode_type = BarcodeTypes.CODE128
         barcode_options.left = 100
-        barcode_options.top = 100
-        
+        barcode_options.top = 420
+        barcode_options.width = 200
+        barcode_options.height = 60
+
         # Define QR code signature options
         qrcode_options = QrCodeSignOptions("JohnSmith")
         qrcode_options.encode_type = QrCodeTypes.QR
         qrcode_options.left = 100
-        qrcode_options.top = 200
-        
-        # Define digital signature options
-        digital_options = DigitalSignOptions("./certificate.pfx")
-        digital_options.image_file_path = "./signature.jpg"
-        digital_options.vertical_alignment = gsd.VerticalAlignment.CENTER
-        digital_options.horizontal_alignment = gsd.HorizontalAlignment.CENTER
-        digital_options.password = "1234567890"
-        
-        # Define list of signature options
-        list_options = [text_options, barcode_options, qrcode_options, digital_options]
-        
-        # Sign document
-        sign.sign("./signed.pdf", list_options)
-```
+        qrcode_options.top = 520
+        qrcode_options.width = 100
+        qrcode_options.height = 100
 
+        # Define digital signature options with a certificate and an appearance image
+        digital_options = DigitalSignOptions("certificate.pfx")
+        digital_options.password = "1234567890"
+        digital_options.image_file_path = "signature.jpg"
+        digital_options.left = 350
+        digital_options.top = 520
+        digital_options.width = 160
+        digital_options.height = 100
+
+        # Sign the document with the list of signature options
+        list_options = [text_options, barcode_options, qrcode_options, digital_options]
+        result = signature.sign("signed_multiple.pdf", list_options)
+        print(f"Signed with {len(result.succeeded)} signatures:")
+        for item in result.succeeded:
+            print(f"  {item.signature_type.name}")
+
+
+if __name__ == "__main__":
+    sign_with_multiple_signatures()
+```
 {{< /tab >}}
 {{< tab "sample.pdf" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-multiple-signatures/sample.pdf)
+`sample.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-multiple-signatures/sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "certificate.pfx" >}}
+{{< tab-text >}}
+`certificate.pfx` is the sample certificate used in this example (password `1234567890`). Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-multiple-signatures/certificate.pfx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "signature.jpg" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [signature.jpg](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-multiple-signatures/signature.jpg)
+`signature.jpg` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-multiple-signatures/signature.jpg) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "signed_multiple.pdf" >}}  
+```text
+Binary file (PDF, 740 KB)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-multiple-signatures/sign_with_multiple_signatures/signed_multiple.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
 ### Advanced Multiple Signatures Example
 
-Here's a more advanced example showing how to add multiple signatures with different styles and positions:
+Here's a more advanced example showing how to add multiple signatures with different styles and positions. Each signature is placed with an alignment and a margin from the page edges:
 
-{{< tabs "example-2" >}}
+{{< tabs "sign_with_multiple_signatures_advanced" >}}
 {{< tab "Python" >}}
-
 ```python
-import groupdocs.signature as signature
-from groupdocs.signature.options import TextSignOptions, ImageSignOptions, QrCodeSignOptions
-from groupdocs.signature.domain import QrCodeTypes
-import groupdocs.signature.domain as gsd
-import sys 
-import os
+from groupdocs.signature import Signature
+from groupdocs.signature.options import ImageSignOptions, QrCodeSignOptions, TextSignOptions
+from groupdocs.signature.domain import (
+    HorizontalAlignment, Padding, QrCodeTypes, SignatureFont, VerticalAlignment)
 
-def run():
-    with signature.Signature("./sample.pdf") as sign:
-        # Create text signature options
+
+def sign_with_multiple_signatures_advanced():
+    with Signature("sample.pdf") as signature:
+        # Bold text signature at the top right, below the page header
         text_options = TextSignOptions("Approved by John Smith")
-        text_options.font = gsd.SignatureFont()
-        text_options.font.bold = True 
-        text_options.font.size = 20.0
-        text_options.font.family_name = "Arial"
-        text_options.vertical_alignment = gsd.VerticalAlignment.TOP
-        text_options.horizontal_alignment = gsd.HorizontalAlignment.RIGHT
-        text_options.margin = gsd.Padding(10, 10, 0, 0)
-        
-        # Create image signature options
-        image_options = ImageSignOptions("./stamp.png")
-        image_options.width = 200
+        font = SignatureFont()
+        font.family_name = "Arial"
+        font.size = 20
+        font.bold = True
+        text_options.font = font
+        text_options.width = 280
+        text_options.height = 40
+        text_options.vertical_alignment = VerticalAlignment.TOP
+        text_options.horizontal_alignment = HorizontalAlignment.RIGHT
+        text_options.margin = Padding(top=170, right=20)
+
+        # Stamp image in the bottom left corner
+        image_options = ImageSignOptions("stamp.png")
+        image_options.width = 100
         image_options.height = 100
-        image_options.vertical_alignment = gsd.VerticalAlignment.BOTTOM
-        image_options.horizontal_alignment = gsd.HorizontalAlignment.LEFT
-        image_options.margin = gsd.Padding(0, 0, 10, 10)
-        
-        # Create QR code signature options
+        image_options.vertical_alignment = VerticalAlignment.BOTTOM
+        image_options.horizontal_alignment = HorizontalAlignment.LEFT
+        image_options.margin = Padding(left=20, bottom=20)
+
+        # QR code in the bottom right corner
         qrcode_options = QrCodeSignOptions("https://www.example.com/verify")
         qrcode_options.encode_type = QrCodeTypes.QR
         qrcode_options.width = 100
         qrcode_options.height = 100
-        qrcode_options.vertical_alignment = gsd.VerticalAlignment.CENTER
-        qrcode_options.horizontal_alignment = gsd.HorizontalAlignment.CENTER
-        
-        # Define list of signature options
-        list_options = [text_options, image_options, qrcode_options]
-        
-        # Sign document
-        sign.sign("./signed.pdf", list_options)
-```
+        qrcode_options.vertical_alignment = VerticalAlignment.BOTTOM
+        qrcode_options.horizontal_alignment = HorizontalAlignment.RIGHT
+        qrcode_options.margin = Padding(right=20, bottom=20)
 
+        # Sign the document with the list of signature options
+        list_options = [text_options, image_options, qrcode_options]
+        result = signature.sign("signed_multiple_advanced.pdf", list_options)
+        print(f"Signed with {len(result.succeeded)} signatures:")
+        for item in result.succeeded:
+            print(f"  {item.signature_type.name}")
+
+
+if __name__ == "__main__":
+    sign_with_multiple_signatures_advanced()
+```
 {{< /tab >}}
 {{< tab "sample.pdf" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-multiple-signatures/sample.pdf)
+`sample.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-multiple-signatures/sample.pdf) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "stamp.png" >}}
+{{< tab-text >}}
+`stamp.png` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-multiple-signatures/stamp.png) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "signed_multiple_advanced.pdf" >}}  
+```text
+Binary file (PDF, 178 KB)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-multiple-signatures/sign_with_multiple_signatures_advanced/signed_multiple_advanced.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 

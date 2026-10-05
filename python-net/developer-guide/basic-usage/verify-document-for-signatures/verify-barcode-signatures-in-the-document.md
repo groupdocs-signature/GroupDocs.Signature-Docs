@@ -32,61 +32,95 @@ structuredData:
 
 ## Basic Usage Example
 
-Here's a simple example showing how to verify barcode signatures in a document:
+Here's a simple example showing how to verify barcode signatures in a document. The `is_valid` property of the returned [VerificationResult](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/verificationresult/) is `True` when the document contains barcode signatures that match the [BarcodeVerifyOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/barcodeverifyoptions/):
 
+{{< tabs "verify_barcode_signatures" >}}
+{{< tab "Python" >}}
 ```python
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
+from groupdocs.signature.domain import TextMatchType
 from groupdocs.signature.options import BarcodeVerifyOptions
 
-# Initialize signature
-with signature.Signature("sample_signed.pdf") as sign:
-    # Create verification options
-    options = BarcodeVerifyOptions()
-    options.text = "123456789"
-    options.match_type = signature.TextMatchType.Contains
-    options.all_pages = True  # verify on all pages
-    
-    # Verify signatures
-    result = sign.verify(options)
-    
-    if result.is_valid:
-        print("Document was verified successfully!")
-    else:
-        print("Document failed verification process.")
+
+def verify_barcode_signatures():
+    with Signature("signed.pdf") as signature:
+        options = BarcodeVerifyOptions()
+        options.all_pages = True  # this value is set by default
+        options.text = "12345"
+        options.match_type = TextMatchType.CONTAINS
+
+        result = signature.verify(options)
+
+        if result.is_valid:
+            print(f"Document was verified successfully: {len(result.succeeded)} matching barcode signature(s).")
+        else:
+            print("Document failed verification process.")
+
+
+if __name__ == "__main__":
+    verify_barcode_signatures()
 ```
+{{< /tab >}}
+{{< tab "signed.pdf" >}}
+{{< tab-text >}}
+`signed.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/verify-document-for-signatures/verify-barcode-signatures-in-the-document/signed.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "verify-barcode-signatures.txt" >}}  
+```text
+Document was verified successfully: 1 matching barcode signature(s).
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/verify-document-for-signatures/verify-barcode-signatures-in-the-document/verify_barcode_signatures/verify-barcode-signatures.txt)
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Advanced Usage Example
 
-Here's an example showing more advanced verification options:
+Here's an example showing more advanced verification options: an exact text match, the barcode type ([BarcodeTypes](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/barcodetypes/)) and the page to verify. The `succeeded` property of the result lists the barcode signatures that passed verification:
 
+{{< tabs "verify_code128_barcode_signature" >}}
+{{< tab "Python" >}}
 ```python
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
+from groupdocs.signature.domain import BarcodeTypes, TextMatchType
 from groupdocs.signature.options import BarcodeVerifyOptions
 
-# Initialize signature
-with signature.Signature("sample_signed.pdf") as sign:
-    # Create verification options with advanced settings
-    options = BarcodeVerifyOptions()
-    options.text = "123456789"
-    options.match_type = signature.TextMatchType.Exact  # require exact match
-    options.barcode_type = signature.BarcodeType.Code128  # specify barcode type
-    options.all_pages = False  # verify only on specific pages
-    options.page_numbers = [1, 2]  # verify on pages 1 and 2
-    
-    # Verify signatures
-    result = sign.verify(options)
-    
-    if result.is_valid:
-        print("Document was verified successfully!")
-        # Print verification details
-        for signature in result.succeeded:
-            print(f"Found valid barcode: {signature.text}")
-    else:
-        print("Document failed verification process.")
-        # Print failed verification details
-        for signature in result.failed:
-            print(f"Invalid barcode: {signature.text}")
+
+def verify_code128_barcode_signature():
+    with Signature("signed.pdf") as signature:
+        options = BarcodeVerifyOptions()
+        options.text = "123456789012"
+        options.match_type = TextMatchType.EXACT  # require exact match
+        # If the encode type is not set, any barcode type is accepted
+        options.encode_type = BarcodeTypes.CODE128
+        # Verify the first page only (page numbers start at 1)
+        options.all_pages = False
+        options.page_number = 1
+
+        result = signature.verify(options)
+
+        print(f"Document is valid: {result.is_valid}")
+        for barcode in result.succeeded:
+            print(f"Verified {barcode.encode_type.type_name} barcode '{barcode.text}'")
+
+
+if __name__ == "__main__":
+    verify_code128_barcode_signature()
 ```
+{{< /tab >}}
+{{< tab "signed.pdf" >}}
+{{< tab-text >}}
+`signed.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/verify-document-for-signatures/verify-barcode-signatures-in-the-document/signed.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "verify-code128-barcode-signature.txt" >}}  
+```text
+Document is valid: True
+Verified Code128 barcode '123456789012'
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/verify-document-for-signatures/verify-barcode-signatures-in-the-document/verify_code128_barcode_signature/verify-code128-barcode-signature.txt)
+{{< /tab >}}
+{{< /tabs >}}
 
 ## More Resources
 

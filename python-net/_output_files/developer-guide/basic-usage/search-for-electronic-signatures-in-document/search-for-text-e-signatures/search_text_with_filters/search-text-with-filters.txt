@@ -1,0 +1,2 @@
+Found 1 matching text signature(s)
+'John Smith' on page 1 at (50, 379), size 189x30

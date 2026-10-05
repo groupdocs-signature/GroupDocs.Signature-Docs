@@ -31,26 +31,27 @@ structuredData:
 
 ## Basic Usage Example
 
-Here's a simple example showing how to verify signatures in a document:
+Here's a simple example showing how to verify signatures in a document. The `is_valid` property of the returned [VerificationResult](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/verificationresult/) is `True` when the document contains valid signatures that match the verification options, and `succeeded` lists them:
 
 ```python
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
+from groupdocs.signature.domain import TextMatchType
 from groupdocs.signature.options import TextVerifyOptions
 
-# Initialize signature
-with signature.Signature("sample_signed.pdf") as sign:
+# Open the signed document
+with Signature("signed.pdf") as signature:
     # Create verification options
     options = TextVerifyOptions()
     options.text = "John Smith"
-    options.match_type = signature.TextMatchType.Contains
-    
+    options.match_type = TextMatchType.CONTAINS
+
     # Verify signatures
-    result = sign.verify(options)
-    
+    result = signature.verify(options)
+
     if result.is_valid:
-        print("Document is valid! All signatures are valid.")
+        print(f"Document was verified successfully: {len(result.succeeded)} matching signature(s).")
     else:
-        print("Document is invalid! Some signatures are invalid.")
+        print("Document failed verification process.")
 ```
 
 The following articles in this section provide detailed examples for verifying specific types of signatures:

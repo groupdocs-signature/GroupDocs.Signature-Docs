@@ -1,0 +1,4 @@
+Found 3 form field signature(s)
+Page 1: TEXT field 'ApprovedBy', value: 'John Smith'
+Page 1: CHECKBOX field 'Confirmed', value: True
+Page 1: DIGITAL_SIGNATURE field None, value: None

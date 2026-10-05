@@ -1,21 +1,19 @@
 ---
 id: licensing
 url: signature/python-net/licensing
-title: Licensing 
+title: Licensing
 weight: 6
-description: GroupDocs.Signature for Python via .NET free signature API version is available to evaluate the API which will be similar to licensed version but with few limitations.
-keywords: free signature, license, signature, API
+description: "GroupDocs.Signature for Python via .NET offers a Free Trial and a 30-day Temporary License for evaluation. Learn the evaluation limitations and how to apply a license from an environment variable, a file, a stream, or metered keys."
+keywords: free signature, license, temporary license, evaluation, trial, metered, GROUPDOCS_LIC_PATH, signature, API
 productName: GroupDocs.Signature for Python via .NET
 hideChildren: False
 toc: True
 ---
 
-To help you quickly explore library and its features, GroupDocs.Signature provides a Free Trial and a 30-day Temporary License for evaluation, as well as various purchase plans.
-
-Sometimes, to get familiar with the system quickly, you may want to dive into the code right away. To make this easier, GroupDocs.Signature offers a Free Trial and a 30-day Temporary License for evaluation, along with various purchase plans.
+To help you explore the library quickly, GroupDocs.Signature offers a Free Trial and a 30-day Temporary License for evaluation, along with various purchase plans.
 
 {{< alert style="info" >}}
-Please note that general policies and practices guide you on evaluating, licensing, and purchasing our products. See the [Purchase Policies and FAQ](https://purchase.groupdocs.com/policies/) section for details.
+General policies and practices for evaluating, licensing, and purchasing our products are described in the [Purchase Policies and FAQ](https://purchase.groupdocs.com/policies/) section.
 {{< /alert >}}
 
 ## Free Trial or Temporary License
@@ -24,16 +22,18 @@ You can try GroupDocs.Signature without purchasing a license.
 
 ### Free Trial
 
-The evaluation version is identical to the full version — it simply becomes fully licensed when you apply a license. Instructions for setting a license are provided in the following sections.
+The evaluation version is the same package as the licensed one: it becomes fully licensed when you apply a license, as described below. Without a license, the following limitations apply:
 
-The evaluation version has the following limitations:
-* Only the first three pages are processed.
-* Documents with more than three pages are not supported.
-* A trial watermark is placed at the top of each page.
+| Operation | Limitation |
+| --- | --- |
+| Every operation | Documents with more than two pages are not processed. Signing, searching, verifying, previewing, or reading document information raises `GroupDocsSignatureException` with the message "The number of pages cannot exceed 2 in a trial version". |
+| Sign | An evaluation line ("Created with evaluation version of GroupDocs.Signature") is added to every page of the signed document. |
+| Search | Found signatures report masked values. A text signature's text is replaced by the evaluation notice, and a barcode or QR code value keeps only its first six characters, followed by an evaluation notice. |
+| Verify | Text, barcode, and QR code verification compares against the masked values, so it reports `is_valid` as `False` even for a document that carries the expected signature. |
 
 ### Temporary License
 
-If you'd like to test GroupDocs.Signature without the limitations of the trial version, you can request a 30-day Temporary License. For more information, see the [Get a Temporary License](https://purchase.groupdocs.com/temporary-license) page.
+To test GroupDocs.Signature without these limitations, request a 30-day Temporary License. For more information, see the [Get a Temporary License](https://purchase.groupdocs.com/temporary-license) page.
 
 ## How to Set Up a License
 
@@ -41,121 +41,146 @@ If you'd like to test GroupDocs.Signature without the limitations of the trial v
 For information on pricing, visit the [Pricing Information](https://purchase.groupdocs.com/pricing/) page.
 {{< /alert >}}
 
-Once you’ve obtained a license, follow these instructions to set it up. 
+Once you have a license, apply it in one of the ways below. A license should be set:
 
-A license should be set:
-- Only once per application, and
-- Before using any other GroupDocs.Signature classes.
+- only once per application, and
+- before you use any other GroupDocs.Signature class.
 
 {{< alert style="tip" >}}
-Though the license can be set multiple times per application, it is recommended to set it only once, as repeated calls to the `set_license` method will use unnecessary processing time.
+The license can be set more than once per application, but set it only once: each `set_license` call takes processing time.
 {{< /alert >}}
 
-### Set Environment Variable
+### Set an Environment Variable
 
-You can set the `GROUPDOCS_LIC_PATH` environment variable to the absolute path of the license file. GroupDocs.Signature will then read this value and apply the license.
+Set the `GROUPDOCS_LIC_PATH` environment variable to the full path of the license file. The license is then applied automatically when `groupdocs.signature` is imported, and your code needs no license call at all. The variable may also hold an HTTPS URL: the license is downloaded once and cached in the system's temporary folder.
 
 {{< tabs "set-license-env-var">}}
 {{< tab "Windows (Command Prompt)" >}}
 ```ps
-set GROUPDOCS_LIC_PATH "C:\path\to\your\license\file.lic"
+set GROUPDOCS_LIC_PATH=C:\path\to\GroupDocs.Signature.lic
 ```
 {{< /tab >}}
-{{< tab "Windows (Powershell)" >}}
+{{< tab "Windows (PowerShell)" >}}
 ```ps
-$env:GROUPDOCS_LIC_PATH="C:\path\to\your\license\file.lic"
+$env:GROUPDOCS_LIC_PATH = "C:\path\to\GroupDocs.Signature.lic"
+```
+{{< /tab >}}
+{{< tab "Linux" >}}
+```bash
+export GROUPDOCS_LIC_PATH="/path/to/GroupDocs.Signature.lic"
 ```
 {{< /tab >}}
 {{< tab "macOS" >}}
 ```bash
-export GROUPDOCS_LIC_PATH="/path/to/your/license/file.lic"
+export GROUPDOCS_LIC_PATH="/path/to/GroupDocs.Signature.lic"
 ```
 {{< /tab >}}
 {{< /tabs >}}
 
-### Copy License into Project Root Folder
-
-GroupDocs.Signature can also read a license from the project’s root directory. Consider a simple Python app structure:
-
-```Directory
-📂 my-app
- ├──app.py
- ├──source.docx
- ├──groupdocs_signature_net-25.4-py3-none-*.whl
- └──GroupDocs.Signature.PythonViaNET.lic
-```
-
-When you run the application from the `my-app` folder, GroupDocs.Signature will check for files with a `.lic` extension in this folder. It will read the `GroupDocs.Signature.PythonViaNET.lic` file to apply the license.
+{{< alert style="warning" >}}
+A missing or unreadable file in `GROUPDOCS_LIC_PATH` does not raise an error, because a license problem must not break the import. The library then runs in evaluation mode. If outputs still carry the evaluation line, check the path.
+{{< /alert >}}
 
 ### Set License from a File
 
-The following code demonstrates setting a license from a file:
+The following code sets a license from a file:
 
+{{< tabs "set_license_from_file">}}
+{{< tab "Python" >}}
 ```python
 import os
+
 from groupdocs.signature import License
 
-def set_license_from_file():
-    # Get absolution path to license file
-    license_path = os.path.abspath("./GroupDocs.Signature.PythonViaNET.lic")
 
-    # Instantiate License and set the license
-    license = License()
-    license.set_license(license_path)
+def set_license_from_file():
+    # The license file next to the script; change the name to match yours
+    license_path = os.path.abspath("GroupDocs.Signature.lic")
+    if os.path.exists(license_path):
+        # Apply the license once, before using any other GroupDocs.Signature API
+        License().set_license(license_path)
+        print("License set successfully.")
+    else:
+        print("License file not found; running in evaluation mode.")
+
 
 if __name__ == "__main__":
     set_license_from_file()
 ```
+{{< /tab >}}
+{{< /tabs >}}
+
+{{< alert style="warning" >}}
+`set_license` raises `GroupDocsSignatureException` ("License file not found") when the file does not exist. It does not validate the file's contents, though: a damaged or wrong license file is accepted without an error, and the library stays in evaluation mode. To confirm that a license works, sign a test document and check that no evaluation line appears on its pages.
+{{< /alert >}}
 
 ### Set License from a Stream
 
-This example shows how to set a license from a stream:
+`set_license` also accepts a readable binary stream, such as an open file or an `io.BytesIO` holding the license bytes:
 
+{{< tabs "set_license_from_stream">}}
+{{< tab "Python" >}}
 ```python
 import os
+
 from groupdocs.signature import License
 
-def set_license_from_stream():
-    # Get absolution path to license file
-    license_path = os.path.abspath("./GroupDocs.Signature.PythonViaNET.lic")
 
-    # Create a readable steam
-    with open(license_path, "rb") as license_stream:
-        # Instantiate License and set the license
-        # Instantiate License and set the license
-        license = License()
-        license.set_license(license_stream)
+def set_license_from_stream():
+    license_path = os.path.abspath("GroupDocs.Signature.lic")
+    if os.path.exists(license_path):
+        with open(license_path, "rb") as stream:
+            License().set_license(stream)
+        print("License set successfully.")
+    else:
+        print("License file not found; running in evaluation mode.")
+
 
 if __name__ == "__main__":
     set_license_from_stream()
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Set Metered License
 
-A [Metered License](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/metered) is also available as an alternative to a traditional license file. It is a usage-based licensing model that may be more suitable for customers who prefer to be billed based on actual API feature usage. For more information, refer to the [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered).
+A [Metered License](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/metered/) is an alternative to a license file. It is a usage-based licensing model that may suit customers who prefer to be billed for actual API usage. For more information, refer to the [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered).
 
-The following sample demonstrates how to use metered licensing:
+To use it:
 
+1. Create an instance of the `Metered` class.
+2. Pass your public and private keys to the `set_metered_key` method.
+3. Process your documents.
+4. Call `Metered.get_consumption_quantity()` to get the amount of data processed so far, in megabytes.
+5. Call `Metered.get_consumption_credit()` to get the number of credits consumed so far.
+
+{{< tabs "set_metered_license">}}
+{{< tab "Python" >}}
 ```python
 from groupdocs.signature import Metered
 
+
 def set_metered_license():
-    # Set your public and private keys
-    public_key = "******" 
-    private_key = "******" 
+    public_key = "*****"  # Your public key
+    private_key = "*****"  # Your private key
 
-    # Instantiate Metered and set keys
-    metered = Metered()
-    metered.set_metered_key(public_key, private_key)
+    # Skip the call while the placeholder keys are still in place
+    if "*" in public_key or "*" in private_key:
+        print("Provide your real metered keys to activate metered licensing.")
+        return
 
-    # Get a number of MBs processed 
-    mb_processed = metered.get_consumption_quantity()
-    print("MB processed: ", mb_processed)
+    # Activate metered (pay-as-you-go) billing for this process
+    Metered().set_metered_key(public_key, private_key)
+    print("Metered license set successfully.")
 
-    # Get a number of credits used
-    credits_used = metered.get_consumption_credit()
-    print("Credits used: ", credits_used)
+    # ... process your documents here ...
+
+    print(f"MB processed: {Metered.get_consumption_quantity()}")
+    print(f"Credits used: {Metered.get_consumption_credit()}")
+
 
 if __name__ == "__main__":
     set_metered_license()
 ```
+{{< /tab >}}
+{{< /tabs >}}

@@ -1,0 +1,2 @@
+Found 1 QR code signature(s)
+QR code signature found at page 1 with type QR and text 'John Smith'

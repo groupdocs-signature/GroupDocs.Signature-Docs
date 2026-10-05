@@ -29,54 +29,79 @@ structuredData:
           text: Call the update method passing the updated signature.
 ---
 [**GroupDocs.Signature for Python via .NET**](https://products.groupdocs.com/signature/python-net) provides functionality to manipulate text signatures' location, size, and textual content.  
-Please note that the [update](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/update/) method modifies the same document that was passed to the constructor of the [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature) class.
+Please note that the [update](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/update/) method modifies the same document that was passed to the constructor of the [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature) class, so the example below copies the signed document first and updates the copy.
 
 Here are the steps to update a Text signature in a document with GroupDocs.Signature:
 
 * Create a new instance of the [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature) class and pass the source document path as a constructor parameter
 * Instantiate the [TextSearchOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/textsearchoptions) object with desired properties
-* Call the [search](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/search) method to obtain a list of text signatures
-* Select from the list the [TextSignature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/textsignature) object(s) that should be updated
-* Call the [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature) object's [update](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/update/) method and pass one or several signatures to it
+* Call the [search](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/search) method; the `signatures` property of the returned [SearchResult](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/searchresult/) holds the found text signatures
+* Select from the list the [TextSignature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/textsignature) object(s) that should be updated and change their properties
+* Call the [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature) object's [update](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/update/) method and pass one or several signatures to it; for a single signature it returns `True` when the signature was updated
 
 This example shows how to update a Text signature that was found using the [search](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/search) method:
 
+{{< tabs "update_text_signature" >}}
+{{< tab "Python" >}}
 ```python
-import groupdocs.signature as signature
+import shutil
+
+from groupdocs.signature import Signature
 from groupdocs.signature.options import TextSearchOptions
 
-# Initialize signature
-with signature.Signature("sample_signed.pdf") as sign:
-    # Create search options
-    options = TextSearchOptions()
-    
-    # Search for text signatures in document
-    signatures = sign.search(options)
-    
-    if len(signatures) > 0:
-        # Get first text signature
+
+def update_text_signature():
+    # update() saves the changes into the opened document, so work on a copy
+    shutil.copy("signed.docx", "updated_text_signature.docx")
+
+    with Signature("updated_text_signature.docx") as signature:
+        options = TextSearchOptions()
+        # Return only signatures added by GroupDocs.Signature, not the document's own text
+        options.skip_external = True
+        signatures = signature.search([options]).signatures
+        print(f"Found {len(signatures)} text signature(s)")
+        if not signatures:
+            return
+
         text_signature = signatures[0]
-        
-        # Change text property
+        old_text = text_signature.text
+        # Change the text
         text_signature.text = "John Walkman"
-        
-        # Change position
+        # Change the position
         text_signature.left = text_signature.left + 10
         text_signature.top = text_signature.top + 10
-        
-        # Change size. Please note not all documents support changing signature size
+        # Change the size. Not all document formats support resizing a signature
         text_signature.width = 200
         text_signature.height = 100
-        
-        # Update the signature
-        result = sign.update(text_signature)
-        
-        if result.updated_count > 0:
-            print(f"Signature with text '{text_signature.text}' was updated in the document")
+
+        if signature.update(text_signature):
+            print(f"Updated '{old_text}' to '{text_signature.text}' at "
+                  f"({text_signature.left}, {text_signature.top}), "
+                  f"size {text_signature.width}x{text_signature.height}")
         else:
-            print(f"Signature was not updated in the document! "
-                  f"Signature with text '{text_signature.text}' was not found!")
+            print(f"Text signature '{old_text}' was not updated")
+
+
+if __name__ == "__main__":
+    update_text_signature()
 ```
+{{< /tab >}}
+{{< tab "signed.docx" >}}
+{{< tab-text >}}
+`signed.docx` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/update-signatures-in-documents/update-text-signatures-in-document/signed.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "updated_text_signature.docx" >}}  
+```text
+Binary file (DOCX, 147 KB)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/update-signatures-in-documents/update-text-signatures-in-document/update_text_signature/updated_text_signature.docx)
+{{< /tab >}}
+{{< /tabs >}}
+
+{{< alert style="info" >}}
+Not every document format accepts every change. In PDF documents, a text signature added with the default (native) implementation can be moved, but its text and size stay as they were, although `update` still returns `True`. Text signatures added to a PDF as annotations or stickers accept text, position and size changes.
+{{< /alert >}}
 
 
 ## More Resources

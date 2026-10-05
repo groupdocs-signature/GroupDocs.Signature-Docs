@@ -3,8 +3,8 @@ id: home
 url: signature/python-net
 title: GroupDocs.Signature for Python via .NET
 weight: 1
-description: "GroupDocs.Signature for Python via .NET is an easy to use electronic signature API designed for C#/.NET applications"
-keywords: electronic signature, signature, c#
+description: "GroupDocs.Signature for Python via .NET is an easy to use electronic signature API designed for Python applications"
+keywords: electronic signature, signature, python
 productName: GroupDocs.Signature for Python via .NET
 hideChildren: True
 structuredData:

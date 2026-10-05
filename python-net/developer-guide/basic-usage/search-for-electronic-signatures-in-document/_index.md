@@ -29,24 +29,21 @@ structuredData:
 ---
 Electronically signed documents can be searched for specific signatures for different purposes, such as signature properties review, verification, and analysis.
 
-[**GroupDocs.Signature for Python via .NET**](https://products.groupdocs.com/signature/python-net) API allows you to search signatures within documents based on various search filters and returns a list of electronic signatures that match the search criteria.
+[**GroupDocs.Signature for Python via .NET**](https://products.groupdocs.com/signature/python-net) API allows you to search signatures within documents based on various search filters and returns a [SearchResult](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/searchresult/) whose `signatures` property lists the electronic signatures that match the search criteria.
 
 Here's a basic example of how to search for signatures in a document using Python:
 
 ```python
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
 from groupdocs.signature.options import TextSearchOptions
 
-# Initialize signature
-with signature.Signature("sample.pdf") as sign:
-    # Create search options
-    search_options = TextSearchOptions()
-    
-    # Search for signatures
-    result = sign.search(search_options)
-    
+# Open the signed document
+with Signature("signed.pdf") as signature:
+    # Search for text signatures: pass a list of search options
+    result = signature.search([TextSearchOptions()])
+
     # Process found signatures
-    for text_signature in result:
+    for text_signature in result.signatures:
         print(f"Found text signature: {text_signature.text}")
         print(f"Page number: {text_signature.page_number}")
         print(f"Position: X={text_signature.left}, Y={text_signature.top}")

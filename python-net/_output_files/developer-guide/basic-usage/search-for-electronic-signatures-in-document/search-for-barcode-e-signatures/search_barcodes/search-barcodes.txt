@@ -1,0 +1,3 @@
+Found 2 barcode signature(s)
+Page 1: Code128 barcode '123456789012' at (400, 375), size 170x45
+Page 1: Code39 barcode 'JS-2026' at (400, 430), size 170x45

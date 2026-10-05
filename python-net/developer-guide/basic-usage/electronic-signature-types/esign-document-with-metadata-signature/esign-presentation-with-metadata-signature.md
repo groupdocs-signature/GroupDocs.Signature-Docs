@@ -37,47 +37,59 @@ Presentation document metadata could keep big amount of data that allows provide
 
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
 * Instantiate the [MetadataSignOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/metadatasignoptions) object according to your requirements.
-* Instantiate one or several [PresentationMetadataSignature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/presentationmetadatasignature) objects and add them into [MetadataSignOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/metadatasignoptions) to metadata signatures collection ([Signatures](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/metadatasignoptions/signatures)) via [Add](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/metadatasignaturecollection/add) or [AddRange](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/metadatasignaturecollection/addrange) method.
+* Instantiate one or several [PresentationMetadataSignature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/presentationmetadatasignature) objects and add them to the [signatures](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/metadatasignoptions/signatures) collection of [MetadataSignOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/metadatasignoptions) with the [append](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/metadatasignaturecollection/append) or [add_range](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/metadatasignaturecollection/add_range) method.
 * Call [Sign](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature) class instance and pass [MetadataSignOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/metadatasignoptions) to it.
 
 ## How to eSign Presentation with Metadata signature
 
 This example shows how to add Metadata signature to Presentation document.
 
-{{< tabs "example-1" >}}
+{{< tabs "sign_ppsx" >}}
 {{< tab "Python" >}}
-
 ```python
-import groupdocs.signature as signature
-from groupdocs.signature.options import MetadataSignOptions
-from groupdocs.signature.domain import PresentationMetadataSignature
 from datetime import datetime
 
-# Initialize signature
-with signature.Signature("sample.ppsx") as sign:
-    # Create metadata options
-    options = MetadataSignOptions()
-    
-    # Create few Presentation Metadata signatures
-    signatures = [
-        PresentationMetadataSignature("Author", "Mr.Scherlock Holmes"),
-        PresentationMetadataSignature("DateCreated", datetime.now()),
-        PresentationMetadataSignature("DocumentId", 123456),
-        PresentationMetadataSignature("SignatureId", 123.456)
-    ]
-    
-    # Add signatures to options
-    options.signatures.extend(signatures)
-    
-    # Sign document
-    sign.sign("SampleSigned.ppsx", options)
-```
+from groupdocs.signature import Signature
+from groupdocs.signature.options import MetadataSignOptions
+from groupdocs.signature.domain import PresentationMetadataSignature
 
+
+def sign_ppsx():
+    with Signature("sample.ppsx") as signature:
+        options = MetadataSignOptions()
+
+        # Create a few Presentation Metadata signatures
+        signatures = [
+            PresentationMetadataSignature("Author", "Mr.Scherlock Holmes"),
+            PresentationMetadataSignature("DateCreated", datetime.now()),
+            PresentationMetadataSignature("DocumentId", 123456),
+            PresentationMetadataSignature("SignatureId", 123.456),
+        ]
+
+        # Add them to the options
+        options.signatures.add_range(signatures)
+
+        # Sign the presentation and save the result
+        result = signature.sign("signed.ppsx", options)
+        print(f"Signed with {len(result.succeeded)} metadata signature(s):")
+        for item in result.succeeded:
+            print(f"  {item.name}")
+
+
+if __name__ == "__main__":
+    sign_ppsx()
+```
 {{< /tab >}}
 {{< tab "sample.ppsx" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [sample.ppsx](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-metadata-signature/esign-presentation-with-metadata-signature/sample.ppsx)
+`sample.ppsx` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-metadata-signature/esign-presentation-with-metadata-signature/sample.ppsx) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "signed.ppsx" >}}  
+```text
+Binary file (PPSX, 67 KB)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-metadata-signature/esign-presentation-with-metadata-signature/sign_ppsx/signed.ppsx)
 {{< /tab >}}
 {{< /tabs >}}
 

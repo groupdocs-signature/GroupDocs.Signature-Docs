@@ -22,92 +22,102 @@ A barcode signature is a visual representation of data that can be scanned and r
 
 ## How to Search for Barcode Signatures
 
-The [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/) class provides the [Search](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/search/) method which allows you to search for barcode signatures in documents. Here's how to use it:
+The [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/) class provides the [search](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/search/) method which allows you to search for barcode signatures in documents. Here's how to use it:
 
 1. Create a new instance of the [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/) class and pass the source document path as a parameter.
 2. Instantiate the [BarcodeSearchOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/barcodesearchoptions/) object with the required options.
-3. Call the [Search](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/search/) method of the [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/) class instance and pass the [BarcodeSearchOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/barcodesearchoptions/) to it.
-4. Process the search results.
+3. Call the [search](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/search/) method of the [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/) class instance and pass a list with the [BarcodeSearchOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/barcodesearchoptions/) to it.
+4. Process the search results: the `signatures` property of the returned [SearchResult](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/searchresult/) holds the found [BarcodeSignature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/barcodesignature/) objects.
 
 Here's an example of how to search for barcode signatures in a document:
 
-{{< tabs "example-1" >}}
+{{< tabs "search_barcodes" >}}
 {{< tab "Python" >}}
-
 ```python
 from groupdocs.signature import Signature
 from groupdocs.signature.options import BarcodeSearchOptions
-from groupdocs.signature.domain import BarcodeSignature
 
-# Initialize Signature with input document
-with Signature("sample.pdf") as signature:
-    # Create search options
-    options = BarcodeSearchOptions()
-    
-    # Search for signatures
-    result = signature.search(options)
-    
-    print(f"Found {len(result)} signatures")
-    
-    # Process found signatures
-    for barcode_signature in result:
-        print(f"Barcode type: {barcode_signature.barcode_type}")
-        print(f"Barcode text: {barcode_signature.text}")
-        print(f"Page number: {barcode_signature.page_number}")
-        print(f"Position: X={barcode_signature.left}, Y={barcode_signature.top}")
-        print(f"Size: Width={barcode_signature.width}, Height={barcode_signature.height}")
+
+def search_barcodes():
+    with Signature("signed.pdf") as signature:
+        # Search all pages of the document for barcode signatures
+        result = signature.search([BarcodeSearchOptions()])
+
+        print(f"Found {len(result.signatures)} barcode signature(s)")
+        for barcode in result.signatures:
+            print(f"Page {barcode.page_number}: {barcode.encode_type.type_name} barcode '{barcode.text}' "
+                  f"at ({barcode.left}, {barcode.top}), size {barcode.width}x{barcode.height}")
+
+
+if __name__ == "__main__":
+    search_barcodes()
 ```
-
 {{< /tab >}}
-{{< tab "sample.pdf" >}}
+{{< tab "signed.pdf" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-barcode-e-signatures/sample.pdf)
+`signed.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-barcode-e-signatures/signed.pdf) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "search-barcodes.txt" >}}  
+```text
+Found 2 barcode signature(s)
+Page 1: Code128 barcode '123456789012' at (400, 375), size 170x45
+Page 1: Code39 barcode 'JS-2026' at (400, 430), size 170x45
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-barcode-e-signatures/search_barcodes/search-barcodes.txt)
 {{< /tab >}}
 {{< /tabs >}}
 
 ## Advanced Search Options
 
-The [BarcodeSearchOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/barcodesearchoptions/) class provides various properties to customize the search process:
+The [BarcodeSearchOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/barcodesearchoptions/) class provides properties to narrow the search:
 
-{{< tabs "example-2" >}}
+- `encode_type` returns only barcodes of the given type, for example `BarcodeTypes.CODE128`;
+- `text` and `match_type` return only barcodes whose text matches;
+- `all_pages` and `page_number` search a single page instead of the whole document (page numbers start at 1);
+- `return_content` and `return_content_type` also return the barcode image.
+
+{{< tabs "search_barcodes_with_filters" >}}
 {{< tab "Python" >}}
-
 ```python
 from groupdocs.signature import Signature
+from groupdocs.signature.domain import BarcodeTypes, TextMatchType
 from groupdocs.signature.options import BarcodeSearchOptions
-from groupdocs.signature.domain import BarcodeSignature
 
-# Initialize Signature with input document
-with Signature("sample.pdf") as signature:
-    # Create search options
-    options = BarcodeSearchOptions()
-    
-    # Specify pages to search
-    options.pages = [1, 2]  # Search only on pages 1 and 2
-    
-    # Specify barcode types to search for
-    options.barcode_type = "Code128"  # Search only for Code128 barcodes
-    
-    # Search for signatures
-    result = signature.search(options)
-    
-    print(f"Found {len(result)} signatures")
-    
-    # Process found signatures
-    for barcode_signature in result:
-        print(f"Barcode type: {barcode_signature.barcode_type}")
-        print(f"Barcode text: {barcode_signature.text}")
-        print(f"Page number: {barcode_signature.page_number}")
-        print(f"Position: X={barcode_signature.left}, Y={barcode_signature.top}")
-        print(f"Size: Width={barcode_signature.width}, Height={barcode_signature.height}")
+
+def search_barcodes_with_filters():
+    with Signature("signed.pdf") as signature:
+        options = BarcodeSearchOptions()
+        # Search the first page only
+        options.all_pages = False
+        options.page_number = 1
+        # Return only Code 128 barcodes whose text starts with "1234"
+        options.encode_type = BarcodeTypes.CODE128
+        options.text = "1234"
+        options.match_type = TextMatchType.STARTS_WITH
+
+        result = signature.search([options])
+
+        print(f"Found {len(result.signatures)} matching barcode signature(s)")
+        for barcode in result.signatures:
+            print(f"Page {barcode.page_number}: {barcode.encode_type.type_name} barcode '{barcode.text}'")
+
+
+if __name__ == "__main__":
+    search_barcodes_with_filters()
 ```
-
 {{< /tab >}}
-{{< tab "sample.pdf" >}}
+{{< tab "signed.pdf" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-barcode-e-signatures/sample.pdf)
+`signed.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-barcode-e-signatures/signed.pdf) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "search-barcodes-with-filters.txt" >}}  
+```text
+Found 1 matching barcode signature(s)
+Page 1: Code128 barcode '123456789012'
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-barcode-e-signatures/search_barcodes_with_filters/search-barcodes-with-filters.txt)
 {{< /tab >}}
 {{< /tabs >}}
 

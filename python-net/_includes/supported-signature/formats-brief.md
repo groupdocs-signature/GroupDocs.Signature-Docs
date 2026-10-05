@@ -25,8 +25,8 @@ GeekdocHidden: true
 | [PPSM](https://docs.fileformat.com/presentation/ppsm/)       | Macro‑Enabled Slide Show (PPSM)            | ✅      |         |           | ✅     | ✅       | ✅      | ✅     | ✅     |
 | [PPSX](https://docs.fileformat.com/presentation/ppsx/)       | Slide Show (PPSX)                          | ✅      |         |           | ✅     | ✅       | ✅      | ✅     | ✅     |
 | [PPT](https://docs.fileformat.com/presentation/ppt/)         | PowerPoint 97‑2003 Presentation (PPT)      | ✅      |         |           | ✅     | ✅       | ✅      | ✅     | ✅     |
-| [PPTM](https://docs.fileformat.com/presentation/pptm/)       | Macro‑Enabled Presentation (PPTM)          | ✅      |         |           | ✅     | ✅       | ✅      | ✅     | ✅     |
-| [PPTX](https://docs.fileformat.com/presentation/pptx/)       | Presentation (PPTX)                        | ✅      |         |           | ✅     | ✅       | ✅      | ✅     | ✅     |
+| [PPTM](https://docs.fileformat.com/presentation/pptm/)       | Macro‑Enabled Presentation (PPTM)          | ✅      | ✅      |           | ✅     | ✅       | ✅      | ✅     | ✅     |
+| [PPTX](https://docs.fileformat.com/presentation/pptx/)       | Presentation (PPTX)                        | ✅      | ✅      |           | ✅     | ✅       | ✅      | ✅     | ✅     |
 | [ODS](https://docs.fileformat.com/spreadsheet/ods/)         | OpenDocument Spreadsheet                   | ✅      | ✅      | ✅        | ✅     | ✅       | ✅      | ✅     | ✅     |
 | [OTS](https://docs.fileformat.com/spreadsheet/ots/)         | ODS Template (OTS)                         | ✅      | ✅      | ✅        | ✅     | ✅       | ✅      | ✅     | ✅     |
 | [XLSX](https://docs.fileformat.com/spreadsheet/xlsx/)       | Microsoft Excel Worksheet (XLSX)           | ✅      | ✅      | ✅        | ✅     | ✅       | ✅      | ✅     | ✅     |
@@ -36,4 +36,10 @@ GeekdocHidden: true
 | [XLTX](https://docs.fileformat.com/spreadsheet/xltx/)       | Excel Template (XLTX)                      | ✅      | ✅      | ✅        | ✅     | ✅       | ✅      | ✅     | ✅     |
 | [XLTM](https://docs.fileformat.com/spreadsheet/xltm/)       | Macro‑Enabled Template (XLTM)              | ✅      | ✅      | ✅        | ✅     | ✅       | ✅      | ✅     | ✅     |
 | [DOC](https://docs.fileformat.com/word-processing/doc/)     | Word 97‑2003 Document (DOC)                | ✅      | ✅      | ✅        | ✅     | ✅       | ✅      | ✅     | ✅     |
-| [DOCM](https://docs.fileformat.com/word-processing/docm/)   | Macro‑Enabled Document (DOCM)              | ✅      | ✅      | ✅        | ✅     |
+| [DOCM](https://docs.fileformat.com/word-processing/docm/)   | Macro‑Enabled Document (DOCM)              | ✅      | ✅      | ✅        | ✅     | ✅       | ✅      | ✅     | ✅     |
+| [DOCX](https://docs.fileformat.com/word-processing/docx/)   | Word Document (DOCX)                       | ✅      | ✅      | ✅        | ✅     | ✅       | ✅      | ✅     | ✅     |
+| [DOT](https://docs.fileformat.com/word-processing/dot/)     | Word 97‑2003 Template (DOT)                | ✅      | ✅      | ✅        | ✅     | ✅       | ✅      | ✅     | ✅     |
+| [DOTM](https://docs.fileformat.com/word-processing/dotm/)   | Macro‑Enabled Template (DOTM)              | ✅      | ✅      | ✅        | ✅     | ✅       | ✅      | ✅     | ✅     |
+| [DOTX](https://docs.fileformat.com/word-processing/dotx/)   | Word Template (DOTX)                       | ✅      | ✅      | ✅        | ✅     | ✅       | ✅      | ✅     | ✅     |
+| [ODT](https://docs.fileformat.com/word-processing/odt/)     | OpenDocument Text (ODT)                    | ✅      | ✅      |           | ✅     | ✅       | ✅      | ✅     | ✅     |
+| [OTT](https://docs.fileformat.com/word-processing/ott/)     | OpenDocument Text Template (OTT)           | ✅      |         |           | ✅     | ✅       | ✅      | ✅     | ✅     |

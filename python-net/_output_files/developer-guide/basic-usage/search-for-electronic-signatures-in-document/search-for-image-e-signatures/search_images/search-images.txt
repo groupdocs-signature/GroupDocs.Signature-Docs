@@ -1,0 +1,2 @@
+Found 1 image signature(s)
+Page 1: 14552 bytes at (50, 415), size 150x50

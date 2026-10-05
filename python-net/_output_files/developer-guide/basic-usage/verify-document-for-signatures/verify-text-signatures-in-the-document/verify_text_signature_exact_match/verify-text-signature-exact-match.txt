@@ -1,0 +1,2 @@
+Document is valid: True
+Verified NATIVE text signature 'John Smith'

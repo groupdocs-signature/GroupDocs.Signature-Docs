@@ -27,44 +27,53 @@ structuredData:
 Here's a simple example showing how to add a text signature to a document using Python:
 
 ```python
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
 from groupdocs.signature.options import TextSignOptions
-import groupdocs.signature.domain as gsd
-import sys 
-import os
+from groupdocs.signature.domain import SignatureFont
+from groupdocs.pydrawing import Color
 
-def run():
-    with signature.Signature("./sample.pdf") as sign:
+
+def sign_with_text():
+    with Signature("sample.pdf") as signature:
         # Create text signature options
-        text_options = TextSignOptions("John Smith")
-        
-        # Set text signature position
-        text_options.left = 100
-        text_options.top = 100
-        
-        # Set text signature font
-        text_options.font = gsd.SignatureFont()
-        text_options.font.size = 20
-        text_options.font.family_name = "Arial"
-        text_options.font.bold = True
-        text_options.font.color = gsd.Color.BLUE
-        
-        # Sign document
-        sign.sign("./SampleSigned.pdf", text_options)
+        options = TextSignOptions("John Smith")
+
+        # Set text signature position and size
+        options.left = 100
+        options.top = 100
+        options.width = 200
+        options.height = 50
+
+        # Set text signature font and color
+        font = SignatureFont()
+        font.family_name = "Arial"
+        font.size = 20
+        font.bold = True
+        options.font = font
+        options.fore_color = Color.blue
+
+        # Sign the document and save the result
+        result = signature.sign("signed.pdf", options)
+        print(f"Signed with {len(result.succeeded)} signature(s)")
+
+
+if __name__ == "__main__":
+    sign_with_text()
 ```
 
 ## Supported Signature Types
 
 The following articles contain detailed examples of how to eSign documents with each supported signature type:
 
-1. [Text Signatures](esign-document-with-text-signature.md) - Add text-based signatures with customizable fonts and styles
-2. [Image Signatures](esign-document-with-image-signature.md) - Insert image-based signatures from files or streams
-3. [Digital Signatures](esign-document-with-digital-signature.md) - Apply secure digital signatures using certificates
-4. [Barcode Signatures](esign-document-with-barcode-signature.md) - Add various types of barcodes as signatures
-5. [QR-Code Signatures](esign-document-with-qr-code-signature.md) - Insert QR codes with custom data
-6. [Stamp Signatures](esign-document-with-stamp-signature.md) - Apply stamp-like signatures with custom appearance
-7. [Form Field Signatures](esign-document-with-form-field-signature.md) - Sign form fields in documents
-8. [Metadata Signatures](esign-document-with-metadata-signature.md) - Add metadata information as signatures
+1. [Text Signatures]({{< ref "signature/python-net/developer-guide/basic-usage/electronic-signature-types/esign-document-with-text-signature.md" >}}) - Add text-based signatures with customizable fonts and styles
+2. [Image Signatures]({{< ref "signature/python-net/developer-guide/basic-usage/electronic-signature-types/esign-document-with-image-signature.md" >}}) - Insert image-based signatures from files or streams
+3. [Digital Signatures]({{< ref "signature/python-net/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature.md" >}}) - Apply secure digital signatures using certificates
+4. [Barcode Signatures]({{< ref "signature/python-net/developer-guide/basic-usage/electronic-signature-types/esign-document-with-barcode-signature.md" >}}) - Add various types of barcodes as signatures
+5. [QR-Code Signatures]({{< ref "signature/python-net/developer-guide/basic-usage/electronic-signature-types/esign-document-with-qr-code-signature.md" >}}) - Insert QR codes with custom data
+6. [Stamp Signatures]({{< ref "signature/python-net/developer-guide/basic-usage/electronic-signature-types/esign-document-with-stamp-signature.md" >}}) - Apply stamp-like signatures with custom appearance
+7. [Form Field Signatures]({{< ref "signature/python-net/developer-guide/basic-usage/electronic-signature-types/esign-document-with-form-field-signature.md" >}}) - Add form fields to PDF documents and fill existing ones
+8. [Metadata Signatures]({{< ref "signature/python-net/developer-guide/basic-usage/electronic-signature-types/esign-document-with-metadata-signature/_index.md" >}}) - Add metadata information as signatures
+9. [Multiple Signatures]({{< ref "signature/python-net/developer-guide/basic-usage/electronic-signature-types/esign-document-with-multiple-signatures.md" >}}) - Sign a document with several signatures of different types at once
 
 Each signature type supports various customization options and can be used in combination with other signature types to create complex document signing solutions.
 

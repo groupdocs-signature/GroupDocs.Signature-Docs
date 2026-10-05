@@ -1,0 +1,2 @@
+Latin signature verified: True (1 match)
+CJK signature verified: True (1 match)

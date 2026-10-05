@@ -55,97 +55,110 @@ Here are the steps to eSign a document with the QR code signature:
 
 The code snippet below demonstrates how to sign a PDF document with the QR code signature using Python:
 
-{{< tabs "example-1" >}}
+{{< tabs "sign_with_qr_code_signature" >}}
 {{< tab "Python" >}}
-
 ```python
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
 from groupdocs.signature.options import QrCodeSignOptions
 from groupdocs.signature.domain import QrCodeTypes
-import groupdocs.signature.domain as gsd
-import sys 
-import os
 
-def run():
-    with signature.Signature("./sample.pdf") as sign:
-        # Create QR code signature options
-        options = QrCodeSignOptions()
-        
-        # Set QR code text
-        options.text = "John Smith"
-        
-        # Set QR code type
+
+def sign_with_qr_code_signature():
+    with Signature("sample.pdf") as signature:
+        # Create QR code signature options with the text to encode
+        options = QrCodeSignOptions("John Smith")
+
+        # Set the QR code type
         options.encode_type = QrCodeTypes.QR
-        
-        # Set QR code position
+
+        # Set QR code position and size
         options.left = 100
-        options.top = 100
-        
-        # Set QR code size
+        options.top = 400
         options.width = 100
         options.height = 100
-        
-        # Set QR code colors
-        options.foreground_color = gsd.Color.BLUE
-        options.background_color = gsd.Color.WHITE
-        
-        # Sign document
-        sign.sign("./SampleSigned.pdf", options)
-```
 
+        # Sign the document and save the result
+        result = signature.sign("signed_qr_code.pdf", options)
+        print(f"Signed with {len(result.succeeded)} QR code signature(s)")
+
+
+if __name__ == "__main__":
+    sign_with_qr_code_signature()
+```
 {{< /tab >}}
 {{< tab "sample.pdf" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-qr-code-signature/sample.pdf)
+`sample.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-qr-code-signature/sample.pdf) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "signed_qr_code.pdf" >}}  
+```text
+Binary file (PDF, 57 KB)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-qr-code-signature/sign_with_qr_code_signature/signed_qr_code.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
+The other QR code types from the table above are set the same way, for example `QrCodeTypes.AZTEC` or `QrCodeTypes.DATA_MATRIX`.
+
 ### Advanced QR Code Options
 
-Here's an example showing how to create a more complex QR code signature with additional customization:
+Here's an example showing how to create a more complex QR code signature with additional customization: alignment and margins, module color, background and border:
 
-{{< tabs "example-2" >}}
+{{< tabs "sign_with_qr_code_signature_advanced" >}}
 {{< tab "Python" >}}
-
 ```python
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
 from groupdocs.signature.options import QrCodeSignOptions
-from groupdocs.signature.domain import QrCodeTypes
-import groupdocs.signature.domain as gsd
-import sys 
-import os
+from groupdocs.signature.domain import (
+    Background, Border, DashStyle, HorizontalAlignment, Padding,
+    QrCodeTypes, VerticalAlignment)
+from groupdocs.pydrawing import Color
 
-def run():
-    with signature.Signature("./sample.pdf") as sign:
-        # Create QR code options
-        options = QrCodeSignOptions("https://www.example.com/verify-document")
-        
-        # Setup QR code encoding type
-        options.encode_type = QrCodeTypes.QR
-        
-        # Set signature position and size
-        options.left = 100
-        options.top = 100
-        options.width = 200
-        options.height = 200
-        
-        # Set QR code appearance
-        options.foreground_color = gsd.Color.BLUE
-        options.background_color = gsd.Color.WHITE
-        
-        # Set QR code error correction level (L, M, Q, H)
-        options.error_correction_level = gsd.QrCodeErrorCorrectionLevel.H
-        
-        # Sign document
-        sign.sign("./SampleSigned.pdf", options)
+
+def sign_with_qr_code_signature_advanced():
+    with Signature("sample.pdf") as signature:
+        # Pass the text and the QR code type to the constructor
+        options = QrCodeSignOptions("https://www.example.com/verify-document", QrCodeTypes.QR)
+
+        # Put the QR code in the bottom right corner of the page
+        options.width = 120
+        options.height = 120
+        options.horizontal_alignment = HorizontalAlignment.RIGHT
+        options.vertical_alignment = VerticalAlignment.BOTTOM
+        options.margin = Padding(right=40, bottom=60)
+
+        # Module color, background, and a dotted border with some space inside
+        options.fore_color = Color.dark_blue
+        background = Background()
+        background.color = Color.light_yellow
+        options.background = background
+        border = Border()
+        border.color = Color.dark_blue
+        border.dash_style = DashStyle.DOT
+        border.weight = 2
+        border.visible = True
+        options.border = border
+        options.inner_margins = Padding(4)
+
+        result = signature.sign("signed_qr_code_advanced.pdf", options)
+        print(f"Signed with {len(result.succeeded)} QR code signature(s)")
+
+
+if __name__ == "__main__":
+    sign_with_qr_code_signature_advanced()
 ```
-
 {{< /tab >}}
 {{< tab "sample.pdf" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-qr-code-signature/sample.pdf)
+`sample.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-qr-code-signature/sample.pdf) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "signed_qr_code_advanced.pdf" >}}  
+```text
+Binary file (PDF, 102 KB)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-qr-code-signature/sign_with_qr_code_signature_advanced/signed_qr_code_advanced.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 

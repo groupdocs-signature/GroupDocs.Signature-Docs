@@ -3,23 +3,12 @@ id: supported-file-formats
 url: signature/python-net/supported-file-formats
 title: Supported File Formats
 weight: 3
-description: "GroupDocs.Signature for Python via .NET supports DOCX, DOCM, DOC, DOT, DOTM, XLS, XLSX, PDF, PPT, JPG, PNG, HTML, EML and many more formats."
-keywords: DOCX, DOCM, DOC, DOT, DOTM, XLS, XLSX, PDF, PPT, JPG, PNG, HTML, EML, Python signature formats
+description: "GroupDocs.Signature for Python via .NET supports DOCX, DOCM, DOC, DOT, DOTM, ODT, XLS, XLSX, ODS, PDF, PPT, PPTX, JPG, PNG, TIFF and many more formats."
+keywords: DOCX, DOCM, DOC, DOT, DOTM, ODT, XLS, XLSX, ODS, PDF, PPT, PPTX, JPG, PNG, TIFF, Python signature formats
 productName: GroupDocs.Signature for Python via .NET
 hideChildren: False
 ---
-The following table indicates the file formats that GroupDocs.Signature for Python via .NET can work with. Here's a simple example of how to check if a file format is supported:
-
-```python
-import groupdocs.signature as signature
-
-# Check if file format is supported
-file_path = "document.pdf"
-if signature.FileType.from_extension(file_path).is_supported():
-    print(f"File format {file_path} is supported")
-else:
-    print(f"File format {file_path} is not supported")
-```
+The following table lists the file formats that GroupDocs.Signature for Python via .NET works with, and the signature types each format supports.
 
 {{< table-filter placeholder="Start typing to find file format" forumUrl="https://forum.groupdocs.com/c/signature/11">}}
 
@@ -27,37 +16,44 @@ else:
 {{< include file="/signature/python-net/_includes/supported-signature/formats-brief.md" type="page" >}}
 
 
-## Example: Working with Different File Formats
+## Get the Supported File Types in Code
 
-Here's an example of how to work with different file formats in Python:
+`FileType.get_supported_file_types()` returns every file type that the installed version can open. To check a single file, pass its extension to `FileType.from_extension`, which returns `FileType.UNKNOWN` for an extension the library does not support:
 
 ```python
-import groupdocs.signature as signature
+import os
 
-def sign_document(input_path, output_path, signature_type="text"):
-    # Initialize signature handler
-    signature_handler = signature.Signature(input_path)
-    
-    if signature_type == "text":
-        # Create text signature options
-        options = signature.TextSignOptions("John Smith")
-        options.set_left(100)
-        options.set_top(100)
-    elif signature_type == "image":
-        # Create image signature options
-        options = signature.ImageSignOptions("signature.png")
-        options.set_left(100)
-        options.set_top(100)
-    elif signature_type == "digital":
-        # Create digital signature options
-        options = signature.DigitalSignOptions("certificate.pfx", "password")
-    
-    # Sign document
-    signature_handler.sign(output_path, options)
-    print(f"Document signed successfully: {output_path}")
+from groupdocs.signature.domain import FileType
 
-# Example usage
-sign_document("document.pdf", "signed.pdf", "text")
-sign_document("document.docx", "signed.docx", "image")
-sign_document("document.xlsx", "signed.xlsx", "digital")
+# Every file type the installed version can open
+for file_type in FileType.get_supported_file_types():
+    print(f"{file_type.extension}: {file_type.file_format}")
+
+# Check whether one file is supported
+extension = os.path.splitext("contract.pdf")[1]
+if FileType.from_extension(extension) == FileType.UNKNOWN:
+    print(f"{extension} files are not supported")
+else:
+    print(f"{extension} files are supported")
+```
+
+## Example: Working with Different File Formats
+
+The same code signs every supported format; the library detects the format from the file:
+
+```python
+import os
+
+from groupdocs.signature import Signature
+from groupdocs.signature.options import TextSignOptions
+
+# The same code signs every supported format
+for source in ("sample.pdf", "sample.docx", "sample.xlsx"):
+    name, extension = os.path.splitext(source)
+    with Signature(source) as signature:
+        options = TextSignOptions("John Smith")
+        options.left = 100
+        options.top = 100
+        result = signature.sign(f"{name}_signed{extension}", options)
+    print(f"{source}: {len(result.succeeded)} signature(s) added")
 ```

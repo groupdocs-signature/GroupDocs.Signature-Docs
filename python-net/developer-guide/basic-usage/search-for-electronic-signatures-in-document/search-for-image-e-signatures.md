@@ -39,64 +39,106 @@ An image signature is a graphical element that can be added to a document to rep
 
 ## How to Search for Image Signatures
 
-The [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/) class provides the [Search](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/search/) method which allows you to search for image signatures in documents. Here's how to use it:
+The [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/) class provides the [search](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/search/) method which allows you to search for image signatures in documents. Here's how to use it:
 
 1. Create a new instance of the [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/) class and pass the source document path as a parameter.
 2. Create an instance of [ImageSearchOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/imagesearchoptions/) class.
-3. Call the [Search](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/search/) method of the [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/) class instance and pass the search options to it.
-4. Process the search results.
+3. Call the [search](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/search/) method of the [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/) class instance and pass a list with the search options to it.
+4. Process the search results: the `signatures` property of the returned [SearchResult](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/searchresult/) holds the found [ImageSignature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/imagesignature/) objects.
 
 Here's an example of how to search for image signatures in a document:
 
+{{< tabs "search_images" >}}
+{{< tab "Python" >}}
 ```python
 from groupdocs.signature import Signature
 from groupdocs.signature.options import ImageSearchOptions
-from groupdocs.signature.domain import ImageSignature
 
-# Initialize Signature with input document
-with Signature("sample.pdf") as signature:
-    # Create search options
-    search_options = ImageSearchOptions()
-    
-    # Search for signatures
-    result = signature.search(search_options)
-    
-    # Process found signatures
-    print(f"Found {len(result)} image signatures")
-    for image_signature in result:
-        print(f"Page: {image_signature.page_number}")
-        print(f"Position: X={image_signature.left}, Y={image_signature.top}")
-        print(f"Size: Width={image_signature.width}, Height={image_signature.height}")
+
+def search_images():
+    with Signature("signed.pdf") as signature:
+        result = signature.search([ImageSearchOptions()])
+
+        print(f"Found {len(result.signatures)} image signature(s)")
+        for image in result.signatures:
+            print(f"Page {image.page_number}: {image.size} bytes at ({image.left}, {image.top}), "
+                  f"size {image.width}x{image.height}")
+
+
+if __name__ == "__main__":
+    search_images()
 ```
+{{< /tab >}}
+{{< tab "signed.pdf" >}}
+{{< tab-text >}}
+`signed.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-image-e-signatures/signed.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "search-images.txt" >}}  
+```text
+Found 1 image signature(s)
+Page 1: 14552 bytes at (50, 415), size 150x50
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-image-e-signatures/search_images/search-images.txt)
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Advanced Search Options
 
-You can customize the search process by setting specific options:
+You can customize the search process with the properties of [ImageSearchOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/imagesearchoptions/):
 
+- `min_content_size` and `max_content_size` limit the size of the image data, in bytes;
+- `return_content` returns the image data in the `content` property of each found signature, and `return_content_type` converts it to the given [FileType](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/filetype/);
+- `all_pages` and `page_number` search a single page instead of the whole document (page numbers start at 1).
+
+This example saves every image signature found on the first page to a PNG file:
+
+{{< tabs "extract_image_signatures" >}}
+{{< tab "Python" >}}
 ```python
 from groupdocs.signature import Signature
+from groupdocs.signature.domain import FileType
 from groupdocs.signature.options import ImageSearchOptions
-from groupdocs.signature.domain import ImageSignature
 
-# Initialize Signature with input document
-with Signature("sample.pdf") as signature:
-    # Create search options
-    search_options = ImageSearchOptions()
-    
-    # Set search criteria
-    search_options.page_number = 1  # Search on specific page
-    search_options.all_pages = False  # Search only on specified page
-    
-    # Search for signatures
-    result = signature.search(search_options)
-    
-    # Process found signatures
-    print(f"Found {len(result)} image signatures")
-    for image_signature in result:
-        print(f"Page: {image_signature.page_number}")
-        print(f"Position: X={image_signature.left}, Y={image_signature.top}")
-        print(f"Size: Width={image_signature.width}, Height={image_signature.height}")
+
+def extract_image_signatures():
+    with Signature("signed.pdf") as signature:
+        options = ImageSearchOptions()
+        # Search the first page only
+        options.all_pages = False
+        options.page_number = 1
+        # Skip images smaller than 1 KB
+        options.min_content_size = 1024
+        # Return the image data as PNG
+        options.return_content = True
+        options.return_content_type = FileType.PNG
+
+        result = signature.search([options])
+
+        print(f"Found {len(result.signatures)} matching image signature(s)")
+        for number, image in enumerate(result.signatures, start=1):
+            file_name = f"image_signature_{number}.png"
+            with open(file_name, "wb") as output:
+                output.write(image.content)
+            print(f"Saved {file_name} ({len(image.content)} bytes)")
+
+
+if __name__ == "__main__":
+    extract_image_signatures()
 ```
+{{< /tab >}}
+{{< tab "signed.pdf" >}}
+{{< tab-text >}}
+`signed.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-image-e-signatures/signed.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "image_signature_1.png" >}}  
+```text
+Binary file (PNG, 14 KB)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-image-e-signatures/extract_image_signatures/image_signature_1.png)
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Additional Resources
 

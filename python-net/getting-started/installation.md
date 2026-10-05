@@ -2,81 +2,125 @@
 id: installation
 url: signature/python-net/installation
 title: Installation
+linkTitle: Installation
 weight: 1
-description: "This guide explains how to install GroupDocs.Signature for Python via .NET to your environment"
-keywords: python signature installation, pip install signature
+description: "Install GroupDocs.Signature for Python via .NET from PyPI, pin it in requirements.txt, or install a pre-downloaded wheel for offline environments — then verify the installation."
+keywords: install, installation, pip, pypi, requirements.txt, offline install, wheel, whl, groupdocs-signature-net, python
 productName: GroupDocs.Signature for Python via .NET
-hideChildren: False 
+hideChildren: False
 toc: True
 ---
-## Install from PyPI
 
-PyPI (Python Package Index) is the easiest way to download and install GroupDocs.Signature for Python. There are several ways to install it in your project.
+GroupDocs.Signature for Python via .NET is distributed as a self-contained wheel that bundles the embedded .NET runtime. A single `py3-none-{platform}` wheel works across Python **3.5 – 3.14** on Windows, Linux, and macOS (Intel and Apple Silicon). Nothing else is needed on Windows; Linux and macOS need a few system packages, listed below.
 
-### Install via pip
+{{< alert style="info" >}}
+Before you install, review the [System Requirements]({{< ref "signature/python-net/system-requirements" >}}). The wheels need Linux with glibc 2.27 or newer, or macOS 12 or newer, and pip 20.3 or newer to install. On Linux, install ICU, fontconfig, `libgdiplus` and the Microsoft core fonts; on macOS, install `mono-libgdiplus`.
+{{< /alert >}}
 
-The simplest way to install GroupDocs.Signature is using pip, Python's package installer:
+## Install Package from PyPI
+
+All packages are hosted at [PyPI](https://pypi.org/project/groupdocs-signature-net/). Install the latest version with `pip`:
+
+{{< tabs "install-from-pypi">}}
+{{< tab "Windows" >}}
+```ps
+py -m pip install groupdocs-signature-net
+```
+{{< /tab >}}
+{{< tab "Linux" >}}
+```bash
+python3 -m pip install groupdocs-signature-net
+```
+{{< /tab >}}
+{{< tab "macOS" >}}
+```bash
+python3 -m pip install groupdocs-signature-net
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+To upgrade an existing installation to the newest release, add the `--upgrade` flag:
 
 ```bash
-pip install groupdocs-signature-net
+python3 -m pip install --upgrade groupdocs-signature-net
 ```
 
-### Install in a Virtual Environment
+{{< alert style="info" >}}
+Using a [virtual environment](https://docs.python.org/3/library/venv.html) is recommended so the package and its dependencies stay isolated from your system Python. See the [Quick Start Guide]({{< ref "signature/python-net/getting-started/quick-start-guide.md" >}}) for the `venv` setup steps.
+{{< /alert >}}
 
-It's recommended to install the package in a virtual environment to avoid conflicts with other Python packages:
+## Add the Package to `requirements.txt`
+
+For reproducible builds, pin the version in your project's `requirements.txt`:
+
+```text
+groupdocs-signature-net==26.10.0
+```
+
+Then install every dependency at once:
 
 ```bash
-# Create a virtual environment
-python -m venv venv
-
-# Activate the virtual environment
-# On Windows:
-venv\Scripts\activate
-# On macOS/Linux:
-source venv/bin/activate
-
-# Install the package
-pip install groupdocs-signature-net
+python3 -m pip install -r requirements.txt
 ```
 
-### Install with Specific Version
+## Install from a Pre-Downloaded Wheel
 
-To install a specific version of the package:
+In environments without access to PyPI (for example, an air-gapped CI runner or a locked-down server), download the wheel for your platform and install it from a local file.
+
+Download the wheel that matches your operating system and CPU architecture from the [GroupDocs.Signature releases](https://releases.groupdocs.com/signature/python-net/) page:
+
+| Platform | Wheel file name ends with | Oldest system |
+| --- | --- | --- |
+| Windows 64-bit | `py3-none-win_amd64.whl` | — |
+| Linux x64 (glibc) | `py3-none-manylinux_2_27_x86_64.whl` | glibc 2.27 (Ubuntu 18.04, Debian 10, RHEL 8) |
+| macOS Apple Silicon (M-series) | `py3-none-macosx_12_0_arm64.whl` | macOS 12 |
+| macOS Intel | `py3-none-macosx_12_0_x86_64.whl` | macOS 12 |
+
+Since 26.10 the file names state the oldest system each wheel runs on, so pip 20.3 or newer refuses an older one up front instead of installing a runtime that cannot start. Wheels up to 26.1 were tagged `manylinux1_x86_64`, `macosx_10_14_x86_64` and `macosx_11_0_arm64`, and included a 32-bit Windows wheel (`win32`); there is no 32-bit wheel any more, so use a 64-bit Python on Windows.
+
+Install the downloaded file with `pip` (replace the file name with the wheel you downloaded):
+
+{{< tabs "install-from-wheel">}}
+{{< tab "Windows (64-bit)" >}}
+```ps
+py -m pip install .\groupdocs_signature_net-26.10.0-py3-none-win_amd64.whl
+```
+{{< /tab >}}
+{{< tab "Linux (glibc)" >}}
+```bash
+python3 -m pip install ./groupdocs_signature_net-26.10.0-py3-none-manylinux_2_27_x86_64.whl
+```
+{{< /tab >}}
+{{< tab "macOS (Apple Silicon)" >}}
+```bash
+python3 -m pip install ./groupdocs_signature_net-26.10.0-py3-none-macosx_12_0_arm64.whl
+```
+{{< /tab >}}
+{{< tab "macOS (Intel)" >}}
+```bash
+python3 -m pip install ./groupdocs_signature_net-26.10.0-py3-none-macosx_12_0_x86_64.whl
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+Name the wheel file explicitly: PowerShell does not expand a `*` wildcard for a native command, so `pip install groupdocs_signature_net-*.whl` fails there.
+
+## Verify the Installation
+
+Confirm the package is installed and importable:
 
 ```bash
-pip install groupdocs-signature-net==25.4.0
+python3 -c "from groupdocs.signature import Signature; print('GroupDocs.Signature is ready')"
 ```
 
-## Install from Wheel File
-
-You can also install GroupDocs.Signature using a wheel file downloaded from the [Downloads section](https://downloads.groupdocs.com/signature/python-net):
-
-1. Download the appropriate wheel file for your Python version and system architecture
-2. Install using pip:
+You can also check the installed version with `pip`:
 
 ```bash
-pip install path/to/groupdocs_signature_net-25.4.0-py3-none-any.whl
-```
-  
-## Verify Installation
-
-To verify that the installation was successful, you can run this Python code:
-
-```python
-import groupdocs.signature as signature
-
-# Create an instance of Signature class
-signature = signature.Signature("sample.pdf")
-
-# If no errors occur, the installation was successful
-print("GroupDocs.Signature installed successfully!")
+python3 -m pip show groupdocs-signature-net
 ```
 
-## System Requirements
+## Next Steps
 
-Make sure your system meets the following requirements:
-- Python 3.6 or later
-- .NET Framework 4.7.2 or later
-- Windows, macOS, or Linux operating system
-
-For detailed system requirements, please refer to the [System Requirements](system-requirements.md) page.
+- Follow the [Quick Start Guide]({{< ref "signature/python-net/getting-started/quick-start-guide.md" >}}) to sign your first document.
+- Clone the [examples repository](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Python-via-.NET) and read [How to Run Examples]({{< ref "signature/python-net/getting-started/how-to-run-examples.md" >}}).
+- Set up a [license]({{< ref "signature/python-net/licensing" >}}) to remove the evaluation limitations.

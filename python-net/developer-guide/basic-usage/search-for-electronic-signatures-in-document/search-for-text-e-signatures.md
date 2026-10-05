@@ -32,100 +32,96 @@ Here are the steps to search for Text e-signatures using GroupDocs.Signature API
 
 * Create a new instance of the [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature) class and pass the source document path as a constructor parameter.
 * Instantiate the [TextSearchOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/textsearchoptions) object according to your requirements and specify additional search options (if needed).
-* Call the [search](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/search) method of the [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature) class instance and pass the [TextSearchOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/textsearchoptions) to it.
+* Call the [search](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/search) method of the [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature) class instance and pass a list with the [TextSearchOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/textsearchoptions) to it. The `signatures` property of the returned [SearchResult](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/searchresult) holds the found [TextSignature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/textsignature) objects.
 
-This example shows how to search for Text e-signatures in a document using Python:
+This example shows how to search for Text e-signatures in a document using Python. The `signature_implementation` property of each signature tells how it was added to the document: as page content (`NATIVE`), an annotation, a form field and so on.
 
-{{< tabs "example-1" >}}
+{{< tabs "search_text" >}}
 {{< tab "Python" >}}
-
 ```python
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
 from groupdocs.signature.options import TextSearchOptions
-from groupdocs.signature.domain import TextMatchType
 
-# Initialize signature
-with signature.Signature("sample.pdf") as sign:
-    # Setup search options
-    search_options = TextSearchOptions()
-    
-    # Search only page with specified number (None for all pages)
-    search_options.page_number = None
-    
-    # Specify as True to search all pages of a document
-    search_options.all_pages = True
-    
-    # Specify text to search
-    search_options.text = "JS_"
-    
-    # Specify text match type
-    search_options.match_type = TextMatchType.CONTAINS
-    
-    # Search document
-    signatures = sign.search(search_options)
-    
-    # Output signatures
-    for text_signature in signatures:
-        print(f"Found Text signature: {text_signature.signature_implementation} "
-              f"with text {text_signature.text}.")
-        print(f"Location at {text_signature.left}-{text_signature.top}. "
-              f"Size is {text_signature.width}x{text_signature.height}.")
+
+def search_text():
+    with Signature("signed.pdf") as signature:
+        result = signature.search([TextSearchOptions()])
+
+        print(f"Found {len(result.signatures)} text signature(s)")
+        for text_signature in result.signatures:
+            print(f"{text_signature.signature_implementation.name} text signature '{text_signature.text}' "
+                  f"on page {text_signature.page_number} at ({text_signature.left}, {text_signature.top}), "
+                  f"size {text_signature.width}x{text_signature.height}")
+
+
+if __name__ == "__main__":
+    search_text()
 ```
-
 {{< /tab >}}
-{{< tab "sample.pdf" >}}
+{{< tab "signed.pdf" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-text-e-signatures/sample.pdf)
+`signed.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-text-e-signatures/signed.pdf) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "search-text.txt" >}}  
+```text
+Found 3 text signature(s)
+ANNOTATION text signature 'Approved' on page 1 at (50, 480), size 90x22
+FORM_FIELD text signature 'John Smith' on page 1 at (50, 530), size 190x22
+NATIVE text signature 'John Smith' on page 1 at (50, 379), size 189x30
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-text-e-signatures/search_text/search-text.txt)
 {{< /tab >}}
 {{< /tabs >}}
 
 ### Advanced Search Options
 
-Here's an example showing how to use more advanced search options:
+Here's an example showing how to use more advanced search options: a page to search, the text to match with its [TextMatchType](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/textmatchtype), and the [TextSignatureImplementation](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.domain/textsignatureimplementation) to look for.
 
-{{< tabs "example-2" >}}
+{{< tabs "search_text_with_filters" >}}
 {{< tab "Python" >}}
-
 ```python
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
+from groupdocs.signature.domain import TextMatchType, TextSignatureImplementation
 from groupdocs.signature.options import TextSearchOptions
-from groupdocs.signature.domain import TextMatchType
 
-# Initialize signature
-with signature.Signature("sample.pdf") as sign:
-    # Setup search options
-    search_options = TextSearchOptions()
-    
-    # Search on specific pages
-    search_options.page_number = 1
-    search_options.all_pages = False
-    
-    # Search for text with specific match type
-    search_options.text = "John"
-    search_options.match_type = TextMatchType.EXACT
-    
-    # Search with specific signature implementation
-    search_options.signature_implementation = signature.TextSignatureImplementation.NATIVE
-    
-    # Search document
-    signatures = sign.search(search_options)
-    
-    # Process found signatures
-    for text_signature in signatures:
-        print(f"Found Text signature: {text_signature.text}")
-        print(f"Page number: {text_signature.page_number}")
-        print(f"Position: X={text_signature.left}, Y={text_signature.top}")
-        print(f"Size: {text_signature.width}x{text_signature.height}")
-        print(f"Font: {text_signature.font.family_name}, Size: {text_signature.font.size}")
-        print(f"Color: {text_signature.fore_color}")
+
+def search_text_with_filters():
+    with Signature("signed.pdf") as signature:
+        options = TextSearchOptions()
+        # Search the first page only (page numbers start at 1)
+        options.all_pages = False
+        options.page_number = 1
+        # Return only text signatures that contain "John"...
+        options.text = "John"
+        options.match_type = TextMatchType.CONTAINS
+        # ...and are part of the page content
+        options.signature_implementation = TextSignatureImplementation.NATIVE
+
+        result = signature.search([options])
+
+        print(f"Found {len(result.signatures)} matching text signature(s)")
+        for text_signature in result.signatures:
+            print(f"'{text_signature.text}' on page {text_signature.page_number} "
+                  f"at ({text_signature.left}, {text_signature.top}), "
+                  f"size {text_signature.width}x{text_signature.height}")
+
+
+if __name__ == "__main__":
+    search_text_with_filters()
 ```
-
 {{< /tab >}}
-{{< tab "sample.pdf" >}}
+{{< tab "signed.pdf" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-text-e-signatures/sample.pdf)
+`signed.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-text-e-signatures/signed.pdf) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "search-text-with-filters.txt" >}}  
+```text
+Found 1 matching text signature(s)
+'John Smith' on page 1 at (50, 379), size 189x30
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/search-for-electronic-signatures-in-document/search-for-text-e-signatures/search_text_with_filters/search-text-with-filters.txt)
 {{< /tab >}}
 {{< /tabs >}}
 

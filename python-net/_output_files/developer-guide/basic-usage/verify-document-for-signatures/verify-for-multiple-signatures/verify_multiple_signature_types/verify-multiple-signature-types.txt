@@ -1,0 +1,5 @@
+Document was verified successfully!
+Verified TEXT signature
+Verified BARCODE signature
+Verified QR_CODE signature
+Verified DIGITAL signature

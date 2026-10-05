@@ -1,0 +1,2 @@
+Document is valid: True
+Verified Code128 barcode '123456789012'

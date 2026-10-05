@@ -19,126 +19,198 @@ structuredData:
         name: How to generate previews of signatures with Python 
         description: Get images with signature content of various document types in Python
         steps:
-        - name: Implement delegates to create and release image stream for each signature.
-          text: We don't know how you are going to process and release images, so you need to provide CreatePageStream and ReleasePageStream delegates. 
-        - name: Load particular file with supported type.
-          text: Construct Signature class instance by passing either file path or stream. 
+        - name: Implement functions to create and release image stream for each signature.
+          text: We don't know how you are going to process and release images, so you need to provide create_signature_stream and, optionally, release_signature_stream functions. 
+        - name: Describe the signature.
+          text: Create the sign options of the signature to preview, for example TextSignOptions or QrCodeSignOptions. No document is needed.
         - name: Provide preview options. 
-          text: Set type of result image in PreviewOptions instance.
+          text: Pass the sign options and the functions to a PreviewSignatureOptions instance and set type of result image.
         - name: Get signature images
-          text: Invoke GeneratePreview method passing options and save signature images by method from CreatePageStream delegate.
+          text: Invoke the static Signature.generate_signature_preview method passing options and save signature images by method from create_signature_stream function.
 ---
 ## Overview
 
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/python-net) provides [PreviewOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions) class to specify different options to manage signature preview generation process.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/python-net) provides [PreviewSignatureOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/previewsignatureoptions/) class to generate an image of a signature before it is placed on a document - for example, to show a user what a text, barcode or QR code signature will look like.
 
 Here are the steps to generate signature preview with GroupDocs.Signature:
 
-* Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
-* Instantiate the [PreviewOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions) object with:
-* delegate for each signature stream creation (see event handler [CreatePageStream](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/createpagestream));
-* image preview format - PNG / JPG / BMP,
-* signature numbers to process;
-* custom size of preview images (if needed).
+* Create the sign options that describe the signature, for example [TextSignOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/textsignoptions/) or [QrCodeSignOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/qrcodesignoptions/). No document is needed.
+* Instantiate the [PreviewSignatureOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/previewsignatureoptions/) object with:
+* the sign options;
+* a function that creates the stream for the signature image (see [CreateSignatureStream](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/createsignaturestream/));
+* image preview format - PNG / JPEG / BMP / GIF / SVG (PNG by default),
+* an optional `signature_id` that tells the functions which signature they are handling.
 {{< alert style="info" >}}
-Stream that were created by CreatePageStreamdelegate will be disposed automatically once after generation of preview image. If you need to implement custom image preview stream disposing you have to pass additional argument ReleaseStream to clean up resources.  
+The stream returned by the create function is closed automatically as soon as the signature image is written: a file is closed, and an `io.BytesIO` already holds the complete image. If you need to process the finished image or clean up resources yourself, pass a release function as an additional argument (see [ReleaseSignatureStream](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/releasesignaturestream/)).
 {{< /alert >}}
-* Call GeneratePreview method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [PreviewOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions) to it.
+* Call the static `generate_signature_preview` method of [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature/) class and pass [PreviewSignatureOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/previewsignatureoptions/) to it.
 
-## CreatePageStream delegate implementation
+## CreateSignatureStream delegate implementation
 
-GroupDocs.Signature expects CreatePageStreamdelegate to obtain each signature stream for image preview generation process
-
-```python
-def create_page_stream(page_data):
-    image_name = f"signature-{page_data.page_number}.jpg"
-    image_file_path = os.path.join("GeneratePreviewFolder", image_name)
-    folder = os.path.dirname(image_file_path)
-    if not os.path.exists(folder):
-        os.makedirs(folder)
-    return open(image_file_path, "wb")
-```
-
-## ReleasePageStream delegate implementation
+GroupDocs.Signature calls the create function with the [PreviewSignatureOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/previewsignatureoptions/) object and writes the signature image into the stream it returns: a writable file object, an `io.BytesIO`, or a .NET stream.
 
 ```python
-def release_page_stream(page_data, page_stream):
-    page_stream.close()
-    image_name = f"signature-{page_data.page_number}.jpg"
-    image_file_path = os.path.join("GeneratePreviewFolder", image_name)
-    print(f"Image file {image_file_path} is ready for preview")
+def create_signature_stream(preview_options):
+    # Name the image after the signature_id set on the preview options
+    return open(f"{preview_options.signature_id}.png", "wb")
 ```
 
-## Generate signature preview from file on local disk
+## ReleaseSignatureStream delegate implementation
+
+The release function receives the same preview options and the same object the create function returned. By the time it is called, the image is complete.
 
 ```python
-import os
-import groupdocs.signature as signature
-
-def get_preview():
-    with signature.Signature("sample.pdf") as sign:
-        # create preview options object
-        preview_option = signature.PreviewOptions(create_page_stream)
-        preview_option.preview_format = signature.PreviewOptions.PreviewFormats.JPEG
-        # generate preview
-        sign.generate_preview(preview_option)
-
-def create_page_stream(page_data):
-    image_name = f"signature-{page_data.page_number}.jpg"
-    image_file_path = os.path.join("GeneratePreviewFolder", image_name)
-    folder = os.path.dirname(image_file_path)
-    if not os.path.exists(folder):
-        os.makedirs(folder)
-    return open(image_file_path, "wb")
+def release_signature_stream(preview_options, signature_stream):
+    # signature_stream is the object create_signature_stream returned
+    print(f"Image file {signature_stream.name} is ready for preview")
 ```
 
-## Generate signature preview from stream with custom stream releasing delegate
+## Generate signature preview to an image file
 
+{{< tabs "generate_signature_preview_to_file" >}}
+{{< tab "Python" >}}
 ```python
-import os
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
+from groupdocs.pydrawing import Color
+from groupdocs.signature.domain import SignatureFont
+from groupdocs.signature.options import PreviewSignatureOptions, TextSignOptions
 
-def get_preview():
-    with open("sample.pdf", "rb") as stream:
-        with signature.Signature(stream) as sign:
-            # create preview options object
-            preview_option = signature.PreviewOptions(create_page_stream, release_page_stream)
-            preview_option.preview_format = signature.PreviewOptions.PreviewFormats.JPEG
-            # generate preview
-            sign.generate_preview(preview_option)
 
-def create_page_stream(page_data):
-    image_name = f"signature-{page_data.page_number}.jpg"
-    image_file_path = os.path.join("GeneratePreviewFolder", image_name)
-    folder = os.path.dirname(image_file_path)
-    if not os.path.exists(folder):
-        os.makedirs(folder)
-    return open(image_file_path, "wb")
+def create_signature_stream(preview_options):
+    # Name the image after the signature_id set below
+    return open(f"{preview_options.signature_id}.png", "wb")
 
-def release_page_stream(page_data, page_stream):
-    page_stream.close()
-    image_name = f"signature-{page_data.page_number}.jpg"
-    image_file_path = os.path.join("GeneratePreviewFolder", image_name)
-    print(f"Image file {image_file_path} is ready for preview")
+
+def release_signature_stream(preview_options, signature_stream):
+    print(f"Image file {signature_stream.name} is ready for preview")
+
+
+def generate_signature_preview_to_file():
+    # Describe the signature exactly as you would for signing
+    sign_options = TextSignOptions("John Smith")
+    sign_options.width = 200
+    sign_options.height = 50
+    sign_options.fore_color = Color.dark_blue
+    font = SignatureFont()
+    font.family_name = "Arial"
+    font.size = 24
+    sign_options.font = font
+
+    # Create preview options object
+    preview_options = PreviewSignatureOptions(sign_options, create_signature_stream, release_signature_stream)
+    preview_options.signature_id = "text_signature"
+    preview_options.preview_format = PreviewSignatureOptions.PreviewFormats.PNG
+
+    # Generate preview; no document is involved
+    Signature.generate_signature_preview(preview_options)
+
+
+if __name__ == "__main__":
+    generate_signature_preview_to_file()
 ```
+{{< /tab >}}
+{{< tab "text_signature.png" >}}  
+```text
+Binary file (PNG, 983 bytes)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/generate-signatures-preview/generate_signature_preview_to_file/text_signature.png)
+{{< /tab >}}
+{{< /tabs >}}
 
-## Creating a signature preview with custom Resolution
+## Generate signature preview to a memory stream
 
+The create function can return an `io.BytesIO`. When `generate_signature_preview` returns, the buffer holds the whole image, ready to be stored or sent elsewhere.
+
+{{< tabs "generate_signature_preview_to_memory" >}}
+{{< tab "Python" >}}
 ```python
-import os
-import groupdocs.signature as signature
+import io
 
-# The path to the documents
-file_path = "sample.pdf"
-with signature.Signature(file_path) as sign:
-    resolution = 96
-    # create preview options object
-    # You can reuse create_page_stream and release_page_stream methods from the previous example
-    preview_option = signature.PreviewOptions(create_page_stream, release_page_stream, resolution)
-    preview_option.preview_format = signature.PreviewOptions.PreviewFormats.JPEG
-    # generate preview
-    sign.generate_preview(preview_option)
+from groupdocs.signature import Signature
+from groupdocs.signature.domain import QrCodeTypes
+from groupdocs.signature.options import PreviewSignatureOptions, QrCodeSignOptions
+
+
+def generate_signature_preview_to_memory():
+    image = io.BytesIO()
+
+    def create_signature_stream(preview_options):
+        # Write the image into the buffer instead of a file
+        return image
+
+    sign_options = QrCodeSignOptions("https://www.groupdocs.com/", QrCodeTypes.QR)
+    sign_options.width = 120
+    sign_options.height = 120
+
+    preview_options = PreviewSignatureOptions(sign_options, create_signature_stream)
+    Signature.generate_signature_preview(preview_options)
+
+    data = image.getvalue()
+    is_png = data.startswith(b"\x89PNG")
+    print(f"QR code preview: {len(data)} bytes, PNG image: {is_png}")
+
+
+if __name__ == "__main__":
+    generate_signature_preview_to_memory()
 ```
+{{< /tab >}}
+{{< tab "generate-signature-preview-to-memory.txt" >}}  
+```text
+QR code preview: 918 bytes, PNG image: True
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/generate-signatures-preview/generate_signature_preview_to_memory/generate-signature-preview-to-memory.txt)
+{{< /tab >}}
+{{< /tabs >}}
+
+## Generate previews of several signatures in different formats
+
+One pair of functions can serve any number of previews: `signature_id` tells them which signature they are handling, and `preview_format` chooses the image type. Without a license, the SVG format is available only for Code39 barcodes.
+
+{{< tabs "generate_signature_previews_in_different_formats" >}}
+{{< tab "Python" >}}
+```python
+from groupdocs.signature import Signature
+from groupdocs.signature.domain import BarcodeTypes, QrCodeTypes
+from groupdocs.signature.options import BarcodeSignOptions, PreviewSignatureOptions, QrCodeSignOptions
+
+FORMATS = PreviewSignatureOptions.PreviewFormats
+
+
+def create_signature_stream(preview_options):
+    extension = preview_options.preview_format.name.lower()
+    return open(f"{preview_options.signature_id}.{extension}", "wb")
+
+
+def release_signature_stream(preview_options, signature_stream):
+    print(f"{preview_options.signature_id}: {signature_stream.name}")
+
+
+def generate_signature_previews_in_different_formats():
+    signatures = [
+        ("barcode", BarcodeSignOptions("123456789012", BarcodeTypes.CODE128), FORMATS.JPEG),
+        ("qr_code", QrCodeSignOptions("https://www.groupdocs.com/", QrCodeTypes.QR), FORMATS.GIF),
+        ("barcode_vector", BarcodeSignOptions("GROUPDOCS", BarcodeTypes.CODE39), FORMATS.SVG),
+    ]
+    for signature_id, sign_options, preview_format in signatures:
+        preview_options = PreviewSignatureOptions(sign_options, create_signature_stream, release_signature_stream)
+        preview_options.signature_id = signature_id
+        preview_options.preview_format = preview_format
+        Signature.generate_signature_preview(preview_options)
+
+
+if __name__ == "__main__":
+    generate_signature_previews_in_different_formats()
+```
+{{< /tab >}}
+{{< tab "generate-signature-previews-in-different-formats-outputs.zip" >}}  
+```text
+barcode.jpeg (8 KB)
+barcode_vector.svg (3 KB)
+qr_code.gif (4 KB)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/generate-signatures-preview/generate_signature_previews_in_different_formats/generate-signature-previews-in-different-formats-outputs.zip)
+{{< /tab >}}
+{{< /tabs >}}
 
 
 

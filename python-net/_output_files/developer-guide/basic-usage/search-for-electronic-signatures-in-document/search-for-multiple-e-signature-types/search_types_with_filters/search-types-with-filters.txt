@@ -1,0 +1,4 @@
+Found 3 signature(s)
+BARCODE on page 1: 123456789012
+QR_CODE on page 1: John Smith
+METADATA: Author = John Smith

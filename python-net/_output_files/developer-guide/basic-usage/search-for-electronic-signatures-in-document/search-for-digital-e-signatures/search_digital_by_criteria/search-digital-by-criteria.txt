@@ -1,0 +1,2 @@
+Found 1 matching digital signature(s)
+Signed on 2026-10-05 08:21:06+00:00, comment: 'Approved by John Smith', valid: True

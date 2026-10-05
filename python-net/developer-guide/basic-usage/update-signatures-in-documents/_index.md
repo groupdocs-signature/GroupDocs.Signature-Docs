@@ -21,35 +21,41 @@ structuredData:
         steps:
         - name: Load document with signatures
           text: Create an instance of the Signature class and load the document containing signatures.
-        - name: Create update options
-          text: Configure update options for the specific signature type you want to update.
+        - name: Find signatures
+          text: Call the search method with search options for the signature type you want to update.
         - name: Update signatures
-          text: Call the update method with the configured options to modify existing signatures.
+          text: Change properties of the found signatures and pass them to the update method.
 ---
 
 [**GroupDocs.Signature for Python via .NET**](https://products.groupdocs.com/signature/python-net) provides functionality to update existing signatures in documents. This section demonstrates how to update different types of signatures using Python.
 
 ## Basic Usage Example
 
-Here's a simple example showing how to update signatures in a document:
+Here's a simple example showing how to update signatures in a document: find them with the `search` method, change their properties, and pass them to the `update` method. Like `update` itself, the example changes the document it opens, so it works on a copy:
 
 ```python
-import groupdocs.signature as signature
-from groupdocs.signature.options import TextSignOptions
+import shutil
 
-# Initialize signature
-with signature.Signature("sample_signed.pdf") as sign:
-    # Create update options
-    options = TextSignOptions()
-    options.text = "Updated Signature Text"
-    
-    # Update signatures
-    result = sign.update(options)
-    
-    if result.updated_count > 0:
-        print(f"Updated {result.updated_count} signatures")
+from groupdocs.signature import Signature
+from groupdocs.signature.options import TextSearchOptions
+
+# update() saves the changes into the opened document, so work on a copy
+shutil.copy("signed.docx", "updated.docx")
+
+with Signature("updated.docx") as signature:
+    # Find the text signatures that GroupDocs.Signature added to the document
+    options = TextSearchOptions()
+    options.skip_external = True
+    signatures = signature.search([options]).signatures
+
+    if signatures:
+        # Change a found signature, then pass it to update()
+        text_signature = signatures[0]
+        text_signature.text = "Updated Signature Text"
+        if signature.update(text_signature):
+            print(f"Updated 1 of {len(signatures)} text signature(s)")
     else:
-        print("No signatures were updated")
+        print("No text signatures were found")
 ```
 
 The following articles in this section provide detailed examples for updating specific types of signatures:

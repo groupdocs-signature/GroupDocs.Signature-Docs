@@ -19,25 +19,25 @@ draft: false
 
 ## Getting Started
 
-Container font provisioning is a GroupDocs.Signature requirement for Python via .NET that decides whether a text signature can be applied inside a Linux image at all. `python:3.11-slim` ships zero font files, and the library does not substitute a missing family: it raises, and no document is written. Clearing the font does not help, because the library then requests its own default and fails the same way.
+Container font provisioning is a GroupDocs.Signature requirement for Python via .NET that decides whether a text signature can be applied inside a Linux image at all. A PDF text signature needs the font family it names, and the library does not substitute a missing family: it raises `Font <name> was not found`, and no document is written. Clearing the font does not help, because the library then requests its own default - PDF text and digital signatures default to Times New Roman and Arial - and fails the same way when those are missing.
 
-These four tutorials build the working version in the order a real deployment hits the problems: get the image to run the binding at all, find out which fonts exist, sign with a family that resolves, and verify the result. Every snippet comes from a script that runs end to end in both a fonts image and a fontless one.
+These four tutorials build the working version in the order a real deployment hits the problems: get the image to run the binding at all, find out which fonts exist, sign with a family that resolves, and verify the result. Every Python example on this page is a complete script.
 
 ## What This Tutorial Covers
 
-By the end you will know which two dependency layers a Python signing image needs, why filename-based font detection misleads, how to keep an int out of `SignatureFont.size`, and how to prove a CJK signature survived rather than assuming it.
+By the end you will know which two dependency layers a Python signing image needs, why filename-based font detection misleads, how to pick a family at run time, and what a verification of a CJK signature does and does not prove.
 
 ## Prerequisites
 
-- Python 3.11, matching the `python:3.11-slim` base image; the wheel caps below CPython 3.14
-- `groupdocs-signature-net==26.1`
+- Python 3.6 or newer for the examples (the wheel itself supports 3.5 to 3.14); the images on this page use `python:3.11-slim`
+- `groupdocs-signature-net==26.10.0`, whose Linux wheel needs an x86-64 distribution with glibc 2.27 or newer
 - Docker, to build the two images this page compares
 
 ## Understanding the Problem
 
 ### Why Native Solutions Fall Short
 
-There is no native option here. The document is a PDF, the signature is text rendered into it, and the rendering needs a font family the platform can resolve. A slim Python image has no fonts, no `fontconfig`, and until the .NET dependencies are installed it cannot even import the binding. Nothing about that surfaces as "install fonts" - it surfaces as a signing error deep in a proxy exception.
+There is no native option here. The document is a PDF, the signature is text rendered into it, and the rendering needs a font family the platform can resolve. A slim Python image is missing pieces at two levels. Without ICU the embedded .NET runtime cannot start: `import` succeeds, and the first call aborts the Python process with "Couldn't find a valid ICU package". Without the fonts a signature names, signing raises `GroupDocsSignatureException` with `Font Times New Roman was not found`. Neither message says "install this package".
 
 ### How GroupDocs.Signature Solves This
 
@@ -51,37 +51,36 @@ Which layers a Python signing container needs, and in what order.
 
 ### Step 1: .NET dependencies
 
-The binding runs on .NET, so `libicu` and `libssl1.1` come first. `libssl1.1` is not in bookworm, so it is pulled from a pinned Debian snapshot - the approach the [Running in Docker](https://docs.groupdocs.com/signature/python-net/getting-started/running-in-docker/) guide documents:
+The wheel bundles its own .NET runtime, which needs the distribution's ICU (`libicu-dev`, any version) and `libfontconfig1`. `libgdiplus` is needed for stamp signatures and text-as-image signatures, for barcode, QR code and image signatures with a border or transparency, for any signature on PowerPoint and image files, and for text and stamp signature previews; other text, barcode, QR code, image and digital signatures on PDF documents work without it.
 
 ```dockerfile
-ENV SNAPSHOT_DATE=20220328T000000Z
-RUN echo "deb [trusted=yes] http://snapshot.debian.org/archive/debian/${SNAPSHOT_DATE} bullseye main" \
-        > /etc/apt/sources.list.d/debian-archive.list \
-    && apt-get -o Acquire::Check-Valid-Until=false update \
-    && apt-get install -y --no-install-recommends \
-        libicu67 \
-        libssl1.1 \
-    && apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN apt-get update \
+    && apt-get install -y libicu-dev libfontconfig1 libgdiplus \
+    && rm -rf /var/lib/apt/lists/*
 ```
 
+No `libssl1.1` and no Debian snapshot repository are needed. Versions up to 26.1 required both; 26.10 runs on the ICU and OpenSSL the distribution ships.
+
 ### Step 2: fonts
+
+PDF text and digital signatures use Times New Roman and Arial by default, so the font layer installs the Microsoft core fonts. The package lives in Debian's `contrib` component and asks you to accept a license, so the layer enables the component and pre-accepts the license first - the same commands as on the [System Requirements](/signature/python-net/system-requirements/) page. Metric-compatible substitutes such as `fonts-liberation` are not picked up in place of Times New Roman and Arial, so they do not replace this layer.
 
 The font layer is separate on purpose, so it can be commented out to reproduce the failure:
 
 ```dockerfile
-RUN apt-get update && apt-get install -y --no-install-recommends \
-        fontconfig \
-        fonts-dejavu-core \
-        fonts-liberation \
-        fonts-noto-cjk \
+RUN sed -i '/^Components:/s/main/main contrib/' /etc/apt/sources.list.d/debian.sources \
+    && echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections \
+    && apt-get update \
+    && apt-get install -y ttf-mscorefonts-installer fontconfig \
     && fc-cache -f \
-    && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 ```
 
+Add a CJK font package, such as `fonts-noto-cjk`, to the same layer if you sign East Asian text.
+
 ### Common Issues and Solutions
 
-If the import itself fails, the .NET layer is missing or the snapshot date is unreachable. If the import works and signing fails, it is fonts. Keeping the layers separate is what makes that distinction quick.
+If the process dies on its first call with "Couldn't find a valid ICU package", the ICU layer is missing; do not work around it with `DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1`. If signing raises `Font Times New Roman was not found` or `Font Arial was not found`, it is fonts. If it raises "The type initializer for 'Gdip' threw an exception", the feature you use needs `libgdiplus`. Keeping the layers separate is what makes that distinction quick.
 
 ## Tutorial 2: Find out what the image actually has
 
@@ -91,119 +90,278 @@ How to inventory fonts without depending on a graphics toolkit.
 
 ### Step 1: Implementation
 
+{{< tabs "count_font_files" >}}
+{{< tab "Python" >}}
 ```python
-home = os.path.expanduser("~")
-roots = [
-    "/usr/share/fonts",
-    "/usr/local/share/fonts",
-    os.path.join(home, ".fonts"),
-    os.path.join(home, ".local", "share", "fonts"),
-    "/System/Library/Fonts",
-    "/Library/Fonts",
-]
-windir = os.environ.get("WINDIR")
-if windir:
-    roots.append(os.path.join(windir, "Fonts"))
+import os
+
+FONT_EXTENSIONS = (".ttf", ".otf", ".ttc")
+
+
+def font_roots():
+    home = os.path.expanduser("~")
+    roots = [
+        "/usr/share/fonts",
+        "/usr/local/share/fonts",
+        os.path.join(home, ".fonts"),
+        os.path.join(home, ".local", "share", "fonts"),
+        "/System/Library/Fonts",
+        "/Library/Fonts",
+    ]
+    windir = os.environ.get("WINDIR")
+    if windir:
+        roots.append(os.path.join(windir, "Fonts"))
+    return roots
+
+
+def count_font_files():
+    count = 0
+    for root in font_roots():
+        for _, _, files in os.walk(root):
+            count += sum(1 for name in files if name.lower().endswith(FONT_EXTENSIONS))
+    print(f"Font files found: {count}")
+
+
+if __name__ == "__main__":
+    count_font_files()
 ```
+{{< /tab >}}
+{{< tab "count-font-files.txt" >}}  
+```text
+Font files found: 191
+```
+[Download full output](/signature/python-net/_output_files/use-cases/signing-documents-linux-container-fonts/count_font_files/count-font-files.txt)
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Step 2: Read the number, not the names
 
-A count of zero and a count of 24 need different fixes, which is the whole reason this runs first. What the count cannot tell you is which *families* are available, because file names and family names differ: Debian's `fonts-noto-cjk` installs `NotoSansCJK-Regular.ttc`, whose family is `Noto Sans CJK JP`.
+A count of zero and a count of 24 need different fixes, which is the whole reason this runs first. What the count cannot tell you is which *families* are available, because file names and family names differ, and the library looks fonts up by the names a font declares, never by its file name. On Windows, for example, `times.ttf` holds the family `Times New Roman`: asking for `times` raises `Font times was not found`. Even family names can surprise: the font in `YuGothR.ttc` resolves as `Yu Gothic Regular`, while `Yu Gothic` is not found.
 
 ### Troubleshooting
 
-If `fc-list` is missing inside the container, `fontconfig` was not installed and family lookups are running blind even when font files are present.
+`fc-list : family` inside the container prints the families fontconfig knows about. If `fc-list` is missing, the `fontconfig` package was not installed.
 
 ## Tutorial 3: Resolve a family and sign
 
 ### What You'll Learn
 
-How to pick a font at run time, and the one type detail that wastes an afternoon.
+How to pick a font at run time.
 
 ### Step 1: Probe a single family
 
+{{< tabs "probe_font_family" >}}
+{{< tab "Python" >}}
 ```python
-with signature.Signature(source_path) as sign:
-    options = TextSignOptions()
-    options.text = "probe"
-    options.left = 10
-    options.top = 10
-    options.width = 60
-    options.height = 20
-    font = SignatureFont()
-    font.family_name = family_name
-    font.size = 10.0
-    options.font = font
-    sign.sign(scratch, [options])
-return None
-```
+from groupdocs.signature import GroupDocsSignatureException, Signature
+from groupdocs.signature.domain import SignatureFont
+from groupdocs.signature.options import TextSignOptions
 
-`font.size = 10.0` is not a style choice. The binding maps size to a .NET float and rejects an int with `numeric argument expected, got 'int'`, and since the error appears inside the probe, every candidate looks unusable. I spent an afternoon adding font packages to an image that already had them because of that one literal.
+
+def try_family(source_path, family_name):
+    """Return None when the family can be used, otherwise the reason it cannot."""
+    try:
+        with Signature(source_path) as signature:
+            options = TextSignOptions("probe")
+            options.left = 10
+            options.top = 10
+            options.width = 60
+            options.height = 20
+            font = SignatureFont()
+            font.family_name = family_name
+            font.size = 10
+            options.font = font
+            signature.sign("font_probe.pdf", [options])
+        return None
+    except GroupDocsSignatureException as error:
+        # The first line is the engine's message; the rest is the .NET stack trace
+        return str(error).splitlines()[0]
+
+
+def probe_font_family():
+    for family_name in ("Times New Roman", "No Such Font"):
+        reason = try_family("sample.pdf", family_name)
+        print(f"{family_name}: {'usable' if reason is None else reason}")
+
+
+if __name__ == "__main__":
+    probe_font_family()
+```
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+`sample.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/use-cases/signing-documents-linux-container-fonts/sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "font_probe.pdf" >}}  
+```text
+Binary file (PDF, 123 KB)
+```
+[Download full output](/signature/python-net/_output_files/use-cases/signing-documents-linux-container-fonts/probe_font_family/font_probe.pdf)
+{{< /tab >}}
+{{< /tabs >}}
+
+`font.size` takes an int or a float. Version 26.1 rejected an int with `numeric argument expected, got 'int'`, and since the error appeared inside the probe, every candidate looked unusable; 26.10 accepts both.
 
 ### Step 2: Loop the probe
 
 ```python
-for candidate in candidates:
-    if try_family(source_path, candidate) is None:
-        return candidate
-return None
+def resolve_family(source_path, candidates):
+    for candidate in candidates:
+        if try_family(source_path, candidate) is None:
+            return candidate
+    return None
 ```
+
+The probe answers whether the library can find a family, not whether the family covers your script. That is why the CJK candidate list below contains CJK families only.
 
 ### Step 3: Sign what resolved
 
+{{< tabs "sign_with_resolved_fonts" >}}
+{{< tab "Python" >}}
 ```python
-with signature.Signature(source_path) as sign:
-    options = [build_text_options(LATIN_TEXT, latin_family, 50)]
-    if cjk_family:
-        options.append(build_text_options(CJK_TEXT, cjk_family, 120))
-    result = sign.sign(output_path, options)
-    return len(result.succeeded)
+from groupdocs.signature import GroupDocsSignatureException, Signature
+from groupdocs.signature.domain import SignatureFont
+from groupdocs.signature.options import TextSignOptions
+
+LATIN_TEXT = "John Smith"
+CJK_TEXT = "山田太郎"
+LATIN_CANDIDATES = ["Arial", "Times New Roman", "DejaVu Sans", "Liberation Sans"]
+CJK_CANDIDATES = ["Noto Sans CJK JP", "Noto Sans CJK SC", "MS Gothic", "SimSun", "Microsoft YaHei", "Malgun Gothic"]
+
+
+def build_text_options(text, family_name, top):
+    options = TextSignOptions(text)
+    options.left = 100
+    options.top = top
+    options.width = 200
+    options.height = 40
+    font = SignatureFont()
+    font.family_name = family_name
+    font.size = 14
+    options.font = font
+    return options
+
+
+def try_family(source_path, family_name):
+    try:
+        with Signature(source_path) as signature:
+            signature.sign("font_probe.pdf", [build_text_options("probe", family_name, 10)])
+        return None
+    except GroupDocsSignatureException as error:
+        return str(error).splitlines()[0]
+
+
+def resolve_family(source_path, candidates):
+    for candidate in candidates:
+        if try_family(source_path, candidate) is None:
+            return candidate
+    return None
+
+
+def sign_with_resolved_fonts():
+    latin_family = resolve_family("sample.pdf", LATIN_CANDIDATES)
+    cjk_family = resolve_family("sample.pdf", CJK_CANDIDATES)
+    print(f"Latin family: {latin_family}, CJK family: {cjk_family}")
+    if latin_family is None:
+        print("No usable Latin font: install the Microsoft core fonts")
+        return
+    with Signature("sample.pdf") as signature:
+        options = [build_text_options(LATIN_TEXT, latin_family, 500)]
+        if cjk_family:
+            options.append(build_text_options(CJK_TEXT, cjk_family, 560))
+        result = signature.sign("signed_fonts.pdf", options)
+        print(f"Signatures added: {len(result.succeeded)}")
+
+
+if __name__ == "__main__":
+    sign_with_resolved_fonts()
 ```
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+`sample.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/use-cases/signing-documents-linux-container-fonts/sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "sign-with-resolved-fonts-outputs.zip" >}}  
+```text
+font_probe.pdf (140 KB)
+signed_fonts.pdf (254 KB)
+```
+[Download full output](/signature/python-net/_output_files/use-cases/signing-documents-linux-container-fonts/sign_with_resolved_fonts/sign-with-resolved-fonts-outputs.zip)
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Best Practices
 
-Resolve once at startup and cache both family names. Each probe writes a real PDF, so per-request probing is waste: the Latin list costs up to four writes and the CJK list up to eight, all against a one-page document. Doing that once per process is invisible; doing it per request shows up in latency graphs. Log the resolved families next to the font count; together they explain any later failure without a shell in the container.
+Resolve once at startup and cache both family names. Each probe writes a real PDF, so per-request probing is waste: the Latin list costs up to four writes and the CJK list up to six, all against a one-page document. Doing that once per process is invisible; doing it per request shows up in latency graphs. Log the resolved families next to the font count; together they explain any later failure without a shell in the container.
 
 ## Tutorial 4: Verify instead of assuming
 
 ### What You'll Learn
 
-Why the Python sample verifies rather than searches, and what `match_type` has to do with licensing.
+What a verification proves about the signed document, and what it cannot.
 
 ### Step 1: Implementation
 
+`signed.pdf` is `sample.pdf` signed by the previous example, with a Latin and a CJK text signature.
+
+{{< tabs "verify_text_signatures" >}}
+{{< tab "Python" >}}
 ```python
-with signature.Signature(signed_path) as sign:
-    options = TextVerifyOptions()
-    options.text = expected_text
-    options.match_type = gsd.TextMatchType.CONTAINS
-    options.all_pages = True
-    result = sign.verify(options)
-    return len(result.succeeded)
+from groupdocs.signature import Signature
+from groupdocs.signature.options import TextVerifyOptions
+
+
+def verify_text_signatures():
+    with Signature("signed.pdf") as signature:
+        for label, text in (("Latin", "John Smith"), ("CJK", "山田太郎")):
+            options = TextVerifyOptions(text)
+            options.all_pages = True
+            result = signature.verify(options)
+            print(f"{label} signature verified: {result.is_valid} ({len(result.succeeded)} match)")
+
+
+if __name__ == "__main__":
+    verify_text_signatures()
 ```
+{{< /tab >}}
+{{< tab "signed.pdf" >}}
+{{< tab-text >}}
+`signed.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/use-cases/signing-documents-linux-container-fonts/signed.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "verify-text-signatures.txt" >}}  
+```text
+Latin signature verified: True (1 match)
+CJK signature verified: True (1 match)
+```
+[Download full output](/signature/python-net/_output_files/use-cases/signing-documents-linux-container-fonts/verify_text_signatures/verify-text-signatures.txt)
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Step 2: Read the result honestly
 
-`len(result.succeeded)` above zero means the text is really in the document. A CJK signature written without CJK coverage can render as empty boxes without raising anything at all, so this step is the only one that separates "signed" from "signed correctly".
+`len(result.succeeded)` above zero means a text signature with exactly that text is in the document. It does not mean the text renders: verification compares the signature's text, not the glyphs drawn for it, so it cannot tell a correctly rendered CJK name from one drawn with a font that lacks the glyphs. To see what a reader will see, render the signed page with [generate_preview](/signature/python-net/generate-document-pages-preview/) and look at it.
 
 ### Security Considerations
 
-`CONTAINS` is used rather than an exact match because evaluation mode adds trial text to the page, and an exact match would report a correct document as failed. In production with a licence applied, tighten it if you need the stricter check.
+The example uses the default exact match. Without a license, verification finds no matches at all - the evaluation build reports its own evaluation text in place of your signatures, so no match type helps - and a zero count from an unlicensed run says nothing about the document. Apply a license before you rely on the check.
 
 ### Do I need every font package, or just one?
 
-One is the minimum: `fonts-dejavu-core` makes Latin, Greek and Cyrillic signing work, and without it nothing renders at all. Add `fonts-liberation` when your documents reference Arial or Times New Roman by name, and `fonts-noto-cjk` only if you sign East Asian text, since it is much the largest of the four. `fontconfig` is not optional in any combination.
+For text and digital signatures that keep the default fonts, the Microsoft core fonts are the requirement: the defaults are Times New Roman and Arial, and metric-compatible substitutes are not picked up in their place. If you set `SignatureFont.family_name` to another installed family, that family is enough for the text it covers. Add a CJK font package only if you sign East Asian text. `libfontconfig1` is not optional in any combination.
 
 ## Frequently Asked Questions
 
 **Is Signature for Python actually supported on Linux?**
-The docs list Linux-ready Python packages and omit Signature, but on `groupdocs-signature-net==26.1` this sample signed and verified inside `python:3.11-slim`, CJK included. Test your own version rather than trusting either the list or this page; the behaviour is version-specific.
+Yes. `groupdocs-signature-net` 26.10 ships a `manylinux_2_27_x86_64` wheel for any x86-64 distribution with glibc 2.27 or newer, with ICU and fontconfig installed. See [System Requirements](/signature/python-net/system-requirements/) for the full list.
 
 **Why does every font fail when I know the fonts are installed?**
-Check the size literal first. An int in `SignatureFont.size` raises `numeric argument expected, got 'int'` from inside the probe, which looks exactly like universal font failure. Then check that `fontconfig` is installed.
+Check the names first: the library finds a font by the names it declares, not by its file name, so `times` fails where `Times New Roman` works. Then check that `fontconfig` is installed. The 26.1 trap of an int in `SignatureFont.size` is gone: 26.10 accepts it.
 
 **Can I skip the .NET dependency layer on a different base image?**
-Only if the image already provides `libicu` and an OpenSSL 1.1 compatible library. On `python:3.11-slim` you cannot, and the pinned snapshot in the sample's Dockerfile is the documented way to get `libssl1.1` on bookworm.
+Only if the image already provides ICU and fontconfig. No OpenSSL 1.1 is needed: 26.10 runs on the OpenSSL the distribution ships, so the old pinned Debian snapshot is not needed either.
 
 ## Summary and Next Steps
 

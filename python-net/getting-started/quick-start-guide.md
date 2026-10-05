@@ -1,38 +1,43 @@
 ---
 id: quick-start-guide
 url: signature/python-net/getting-started/quick-start-guide
-title: Quick Start Guide  
-linkTitle: Quick Start Guide    
+title: Quick Start Guide
+linkTitle: Quick Start Guide
 second_title: A simple example of how to use GroupDocs.Signature for Python via .NET
 weight: 2
-keywords: "hello world, example, get started"
-description: "Sign files in any supported format using GroupDocs.Signature for Python via .NET to experience its simplicity and power in Python."
+keywords: quick start, hello world, get started, sign pdf, text signature, search signatures, verify signatures, pip install, venv, virtual environment, GroupDocs.Signature, python
+description: "Set up a virtual environment, install groupdocs-signature-net, and run three minimal examples: sign a PDF with a text signature, search it for signatures, and verify them."
 productName: GroupDocs.Signature for Python via .NET
 hideChildren: False
 toc: True
 ---
 
-This guide provides a quick overview of how to set up and start using GroupDocs.Signature for Python via .NET. This library enables developers to sing documents various file formats (e.g., DOCX, PDF, PNG) with minimal configuration.
+This guide gives a quick overview of how to set up and start using GroupDocs.Signature for Python via .NET. The library adds, finds, verifies, updates and removes electronic signatures in PDF, Word, Excel, PowerPoint, OpenDocument and image files with a few lines of code.
 
 ## Prerequisites
 
 To proceed, make sure you have:
 
-1. **Configured** environment as described in the [System Requirements]({{< ref "signature/python-net/system-requirements" >}}) topic.
-2. **Optionally** you may [Get a Temporary License](https://purchase.groupdocs.com/temporary-license/) to test all the product features. 
+1. A configured environment as described in the [System Requirements]({{< ref "signature/python-net/system-requirements" >}}) topic. On Linux and macOS this includes a few system packages.
+2. Optionally, a [Temporary License](https://purchase.groupdocs.com/temporary-license/) to test all the product features. Without a license the library works in evaluation mode: it processes documents of up to two pages and adds an evaluation line to every page it signs. See [Licensing]({{< ref "signature/python-net/licensing" >}}).
 
 ## Set Up Your Development Environment
 
-For best practices, use a virtual environment to manage dependencies in Python applications. Learn more about virtual environment at [Create and Use Virtual Environments](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#create-and-use-virtual-environments) documentation topic.
+For best practices, use a virtual environment to manage dependencies. Learn more in the [Create and Use Virtual Environments](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#create-and-use-virtual-environments) guide.
 
 ### Create and Activate a Virtual Environment
 
 Create a virtual environment:
 
-{{< tabs "example1">}}
+{{< tabs "create-venv">}}
 {{< tab "Windows" >}}
 ```ps
 py -m venv .venv
+```
+{{< /tab >}}
+{{< tab "Linux" >}}
+```bash
+python3 -m venv .venv
 ```
 {{< /tab >}}
 {{< tab "macOS" >}}
@@ -42,12 +47,17 @@ python3 -m venv .venv
 {{< /tab >}}
 {{< /tabs >}}
 
-Activate a virtual environment:
+Activate it:
 
-{{< tabs "example2">}}
+{{< tabs "activate-venv">}}
 {{< tab "Windows" >}}
 ```ps
 .venv\Scripts\activate
+```
+{{< /tab >}}
+{{< tab "Linux" >}}
+```bash
+source .venv/bin/activate
 ```
 {{< /tab >}}
 {{< tab "macOS" >}}
@@ -57,14 +67,17 @@ source .venv/bin/activate
 {{< /tab >}}
 {{< /tabs >}}
 
-### Install `groupdocs-signature-net` Package
+### Install the `groupdocs-signature-net` Package
 
-After activating the virtual environment, run the following command in your terminal to install the latest version of the package:
-
-{{< tabs "example3">}}
+{{< tabs "install-package">}}
 {{< tab "Windows" >}}
 ```ps
 py -m pip install groupdocs-signature-net
+```
+{{< /tab >}}
+{{< tab "Linux" >}}
+```bash
+python3 -m pip install groupdocs-signature-net
 ```
 {{< /tab >}}
 {{< tab "macOS" >}}
@@ -74,106 +87,171 @@ python3 -m pip install groupdocs-signature-net
 {{< /tab >}}
 {{< /tabs >}}
 
-Ensure the package is installed successfully. You should see the message 
+See [Installation]({{< ref "signature/python-net/getting-started/installation.md" >}}) for pinning a version and for installing without access to PyPI.
 
-```bash
-Successfully installed groupdocs-signature-net-*
-```
+## Example 1: Sign a PDF with a Text Signature
 
-## Example "Hello, world!"
-
-To quickly test the library, let’s sing a PDF file with text signature. You can also download the app that we're going to buid [here](/signature/python-net/_sample_files/getting-started/quick-start-guide/sign_pdf_with_text_signature.zip).
+Open a document, describe the signature with [TextSignOptions](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/textsignoptions/), and save the signed copy.
 
 {{< tabs "sign_pdf_with_text_signature">}}
-{{< tab "sign_pdf.py" >}}  
+{{< tab "Python" >}}
 ```python
-import groupdocs.signature as gs 
-import groupdocs.signature.options as gso 
-import sys 
-import os
+from groupdocs.signature import Signature
+from groupdocs.signature.options import TextSignOptions
+
 
 def sign_pdf_with_text_signature():
-   
-    license = gs.License()
-    license.set_license("./GroupDocs.Signature.PythonViaNET.lic")
-    
-    # The path to the file.
-    sample_pdf = "./sample.pdf"
+    # Open the document; the with-block releases the file when it ends
+    with Signature("sample.pdf") as signature:
+        # A text signature 100 pixels from the left and top edges of the first page
+        options = TextSignOptions("John Smith")
+        options.left = 100
+        options.top = 100
 
-    file_name = os.path.basename("./signed_sample_pdf")
+        # Sign and save the result to a new file; the source stays unchanged
+        result = signature.sign("signed_sample.pdf", options)
+        print(f"Signatures added: {len(result.succeeded)}")
 
-    # The path to the output directory.
-    output_directory = "./out"
-
-    if not os.path.exists(output_directory):
-        os.makedirs(output_directory)
-
-    output_file_path = os.path.join(output_directory, file_name)
-
-    # Sign document with text signature.
-    with gs.Signature(sample_pdf) as signature:
-        text_sign_options = gso.TextSignOptions("Hello world!")
-        signature.sign(output_file_path, text_sign_options)
-
-    print(f"\nSource document signed successfully.\nFile saved at {output_file_path}")
 
 if __name__ == "__main__":
     sign_pdf_with_text_signature()
 ```
 {{< /tab >}}
-{{< tab "sample.pdf" >}}  
+{{< tab "sample.pdf" >}}
 {{< tab-text >}}
-`sample.pdf` is sample file used in this example. Click [here](/signature/python-net/_sample_files/getting-started/quick-start-guide/sample.pdf) to download it.
+`sample.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/getting-started/quick-start-guide/sample.pdf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "signed_sample.pdf" >}}  
-{{< tab-text >}}
-`signed_sample.pdf` is expected output PDF file. Click [here](/signature/python-net/_sample_files/getting-started/quick-start-guide/signed_sample.pdf) to download it.
-{{< /tab-text >}}
+```text
+Binary file (PDF, 125 KB)
+```
+[Download full output](/signature/python-net/_output_files/getting-started/quick-start-guide/sign_pdf_with_text_signature/signed_sample.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
-Your folder tree should look similar to the following directory structure:
+## Example 2: Search a Document for Signatures
+
+Find the signatures a document already carries. `search` takes a list of search options, one per signature type to look for, and returns them in `result.signatures`.
+
+{{< tabs "search_document_for_signatures">}}
+{{< tab "Python" >}}
+```python
+from groupdocs.signature import Signature
+from groupdocs.signature.options import TextSearchOptions
+
+
+def search_document_for_signatures():
+    with Signature("signed.pdf") as signature:
+        # Look for text signatures on every page
+        result = signature.search([TextSearchOptions()])
+        for found in result.signatures:
+            print(f"Text signature '{found.text}' on page {found.page_number}")
+
+
+if __name__ == "__main__":
+    search_document_for_signatures()
+```
+{{< /tab >}}
+{{< tab "signed.pdf" >}}
+{{< tab-text >}}
+`signed.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/getting-started/quick-start-guide/signed.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "search-document-signatures.txt" >}}  
+```text
+Text signature 'John Smith' on page 1
+```
+[Download full output](/signature/python-net/_output_files/getting-started/quick-start-guide/search_document_for_signatures/search-document-signatures.txt)
+{{< /tab >}}
+{{< /tabs >}}
+
+## Example 3: Verify a Signature
+
+Check that a document carries the signature you expect. Verification succeeds when a text signature with exactly this text is found.
+
+{{< tabs "verify_text_signature">}}
+{{< tab "Python" >}}
+```python
+from groupdocs.signature import Signature
+from groupdocs.signature.options import TextVerifyOptions
+
+
+def verify_text_signature():
+    with Signature("signed.pdf") as signature:
+        options = TextVerifyOptions("John Smith")
+        result = signature.verify(options)
+        print(f"Document is signed by John Smith: {result.is_valid}")
+
+
+if __name__ == "__main__":
+    verify_text_signature()
+```
+{{< /tab >}}
+{{< tab "signed.pdf" >}}
+{{< tab-text >}}
+`signed.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/getting-started/quick-start-guide/signed.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "verify-text-signature.txt" >}}  
+```text
+Document is signed by John Smith: True
+```
+[Download full output](/signature/python-net/_output_files/getting-started/quick-start-guide/verify_text_signature/verify-text-signature.txt)
+{{< /tab >}}
+{{< /tabs >}}
+
+## Run the Examples
+
+Save each example to its own `.py` file next to the sample files. Your folder should look similar to this:
 
 ```Directory
 📂 demo-app
- ├──hello_world.py
+ ├──sign_pdf_with_text_signature.py
+ ├──search_document_for_signatures.py
+ ├──verify_text_signature.py
  ├──sample.pdf
- └──GroupDocs.Signature.PythonViaNET.lic (Optionally)
+ └──signed.pdf
 ```
 
-### Run the App
+Run an example from that folder:
 
 {{< tabs "run-the-app">}}
 {{< tab "Windows" >}}
 ```ps
-py hello_world.py
+py sign_pdf_with_text_signature.py
+```
+{{< /tab >}}
+{{< tab "Linux" >}}
+```bash
+python3 sign_pdf_with_text_signature.py
 ```
 {{< /tab >}}
 {{< tab "macOS" >}}
 ```bash
-python3 hello_world.py
+python3 sign_pdf_with_text_signature.py
 ```
 {{< /tab >}}
 {{< /tabs >}}
 
-After running the app you can deactivate virtual environment by executing `deactivate` or closing your shell.
+When you are done, deactivate the virtual environment by running `deactivate` or closing your shell.
 
-### Explanation
+## Apply a License
 
-- `gs.License()`: Creates a license object for the GroupDocs.Signature library.
-- `license.set_license("./GroupDocs.Signature.PythonViaNET.lic")`: Applies the license to avoid evaluation limitations.
-- `sample_pdf = "./sample.pdf"`: Defines the path to the input PDF document.
-- `output_directory = "./out"`: Specifies the directory where the signed file will be saved.
-- `os.makedirs(output_directory)`: Creates the output directory if it doesn't exist.
-- `gs.Signature(sample_pdf)`: Loads the input PDF file for signing.
-- `gso.TextSignOptions("Hello world!")`: Creates text signature options with the specified signature text.
-- `signature.sign(output_file_path, text_sign_options)`: Applies the text signature and saves the signed PDF to the output path.
-- `print(...)`: Prints a confirmation message with the path to the signed document.
+Set the `GROUPDOCS_LIC_PATH` environment variable to the full path of your license file, and the license is applied automatically when `groupdocs.signature` is imported. No code is needed. Alternatively, apply it in code once, before any other call:
+
+```python
+from groupdocs.signature import License
+
+License().set_license("/path/to/GroupDocs.Signature.lic")
+```
+
+The [Licensing]({{< ref "signature/python-net/licensing" >}}) topic covers both ways and the metered license.
 
 ## Next Steps
 
-After completing the basics, explore additional resources to enhance your usage:
-- [Supported File Formats]({{< ref "signature/python-net/supported-file-formats" >}}): Review the full list of supported file types.
-- [Licensing]({{< ref "signature/python-net/licensing" >}}): Check details on licening and evaluation.
-- [Technical Support]({{< ref "signature/python-net/technical-support" >}}): Contact support for assistance if you encounter issues.
+After completing the basics, explore additional resources:
+- [Developer Guide]({{< ref "signature/python-net/developer-guide/_index.md" >}}): runnable examples for every signature type and operation.
+- [Supported File Formats]({{< ref "signature/python-net/supported-file-formats" >}}): review the full list of supported file types.
+- [Licensing]({{< ref "signature/python-net/licensing" >}}): details on licensing and evaluation.
+- [Technical Support]({{< ref "signature/python-net/technical-support" >}}): contact support if you run into issues.

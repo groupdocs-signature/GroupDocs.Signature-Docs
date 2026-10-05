@@ -35,13 +35,17 @@ The picture below shows how a digital signature looks on a PDF document page by 
 * The [password](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/digitalsignoptions/password/) property specifies the certificate password;
 * The [contact](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/digitalsignoptions/contact/), [reason](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/digitalsignoptions/reason/) and [location](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/digitalsignoptions/location/) properties specify additional descriptions;
 * The [visible](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/digitalsignoptions/visible/) property specifies whether the signature should be visible on the document page or not;
-* The [xades_type](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/digitalsignoptions/xades_type/) property defines whether the e-signature should be of an XML Advanced Electronic Signature type.
+* The [xad_es_type](https://reference.groupdocs.com/signature/python-net/groupdocs.signature.options/digitalsignoptions/xad_es_type/) property defines whether the e-signature should be of an XML Advanced Electronic Signature type (supported for spreadsheet documents).
+
+{{< alert style="info" >}}
+Expired and not-yet-valid certificates are rejected: `sign` raises `GroupDocsSignatureException` with a message such as "The signing certificate expired on ...". To sign with such a certificate anyway, set `allow_expired` or `allow_not_yet_valid` to `True`.
+{{< /alert >}}
 
 ### Follow these steps to sign your documents with a digital signature
 
 1. Install the GroupDocs.Signature package using pip:
 ```bash
-pip install groupdocs-signature
+pip install groupdocs-signature-net
 ```
 
 2. Create a new instance of the [Signature](https://reference.groupdocs.com/signature/python-net/groupdocs.signature/signature) class and pass the source document path as a constructor parameter.
@@ -50,138 +54,172 @@ pip install groupdocs-signature
 
 The example below shows how to sign a PDF document with a digital e-signature using Python. We can sign any other supported document format in the same way.
 
-{{< tabs "example-1" >}}
+{{< tabs "sign_with_digital_signature" >}}
 {{< tab "Python" >}}
-
 ```python
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
 from groupdocs.signature.options import DigitalSignOptions
 
-# Initialize signature
-with signature.Signature("sample.pdf") as sign:
-    # Create digital signature options
-    options = DigitalSignOptions("certificate.pfx")
-    
-    # Set certificate password
-    options.password = "1234567890"
-    
-    # Optional: setup image file path
-    options.image_file_path = "sample.jpg"
-    
-    # Set signature position
-    options.left = 100
-    options.top = 100
-    
-    # Sign document
-    sign.sign("sampleSigned.pdf", options)
-```
 
+def sign_with_digital_signature():
+    with Signature("sample.pdf") as signature:
+        # Create digital signature options with the certificate file
+        options = DigitalSignOptions("certificate.pfx")
+
+        # Set the certificate password
+        options.password = "1234567890"
+
+        # Optional: an image that shows the signature on the page
+        options.image_file_path = "signature.jpg"
+
+        # Set signature position
+        options.left = 100
+        options.top = 400
+
+        # Sign the document and save the result
+        result = signature.sign("signed_digital.pdf", options)
+        print(f"Signed with {len(result.succeeded)} digital signature(s)")
+
+
+if __name__ == "__main__":
+    sign_with_digital_signature()
+```
 {{< /tab >}}
 {{< tab "sample.pdf" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/sample.pdf)
+`sample.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/sample.pdf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "sample.jpg" >}}
+{{< tab "certificate.pfx" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [sample.jpg](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/sample.jpg)
+`certificate.pfx` is the sample certificate used in this example (password `1234567890`). Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/certificate.pfx) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "signature.jpg" >}}
+{{< tab-text >}}
+`signature.jpg` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/signature.jpg) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "signed_digital.pdf" >}}  
+```text
+Binary file (PDF, 616 KB)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/sign_with_digital_signature/signed_digital.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
 ### Advanced Digital Signature Options
 
-You can customize the digital signature further with additional options:
+You can customize the digital signature further with additional options: the signature's size on the page, and the contact, reason and location stored in it:
 
-{{< tabs "example-2" >}}
+{{< tabs "sign_with_digital_signature_advanced" >}}
 {{< tab "Python" >}}
-
 ```python
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
 from groupdocs.signature.options import DigitalSignOptions
 
-# Initialize signature
-with signature.Signature("sample.pdf") as sign:
-    # Create digital signature options
-    options = DigitalSignOptions("certificate.pfx")
-    
-    # Set certificate password
-    options.password = "1234567890"
-    
-    # Set signature appearance
-    options.visible = True
-    options.image_file_path = "signature.jpg"
-    
-    # Set signature position and size
-    options.left = 100
-    options.top = 100
-    options.width = 200
-    options.height = 100
-    
-    # Set additional information
-    options.contact = "John Smith"
-    options.reason = "Approval"
-    options.location = "New York"
-    
-    # Set XAdES type
-    options.xades_type = signature.XAdESType.XAdES
-    
-    # Sign document
-    sign.sign("sampleSigned.pdf", options)
-```
 
+def sign_with_digital_signature_advanced():
+    with Signature("sample.pdf") as signature:
+        # Pass the certificate and the appearance image to the constructor
+        options = DigitalSignOptions("certificate.pfx", "signature.jpg")
+        options.password = "1234567890"
+
+        # Show the signature on the page, at this position and size
+        options.visible = True
+        options.left = 100
+        options.top = 400
+        options.width = 200
+        options.height = 100
+
+        # Information stored in the signature
+        options.contact = "John Smith"
+        options.reason = "Approval"
+        options.location = "New York"
+
+        result = signature.sign("signed_digital_advanced.pdf", options)
+        print(f"Signed with {len(result.succeeded)} digital signature(s)")
+
+
+if __name__ == "__main__":
+    sign_with_digital_signature_advanced()
+```
 {{< /tab >}}
 {{< tab "sample.pdf" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/sample.pdf)
+`sample.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "certificate.pfx" >}}
+{{< tab-text >}}
+`certificate.pfx` is the sample certificate used in this example (password `1234567890`). Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/certificate.pfx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "signature.jpg" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [signature.jpg](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/signature.jpg)
+`signature.jpg` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/signature.jpg) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "signed_digital_advanced.pdf" >}}  
+```text
+Binary file (PDF, 616 KB)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/sign_with_digital_signature_advanced/signed_digital_advanced.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
 ### Loading Certificate from Stream
 
-You can also load the certificate from a stream:
+You can also load the certificate from a stream. Keep the stream open until `sign` returns:
 
-{{< tabs "example-3" >}}
+{{< tabs "sign_with_certificate_from_stream" >}}
 {{< tab "Python" >}}
-
 ```python
-import groupdocs.signature as signature
+from groupdocs.signature import Signature
 from groupdocs.signature.options import DigitalSignOptions
 
-# Initialize signature
-with signature.Signature("sample.pdf") as sign:
-    # Load certificate from stream
-    with open("certificate.pfx", "rb") as cert_stream:
-        # Create digital signature options
-        options = DigitalSignOptions(cert_stream)
-        
-        # Set certificate password
-        options.password = "1234567890"
-        
-        # Set signature position
-        options.left = 100
-        options.top = 100
-        
-        # Sign document
-        sign.sign("sampleSigned.pdf", options)
-```
 
+def sign_with_certificate_from_stream():
+    with Signature("sample.pdf") as signature:
+        # Load the certificate from a stream
+        with open("certificate.pfx", "rb") as certificate_stream:
+            options = DigitalSignOptions(certificate_stream)
+            options.password = "1234567890"
+
+            # Set signature position and size
+            options.left = 100
+            options.top = 400
+            options.width = 200
+            options.height = 60
+
+            result = signature.sign("signed_digital_stream.pdf", options)
+            print(f"Signed with {len(result.succeeded)} digital signature(s)")
+
+
+if __name__ == "__main__":
+    sign_with_certificate_from_stream()
+```
 {{< /tab >}}
 {{< tab "sample.pdf" >}}
 {{< tab-text >}}
-The following sample file is used in this example: [sample.pdf](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/sample.pdf)
+`sample.pdf` is the sample file used in this example. Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/sample.pdf) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "certificate.pfx" >}}
+{{< tab-text >}}
+`certificate.pfx` is the sample certificate used in this example (password `1234567890`). Click [here](/signature/python-net/_sample_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/certificate.pfx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "signed_digital_stream.pdf" >}}  
+```text
+Binary file (PDF, 612 KB)
+```
+[Download full output](/signature/python-net/_output_files/developer-guide/basic-usage/electronic-signature-types/esign-document-with-digital-signature/sign_with_certificate_from_stream/signed_digital_stream.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
 ### Summary
-This guide demonstrates how to use [**GroupDocs.Signature for Python via .NET**](https://products.groupdocs.com/signature/python-net) to sign documents with digital signatures. It explains how to load documents, configure certificate-based signatures, and save signed files securely. Advanced features, including signature appearance customization and validation, are also covered. Refer to related resources for additional details on digital signing workflows.
+This guide demonstrates how to use [**GroupDocs.Signature for Python via .NET**](https://products.groupdocs.com/signature/python-net) to sign documents with digital signatures. It explains how to load documents, configure certificate-based signatures, and save signed files securely. Advanced features, such as the signature appearance and the information stored in the signature, are also covered. Refer to related resources for additional details on digital signing workflows.
 
 
 ## More Resources
