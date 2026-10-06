@@ -2,7 +2,7 @@
 id: update-image-signatures-in-document
 url: signature/python-net/update-image-signatures-in-document
 title: Update Image Signatures in Document
-linkTitle: 📝 Image
+linkTitle: Image
 weight: 2
 description: "This article explains how to update Image electronic signatures with GroupDocs.Signature for Python via .NET API."
 keywords: python image signature, update image signature, python digital signature

@@ -2,7 +2,7 @@
 id: update-qr-code-signatures-in-document
 url: signature/python-net/update-qr-code-signatures-in-document
 title: Update QR Code Signatures in Document
-linkTitle: 📝 QR Code
+linkTitle: QR Code
 weight: 3
 description: "This article explains how to update QR code electronic signatures with GroupDocs.Signature for Python via .NET API."
 keywords: python qr code signature, update qr code signature, python digital signature

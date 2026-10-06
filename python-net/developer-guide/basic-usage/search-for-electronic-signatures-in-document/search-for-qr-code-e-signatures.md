@@ -2,7 +2,7 @@
 id: search-for-qr-code-e-signatures
 url: signature/python-net/search-for-qr-code-e-signatures
 title: How to Search for QR Code Signatures
-linkTitle: 🔍 QR Codes
+linkTitle: QR Codes
 weight: 3
 description: "This article explains how to search for QR-code electronic signatures using GroupDocs.Signature for Python via .NET API."
 keywords: qr code signature search, python qr code signature, search qr code signatures

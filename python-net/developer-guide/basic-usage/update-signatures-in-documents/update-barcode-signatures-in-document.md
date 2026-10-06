@@ -2,7 +2,7 @@
 id: update-barcode-signatures-in-document
 url: signature/python-net/update-barcode-signatures-in-document
 title: Update Barcode Signatures in Document
-linkTitle: 📝 Barcode
+linkTitle: Barcode
 weight: 1
 description: "This article explains how to update Barcode electronic signatures with GroupDocs.Signature for Python via .NET API."
 keywords: python barcode signature, update barcode signature, python digital signature

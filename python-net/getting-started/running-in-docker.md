@@ -2,7 +2,7 @@
 id: running-in-docker
 url: signature/python-net/getting-started/running-in-docker
 title: Running in Docker
-weight: 5
+weight: 8
 description: "Run GroupDocs.Signature for Python via .NET in a Docker container: the Linux packages it needs, a minimal Dockerfile, how to pass a license at run time, and fixes for common errors."
 keywords: docker, dockerfile, linux, container, signature docker, libgdiplus, ICU, fonts, ttf-mscorefonts-installer
 productName: GroupDocs.Signature for Python via .NET
@@ -14,7 +14,7 @@ In this guide, you'll learn how to run GroupDocs.Signature for Python via .NET i
 
 ## Dependencies
 
-The wheel bundles the .NET runtime it needs, so the image needs no .NET or Mono installation. It does need the following Linux packages, the same ones listed in [System Requirements]({{< ref "signature/python-net/system-requirements" >}}):
+The wheel bundles the .NET runtime it needs, so the image needs no .NET or Mono installation. It does need the following Linux packages, the same ones listed in [System Requirements]({{< ref "signature/python-net/getting-started/system-requirements.md" >}}):
 
 * `libicu-dev` (ICU). Without it the runtime cannot start: the first call ends the Python process with "Couldn't find a valid ICU package".
 * `libfontconfig1` and `fontconfig`, which the bundled SkiaSharp library uses to find fonts.
@@ -177,4 +177,4 @@ The app prints `Signatures added: 1. File saved at output/signed_sample.pdf`, an
 
 ### Exceptions
 
-If you run into any other exception, contact us on the [GroupDocs Free Support Forum](https://forum.groupdocs.com/c/signature) and we'll be happy to help.
+If you run into any other exception, see [Troubleshooting]({{< ref "signature/python-net/getting-started/troubleshooting/_index.md" >}}), or contact us on the [GroupDocs Free Support Forum](https://forum.groupdocs.com/c/signature) and we'll be happy to help.

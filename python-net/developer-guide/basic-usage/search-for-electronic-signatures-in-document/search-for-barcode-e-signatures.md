@@ -2,7 +2,7 @@
 id: search-for-barcode-e-signatures
 url: signature/python-net/search-for-barcode-e-signatures
 title: Search for Barcode e-Signatures
-linkTitle: 🔍 Barcodes
+linkTitle: Barcodes
 weight: 1
 description: "This article explains how to search for barcode electronic signatures within document pages using GroupDocs.Signature for Python via .NET API"
 keywords: barcode signature search, python barcode signature, search barcode signatures

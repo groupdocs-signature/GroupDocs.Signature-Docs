@@ -2,7 +2,7 @@
 id: search-for-multiple-e-signature-types
 url: signature/python-net/search-for-multiple-e-signature-types
 title: Search for Multiple e-Signature Types
-linkTitle: 🔍 Multiple Types
+linkTitle: Multiple Types
 weight: 4
 description: "This article explains how to search for multiple electronic signature types within document pages using GroupDocs.Signature for Python via .NET API."
 keywords: multiple signature search, python multiple signatures, search multiple signatures

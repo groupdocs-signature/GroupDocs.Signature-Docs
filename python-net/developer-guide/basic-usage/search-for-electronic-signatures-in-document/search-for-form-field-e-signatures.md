@@ -2,7 +2,7 @@
 id: search-for-form-field-e-signatures
 url: signature/python-net/search-for-form-field-e-signatures
 title: Search for Form Field e-Signatures
-linkTitle: 🔍 Form Fields
+linkTitle: Form Fields
 weight: 2
 description: "This article explains how to search for form field electronic signatures within document pages using GroupDocs.Signature for Python via .NET API."
 keywords: form field signature search, python form field signature, search form field signatures

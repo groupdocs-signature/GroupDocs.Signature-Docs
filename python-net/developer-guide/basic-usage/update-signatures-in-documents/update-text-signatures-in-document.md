@@ -2,7 +2,7 @@
 id: update-text-signatures-in-document
 url: signature/python-net/update-text-signatures-in-document
 title: Update Text Signatures in Document
-linkTitle: 📝 Text
+linkTitle: Text
 weight: 4
 description: "This article explains how to update Text electronic signatures with GroupDocs.Signature for Python via .NET API."
 keywords: python text signature, update text signature, python digital signature

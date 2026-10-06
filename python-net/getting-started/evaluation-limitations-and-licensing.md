@@ -1,7 +1,8 @@
 ---
-id: licensing
+id: evaluation-limitations-and-licensing
 url: signature/python-net/licensing
-title: Licensing
+title: Evaluation Limitations and Licensing
+linkTitle: Licensing
 weight: 6
 description: "GroupDocs.Signature for Python via .NET offers a Free Trial and a 30-day Temporary License for evaluation. Learn the evaluation limitations and how to apply a license from an environment variable, a file, a stream, or metered keys."
 keywords: free signature, license, temporary license, evaluation, trial, metered, GROUPDOCS_LIC_PATH, signature, API

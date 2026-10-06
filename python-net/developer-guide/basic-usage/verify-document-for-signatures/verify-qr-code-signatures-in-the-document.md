@@ -2,7 +2,7 @@
 id: verify-qr-code-signatures-in-the-document
 url: signature/python-net/verify-qr-code-signatures-in-the-document
 title: Verify QR Code Signatures in Document
-linkTitle: 🛡️ QR Code Signatures
+linkTitle: QR Code Signatures
 weight: 5
 description: "This topic explains how to verify QR Code electronic signatures with GroupDocs.Signature for Python via .NET API."
 keywords: python qr code signature verification, verify qr code signatures, python digital signature

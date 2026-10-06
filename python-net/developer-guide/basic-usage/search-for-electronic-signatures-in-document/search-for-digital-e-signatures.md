@@ -2,7 +2,7 @@
 id: search-for-digital-e-signatures
 url: signature/python-net/search-for-digital-e-signatures
 title: Search for Digital e-Signatures
-linkTitle: 🔍 Digital
+linkTitle: Digital
 weight: 6
 description: "This article explains how to search for digital electronic signatures within document pages using GroupDocs.Signature for Python via .NET API."
 keywords: digital signature search, python digital signature, search digital signatures

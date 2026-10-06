@@ -4,9 +4,11 @@ This repository contains Markdown files used to generate [GroupDocs.Signature](h
 
 ## About GroupDocs.Signature
 
-[GroupDocs.Signature](https://products.groupdocs.com/signature/) is an electronic signature SDK that enables you to sign documents with text, image, barcode, QR code, and digital signatures across 90+ file formats.
+[GroupDocs.Signature](https://products.groupdocs.com/signature/) is an electronic signature SDK that enables you to sign documents with text, image, digital, barcode, QR code, stamp, form-field, and metadata signatures, and to search, verify, update, and delete them in PDF, Microsoft Office, OpenDocument, and image files.
 
-Available for .NET, Java, Node.js, and Python.
+Available for .NET, Java, Node.js, and Python, with an MCP server for AI agents.
+
+AI agents working in this repository should start with [AGENTS.md](AGENTS.md) and [llms.txt](llms.txt).
 
 ## Repository Purpose
 

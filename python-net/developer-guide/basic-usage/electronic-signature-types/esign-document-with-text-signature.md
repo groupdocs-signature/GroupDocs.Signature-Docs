@@ -2,7 +2,7 @@
 id: esign-document-with-text-signature
 url: signature/python-net/esign-document-with-text-signature
 title:  eSign Document with Text Signature
-linktitle: ✍️ Text Signature
+linktitle: Text Signature
 weight: 7
 description: "This article explains how to sign a document with Text signature using GroupDocs.Signature for Python via .NET API. Learn how to add a digital signature to a PDF programmatically in Python."
 keywords: Add digital signature to a PDF programmatically, Text signature, python text signature, python digital signature

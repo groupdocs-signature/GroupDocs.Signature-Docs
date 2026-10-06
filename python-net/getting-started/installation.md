@@ -3,7 +3,7 @@ id: installation
 url: signature/python-net/installation
 title: Installation
 linkTitle: Installation
-weight: 1
+weight: 5
 description: "Install GroupDocs.Signature for Python via .NET from PyPI, pin it in requirements.txt, or install a pre-downloaded wheel for offline environments — then verify the installation."
 keywords: install, installation, pip, pypi, requirements.txt, offline install, wheel, whl, groupdocs-signature-net, python
 productName: GroupDocs.Signature for Python via .NET
@@ -14,7 +14,7 @@ toc: True
 GroupDocs.Signature for Python via .NET is distributed as a self-contained wheel that bundles the embedded .NET runtime. A single `py3-none-{platform}` wheel works across Python **3.5 – 3.14** on Windows, Linux, and macOS (Intel and Apple Silicon). Nothing else is needed on Windows; Linux and macOS need a few system packages, listed below.
 
 {{< alert style="info" >}}
-Before you install, review the [System Requirements]({{< ref "signature/python-net/system-requirements" >}}). The wheels need Linux with glibc 2.27 or newer, or macOS 12 or newer, and pip 20.3 or newer to install. On Linux, install ICU, fontconfig, `libgdiplus` and the Microsoft core fonts; on macOS, install `mono-libgdiplus`.
+Before you install, review the [System Requirements]({{< ref "signature/python-net/getting-started/system-requirements.md" >}}). The wheels need Linux with glibc 2.27 or newer, or macOS 12 or newer, and pip 20.3 or newer to install. On Linux, install ICU, fontconfig, `libgdiplus` and the Microsoft core fonts; on macOS, install `mono-libgdiplus`.
 {{< /alert >}}
 
 ## Install Package from PyPI
@@ -123,4 +123,6 @@ python3 -m pip show groupdocs-signature-net
 
 - Follow the [Quick Start Guide]({{< ref "signature/python-net/getting-started/quick-start-guide.md" >}}) to sign your first document.
 - Clone the [examples repository](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Python-via-.NET) and read [How to Run Examples]({{< ref "signature/python-net/getting-started/how-to-run-examples.md" >}}).
-- Set up a [license]({{< ref "signature/python-net/licensing" >}}) to remove the evaluation limitations.
+- Set up a [license]({{< ref "signature/python-net/getting-started/evaluation-limitations-and-licensing.md" >}}) to remove the evaluation limitations.
+- If the installation or the first run fails, see [Troubleshooting]({{< ref "signature/python-net/getting-started/troubleshooting/_index.md" >}}).
+- If you work with AI agents or LLMs, see [Agents and LLM Integration]({{< ref "signature/python-net/agents-and-llm-integration.md" >}}) for MCP and `AGENTS.md` details.

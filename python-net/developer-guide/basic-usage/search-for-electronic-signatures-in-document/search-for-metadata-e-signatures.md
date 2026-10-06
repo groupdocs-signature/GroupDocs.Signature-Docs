@@ -2,7 +2,7 @@
 id: search-for-metadata-e-signatures
 url: signature/python-net/search-for-metadata-e-signatures
 title: Search for Metadata e-Signatures
-linkTitle: 🔍 Metadata
+linkTitle: Metadata
 weight: 5
 description: "This article explains how to search for metadata electronic signatures within document pages using GroupDocs.Signature for Python via .NET API."
 keywords: metadata signature search, python metadata signature, search metadata signatures

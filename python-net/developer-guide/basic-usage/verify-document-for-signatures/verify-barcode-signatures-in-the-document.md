@@ -2,7 +2,7 @@
 id: verify-barcode-signatures-in-the-document
 url: signature/python-net/verify-barcode-signatures-in-the-document
 title: Verify Barcode Signatures in Document
-linkTitle: 🛡️ Barcode Signatures
+linkTitle: Barcode Signatures
 weight: 4
 description: "This topic explains how to verify Barcode electronic signatures with GroupDocs.Signature for Python via .NET API."
 keywords: python barcode signature verification, verify barcode signatures, python digital signature

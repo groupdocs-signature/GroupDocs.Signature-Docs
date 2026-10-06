@@ -18,8 +18,8 @@ This guide gives a quick overview of how to set up and start using GroupDocs.Sig
 
 To proceed, make sure you have:
 
-1. A configured environment as described in the [System Requirements]({{< ref "signature/python-net/system-requirements" >}}) topic. On Linux and macOS this includes a few system packages.
-2. Optionally, a [Temporary License](https://purchase.groupdocs.com/temporary-license/) to test all the product features. Without a license the library works in evaluation mode: it processes documents of up to two pages and adds an evaluation line to every page it signs. See [Licensing]({{< ref "signature/python-net/licensing" >}}).
+1. A configured environment as described in the [System Requirements]({{< ref "signature/python-net/getting-started/system-requirements.md" >}}) topic. On Linux and macOS this includes a few system packages.
+2. Optionally, a [Temporary License](https://purchase.groupdocs.com/temporary-license/) to test all the product features. Without a license the library works in evaluation mode: it processes documents of up to two pages and adds an evaluation line to every page it signs. See [Licensing]({{< ref "signature/python-net/getting-started/evaluation-limitations-and-licensing.md" >}}).
 
 ## Set Up Your Development Environment
 
@@ -246,12 +246,13 @@ from groupdocs.signature import License
 License().set_license("/path/to/GroupDocs.Signature.lic")
 ```
 
-The [Licensing]({{< ref "signature/python-net/licensing" >}}) topic covers both ways and the metered license.
+The [Licensing]({{< ref "signature/python-net/getting-started/evaluation-limitations-and-licensing.md" >}}) topic covers both ways and the metered license.
 
 ## Next Steps
 
 After completing the basics, explore additional resources:
 - [Developer Guide]({{< ref "signature/python-net/developer-guide/_index.md" >}}): runnable examples for every signature type and operation.
-- [Supported File Formats]({{< ref "signature/python-net/supported-file-formats" >}}): review the full list of supported file types.
-- [Licensing]({{< ref "signature/python-net/licensing" >}}): details on licensing and evaluation.
+- [Supported File Formats]({{< ref "signature/python-net/getting-started/supported-file-formats.md" >}}): review the full list of supported file types.
+- [Licensing]({{< ref "signature/python-net/getting-started/evaluation-limitations-and-licensing.md" >}}): details on licensing and evaluation.
+- [Troubleshooting]({{< ref "signature/python-net/getting-started/troubleshooting/_index.md" >}}): solutions to common errors.
 - [Technical Support]({{< ref "signature/python-net/technical-support" >}}): contact support if you run into issues.

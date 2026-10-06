@@ -3,7 +3,7 @@ id: system-requirements
 url: signature/python-net/system-requirements
 title: System Requirements
 linkTitle: System Requirements
-weight: 2
+weight: 4
 description: "System requirements for GroupDocs.Signature for Python via .NET — supported operating systems, Python versions, pip, and the Linux and macOS packages it needs."
 keywords: GroupDocs.Signature for Python via .NET, system requirements, Windows, Linux, macOS, Python 3.5, Python 3.14, glibc, ICU, fontconfig, libgdiplus, fonts
 productName: GroupDocs.Signature for Python via .NET

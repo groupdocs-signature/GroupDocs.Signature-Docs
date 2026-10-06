@@ -7,6 +7,7 @@ description: "GroupDocs.Signature for Python via .NET supports DOCX, DOCM, DOC, 
 keywords: DOCX, DOCM, DOC, DOT, DOTM, ODT, XLS, XLSX, ODS, PDF, PPT, PPTX, JPG, PNG, TIFF, Python signature formats
 productName: GroupDocs.Signature for Python via .NET
 hideChildren: False
+toc: True
 ---
 The following table lists the file formats that GroupDocs.Signature for Python via .NET works with, and the signature types each format supports.
 

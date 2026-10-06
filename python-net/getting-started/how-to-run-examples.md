@@ -3,7 +3,7 @@ id: how-to-run-examples
 url: signature/python-net/how-to-run-examples
 title: How to Run Examples
 linkTitle: How to Run Examples
-weight: 3
+weight: 7
 description: "Clone the GitHub examples repository, install dependencies into a virtual environment, optionally apply a license, and run every documented GroupDocs.Signature example: locally, inside Docker, or on GitHub Actions."
 keywords: run examples, examples repository, github, docker, dockerfile, CI, GitHub Actions, venv, virtual environment, run_all_examples, GROUPDOCS_LIC_PATH, GroupDocs.Signature, python
 productName: GroupDocs.Signature for Python via .NET
@@ -17,9 +17,9 @@ Every code example shown on this documentation site is also available in runnabl
 
 Before running the examples, make sure you have:
 
-1. **A supported platform and Python version.** See [System Requirements]({{< ref "signature/python-net/system-requirements" >}}). Windows, Linux, and macOS (Intel and Apple Silicon) are supported. Linux and macOS need a few system packages. The examples need Python 3.6 or newer.
+1. **A supported platform and Python version.** See [System Requirements]({{< ref "signature/python-net/getting-started/system-requirements.md" >}}). Windows, Linux, and macOS (Intel and Apple Silicon) are supported. Linux and macOS need a few system packages. The examples need Python 3.6 or newer.
 2. **Git**, or download the repository as a ZIP from GitHub.
-3. **A license file** (optional but recommended). Without one, the library runs in evaluation mode: documents of more than two pages are refused, signed pages carry an evaluation line, and found signatures report masked values, so verification fails. See [Licensing]({{< ref "signature/python-net/licensing" >}}) for how to obtain a free temporary license.
+3. **A license file** (optional but recommended). Without one, the library runs in evaluation mode: documents of more than two pages are refused, signed pages carry an evaluation line, and found signatures report masked values, so verification fails. See [Licensing]({{< ref "signature/python-net/getting-started/evaluation-limitations-and-licensing.md" >}}) for how to obtain a free temporary license.
 
 ## Get the Code
 
@@ -155,7 +155,7 @@ The repository mirrors this documentation tree. Every documentation page maps to
    {{< /tabs >}}
 
    {{< alert style="info" >}}
-   Learn more about licensing, evaluation limits, and how to obtain a free 30-day temporary license in the [Licensing]({{< ref "signature/python-net/licensing" >}}) topic.
+   Learn more about licensing, evaluation limits, and how to obtain a free 30-day temporary license in the [Licensing]({{< ref "signature/python-net/getting-started/evaluation-limitations-and-licensing.md" >}}) topic.
    {{< /alert >}}
 
 ## Run the Examples
@@ -213,11 +213,11 @@ Every push triggers `.github/workflows/run-examples.yml`, which installs the sam
 
 ## Troubleshooting
 
-- **"The type initializer for 'Gdip' threw an exception"** on Linux or macOS: install `libgdiplus` (Linux) or `mono-libgdiplus` (macOS). Stamp signatures, text rendered as an image, barcode, QR code and image signatures with a border or transparency, signatures on PowerPoint and image files, and signature previews need it. See [System Requirements]({{< ref "signature/python-net/system-requirements" >}}).
+- **"The type initializer for 'Gdip' threw an exception"** on Linux or macOS: install `libgdiplus` (Linux) or `mono-libgdiplus` (macOS). Stamp signatures, text rendered as an image, barcode, QR code and image signatures with a border or transparency, signatures on PowerPoint and image files, and signature previews need it. See [System Requirements]({{< ref "signature/python-net/getting-started/system-requirements.md" >}}).
 - **"Font Times New Roman was not found"** or **"Font Arial was not found"** on Linux: install the Microsoft core fonts (`ttf-mscorefonts-installer`).
 - **"Couldn't find a valid ICU package"**, with the Python process ending abruptly: install ICU (`libicu-dev` on Debian and Ubuntu).
-- **"The number of pages cannot exceed 2 in a trial version"**, or searches that report an evaluation notice instead of the signature's text: you are running unlicensed. Set `GROUPDOCS_LIC_PATH` to a valid license file and re-run. See [Licensing]({{< ref "signature/python-net/licensing" >}}).
-- **Anything else**: post on the [free support forum](https://forum.groupdocs.com/c/signature) or visit the [Technical Support]({{< ref "signature/python-net/technical-support" >}}) page.
+- **"The number of pages cannot exceed 2 in a trial version"**, or searches that report an evaluation notice instead of the signature's text: you are running unlicensed. Set `GROUPDOCS_LIC_PATH` to a valid license file and re-run. See [Licensing]({{< ref "signature/python-net/getting-started/evaluation-limitations-and-licensing.md" >}}).
+- **Anything else**: see [Troubleshooting]({{< ref "signature/python-net/getting-started/troubleshooting/_index.md" >}}), post on the [free support forum](https://forum.groupdocs.com/c/signature), or visit the [Technical Support]({{< ref "signature/python-net/technical-support" >}}) page.
 
 ## Contribute
 

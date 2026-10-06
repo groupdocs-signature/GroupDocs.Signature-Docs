@@ -2,7 +2,7 @@
 id: esign-document-with-multiple-signatures
 url: signature/python-net/esign-document-with-multiple-signatures
 title:  eSign Document with Multiple Signatures
-linktitle: ✍️ Multiple Types eSign
+linktitle: Multiple Types eSign
 weight: 9
 description: "This article explains how to sign a document with multiple signatures of various types by GroupDocs.Signature for Python via .NET API"
 keywords: multiple signatures, sign document, how to sign document with multiple signatures, python multiple signatures

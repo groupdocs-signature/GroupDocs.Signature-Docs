@@ -2,7 +2,7 @@
 id: search-for-text-e-signatures
 url: signature/python-net/search-for-text-e-signatures
 title: Search for Text e-Signatures
-linkTitle: 🔍 Texts
+linkTitle: Texts
 weight: 6
 description: "This topic explains how to search for text electronic signatures within document pages using GroupDocs.Signature for Python via .NET API."
 keywords: text signature search, python text signature, search text signatures

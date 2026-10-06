@@ -2,7 +2,7 @@
 id: esign-document-with-qr-code-signature
 url: signature/python-net/esign-document-with-qr-code-signature
 title:  eSign Document with QR Code Signature
-linktitle: ✍️ QR Code Signature
+linktitle: QR Code Signature
 weight: 6
 description: "This article explains how to sign documents with electronic signature as QR code on document page with GroupDocs.Signature for Python via .NET API."
 keywords: electronic signature, QR code, python qr code signature

@@ -2,7 +2,7 @@
 id: search-for-image-e-signatures
 url: signature/python-net/search-for-image-e-signatures
 title: Search for Image e-Signatures
-linkTitle: 🔍 Images
+linkTitle: Images
 weight: 3
 description: "This article explains how to search for image electronic signatures within document pages using GroupDocs.Signature for Python via .NET API."
 keywords: image signature search, python image signature, search image signatures

@@ -2,7 +2,7 @@
 id: sign-document-with-digital-signature
 url: signature/python-net/sign-document-with-digital-signature
 title:  Sign Document with Digital Signature
-linktitle: ✍️ Digital Signature
+linktitle: Digital Signature
 weight: 2
 description: "Learn about the benefits of using digital signatures to sign documents securely. Discover how to add programmatically digital signatures in Python with step-by-step instructions."
 keywords: document, signature, certificate, digitally, sign, pfx, python, python digital signature
