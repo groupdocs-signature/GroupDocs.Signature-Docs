@@ -52,6 +52,8 @@ See the [Quick Start Guide]({{< ref "signature/python-net/getting-started/quick-
     <li><a href='{{< ref "/signature/python-net/product-overview.md" >}}'>Product overview</a></li>
     <li><a href='{{< ref "/signature/python-net/getting-started/features-overview.md" >}}'>Main features</a></li>
     <li><a href='{{< ref "/signature/python-net/getting-started/supported-file-formats.md" >}}'>Supported file formats</a></li>
+    <li><a href='{{< ref "/signature/python-net/sdk-cloud-mcp.md" >}}'>SDK, Cloud or MCP?</a></li>
+    <li><a href='{{< ref "/signature/python-net/agents-and-llm-integration.md" >}}'>Agents and LLM integration</a></li>
 </ul>
 
 <p>GET STARTED</p>

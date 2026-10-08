@@ -31,7 +31,7 @@ Barcodes represent textual information as a quite small image that could be auto
 
 ## Python API for Electronic Signatures
 
-[GroupDocs.Signature for Python via .NET](https://products.groupdocs.com/signature/python-net) provides API for signing a wide range of document formats. Moreover, API includes special abilities for additional document content processing. Supported formats are PDF, Microsoft Word, Microsoft PowerPoint, Microsoft Excel, PNG, JPEG, and [many others](/signature/python-net/supported-document-formats/).
+[GroupDocs.Signature for Python via .NET](https://products.groupdocs.com/signature/python-net) provides API for signing a wide range of document formats. Moreover, API includes special abilities for additional document content processing. Supported formats are PDF, Microsoft Word, Microsoft PowerPoint, Microsoft Excel, PNG, JPEG, and [many others]({{< ref "signature/python-net/getting-started/supported-file-formats.md" >}}).
 
 Use pip to install the package:
 

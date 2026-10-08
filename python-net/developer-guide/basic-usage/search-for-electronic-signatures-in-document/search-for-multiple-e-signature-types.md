@@ -149,20 +149,16 @@ METADATA: Author = John Smith
 {{< /tab >}}
 {{< /tabs >}}
 
-## Additional Resources
+## More Resources
 
 ### GitHub Examples
 
-You may easily run the code above and see the feature in action in our examples:
+You may easily run the code above and see the feature in action in our GitHub examples:
 
-* [GroupDocs.Signature for Python via .NET Examples](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Python-via-.NET)
-* [GroupDocs.Signature for Python via .NET Plugins](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Python-via-.NET-Plugins)
-* [GroupDocs.Signature for Python via .NET Showcase Apps](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Python-via-.NET-Showcase)
+* [GroupDocs.Signature for Python via .NET examples](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Python-via-.NET)
 
 ### Free Online Apps
 
-Along with full Python library we provide simple but powerful free Apps.
+Along with the full-featured Python library, we provide simple but powerful free online apps.
 
-You are welcome to search for multiple types of signatures in documents with our free online apps:
-
-* [Search for Multiple Signature Types Online](https://products.groupdocs.app/signature/family)
+To sign PDF, Word, Excel, PowerPoint, and other documents you can use the online apps from the **[GroupDocs.Signature App Product Family](https://products.groupdocs.app/signature/family)**.

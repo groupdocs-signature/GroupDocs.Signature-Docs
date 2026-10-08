@@ -79,7 +79,7 @@ See [https://docs.groupdocs.com/mcp](https://docs.groupdocs.com/mcp) for full se
 
 The [GroupDocs.Signature MCP server]({{< ref "signature/mcp/_index.md" >}}) is a separate server that does the work itself: it lets an AI agent sign documents with text, QR code, barcode, or digital signatures, verify signatures, and read the QR codes and barcodes inside documents, locally on your machine. The server is the .NET build of GroupDocs.Signature; its Docker image bundles every dependency, so it runs alongside a Python project without a .NET installation. A Python launcher is planned.
 
-Use the documentation MCP server when an agent writes Python code against this library, and the signing MCP server when the agent itself signs or checks documents.
+Use the documentation MCP server when an agent writes Python code against this library, and the signing MCP server when the agent itself signs or checks documents. [SDK, Cloud or MCP?]({{< ref "signature/python-net/sdk-cloud-mcp.md" >}}) compares the options.
 
 ## AGENTS.md: built into the package
 
@@ -181,3 +181,4 @@ For richer AI document pipelines, chain GroupDocs.Signature with:
 - [Quick Start Guide]({{< ref "signature/python-net/getting-started/quick-start-guide.md" >}}): your first signing script in five minutes
 - [Developer Guide]({{< ref "signature/python-net/developer-guide/_index.md" >}}): runnable examples for every signature type and operation
 - [API Reference](https://reference.groupdocs.com/signature/python-net): full class and method documentation
+- [SDK, Cloud or MCP?]({{< ref "signature/python-net/sdk-cloud-mcp.md" >}}): which GroupDocs.Signature product line fits your project

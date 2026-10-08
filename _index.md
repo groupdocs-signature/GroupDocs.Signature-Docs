@@ -13,7 +13,7 @@ showFeedbackForm: false
 ---
 
 <div class="gdoc-list-descr">
-GroupDocs.Signature helps developers add, search, verify, update, and delete electronic signatures (text, image, digital, barcode, QR code, stamp, form-field, and metadata) in PDF, Microsoft Office, OpenDocument, and image files across .NET, Java, Node.js, and Python SDKs. See the <a href="https://docs.groupdocs.com/signature/net/supported-document-formats/">supported formats</a> table for the full list, or try the <a href="https://products.groupdocs.app/signature/family">free online app</a>.
+GroupDocs.Signature helps developers add, search, verify, update, and delete electronic signatures (text, image, digital, barcode, QR code, stamp, form-field, and metadata) in PDF, Microsoft Office, OpenDocument, and image files across .NET, Java, Node.js, and Python SDKs. See the supported formats tables for <a href="https://docs.groupdocs.com/signature/net/supported-document-formats/">.NET</a>, <a href="https://docs.groupdocs.com/signature/java/supported-document-formats/">Java</a>, <a href="https://docs.groupdocs.com/signature/nodejs-java/get-supported-document-formats/">Node.js</a> and <a href="https://docs.groupdocs.com/signature/python-net/supported-file-formats/">Python</a> for the full lists, or try the <a href="https://products.groupdocs.app/signature/family">free online app</a>.
 </div>
 
 <h2 class="gdoc-product-title">Documentation</h2>
