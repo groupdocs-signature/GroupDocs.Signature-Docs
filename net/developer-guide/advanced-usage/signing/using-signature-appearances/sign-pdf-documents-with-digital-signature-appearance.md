@@ -42,7 +42,7 @@ using (Signature signature = new Signature("sample.pdf"))
         // apply custom PDF signature appearance
         Appearance = new PdfDigitalSignatureAppearance()
         {
-            // do now show contact details
+            // do not show contact details
             ContactInfoLabel = string.Empty,
             // simplify reason label
             ReasonLabel = "?",

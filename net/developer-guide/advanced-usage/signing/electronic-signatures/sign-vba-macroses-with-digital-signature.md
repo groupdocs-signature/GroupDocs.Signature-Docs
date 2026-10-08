@@ -1,8 +1,8 @@
 ---
 id: sign-vba-macroses-with-digital-signature
 url: signature/net/sign-vba-macroses-with-digital-signature
-title: Sign VBA macroses with Digital signature
-linkTitle: ✎ Signing VBA macroses
+title: Sign VBA macros with Digital signature
+linkTitle: ✎ Signing VBA macros
 weight: 2
 description: "This article explains how to e-sign VBA macros in the excel document using .Net C# with GroupDocs.Signature API."
 keywords: 

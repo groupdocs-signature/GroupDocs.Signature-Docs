@@ -31,7 +31,7 @@ This example shows how to specify custom serialization class. This class should 
 ```csharp
 /// <summary>
 /// Creates class that implements IDataSerializer interface
-/// It cam support common serialization like JSon or custom data format
+/// It can support common serialization like JSon or custom data format
 /// </summary>
 class CustomSerializationAttribute : Attribute, IDataSerializer
 {
@@ -92,7 +92,7 @@ private class CustomXOREncryptionAttribute : Attribute, IDataEncryption
     /// Encode method to encrypt string.
     /// </summary>
     /// <param name="source">Source string to encode.</param>
-    /// <returns>Returns enccrypted string</returns>
+    /// <returns>Returns encrypted string</returns>
     public string Encode(string source)
     {
         return Process(source);

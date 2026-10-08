@@ -44,7 +44,7 @@ using (Signature signature = new Signature("signedSample.pdf"))
 {
     TextVerifyOptions options = new TextVerifyOptions()
     {
-        // specify if all pages shoudl be verified
+        // specify if all pages should be verified
         AllPages = false,
         PagesSetup = new PagesSetup() { FirstPage = false, LastPage = true, OddPages = false, EvenPages = true },
         // specify text pattern

@@ -63,10 +63,9 @@ using (var signature = new Signature("sample.zip"))
     {
         Console.WriteLine($"Document {document.FileName}. Processed: {document.ProcessingTime}, mls");
     }
-    if (signResult.Failed.Count > 0)
+    if (result.Failed.Count > 0)
     {
         Console.WriteLine("\nList of failed documents:");
-        number = 1;
         foreach (DocumentResultSignature document in result.Failed)
         {
             Console.WriteLine($"Document {document.FileName}. Processed: {document.ProcessingTime}, mls");

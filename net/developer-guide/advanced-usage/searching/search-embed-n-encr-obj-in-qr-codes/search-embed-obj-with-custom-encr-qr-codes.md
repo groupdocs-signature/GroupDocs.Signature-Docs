@@ -58,7 +58,7 @@ public class CustomXOREncryption : IDataEncryption
     /// Encode method to encrypt string.
     /// </summary>
     /// <param name="source">Source string to encode.</param>
-    /// <returns>Returns enccrypted string</returns>
+    /// <returns>Returns encrypted string</returns>
     public string Encode(string source)
     {
         return Process(source);

@@ -62,7 +62,7 @@ public class CustomXOREncryption implements IDataEncryption
      * <p>
      * Encode method to encrypt string.
      * </p>
-     * @return Returns enccrypted string
+     * @return Returns encrypted string
      * @param source Source string to encode.
      */
     public final String encode(String source)

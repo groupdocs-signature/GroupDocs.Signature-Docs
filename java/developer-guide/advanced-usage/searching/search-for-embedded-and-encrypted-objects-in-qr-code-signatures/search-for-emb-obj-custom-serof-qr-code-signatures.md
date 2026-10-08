@@ -48,7 +48,7 @@ Here are the steps to search and decrypt previously encrypted text of QR-Code an
 ```java
 /**
  * Creates class that implements IDataSerializer interface
- * It cam support common serialization like JSon or custom data format
+ * It can support common serialization like JSon or custom data format
  */
 public class CustomSerializationAttribute implements IDataSerializer{
  
@@ -93,7 +93,7 @@ public class CustomXOREncryption implements IDataEncryption
      * <p>
      * Encode method to encrypt string.
      * </p>
-     * @return Returns enccrypted string
+     * @return Returns encrypted string
      * @param source Source string to encode.
      */
     public final String encode(String source)

@@ -45,7 +45,7 @@ This example shows how to sign archive document with few SignOptions.
 ```java
     /**
      * <p>
-     * Sign ZIP Documents with varios signature options
+     * Sign ZIP Documents with various signature options
      * </p>
      */
 Signature signature = new Signature("sample.zip");
@@ -59,17 +59,18 @@ Signature signature = new Signature("sample.zip");
     };
     // sign archive to new zip file
     SignResult result = signature.sign("output.zip", options);
+    int number = 1;
     // analyze signed documents
-     for (BaseSignature o : signResult.getSucceeded())
+     for (BaseSignature o : result.getSucceeded())
     {
         DocumentResultSignature document = (DocumentResultSignature)o;
         System.out.print("Document #"+ number++ +": "+document.getFileName()+". Processed: "+document.getProcessingTime()+", mls");
     }
-    if (signResult.getFailed().size() > 0)
+    if (result.getFailed().size() > 0)
     {
         System.out.print("\nList of failed documents:");
         number = 1;
-        for (BaseSignature o : signResult.getFailed())
+        for (BaseSignature o : result.getFailed())
         {
             DocumentResultSignature document = (DocumentResultSignature)o;
             System.out.print("Document #"+number++ +": "+document.getFileName()+". Processed: "+document.getProcessingTime()+", mls");

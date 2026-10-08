@@ -39,7 +39,7 @@ Doing this is as simple as:
     * [ImageSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/imagesignoptions) - for Image signatures;
     * [MetadataSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/metadatasignoptions) - for Metadata signatures;
     * [QrCodeSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/qrcodesignoptions) - for QR-code signatures
-    * [StampSIgnOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/stampsignoptions) - for Stamp signatures;
+    * [StampSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/stampsignoptions) - for Stamp signatures;
     * [TextSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsignoptions) - for Text signatures.
 * Fill the collection with sign options from the previous step.  
 * Call the [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of the [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass the collection of sign options to it.

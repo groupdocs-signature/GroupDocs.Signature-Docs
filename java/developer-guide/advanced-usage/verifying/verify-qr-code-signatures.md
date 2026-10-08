@@ -44,7 +44,7 @@ Signature signature = new Signature("sample.pdf");
 // create QRCode option with predefined QRCode text
 QrCodeVerifyOptions options = new QrCodeVerifyOptions();
  
-// specify if all pages shoudl be verified
+// specify if all pages should be verified
 options.setAllPages(false);
 PagesSetup pagesSetup = new PagesSetup();
 pagesSetup.setFirstPage(false);

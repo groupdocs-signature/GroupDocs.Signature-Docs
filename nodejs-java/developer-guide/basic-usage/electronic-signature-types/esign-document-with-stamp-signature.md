@@ -30,7 +30,7 @@ structuredData:
 ## What is a Stamp signature?
 
 A **stamp** signature is a special type of electronic signature that has the visual appearance of a round seal and its visual parameters can be set programmatically.
-Every stamp signature can have multiple "stamp lines" with custom text and different line thicknesses, colors, font weights and sizes. Here is an example of how a stamp signature created with [**GroupDocs.Siganture**](https://products.groupdocs.com/signature/nodejs-java) may look like:
+Every stamp signature can have multiple "stamp lines" with custom text and different line thicknesses, colors, font weights and sizes. Here is an example of how a stamp signature created with [**GroupDocs.Signature**](https://products.groupdocs.com/signature/nodejs-java) may look like:
 
 ![Stamp](/signature/nodejs-java/images/esign-document-with-stamp-signature.png)
 
