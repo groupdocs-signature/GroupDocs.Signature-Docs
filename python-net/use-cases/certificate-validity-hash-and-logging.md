@@ -219,7 +219,7 @@ Next Steps:
 
 ## See Also
 
-- [In-depth blog article about this project](https://blog.groupdocs.com/signature/certificate-validity-hash-and-logging-python/) - the same five controls with the reasoning behind the 26.9 changes
+- [In-depth blog article about this project](https://blog.groupdocs.com/signature/certificate-validity-hash-and-logging-python-net/) - the same five controls with the reasoning behind the 26.9 changes
 - [Sign Document with Digital Signature](https://docs.groupdocs.com/signature/python-net/sign-document-with-digital-signature/) - the full `DigitalSignOptions` reference
 - [Verify Digital Signatures in Document](https://docs.groupdocs.com/signature/python-net/verify-digital-signatures-in-the-document/) - verification criteria beyond the empty options used here
 - [Product documentation](https://docs.groupdocs.com/signature/python-net/) - getting started and advanced topics
