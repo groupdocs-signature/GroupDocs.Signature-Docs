@@ -60,6 +60,30 @@ using (Signature signature = new Signature("sample.pdf"))
 }
 ```
 
+## Reading the verified signatures
+
+`VerificationResult.Succeeded` lists the signatures that meet the verification options, and `VerificationResult.Failed` lists the signatures that were checked and do not. For PDF documents each entry carries its page number and position, as [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) reports them. Verification stops at the first match on a page, so the signatures after it on that page are not checked and are in neither list.
+
+```csharp
+using (Signature signature = new Signature("sample.pdf"))
+{
+    TextVerifyOptions options = new TextVerifyOptions("John");
+    VerificationResult result = signature.Verify(options);
+    foreach (BaseSignature item in result.Succeeded)
+    {
+        Console.WriteLine($"Verified: {item.SignatureType} on page {item.PageNumber} at {item.Left},{item.Top}, {item.Width}x{item.Height}");
+    }
+    foreach (BaseSignature item in result.Failed)
+    {
+        Console.WriteLine($"Did not match: {item.SignatureType} on page {item.PageNumber} at {item.Left},{item.Top}");
+    }
+}
+```
+
+{{< alert style="warning" >}}
+GroupDocs.Signature for .NET 26.9 and earlier left `Failed` empty, and the `Succeeded` entries of PDF documents had no page number and no reliable position. With these versions, call `Search` to get the page and the position of a signature.
+{{< /alert >}}
+
 ### Advanced Usage Topics
 
 To learn more about document eSign features, please refer to the [advanced usage section]({{< ref "signature/net/developer-guide/advanced-usage/_index.md" >}}).
