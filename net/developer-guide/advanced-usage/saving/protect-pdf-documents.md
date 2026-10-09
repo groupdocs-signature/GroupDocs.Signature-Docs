@@ -68,6 +68,12 @@ using (Signature signature = new Signature("sample.pdf"))
 }
 ```
 
+`PermissionsPassword` is the owner password of the document: only it lets a reader change the permissions. When you do not set it, GroupDocs.Signature uses a random owner password, so the permissions cannot be changed by anyone. Setting `PermissionsPassword` on its own also protects the document: it still opens without a password, but its permissions are locked with that password. To require a password for opening the document as well, set [Password](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/saveoptions/password); see [How to save document with password]({{< ref "signature/net/developer-guide/advanced-usage/saving/save-signed-document-with-password.md" >}}).
+
+{{< alert style="warning" >}}
+GroupDocs.Signature for .NET 26.9 and earlier wrote an empty owner password when `PermissionsPassword` was not set. Many PDF readers accept an empty owner password, so they opened such documents with full rights, whatever the permissions and the open password were. These versions also dropped a `PermissionsPassword` that was set without `Password` or `Permissions`. With them, always set `PermissionsPassword` explicitly.
+{{< /alert >}}
+
 ### How to load PDF document with permissions
 
 The [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class supports loading documents with specific permissions that are preserved after signing. This capability is managed through the [LoadOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/loadoptions/) class, where the [Permissions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/loadoptions/permissions/) property is set when loading the document. These permissions remain enforced in the signed document, ensuring consistent restrictions from loading to final save output when passed to the [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method.

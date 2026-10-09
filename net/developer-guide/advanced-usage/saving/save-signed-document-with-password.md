@@ -61,6 +61,39 @@ using (Signature signature = new Signature("sample.pdf"))
 }
 ```
 
+## Passwords of a PDF document
+
+A protected PDF document has two passwords:
+
+* the open (user) password, set with [Password](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/saveoptions/password). It is needed to open the document;
+* the owner password, set with [PermissionsPassword](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/pdfsaveoptions/permissionspassword) of [PdfSaveOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/pdfsaveoptions). It is needed to change the document permissions.
+
+When `PermissionsPassword` is not set, GroupDocs.Signature uses a random owner password. The document then opens only with the open password, and nobody can change its permissions later. Set `PermissionsPassword` when you need to change the permissions yourself; see [How to protect a signed PDF document]({{< ref "signature/net/developer-guide/advanced-usage/saving/protect-pdf-documents.md" >}}).
+
+`Password` applies to digital signatures as well: the document is protected before it is signed, so the signature stays valid. A PDF document that already carries digital signatures keeps its current protection when you add only digital signatures, because changing the protection would invalidate the existing signatures.
+
+{{< alert style="warning" >}}
+GroupDocs.Signature for .NET 26.9 and earlier wrote an empty owner password when `PermissionsPassword` was not set, so many PDF readers opened the document without any password. These versions also ignored `Password` for digital signatures. With them, always set `PermissionsPassword` together with `Password`, and protect digitally signed PDF documents in a separate step.
+{{< /alert >}}
+
+The following example protects a signed PDF document with an open password and keeps the owner password:
+
+```csharp
+using (Signature signature = new Signature("sample.pdf"))
+{
+    TextSignOptions signOptions = new TextSignOptions("John Smith");
+    PdfSaveOptions saveOptions = new PdfSaveOptions()
+    {
+        // needed to open the document
+        Password = "1234567890",
+        // needed to change the permissions; when it is not set, a random one is used
+        PermissionsPassword = "owner-password",
+        UseOriginalPassword = false
+    };
+    signature.Sign("SignedProtected.pdf", signOptions, saveOptions);
+}
+```
+
 ## More resources
 
 ### GitHub Examples
