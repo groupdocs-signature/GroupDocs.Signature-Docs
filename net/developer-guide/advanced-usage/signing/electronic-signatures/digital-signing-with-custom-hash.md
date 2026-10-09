@@ -64,23 +64,34 @@ public class CustomDigitalSigner : ICustomSignHash
 {
     public byte[] CustomSignHash(
         byte[] signableHash, 
-        HashAlgorithm hashAlgorithm, 
+        GroupDocs.Signature.Domain.HashAlgorithm hashAlgorithm, 
         SignatureContext signatureContext)
     {
-        string inputP12 = "";
-        var inputPfxPassword = "1234567890";
-        X509Certificate2 signerCert = new X509Certificate2(
-            inputP12, 
-            inputPfxPassword, 
-            X509KeyStorageFlags.Exportable);
-        RSACryptoServiceProvider rsaCSP = new RSACryptoServiceProvider();
-        var xmlString = signerCert.PrivateKey.ToXmlString(true);
-        rsaCSP.FromXmlString(xmlString);
-        byte[] signedData = rsaCSP.SignData(signableHash, hashAlgorithm);
-        return signedData;
+        X509Certificate2 signerCert = new X509Certificate2("cert.pfx", "1234567890");
+        using (RSA rsa = signerCert.GetRSAPrivateKey())
+        {
+            // signableHash is already a digest: sign it as it is.
+            // SignData would hash it again, and the signature would not verify.
+            return rsa.SignHash(signableHash, ToHashAlgorithmName(hashAlgorithm), RSASignaturePadding.Pkcs1);
+        }
+    }
+
+    private static HashAlgorithmName ToHashAlgorithmName(GroupDocs.Signature.Domain.HashAlgorithm hashAlgorithm)
+    {
+        switch (hashAlgorithm)
+        {
+            case GroupDocs.Signature.Domain.HashAlgorithm.Sha1: return HashAlgorithmName.SHA1;
+            case GroupDocs.Signature.Domain.HashAlgorithm.Sha384: return HashAlgorithmName.SHA384;
+            case GroupDocs.Signature.Domain.HashAlgorithm.Sha512: return HashAlgorithmName.SHA512;
+            default: return HashAlgorithmName.SHA256;
+        }
     }
 }
 ```
+
+{{< alert style="warning" >}}
+`signableHash` is the digest of the data to sign, not the data itself: 32 bytes for SHA-256. Sign it with a method that takes a hash, such as `RSA.SignHash`. A method that hashes its input, such as `RSA.SignData`, signs the wrong value: the document is signed, but its signature does not verify.
+{{< /alert >}}
 
 ### Step-by-Step Implementation Guide
 
@@ -130,32 +141,35 @@ Let's break down the implementation into clear steps:
    {
        public byte[] CustomSignHash(
            byte[] signableHash, 
-           HashAlgorithm hashAlgorithm, 
+           GroupDocs.Signature.Domain.HashAlgorithm hashAlgorithm, 
            SignatureContext signatureContext)
        {
            // Load certificate
-           string inputP12 = "";
-           var inputPfxPassword = "1234567890";
-           X509Certificate2 signerCert = new X509Certificate2(
-               inputP12, 
-               inputPfxPassword, 
-               X509KeyStorageFlags.Exportable);
-           
-           // Setup RSA provider
-           RSACryptoServiceProvider rsaCSP = new RSACryptoServiceProvider();
-           var xmlString = signerCert.PrivateKey.ToXmlString(true);
-           rsaCSP.FromXmlString(xmlString);
-           
-           // Sign the hash
-           byte[] signedData = rsaCSP.SignData(signableHash, hashAlgorithm);
-           return signedData;
+           X509Certificate2 signerCert = new X509Certificate2("cert.pfx", "1234567890");
+
+           // Sign the hash as it is: it is already a digest
+           using (RSA rsa = signerCert.GetRSAPrivateKey())
+           {
+               return rsa.SignHash(signableHash, ToHashAlgorithmName(hashAlgorithm), RSASignaturePadding.Pkcs1);
+           }
+       }
+
+       private static HashAlgorithmName ToHashAlgorithmName(GroupDocs.Signature.Domain.HashAlgorithm hashAlgorithm)
+       {
+           switch (hashAlgorithm)
+           {
+               case GroupDocs.Signature.Domain.HashAlgorithm.Sha1: return HashAlgorithmName.SHA1;
+               case GroupDocs.Signature.Domain.HashAlgorithm.Sha384: return HashAlgorithmName.SHA384;
+               case GroupDocs.Signature.Domain.HashAlgorithm.Sha512: return HashAlgorithmName.SHA512;
+               default: return HashAlgorithmName.SHA256;
+           }
        }
    }
    ```
    - Implement `ICustomSignHash` interface
-   - Load your certificate with proper password and flags
-   - Configure RSA provider with the certificate's private key
-   - Sign the hash using the specified algorithm
+   - Load your certificate with its password
+   - Get the RSA private key of the certificate
+   - Sign the hash with `SignHash` and the algorithm in `hashAlgorithm`; do not use `SignData`, which hashes the digest again
 
 5. **Apply the Signature**
    ```csharp
