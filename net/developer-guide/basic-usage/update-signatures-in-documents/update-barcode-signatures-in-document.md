@@ -66,6 +66,10 @@ using (Signature signature = new Signature("sampleSigned.pdf"))
 }
 ```
 
+{{< alert style="info" >}}
+In PDF documents, `Update` applies both the new position and the new size of a barcode signature. GroupDocs.Signature for .NET 26.9 and earlier kept the original size and still returned `true`. The encoded text and the barcode type are read-only: to change them, delete the signature and sign again.
+{{< /alert >}}
+
 ### Advanced Usage Topics
 
 To learn more about document eSign features, please refer to the [advanced usage section]({{< ref "signature/net/developer-guide/advanced-usage/_index.md" >}}).

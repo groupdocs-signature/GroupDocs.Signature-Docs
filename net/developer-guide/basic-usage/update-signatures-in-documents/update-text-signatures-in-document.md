@@ -77,6 +77,10 @@ using (Signature signature = new Signature("sampleSigned.pdf"))
 }
 ```
 
+{{< alert style="warning" >}}
+In PDF documents, the text of a text signature added as a stamp (the default implementation) cannot be changed: `Update` returns `false` and leaves the signature as it is. Its position and size can be changed. To change the text, delete the signature and sign again. Annotation and sticker text signatures in PDF documents, and text signatures in other formats, accept new text. GroupDocs.Signature for .NET 26.9 and earlier returned `true` for such a PDF update but changed only the position.
+{{< /alert >}}
+
 ### Advanced Usage Topics
 
 To learn more about document eSign features, please refer to the [advanced usage section]({{< ref "signature/net/developer-guide/advanced-usage/_index.md" >}}).

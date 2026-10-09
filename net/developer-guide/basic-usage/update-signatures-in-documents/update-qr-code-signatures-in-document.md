@@ -64,11 +64,15 @@ using (Signature signature = new Signature("signed.pdf"))
         }
         else
         {
-            Console.WriteLine("Signature was not deleted from the document!");
+            Console.WriteLine("Signature was not updated in the document!");
         }
     }
 }
 ```
+
+{{< alert style="info" >}}
+In PDF documents, `Update` applies both the new position and the new size of a QR code signature. GroupDocs.Signature for .NET 26.9 and earlier kept the original size and still returned `true`. The encoded text and the QR code type are read-only: to change them, delete the signature and sign again.
+{{< /alert >}}
 
 ### Advanced Usage Topics
 
