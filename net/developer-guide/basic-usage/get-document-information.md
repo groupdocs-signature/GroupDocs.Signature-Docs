@@ -32,6 +32,7 @@ structuredData:
 * [Size](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/idocumentinfo/size)
 * [PageCount](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/idocumentinfo/pagecount)
 * Pages dimensions - [Height](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/pageinfo/height) and [Width](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/pageinfo/width) for each page in a document [Pages](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/idocumentinfo/pages) collection.
+* Page numbers - [PageNumber](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/pageinfo/pagenumber) of each page, starting at 1 like the page numbers used for signing, searching and previewing. In GroupDocs.Signature for .NET 26.9 and earlier it started at 0, except for TIFF, WEBP and DICOM images.
 
 ## Get document information from file on local disk
 

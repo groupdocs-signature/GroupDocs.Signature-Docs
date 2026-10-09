@@ -38,8 +38,8 @@ Here are the steps to generate document preview with GroupDocs.Signature:
 * Instantiate the [PreviewOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions) object with:
 * delegate for each page stream creation (see event handler [CreatePageStream](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/createpagestream));
 * image preview format - PNG / JPG / BMP,
-* page numbers to process;
-* custom size of preview images (if needed).
+* page numbers to process, starting at 1 ([PageNumbers](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions/pagenumbers));
+* custom size of preview images in pixels ([Width](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions/width) and [Height](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions/height), if needed).
 {{< alert style="info" >}}
 Stream that were created by CreatePageStreamdelegate will be disposed automatically once after generation of preview image. If you need to implement custom image preview stream disposing you have to pass additional argument ReleaseStream to clean up resources.  
 {{< /alert >}}
@@ -164,6 +164,49 @@ using (Signature signature = new Signature(filePath))
     signature.GeneratePreview(previewOption);
 }
 ```
+
+The resolution must be greater than 0, unless you set the size of the preview images (see below).
+
+## Creating a preview of selected pages
+
+Page numbers start at 1: the first page is 1, like the page numbers used for signing and searching. [PreviewPageData.PageNumber](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewpagedata/pagenumber) is 1-based as well. A page number below 1 throws `ArgumentException`.
+
+```csharp
+using (Signature signature = new Signature("sample.pdf"))
+{
+    // preview the first and the third page; the third argument is the resolution
+    PreviewOptions previewOption = new PreviewOptions(CreatePageStream, ReleasePageStream, 96, 1, 3)
+    {
+        PreviewFormat = PreviewOptions.PreviewFormats.PNG
+    };
+    signature.GeneratePreview(previewOption);
+}
+```
+
+{{< alert style="warning" >}}
+In GroupDocs.Signature for .NET 26.9 and earlier, preview page numbers started at 0, so `PageNumbers = new[] { 1 }` previewed the second page. If your code passes 0-based numbers, add 1 to them.
+{{< /alert >}}
+
+## Creating a document preview with a custom size
+
+Set [Width](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions/width) and [Height](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions/height) to get preview images of that size in pixels. When you set only one of them, the other follows the proportions of the page.
+
+```csharp
+using (Signature signature = new Signature("sample.pdf"))
+{
+    PreviewOptions previewOption = new PreviewOptions(CreatePageStream, ReleasePageStream)
+    {
+        PreviewFormat = PreviewOptions.PreviewFormats.PNG,
+        // 400 pixels wide; the height keeps the page proportions
+        Width = 400
+    };
+    signature.GeneratePreview(previewOption);
+}
+```
+
+{{< alert style="info" >}}
+In GroupDocs.Signature for .NET 26.9 and earlier, `Width` and `Height` were ignored for every format except presentations; the size followed the page size and the resolution.
+{{< /alert >}}
 
 ### Advanced Usage Topics
 

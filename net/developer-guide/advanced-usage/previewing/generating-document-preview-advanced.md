@@ -37,8 +37,8 @@ Here are the steps to generate document preview with GroupDocs.Signature with hi
 * delegate for each page stream creation (see event handler [CreatePageStream](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/createpagestream));  
 * property [HideSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions/hidesignatures) set to true;
 * image preview format - PNG / JPG / BMP;
-* page numbers to process;
-* custom size of preview images (if needed).  
+* page numbers to process, starting at 1 ([PageNumbers](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions/pagenumbers));
+* custom size of preview images in pixels ([Width](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions/width) and [Height](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions/height), if needed).  
 {{< alert style="info" >}}
 Stream that were created by CreatePageStreamdelegate will be disposed automatically once after generation of preview image. If you need to implement custom image preview stream disposing you have to pass additional argument [ReleasePageStream](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/releasepagestream) to clean up resources.  
 {{< /alert >}}  
