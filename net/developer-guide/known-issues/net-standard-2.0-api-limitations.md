@@ -15,7 +15,7 @@ Starting with version 26.9, GroupDocs.Signature for .NET no longer ships a .NET 
 
 ## Linux and macOS
 
-The .NET 6, .NET 8 and .NET 10 builds use System.Drawing for some image operations, for example image, stamp, barcode and QR-code signatures. On Linux and macOS this needs libgdiplus (see the recommendations below) and the `System.Drawing.EnableUnixSupport` switch in your application project:
+The .NET 6, .NET 8 and .NET 10 builds use System.Drawing for some operations. On Linux and macOS these need libgdiplus (see the recommendations below) and the `System.Drawing.EnableUnixSupport` switch in your application project:
 
 ```xml
 <ItemGroup>
@@ -23,7 +23,16 @@ The .NET 6, .NET 8 and .NET 10 builds use System.Drawing for some image operatio
 </ItemGroup>
 ```
 
-Without them, these operations throw `GroupDocsSignatureException` with the message "The type initializer for 'Gdip' threw an exception". Install the fonts your documents and signatures use as well: a font that is not installed can also stop signing, with a "Font ... was not found" message.
+Without them, these operations throw `GroupDocsSignatureException` with the message "The type initializer for 'Gdip' threw an exception":
+
+- stamp signatures, and text signatures drawn as an image (`TextSignatureImplementation.Image`);
+- barcode, QR-code and image signatures with a visible border, transparency or image effects (grayscale, brightness, contrast, gamma), and QR-codes with a logo;
+- every signature in presentations, such as PPTX, and in raster images (PNG, JPG, BMP, GIF, TIFF, WEBP);
+- previews of text and stamp signatures, and document previews of presentations.
+
+Text and digital signatures in PDF and Word documents, plain barcode, QR-code and image signatures in these documents, and document previews of PDF, Word and PNG documents work without libgdiplus.
+
+Install the fonts your documents and signatures use as well. In PDF documents a font that is not installed stops signing with a "Font ... was not found" message. The Microsoft core families Arial, Times New Roman and Courier New are the exception: they are the default fonts of text signatures and of the digital signature appearance, and when one is missing, an installed Liberation or DejaVu font is used instead and a warning is written to the log. Version 26.9 and earlier required these fonts under their own names, for example from `ttf-mscorefonts-installer`.
 
 ## Limitations of .NET Standard 2.0 compared to .NET API
 

@@ -19,7 +19,11 @@ draft: false
 
 ## Overview
 
-Container font provisioning is a GroupDocs.Signature requirement for .NET that decides whether text signatures work at all once your service leaves a developer machine. The library resolves a font family through the platform, and it does not substitute when the family is absent: naming one that is not installed raises `Sign document error: Font <name> was not found` and no document is written. Omitting `SignatureFont` does not help, because the library then asks for its own default, Times New Roman, and fails identically.
+Container font provisioning is a GroupDocs.Signature requirement for .NET that decides whether text signatures in PDF documents work at all once your service leaves a developer machine. The library looks a font family up by its name: naming one that is not installed raises `Sign document error: Font <name> was not found` and no document is written. The Microsoft core families are the exception. When Arial, Times New Roman or Courier New is missing, an installed Liberation or DejaVu font takes its place, and a warning in the log names it. Omitting `SignatureFont` asks for the default, Times New Roman, so it works once Liberation or DejaVu is installed, and fails on an image without fonts.
+
+{{< alert style="warning" >}}
+GroupDocs.Signature for .NET 26.9 and earlier made no exception for the Microsoft core families. The defaults, Times New Roman for text signatures and Arial for the appearance of digital signatures, had to be installed under those names, for example with `ttf-mscorefonts-installer`; Liberation and DejaVu did not stand in for them. With these versions, set `SignatureFont.FamilyName` (and `PdfDigitalSignatureAppearance.FontFamilyName` for digital signatures) to a family that is installed.
+{{< /alert >}}
 
 That matters because base images are not desktops. Measured on the images this guide's sample runs in: `mcr.microsoft.com/dotnet/runtime:8.0` ships **zero** font files, `eclipse-temurin:17-jre` ships 8 (DejaVu), `node:18-bookworm` ships 6, and `python:3.11-slim` ships zero. On the .NET runtime image, a text signature therefore fails outright until you add a font layer. There is no code-level workaround.
 
@@ -83,7 +87,7 @@ A **family name** is what `SignatureFont.FamilyName` takes, and it is not the fi
 
 ### Which fonts do I actually need to install?
 
-One is the minimum: `fonts-dejavu-core` makes Latin, Greek and Cyrillic signing work. Add `fonts-liberation` when your documents reference Arial, Times New Roman or Courier New, since it supplies metric-compatible stand-ins under resolvable names. Add `fonts-noto-cjk` for Chinese, Japanese or Korean text. Install `fontconfig` alongside them for the resolver itself and for `fc-list` when debugging.
+One is the minimum: `fonts-dejavu-core` makes Latin, Greek and Cyrillic signing work. Add `fonts-liberation` when your signatures use Arial, Times New Roman or Courier New, the defaults included: for a missing Microsoft core family the library takes Liberation Sans, Liberation Serif or Liberation Mono, which keep the text widths of the originals, and falls back to DejaVu, which does not. In 26.9 and earlier these names resolved only when the Microsoft fonts themselves were installed, for example with `ttf-mscorefonts-installer`. Add `fonts-noto-cjk` for Chinese, Japanese or Korean text. Install `fontconfig` alongside them for the resolver itself and for `fc-list` when debugging.
 
 ## Integration Patterns
 
@@ -197,7 +201,9 @@ List<TextSignature> found = signature.Search<TextSignature>(options);
 | Symptom | Cause | Fix |
 |---|---|---|
 | `Sign document error: Font <name> was not found` | family not installed in the image | install the font layer; resolve the family at run time instead of hard-coding |
-| Same error with no font set | GroupDocs fell back to Times New Roman, also absent | same fix; omitting `SignatureFont` is not a workaround on a fontless image |
+| Same error with no font set | the default, Times New Roman, is absent and no Liberation or DejaVu font is installed to take its place | install `fonts-dejavu-core` or `fonts-liberation`; with 26.9 and earlier, which required Times New Roman itself, also set `SignatureFont.FamilyName` to an installed family |
+| `Sign document error: Font Arial was not found` when signing a PDF digitally | the appearance font, Arial by default, is absent; in 26.9 and earlier also for an invisible signature | install `fonts-dejavu-core` or `fonts-liberation`; with 26.9 and earlier, set `PdfDigitalSignatureAppearance.FontFamilyName` to an installed family |
+| Warning `Font Arial was not found; Liberation Sans is used instead.` in the log | a Microsoft core family is absent and an installed font took its place | nothing to fix; install `ttf-mscorefonts-installer` if the signature must use the original font |
 | `CultureNotFoundException: ... en-US is an invalid culture identifier` | `InvariantGlobalization=true` in the csproj | keep globalization on and install ICU in the image; `SignatureSettings` builds `CultureInfo("en-US")` |
 | CJK signature written but shows as boxes | Latin font resolved, CJK font missing | install `fonts-noto-cjk` and check the read-back, not the return value |
 
@@ -219,7 +225,7 @@ A: You can put font files in a directory the image reads, but the family still h
 A: Because the same code also runs on a developer machine, in CI, and on the next base image someone bumps. I kept a hard-coded `DejaVu Sans` for a while and it worked until a colleague ran the same service on Windows, where that family is not installed and the run died at the first signature.
 
 **Q: Does this apply to image and barcode signatures too?**
-A: No. The font requirement is specific to text-based signatures, which is where a family name is resolved. Image, barcode and QR signatures do not need a font installed, though a stamp signature with a text label does.
+A: No. The font requirement is specific to text-based signatures, which is where a family name is resolved. Image, barcode and QR signatures do not need a font installed, though a stamp signature with a text label does, and so does a visible digital signature in a PDF document, whose appearance prints its labels in Arial by default.
 
 ## Conclusion
 
