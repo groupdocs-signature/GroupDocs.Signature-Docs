@@ -63,3 +63,8 @@ Pair it with signing when documents flow both ways: read the incoming reference,
 ## Evaluation limits bite here too
 
 Only the first two pages are processed without a license, so a code on page 3 simply is not found. [`get_license_status`]({{< ref "signature/mcp/tools-reference/get-license-status.md" >}}) before you trust an empty result.
+
+## Read more
+
+* [From Barcode to Record: Document Intake Automation with AI Agents](https://blog.groupdocs.com/signature/read-qr-barcodes-from-documents-ai-agent/) — the same scenario on the GroupDocs blog, with worked examples and the trade-offs.
+
