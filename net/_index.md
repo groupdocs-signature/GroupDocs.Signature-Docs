@@ -20,6 +20,7 @@ Following are the links to some useful resources you may need to accomplish your
 
 * [GroupDocs.Signature for .NET Online Documentation]({{< ref "signature/net" >}})
 * [GroupDocs.Signature for .NET Features]({{< ref "signature/net/getting-started/features-overview.md" >}})
+* [SDK, Cloud or MCP? Choose the right GroupDocs.Signature product]({{< ref "signature/net/sdk-cloud-mcp.md" >}})
 * [GroupDocs.Signature for .NET Limitations]({{< ref "signature/net/getting-started/evaluation-limitations-and-licensing-of-groupdocs.signature.md" >}})
 * [GroupDocs.Signature for .NET Release Notes](https://releases.groupdocs.com/signature/net/release-notes/)
 * [GroupDocs.Signature for .NET Product Page](https://products.groupdocs.com/signature/net)

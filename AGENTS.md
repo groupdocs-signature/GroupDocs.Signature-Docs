@@ -1,4 +1,4 @@
-# GroupDocs.Signature Docs — AGENTS.md
+# GroupDocs.Signature Docs - AGENTS.md
 
 > Instructions for AI agents working with **GroupDocs.Signature** documentation in this repository.
 
@@ -16,6 +16,8 @@ GroupDocs.Signature is an on-premise SDK for adding, searching, verifying, updat
 | `nodejs-java` | [nodejs-java/_index.md](nodejs-java/_index.md) | [nodejs-java/developer-guide/basic-usage/get-supported-document-formats.md](nodejs-java/developer-guide/basic-usage/get-supported-document-formats.md) |
 | `mcp` | [mcp/_index.md](mcp/_index.md) | [mcp/supported-formats.md](mcp/supported-formats.md) |
 
+SDK vs Cloud vs MCP decision guides: [net/sdk-cloud-mcp.md](net/sdk-cloud-mcp.md), [python-net/sdk-cloud-mcp.md](python-net/sdk-cloud-mcp.md).
+
 ## .NET target frameworks (canon)
 
 When documenting .NET install/runtime requirements, use: **net462** (.NET Framework 4.6.2 or later), **net6.0**, **net8.0**, **net10.0** (do not invent other TFMs). The .NET Standard 2.1 build was removed in 26.9.
@@ -26,8 +28,8 @@ When documenting .NET install/runtime requirements, use: **net462** (.NET Framew
 |---|---|
 | **On-premise SDK** (this docs tree) | Platform hubs above; examples repos; NuGet / Maven / PyPI / npm packages |
 | **GroupDocs.Signature MCP server** (this docs tree, `mcp/` and `net/mcp/`) | An MCP server that signs and verifies documents for AI agents |
-| **GroupDocs Cloud** | Separate Cloud product docs/packages — do not mix install snippets |
-| **Docs MCP** | Link only: [https://docs.groupdocs.com/mcp](https://docs.groupdocs.com/mcp) — do not edit MCP repos from this surface |
+| **GroupDocs Cloud** | Separate Cloud product docs/packages - do not mix install snippets |
+| **Docs MCP** | Link only: [https://docs.groupdocs.com/mcp](https://docs.groupdocs.com/mcp) - do not edit MCP repos from this surface |
 
 ## Editing conventions
 
@@ -49,4 +51,4 @@ When documenting .NET install/runtime requirements, use: **net462** (.NET Framew
 | Examples (Python) | [https://github.com/groupdocs-signature/GroupDocs.Signature-for-Python-via-.NET](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Python-via-.NET) |
 | Examples (Node.js) | [https://github.com/groupdocs-signature/GroupDocs.Signature-for-Node.js-via-Java](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Node.js-via-Java) |
 
-Also see [llms.txt](llms.txt) in this repository root for a compact machine-oriented index.
+[llms.txt](llms.txt) in this repository root is the AI brief for GroupDocs.Signature for .NET: rules, types, formats and compile-checked code before the first H2, link lists after it, other platforms linked near the end. Keep that layout (llmstxt.org); do not turn it into a link list or mix platforms in its code.

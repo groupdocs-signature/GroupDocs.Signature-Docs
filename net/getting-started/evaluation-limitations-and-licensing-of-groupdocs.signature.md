@@ -17,8 +17,9 @@ You can use GroupDocs.Signature without the license. The usage and functionaliti
 
 You can easily download GroupDocs.Signature for evaluation. The evaluation download is the same as the purchased download. The evaluation version simply becomes licensed when you add a few lines of code to apply the license. You will face following limitations while using the API without the license:
 
-* Only first 2 pages are processed.
+* Documents with more than 2 pages are not processed: signing, search, verification, previews and document information throw `GroupDocsSignatureException` with the message "The number of pages cannot exceed 2 in a trial version".
 * Trial badges are placed in the document on the top of each page.
+* Search returns masked values (for example, the text of a text signature is replaced with an evaluation notice), so verification of a correctly signed document fails.
 
 ## Licensing
 

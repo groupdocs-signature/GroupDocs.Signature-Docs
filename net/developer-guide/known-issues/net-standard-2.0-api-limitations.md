@@ -1,10 +1,10 @@
 ---
 id: net-standard-2-0-api-limitations
 url: signature/net/net-standard-2-0-api-limitations
-title: .NET Standard 2.0 API Limitations
+title: Linux and macOS known issues
 weight: 1
-description: "This section describes GroupDocs.Signature for .NET limitations when using under .NET Standard 2.0 environment"
-keywords: 
+description: "Known issues of GroupDocs.Signature for .NET on Linux and macOS: System.Drawing and libgdiplus, missing fonts, and the .NET Standard build that was removed in 26.9"
+keywords: GroupDocs.Signature for .NET, Linux, macOS, libgdiplus, System.Drawing.EnableUnixSupport, fonts, .NET Standard
 productName: GroupDocs.Signature for .NET
 hideChildren: False
 toc: True
@@ -25,23 +25,20 @@ The .NET 6, .NET 8 and .NET 10 builds use System.Drawing for some image operatio
 
 Without them, these operations throw `GroupDocsSignatureException` with the message "The type initializer for 'Gdip' threw an exception". Install the fonts your documents and signatures use as well: a font that is not installed can also stop signing, with a "Font ... was not found" message.
 
-## Limitations of .NET Standard 2.0 compared to .NET API
+## Fonts
 
-### Limitations
+Fonts that a document uses but that are not installed on the machine are substituted with available fonts. This can change the layout when a document is rendered to PNG, JPG or PDF, so install the fonts your documents use.
 
-1. Because of the lack of Windows fonts in target OS (Android, macOS, Linux, etc), fonts used in documents are substituted with available fonts, this might lead to inaccurate document layout when rendering the document to PNG, JPG, and PDF.
-2. If GroupDocs.Signature for .NET Standard is intended to be used in a Linux environment, an additional NuGet package should be referenced to make it work correctly with graphics: [SkiaSharp.NativeAssets.Linux](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux) for Ubuntu (it also should work on most Debian-based Linux distributions) or [Goelze.SkiaSharp.NativeAssets.AlpineLinux](https://www.nuget.org/packages/Goelze.SkiaSharp.NativeAssets.AlpineLinux) for Alpine Linux.  
-
-#### Recommendations
+### Recommendations
 
 When using GroupDocs.Signature in a non-Windows environment in order to improve rendering results we do recommend installing the following packages:
 
 1. libgdiplus - is the Mono library that provides a GDI+-compatible API on non-Windows operating systems.
-2. libc6-dev - package contains the symlinks, headers, and object files needed to compile and link programs which use the standard C library.
+2. libc6-dev - package contains the symlinks, headers, and object files needed to compile and link programs which use the standard C library.
 3. ttf-mscorefonts-installer - package with Microsoft compatible fonts.
 
-To install packages on Debian-based Linux distributions use [apt-get](https://wiki.debian.org/apt-get) utility:
+To install packages on Debian-based Linux distributions use [apt-get](https://wiki.debian.org/apt-get) utility:
 
-1. sudo apt-get install libgdiplus
-2. sudo apt-get install libc6-dev
-3. sudo apt-get install ttf-mscorefonts-installer
+1. sudo apt-get install libgdiplus
+2. sudo apt-get install libc6-dev
+3. sudo apt-get install ttf-mscorefonts-installer
