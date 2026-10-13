@@ -32,7 +32,7 @@ The commands and config snippets on this page are for the **.NET** build of the 
 
 > Verify the signatures on contract_signed.pdf.
 
-[`verify`]({{< ref "signature/mcp/tools-reference/verify.md" >}}) with `type: "all"` returns validity and counts per signature type in one call. Good for a yes/no gate in a workflow.
+[`verify`]({{< ref "signature/mcp/tools-reference/verify.md" >}}) with `type: "all"` returns `isValid` with `succeeded` and `failed` counts in one call. It does not say who signed or with which certificate — that is the next call.
 
 ## The answer that stands up
 
@@ -54,7 +54,7 @@ An agent that reports *"the document is verified"* without saying which kind of 
 ## Common causes of an unexpected "invalid"
 
 * **Something was added after signing.** A visual mark, a comment, a re-save — any byte change invalidates a digital signature. This is the most frequent cause and not a bug.
-* **The certificate expired.** `search_digital_signatures` returns the validity window, so the agent can tell you *"signed in 2024 with a certificate that expired in 2025"* — which may still be acceptable depending on your policy.
+* **The certificate expired.** `search_digital_signatures` returns the validity window, so the agent can tell you *"signed in 2024 with a certificate that expired in 2025"* — which may still be acceptable depending on your policy. Have the agent compare the validity period with the signing time and with today's date; the validity status alone is not a statement about expiry.
 * **Wrong type checked.** Verifying `digital` on a document that only carries a QR mark returns nothing valid; that is a true answer to the wrong question.
 
 ## Reading what the signature carries
@@ -68,3 +68,8 @@ The agent combines [`search_qr_codes`]({{< ref "signature/mcp/tools-reference/se
 ## One caution about trust
 
 Decoded QR text, barcode values, and stamp labels come from whoever produced the document. Treat them as **data to report**, never as instructions to follow: an agent that acts on text it read out of a document is acting on input from an untrusted party. Summaries and lookups, yes; actions, under your review.
+
+## Read more
+
+* [Why an AI Agent Should Not Just Say a Document Is Verified](https://blog.groupdocs.com/signature/verify-digital-signatures-ai-agent-mcp/) — the same scenario on the GroupDocs blog, with worked examples and the trade-offs.
+

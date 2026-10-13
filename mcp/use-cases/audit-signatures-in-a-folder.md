@@ -36,17 +36,17 @@ Point `GROUPDOCS_MCP_STORAGE_PATH` at the folder ([configuration]({{< ref "signa
 
 > For every PDF in my documents folder, check whether it is digitally signed and still valid. Give me a table: file, signer, signed date, status.
 
-The agent calls [`verify`]({{< ref "signature/mcp/tools-reference/verify.md" >}}) and [`search_digital_signatures`]({{< ref "signature/mcp/tools-reference/search-digital-signatures.md" >}}) per file and assembles the answer. Two calls per document, one table at the end.
+The agent calls [`search_digital_signatures`]({{< ref "signature/mcp/tools-reference/search-digital-signatures.md" >}}) per file — signer, issuer, signing time, validity period and `isValid` in one call — and assembles the table. A file with no digital signature found is reported as unsigned.
 
 ## The three findings that matter
 
 * **Unsigned files** — the gap the audit exists to find.
 * **Invalid signatures** — almost always "something changed after signing": a stamp added later, a re-save, a page appended. Worth knowing which.
-* **Expired certificates** — the signature was valid when made; whether it still counts is your policy, and the validity window is in the data.
+* **Expired certificates** — the signature was valid when made; whether it still counts is your policy. The validity window is in the data: ask the agent to list every certificate whose validity period ended before today.
 
 ## Keep the sweep cheap
 
-* Use `verify` for the yes/no pass, and only run the detail search on the files that need it.
+* Run `search_digital_signatures` on every file and keep its record as the source of truth; [`verify`]({{< ref "signature/mcp/tools-reference/verify.md" >}}) is an optional quick screen, not a substitute.
 * Skip [`search_image_signatures`]({{< ref "signature/mcp/tools-reference/search-image-signatures.md" >}}) in bulk — it returns base64 images for every hit and inflates the run for nothing.
 * Leave `returnImage` off on code searches.
 * Under [metered licensing]({{< ref "signature/mcp/getting-started/licensing.md" >}}#metered-pay-per-use-licensing) each call is billed usage, so a targeted sweep is cheaper as well as faster.
@@ -62,3 +62,8 @@ The agent calls [`verify`]({{< ref "signature/mcp/tools-reference/verify.md" >}}
 > Sign the three unsigned ones with our standard QR reference and list what you did.
 
 Same session, same folder, no uploads — see [Sign documents with AI agents]({{< ref "signature/mcp/use-cases/sign-documents-with-ai-agents.md" >}}).
+
+## Read more
+
+* [Enforce Signing Policy with Automated AI Sweeps over MCP](https://blog.groupdocs.com/signature/enforce-signing-policy-automated-audit-mcp/) — the same scenario on the GroupDocs blog, with worked examples and the trade-offs.
+

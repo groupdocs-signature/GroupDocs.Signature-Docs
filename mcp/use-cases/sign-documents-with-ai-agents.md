@@ -42,9 +42,11 @@ The commands and config snippets on this page are for the **.NET** build of the 
 | A visible name/date stamp | `text` | A mark, not proof |
 | A machine-readable reference | `qrcode` | Scannable; carries structured text |
 | A scan-line reference | `barcode` | Code39/Code128/EAN family |
-| Legal, tamper-evident signing | `digital` | Needs a certificate + password |
+| Certificate-backed, tamper-evident signing | `digital` | Needs a certificate + password |
 
 The first three place a **mark**. Only `digital` binds identity to the bytes: it proves who signed and that nothing changed afterwards. When someone says "we need this signed", ask which of the two they actually mean.
+
+Whether a signature is legally binding depends on the certificate and the process around it, not on the server: it applies a signature with the certificate you provide, on your machine.
 
 ## Digital signing, concretely
 
@@ -78,3 +80,8 @@ with `GROUPDOCS_MCP_STORAGE_PATH` pointing at your documents folder — [per-cli
 * [Extract QR and barcode data]({{< ref "signature/mcp/use-cases/extract-qr-and-barcode-data.md" >}}) — documents as data sources.
 * [Audit a folder of signed documents]({{< ref "signature/mcp/use-cases/audit-signatures-in-a-folder.md" >}}) — one prompt, many files.
 * [On-premise architecture]({{< ref "signature/mcp/use-cases/on-premise-document-signing.md" >}}) — where the certificate lives.
+
+## Read more
+
+* [3 Ways to Sign Documents with AI Agents and MCP: Text, QR Code, Certificate](https://blog.groupdocs.com/signature/3-ways-sign-documents-ai-agents-mcp/) — the same scenario on the GroupDocs blog, with worked examples and the trade-offs.
+
