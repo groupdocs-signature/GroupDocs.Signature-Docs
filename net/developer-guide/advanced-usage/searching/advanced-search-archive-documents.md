@@ -30,8 +30,8 @@ structuredData:
         - name: Process list of found items
           text: Loop through list of found items and process in demanded way.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [archiveSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/archivesearchoptions) class to specify different options to search text data within the archive documents. 
-Please be aware that the search result will be always as the MetadataSignature.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) searches all documents of an archive in one call: compose a list of [SearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/searchoptions/) objects, such as BarcodeSearchOptions or QrCodeSearchOptions, and pass it to the Search method. 
+The result is a [SearchResult](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/searchresult/) object. Each item of its Succeeded list is a [DocumentResultSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/documentresultsignature/) for one archive document with the signatures found in it, and the Failed list holds the documents that could not be processed.
 
 Here are the steps to search for the values within the archive document with GroupDocs.Signature:
 
@@ -76,6 +76,10 @@ using (var signature = new Signature("archive.zip"))
     }
 }
 ```
+
+{{< alert style="info" >}}
+To catch errors that the search raises as exceptions, see [Searching for document signatures with exception handling]({{< ref "signature/net/developer-guide/advanced-usage/searching/searching-for-document-signatures-with-exception-handling.md" >}}).
+{{< /alert >}}
 
 ## More resources
 

@@ -39,6 +39,8 @@ Here are the steps to search for barcode signatures within the document with Gro
 
 This example shows how to make advanced search for Barcode signature in the document with enabled options to grab barcode electronic signature context.
 
+The options use [PagesSetup](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/pagessetup/) to select pages, [BarcodeTypes](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/barcodetypes/) to set the barcode type, [TextMatchType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/textmatchtype/) to set how the text is matched, and [FileType](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/filetype/) to set the format of the returned barcode images.
+
 ```csharp
 using (Signature signature = new Signature("sample.pdf"))
 {

@@ -4,7 +4,7 @@ url: signature/net/advanced-search-certificate-documents
 title: Advanced search certificate documents
 linkTitle: 🌐 Certificate
 weight: 18
-description: "This article explains how to make advanced search for Text electronic signatures with GroupDocs.Signature API."
+description: "This article explains how to make advanced search for data within digital certificate documents with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for .NET 
 toc: True
@@ -30,7 +30,7 @@ structuredData:
           text: Loop through list of found items and process in demanded way.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides [CertificateSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/certificatesearchoptions) class to specify different options to search text data within the certificate documents. 
-Please be aware that the search result will be always as the MetadataSignature.
+Please be aware that the search result will always be a list of [MetadataSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/metadatasignature/) objects. GroupDocs.Signature reads each certificate property, such as SerialNumber, Issuer, Subject or Thumbprint, as a metadata entry, so every match returns the property name in Name and its value in Value.
 
 Here are the steps to search for the values within the certificate document with GroupDocs.Signature:
 
@@ -52,7 +52,7 @@ using (var signature = new Signature("certificate.pfx", loadOptions))
     {
         // check the serial number
         Text = "AAD0D15C628A",
-        // find exact math
+        // match by substring
         MatchType = TextMatchType.Contains,
     };
 

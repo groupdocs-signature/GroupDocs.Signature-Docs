@@ -18,7 +18,6 @@ GroupDocs.Signature for .NET allows developers to write applications with the ab
 
 Following are the links to some useful resources you may need to accomplish your tasks.
 
-* [GroupDocs.Signature for .NET Online Documentation]({{< ref "signature/net" >}})
 * [GroupDocs.Signature for .NET Features]({{< ref "signature/net/getting-started/features-overview.md" >}})
 * [SDK, Cloud or MCP? Choose the right GroupDocs.Signature product]({{< ref "signature/net/sdk-cloud-mcp.md" >}})
 * [GroupDocs.Signature for .NET Limitations]({{< ref "signature/net/getting-started/evaluation-limitations-and-licensing-of-groupdocs.signature.md" >}})
