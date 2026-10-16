@@ -34,13 +34,13 @@ Here are the steps to generate document preview with GroupDocs.Signature with hi
 
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
 * Instantiate the [PreviewOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions) object with:
-* delegate for each page stream creation (see event handler [CreatePageStream](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/createpagestream));  
+* delegate for each page stream creation (see the [PreviewOptions.CreateDocPageStream](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions.createdocpagestream/) delegate);  
 * property [HideSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions/hidesignatures) set to true;
 * image preview format - PNG / JPG / BMP;
 * page numbers to process;
 * custom size of preview images (if needed).  
 {{< alert style="info" >}}
-Stream that were created by CreatePageStreamdelegate will be disposed automatically once after generation of preview image. If you need to implement custom image preview stream disposing you have to pass additional argument [ReleasePageStream](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/releasepagestream) to clean up resources.  
+Stream that were created by the CreateDocPageStream delegate will be disposed automatically once after generation of preview image. If you need to implement custom image preview stream disposing you have to pass additional argument [PreviewOptions.ReleaseDocPageStream](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions.releasedocpagestream/) to clean up resources.  
 {{< /alert >}}  
 * Call GeneratePreview method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [PreviewOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/previewoptions) to it.
 

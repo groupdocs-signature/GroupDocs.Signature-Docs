@@ -37,7 +37,7 @@ structuredData:
 You can secure a PDF document by setting the following parameters:
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
 * Instantiate required signature options.
-* Instantiate the [PdfSaveOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/pdfsaveoptions) object and specify [PermissionsPassword](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/pdfsaveoptions/permissionspassword) property(optional). Configure the [Permissions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/pdfsaveoptions/permissions/property) to control user actions (e.g., deny printing or modification).  
+* Instantiate the [PdfSaveOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/pdfsaveoptions) object and specify [PermissionsPassword](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/pdfsaveoptions/permissionspassword) property(optional). Configure the [Permissions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/pdfsaveoptions/permissions/) property to control user actions (e.g., deny printing or modification).  
 * Call [Sign](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/sign/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass signature options and [PdfSaveOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/pdfsaveoptions) object to it.
 
 Following example demonstrates how to save signed document with permissions.

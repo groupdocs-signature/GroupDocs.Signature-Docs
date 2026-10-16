@@ -15,7 +15,8 @@ hideChildren: False
 * brightness ([Brightness](https://reference.groupdocs.com/signature/net/groupdocs.signature.options.appearances/imageappearance/brightness))
 * contrast ([Contrast](https://reference.groupdocs.com/signature/net/groupdocs.signature.options.appearances/imageappearance/contrast))
 * gamma correction ([GammaCorrection](https://reference.groupdocs.com/signature/net/groupdocs.signature.options.appearances/imageappearance/gammacorrection))
-* border ([Border](https://reference.groupdocs.com/signature/net/groupdocs.signature.options.appearances/imageappearance/border))
+
+The border of an image signature is set with the [Border](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/imagesignoptions/border/) property of the [ImageSignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/imagesignoptions/) class.
 
 Base signature class [SignOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions) property [Appearance](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/signoptions/appearance) should be set with instance of [ImageAppearance](https://reference.groupdocs.com/signature/net/groupdocs.signature.options.appearances/imageappearance) class to provide additional image adjustment
 
@@ -46,21 +47,22 @@ using (Signature signature = new Signature("sample.pdf"))
         VerticalAlignment = Domain.VerticalAlignment.Bottom,
         HorizontalAlignment = Domain.HorizontalAlignment.Right,
         Margin = new Padding() { Bottom = 20, Right = 20 },
-        // setup image additional appearance as Brightness and Border
+        // setup the image signature border
+        Border = new Border()
+        {
+            Color = Color.DarkGreen,
+            DashStyle = DashStyle.DashLongDashDot,
+            Transparency = 0.5,
+            Visible = true,
+            Weight = 2
+        },
+        // setup image additional appearance as Grayscale, Contrast, GammaCorrection and Brightness
         Appearance = new ImageAppearance()
         {
             Grayscale = true,
             Contrast = 0.2f,
             GammaCorrection = 0.3f,
-            Brightness = 0.9f,
-            Border = new Border()
-            {
-                Color = Color.DarkGreen,
-                DashStyle = DashStyle.DashLongDashDot,
-                Transparency = 0.5,
-                Visible = true,
-                Weight = 2
-            }
+            Brightness = 0.9f
         }
     };
     // sign document to file

@@ -24,7 +24,7 @@ Summary metadata may contain following information as electronic signature:
 
 Notes below specify the differences between document types from metadata perspective:
 
-* PDF document metadata layer supports default names to describe document summary information. Each metadata row is unique by name and its prefix that allows to customize metadata usage. The unique metadata identifier looks like **[tag:name](http://tagname)** pair with value assigned to it by default.
+* PDF document metadata layer supports default names to describe document summary information. Each metadata row is unique by name and its prefix that allows to customize metadata usage. The unique metadata identifier looks like `tag:name` pair with value assigned to it by default.
 * Word processing documents (Microsoft office Words formats - DOC, DOCX, RTF, and Open Office format - ODT, OTT) contain predefined standard metadata layer and custom metadata collection to manipulate with.
 * Spreadsheet documents (Microsoft Office Excel formats - XLSX, XLS and Open Office Spreadsheet OTS, ODS) keeps same standard and custom metadata collections.
 * Presentation documents follow the same pattern as Word processing and Spreadsheet files.
