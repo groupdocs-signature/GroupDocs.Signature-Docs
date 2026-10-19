@@ -34,7 +34,7 @@ Here are the steps to search for Text e-signatures using GroupDocs.Signature AP
 * Instantiate the [TextSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsearchoptions) object according to your requirements and specify additional search options (if needed);  
 * Call [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature)  class instance and pass [TextSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/textsearchoptions) to it.
 
-This example shows how to search for Text e-signature in the document.
+This example shows how to search for Text e-signatures in the document.
 
 ```csharp
 using (Signature signature = new Signature("sample.pdf"))
