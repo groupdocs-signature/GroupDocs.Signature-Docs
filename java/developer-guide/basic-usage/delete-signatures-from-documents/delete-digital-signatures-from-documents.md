@@ -27,7 +27,7 @@ structuredData:
           text: Invoke Delete method passing found digital signatures and file path for signed file. File stream can be used as well.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [DigitalSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/digitalsignature/) class to manipulate digital electronic signatures and delete them from the documents.
-Please be aware that [delete](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#delete-java.lang.String-int-) method modifies the same document that was passed to constructor of the [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class.
+The [delete](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#delete-java.lang.String-int-) method writes the changed document to the file path or stream that you pass to it. To change the source document itself, pass the same path that you passed to the [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) constructor.
 
 *Important information*. Please be aware that digitally signed documents with valid certificates (pfx files) are secured and verified. Changing digitally signed document makes them untrusted from the digital verification perspective. At this moment only Pdf documents support deletion of the specific digital signatures in case of many ones were added. Most documents support deletion of all digital signatures at once without separate certificates removal. It's strongly recommened to use deletion of electronic digital signatures by signature type Digital. See example [Delete Signatures of the certain type]
 
@@ -48,8 +48,8 @@ List<DigitalSignature> signatures = signature.search(DigitalSignature.class, Sig
 if (signatures.size() > 0)
 {
 	// delete signature
-	DigitalSignature digitalSignature = signatures[0];
-	boolean deleteResult = signature.delete(new ByteArrayOutputStream(), digitalSignature);	
+	DigitalSignature digitalSignature = signatures.get(0);
+	boolean deleteResult = signature.delete(outputFilePath, digitalSignature);	
 	if (deleteResult)
 	{
 				System.out.print("Digital signature #"+digitalSignature.getThumbprint()+" from the "+digitalSignature.getSignTime()+" was deleted from document ['"+fileName+"'].");

@@ -39,8 +39,7 @@ The following example shows how to load a license from a stream.
 
 ```java
 // For complete examples and data files, please go to https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java
-using (FileInputStream fileStream = new FileInputStream("GroupDocs.Signature.lic"))
-{
+try (FileInputStream fileStream = new FileInputStream("GroupDocs.Signature.lic")) {
     License license = new License();
     license.setLicense(fileStream);
 }
@@ -65,18 +64,18 @@ Here are the simple steps to use the `Metered` class.
 Following is the sample code demonstrating how to use `Metered` class.
 
 ```java
-// For complete examples and data files, please go to https://github.com/groupdocs-Signature/GroupDocs.Signature-for-Java
-string publicKey = ""; // Your public license key
-string privateKey = ""; // Your private license key
+// For complete examples and data files, please go to https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java
+String publicKey = ""; // Your public license key
+String privateKey = ""; // Your private license key
 
 Metered metered = new Metered();
 metered.setMeteredKey(publicKey, privateKey);
 
 // Get amount (MB) consumed
-double consumption = metered.getConsumptionQuantity();
-System.out.print("Metered consumption = " + consumption);     
+double consumption = Metered.getConsumptionQuantity();
+System.out.println("Metered consumption = " + consumption);
 
 // Get count of credits consumed
-double credit = metered.getConsumptionCredit();
-System.out.print("Metered credit = " + credit);    
+double credit = Metered.getConsumptionCredit();
+System.out.println("Metered credit = " + credit);
 ```

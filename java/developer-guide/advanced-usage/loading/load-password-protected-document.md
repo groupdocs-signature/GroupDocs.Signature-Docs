@@ -38,20 +38,21 @@ The following are the steps to work with password protected documents.
 The following code sample shows how to process password protected documents.
 
 ```java
-LoadOptions loadOptions = new LoadOptions() ;  
-loadOptions.setPassword("1234567890");       
- 
+LoadOptions loadOptions = new LoadOptions();
+loadOptions.setPassword("1234567890");
+
+// pass the load options with the password to the Signature constructor
+Signature signature = new Signature("sampleProtected.pdf", loadOptions);
 try {
-    Signature signature = new Signature("sampleProtected.pdf");
     QrCodeSignOptions options = new QrCodeSignOptions("JohnSmith");
     options.setEncodeType(QrCodeTypes.QR);
     options.setLeft(100);
-    options.setTop(100);   
- 
+    options.setTop(100);
+
     // sign document to file
     signature.sign("signedProtected.pdf", options);
-}catch(Exception e){
-    throw new GroupDocsSignatureException(e.getMessage());
+} finally {
+    signature.dispose();
 }
 ```
 

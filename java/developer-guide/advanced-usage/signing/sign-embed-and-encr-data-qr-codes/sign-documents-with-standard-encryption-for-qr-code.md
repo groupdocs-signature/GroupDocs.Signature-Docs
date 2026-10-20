@@ -21,7 +21,7 @@ Here are the steps to encrypt QR-code text with embedded encryption by GroupDocs
  This example shows how to encrypt QR-code signature.
 
 ```java
-Signature signature = new Signature("sample.pdf"))
+Signature signature = new Signature("sample.pdf");
 
 // setup key and passphrase
 String key = "1234567890";

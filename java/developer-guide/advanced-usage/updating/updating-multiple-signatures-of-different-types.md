@@ -10,7 +10,7 @@ hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides different classes of signatures to manipulate them by changing its properties over [update](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#update-java.io.OutputStream-com.groupdocs.signature.domain.signatures.BaseSignature-) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class. This method returns [UpdateResult](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/updateresult/) object to analyze if signatures were successfully processed.
 
-Please be aware that [update](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#update-java.io.OutputStream-com.groupdocs.signature.domain.signatures.BaseSignature-) method modifies the same document that was passed to constructor of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class. The [UpdateResult](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/updateresult/)contains list of successfully updated signatures and ones that failed. The signature could be failed to update due to several reasons:
+The [update](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#update-java.io.OutputStream-com.groupdocs.signature.domain.signatures.BaseSignature-) method writes the changed document to the file path or stream that you pass to it. To change the source document itself, pass the same path that you passed to the [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) constructor. The [UpdateResult](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/updateresult/)contains list of successfully updated signatures and ones that failed. The signature could be failed to update due to several reasons:
 
 *   if signature object was initialized with constructor by incorrect signature identifier;
 *   if signature object was not found;
@@ -31,7 +31,8 @@ Here are the steps to update multiple signature in the document with GroupDocs.S
 This example shows how to update signature that was found using  [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#-T-search-java.lang.Class-T--com.groupdocs.signature.options.search.SearchOptions-) method.
 
 ```java
-// initialize Signature instance
+try {
+    // initialize Signature instance
     Signature signature = new Signature("signed.pptx");
  
     // define few search options

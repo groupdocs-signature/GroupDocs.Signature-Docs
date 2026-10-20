@@ -65,7 +65,7 @@ border.setTransparency(0.5);
 border.setVisible(true);
 border.setWeight(2);
  
-imageAppearance.setBorder(border);
+options.setBorder(border);
 options.setAppearance(imageAppearance);
  
 // sign document to file

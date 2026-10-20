@@ -30,7 +30,7 @@ structuredData:
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [ImageSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/imagesignature/) class to manipulate barcode signatures location, size and textual content. 
 
-Please be aware that [update](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#update-java.io.OutputStream-com.groupdocs.signature.domain.signatures.BaseSignature-) method modifies the same document that was passed to constructor of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class.
+The [update](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#update-java.io.OutputStream-com.groupdocs.signature.domain.signatures.BaseSignature-) method writes the changed document to the file path or stream that you pass to it. To change the source document itself, pass the same path that you passed to the [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) constructor.
 
 Here are the steps to update Barcode signature in the document with GroupDocs.Signature:
 
@@ -44,30 +44,29 @@ Here are the steps to update Barcode signature in the document with GroupDocs.Si
 This example shows how to update Image signature that was found using  [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#-T-search-java.lang.Class-T--com.groupdocs.signature.options.search.SearchOptions-) method.
 
 ```java
-using (Signature signature = new Signature("sampleSigned.pdf"))
-{
+Signature signature = new Signature("sampleSigned.pdf");
+try {
     ImageSearchOptions options = new ImageSearchOptions();
     // search for image signatures in document
-    List<ImageSignature> signatures = signature.Search<ImageSignature>(options);
-    if(signatures.Count > 0)
-    {
-        ImageSignature imageSignature = signatures[0];
+    List<ImageSignature> signatures = signature.search(ImageSignature.class, options);
+    if (signatures.size() > 0) {
+        ImageSignature imageSignature = signatures.get(0);
         // change Image properties
-        signatureToUpdate.Top = 200;
-        signatureToUpdate.Left = 200;
-        signatureToUpdate.Width = 300;
-        signatureToUpdate.Height = 150;
+        imageSignature.setTop(200);
+        imageSignature.setLeft(200);
+        imageSignature.setWidth(300);
+        imageSignature.setHeight(150);
 
-        bool result = signature.Update(imageSignature);
-        if(result)
-        {
-            Console.WriteLine($"Signature with Top '{imageSignature.Top}' was updated in the document ['{fileName}'].");
-        }
-        else
-        {
-            Console.WriteLine($"Signature was not updated in  the document! Signature with Top '{imageSignature.Top}' was not found!");
+        // save the document with the updated signature to a new file
+        boolean result = signature.update("sampleUpdated.pdf", imageSignature);
+        if (result) {
+            System.out.println("Signature with Top " + imageSignature.getTop() + " was updated in the document.");
+        } else {
+            System.out.println("Signature was not updated in the document! Signature with Top " + imageSignature.getTop() + " was not found!");
         }
     }
+} finally {
+    signature.dispose();
 }
 ```
 

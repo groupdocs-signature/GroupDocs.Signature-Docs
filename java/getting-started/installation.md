@@ -94,7 +94,7 @@ Then define GroupDocs.Signature for Java API dependency in your project as fo
     <dependency>
         <groupId>com.groupdocs</groupId>
         <artifactId>groupdocs-signature</artifactId>
-        <version>24.3</version>
+        <version>26.10</version>
     </dependency>
 </dependencies>
 ```
@@ -102,27 +102,27 @@ Then define GroupDocs.Signature for Java API dependency in your project as fo
 {{< tab "Gradle" >}}
 ```xml
 dependencies {
-    implementation 'com.groupdocs:groupdocs-signature:24.3'
+    implementation 'com.groupdocs:groupdocs-signature:26.10'
 }
 ```
 {{< /tab >}}
 {{< tab "Kotlin" >}}
 ```xml
 dependencies {
-    implementation("com.groupdocs:groupdocs-signature:24.3")
+    implementation("com.groupdocs:groupdocs-signature:26.10")
 }
 ```
 {{< /tab >}}
 {{< tab "Ivy" >}}
 ```xml
-<dependency org="com.groupdocs" name="groupdocs-signature" rev="24.3">
+<dependency org="com.groupdocs" name="groupdocs-signature" rev="26.10">
    <artifact name="groupdocs-signature" ext="jar"/>
 </dependency>
 ```
 {{< /tab >}}
 {{< tab "Sbt" >}}
 ```xml
-libraryDependencies += "com.groupdocs" % "groupdocs-signature" % "24.3"
+libraryDependencies += "com.groupdocs" % "groupdocs-signature" % "26.10"
 ```
 {{< /tab >}}
 {{< /tabs >}}

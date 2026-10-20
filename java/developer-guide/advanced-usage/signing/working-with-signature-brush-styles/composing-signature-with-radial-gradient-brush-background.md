@@ -21,7 +21,7 @@ This example shows how to use Radial gradient brush for signature background. S
 
 ```java
 Signature signature = new Signature("sample.pdf");
-TextSignOptions options = new TextSignOptions("John Smith")
+TextSignOptions options = new TextSignOptions("John Smith");
  
 // adjust signature appearance brush
  

@@ -101,7 +101,7 @@ public void closePageStream(int pageNumber, OutputStream pageStream) {
 
 ```java
 // instantiating the signature object
-	FileInputStream stream = new FileInputStream("sample.pdf")
+	FileInputStream stream = new FileInputStream("sample.pdf");
     final Signature signature = new Signature(stream);
         // Image from specified page
 	PreviewOptions previewOption = new PreviewOptions(new PageStreamFactory() {

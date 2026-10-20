@@ -39,7 +39,7 @@ The following code shows most used code pattern to define [Signature](https://r
 // Sign document with text signature.
 try
 {
-   Signature signature = new Signature("sample.docx")
+   Signature signature = new Signature("sample.docx");
    TextSignOptions textSignOptions = new TextSignOptions("John Smith");
    signature.sign("SampleSigned.docx", textSignOptions);
 }catch (Exception e){

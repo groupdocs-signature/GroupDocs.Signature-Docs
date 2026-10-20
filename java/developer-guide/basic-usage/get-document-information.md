@@ -54,7 +54,7 @@ for(PageInfo page : docInfo.getPages()){
 The following code snippet demonstrates how to obtain information about document provided as a stream. 
 
 ```java
-FileInputStream stream = new FileInputStream("sample.pdf")
+FileInputStream stream = new FileInputStream("sample.pdf");
 Signature signature = new Signature(stream );
 // Document description
 IDocumentInfo docInfo = signature.getDocumentInfo();

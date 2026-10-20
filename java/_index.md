@@ -17,8 +17,8 @@ GroupDocs.Signature for Java API allows developers to embed electronic signing i
 
 ## GroupDocs.Signature for Java Resources
 Following are the links to some useful resources you may need to accomplish your tasks.
-*   [GroupDocs.Signature for Java Online Documentation]({{< ref "signature/java" >}})
 *   [GroupDocs.Signature for Java Features]({{< ref "signature/java/getting-started/features-overview.md" >}})
+*   [SDK, Cloud or MCP? Choose the right GroupDocs.Signature product]({{< ref "signature/java/sdk-cloud-mcp.md" >}})
 *   [GroupDocs.Signature for Java Limitations]({{< ref "signature/java/getting-started/evaluation-limitations-and-licensing-of-groupdocs.signature.md" >}})
 *   [GroupDocs.Signature for Java Release Notes](https://releases.groupdocs.com/signature/java/release-notes/)
 *   [GroupDocs.Signature for Java Product Page](https://products.groupdocs.com/signature/java)

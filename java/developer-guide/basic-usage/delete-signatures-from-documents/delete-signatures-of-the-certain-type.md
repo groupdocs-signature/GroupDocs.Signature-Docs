@@ -25,7 +25,7 @@ structuredData:
           text: Invoke Delete method passing type of signatures to be deleted.
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides overloaded [delete](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#delete-java.lang.String-int-) method that accepts one [SignatureType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/signaturetype/) or list of them.
-Please be aware that this method modifies the same document that was passed to constructor of the [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class.
+This method writes the changed document to the file path or stream that you pass to it. To change the source document itself, pass the same path that you passed to the [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) constructor.
 
 Here are the steps to delete signature by specific type from the document with GroupDocs.Signature:
 

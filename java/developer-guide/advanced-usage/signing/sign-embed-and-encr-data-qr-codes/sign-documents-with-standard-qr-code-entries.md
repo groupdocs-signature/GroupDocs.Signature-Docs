@@ -52,31 +52,31 @@ Here are the steps to embed standard entry into QR-code with GroupDocs.Signature
 This example shows how to esign PDF with Email QR-code object.
 
 ```java
-Signature signature = new Signature("sample.pdf"))
-
+Signature signature = new Signature("sample.pdf");
+try {
     // create Email object
     Email email = new Email();
-	email.setAddress("sherlock@holmes.com");
-	email.setSubject("Very important e-mail");
-	email.setBody("Hello, Watson. Reach me ASAP!");
+    email.setAddress("sherlock@holmes.com");
+    email.setSubject("Very important e-mail");
+    email.setBody("Hello, Watson. Reach me ASAP!");
 
-
-	// create options
-	// create options
-	QrCodeSignOptions options = new QrCodeSignOptions();
-	options.setEncodeType(QrCodeTypes.QR);
-	// setup Data property to Address instance
-	options.setData(email);
-	// set right bottom corner
-	options.setHorizontalAlignment(HorizontalAlignment.Right);
-	options.setVerticalAlignment(VerticalAlignment.Bottom);
-	options.setMargin(new Padding(10));
-	options.setWidth(100);
-	options.setHeight(100);
+    // create options
+    QrCodeSignOptions options = new QrCodeSignOptions();
+    options.setEncodeType(QrCodeTypes.QR);
+    // setup Data property to the Email instance
+    options.setData(email);
+    // set right bottom corner
+    options.setHorizontalAlignment(HorizontalAlignment.Right);
+    options.setVerticalAlignment(VerticalAlignment.Bottom);
+    options.setMargin(new Padding(10));
+    options.setWidth(100);
+    options.setHeight(100);
 
     // sign document to file
     signature.sign("output.pdf", options);
-
+} finally {
+    signature.dispose();
+}
 ```
 
 ## Sign PDF with Address inside the QR-Code image
@@ -84,30 +84,32 @@ Signature signature = new Signature("sample.pdf"))
 This example shows how to esign PDF with address inside the QR-code image.
 
 ```java
-Signature signature = new Signature("sample.pdf"))
-{
+Signature signature = new Signature("sample.pdf");
+try {
     // create Address object
     Address address = new Address();
-	address.setStreet("221B Baker Street");
-	address.setCity("London");
-	address.setState("NW");
-	address.setZIP("NW16XE");
-	address.setCountry("England");
+    address.setStreet("221B Baker Street");
+    address.setCity("London");
+    address.setState("NW");
+    address.setZIP("NW16XE");
+    address.setCountry("England");
 
+    // create options
+    QrCodeSignOptions options = new QrCodeSignOptions();
+    options.setEncodeType(QrCodeTypes.QR);
+    // setup Data property to the Address instance
+    options.setData(address);
+    // set right bottom corner
+    options.setHorizontalAlignment(HorizontalAlignment.Right);
+    options.setVerticalAlignment(VerticalAlignment.Bottom);
+    options.setMargin(new Padding(10));
+    options.setWidth(100);
+    options.setHeight(100);
 
-	// create options
-	QrCodeSignOptions options = new QrCodeSignOptions();
-	options.setEncodeType(QrCodeTypes.QR);
-		// setup Data property to Address instance
-	options.setData(address);
-		// set right bottom corner
-	options.setHorizontalAlignment(HorizontalAlignment.Right);
-	options.setVerticalAlignment(VerticalAlignment.Bottom);
-	options.setMargin(new Padding(10));
-	options.setWidth(100);
-	options.setHeight(100);
     // sign document to file
     signature.sign("output.pdf", options);
+} finally {
+    signature.dispose();
 }
 ```
 
@@ -116,45 +118,45 @@ Signature signature = new Signature("sample.pdf"))
 This example shows how to esign PDF with V-Card inside the QR-code image.
 
 ```java
-Signature signature = new Signature("sample.pdf"))
-{
+Signature signature = new Signature("sample.pdf");
+try {
     // create VCard object
     VCard vCard = new VCard();
+    vCard.setFirstName("Sherlock");
+    vCard.setMidddleName("Jay");
+    vCard.setLastName("Holmes");
+    vCard.setInitials("Mr.");
+    vCard.setCompany("Watson Inc.");
+    vCard.setJobTitle("Detective");
+    vCard.setHomePhone("0333 003 3577");
+    vCard.setWorkPhone("0333 003 3512");
+    vCard.setEmail("watson@sherlockholmes.com");
+    vCard.setUrl("http://sherlockholmes.com/");
+    vCard.setBirthDay(new GregorianCalendar(1854, Calendar.JANUARY, 6).getTime());
+    Address address = new Address();
+    address.setStreet("221B Baker Street");
+    address.setCity("London");
+    address.setState("NW");
+    address.setZIP("NW16XE");
+    address.setCountry("England");
+    vCard.setHomeAddress(address);
 
-	vCard.setFirstName("Sherlock");
-	vCard.setMidddleName("Jay");
-	vCard.setLastName("Holmes");
-	vCard.setInitials("Mr.");
-	vCard.setCompany("Watson Inc.");
-	vCard.setJobTitle("Detective");
-	vCard.setHomePhone("0333 003 3577");
-	vCard.setWorkPhone("0333 003 3512");
-	vCard.setEmail("watson@sherlockholmes.com");
-	vCard.setUrl("http://sherlockholmes.com/");
-	vCard.setBirthDay(new Date(1854, 1, 6));
-	Address address = new Address();
-	address.setStreet("221B Baker Street");
-	address.setCity("London");
-	address.setState("NW");
-	address.setZIP("NW16XE");
-	address.setCountry("England");
-	vCard.setHomeAddress(address);
-
-
-	// create options
-	QrCodeSignOptions options = new QrCodeSignOptions();
-	options.setEncodeType(QrCodeTypes.QR);
-	// setup Data property to Address instance
-	options.setData(vCard);
-	// set right bottom corner
-	options.setHorizontalAlignment(HorizontalAlignment.Right);
-	options.setVerticalAlignment(VerticalAlignment.Bottom);
-	options.setMargin(new Padding(10));
-	options.setWidth(100);
-	options.setHeight(100);
+    // create options
+    QrCodeSignOptions options = new QrCodeSignOptions();
+    options.setEncodeType(QrCodeTypes.QR);
+    // setup Data property to the VCard instance
+    options.setData(vCard);
+    // set right bottom corner
+    options.setHorizontalAlignment(HorizontalAlignment.Right);
+    options.setVerticalAlignment(VerticalAlignment.Bottom);
+    options.setMargin(new Padding(10));
+    options.setWidth(100);
+    options.setHeight(100);
 
     // sign document to file
     signature.sign("output.pdf", options);
+} finally {
+    signature.dispose();
 }
 ```
 
@@ -163,41 +165,43 @@ Signature signature = new Signature("sample.pdf"))
 This example shows how to esign PDF with Me-Card inside the QR-code image.
 
 ```java
-Signature signature = new Signature("sample.pdf")
-{
+Signature signature = new Signature("sample.pdf");
+try {
     // create MeCard object
     MeCard meCard = new MeCard();
-	meCard.setName("Sherlock");
-	meCard.setNickname("Jay");
-	meCard.setReading("Holmes");
-	meCard.setNote("Base Detective");
-	meCard.setPhone("0333 003 3577");
-	meCard.setAltPhone("0333 003 3512");
-	meCard.setEmail("watson@sherlockholmes.com");
-	meCard.setUrl("http://sherlockholmes.com/");
-	meCard.setBirthDay(new Date(1854, 1, 6));
-	Address address = new Address();
-	address.setStreet("221B Baker Street");
-	address.setCity("London");
-	address.setState("NW");
-	address.setZIP("NW16XE");
-	address.setCountry("England");
-	meCard.setAddress(address);
+    meCard.setName("Sherlock");
+    meCard.setNickname("Jay");
+    meCard.setReading("Holmes");
+    meCard.setNote("Base Detective");
+    meCard.setPhone("0333 003 3577");
+    meCard.setAltPhone("0333 003 3512");
+    meCard.setEmail("watson@sherlockholmes.com");
+    meCard.setUrl("http://sherlockholmes.com/");
+    meCard.setBirthDay(new GregorianCalendar(1854, Calendar.JANUARY, 6).getTime());
+    Address address = new Address();
+    address.setStreet("221B Baker Street");
+    address.setCity("London");
+    address.setState("NW");
+    address.setZIP("NW16XE");
+    address.setCountry("England");
+    meCard.setAddress(address);
 
-	// create options
-	QrCodeSignOptions options = new QrCodeSignOptions();
-	options.setEncodeType(QrCodeTypes.QR);
-	// setup Data property to MeCard instance
-	options.setData(meCard);
-	// set right bottom corner
-	options.setHorizontalAlignment(HorizontalAlignment.Right);
-	options.setVerticalAlignment(VerticalAlignment.Bottom);
-	options.setMargin(new Padding(10));
-	options.setWidth(100);
-	options.setHeight(100);
+    // create options
+    QrCodeSignOptions options = new QrCodeSignOptions();
+    options.setEncodeType(QrCodeTypes.QR);
+    // setup Data property to the MeCard instance
+    options.setData(meCard);
+    // set right bottom corner
+    options.setHorizontalAlignment(HorizontalAlignment.Right);
+    options.setVerticalAlignment(VerticalAlignment.Bottom);
+    options.setMargin(new Padding(10));
+    options.setWidth(100);
+    options.setHeight(100);
 
     // sign document to file
-    signature.Sign("output.pdf", options);
+    signature.sign("output.pdf", options);
+} finally {
+    signature.dispose();
 }
 ```
 
@@ -206,32 +210,34 @@ Signature signature = new Signature("sample.pdf")
 This example shows how to esign PDF with EPC / SEPA payment inside the QR-code image.
 
 ```java
-Signature signature = new Signature("sample.pdf")
-{
+Signature signature = new Signature("sample.pdf");
+try {
     // create EPC object
-	EPC epc = new EPC();
-	epc.setName("Sherlock");
-	epc.setBIC("MrSherlockH");
-	epc.setIBAN("BE72000000001616");
-	epc.setAmount(123456.78D);
-	epc.setCode("SHRL");
-	epc.setReference("Private service");
-	epc.setInformation("Thanks for help");
+    EPC epc = new EPC();
+    epc.setName("Sherlock");
+    epc.setBIC("MrSherlockH");
+    epc.setIBAN("BE72000000001616");
+    epc.setAmount(123456.78D);
+    epc.setCode("SHRL");
+    epc.setReference("Private service");
+    epc.setInformation("Thanks for help");
 
-	// create options
-	QrCodeSignOptions options = new QrCodeSignOptions();
-	options.setEncodeType(QrCodeTypes.QR);
-	// setup Data property to EPC instance
-	options.setData(epc);
-	// set right bottom corner
-	options.setHorizontalAlignment(HorizontalAlignment.Right);
-	options.setVerticalAlignment(VerticalAlignment.Bottom);
-	options.setMargin(new Padding(10));
-	options.setWidth(100);
-	options.setHeight(100);
+    // create options
+    QrCodeSignOptions options = new QrCodeSignOptions();
+    options.setEncodeType(QrCodeTypes.QR);
+    // setup Data property to the EPC instance
+    options.setData(epc);
+    // set right bottom corner
+    options.setHorizontalAlignment(HorizontalAlignment.Right);
+    options.setVerticalAlignment(VerticalAlignment.Bottom);
+    options.setMargin(new Padding(10));
+    options.setWidth(100);
+    options.setHeight(100);
 
     // sign document to file
     signature.sign("output.pdf", options);
+} finally {
+    signature.dispose();
 }
 ```
 
@@ -240,39 +246,39 @@ Signature signature = new Signature("sample.pdf")
 This example shows how to esign PDF with event data inside the QR-code image.
 
 ```java
-Signature signature = new Signature("sample.pdf")
-{
-    // create Event object
-    Event evnt = new Event();
+Signature signature = new Signature("sample.pdf");
+try {
+    // create Event object: a meeting tomorrow from 9:00 to 9:30
+    Calendar start = Calendar.getInstance();
+    start.add(Calendar.DATE, 1);
+    start.set(Calendar.HOUR_OF_DAY, 9);
+    start.set(Calendar.MINUTE, 0);
+    Calendar end = (Calendar) start.clone();
+    end.add(Calendar.MINUTE, 30);
 
-	evnt.setTitle("GTM(9-00)");
-	evnt.setDescription("General Team Meeting");
-	evnt.setLocation("Conference-Room");
-	Calendar c1 = Calendar.getInstance();
-	c1.setTime(new Date());
-	c1.add(Calendar.DATE, 1);
-	c1.add(Calendar.HOUR, 9);
-	Calendar c2 = Calendar.getInstance();
-	c2.setTime(new Date());
-	c2.add(Calendar.DATE, 1);
-	c2.add(Calendar.HOUR, 9);
-	c2.add(Calendar.MINUTE, 30);
-	evnt.setStartDate(c1.getTime());
-	evnt.setEndDate(c2.getTime());
+    Event event = new Event();
+    event.setTitle("GTM(9-00)");
+    event.setDescription("General Team Meeting");
+    event.setLocation("Conference-Room");
+    event.setStartDate(start.getTime());
+    event.setEndDate(end.getTime());
 
-	// create options
-	QrCodeSignOptions options = new QrCodeSignOptions();
-	options.setEncodeType(QrCodeTypes.QR);
-	// setup Data property to Event instance
-	options.setData(evnt);
-	// set right bottom corner
-	options.setHorizontalAlignment(HorizontalAlignment.Right);
-	options.setVerticalAlignment(VerticalAlignment.Bottom);
-	options.setMargin(new Padding(10));
-	options.setWidth(100);
-	options.setHeight(100);
+    // create options
+    QrCodeSignOptions options = new QrCodeSignOptions();
+    options.setEncodeType(QrCodeTypes.QR);
+    // setup Data property to the Event instance
+    options.setData(event);
+    // set right bottom corner
+    options.setHorizontalAlignment(HorizontalAlignment.Right);
+    options.setVerticalAlignment(VerticalAlignment.Bottom);
+    options.setMargin(new Padding(10));
+    options.setWidth(100);
+    options.setHeight(100);
+
     // sign document to file
     signature.sign("output.pdf", options);
+} finally {
+    signature.dispose();
 }
 ```
 ## Sign PDF with CryptoCurrencyTransfer information in the QR-Code image
@@ -281,44 +287,43 @@ This example shows how to esign PDF with Cryptocurrency transfer data inside the
 
 ```java
 Signature signature = new Signature("sample.pdf");
+try {
+    // create crypto currency object
+    CryptoCurrencyTransfer transfer = new CryptoCurrencyTransfer();
+    transfer.setType(CryptoCurrencyType.Bitcoin);
+    transfer.setAddress("1JHG2qjdk5Khiq7X5xQrr1wfigepJEK3t");
+    transfer.setAmount(new BigDecimal("1234.56"));
+    transfer.setMessage("Consulting services");
 
-// create crypto currency object
-CryptoCurrencyTransfer transfer = new CryptoCurrencyTransfer();
-transfer.setType(CryptoCurrencyType.Bitcoin);
-transfer.setAddress("1JHG2qjdk5Khiq7X5xQrr1wfigepJEK3t");
-transfer.setAmount(1234.56M);
-transfer.setMessage("Consulting services");
+    // create alternative crypto currency object
+    CryptoCurrencyTransfer customTransfer = new CryptoCurrencyTransfer();
+    customTransfer.setType(CryptoCurrencyType.Custom);
+    customTransfer.setCustomType("SuperCoin");
+    customTransfer.setAddress("15N3yGu3UFHeyUNdzQ5sS3aRFRzu5Ae7EZ");
+    customTransfer.setAmount(new BigDecimal("6543.21"));
+    customTransfer.setMessage("Accounting services");
 
-// create alternative crypto currency object
-CryptoCurrencyTransfer customTransfer = new CryptoCurrencyTransfer();
-customTransfer.setType(CryptoCurrencyType.Custom);
-customTransfer.setCustomType("SuperCoin");
-customTransfer.setAddress("15N3yGu3UFHeyUNdzQ5sS3aRFRzu5Ae7EZ");
-customTransfer.setAmount(6543.21M);
-customTransfer.setMessage("Accounting services");
+    // create QR-code options
+    QrCodeSignOptions options1 = new QrCodeSignOptions();
+    options1.setData(transfer);
+    options1.setLeft(10);
+    options1.setTop(10);
 
-// create QR-code options
-QrCodeSignOptions options1 = new QrCodeSignOptions();
+    // create alternative QR-code options
+    QrCodeSignOptions options2 = new QrCodeSignOptions();
+    options2.setData(customTransfer);
+    options2.setLeft(10);
+    options2.setTop(400);
 
-// setup Data property to Address instance
-options1.setData(transfer);
-options1.setLeft(10);
-options1.setTop(10);
+    List<SignOptions> listOptions = new ArrayList<SignOptions>();
+    listOptions.add(options1);
+    listOptions.add(options2);
 
-// create alternative QR-code options
-QrCodeSignOptions options2 = new QrCodeSignOptions();
-
-// setup Data property to Address instance
-options2.setData(customTransfer);
-options2.setLeft(10);
-options2.setTop(200);
-
-List<SignOptions> listOptions = new List<SignOptions>();
-listOptions.add(options1);
-listOptions.add(options2);
-// sign document to file
-signature.sign("output.pdf", listOptions);
-
+    // sign document to file
+    signature.sign("output.pdf", listOptions);
+} finally {
+    signature.dispose();
+}
 ```
 
 ## Create an image with the WiFi QR Code information
@@ -327,31 +332,31 @@ This example shows how to create an image with the WiFi QR Code object.
 
 ```java
 Signature signature = new Signature("sample.png");
+try {
+    // create WiFi object
+    WiFi wifi = new WiFi();
+    wifi.setSSID("GuestNetwork!");
+    wifi.setEncryption(WiFiEncryptionType.WPAWPA2);
+    wifi.setPassword("guest");
+    wifi.setHidden(false);
 
-// create WiFi object
-WiFi wifi  = new WiFi();
-wifi.setSSID("GuestNetwork!");
-wifi.setEncryption(WiFiEncryptionType.WPAWPA2);
-wifi.setPassword("guest");
-wifi.setHidden(false);
+    // create options
+    QrCodeSignOptions options = new QrCodeSignOptions();
+    options.setEncodeType(QrCodeTypes.QR);
+    // setup Data property to the WiFi instance
+    options.setData(wifi);
+    // set right bottom corner
+    options.setHorizontalAlignment(HorizontalAlignment.Right);
+    options.setVerticalAlignment(VerticalAlignment.Bottom);
+    options.setMargin(new Padding(10));
+    options.setWidth(100);
+    options.setHeight(100);
 
-// create options
-QrCodeSignOptions options = new QrCodeSignOptions();
-
-options.setEncodeType(QrCodeTypes.QR);
-// setup Data property to WiFi object instance
-options.setData(wifi);
-// set right bottom corner
-options.setHorizontalAlignment(HorizontalAlignment.Right);
-options.setVerticalAlignment(VerticalAlignment.Bottom);
-options.setWidth(100);
-options.setHeight(100);
-options.setMargin(new Padding(10));
-
-
-// sign document to image file
-signature.sign("output.png", options);
-
+    // sign document to file
+    signature.sign("output.png", options);
+} finally {
+    signature.dispose();
+}
 ```
 
 ## Sign PDF with SMS data information in the QR-Code
@@ -360,27 +365,29 @@ This example shows how to esign PDF with QR Code SMS data on the PDF page. This 
 
 ```java
 Signature signature = new Signature("sample.pdf");
+try {
+    // create SMS object
+    SMS sms = new SMS();
+    sms.setNumber("0800 048 0408");
+    sms.setMessage("Document approval automatic SMS message");
 
-// create SMS object
-SMS sms = new SMS();
-sms.setNumber("0800 048 0408");
-sms.setMessage("Document approval automatic SMS message");
+    // create options
+    QrCodeSignOptions options = new QrCodeSignOptions();
+    options.setEncodeType(QrCodeTypes.QR);
+    // setup Data property to the SMS instance
+    options.setData(sms);
+    // set right bottom corner
+    options.setHorizontalAlignment(HorizontalAlignment.Right);
+    options.setVerticalAlignment(VerticalAlignment.Bottom);
+    options.setMargin(new Padding(10));
+    options.setWidth(100);
+    options.setHeight(100);
 
-// create options
-QrCodeSignOptions options = new QrCodeSignOptions();
-options.setEncodeType(QrCodeTypes.QR);
-	// setup Data property to Address instance
-options.setData(sms);
-	// set right bottom corner
-options.setHorizontalAlignment(HorizontalAlignment.Right);
-options.setVerticalAlignment(VerticalAlignment.Bottom);
-options.setWidth(100);
-options.setHeight(100);
-options.setMargin(new Padding(10));
-
-// sign document to file
-signature.sign("output.pdf", options);
-
+    // sign document to file
+    signature.sign("output.pdf", options);
+} finally {
+    signature.dispose();
+}
 ```
 
 ## More resources

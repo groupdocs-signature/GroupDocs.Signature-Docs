@@ -21,8 +21,7 @@ try
 {
     Signature signature = new Signature("sample.xlsx");
      
-    DigitalSignOptions options = new DigitalSignOptions();
-    options.setCertificateGuid("certificate.pfx");
+    DigitalSignOptions options = new DigitalSignOptions("certificate.pfx");
     options.setImageFilePath("image.png");
     // skip password specification
     //options.setPassword("123456780");

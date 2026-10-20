@@ -34,7 +34,7 @@ Here are the steps to save signed Image document to different output type with [
 
 *   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path or stream as a constructor parameter.    
 *   Instantiate required signature options.
-*   Instantiate the `ImageSaveOptions` object according to your requirements and specify [FileFormat](https://reference.groupdocs.com/net/signature/groupdocs.signature.options/imagesaveoptions/properties/fileformat) as one of predefined values from `ImageSaveFileFormat`.  
+*   Instantiate the `ImageSaveOptions` object according to your requirements and set the file format with `setFileFormat` to one of the predefined values from `ImageSaveFileFormat`.  
 *   Call [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and pass signatureoptions and object `ImageSaveOptions` to it.
     
 
@@ -48,8 +48,8 @@ signOptions.setEncodeType(QrCodeTypes.QR);
 signOptions.setLeft(100);
 signOptions.setTop(100);
  
-ImagesSaveOptions saveOptions = new ImagesSaveOptions();
-saveOptions.setFileFormat(ImagesSaveFileFormat.Svg);
+ImageSaveOptions saveOptions = new ImageSaveOptions();
+saveOptions.setFileFormat(ImageSaveFileFormat.Svg);
 saveOptions.setOverwriteExistingFiles(true);
 // sign document to file
 signature.sign("signed.svg", signOptions, saveOptions);

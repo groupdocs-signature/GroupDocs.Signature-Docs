@@ -73,7 +73,7 @@ try
     signOptions.setBackground(background);                    
     
     // sign document   
-    ignResult signResult = signature.sign("SampleSigned.docx", signOptions);
+    SignResult signResult = signature.sign("SampleSigned.docx", signOptions);
     // analyzing result
     System.out.print("List of newly created signatures:");
     int number = 1;

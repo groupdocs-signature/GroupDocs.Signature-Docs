@@ -30,7 +30,7 @@ structuredData:
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides different classes of signatures to manipulate and delete them from the documents over [delete](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#delete-java.io.OutputStream-com.groupdocs.signature.domain.signatures.BaseSignature-)  method.
 
-Please be aware that [delete](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#delete-java.io.OutputStream-com.groupdocs.signature.domain.signatures.BaseSignature-)  method modifies the same document that was passed to constructor of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class. This method returns [DeleteResult](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/deleteresult/) object that contains list of successfully updated signatures and ones that failed. The signature could be failed to delete due to several reasons:
+The [delete](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#delete-java.io.OutputStream-com.groupdocs.signature.domain.signatures.BaseSignature-) method writes the changed document to the file path or stream that you pass to it. To change the source document itself, pass the same path that you passed to the [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) constructor. This method returns [DeleteResult](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/deleteresult/) object that contains list of successfully updated signatures and ones that failed. The signature could be failed to delete due to several reasons:
 
 *   if signature object was initialized with constructor by incorrect signature identifier;
 *   if signature object was not found;
@@ -57,7 +57,7 @@ This example shows how to delete multiple signatures that was found using  [se
 
 ```java
 // initialize Signature instance
-Signature signature = new Signature("signed.docx")
+Signature signature = new Signature("signed.docx");
  
 // define few search options
 BarcodeSearchOptions barcodeOptions = new BarcodeSearchOptions();

@@ -72,7 +72,7 @@ SignatureFont signatureFont = new SignatureFont();
 signatureFont.setSize(12);
 signatureFont.setFamilyName("Comic Sans MS");
 options.setFont(signatureFont);
- 
+ 
 // sign document to file
 signature.sign("signed.pdf", options);
 ```
