@@ -2,7 +2,7 @@
 id: esign-document-with-stamp-signature
 url: signature/java/esign-document-with-stamp-signature
 title: eSign document with Stamp signature
-linkTitle: ✎ Stamp
+linkTitle: Stamp
 weight: 8
 description: "This article explains how to sign document electronically with generated Stamp signatures by GroupDocs.Signature API."
 keywords: sign document electronically, Stamp signatures
@@ -10,14 +10,14 @@ productName: GroupDocs.Signature for Java
 structuredData:
     showOrganization: True
     application:    
-        name: Documents signing with stamps in C#    
-        description: Sign documents with generate stamps and C# language by GroupDocs.Signature for Java APIs
+        name: Documents signing with stamps in Java    
+        description: Sign documents with generate stamps and Java language by GroupDocs.Signature for Java APIs
         productCode: signature
         productPlatform: java 
     showVideo: True
     howTo:
-        name: How to sign any documents with stamps using C# 
-        description: Learn all about signing a document by using stamps and C#
+        name: How to sign any documents with stamps using Java 
+        description: Learn all about signing a document by using stamps and Java
         steps:
         - name: Load file which is planned to be signed
           text: Create Signature object by passing file path or stream as a constructor parameter.
@@ -33,7 +33,7 @@ Every stamp signature can have multiple "stamp lines" with custom text and diffe
 
 ![](/signature/java/images/esign-document-with-stamp-signature.png)
 
-[GroupDocs.Signature](https://products.groupdocs.com/signature/java) provides [StampSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/StampSignOptions) class to specify different options for Stamp signature:
+[GroupDocs.Signature](https://products.groupdocs.com/signature/java) provides [StampSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/stampsignoptions/) class to specify different options for Stamp signature:
 
 *   Stamp type - Round or Square;
 *   Height and width in pixels;
@@ -44,9 +44,9 @@ Each Stamp option contains inner and outer lines. Inner lines represent vertical
 
 Here are the steps to add Stamp signature into document with GroupDocs.Signature:
 
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.    
-*   Instantiate the [StampSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/StampSignOptions) object according to your requirements and specify appropriate options.    
-*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [StampSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/StampSignOptions) to it.
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path as a constructor parameter.    
+*   Instantiate the [StampSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/stampsignoptions/) object according to your requirements and specify appropriate options.    
+*   Call [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and pass [StampSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/stampsignoptions/) to it.
     
 
 ## How to eSign document with Stamp signature 
@@ -105,5 +105,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

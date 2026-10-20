@@ -2,29 +2,29 @@
 id: locating-signature-with-different-alignments
 url: signature/java/locating-signature-with-different-alignments
 title: Locating signature with different alignments
-linkTitle: 🌐 Alignments
+linkTitle: Alignments
 weight: 2
 description: " This article explains how to use different alignment values to locate signature on document page with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for Java
 hideChildren: False
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides ability to align signature on page with horizontal and vertical alignment settings. Signature options that implement interface [IAlignment](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.interfaces/IAlignment) contain following properties:
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides ability to align signature on page with horizontal and vertical alignment settings. Signature options that implement interface [IAlignment](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.interfaces/ialignment/) contain following properties:
 
-*   [getHorizontalAlignment](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.interfaces/IAlignment#getHorizontalAlignment()) - property of enumeration type [HorizontalAlignment](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/HorizontalAlignment) to specify horizontal alignment of signature. Values are [None, Left, Center, Right](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/HorizontalAlignment)
-*   [getVerticalAlignment](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.interfaces/IAlignment#getVerticalAlignment()) - property of enumeration type [VerticalAlignment](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/VerticalAlignment) to specify vertical alignment of signature. Values are [None, Top, Center, Bottom](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/VerticalAlignment)
-*   [getMargin](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.interfaces/IAlignment#getMargin())\- property of class [Padding](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain/Padding) to specify offset for signature alignment. Fields of class are [Left, Top, Right, Bottom](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain/Padding) to specify offset in measure units from alignment area.
-*   [getMarginMeasureType](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.interfaces/IAlignment#getMarginMeasureType()) - property of enumeration type [MeasureType](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/MeasureType) with values ([Pixels, Millimeters, Percents](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/MeasureType)). See more details in this example [Locating signature on page with different measure units]({{< ref "signature/java/developer-guide/advanced-usage/signing/locating-signature-on-document-page/_index.md" >}})
+*   [getHorizontalAlignment](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.interfaces/ialignment/#getHorizontalAlignment--) - property of enumeration type [HorizontalAlignment](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/horizontalalignment/) to specify horizontal alignment of signature. Values are [None, Left, Center, Right](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/horizontalalignment/)
+*   [getVerticalAlignment](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.interfaces/ialignment/#getVerticalAlignment--) - property of enumeration type [VerticalAlignment](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/verticalalignment/) to specify vertical alignment of signature. Values are [None, Top, Center, Bottom](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/verticalalignment/)
+*   [getMargin](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.interfaces/ialignment/#getMargin--)\- property of class [Padding](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/padding/) to specify offset for signature alignment. Fields of class are [Left, Top, Right, Bottom](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/padding/) to specify offset in measure units from alignment area.
+*   [getMarginMeasureType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.interfaces/ialignment/#getMarginMeasureType--) - property of enumeration type [MeasureType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/measuretype/) with values ([Pixels, Millimeters, Percents](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/measuretype/)). See more details in this example [Locating signature on page with different measure units]({{< ref "signature/java/developer-guide/advanced-usage/signing/locating-signature-on-document-page/_index.md" >}})
 
 Here are the steps to align signature on page with GroupDocs.Signature:
 
-*   Create a new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path or stream as a constructor parameter.    
-*   Instantiate signature options ([ImageSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions) for example) with all required properties.    
-*   Set  [setHorizontalAlignment](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.interfaces/IAlignment#setHorizontalAlignment(int)) with one of enumeration value to align signature along page width
-*   Set  [setVerticalAlignment](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.interfaces/IAlignment#setVerticalAlignment(int)) with one of enumeration value to align signature along page height
-*   Set  [setMargin](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.interfaces/IAlignment#setMargin(com.groupdocs.signature.domain.Padding)) property with required offsetfrom page border
-*   Set  [setMarginMeasureType](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.interfaces/IAlignment#setMarginMeasureType(int)) property with non default value if there is need to specify offset from page border in another measure units like millimeters and page percents (from 100% width and 100% height)      
-*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20java.util.List)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass the instance of signature options ([ImageSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions) for example) to it.
+*   Create a new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path or stream as a constructor parameter.    
+*   Instantiate signature options ([ImageSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/imagesignoptions/) for example) with all required properties.    
+*   Set  [setHorizontalAlignment](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.interfaces/ialignment/#setHorizontalAlignment-int-) with one of enumeration value to align signature along page width
+*   Set  [setVerticalAlignment](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.interfaces/ialignment/#setVerticalAlignment-int-) with one of enumeration value to align signature along page height
+*   Set  [setMargin](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.interfaces/ialignment/#setMargin-com.groupdocs.signature.domain.Padding-) property with required offsetfrom page border
+*   Set  [setMarginMeasureType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.interfaces/ialignment/#setMarginMeasureType-int-) property with non default value if there is need to specify offset from page border in another measure units like millimeters and page percents (from 100% width and 100% height)      
+*   Call [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-java.util.List-com.groupdocs.signature.options.sign.SignOptions--) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and pass the instance of signature options ([ImageSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/imagesignoptions/) for example) to it.
 
 This example shows how to locate signature with different alignments.
 
@@ -84,5 +84,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

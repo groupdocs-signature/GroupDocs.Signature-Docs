@@ -2,7 +2,7 @@
 id: delete-signatures-of-the-certain-types
 url: signature/java/delete-signatures-of-the-certain-types
 title: Delete Signatures of the certain types
-linkTitle: ✖ By Type
+linkTitle: By Type
 weight: 6
 description: "This article explains how to delete electronic signatures of the certain types with GroupDocs.Signature API."
 keywords: 
@@ -26,13 +26,13 @@ structuredData:
         - name: Delete demanded signature types. 
           text: Invoke Delete method and analyze DeleteResult instance.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides overloaded [deleteByTypes](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#deleteByTypes(java.io.OutputStream,%20java.util.List)) method that accepts list of the [SignatureType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/SignatureType) enumeration values.
-Please be aware that this method modifies the same document that was passed to constructor of the [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) class.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides overloaded [deleteByTypes](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#deleteByTypes-java.io.OutputStream-java.util.List-java.lang.Integer--) method that accepts list of the [SignatureType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/signaturetype/) enumeration values.
+Please be aware that this method modifies the same document that was passed to constructor of the [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class.
 
 Here are the steps to delete signature by certain types from the document with GroupDocs.Signature:
 
-* Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) class and pass source document path or its stream as a constructor parameter;
-* Call [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) object [deleteByTypes](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#deleteByTypes(java.io.OutputStream,%20java.util.List))  method and pass list of the required [SignatureType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/SignatureType) enumerations to it.
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path or its stream as a constructor parameter;
+* Call [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) object [deleteByTypes](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#deleteByTypes-java.io.OutputStream-java.util.List-java.lang.Integer--)  method and pass list of the required [SignatureType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/signaturetype/) enumerations to it.
 
 This example shows how to delete various signatures types from the document at once.
 
@@ -84,6 +84,6 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.
+Along with full-featured Java library we provide simple, but powerful free Apps.
 
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

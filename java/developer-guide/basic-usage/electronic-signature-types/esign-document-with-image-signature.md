@@ -2,7 +2,7 @@
 id: esign-document-with-image-signature
 url: signature/java/esign-document-with-image-signature
 title: eSign document with Image signature
-linkTitle: ✎ Image
+linkTitle: Image
 weight: 4
 description: "This article demonstrates how to add signature image on document page with GroupDocs.Signature."
 keywords: signature image, add signature image, how to add signature image
@@ -32,13 +32,13 @@ structuredData:
 An **image** as signature is alternative way to put any presenting data in a visual form. This electronic signature type allows to create custom image with company logo, sender' initials, names or make a company stamp icon in it,  
 ![](/signature/java/images/esign-document-with-image-signature.png)
 
-[GroupDocs.Signature](https://products.groupdocs.com/signature/java) provides [ImageSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions) class to specify different settings for Image signature such as image content by file or stream, location, colors and advanced effects.
+[GroupDocs.Signature](https://products.groupdocs.com/signature/java) provides [ImageSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/imagesignoptions/) class to specify different settings for Image signature such as image content by file or stream, location, colors and advanced effects.
 
 Here are the steps to create Image signature on document page:
 
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter;    
-*   Instantiate the [ImageSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions) object according to your requirements and specify Image signature options;    
-*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature)  class instance and pass [ImageSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions) to it.
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path as a constructor parameter;    
+*   Instantiate the [ImageSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/imagesignoptions/) object according to your requirements and specify Image signature options;    
+*   Call [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/)  class instance and pass [ImageSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/imagesignoptions/) to it.
     
 
 ## How to eSign document with Image signature
@@ -79,5 +79,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

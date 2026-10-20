@@ -2,7 +2,7 @@
 id: searching-for-document-signatures-excluding-external-components
 url: signature/java/searching-for-document-signatures-excluding-external-components
 title: Searching for document signatures excluding external components
-linkTitle: 🌐 External components
+linkTitle: External components
 weight: 10
 description: "This article explains how to search with excluding non-signature components like native documents text, images or barcodes that are the part of document content."
 keywords: 
@@ -28,28 +28,28 @@ structuredData:
         - name: Process list of found items
           text: Loop through list of found items and process in desirable way.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides boolean property [setSkipExternal](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/SearchOptions#setSkipExternal(boolean)) of [SearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/SearchOptions) class to specify if searching process should exclude external signatures (external signatures are the signatures that were added with an 3rd party software and not with GroupDocs.Signature).
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides boolean property [setSkipExternal](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/searchoptions/#setSkipExternal-boolean-) of [SearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/searchoptions/) class to specify if searching process should exclude external signatures (external signatures are the signatures that were added with an 3rd party software and not with GroupDocs.Signature).
 
-Since 20.3 version every time when document is being signed information about document signatures are stored in document's metadata. Which means that all created signatures by GroupDocs.Signature can be distinguished from an actual document content and [setSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/BaseSignature#setSignature(boolean)) flag will be set as true. [setSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/BaseSignature#setSignature(boolean)) property specifies if document component (text/image/barcode/qr-code) is the actual signature or element of document content.
+Since 20.3 version every time when document is being signed information about document signatures are stored in document's metadata. Which means that all created signatures by GroupDocs.Signature can be distinguished from an actual document content and [setSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/basesignature/#setSignature-boolean-) flag will be set as true. [setSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/basesignature/#setSignature-boolean-) property specifies if document component (text/image/barcode/qr-code) is the actual signature or element of document content.
 
-In order to convert signatures added by 3rd party software or by previous version of GroupDocs.Signature, just run [search](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions))with[setSkipExternal](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/SearchOptions#setSkipExternal(boolean)) property set to false (this is default value) and update [setSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/BaseSignature#setSignature(boolean)) for each signature returned by the search result.
+In order to convert signatures added by 3rd party software or by previous version of GroupDocs.Signature, just run [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#-T-search-java.lang.Class-T--com.groupdocs.signature.options.search.SearchOptions-)with[setSkipExternal](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/searchoptions/#setSkipExternal-boolean-) property set to false (this is default value) and update [setSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/basesignature/#setSignature-boolean-) for each signature returned by the search result.
 
 There are few ways to manipulate with document signature search results:
 
-*   If signature is no longer required it can be removed from the document by [delete](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#delete(java.io.OutputStream,%20java.util.List)) method;
-*   Signature could be marked as document native content by setting up [setSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/BaseSignature#setSignature(boolean)) = false property,in this case [setSkipExternal](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/SearchOptions#setSkipExternal(boolean)) field will allow [search](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method to skip this signature;
-*   Signatures that were added before 20.3 are treated as non signatures because information about them are not yet stored in the document. Setting [setSkipExternal](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/SearchOptions#setSkipExternal(boolean)) flag to true will exclude these signatures from [Search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#search(int...))result.
+*   If signature is no longer required it can be removed from the document by [delete](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#delete-java.io.OutputStream-java.util.List-com.groupdocs.signature.domain.signatures.BaseSignature--) method;
+*   Signature could be marked as document native content by setting up [setSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/basesignature/#setSignature-boolean-) = false property,in this case [setSkipExternal](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/searchoptions/#setSkipExternal-boolean-) field will allow [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#-T-search-java.lang.Class-T--com.groupdocs.signature.options.search.SearchOptions-) method to skip this signature;
+*   Signatures that were added before 20.3 are treated as non signatures because information about them are not yet stored in the document. Setting [setSkipExternal](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/searchoptions/#setSkipExternal-boolean-) flag to true will exclude these signatures from [Search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#search-int...-)result.
 
 Here are the steps to search for signatures and exclude external components of the document with GroupDocs.Signature:
 
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.
-*   Instantiate the [SearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/SearchOptions) object according to your requirements and specify [setSkipExternal ](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/SearchOptions#setSkipExternal(boolean)) to true 
-*   Call [search](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions))  method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [SearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/SearchOptions) to it.
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path as a constructor parameter.
+*   Instantiate the [SearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/searchoptions/) object according to your requirements and specify [setSkipExternal ](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/searchoptions/#setSkipExternal-boolean-) to true 
+*   Call [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#-T-search-java.lang.Class-T--com.groupdocs.signature.options.search.SearchOptions-)  method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and pass [SearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/searchoptions/) to it.
     
 
 ## Excluding external signatures from search
 
-Following example demonstrates usage of [setSkipExternal ](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/SearchOptions#setSkipExternal(boolean))  property for excluding non actual signatures from search result
+Following example demonstrates usage of [setSkipExternal ](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/searchoptions/#setSkipExternal-boolean-)  property for excluding non actual signatures from search result
 
 **Using SearchOptions SkipExternal property to exclude non actual signatures from search**
 
@@ -83,7 +83,7 @@ catch (Exception ex) {
 
 ## Updating signatures from GroupDocs.Signature 20.3 and below
 
-Following examples shows the way to mark signatures in document as actual signatures ([setSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/BaseSignature#setSignature(boolean)) = true)
+Following examples shows the way to mark signatures in document as actual signatures ([setSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/basesignature/#setSignature-boolean-) = true)
 
 **How to mark signatures in document as actual signatures**
 
@@ -148,5 +148,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

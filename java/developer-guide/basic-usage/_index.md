@@ -4,7 +4,7 @@ url: signature/java/basic-usage
 title: Basic usage
 weight: 1
 description: "Quick Start section about main features of GroupDocs.Signature API, describes how to sign documents with just couple lines of code."
-keywords: GroupDocs.Signature Quick Start, GroupDocs.Signature .NET Basic Usage, GroupDocs.Signature Quick Start C#, GroupDocs.Signature Get Started
+keywords: GroupDocs.Signature Quick Start, GroupDocs.Signature Java Basic Usage, GroupDocs.Signature Quick Start Java, GroupDocs.Signature Get Started
 productName: GroupDocs.Signature for Java
 hideChildren: False
 structuredData:
@@ -14,7 +14,7 @@ structuredData:
 
 Here are main GroupDocs Signature API concepts:
 
-*   [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) is the main class that contains all required methods for manipulating with document e-signatures.    
+*   [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) is the main class that contains all required methods for manipulating with document e-signatures.    
 *   Most part of methods expects different options to eSign document, verify and search electronic signatures inside document.
     
 
@@ -33,7 +33,7 @@ import com.groupdocs.signature.domain.extensions;
 
 ## Signature object definition
 
-The following code shows most used code pattern to define [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) object and call its methods.
+The following code shows most used code pattern to define [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) object and call its methods.
 
 ```java
 // Sign document with text signature.

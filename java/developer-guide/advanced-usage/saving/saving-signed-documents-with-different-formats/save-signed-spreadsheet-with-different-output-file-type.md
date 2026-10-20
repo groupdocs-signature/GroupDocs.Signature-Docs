@@ -2,7 +2,7 @@
 id: save-signed-spreadsheet-with-different-output-file-type
 url: signature/java/save-signed-spreadsheet-with-different-output-file-type
 title: Save signed Spreadsheet with different output file type
-linkTitle: Spreadsheet → format
+linkTitle: Spreadsheet to other formats
 weight: 4
 description: "This article explains how to save signed Spreadsheet document with various file formats by GroupDocs.Signature API."
 keywords: 
@@ -28,14 +28,14 @@ structuredData:
         - name: Obtain signed Spreadsheet document in required format
           text: Get the output document in requested format.
 ---
-[Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class supports saving of Spreadsheet signed documents with different output file types. Each document type has list of compatible saving type. These values are listed in enum [SpreadsheetSaveFileFormat.](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/SpreadsheetSaveFileFormat)
+[Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class supports saving of Spreadsheet signed documents with different output file types. Each document type has list of compatible saving type. These values are listed in enum [SpreadsheetSaveFileFormat.](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/spreadsheetsavefileformat/)
 
 Here are the steps to save signed Spreadsheet document to different output type with [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java):
 
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path or stream as a constructor parameter.    
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path or stream as a constructor parameter.    
 *   Instantiate required signature options.    
-*   Instantiate the [SpreadsheetSaveOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/SpreadsheetSaveOptions) object according to your requirements and specify [setFileFormat](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/SpreadsheetSaveOptions#setFileFormat(int)) as one of predefined values from [SpreadsheetSaveFileFormat](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/SpreadsheetSaveFileFormat).
-*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass signatureoptions and [SpreadsheetSaveOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/SpreadsheetSaveOptions) object to it.
+*   Instantiate the [SpreadsheetSaveOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.saveoptions/spreadsheetsaveoptions/) object according to your requirements and specify [setFileFormat](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.saveoptions/spreadsheetsaveoptions/#setFileFormat-int-) as one of predefined values from [SpreadsheetSaveFileFormat](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/spreadsheetsavefileformat/).
+*   Call [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and pass signatureoptions and [SpreadsheetSaveOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.saveoptions/spreadsheetsaveoptions/) object to it.
     
 
 Following example demonstrates how to save signed Spreadsheet document with different output type
@@ -71,5 +71,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

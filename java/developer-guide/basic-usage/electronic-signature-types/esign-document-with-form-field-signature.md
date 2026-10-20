@@ -2,7 +2,7 @@
 id: esign-document-with-form-field-signature
 url: signature/java/esign-document-with-form-field-signature
 title: eSign document with Form Field signature
-linkTitle: ✎ Form Field
+linkTitle: Form Field
 weight: 3
 description: "This article explains how to add various types of Form Field signatures on document page with options on component positioning, alignment and other visual options with GroupDocs.Signature"
 keywords: form fields, add various types of Form Field signature, component positioning
@@ -34,20 +34,20 @@ A **form field** is the interactive element located on document page that al
 
 ## How to eSign document with Form Field signature
 
-[GroupDocs.Signature](https://products.groupdocs.com/signature/java) for Java supports creation of new form fields or update existing ones within the documents. Class [FormFieldSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/FormFieldSignOptions) specifies different options for Form Field signature.   
-The [FormFieldSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/FormFieldSignOptions)  class contains one [FormFieldSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures.formfield/FormFieldSignature) object to put to the document.  
-Here are the list of different Form Field signature classes that could be set to [FormFieldSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures.formfield/FormFieldSignature) 
+[GroupDocs.Signature](https://products.groupdocs.com/signature/java) for Java supports creation of new form fields or update existing ones within the documents. Class [FormFieldSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/formfieldsignoptions/) specifies different options for Form Field signature.   
+The [FormFieldSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/formfieldsignoptions/)  class contains one [FormFieldSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.formfield/formfieldsignature/) object to put to the document.  
+Here are the list of different Form Field signature classes that could be set to [FormFieldSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.formfield/formfieldsignature/) 
 
-*   [TextFormFieldSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures.formfield/TextFormFieldSignature) - represents text input form field on document page.      
-*   [CheckboxFormFieldSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures.formfield/CheckboxFormFieldSignature) - represents check box field on the document page.
-*   [DigitalFormFieldSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures.formfield/DigitalFormFieldSignature) - represents digital signature input form on document page. 
+*   [TextFormFieldSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.formfield/textformfieldsignature/) - represents text input form field on document page.      
+*   [CheckboxFormFieldSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.formfield/checkboxformfieldsignature/) - represents check box field on the document page.
+*   [DigitalFormFieldSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.formfield/digitalformfieldsignature/) - represents digital signature input form on document page. 
 
 Here are the steps to add Form Field signatures into document with GroupDocs.Signature:
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter;
-*   Instantiate the [FormFieldSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/FormFieldSignOptions) object according to your requirements;    
-*   Instantiate one of the objects  - [TextFormFieldSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures.formfield/TextFormFieldSignature), [CheckboxFormFieldSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures.formfield/CheckboxFormFieldSignature) or [DigitalFormFieldSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures.formfield/DigitalFormFieldSignature);    
-*   Set [FormFieldSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/FormFieldSignOptions) Signature property with created object;      
-*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions))  method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [FormFieldSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/FormFieldSignOptions) to it.    
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path as a constructor parameter;
+*   Instantiate the [FormFieldSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/formfieldsignoptions/) object according to your requirements;    
+*   Instantiate one of the objects  - [TextFormFieldSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.formfield/textformfieldsignature/), [CheckboxFormFieldSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.formfield/checkboxformfieldsignature/) or [DigitalFormFieldSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.formfield/digitalformfieldsignature/);    
+*   Set [FormFieldSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/formfieldsignoptions/) Signature property with created object;      
+*   Call [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-)  method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and pass [FormFieldSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/formfieldsignoptions/) to it.    
 
 *NOTE: At the moment GroupDocs.Signature supports creation of Form Field signatures for PDF documents only.*
 
@@ -91,5 +91,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

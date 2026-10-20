@@ -2,7 +2,7 @@
 id: esign-word-processing-document-with-metadata-signatur
 url: signature/java/esign-word-processing-document-with-metadata-signatur
 title: eSign Word Processing document with Metadata signatur
-linkTitle: ✎ Words Metadata
+linkTitle: Words Metadata
 weight: 5
 description: "This article explains how to sign Word Processing document with metadata signatures by GroupDocs.Signature."
 keywords: 
@@ -26,17 +26,17 @@ structuredData:
         - name: Sign source file and save result 
           text: Invoke Sign method with array of signing options and output file path or stream.
 ---
-[GroupDocs.Signature](https://products.groupdocs.com/signature/java) provides [WordProcessingMetadataSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures.metadata/WordProcessingMetadataSignature) class to specify different Metadata signature objects for [MetadataSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/MetadataSignOptions) instance to sign Word Processing document files.   
+[GroupDocs.Signature](https://products.groupdocs.com/signature/java) provides [WordProcessingMetadataSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/wordprocessingmetadatasignature/) class to specify different Metadata signature objects for [MetadataSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/metadatasignoptions/) instance to sign Word Processing document files.   
 Word Processing document metadata is hidden attributes, some of them are visible only over viewing standard document properties like Author, Creation Date, Producer, Entry, Keywords etc.  
 Word Processing document metadata contains pair of Name and Value, Name should be unique within the document.  
 Word Processing document metadata could keep big amount of data that allows provides ability to keep serialized custom objects with additional encryption in there.
 
 Here are the steps to add metadata signatures into Word Processing document with GroupDocs.Signature:
 
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.    
-*   Instantiate the [MetadataSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/MetadataSignOptions) object according to your requirements.    
-*   Instantiate one or several[WordProcessingMetadataSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures.metadata/WordProcessingMetadataSignature) objects and add them into [MetadataSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/MetadataSignOptions) to metadata signatures collection ([getSignatures](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/MetadataSignOptions#getSignatures())) via [add](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures.metadata/MetadataSignatureCollection#add(com.groupdocs.signature.domain.signatures.metadata.MetadataSignature)) or addRange method.    
-*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [MetadataSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/MetadataSignOptions) to it. 
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path as a constructor parameter.    
+*   Instantiate the [MetadataSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/metadatasignoptions/) object according to your requirements.    
+*   Instantiate one or several[WordProcessingMetadataSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/wordprocessingmetadatasignature/) objects and add them into [MetadataSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/metadatasignoptions/) to metadata signatures collection ([getSignatures](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/metadatasignoptions/#getSignatures--)) via [add](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/metadatasignaturecollection/#add-com.groupdocs.signature.domain.signatures.metadata.MetadataSignature-) or addRange method.    
+*   Call [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and pass [MetadataSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/metadatasignoptions/) to it. 
     
 
 ## How to eSign Word Processing document with Metadata signature
@@ -82,5 +82,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

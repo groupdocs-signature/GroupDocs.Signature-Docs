@@ -24,6 +24,6 @@ Following are the links to some useful resources you may need to accomplish your
 *   [GroupDocs.Signature for Java Product Page](https://products.groupdocs.com/signature/java)
 *   [GroupDocs.Signature for Java Releases](https://releases.groupdocs.com/signature/java/)
 *   [GroupDocs.Signature for Java Maven Repository](https://releases.groupdocs.com/java/repo/com/groupdocs/groupdocs-signature/)
-*   [GroupDocs.Signature for Java API Reference Guide](https://reference.groupdocs.com/java/signature)
+*   [GroupDocs.Signature for Java API Reference Guide](https://reference.groupdocs.com/signature/java/)
 *   [GroupDocs.Signature for Java Free Support Forum](https://forum.groupdocs.com/c/signature)
 *   [GroupDocs.Signature for Java Paid Support Helpdesk](https://helpdesk.groupdocs.com/)

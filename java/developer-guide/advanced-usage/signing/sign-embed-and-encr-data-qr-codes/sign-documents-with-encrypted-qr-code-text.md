@@ -8,13 +8,13 @@ keywords:
 productName: GroupDocs.Signature for Java
 hideChildren: False
 ---
-GroupDocs.Signature provides ability to secure QR-code signature text with standard or custom encryption. Standard encryption is implemented over class [SymmetricEncryption](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.extensions.encryption/SymmetricEncryption) class. Creation of this object expects 3 arguments like encryption algorithm enumeration [SymmetricAlgorithmType](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.extensions.encryption/SymmetricAlgorithmType) with one of following values ([DES, TripleDES, RC2, Rijndael](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.extensions.encryption/SymmetricAlgorithmType)), string value key and string value salt.
+GroupDocs.Signature provides ability to secure QR-code signature text with standard or custom encryption. Standard encryption is implemented over class [SymmetricEncryption](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.encryption/symmetricencryption/) class. Creation of this object expects 3 arguments like encryption algorithm enumeration [SymmetricAlgorithmType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.encryption/symmetricalgorithmtype/) with one of following values ([DES, TripleDES, RC2, Rijndael](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.encryption/symmetricalgorithmtype/)), string value key and string value salt.
 
 Here are the steps to secure QR-code text with standard encryption with GroupDocs.Signature:
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature)  class and pass source document path or stream as a constructor parameter.    
-*   Compose object of [SymmetricEncryption](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.extensions.encryption/SymmetricEncryption) class with required algorithm and secure pair key/salt      
-*   Create objects of [QrCodeSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/QrCodeSignOptions) class and setup property [setDataEncryption](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/QrCodeSignOptions#setDataEncryption(com.groupdocs.signature.domain.extensions.encryption.IDataEncryption)) with object of [SymmetricEncryption](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.extensions.encryption/SymmetricEncryption)       
-*   Call [Sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [QrCodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/QrCodeSignOptions) to it.
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/)  class and pass source document path or stream as a constructor parameter.    
+*   Compose object of [SymmetricEncryption](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.encryption/symmetricencryption/) class with required algorithm and secure pair key/salt      
+*   Create objects of [QrCodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/qrcodesignoptions/) class and setup property [setDataEncryption](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/qrcodesignoptions/#setDataEncryption-com.groupdocs.signature.domain.extensions.encryption.IDataEncryption-) with object of [SymmetricEncryption](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.encryption/symmetricencryption/)       
+*   Call [Sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and pass [QrCodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/qrcodesignoptions/) to it.
     
 
 This example shows how to sign document with secure QR-code signature text.
@@ -73,5 +73,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

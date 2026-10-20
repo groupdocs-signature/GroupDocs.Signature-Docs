@@ -2,7 +2,7 @@
 id: esign-document-with-multiple-signatures
 url: signature/java/esign-document-with-multiple-signatures
 title: eSign document with multiple signatures
-linkTitle: ✎ Multiple
+linkTitle: Multiple
 weight: 9
 description: "This article explains how to sign document with multiple signatures of various type by GroupDocs.Signature API"
 keywords: multiple signatures, sign document, how to sign document with multiple signatures
@@ -29,18 +29,18 @@ structuredData:
 [GroupDocs.Signature](https://products.groupdocs.com/signature/java) allows to sign document with several signatures simultaneously and even apply signatures of different types to the same document.   
 Doing this is as simple as:
 
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path or stream as a constructor parameter.    
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path or stream as a constructor parameter.    
 *   Instantiate required all required sign options objects dependent on signature type:    
-    *   [BarcodeSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/BarcodeSignOptions) - for Barcode signatures;
-    *   [DigitalSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/DigitalSignOptions) - for Digital signatures;
-    *   [FormFieldSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/FormFieldSignOptions) - for Form-field signatures;
-    *   [ImageSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions) - for Image signatures;
-    *   [MetadataSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/MetadataSignOptions) - for Metadata signatures;
-    *   [QrCodeSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/QrCodeSignOptions) - for QR-code signatures
-    *   [StampSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/StampSignOptions) - for Stamp signatures;
-    *   [TextSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions) - for Text signatures.
+    *   [BarcodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/barcodesignoptions/) - for Barcode signatures;
+    *   [DigitalSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/digitalsignoptions/) - for Digital signatures;
+    *   [FormFieldSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/formfieldsignoptions/) - for Form-field signatures;
+    *   [ImageSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/imagesignoptions/) - for Image signatures;
+    *   [MetadataSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/metadatasignoptions/) - for Metadata signatures;
+    *   [QrCodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/qrcodesignoptions/) - for QR-code signatures
+    *   [StampSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/stampsignoptions/) - for Stamp signatures;
+    *   [TextSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/textsignoptions/) - for Text signatures.
 *   Fill collection with sign options from previous step.  
-*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20java.util.List)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass collection of sign options to it.
+*   Call [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-java.util.List-com.groupdocs.signature.options.sign.SignOptions--) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and pass collection of sign options to it.
     
 This code snippet below demonstrates how to eSign PDF document with multiple signatures at the same time.
 
@@ -100,5 +100,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

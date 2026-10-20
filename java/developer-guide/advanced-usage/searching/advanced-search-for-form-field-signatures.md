@@ -2,7 +2,7 @@
 id: advanced-search-for-form-field-signatures
 url: signature/java/advanced-search-for-form-field-signatures
 title: Advanced search for Form Field signatures
-linkTitle: 🌐 Form Fields
+linkTitle: Form Fields
 weight: 7
 description: " This article explains how to provide advanced search for Form Field electronic signatures with GroupDocs.Signature API."
 keywords: 
@@ -28,13 +28,13 @@ structuredData:
         - name: Process list of found items
           text: Loop through list of found items and process in demanded way.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [FormFieldSearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/FormFieldSearchOptions) class to specify different options to search for Form Field Signatures.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [FormFieldSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/formfieldsearchoptions/) class to specify different options to search for Form Field Signatures.
 
 Here are the steps to search for Form Field signatures within the document with GroupDocs.Signature:
 
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.    
-*   Instantiate the [FormFieldSearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/FormFieldSearchOptions) object according to your requirements and specify search options      
-*   Call [search](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [FormFieldSearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/FormFieldSearchOptions) to it.
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path as a constructor parameter.    
+*   Instantiate the [FormFieldSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/formfieldsearchoptions/) object according to your requirements and specify search options      
+*   Call [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#-T-search-java.lang.Class-T--com.groupdocs.signature.options.search.SearchOptions-) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and pass [FormFieldSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/formfieldsearchoptions/) to it.
     
 
 This example shows how to make advanced search for Form Field signatures in the document.
@@ -72,5 +72,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

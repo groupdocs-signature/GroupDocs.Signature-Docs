@@ -2,25 +2,25 @@
 id: locating-signature-with-stretch-mode
 url: signature/java/locating-signature-with-stretch-mode
 title: Locating signature with stretch mode
-linkTitle: 🌐 Stretch Mode
+linkTitle: Stretch Mode
 weight: 3
 description: " This article explains how to use stretch mode values to adjust signature area positions on document page with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for Java
 hideChildren: False
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides ability to stretch signature area along page width or height. Use enumeration [StretchMode](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/StretchMode) contains following values
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides ability to stretch signature area along page width or height. Use enumeration [StretchMode](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/stretchmode/) contains following values
 
-*   [None](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/StretchMode#None) - no stretch will be applied 
-*   [PageWidth](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/StretchMode#PageWidth) -  to stretch signature area along page width
-*   [PageHeight](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/StretchMode#PageHeight) - to stretch signature area along page height
-*   [PageArea](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/StretchMode#PageArea) - to stretch signature area along page width and height
+*   [None](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/stretchmode/#None) - no stretch will be applied 
+*   [PageWidth](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/stretchmode/#PageWidth) -  to stretch signature area along page width
+*   [PageHeight](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/stretchmode/#PageHeight) - to stretch signature area along page height
+*   [PageArea](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/stretchmode/#PageArea) - to stretch signature area along page width and height
 
 Here are the steps to use stretch mode with adding text or images signatures into document with GroupDocs.Signature:
 
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.    
-*   Instantiate the [TextSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions) or [ImageSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions)  object with all required additional options and setup [setStretch](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions#setStretch(int)) property      
-*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20java.util.List)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and the instance of signature options ([ImageSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions) for example) to it.
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path as a constructor parameter.    
+*   Instantiate the [TextSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/textsignoptions/) or [ImageSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/imagesignoptions/)  object with all required additional options and setup [setStretch](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/imagesignoptions/#setStretch-int-) property      
+*   Call [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-java.util.List-com.groupdocs.signature.options.sign.SignOptions--) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and the instance of signature options ([ImageSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/imagesignoptions/) for example) to it.
     
 
 ## Locate Signature Area with Stretch Mode
@@ -84,5 +84,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

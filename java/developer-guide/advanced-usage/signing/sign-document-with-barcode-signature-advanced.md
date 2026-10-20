@@ -8,23 +8,23 @@ keywords:
 productName: GroupDocs.Signature for Java
 hideChildren: False
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [BarcodeSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/BarcodeSignOptions) class to specify additional options for Barcode signature to specify following signature appearance
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [BarcodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/barcodesignoptions/) class to specify additional options for Barcode signature to specify following signature appearance
 
-*   signature alignment ([setHorizontalAlignment](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions#setHorizontalAlignment(int)), [setVerticalAlignment](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions#setVerticalAlignment(int)))
-*   margins ([setMargin](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions#setMargin(com.groupdocs.signature.domain.Padding)))
-*   border and background settings ([setBorder,](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions#setBorder(com.groupdocs.signature.domain.Border)) [setBackground](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions#setBackground(com.groupdocs.signature.domain.Background)))
-*   font and colors ([setFont](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions#setFont(com.groupdocs.signature.domain.SignatureFont)), [setForeColor](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions#setForeColor(java.awt.Color)))
+*   signature alignment ([setHorizontalAlignment](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/textsignoptions/#setHorizontalAlignment-int-), [setVerticalAlignment](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/textsignoptions/#setVerticalAlignment-int-))
+*   margins ([setMargin](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/textsignoptions/#setMargin-com.groupdocs.signature.domain.Padding-))
+*   border and background settings ([setBorder,](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/textsignoptions/#setBorder-com.groupdocs.signature.domain.Border-) [setBackground](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/textsignoptions/#setBackground-com.groupdocs.signature.domain.Background-))
+*   font and colors ([setFont](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/textsignoptions/#setFont-com.groupdocs.signature.domain.SignatureFont-), [setForeColor](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/textsignoptions/#setForeColor-java.awt.Color-))
 
 Here are the steps to add Barcode signature into document with GroupDocs.Signature:
 
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.    
-*   Instantiate the  [BarcodeSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/BarcodeSignOptions) object with all required additional options.    
-*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [BarcodeSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/BarcodeSignOptions) to it. 
-*   Analyze [SignResult](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain/SignResult) result to check newly created signatures if needed.
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path as a constructor parameter.    
+*   Instantiate the  [BarcodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/barcodesignoptions/) object with all required additional options.    
+*   Call [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and pass [BarcodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/barcodesignoptions/) to it. 
+*   Analyze [SignResult](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/signresult/) result to check newly created signatures if needed.
 
   
 
-This example shows how to add Barcode signature to document. See [SignResult](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain/SignResult) 
+This example shows how to add Barcode signature to document. See [SignResult](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/signresult/) 
 
 ```java
 // instantiating the signature object
@@ -103,5 +103,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

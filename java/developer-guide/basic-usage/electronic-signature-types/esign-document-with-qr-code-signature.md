@@ -2,7 +2,7 @@
 id: esign-document-with-qr-code-signature
 url: signature/java/esign-document-with-qr-code-signature
 title: eSign document with QR-code signature
-linkTitle: ✎ QR Code
+linkTitle: QR Code
 weight: 6
 description: "This article explains how sign documents with electronic signature as QR code on document page with GroupDocs.Signature API."
 keywords: electronic signature, QR code 
@@ -45,13 +45,13 @@ QR-code (or Quick Response code) is a sort of two-dimensional [barcode]({{< ref
 | **Example** | ![](/signature/java/images/Aztec.png) | ![](/signature/java/images/DataMatrix.png) | ![](/signature/java/images/GS1.png) | ![](/signature/java/images/GS1_QR.png) | ![](/signature/java/images/QrCode2.png)
 
 
-While adding QR-code electronic signature to document [GroupDocs.Signature](https://products.groupdocs.com/signature/java) the main settings are text to be encoded and QR-code [type](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.qrcodes/QrCodeType#getTypeIndex()) which should be specified via [QrCodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/QrCodeSignOptions) class. 
+While adding QR-code electronic signature to document [GroupDocs.Signature](https://products.groupdocs.com/signature/java) the main settings are text to be encoded and QR-code [type](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.qrcodes/qrcodetype/#getTypeIndex--) which should be specified via [QrCodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/qrcodesignoptions/) class. 
 
 Here are the steps to eSign document with QR-code signature:
 
-*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.
-*   Instantiate the [QrCodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/QrCodeSignOptions) object according to your requirements and specify [EncodeType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/QrCodeSignOptions#setEncodeType(com.groupdocs.signature.domain.qrcodes.QrCodeType)) and [Text](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/TextSignOptions#setText(java.lang.String)) properties.
-*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [QrCodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/QrCodeSignOptions) to it.
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path as a constructor parameter.
+*   Instantiate the [QrCodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/qrcodesignoptions/) object according to your requirements and specify [EncodeType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/qrcodesignoptions/#setEncodeType-com.groupdocs.signature.domain.qrcodes.QrCodeType-) and [Text](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/textsignoptions/#setText-java.lang.String-) properties.
+*   Call [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and pass [QrCodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/qrcodesignoptions/) to it.
     
 
 The code snippet below demonstrates how to sign PDF document with QR-code signature.
@@ -94,5 +94,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

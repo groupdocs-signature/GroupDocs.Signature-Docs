@@ -29,23 +29,23 @@ structuredData:
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides ability to embed into QR-code signature standard entries like email, contact v-card, address etc. This feature supports standard QR-code representation of entries. At this moment following standard QR-code entries are supported
 
-* [Email](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/email/ ) entry that allows to specify in QR-code standard email information with recipient, subject and body.
-* [Address](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/address/ ) entry contains address information.
-* [V-Card](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/vcard/ ) entry implements standard of visit card 3.0 specification. More details could be found [here](https://en.wikipedia.org/wiki/VCard).
-* [Me-Card](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/mecard/ ) entry implements similar to V-Card contact details standard. More details could be found [here](https://en.wikipedia.org/wiki/MeCard_(QR_code)).
-* [EPC](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/epc/ ) implements standard of the European Payments Council guidelines define the content of a QR code that can be used to initiate [SEPA](https://en.wikipedia.org/wiki/SEPA_credit_transfer) credit transfer. More details could be found [here](https://en.wikipedia.org/wiki/EPC_QR_code).
-* [Event](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/event/ ) entry implements event standard.
+* [Email](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/email/) entry that allows to specify in QR-code standard email information with recipient, subject and body.
+* [Address](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/address/) entry contains address information.
+* [V-Card](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/vcard/) entry implements standard of visit card 3.0 specification. More details could be found [here](https://en.wikipedia.org/wiki/VCard).
+* [Me-Card](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/mecard/) entry implements similar to V-Card contact details standard. More details could be found [here](https://en.wikipedia.org/wiki/MeCard_(QR_code)).
+* [EPC](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/epc/) implements standard of the European Payments Council guidelines define the content of a QR code that can be used to initiate [SEPA](https://en.wikipedia.org/wiki/SEPA_credit_transfer) credit transfer. More details could be found [here](https://en.wikipedia.org/wiki/EPC_QR_code).
+* [Event](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/event/) entry implements event standard.
 * [CryptoCurrencyTransfer](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/cryptocurrencytransfer/) entry implements event standard.
 * [WiFi](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/wifi/) entry implements WiFI settings standard.
 * [SMS](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/sms/) entry implements sms properties.
 
 Here are the steps to embed standard entry into QR-code with GroupDocs.Signature:  
 
-* Create new instance of  [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature ) class and pass source document path as a constructor parameter.
+* Create new instance of  [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path as a constructor parameter.
 * Create new instance of one of standard entries class.
-* Create one or several objects of [QrCodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/QrCodeSignOptions ) object with [getData](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/QrCodeSignOptions#getData() ) value assigned with initialized standard object before.
-* Instantiate the  [QrCodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/QrCodeSignOptions )  object according to your requirements and custom object to [getData](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/QrCodeSignOptions#getData() ) property.
-* Call [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20java.util.List) ) method of  [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature )  class instance and pass [QrCodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/QrCodeSignOptions ) to it.
+* Create one or several objects of [QrCodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/qrcodesignoptions/) object with [getData](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/qrcodesignoptions/#getData--) value assigned with initialized standard object before.
+* Instantiate the  [QrCodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/qrcodesignoptions/)  object according to your requirements and custom object to [getData](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/qrcodesignoptions/#getData--) property.
+* Call [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-java.util.List-com.groupdocs.signature.options.sign.SignOptions--) method of  [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/)  class instance and pass [QrCodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/qrcodesignoptions/) to it.
 
 ## Sign PDF with email QR-code object
 
@@ -398,6 +398,6 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.
+Along with full-featured Java library we provide simple, but powerful free Apps.
 
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

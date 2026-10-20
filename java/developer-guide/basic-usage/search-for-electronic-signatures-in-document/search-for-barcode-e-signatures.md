@@ -2,7 +2,7 @@
 id: search-for-barcode-e-signatures
 url: signature/java/search-for-barcode-e-signatures
 title: Search for Barcode e-signatures
-linkTitle: 🔍 Barcodes
+linkTitle: Barcodes
 weight: 1
 description: "This article explains how to search for Barcode in the document with few lines of code over GroupDocs.Signature API."
 keywords: search for barcode, how to search for Barcode
@@ -27,15 +27,15 @@ structuredData:
           text: Loop through list of found barcodes.
 ---
 [GroupDocs.Signature](https://products.groupdocs.com/signature/java) provides an easy and straightforward way to find all Barcode signatures that are present in a document.  
-For the most simpler use case - just find all Barcode signatures within document its only needed to instantiate [BarcodeSearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/BarcodeSearchOptions) class and pass it to [search](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method.
+For the most simpler use case - just find all Barcode signatures within document its only needed to instantiate [BarcodeSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/barcodesearchoptions/) class and pass it to [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#-T-search-java.lang.Class-T--com.groupdocs.signature.options.search.SearchOptions-) method.
 
 Here are the exact steps to search for Barcode signatures within the document with GroupDocs.Signature:
 
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path as a constructor parameter.
     
-*   Instantiate the [BarcodeSearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/BarcodeSearchOptions) object according to your requirements and specify search options  
+*   Instantiate the [BarcodeSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/barcodesearchoptions/) object according to your requirements and specify search options  
     
-*   Call [search](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [BarcodeSearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/BarcodeSearchOptions) to it.
+*   Call [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#-T-search-java.lang.Class-T--com.groupdocs.signature.options.search.SearchOptions-) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and pass [BarcodeSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/barcodesearchoptions/) to it.
     
 
 This example shows how to search for Barcode signature in the document.
@@ -72,5 +72,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

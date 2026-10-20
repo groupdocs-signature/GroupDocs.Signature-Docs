@@ -10,23 +10,23 @@ hideChildren: False
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) contains classes that implements for Pdf document special signature appearances.
 
-Base signature options [SignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/SignOptions) contains property [SignOptions.setAppearance](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/SignOptions#setAppearance(com.groupdocs.signature.options.appearances.SignatureAppearance)) that expects instance of the following classes
+Base signature options [SignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/signoptions/) contains property [SignOptions.setAppearance](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/signoptions/#setAppearance-com.groupdocs.signature.options.appearances.SignatureAppearance-) that expects instance of the following classes
 
-*   [PdfTextAnnotationAppearance](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.appearances/PdfTextAnnotationAppearance) class implements for Pdf documents signature as annotation area. Note that [TextSignOptions.setSignatureImplementation](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions#setSignatureImplementation(int)) property must be set to [TextSignatureImplementation.Annotation](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/TextSignatureImplementation)
-*   [PdfTextStickerAppearance](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.appearances/PdfTextStickerAppearance) class implements for Pdf documents signature as small sticker. Note that [TextSignOptions.setSignatureImplementation](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions#setSignatureImplementation(int)) property must be set to [TextSignatureImplementation.Sticker](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/TextSignatureImplementation) 
+*   [PdfTextAnnotationAppearance](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.appearances/pdftextannotationappearance/) class implements for Pdf documents signature as annotation area. Note that [TextSignOptions.setSignatureImplementation](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/textsignoptions/#setSignatureImplementation-int-) property must be set to [TextSignatureImplementation.Annotation](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/textsignatureimplementation/)
+*   [PdfTextStickerAppearance](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.appearances/pdftextstickerappearance/) class implements for Pdf documents signature as small sticker. Note that [TextSignOptions.setSignatureImplementation](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/textsignoptions/#setSignatureImplementation-int-) property must be set to [TextSignatureImplementation.Sticker](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/textsignatureimplementation/) 
     
 
 Here are the steps to setup special Pdf  document Text signature appearance with GroupDocs.Signature:
 
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.    
-*   Compose object of [TextSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions) object with all required additional options.    
-*   Set  [TextSignOptions.setAppearance](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/SignOptions#setAppearance(com.groupdocs.signature.options.appearances.SignatureAppearance)) property with [PdfTextAnnotationAppearance](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.appearances/PdfTextAnnotationAppearance) object and set its properties      
-*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [TextSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions) to it. 
-*   Analyze [SignResult](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain/SignResult) result to check newly created signatures if needed.
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path as a constructor parameter.    
+*   Compose object of [TextSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/textsignoptions/) object with all required additional options.    
+*   Set  [TextSignOptions.setAppearance](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/signoptions/#setAppearance-com.groupdocs.signature.options.appearances.SignatureAppearance-) property with [PdfTextAnnotationAppearance](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.appearances/pdftextannotationappearance/) object and set its properties      
+*   Call [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and pass [TextSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/textsignoptions/) to it. 
+*   Analyze [SignResult](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/signresult/) result to check newly created signatures if needed.
 
 ## Sign Pdf document with Text signature Annotation appearance
 
-This example shows how to add Text signature to Pdf document with annotation look. See [SignResult](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain/SignResult) 
+This example shows how to add Text signature to Pdf document with annotation look. See [SignResult](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/signresult/) 
 
 ```java
 Signature signature = new Signature("sample.pdf");
@@ -86,7 +86,7 @@ for(BaseSignature temp : signResult.getSucceeded())
 
 ## Sign Pdf document with Text signature Sticker appearance
 
-This example shows how to add Text signature to Pdf document with sticker look. See [SignResult](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/SignResult)
+This example shows how to add Text signature to Pdf document with sticker look. See [SignResult](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/signresult/)
 
 ```java
 Signature signature = new Signature("sample.pdf");
@@ -155,5 +155,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

@@ -2,7 +2,7 @@
 id: update-image-signatures-in-document
 url: signature/java/update-image-signatures-in-document
 title: Update Image signatures in document
-linkTitle: ✎ Image
+linkTitle: Image
 weight: 2
 description: "This article explains how to update Image electronic signatures with GroupDocs.Signature API."
 keywords: 
@@ -28,20 +28,20 @@ structuredData:
         - name: Update document
           text: Call method Update passing updated signature.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [ImageSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/ImageSignature) class to manipulate barcode signatures location, size and textual content. 
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [ImageSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/imagesignature/) class to manipulate barcode signatures location, size and textual content. 
 
-Please be aware that [update](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#update(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature)) method modifies the same document that was passed to constructor of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) class.
+Please be aware that [update](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#update-java.io.OutputStream-com.groupdocs.signature.domain.signatures.BaseSignature-) method modifies the same document that was passed to constructor of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class.
 
 Here are the steps to update Barcode signature in the document with GroupDocs.Signature:
 
-*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter;    
-*   Instantiate [ImageSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/ImageSearchOptions) object with desired properties;    
-*   Call [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method to obtain list of [ImageSignatures](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/ImageSignature);      
-*   Select from list [ImageSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/ImageSignature) object(s) that should be updated;     
-*   Call [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) object [update](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#update(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature)) method and pass one or several signatures to it.
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path as a constructor parameter;    
+*   Instantiate [ImageSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/imagesearchoptions/) object with desired properties;    
+*   Call [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#-T-search-java.lang.Class-T--com.groupdocs.signature.options.search.SearchOptions-) method to obtain list of [ImageSignatures](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/imagesignature/);      
+*   Select from list [ImageSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/imagesignature/) object(s) that should be updated;     
+*   Call [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) object [update](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#update-java.io.OutputStream-com.groupdocs.signature.domain.signatures.BaseSignature-) method and pass one or several signatures to it.
     
 
-This example shows how to update Image signature that was found using  [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method.
+This example shows how to update Image signature that was found using  [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#-T-search-java.lang.Class-T--com.groupdocs.signature.options.search.SearchOptions-) method.
 
 ```java
 using (Signature signature = new Signature("sampleSigned.pdf"))
@@ -91,5 +91,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

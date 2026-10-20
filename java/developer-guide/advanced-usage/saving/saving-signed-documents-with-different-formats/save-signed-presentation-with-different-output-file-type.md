@@ -2,7 +2,7 @@
 id: save-signed-presentation-with-different-output-file-type
 url: signature/java/save-signed-presentation-with-different-output-file-type
 title: Save signed Presentation with different output file type
-linkTitle: Presentaion → format
+linkTitle: Presentation to other formats
 weight: 3
 description: "This article explains how to save signed Presentation documents with various file formats by GroupDocs.Signature API."
 keywords: 
@@ -28,14 +28,14 @@ structuredData:
         - name: Obtain signed Presentation document in required format
           text: Get the output document in requested format.
 ---
-[Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class supports saving of Presentation signed documents with different formats. Each of document type has list of compatible saving type. These values are listed in enum [PresentationSaveFileFormat](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/PresentationSaveFileFormat).
+[Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class supports saving of Presentation signed documents with different formats. Each of document type has list of compatible saving type. These values are listed in enum [PresentationSaveFileFormat](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/presentationsavefileformat/).
 
 Here are the steps to save signed Presentation document to different output type with [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java):
 
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path or stream as a constructor parameter.    
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path or stream as a constructor parameter.    
 *   Instantiate required signature options.    
-*   Instantiate the [PresentationSaveOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/PresentationSaveOptions) object according to your requirements and specify [setFileFormat](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/PresentationSaveOptions#setFileFormat(int)) as one of predefined values from [PresentationSaveFileFormat](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/PresentationSaveFileFormat). 
-*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass signatureoptions and [PresentationSaveOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/PresentationSaveOptions) object to it.
+*   Instantiate the [PresentationSaveOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.saveoptions/presentationsaveoptions/) object according to your requirements and specify [setFileFormat](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.saveoptions/presentationsaveoptions/#setFileFormat-int-) as one of predefined values from [PresentationSaveFileFormat](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/presentationsavefileformat/). 
+*   Call [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and pass signatureoptions and [PresentationSaveOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.saveoptions/presentationsaveoptions/) object to it.
     
 
 Following example demonstrates how to save signed Presentation document with different output type
@@ -71,5 +71,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

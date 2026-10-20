@@ -2,7 +2,7 @@
 id: delete-text-signatures-from-documents
 url: signature/java/delete-text-signatures-from-documents
 title: Delete Text signatures from documents
-linkTitle: ✖ Text
+linkTitle: Text
 weight: 4
 description: "This article explains how to delete Text electronic signatures with GroupDocs.Signature API."
 keywords: delete text signature, how to delete Text electronic signatures
@@ -27,18 +27,18 @@ structuredData:
           text: Invoke Delete method passing found text electronic signature and file path for signed file. File stream can be used as well.
 
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [TextSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/TextSignature) class to manipulate text signatures and [delete](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#delete(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature)) them from the documents.   
-Please be aware that [delete](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#delete(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature)) method modifies the same document that was passed to constructor of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [TextSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/textsignature/) class to manipulate text signatures and [delete](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#delete-java.io.OutputStream-com.groupdocs.signature.domain.signatures.BaseSignature-) them from the documents.   
+Please be aware that [delete](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#delete-java.io.OutputStream-com.groupdocs.signature.domain.signatures.BaseSignature-) method modifies the same document that was passed to constructor of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class.
 
 Here are the steps to delete Text signature from the document with GroupDocs.Signature:
 
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter;    
-*   Instantiate [TextSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/TextSearchOptions) object with desired properties;
-*   Call [search](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method to obtain list of [TextSignatures](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/TextSignature);  
-*   Select from list [TextSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/TextSignature) object(s) that should be removed from the document;  
-*   Call [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) object [delete](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#delete(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature)) method and pass one or several signatures to it.
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path as a constructor parameter;    
+*   Instantiate [TextSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/textsearchoptions/) object with desired properties;
+*   Call [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#-T-search-java.lang.Class-T--com.groupdocs.signature.options.search.SearchOptions-) method to obtain list of [TextSignatures](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/textsignature/);  
+*   Select from list [TextSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/textsignature/) object(s) that should be removed from the document;  
+*   Call [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) object [delete](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#delete-java.io.OutputStream-com.groupdocs.signature.domain.signatures.BaseSignature-) method and pass one or several signatures to it.
 
-This example shows how to delete Text signature that was found using [search](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method.
+This example shows how to delete Text signature that was found using [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#-T-search-java.lang.Class-T--com.groupdocs.signature.options.search.SearchOptions-) method.
 
 ```java
 Signature signature = new Signature("signed.pptx");
@@ -86,5 +86,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

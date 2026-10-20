@@ -2,7 +2,7 @@
 id: delete-digital-signatures-from-documents
 url: signature/java/delete-digital-signatures-from-documents
 title: Delete Digital signatures from documents
-linkTitle: ✖ Digital
+linkTitle: Digital
 weight: 5
 description: "This article explains how to delete Digital electronic signatures with GroupDocs.Signature API."
 keywords: Digital electronic signatures, delete Digital electronic signatures, how to delete Digital electronic signatures
@@ -26,20 +26,20 @@ structuredData:
         - name: Delete one of found digital signatures and save result 
           text: Invoke Delete method passing found digital signatures and file path for signed file. File stream can be used as well.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [DigitalSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/DigitalSignature) class to manipulate digital electronic signatures and delete them from the documents.
-Please be aware that [delete](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#delete(java.lang.String,%20int)) method modifies the same document that was passed to constructor of the [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) class.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [DigitalSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/digitalsignature/) class to manipulate digital electronic signatures and delete them from the documents.
+Please be aware that [delete](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#delete-java.lang.String-int-) method modifies the same document that was passed to constructor of the [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class.
 
 *Important information*. Please be aware that digitally signed documents with valid certificates (pfx files) are secured and verified. Changing digitally signed document makes them untrusted from the digital verification perspective. At this moment only Pdf documents support deletion of the specific digital signatures in case of many ones were added. Most documents support deletion of all digital signatures at once without separate certificates removal. It's strongly recommened to use deletion of electronic digital signatures by signature type Digital. See example [Delete Signatures of the certain type]
 
 Here are the steps to delete Digital signature from the document with GroupDocs.Signature:
 
-* Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) class and pass source document path or its stream as a constructor parameter;
-* Instantiate [DigitalSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/DigitalSearchOptions) object with desired properties;
-* Call [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method to obtain list of [DigitalSignatures](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/DigitalSignature);
-* Select from list [DigitalSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/DigitalSignature) object(s) that should be removed from the document;
-* Call [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) object [delete](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#delete(java.lang.String,%20com.groupdocs.signature.domain.signatures.BaseSignature) method and pass one or several signatures to it.
+* Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path or its stream as a constructor parameter;
+* Instantiate [DigitalSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/digitalsearchoptions/) object with desired properties;
+* Call [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#-T-search-java.lang.Class-T--com.groupdocs.signature.options.search.SearchOptions-) method to obtain list of [DigitalSignatures](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/digitalsignature/);
+* Select from list [DigitalSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/digitalsignature/) object(s) that should be removed from the document;
+* Call [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) object [delete](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#delete-java.lang.String-com.groupdocs.signature.domain.signatures.BaseSignature- method and pass one or several signatures to it.
 
-This example shows how to delete Digital signature that was found using [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method.
+This example shows how to delete Digital signature that was found using [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#-T-search-java.lang.Class-T--com.groupdocs.signature.options.search.SearchOptions-) method.
 
 ```java
 
