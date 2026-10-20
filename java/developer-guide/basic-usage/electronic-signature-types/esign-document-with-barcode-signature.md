@@ -2,7 +2,7 @@
 id: esign-document-with-barcode-signature
 url: signature/java/esign-document-with-barcode-signature
 title: eSign document with Barcode signature
-linkTitle: ✎ Barcode
+linkTitle: Barcode
 weight: 1
 description: "This article explains how to add Barcode signature on document page with various options like barcode type, barcode text, positioning, alignment and other visual settings with GroupDocs.Signature"
 keywords: barcode, barcode signature, GroupDocs.Signature barcode, GroupDocs.Signature barcode signature
@@ -38,17 +38,17 @@ Barcodes allow to store product related data like manufacturing and expiry dat
 
 ## eSign document with Barcode signature
 
-[GroupDocs.Signature](https://products.groupdocs.com/signature/java) for Java supports wide range or Barcode types that can be used to create electronic signature within the documents. Please refer to [BarcodeTypes](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.barcodes/BarcodeTypes) description to get the full list of supported barcodes.  
-To specify different options for Barcode signature GroupDocs.Signature for Java provides [BarcodeSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/BarcodeSignOptions) class. The main fields are:
+[GroupDocs.Signature](https://products.groupdocs.com/signature/java) for Java supports wide range or Barcode types that can be used to create electronic signature within the documents. Please refer to [BarcodeTypes](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.barcodes/barcodetypes/) description to get the full list of supported barcodes.  
+To specify different options for Barcode signature GroupDocs.Signature for Java provides [BarcodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/barcodesignoptions/) class. The main fields are:
 
-*   [getEncodeType](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/BarcodeSignOptions#getEncodeType()) - specifies Barcode type (AustralianPost, Codabar, EAN13, OPC, etc.);
-*   [getText](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions#getText()) - specifies Barcode text. 
+*   [getEncodeType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/barcodesignoptions/#getEncodeType--) - specifies Barcode type (AustralianPost, Codabar, EAN13, OPC, etc.);
+*   [getText](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/textsignoptions/#getText--) - specifies Barcode text. 
 
-Here are the steps to eSign document with Barcode signature using GroupDocs.Signature for .NET API:
+Here are the steps to eSign document with Barcode signature using GroupDocs.Signature for Java API:
 
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.    
-*   Instantiate the [BarcodeSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/BarcodeSignOptions) object according to your requirements and specify Barcode type by setting [setEncodeType](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/BarcodeSignOptions#setEncodeType()) from predefined supported types. Set [setText](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions#setText(java.lang.String)) property value.    
-*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [BarcodeSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/BarcodeSignOptions) to it.
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path as a constructor parameter.    
+*   Instantiate the [BarcodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/barcodesignoptions/) object according to your requirements and specify Barcode type by setting [setEncodeType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/barcodesignoptions/#setEncodeType-com.groupdocs.signature.domain.barcodes.BarcodeType-) from predefined supported types. Set [setText](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/textsignoptions/#setText-java.lang.String-) property value.    
+*   Call [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and pass [BarcodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/barcodesignoptions/) to it.
     
 
 This example shows how to sign PDF document with Barcode signature.
@@ -91,5 +91,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

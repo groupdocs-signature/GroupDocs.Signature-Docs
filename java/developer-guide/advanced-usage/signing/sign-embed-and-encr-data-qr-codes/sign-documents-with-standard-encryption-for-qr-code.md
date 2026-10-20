@@ -8,20 +8,20 @@ keywords:
 productName: GroupDocs.Signature for Java
 hideChildren: False
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java ) provides ability to encrypt QR-code signature with symmetric algorithms. Class [SymmetricEncryption](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.encryption/SymmetricEncryption ) implements one of the following values algorithms ([DES, TripleDES, RC2, Rijndael](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.encryption/SymmetricAlgorithmType )), string value key and string value salt.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java ) provides ability to encrypt QR-code signature with symmetric algorithms. Class [SymmetricEncryption](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.encryption/symmetricencryption/) implements one of the following values algorithms ([DES, TripleDES, RC2, Rijndael](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.encryption/symmetricalgorithmtype/)), string value key and string value salt.
 
 Here are the steps to encrypt QR-code text with embedded encryption by GroupDocs.Signature:
 
-* Create one or several objects of [QrCodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/QrCodeSignOptions ) object with [getData](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/QrCodeSignOptions#getData() ) or Text property
-* Instantiate the  [QrCodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/QrCodeSignOptions ) object according to your requirements and custom object to [getData](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/QrCodeSignOptions#getData() ) property.
-* Call [Sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20java.util.List)) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature ) class instance and pass [QrCodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/QrCodeSignOptions ) to it.  
+* Create one or several objects of [QrCodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/qrcodesignoptions/) object with [getData](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/qrcodesignoptions/#getData--) or Text property
+* Instantiate the  [QrCodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/qrcodesignoptions/) object according to your requirements and custom object to [getData](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/qrcodesignoptions/#getData--) property.
+* Call [Sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-java.util.List-com.groupdocs.signature.options.sign.SignOptions--) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and pass [QrCodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/qrcodesignoptions/) to it.  
 
 ## How to encrypt QR-code signature
 
  This example shows how to encrypt QR-code signature.
 
 ```java
-Signature signature = new Signature("sample.pdf"))
+Signature signature = new Signature("sample.pdf");
 
 // setup key and passphrase
 String key = "1234567890";
@@ -59,6 +59,6 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.
+Along with full-featured Java library we provide simple, but powerful free Apps.
 
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

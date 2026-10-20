@@ -2,7 +2,7 @@
 id: advanced-search-for-text-signatures
 url: signature/java/advanced-search-for-text-signatures
 title: Advanced search for Text signatures
-linkTitle: 🌐 Text
+linkTitle: Text
 weight: 4
 description: " This article explains how to make advanced search for Text electronic signatures with GroupDocs.Signature API."
 keywords: 
@@ -28,13 +28,13 @@ structuredData:
         - name: Process list of found items
           text: Loop through list of found items and process in demanded way.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [TextSearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/TextSearchOptions) class to specify different options to search for Text Signatures.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [TextSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/textsearchoptions/) class to specify different options to search for Text Signatures.
 
 Here are the steps to search for text signatures within the document with GroupDocs.Signature:
 
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.    
-*   Instantiate the [TextSearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/TextSearchOptions) object according to your requirements and specify search options 
-*   Call [search](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [TextSearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/TextSearchOptions) to it.
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path as a constructor parameter.    
+*   Instantiate the [TextSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/textsearchoptions/) object according to your requirements and specify search options 
+*   Call [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#-T-search-java.lang.Class-T--com.groupdocs.signature.options.search.SearchOptions-) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and pass [TextSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/textsearchoptions/) to it.
     
 
 This example shows how to make advanced search for Text signature in the document.
@@ -92,5 +92,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

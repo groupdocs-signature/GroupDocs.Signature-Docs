@@ -25,10 +25,10 @@ structuredData:
         - name: Process obtained data. 
           text: Loop through ProcessLogs collection and process data about document operations.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) allows to get document history information about processed changes that include list of [ProcessLog](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/ProcessLog ). Each history log record contains following information :
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) allows to get document history information about processed changes that include list of [ProcessLog](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/processlog/). Each history log record contains following information :
 
 * date/time of processed change.
-* type of document process change. See [ProcessType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/ProcessType )
+* type of document process change. See [ProcessType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/processtype/)
 * description of change
 * quantity of succeeded and failed signatures
 
@@ -74,6 +74,6 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.
+Along with full-featured Java library we provide simple, but powerful free Apps.
 
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

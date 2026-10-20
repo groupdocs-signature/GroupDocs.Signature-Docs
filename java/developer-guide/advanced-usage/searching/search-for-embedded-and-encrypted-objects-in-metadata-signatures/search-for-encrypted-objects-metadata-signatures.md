@@ -7,16 +7,16 @@ description: " This article explains how to search for encrypted electronic sig
 keywords: 
 productName: GroupDocs.Signature for Java
 structuredData:
-    showOrganization: Java
+    showOrganization: True
     application:    
-        name: Search for encrypted signatures in documents in C#    
-        description: Searching for encrypted electronic signatures in various documents with C# language and GroupDocs.Signature for Java APIs
+        name: Search for encrypted signatures in documents in Java    
+        description: Searching for encrypted electronic signatures in various documents with Java language and GroupDocs.Signature for Java APIs
         productCode: signature
         productPlatform: java 
-    showVideo: Java
+    showVideo: True
     howTo:
-        name: How to get list of encrypted electronic signatures using C# 
-        description: Getting information about encrypted electronic signatures in documents with C#
+        name: How to get list of encrypted electronic signatures using Java 
+        description: Getting information about encrypted electronic signatures in documents with Java
         steps:
         - name: Load file which has one of supported file types.
           text: Create object of Signature passing file as a constructor parameter. You can use either file path or file stream. 
@@ -27,15 +27,15 @@ structuredData:
         - name: Process found items list
           text: Loop through list of found items and process in demanded way.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides ability to search for embedded objects in Metadata signatures with standard or custom encryption. Standard encryption is implemented over class [SymmetricEncryption](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.extensions.encryption/SymmetricEncryption) class. Creation of this object expects 3 arguments like encryption algorithm enumeration [SymmetricAlgorithmType](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.extensions.encryption/SymmetricAlgorithmType) with one of following values (DES, TripleDES, RC2, Rijndael), string value key and string value salt.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides ability to search for embedded objects in Metadata signatures with standard or custom encryption. Standard encryption is implemented over class [SymmetricEncryption](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.encryption/symmetricencryption/) class. Creation of this object expects 3 arguments like encryption algorithm enumeration [SymmetricAlgorithmType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.encryption/symmetricalgorithmtype/) with one of following values (DES, TripleDES, RC2, Rijndael), string value key and string value salt.
 
 Here are the steps to search for embedded Metadata signature with standard encryption with GroupDocs.Signature:
 
-*   *   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) class and pass source document path or stream as a constructor parameter.
-    *   Compose object of [SymmetricEncryption](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.encryption/SymmetricEncryption) class with same parameters as secured QR-code was signed with.
-    *   Create objects of [MetadataSearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/MetadataSearchOptions) class and setup property  [setDataEncryption](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/MetadataSearchOptions#setDataEncryption(com.groupdocs.signature.domain.extensions.encryption.IDataEncryption)) with object of [SymmetricEncryption](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.encryption/SymmetricEncryption)
-    *   Call [Search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature#search(int...)) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/Signature) class instance and pass [MetadataSearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/MetadataSearchOptions) to it.
-    *   Call method [getData](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures.metadata/MetadataSignature#getData(java.lang.Class)) of encrypted [MetadataSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures.metadata/MetadataSignature) object to retrieve object of type Type
+*   *   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path or stream as a constructor parameter.
+    *   Compose object of [SymmetricEncryption](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.encryption/symmetricencryption/) class with same parameters as secured QR-code was signed with.
+    *   Create objects of [MetadataSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/metadatasearchoptions/) class and setup property  [setDataEncryption](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/metadatasearchoptions/#setDataEncryption-com.groupdocs.signature.domain.extensions.encryption.IDataEncryption-) with object of [SymmetricEncryption](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.encryption/symmetricencryption/)
+    *   Call [Search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#search-int...-) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and pass [MetadataSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/metadatasearchoptions/) to it.
+    *   Call method [getData](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/metadatasignature/#-T-getData-java.lang.Class-T--) of encrypted [MetadataSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/metadatasignature/) object to retrieve object of type Type
 
 ## Definition of class
 
@@ -146,5 +146,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

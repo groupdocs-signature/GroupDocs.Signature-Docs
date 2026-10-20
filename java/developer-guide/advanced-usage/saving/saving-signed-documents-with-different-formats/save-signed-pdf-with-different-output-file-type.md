@@ -2,7 +2,7 @@
 id: save-signed-pdf-with-different-output-file-type
 url: signature/java/save-signed-pdf-with-different-output-file-type
 title: Save signed Pdf with different output file type
-linkTitle: PDF → format
+linkTitle: PDF to other formats
 weight: 2
 description: "This article explains how to save signed PDF document with various file formats by GroupDocs.Signature API."
 keywords: 
@@ -28,13 +28,13 @@ structuredData:
         - name: Obtain signed PDF document in required format
           text: Get the output document in requested format.
 ---
-[Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class supports saving of Pdf signed documents to different formats. Each of document type has list of compatible saving type. These values are listed in enum [PdfSaveFileFormat](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/PdfSaveFileFormat).
+[Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class supports saving of Pdf signed documents to different formats. Each of document type has list of compatible saving type. These values are listed in enum [PdfSaveFileFormat](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/pdfsavefileformat/).
 
 Here are the steps to save signed Pdf document to different output type with [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java):
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature)  class and pass source document path or stream as a constructor parameter.    
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/)  class and pass source document path or stream as a constructor parameter.    
 *   Instantiate required signature options.    
-*   Instantiate the [PdfSaveOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/PdfSaveOptions) object according to your requirements and specify [setFileFormat](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/PdfSaveOptions#setFileFormat(int)) as one of predefined values from [PdfSaveFileFormat](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/PdfSaveFileFormat).      
-*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass signatureoptions and [PdfSaveOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/PdfSaveOptions) object to it.
+*   Instantiate the [PdfSaveOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.saveoptions/pdfsaveoptions/) object according to your requirements and specify [setFileFormat](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.saveoptions/pdfsaveoptions/#setFileFormat-int-) as one of predefined values from [PdfSaveFileFormat](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/pdfsavefileformat/).      
+*   Call [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and pass signatureoptions and [PdfSaveOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.saveoptions/pdfsaveoptions/) object to it.
     
 
 ```java
@@ -68,5 +68,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

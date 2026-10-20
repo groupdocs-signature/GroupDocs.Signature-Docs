@@ -2,7 +2,7 @@
 id: esign-document-with-text-signature
 url: signature/java/esign-document-with-text-signature
 title: eSign document with Text signature
-linkTitle: ✎ Text
+linkTitle: Text
 weight: 7
 description: "This article explains how to sign document with Text signature by GroupDocs.Signature API. Let's try to add digital signature to a PDF programmatically."
 keywords: Add digital signature to a PDF programmatically, Text signature
@@ -37,11 +37,11 @@ A **Text** electronic signature is an arbitrary text that is added to a documen
 
   
 
-o manipulate with text signatures programmatically [GroupDocs.Signature](https://products.groupdocs.com/signature/java) provides [TextSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions) class and the whole workflow as easy as follows:
+o manipulate with text signatures programmatically [GroupDocs.Signature](https://products.groupdocs.com/signature/java) provides [TextSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/textsignoptions/) class and the whole workflow as easy as follows:
 
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.    
-*   Instantiate the [TextSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions) object according to your requirements and specify Text signature options.    
-*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [TextSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/TextSignOptions) to it.
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path as a constructor parameter.    
+*   Instantiate the [TextSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/textsignoptions/) object according to your requirements and specify Text signature options.    
+*   Call [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and pass [TextSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/textsignoptions/) to it.
     
 
 This example shows how to add Text signature to document.
@@ -89,5 +89,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

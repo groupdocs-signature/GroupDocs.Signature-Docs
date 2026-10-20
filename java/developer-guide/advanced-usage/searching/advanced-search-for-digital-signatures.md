@@ -2,7 +2,7 @@
 id: advanced-search-for-digital-signatures
 url: signature/java/advanced-search-for-digital-signatures
 title: Advanced search for Digital signatures
-linkTitle: 🌐 Digital
+linkTitle: Digital
 weight: 2
 description: " This article explains how to make advanced search for digital electronic signatures with GroupDocs.Signature API."
 keywords: 
@@ -28,13 +28,13 @@ structuredData:
         - name: Process list of found items
           text: Loop through list of found items and process in demanded way.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [DigitalSearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/DigitalSearchOptions) class to specify different options to search for Digital Signatures.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [DigitalSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/digitalsearchoptions/) class to specify different options to search for Digital Signatures.
 
 Here are the steps to search for digital signatures within the document with GroupDocs.Signature:
 
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.    
-*   Instantiate the [DigitalSearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/DigitalSearchOptions) object according to your requirements and specify search options  
-*   Call [search](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [DigitalSearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/DigitalSearchOptions) to it.
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path as a constructor parameter.    
+*   Instantiate the [DigitalSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/digitalsearchoptions/) object according to your requirements and specify search options  
+*   Call [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#-T-search-java.lang.Class-T--com.groupdocs.signature.options.search.SearchOptions-) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and pass [DigitalSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/digitalsearchoptions/) to it.
     
 
 This example shows how to make advanced search for Digital signature in the document.
@@ -77,5 +77,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

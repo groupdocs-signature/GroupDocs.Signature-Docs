@@ -8,14 +8,14 @@ keywords:
 productName: GroupDocs.Signature for Java
 hideChildren: False
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [StampSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/StampSignOptions) class with additional properties to specify different options for Stamp Signature. This signature type implements stamps with different implementation, forms, lines etc. Each Stamp option contains inner and outer lines. Inner lines represent vertical lines inside the stamp, when outer lines represent circles (or rectangles based on stamp type) around stamp with own text, border settings, background etc
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [StampSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/stampsignoptions/) class with additional properties to specify different options for Stamp Signature. This signature type implements stamps with different implementation, forms, lines etc. Each Stamp option contains inner and outer lines. Inner lines represent vertical lines inside the stamp, when outer lines represent circles (or rectangles based on stamp type) around stamp with own text, border settings, background etc
 
 Here are the steps to add Stamp signature into document with GroupDocs.Signature:
 
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.    
-*   Instantiate the [StampSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/StampSignOptions) object according to your requirements and specify Text Signature options.    
-*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [StampSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/StampSignOptions) to it.    
-*   Analyze [SignResult](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain/SignResult) result to check newly created signatures if needed.
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path as a constructor parameter.    
+*   Instantiate the [StampSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/stampsignoptions/) object according to your requirements and specify Text Signature options.    
+*   Call [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and pass [StampSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/stampsignoptions/) to it.    
+*   Analyze [SignResult](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/signresult/) result to check newly created signatures if needed.
     
 
 This example shows how to add Stamp signature to document.
@@ -140,5 +140,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

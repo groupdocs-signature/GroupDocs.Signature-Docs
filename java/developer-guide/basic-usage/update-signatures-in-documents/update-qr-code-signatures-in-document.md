@@ -2,7 +2,7 @@
 id: update-qr-code-signatures-in-document
 url: signature/java/update-qr-code-signatures-in-document
 title: Update QR-code signatures in document
-linkTitle: ✎ QR Code
+linkTitle: QR Code
 weight: 3
 description: "This article explains how to update QR-code electronic signatures with GroupDocs.Signature API."
 keywords: 
@@ -28,18 +28,18 @@ structuredData:
         - name: Update document
           text: Call method Update passing updated signature.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [QrCodeSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/QrCodeSignature) class to manipulate QR-code signatures location, size, encode type and textual content. 
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [QrCodeSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/qrcodesignature/) class to manipulate QR-code signatures location, size, encode type and textual content. 
 
-Please be aware that [update](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options/Signature#update(java.lang.String,%20com.groupdocs.signature.domain.signatures.BaseSignature)) method modifies the same document that was passed to constructor of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class.
+The [update](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#update-java.lang.String-com.groupdocs.signature.domain.signatures.BaseSignature-) method writes the changed document to the file path or stream that you pass to it. To change the source document itself, pass the same path that you passed to the [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) constructor.
 
 Here are the steps to update QR-code signature in the document with GroupDocs.Signature:
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter;    
-*   Instantiate [QrCodeSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/QrCodeSearchOptions) object with desired properties;
-*   Call [search](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method to obtain list of [QrCodeSignatures](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/QrCodeSignature); 
-*   Select from list [QrCodeSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/QrCodeSignature) object(s) that should be updated;  
-*   Call [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) object [update](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options/Signature#update(java.lang.String,%20com.groupdocs.signature.domain.signatures.BaseSignature)) method and pass one or several signatures to it.    
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path as a constructor parameter;    
+*   Instantiate [QrCodeSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/qrcodesearchoptions/) object with desired properties;
+*   Call [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#-T-search-java.lang.Class-T--com.groupdocs.signature.options.search.SearchOptions-) method to obtain list of [QrCodeSignatures](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/qrcodesignature/); 
+*   Select from list [QrCodeSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/qrcodesignature/) object(s) that should be updated;  
+*   Call [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) object [update](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#update-java.lang.String-com.groupdocs.signature.domain.signatures.BaseSignature-) method and pass one or several signatures to it.    
 
-This example shows how to update QR-code signature that was found using  [search](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method.
+This example shows how to update QR-code signature that was found using  [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#-T-search-java.lang.Class-T--com.groupdocs.signature.options.search.SearchOptions-) method.
 
 ```java
 // initialize Signature instance
@@ -90,5 +90,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

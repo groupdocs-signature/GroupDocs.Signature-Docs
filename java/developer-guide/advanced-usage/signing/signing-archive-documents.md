@@ -2,7 +2,7 @@
 id: signing-archive-documents
 url: signature/java/signing-archive-documents
 title: Signing archive documents in batch
-linkTitle: ✎ Archives
+linkTitle: Archives
 weight: 20
 description: "This article shows how to sign documents in batch mode within the archive files with one or multiple electronic signatures"
 keywords: ZIP archive, TAR archive
@@ -11,14 +11,14 @@ hideChildren: False
 structuredData:
     showOrganization: True
     application:    
-        name: Archive signing with form fields in C#    
-        description: Sign archives with one or more signatures and C# language by GroupDocs.Signature for .NET APIs
+        name: Archive signing with form fields in Java    
+        description: Sign archives with one or more signatures and Java language by GroupDocs.Signature for Java APIs
         productCode: signature
-        productPlatform: net 
+        productPlatform: java 
     showVideo: True
     howTo:
-        name: How to sign archive documents using C# 
-        description: Learn all about signing archives with multiple documents in C#
+        name: How to sign archive documents using Java 
+        description: Learn all about signing archives with multiple documents in Java
         steps:
         - name: Load archive 
           text: Create Signature object by passing file path or stream as a constructor parameter.
@@ -27,7 +27,7 @@ structuredData:
         - name: Sign source file with form fields and save result 
           text: Invoke Sign method with signing options and output file path or stream.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) supports signing archive files with formats like ZIP, TAR the same way as usual documents. The only difference in the [SignResult](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/signresult/) of the [Sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-) method will contain for archive files the lists of [Succeeded](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/signresult/#getSucceeded--) and [Failed](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/signresult/#getFailed--/) of the [Sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-) method will contain for archive files the lists of [Succeeded](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/signresult/#getSucceeded--) signatures as the  
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) supports signing archive files with formats like ZIP, TAR the same way as usual documents. The only difference in the [SignResult](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/signresult/) of the [Sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-) method will contain for archive files the lists of [Succeeded](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/signresult/#getSucceeded--) and [Failed](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/signresult/#getFailed--) of the [Sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-) method will contain for archive files the lists of [Succeeded](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/signresult/#getSucceeded--) signatures as the  
 list of the [DocumentResultSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/documentresultsignature/) instances.
 
 Here are the steps to sign the archive files like ZIP, TAR with GroupDocs.Signature:
@@ -94,6 +94,6 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.
+Along with full-featured Java library we provide simple, but powerful free Apps.
 
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

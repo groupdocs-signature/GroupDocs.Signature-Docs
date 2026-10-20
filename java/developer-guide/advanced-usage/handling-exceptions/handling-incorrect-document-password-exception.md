@@ -27,13 +27,13 @@ structuredData:
         - name: Implement code with common try-catch statement. 
           text: For all other possible exceptions use Exception.
 ---
-[Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class supports handling incorrect password passed to open protected documents over class [IncorrectPasswordException](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.exception/IncorrectPasswordException).
+[Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class supports handling incorrect password passed to open protected documents over class [IncorrectPasswordException](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.exception/incorrectpasswordexception/).
 
 Here are the steps to handle incorrect password exception when working with protected documents with GroupDocs.Signature:
 
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path or stream as a constructor parameter.
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path or stream as a constructor parameter.
     
-*   Cover the code that works with [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) object methods ([sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)), [verify](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#verify(com.groupdocs.signature.options.verify.VerifyOptions)), [search](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)), [update](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#update(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature)), [delete](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#delete(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature))) with try - catch block including catching [IncorrectPasswordException](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.exception/IncorrectPasswordException) exception. 
+*   Cover the code that works with [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) object methods ([sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-), [verify](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#verify-com.groupdocs.signature.options.verify.VerifyOptions-), [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#-T-search-java.lang.Class-T--com.groupdocs.signature.options.search.SearchOptions-), [update](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#update-java.io.OutputStream-com.groupdocs.signature.domain.signatures.BaseSignature-), [delete](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#delete-java.io.OutputStream-com.groupdocs.signature.domain.signatures.BaseSignature-)) with try - catch block including catching [IncorrectPasswordException](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.exception/incorrectpasswordexception/) exception. 
 
 ## Handling incorrect password exception
 
@@ -85,5 +85,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

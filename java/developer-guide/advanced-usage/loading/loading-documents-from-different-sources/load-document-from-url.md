@@ -2,7 +2,7 @@
 id: load-document-from-url
 url: signature/java/load-document-from-url
 title: Load document from URL
-linkTitle: → URL
+linkTitle: URL
 weight: 6
 description: "This section explains how to load document from URL with GroupDocs.Signature API."
 keywords: 
@@ -62,5 +62,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

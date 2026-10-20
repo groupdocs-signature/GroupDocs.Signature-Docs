@@ -8,16 +8,16 @@ keywords:
 productName: GroupDocs.Signature for Java
 hideChildren: False
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides ability to embed into QR-code signature custom objects. This feature is implemented over object serialization to string and further encryption. There is ability to provide custom encryption. This procedure requires implementation of interface [IDataEncryption](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.extensions.encryption/IDataEncryption) with two methods to encrypt and decrypt data.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides ability to embed into QR-code signature custom objects. This feature is implemented over object serialization to string and further encryption. There is ability to provide custom encryption. This procedure requires implementation of interface [IDataEncryption](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.encryption/idataencryption/) with two methods to encrypt and decrypt data.
 
 Here are the steps to embed into QR-code text with custom encryption with GroupDocs.Signature: 
 
-*   Define custom data encryption class that implements [IDataEncryption](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.extensions.encryption/IDataEncryption) interface. By default GroupDocs.Signature has several encryption implementation you can use but allows user to customize it.
-*   Implement class with properties and specify if needed class attributes (like custom serialization attribute, custom encryption attribute), specify attributes for properties like [FormatAttribute](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.extensions.serialization/FormatAttribute) attribute to specify serialization name and display format, same as [SkipSerializationAttribute](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/SkipSerializationAttribute) to mark property of class as not serialize 
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.    
-*   Create one or several objects of [QrCodeSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/QrCodeSignOptions) object with [setData](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/QrCodeSignOptions#setData(java.lang.Object)) value 
-*   Instantiate the [QrCodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/QrCodeSignOptions) object according to your requirements and custom object to [setData](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/QrCodeSignOptions#setData(java.lang.Object)) property.
-*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of  [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature)  class instance and pass [QrCodeSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/QrCodeSignOptions) to it.
+*   Define custom data encryption class that implements [IDataEncryption](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.encryption/idataencryption/) interface. By default GroupDocs.Signature has several encryption implementation you can use but allows user to customize it.
+*   Implement class with properties and specify if needed class attributes (like custom serialization attribute, custom encryption attribute), specify attributes for properties like `FormatAttribute` attribute to specify serialization name and display format, same as `SkipSerializationAttribute` to mark property of class as not serialize 
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path as a constructor parameter.    
+*   Create one or several objects of [QrCodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/qrcodesignoptions/) object with [setData](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/qrcodesignoptions/#setData-java.lang.Object-) value 
+*   Instantiate the [QrCodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/qrcodesignoptions/) object according to your requirements and custom object to [setData](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/qrcodesignoptions/#setData-java.lang.Object-) property.
+*   Call [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-) method of  [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/)  class instance and pass [QrCodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/qrcodesignoptions/) to it.
     
 This example shows how to specify custom serialization class. This class could be implemented also as Attribute (optional) to specify as class attribute.
 
@@ -172,5 +172,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

@@ -16,69 +16,40 @@ Here are the steps to manually adjust the ordering of signatures on the document
 * Instantiate the [SignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/signoptions/) object with the required options and set the ZOrder property.
 * Call [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.lang.String-com.groupdocs.signature.options.sign.SignOptions-) method of  [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and pass [SignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/signoptions/) to it.
 
-## Sign document with Text signature
+## Sign document with ordered signatures
 
-This example shows how to add Text signature to document.
+This example adds a barcode and a QR code that overlap. The barcode has the higher `ZOrder`, so it is drawn on top.
 
 ```java
-using (Signature signature = new Signature("sample.pdf"))
-{
-    TextSignOptions options = new TextSignOptions("John Smith")
-    {
-        // set signature position
-        Left = 100,
-        Top = 100,
-        // set signature rectangle
-        Width = 100,
-        Height = 30,
-        // set signature alignment
-        // when VerticalAlignment is set the Top coordinate will be ignored.
-        // Use Margin properties Top, Bottom to provide vertical offset
-        VerticalAlignment = Domain.VerticalAlignment.Top,
-        // when HorizontalAlignment is set the Left coordinate will be ignored.
-        // Use Margin properties Left, Right to provide horizontal offset
-        HorizontalAlignment = Domain.HorizontalAlignment.Right,
-        Margin = new Padding() { Top = 20, Right = 20 },
-        // adjust signature appearance
-        // setup signature border
-        Border = new Border()
-        {
-            Color = Color.DarkGreen,
-            DashStyle = DashStyle.DashLongDashDot,
-            Transparency = 0.5,
-            Visible = true,
-            Weight = 2
-        },
-        // set text color and Font
-        ForeColor = Color.Red,
-        Font = new SignatureFont { Size = 12, FamilyName = "Comic Sans MS" },
-        // setup background
-        Background = new Background()
-        {
-            Color = Color.LimeGreen,
-            Transparency = 0.5,
-            Brush = new LinearGradientBrush(Color.LimeGreen, Color.DarkGreen)
-        },
-        // set rotation
-        RotationAngle = 45,
-        // set alternative signature implementation on document page
-        SignatureImplementation = TextSignatureImplementation.Image
+Signature signature = new Signature("sample.pdf");
+try {
+    // create several signatures that intersect
 
-    };
-    // set up shadow options for text
-    TextShadow shadow = new TextShadow();
-    shadow.Color = Color.OrangeRed;
-    shadow.Angle = 135;
-    shadow.Blur = 5;
-    shadow.Distance = 4;
-    shadow.Transparency = 0.2;
-    //add text shadow to signature extensions
-    options.Extensions.Add(shadow);
+    // #1 barcode options: this signature is placed on top
+    BarcodeSignOptions options1 = new BarcodeSignOptions("12345678");
+    options1.setEncodeType(BarcodeTypes.Code128);
+    options1.setLeft(100);
+    options1.setTop(100);
+    options1.setWidth(100);
+    options1.setHeight(100);
+    options1.setZOrder(2);
 
-    // specify Spreadsheet position over extension
-     options.Extensions.Add(new SpreadsheetPosition(10, 10));
-    // sign document to file
-    signature.Sign("signed.pdf", options);
+    // #2 QR code options: this signature is placed below
+    QrCodeSignOptions options2 = new QrCodeSignOptions("12345678");
+    options2.setEncodeType(QrCodeTypes.QR);
+    options2.setLeft(150);
+    options2.setTop(150);
+    options2.setZOrder(1);
+
+    List<SignOptions> options = new ArrayList<SignOptions>();
+    options.add(options1);
+    options.add(options2);
+
+    // sign document to file
+    SignResult signResult = signature.sign("signed.pdf", options);
+    System.out.println("Source document signed successfully with " + signResult.getSucceeded().size() + " signature(s).");
+} finally {
+    signature.dispose();
 }
 ```
 
@@ -97,6 +68,6 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.
+Along with full-featured Java library we provide simple, but powerful free Apps.
 
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

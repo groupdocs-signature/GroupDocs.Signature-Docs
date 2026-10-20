@@ -2,7 +2,7 @@
 id: deleting-image-signatures-advanced
 url: signature/java/deleting-image-signatures-advanced
 title: Deleting Image signatures - advanced
-linkTitle: ✖ Image
+linkTitle: Image
 weight: 2
 description: "This article shows how to delete Image electronic signatures different ways with GroupDocs.Signature API."
 keywords: 
@@ -26,36 +26,36 @@ structuredData:
         - name: Delete selected signatures. 
           text: Invoke Delete method and analyze DeleteResult instance.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [ImageSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/ImageSignature) class to manipulate image signatures and delete them from the documents over [delete](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#delete(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature)) method.  
-Please be aware that [delete](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#delete(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature))  method modifies the same document that was passed to constructor of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [ImageSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/imagesignature/) class to manipulate image signatures and delete them from the documents over [delete](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#delete-java.io.OutputStream-com.groupdocs.signature.domain.signatures.BaseSignature-) method.  
+The [delete](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#delete-java.io.OutputStream-com.groupdocs.signature.domain.signatures.BaseSignature-) method writes the changed document to the file path or stream that you pass to it. To change the source document itself, pass the same path that you passed to the [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) constructor.
 
 Here are the steps to delete Image signature from the document with GroupDocs.Signature:
 
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter;
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path as a constructor parameter;
     
-*   Instantiate [ImageSearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/ImageSearchOptions) object with desired properties;
+*   Instantiate [ImageSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/imagesearchoptions/) object with desired properties;
     
-*   Call [search](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method to obtain list of [ImageSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/ImageSignature);  
+*   Call [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#-T-search-java.lang.Class-T--com.groupdocs.signature.options.search.SearchOptions-) method to obtain list of [ImageSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/imagesignature/);  
     
-*   Select from list [ImageSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/ImageSignature) object(s) that should be removed from the document;  
+*   Select from list [ImageSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/imagesignature/) object(s) that should be removed from the document;  
     
-*   Call [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) object [delete](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#delete(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature))  method and pass one or several signatures to it.
+*   Call [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) object [delete](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#delete-java.io.OutputStream-com.groupdocs.signature.domain.signatures.BaseSignature-)  method and pass one or several signatures to it.
     
-*   Analyze [DeleteResult](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain/DeleteResult) result to check whether signatures were updated or not.
+*   Analyze [DeleteResult](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/deleteresult/) result to check whether signatures were updated or not.
 
-Here are the alternative steps to delete Image signature from the document with GroupDocs.Signature. This approach is based on saved signatures Id after [search](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) or [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) methods.
+Here are the alternative steps to delete Image signature from the document with GroupDocs.Signature. This approach is based on saved signatures Id after [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#-T-search-java.lang.Class-T--com.groupdocs.signature.options.search.SearchOptions-) or [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-) methods.
 
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter;
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path as a constructor parameter;
     
-*   Instantiate one or several [ImageSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/ImageSignature) objects with signature Id(s) passed to constructor;  
+*   Instantiate one or several [ImageSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/imagesignature/) objects with signature Id(s) passed to constructor;  
     
-*   Call [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class object [delete](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#delete(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature))  method and pass one or several signatures to it;
+*   Call [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class object [delete](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#delete-java.io.OutputStream-com.groupdocs.signature.domain.signatures.BaseSignature-)  method and pass one or several signatures to it;
     
-*   Analyze [DeleteResult](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain/DeleteResult) result to check whether signatures were updated or not. 
+*   Analyze [DeleteResult](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/deleteresult/) result to check whether signatures were updated or not. 
 
 ## Delete Image signature from the document after Search
 
-This example shows how to delete Image signature that was found using [search](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method.
+This example shows how to delete Image signature that was found using [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#-T-search-java.lang.Class-T--com.groupdocs.signature.options.search.SearchOptions-) method.
 
 ```java
 // initialize Signature instance
@@ -92,7 +92,7 @@ for(BaseSignature temp : deleteResult.getSucceeded())
 
 ## Delete Image signature from the document by known signature Identifier
 
-This example shows how to delete Image signature in the document by known signature Id (that was obtained by  [search](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) or [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method previously).
+This example shows how to delete Image signature in the document by known signature Id (that was obtained by  [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#-T-search-java.lang.Class-T--com.groupdocs.signature.options.search.SearchOptions-) or [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-) method previously).
 
 ```java
 // initialize Signature instance
@@ -143,5 +143,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App  
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

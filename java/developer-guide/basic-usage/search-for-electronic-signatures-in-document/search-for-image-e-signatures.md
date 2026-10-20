@@ -2,7 +2,7 @@
 id: search-for-image-e-signatures
 url: signature/java/search-for-image-e-signatures
 title: Search for Image e-signatures
-linkTitle: 🔍 Image
+linkTitle: Image
 weight: 7
 description: "This article explains how to search for Image electronic signatures with GroupDocs.Signature API."
 keywords: 
@@ -26,13 +26,13 @@ structuredData:
         - name: Process list of found signatures
           text: Loop through list of found images.
 ---
-[GroupDocs.Signature](https://products.groupdocs.com/signature/java) provides [ImageSearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/ImageSearchOptions) class to specify different options to search for Image e-signatures.
+[GroupDocs.Signature](https://products.groupdocs.com/signature/java) provides [ImageSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/imagesearchoptions/) class to specify different options to search for Image e-signatures.
 
  Here are the steps to search for Image signatures within the document with GroupDocs.Signature API:
 
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter;    
-*   Instantiate the [ImageSearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/ImageSearchOptions) object according to your requirements and specify additional search options (if needed);  
-*   Call [search](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [ImageSearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/ImageSearchOptions) to it.
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path as a constructor parameter;    
+*   Instantiate the [ImageSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/imagesearchoptions/) object according to your requirements and specify additional search options (if needed);  
+*   Call [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#-T-search-java.lang.Class-T--com.groupdocs.signature.options.search.SearchOptions-) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and pass [ImageSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/imagesearchoptions/) to it.
     
 
 The code snippet below demonstrates how to search for Image electronic signature in the document.
@@ -74,5 +74,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

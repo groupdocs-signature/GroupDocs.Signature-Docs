@@ -10,7 +10,7 @@ hideChildren: False
 structuredData:
     showOrganization: True
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides additional features when searching forQR-code signatures ([QrCodeSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/QrCodeSignature)) that were previously encrypted or contains embedded data objects. Summary the abilities are as follow
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides additional features when searching forQR-code signatures ([QrCodeSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/qrcodesignature/)) that were previously encrypted or contains embedded data objects. Summary the abilities are as follow
 
 *   ability to search for embedded custom objects into metadata and decrypt them to original source values
 *   ability to search for encrypted text of QR-code signature and decrypt it
@@ -23,7 +23,7 @@ Following topics show different aspects
 
 ## Alternative implementation of custom data serialization
 
-This example shows how to specify custom serialization class. This class should be implemented as Attribute and [IDataSerializer](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/IDataSerializer) interface.
+This example shows how to specify custom serialization class. This class should be implemented as Attribute and [IDataSerializer](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/idataserializer/) interface.
 
 ```java
 /**
@@ -161,5 +161,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App  
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

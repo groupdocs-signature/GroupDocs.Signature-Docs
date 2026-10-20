@@ -39,8 +39,7 @@ The following example shows how to load a license from a stream.
 
 ```java
 // For complete examples and data files, please go to https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java
-using (FileInputStream fileStream = new FileInputStream("GroupDocs.Signature.lic"))
-{
+try (FileInputStream fileStream = new FileInputStream("GroupDocs.Signature.lic")) {
     License license = new License();
     license.setLicense(fileStream);
 }
@@ -49,7 +48,7 @@ using (FileInputStream fileStream = new FileInputStream("GroupDocs.Signature.lic
 #### Setting Metered License
 
 {{< alert style="info" >}}
-You can also set [Metered](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.metered/Metered) license as an alternative to license file. It is a new licensing mechanism that will be used along with existing licensing method. It is useful for the customers who want to be billed based on the usage of the API features. For more details, please refer to [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered) section.
+You can also set [Metered](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.metered/metered/) license as an alternative to license file. It is a new licensing mechanism that will be used along with existing licensing method. It is useful for the customers who want to be billed based on the usage of the API features. For more details, please refer to [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered) section.
 {{< /alert >}}
 
 Here are the simple steps to use the `Metered` class.
@@ -65,18 +64,18 @@ Here are the simple steps to use the `Metered` class.
 Following is the sample code demonstrating how to use `Metered` class.
 
 ```java
-// For complete examples and data files, please go to https://github.com/groupdocs-Signature/GroupDocs.Signature-for-Java
-string publicKey = ""; // Your public license key
-string privateKey = ""; // Your private license key
+// For complete examples and data files, please go to https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java
+String publicKey = ""; // Your public license key
+String privateKey = ""; // Your private license key
 
 Metered metered = new Metered();
 metered.setMeteredKey(publicKey, privateKey);
 
 // Get amount (MB) consumed
-double consumption = metered.getConsumptionQuantity();
-System.out.print("Metered consumption = " + consumption);     
+double consumption = Metered.getConsumptionQuantity();
+System.out.println("Metered consumption = " + consumption);
 
 // Get count of credits consumed
-double credit = metered.getConsumptionCredit();
-System.out.print("Metered credit = " + credit);    
+double credit = Metered.getConsumptionCredit();
+System.out.println("Metered credit = " + credit);
 ```

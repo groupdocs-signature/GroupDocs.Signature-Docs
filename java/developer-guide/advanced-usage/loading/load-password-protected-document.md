@@ -31,27 +31,28 @@ structuredData:
 
 The following are the steps to work with password protected documents.
 
-*   Instantiate the [LoadOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.loadoptions/LoadOptions) object;
-*   Set password in [LoadOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.loadoptions/LoadOptions) the [setPassword](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.loadoptions/LoadOptions#setPassword(java.lang.String))property;
-*   Create [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) object and call any method.
+*   Instantiate the [LoadOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.loadoptions/loadoptions/) object;
+*   Set password in [LoadOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.loadoptions/loadoptions/) the [setPassword](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.loadoptions/loadoptions/#setPassword-java.lang.String-)property;
+*   Create [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) object and call any method.
 
 The following code sample shows how to process password protected documents.
 
 ```java
-LoadOptions loadOptions = new LoadOptions() ;  
-loadOptions.setPassword("1234567890");       
- 
+LoadOptions loadOptions = new LoadOptions();
+loadOptions.setPassword("1234567890");
+
+// pass the load options with the password to the Signature constructor
+Signature signature = new Signature("sampleProtected.pdf", loadOptions);
 try {
-    Signature signature = new Signature("sampleProtected.pdf");
     QrCodeSignOptions options = new QrCodeSignOptions("JohnSmith");
     options.setEncodeType(QrCodeTypes.QR);
     options.setLeft(100);
-    options.setTop(100);   
- 
+    options.setTop(100);
+
     // sign document to file
     signature.sign("signedProtected.pdf", options);
-}catch(Exception e){
-    throw new GroupDocsSignatureException(e.getMessage());
+} finally {
+    signature.dispose();
 }
 ```
 
@@ -71,5 +72,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

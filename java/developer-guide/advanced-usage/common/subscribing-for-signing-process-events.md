@@ -27,24 +27,24 @@ structuredData:
         - name: Process document with event listeners. 
           text: Call method Sign of Signature instance and process all appearing events.
 ---
-[Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class contains several events that are being called for different process stages
+[Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class contains several events that are being called for different process stages
 
-*   [SignStarted](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#SignStarted) to handle process start event. This event is occur once [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method is called
-*   [SignProgress](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#SignProgress) to handle progress event. This event occurs each time on signing each signature was completed.
-*   [SignCompleted](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#SignCompleted) to handle completion event. This event occurs once [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) process was completed.    
+*   [SignStarted](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) to handle process start event. This event is occur once [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-) method is called
+*   [SignProgress](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) to handle progress event. This event occurs each time on signing each signature was completed.
+*   [SignCompleted](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) to handle completion event. This event occurs once [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-) process was completed.    
 
 Here are the steps to subscribe for signing process with GroupDocs.Signature:
 
 *   Define required handler delegates to process signing events.    
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path or stream as a constructor parameter.    
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path or stream as a constructor parameter.    
 *   Subscribe for required events      
-*   Instantiate required [SignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/SignOptions) object  
-*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass signature options in it
+*   Instantiate required [SignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/signoptions/) object  
+*   Call [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and pass signature options in it
     
 
 ## Implement method for SignStarted event
 
-GroupDocs.Signature expects [ProcessStartEventHandler](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.handler.events/ProcessStartEventHandler) delegate to subscribe for [SignStarted](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#SignStarted) event
+GroupDocs.Signature expects [ProcessStartEventHandler](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.handler.events/processstarteventhandler/) delegate to subscribe for [SignStarted](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) event
 
 ```java
 private static void onSignStarted(Signature sender, ProcessStartEventArgs args)
@@ -144,5 +144,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

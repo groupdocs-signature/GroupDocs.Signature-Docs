@@ -8,20 +8,20 @@ keywords:
 productName: GroupDocs.Signature for Java
 hideChildren: False
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) contains [DigitalSignatureAppearance](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.appearances/DigitalSignatureAppearance) class that implements extra settings for digital signature of Word Processing and Spreadsheets documents
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) contains [DigitalSignatureAppearance](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.appearances/digitalsignatureappearance/) class that implements extra settings for digital signature of Word Processing and Spreadsheets documents
 
-Base signature options [SignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/SignOptions) property [SignOptions.setAppearance](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/SignOptions#setAppearance(com.groupdocs.signature.options.appearances.SignatureAppearance)) should be set with instance of [DigitalSignatureAppearance](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.appearances/DigitalSignatureAppearance) class to provide additional digital signature look
+Base signature options [SignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/signoptions/) property [SignOptions.setAppearance](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/signoptions/#setAppearance-com.groupdocs.signature.options.appearances.SignatureAppearance-) should be set with instance of [DigitalSignatureAppearance](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.appearances/digitalsignatureappearance/) class to provide additional digital signature look
 
 Here are the steps to setup extra image appearance with GroupDocs.Signature:
 
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.
-*   Compose object of[DigitalSignatureAppearance](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.appearances/DigitalSignatureAppearance) object with all required additional options.    
-*   Set  [SignOptions.setAppearance](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/SignOptions#setAppearance(com.groupdocs.signature.options.appearances.SignatureAppearance)) property with [DigitalSignatureAppearance](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.appearances/DigitalSignatureAppearance) object and set its properties  
-*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [SignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/SignOptions) to it.  
-*   Analyze [SignResult](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain/SignResult) result to check newly created signatures if needed.
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path as a constructor parameter.
+*   Compose object of[DigitalSignatureAppearance](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.appearances/digitalsignatureappearance/) object with all required additional options.    
+*   Set  [SignOptions.setAppearance](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/signoptions/#setAppearance-com.groupdocs.signature.options.appearances.SignatureAppearance-) property with [DigitalSignatureAppearance](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.appearances/digitalsignatureappearance/) object and set its properties  
+*   Call [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and pass [SignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/signoptions/) to it.  
+*   Analyze [SignResult](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/signresult/) result to check newly created signatures if needed.
 
 
-This example shows how to setup extra digital signature appearance. See [SignResult](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain/SignResult) 
+This example shows how to setup extra digital signature appearance. See [SignResult](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/signresult/) 
 
 ```java
 Signature signature = new Signature("sample.docx");
@@ -66,7 +66,7 @@ for(BaseSignature temp : signResult.getSucceeded())
 
 ## Sign Pdf document with Text signature Sticker appearance
 
-This example shows how to add Text signature to Pdf document with sticker look. See [SignResult](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain/SignResult) 
+This example shows how to add Text signature to Pdf document with sticker look. See [SignResult](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/signresult/) 
 
 ```java
 Signature signature = new Signature("sample.docx");
@@ -129,5 +129,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

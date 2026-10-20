@@ -2,7 +2,7 @@
 id: delete-barcode-signatures-from-documents
 url: signature/java/delete-barcode-signatures-from-documents
 title: Delete Barcode signatures from documents
-linkTitle: ✖ Barcode
+linkTitle: Barcode
 weight: 1
 description: "This article explains how to delete Barcode electronic signatures with GroupDocs.Signature API."
 keywords: delete Barcode,delete Barcode electronic signatures, how to delete Barcode electronic signatures
@@ -27,18 +27,18 @@ structuredData:
           text: Invoke Delete method passing found barcode and file path for signed file. File stream can be used as well.
 
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [BarcodeSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/BarcodeSignature) class to manipulate barcode signatures and delete them from the documents over [delete](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options/Signature#delete(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature)) method.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [BarcodeSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/barcodesignature/) class to manipulate barcode signatures and delete them from the documents over [delete](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#delete-java.io.OutputStream-com.groupdocs.signature.domain.signatures.BaseSignature-) method.
 
-Please be aware that [delete](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options/Signature#delete(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature)) method modifies the same document that was passed to constructor of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class.
+The [delete](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#delete-java.io.OutputStream-com.groupdocs.signature.domain.signatures.BaseSignature-) method writes the changed document to the file path or stream that you pass to it. To change the source document itself, pass the same path that you passed to the [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) constructor.
 
 Here are the steps to delete Barcode signature from the document with GroupDocs.Signature:
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter;    
-*   Instantiate [BarcodeSearchOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.search/BarcodeSearchOptions) object with desired properties;    
-*   Call [search](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method to obtain list of [BarcodeSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/BarcodeSignature);  
-*   Select from list [BarcodeSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/BarcodeSignature) object(s) that should be removed from the document;      
-*   Call [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) object [delete](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options/Signature#delete(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature)) method and pass one or several signatures to it. or not.     
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path as a constructor parameter;    
+*   Instantiate [BarcodeSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/barcodesearchoptions/) object with desired properties;    
+*   Call [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#-T-search-java.lang.Class-T--com.groupdocs.signature.options.search.SearchOptions-) method to obtain list of [BarcodeSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/barcodesignature/);  
+*   Select from list [BarcodeSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/barcodesignature/) object(s) that should be removed from the document;      
+*   Call [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) object [delete](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#delete-java.io.OutputStream-com.groupdocs.signature.domain.signatures.BaseSignature-) method and pass one or several signatures to it. or not.     
 
-This example shows how to delete Barcode signature that was found using [search](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method.
+This example shows how to delete Barcode signature that was found using [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#-T-search-java.lang.Class-T--com.groupdocs.signature.options.search.SearchOptions-) method.
 
 ```java
 Signature signature = new Signature("signed.docx");
@@ -86,5 +86,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

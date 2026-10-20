@@ -2,7 +2,7 @@
 id: save-signed-word-processing-with-different-output-file-type
 url: signature/java/save-signed-word-processing-with-different-output-file-type
 title: Save signed Word Processing with different output file type
-linkTitle: Words → format
+linkTitle: Words to other formats
 weight: 5
 description: "This article explains how to save signed Word Processing documents with various file formats by GroupDocs.Signature API."
 keywords: 
@@ -28,14 +28,14 @@ structuredData:
         - name: Obtain signed Words document in required format
           text: Get the output document in requested format.
 ---
-[Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class supports saving of Word Processing signed documents with different formats. Each of document type has list of compatible saving type. These values are listed in enum [WordProcessingSaveFileFormat](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/WordProcessingSaveFileFormat).
+[Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class supports saving of Word Processing signed documents with different formats. Each of document type has list of compatible saving type. These values are listed in enum [WordProcessingSaveFileFormat](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/wordprocessingsavefileformat/).
 
 Here are the steps to save signed Word Processing document to different output type with [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java):
 
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature)  class and pass source document path or stream as a constructor parameter.    
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/)  class and pass source document path or stream as a constructor parameter.    
 *   Instantiate required signature options.    
-*   Instantiate the [WordProcessingSaveOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/WordProcessingSaveOptions) object according to your requirements and specify [setFileFormat](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/WordProcessingSaveOptions#setFileFormat(int)) as one of predefined values from [WordProcessingSaveFileFormat](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.enums/WordProcessingSaveFileFormat).     
-*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature)  class instance and pass signatureoptions and [WordProcessingSaveOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/WordProcessingSaveOptions) object to it.
+*   Instantiate the [WordProcessingSaveOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.saveoptions/wordprocessingsaveoptions/) object according to your requirements and specify [setFileFormat](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.saveoptions/wordprocessingsaveoptions/#setFileFormat-int-) as one of predefined values from [WordProcessingSaveFileFormat](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/wordprocessingsavefileformat/).     
+*   Call [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/)  class instance and pass signatureoptions and [WordProcessingSaveOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.saveoptions/wordprocessingsaveoptions/) object to it.
     
 
 Following example demonstrates how to save signed Word processing document with different output type
@@ -71,5 +71,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

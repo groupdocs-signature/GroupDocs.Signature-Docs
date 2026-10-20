@@ -8,10 +8,10 @@ keywords:
 productName: GroupDocs.Signature for Java
 hideChildren: False
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides different error messages due to validation issues, missing required data, files etc. For exception class [GroupDocsSignatureException](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.exception/GroupDocsSignatureException) is being used.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides different error messages due to validation issues, missing required data, files etc. For exception class [GroupDocsSignatureException](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.exception/groupdocssignatureexception/) is being used.
 
 Here are the steps to handle exceptions from GroupDocs.Signature:
-*   Compose try-catch block above [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method with catching [GroupDocsSignatureException](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.exception/GroupDocsSignatureException) type error.
+*   Compose try-catch block above [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-) method with catching [GroupDocsSignatureException](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.exception/groupdocssignatureexception/) type error.
     
 
 This example shows how to handle GroupDocs.Signature exceptions.
@@ -21,8 +21,7 @@ try
 {
     Signature signature = new Signature("sample.xlsx");
      
-    DigitalSignOptions options = new DigitalSignOptions();
-    options.setCertificateGuid("certificate.pfx");
+    DigitalSignOptions options = new DigitalSignOptions("certificate.pfx");
     options.setImageFilePath("image.png");
     // skip password specification
     //options.setPassword("123456780");
@@ -57,5 +56,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

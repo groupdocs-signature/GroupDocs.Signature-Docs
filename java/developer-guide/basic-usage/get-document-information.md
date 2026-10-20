@@ -25,10 +25,10 @@ structuredData:
 ---
 [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) allows to get document information which includes:
 
-*   [getFileType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/DocumentInfo#getFileType())
-*   [getSize](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/DocumentInfo#getSize())
-*   [getPageCount](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/DocumentInfo#getPageCount())
-*   Pages dimensions - [getHeight](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/PageInfo#getHeight()) and [getWidth](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/PageInfo#getWidth()) for each page in a document [Pages](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/DocumentInfo#getPages()) collection.
+*   [getFileType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/documentinfo/#getFileType--)
+*   [getSize](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/documentinfo/#getSize--)
+*   [getPageCount](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/documentinfo/#getPageCount--)
+*   Pages dimensions - [getHeight](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/pageinfo/#getHeight--) and [getWidth](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/pageinfo/#getWidth--) for each page in a document [Pages](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.documentpreview/documentinfo/#getPages--) collection.
 
 ## Get document information from file on local disk
 
@@ -54,7 +54,7 @@ for(PageInfo page : docInfo.getPages()){
 The following code snippet demonstrates how to obtain information about document provided as a stream. 
 
 ```java
-FileInputStream stream = new FileInputStream("sample.pdf")
+FileInputStream stream = new FileInputStream("sample.pdf");
 Signature signature = new Signature(stream );
 // Document description
 IDocumentInfo docInfo = signature.getDocumentInfo();
@@ -83,5 +83,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 *   [Document Signature for Java Spring UI Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java-Spring)
     
 ### Free Online App
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

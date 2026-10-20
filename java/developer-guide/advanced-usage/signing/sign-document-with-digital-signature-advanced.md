@@ -8,22 +8,22 @@ keywords:
 productName: GroupDocs.Signature for Java
 hideChildren: False
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [DigitalSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/DigitalSignOptions) class to specify different amount of settings for Digital signature
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides [DigitalSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/digitalsignoptions/) class to specify different amount of settings for Digital signature
 
-*   digital certificate (file on local disk [setCertificateFilePath](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/DigitalSignOptions#setCertificateFilePath(java.lang.String)) or stream [setCertificateStream](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/DigitalSignOptions#setCertificateStream(java.io.InputStream))) (required)
-*   password of digital certificate [setPassword](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/DigitalSignOptions#setPassword(java.lang.String)) (required) 
-*   digital signature details ([setReason](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/DigitalSignOptions#setReason(java.lang.String)), [setContact](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/DigitalSignOptions#setContact(java.lang.String)), [setLocation](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/DigitalSignOptions#setLocation(java.lang.String)))
-*   signature image as digital signature appearance on document page ([setImageFilePath](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions#setImageFilePath(java.lang.String)) or [setImageStream](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions#setImageStream(java.io.InputStream)))
-*   image signature appearance on document page ([setHorizontalAlignment](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions#setHorizontalAlignment(int)), [setMargin](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/ImageSignOptions#setMargin(com.groupdocs.signature.domain.Padding)) etc.)
+*   digital certificate (file on local disk [setCertificateFilePath](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/digitalsignoptions/#setCertificateFilePath-java.lang.String-) or stream [setCertificateStream](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/digitalsignoptions/#setCertificateStream-java.io.InputStream-)) (required)
+*   password of digital certificate [setPassword](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/digitalsignoptions/#setPassword-java.lang.String-) (required) 
+*   digital signature details ([setReason](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/digitalsignoptions/#setReason-java.lang.String-), [setContact](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/digitalsignoptions/#setContact-java.lang.String-), [setLocation](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/digitalsignoptions/#setLocation-java.lang.String-))
+*   signature image as digital signature appearance on document page ([setImageFilePath](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/imagesignoptions/#setImageFilePath-java.lang.String-) or [setImageStream](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/imagesignoptions/#setImageStream-java.io.InputStream-))
+*   image signature appearance on document page ([setHorizontalAlignment](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/imagesignoptions/#setHorizontalAlignment-int-), [setMargin](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/imagesignoptions/#setMargin-com.groupdocs.signature.domain.Padding-) etc.)
 
 Here are the steps to add Digital signature into document with GroupDocs.Signature:
 
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.    
-*   Instantiate the [DigitalSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/DigitalSignOptions) object with required certificate and its password.    
-*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of  [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [DigitalSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/DigitalSignOptions) to it.    
-*   Analyze [SignResult](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain/SignResult) result to check newly created signatures if needed.
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path as a constructor parameter.    
+*   Instantiate the [DigitalSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/digitalsignoptions/) object with required certificate and its password.    
+*   Call [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-) method of  [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and pass [DigitalSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/digitalsignoptions/) to it.    
+*   Analyze [SignResult](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/signresult/) result to check newly created signatures if needed.
     
-This example shows how to sign PDF with Digital signature certificate and analyze [SignResult](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain/SignResult)
+This example shows how to sign PDF with Digital signature certificate and analyze [SignResult](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/signresult/)
 
 ```java
 Signature signature = new Signature("sample.pdf"); 
@@ -76,5 +76,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

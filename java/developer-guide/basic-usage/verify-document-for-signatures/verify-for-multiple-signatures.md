@@ -2,7 +2,7 @@
 id: verify-for-multiple-signatures
 url: signature/java/verify-for-multiple-signatures
 title: Verify for multiple signatures
-linkTitle: 🛡 Mutiple
+linkTitle: Multiple
 weight: 5
 description: "This topic explains how to verify electronic signatures of various types with GroupDocs.Signature API."
 keywords: 
@@ -30,9 +30,9 @@ structuredData:
 
 Here are the steps to verify document for multiple signatures with GroupDocs.Signature:
 
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path or stream as a constructor parameter.    
-*   Instantiate required several [VerifyOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.verify/VerifyOptions) objects ([BarcodeVerifyOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.verify/BarcodeVerifyOptions), [QrCodeVerifyOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.verify/QrCodeVerifyOptions), [DigitalVerifyOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.verify/DigitalVerifyOptions), [TextVerifyOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.verify/TextVerifyOptions)) and add instances to List<[VerifyOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.verify/VerifyOptions)\> collection.
-*   Call [verify](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#verify(java.util.List)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass filled list of List<[VerifyOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.verify/VerifyOptions)\> to it.   
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path or stream as a constructor parameter.    
+*   Instantiate required several [VerifyOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.verify/verifyoptions/) objects ([BarcodeVerifyOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.verify/barcodeverifyoptions/), [QrCodeVerifyOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.verify/qrcodeverifyoptions/), [DigitalVerifyOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.verify/digitalverifyoptions/), [TextVerifyOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.verify/textverifyoptions/)) and add instances to List<[VerifyOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.verify/verifyoptions/)\> collection.
+*   Call [verify](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#verify-java.util.List-com.groupdocs.signature.options.verify.VerifyOptions--) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and pass filled list of List<[VerifyOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.verify/verifyoptions/)\> to it.   
 
 
 This example shows how to search for different signature types in the document.
@@ -97,5 +97,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

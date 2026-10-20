@@ -27,14 +27,14 @@ structuredData:
         - name: Obtain protected document
           text: Get the protected signed document with password.
 ---
-[Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature)  class supports saving signed document with password protection. This ability is supported over [setPassword](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/SaveOptions#setPassword(java.lang.String)) property of [SaveOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/SaveOptions) class that should be passed to [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method.
+[Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/)  class supports saving signed document with password protection. This ability is supported over [setPassword](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.saveoptions/saveoptions/#setPassword-java.lang.String-) property of [SaveOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.saveoptions/saveoptions/) class that should be passed to [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-) method.
 
 Here are the steps to protect signed document with password with GroupDocs.Signature:
 
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path or stream as a constructor parameter.    
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path or stream as a constructor parameter.    
 *   Instantiate required signature options.    
-*   Instantiate the [SaveOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/SaveOptions) object and specify [setPassword](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/SaveOptions#setPassword(java.lang.String)) property with required password string.      
-*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass signatureoptions and [SaveOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.saveoptions/SaveOptions) object to it.
+*   Instantiate the [SaveOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.saveoptions/saveoptions/) object and specify [setPassword](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.saveoptions/saveoptions/#setPassword-java.lang.String-) property with required password string.      
+*   Call [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and pass signatureoptions and [SaveOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.saveoptions/saveoptions/) object to it.
     
 Following example demonstrates how to save signed document with password.
 
@@ -70,5 +70,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

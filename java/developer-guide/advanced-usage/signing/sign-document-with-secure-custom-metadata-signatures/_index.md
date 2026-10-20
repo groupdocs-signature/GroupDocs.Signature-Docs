@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Signature for Java
 hideChildren: False
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides additional features with [MetadataSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures.metadata/MetadataSignature) class like following
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides additional features with [MetadataSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/metadatasignature/) class like following
 
 *   ability to embedded custom objects into metadata
 *   ability to specify custom objects encryption and serialization
@@ -16,13 +16,13 @@ hideChildren: False
 
 Here are the steps to embed custom object into Metadata signature with GroupDocs.Signature:
 
-*   Implement if needed custom data serialization class that implement [IDataSerializer](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.extensions.serialization/IDataSerializer) interface. By default GroupDocs.Signature uses embedded json format serialization but allows user to customize it.  
-*   Implement if needed custom data encryption class that implements [IDataEncryption](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.extensions.encryption/IDataEncryption) interface. By default GroupDocs.Signature has several encryption implementation you can use but allows user to customize it.
-*   Implement class with properties and specify if needed class attributes (like custom serialization attribute, custom encryption attribute), specify attributes for properties like [FormatAttribute](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.extensions.serialization/FormatAttribute) to specify serialization name and display format, same as [SkipSerializationAttribute](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.extensions.serialization/SkipSerializationAttribute) to mark property of class as not serialize  
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter.    
-*   Create one or several objects of proper [MetadataSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures.metadata/MetadataSignature) object for document (like [PdfMetadataSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures.metadata/PdfMetadataSignature), [ImageMetadataSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures.metadata/ImageMetadataSignature), [PresentationMetadataSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures.metadata/PresentationMetadataSignature), [SpreadsheetMetadataSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures.metadata/SpreadsheetMetadataSignature), [WordProcessingMetadataSignature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures.metadata/WordProcessingMetadataSignature)) and setup.  
-*   Instantiate the [MetadataSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/MetadataSignOptions) object according to your requirements and pass all metadata signatures to it.
-*   Call [sign](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#sign(java.io.OutputStream,%20com.groupdocs.signature.options.sign.SignOptions)) method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class instance and pass [MetadataSignOptions](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.options.sign/MetadataSignOptions) to it.  
+*   Implement if needed custom data serialization class that implement [IDataSerializer](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.serialization/idataserializer/) interface. By default GroupDocs.Signature uses embedded json format serialization but allows user to customize it.  
+*   Implement if needed custom data encryption class that implements [IDataEncryption](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.extensions.encryption/idataencryption/) interface. By default GroupDocs.Signature has several encryption implementation you can use but allows user to customize it.
+*   Implement class with properties and specify if needed class attributes (like custom serialization attribute, custom encryption attribute), specify attributes for properties like `FormatAttribute` to specify serialization name and display format, same as `SkipSerializationAttribute` to mark property of class as not serialize  
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path as a constructor parameter.    
+*   Create one or several objects of proper [MetadataSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/metadatasignature/) object for document (like [PdfMetadataSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/pdfmetadatasignature/), [ImageMetadataSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/imagemetadatasignature/), [PresentationMetadataSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/presentationmetadatasignature/), [SpreadsheetMetadataSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/spreadsheetmetadatasignature/), [WordProcessingMetadataSignature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures.metadata/wordprocessingmetadatasignature/)) and setup.  
+*   Instantiate the [MetadataSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/metadatasignoptions/) object according to your requirements and pass all metadata signatures to it.
+*   Call [sign](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#sign-java.io.OutputStream-com.groupdocs.signature.options.sign.SignOptions-) method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and pass [MetadataSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/metadatasignoptions/) to it.  
    
 Following topics show more details of these features
 
@@ -43,5 +43,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

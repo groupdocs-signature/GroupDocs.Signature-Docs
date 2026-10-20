@@ -2,7 +2,7 @@
 id: deleting-multiple-signatures-of-different-types
 url: signature/java/deleting-multiple-signatures-of-different-types
 title: Deleting multiple signatures of different types
-linkTitle: ✖ Multiple
+linkTitle: Multiple
 weight: 3
 description: "This article shows how to delete multiple electronic signatures different ways with GroupDocs.Signature API."
 keywords: 
@@ -28,9 +28,9 @@ structuredData:
         - name: Remove specific signatures. 
           text: Invoke Delete method of Signature instance and analyze DeleteResult object.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides different classes of signatures to manipulate and delete them from the documents over [delete](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#delete(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature))  method.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides different classes of signatures to manipulate and delete them from the documents over [delete](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#delete-java.io.OutputStream-com.groupdocs.signature.domain.signatures.BaseSignature-)  method.
 
-Please be aware that [delete](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#delete(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature))  method modifies the same document that was passed to constructor of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class. This method returns [DeleteResult](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain/DeleteResult) object that contains list of successfully updated signatures and ones that failed. The signature could be failed to delete due to several reasons:
+The [delete](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#delete-java.io.OutputStream-com.groupdocs.signature.domain.signatures.BaseSignature-) method writes the changed document to the file path or stream that you pass to it. To change the source document itself, pass the same path that you passed to the [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) constructor. This method returns [DeleteResult](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/deleteresult/) object that contains list of successfully updated signatures and ones that failed. The signature could be failed to delete due to several reasons:
 
 *   if signature object was initialized with constructor by incorrect signature identifier;
 *   if signature object was not found;
@@ -39,25 +39,25 @@ Please be aware that [delete](https://reference.groupdocs.com/java/signature/co
 
 Here are the steps to delete multiple signature in the document with GroupDocs.Signature:
 
-*   Create new instance of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class and pass source document path as a constructor parameter;
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path as a constructor parameter;
     
 *   Instantiate one or several Search options with desired properties;
     
-*   Call [search](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method and pass created list of Search Options to obtain list of [BaseSignatures](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/BaseSignature);  
+*   Call [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#-T-search-java.lang.Class-T--com.groupdocs.signature.options.search.SearchOptions-) method and pass created list of Search Options to obtain list of [BaseSignatures](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/basesignature/);  
     
-*   Select from list [BaseSignatures](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain.signatures/BaseSignature) object(s) that should be deleted;  
+*   Select from list [BaseSignatures](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.signatures/basesignature/) object(s) that should be deleted;  
     
-*   Call [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) object [delete](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#delete(java.io.OutputStream,%20com.groupdocs.signature.domain.signatures.BaseSignature)) method and pass one or several signatures to it.
+*   Call [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) object [delete](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#delete-java.io.OutputStream-com.groupdocs.signature.domain.signatures.BaseSignature-) method and pass one or several signatures to it.
     
-*   Analyze [DeleteResult](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.domain/DeleteResult) result to check whether signatures were updated or not.
+*   Analyze [DeleteResult](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain/deleteresult/) result to check whether signatures were updated or not.
 
 ## Delete multiple signatures in the document
 
-This example shows how to delete multiple signatures that was found using  [search](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions)) method.
+This example shows how to delete multiple signatures that was found using  [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#-T-search-java.lang.Class-T--com.groupdocs.signature.options.search.SearchOptions-) method.
 
 ```java
 // initialize Signature instance
-Signature signature = new Signature("signed.docx")
+Signature signature = new Signature("signed.docx");
  
 // define few search options
 BarcodeSearchOptions barcodeOptions = new BarcodeSearchOptions();
@@ -117,5 +117,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

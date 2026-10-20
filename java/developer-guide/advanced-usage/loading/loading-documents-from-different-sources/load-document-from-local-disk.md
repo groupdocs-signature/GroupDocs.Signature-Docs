@@ -2,7 +2,7 @@
 id: load-document-from-local-disk
 url: signature/java/load-document-from-local-disk
 title: Load document from local disk
-linkTitle: → Local
+linkTitle: Local
 weight: 4
 description: "This section explains how to load document from local disk with GroupDocs.Signature API."
 keywords: 
@@ -26,7 +26,7 @@ structuredData:
         - name: Sign source and obtain result 
           text: Invoke method Sign with passing created options and output file data. You can save signed file using file path or stream.
 ---
-When document is located on the local disk [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) enables you to work with document over the file [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) class constructor. [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) instance will open file for reading only when any method of [Signature](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature) will be called.
+When document is located on the local disk [**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) enables you to work with document over the file [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class constructor. [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) instance will open file for reading only when any method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) will be called.
 
 Following code snippet shows how to load document from local disk.
 
@@ -54,5 +54,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

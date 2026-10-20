@@ -28,11 +28,11 @@ structuredData:
           text: Put around the code above try-catch block with the common and specific GroupDocsSignatureException expection hanndlings
 ---
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides different error messages due to validation issues, missing required data, files etc. For handling these exceptions class [GroupDocsSignatureException](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.exception/GroupDocsSignatureException) should be used.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides different error messages due to validation issues, missing required data, files etc. For handling these exceptions class [GroupDocsSignatureException](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.exception/groupdocssignatureexception/) should be used.
 
 Here are the steps to handle exceptions from GroupDocs.Signature while document verification:
 
-*   Compose try-catch block above [verify](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#verify(com.groupdocs.signature.options.verify.VerifyOptions)) method with catching [GroupDocsSignatureException](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.exception/GroupDocsSignatureException) type error.
+*   Compose try-catch block above [verify](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#verify-com.groupdocs.signature.options.verify.VerifyOptions-) method with catching [GroupDocsSignatureException](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.exception/groupdocssignatureexception/) type error.
     
 
 This example shows how to handle GroupDocs.Signature exceptions.
@@ -73,5 +73,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

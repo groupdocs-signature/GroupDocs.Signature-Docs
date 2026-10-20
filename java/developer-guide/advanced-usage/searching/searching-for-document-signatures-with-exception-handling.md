@@ -2,7 +2,7 @@
 id: searching-for-document-signatures-with-exception-handling
 url: signature/java/searching-for-document-signatures-with-exception-handling
 title: Searching for document signatures with exception handling
-linkTitle: 🌐 Exception handling
+linkTitle: Exception handling
 weight: 11
 description: "This article explains how to handle exceptions when searching for electronic signatures with GroupDocs.Signature API."
 keywords: 
@@ -26,11 +26,11 @@ structuredData:
         - name: Implement code with common try-catch statement. 
           text: For all other possible exceptions use Exception class.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides different error messages due to validation issues, missing required data, files etc. For handling these exceptions class [GroupDocsSignatureException](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.exception/GroupDocsSignatureException)should be used.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides different error messages due to validation issues, missing required data, files etc. For handling these exceptions class [GroupDocsSignatureException](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.exception/groupdocssignatureexception/)should be used.
 
 Here are the steps to handle exceptions from GroupDocs.Signature while searching for document signatures:
 
-*   Compose try-catch block above [search](https://reference.groupdocs.com/java/signature/com.groupdocs.signature/Signature#search(java.lang.Class,%20com.groupdocs.signature.options.search.SearchOptions))  method with catching [GroupDocsSignatureException](https://reference.groupdocs.com/java/signature/com.groupdocs.signature.exception/GroupDocsSignatureException) type error.
+*   Compose try-catch block above [search](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/#-T-search-java.lang.Class-T--com.groupdocs.signature.options.search.SearchOptions-)  method with catching [GroupDocsSignatureException](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.exception/groupdocssignatureexception/) type error.
     
 
 ## Exception handling while searching for document signatures
@@ -69,5 +69,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 ### Free Online App 
 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.
