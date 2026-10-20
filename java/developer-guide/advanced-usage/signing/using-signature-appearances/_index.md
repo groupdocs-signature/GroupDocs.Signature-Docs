@@ -16,6 +16,7 @@ Base signature options [SignOptions](https://reference.groupdocs.com/signature/
 *   [PdfTextStickerAppearance](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.appearances/PdfTextStickerAppearance) class implements for Pdf documents signature as small sticker. Note that [TextSignOptions.getSignatureImplementation](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/TextSignOptions#getSignatureImplementation()) property must be set to [TextSignatureImplementation.Sticker](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.enums/TextSignatureImplementation)
 *   [ImageAppearance](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.appearances/ImageAppearance) class extends any image based with different image adjustments (like gray scale, contrast, brightness,  corrections, border etc)
 *   [DigitalSignatureAppearance](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.appearances/DigitalSignatureAppearance) class extends for Word Processing and Spreadsheet documents digital signature appearances as page header information line
+*   [PdfDigitalSignatureAppearance](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.appearances/pdfdigitalsignatureappearance/) class extends for PDF documents digital signature appearances to adjust labels and color.
     
 
 Following examples demonstrates using these classes

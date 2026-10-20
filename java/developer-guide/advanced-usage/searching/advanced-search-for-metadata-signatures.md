@@ -6,7 +6,7 @@ linkTitle: 🌐 Metadata
 weight: 12
 description: " This article explains how to search various data values types within electronic signatures in the document metadata by GroupDocs.Signature API."
 keywords: 
-productName: GroupDocs.Signature for .NET
+productName: GroupDocs.Signature for Java
 structuredData:
     showOrganization: True
     application:    
@@ -22,19 +22,19 @@ structuredData:
         - name: Pass file of supported file types.
           text: Call constructor of Signature class passing file as a parameter. You can use either file path or file stream. 
         - name: Get list of items 
-          text: Invoke method Search passing SignatureType.Metadata type.
+          text: Invoke method search passing PdfMetadataSignature.class and SignatureType.Metadata.
         - name: Process list of found items
           text: Loop through list of found items and process in demanded way.
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) provides ability to search Metadata signatures and convert obtained values to various data types.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/java) provides ability to search Metadata signatures and convert obtained values to various data types.
 
 Here are the steps to search for Metadata signature and obtain required data type with GroupDocs.Signature:
 
-*   Create new instance of [Signature](https://reference.groupdocs.com/net/signature/groupdocs.signature/signature) class and pass source document path or stream as a constructor parameter.
+*   Create new instance of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class and pass source document path or stream as a constructor parameter.
     
-*   Create objects of [MetadataSearchOptions](https://reference.groupdocs.com/net/signature/groupdocs.signature.options/metadatasearchoptions) class  
+*   Create objects of [MetadataSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/metadatasearchoptions/) class  
     
-*   Call [Search](https://reference.groupdocs.com/net/signature/groupdocs.signature/signature/methods/search/_1) method of [Signature](https://reference.groupdocs.com/net/signature/groupdocs.signature/signature) class instance and pass [MetadataSearchOptions](https://reference.groupdocs.com/net/signature/groupdocs.signature.options/metadatasearchoptions)  to it.
+*   Call `search` method of [Signature](https://reference.groupdocs.com/signature/java/com.groupdocs.signature/signature/) class instance and pass [MetadataSearchOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.search/metadatasearchoptions/)  to it.
     
 *   Call proper conversion method to obtain corresponding Metadata value to required data type.
 
@@ -42,33 +42,48 @@ Here are the steps to search for Metadata signature and obtain required data typ
 
 This example shows how to search for Metadata signature values with various data types.
 
-```csharp
-using (Signature signature = new Signature("signed.pdf"))
+```java
+Signature signature = new Signature("signed.pdf");
+try
 {
     // search for signatures in document
-    List<PdfMetadataSignature> signatures = signature.Search<PdfMetadataSignature>(SignatureType.Metadata);
-    // try to get each Pdf signature with proper data type added in Basic usage example SignPdfWithMetadata             
-    PdfMetadataSignature mdSignature;
+    List<PdfMetadataSignature> signatures = signature.search(PdfMetadataSignature.class, SignatureType.Metadata);
     // See example SignPdfWithMetadata with added various data type values to signatures
     try
     {
-        mdSignature = signatures.FirstOrDefault(p => p.Name == "Author");
-        Console.WriteLine($"\t[{mdSignature.Name}] as String = {mdSignature.ToString()}");
-        mdSignature = signatures.FirstOrDefault(p => p.Name == "CreatedOn");
-        Console.WriteLine($"\t[{mdSignature.Name}] as String = {mdSignature.ToDateTime().ToShortDateString()}");
-        mdSignature = signatures.FirstOrDefault(p => p.Name == "DocumentId");
-        Console.WriteLine($"\t[{mdSignature.Name}] as Integer = {mdSignature.ToInteger()}");
-        mdSignature = signatures.FirstOrDefault(p => p.Name == "SignatureId");
-        Console.WriteLine($"\t[{mdSignature.Name}] as Double = {mdSignature.ToDouble()}");
-        mdSignature = signatures.FirstOrDefault(p => p.Name == "Amount");
-        Console.WriteLine($"\t[{mdSignature.Name}] as Decimal = {mdSignature.ToDecimal()}");
-        mdSignature = signatures.FirstOrDefault(p => p.Name == "Total");
-        Console.WriteLine($"\t[{mdSignature.Name}] as Float = {mdSignature.ToSingle()}");
+        for (PdfMetadataSignature mdSignature : signatures)
+        {
+            switch (mdSignature.getName())
+            {
+                case "Author":
+                    System.out.println("\t[" + mdSignature.getName() + "] as String = " + mdSignature.toString());
+                    break;
+                case "CreatedOn":
+                    System.out.println("\t[" + mdSignature.getName() + "] as Date = " + mdSignature.toDateTime());
+                    break;
+                case "DocumentId":
+                    System.out.println("\t[" + mdSignature.getName() + "] as Integer = " + mdSignature.toInteger());
+                    break;
+                case "SignatureId":
+                    System.out.println("\t[" + mdSignature.getName() + "] as Double = " + mdSignature.toDouble());
+                    break;
+                case "Amount":
+                    System.out.println("\t[" + mdSignature.getName() + "] as Double = " + mdSignature.toDouble());
+                    break;
+                case "Total":
+                    System.out.println("\t[" + mdSignature.getName() + "] as Float = " + mdSignature.toSingle());
+                    break;
+            }
+        }
     }
     catch (Exception ex)
     {
-        Helper.WriteError($"Error obtaining signature: {ex.Message}");
+        System.out.println("Error obtaining signature: " + ex.getMessage());
     }
+}
+finally
+{
+    signature.dispose();
 }
 ```
 
@@ -83,5 +98,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 *   [Document Signature for Java Spring UI Example](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java-Spring)    
 
 ### Free Online App 
-Along with full-featured .NET library we provide simple, but powerful free Apps.  
+Along with full-featured Java library we provide simple, but powerful free Apps.  
 You are welcome to eSign PDF, Word, Excel, PowerPoint documents with free to use online **[GroupDocs Signature App](https://products.groupdocs.app/signature)**.

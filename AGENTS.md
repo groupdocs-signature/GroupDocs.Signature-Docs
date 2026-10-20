@@ -16,7 +16,7 @@ GroupDocs.Signature is an on-premise SDK for adding, searching, verifying, updat
 | `nodejs-java` | [nodejs-java/_index.md](nodejs-java/_index.md) | [nodejs-java/developer-guide/basic-usage/get-supported-document-formats.md](nodejs-java/developer-guide/basic-usage/get-supported-document-formats.md) |
 | `mcp` | [mcp/_index.md](mcp/_index.md) | [mcp/supported-formats.md](mcp/supported-formats.md) |
 
-SDK vs Cloud vs MCP decision guides: [net/sdk-cloud-mcp.md](net/sdk-cloud-mcp.md), [python-net/sdk-cloud-mcp.md](python-net/sdk-cloud-mcp.md).
+SDK vs Cloud vs MCP decision guides: [net/sdk-cloud-mcp.md](net/sdk-cloud-mcp.md), [java/sdk-cloud-mcp.md](java/sdk-cloud-mcp.md), [python-net/sdk-cloud-mcp.md](python-net/sdk-cloud-mcp.md).
 
 ## .NET target frameworks (canon)
 
