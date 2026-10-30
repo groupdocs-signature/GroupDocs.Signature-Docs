@@ -12,7 +12,7 @@ hideChildren: False
 
 Here are the key reasons to use the new updated API provided by GroupDocs.Signature for Java since version 19.11:
 
-*   **Signature** class introduced as a **single entry point** to sing the document with various signature types with further verification and search with any supported file format.       
+*   **Signature** class introduced as a **single entry point** to sign the document with various signature types with further verification and search with any supported file format.       
 *   Document **signature options, verify options and search options were unified** for all document types. Instead of using document related options now options are related to signature type only.
 *   The overall document related classes were unified to common. 
 *   Product architecture was redesigned from scratch in order to simplify passing options and classes to manipulate signature.
