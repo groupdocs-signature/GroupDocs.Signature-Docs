@@ -35,7 +35,7 @@ structuredData:
           text: Print a success message with the file path of the signed document using `Console.WriteLine`.
 
 ---
-[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) supports specifing the file type when loading a documents. When loading a document via a file path or FileStream, GroupDocs.Signature checks the file extension to determine the file type, which can take some time. with the new feature, you can specify the file type directly in LoadOptions, and GroupDocs.Signature will skip the detection process and use the specified type right away.
+[**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) supports specifing the file type when loading a document. When loading a document via a file path or FileStream, GroupDocs.Signature checks the file extension to determine the file type, which can take some time. with the new feature, you can specify the file type directly in LoadOptions, and GroupDocs.Signature will skip the detection process and use the specified type right away.
 
 The following are the steps to work with password protected documents.
 

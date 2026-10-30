@@ -67,7 +67,7 @@ using (Signature signature = new Signature("sample.pdf"))
     {
         // set alternative signature implementation on document page
         SignatureImplementation = TextSignatureImplementation.Annotation,
-        // for Pdf document type ther's ability to setup exteneded appearences
+        // for Pdf document type there's ability to setup exteneded appearences
         Appearance = new PdfTextAnnotationAppearance()
         {
             Border = new Border()
