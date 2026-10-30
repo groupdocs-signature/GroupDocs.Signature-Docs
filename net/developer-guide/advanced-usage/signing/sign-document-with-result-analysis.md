@@ -22,7 +22,7 @@ Here are the steps to analyze the process result with GroupDocs.Signature:
 
 ## Sign document with result analysis
 
-This example shows how to analize sign process result.
+This example shows how to analyze sign process result.
 
 ```csharp
 public static void Run()

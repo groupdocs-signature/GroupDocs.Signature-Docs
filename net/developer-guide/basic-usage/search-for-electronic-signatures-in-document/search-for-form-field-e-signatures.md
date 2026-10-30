@@ -33,7 +33,7 @@ Here are the guide for searching Form Field e-signatures:
 * Instantiate the [FormFieldSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/formfieldsearchoptions) object according to your requirements and specify additional search options (if needed);
 * Call [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class instance and pass [FormFieldSearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/formfieldsearchoptions) to it.
 
-This example shows how to search for Form Field signatures in the document.
+This example shows how to search for Form Field e-signatures in the document.
 
 ```csharp
 using (Signature signature = new Signature("signed.pdf"))

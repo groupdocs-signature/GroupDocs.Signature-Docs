@@ -41,7 +41,7 @@ structuredData:
 * [SMS](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/sms) entry implements sms properties.
 * [CryptoCurrencyTransfer](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain.extensions/cryptocurrencytransfer/) entry implements event standard.
 
-Here are the steps to extract standard entry frmo the QR-code signature with GroupDocs.Signature:  
+Here are the steps to extract standard entry from the QR-code signature with GroupDocs.Signature:  
 
 * Create new instance of  [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
 * Call the generic [Search](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature/search/#search_2/) method of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) with the [QrCodeSignature](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/qrcodesignature/) generic type and pass [SignatureType.QRCode](https://reference.groupdocs.com/signature/net/groupdocs.signature.domain/signaturetype/) to it.
