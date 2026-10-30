@@ -27,7 +27,7 @@ This example shows how to setup extra digital signature appearance. See [SignR
 Signature signature = new Signature("sample.docx");
 DigitalSignOptions options = new DigitalSignOptions("certificate.pfx");
  
-// certifiate password
+// certificate password
 options.setPassword("1234567890");
 // digital certificate details
 options.setReason("Sign");

@@ -51,7 +51,7 @@ Here are the steps to embed standard entry into QR-code with GroupDocs.Signature
 
 ## Sign PDF with email QR-code object
 
-This example shows how to esign PDF with Email QR-code object.
+This example shows how to sign PDF with Email QR-code object.
 
 ```csharp
 using (Signature signature = new Signature("sample.pdf"))

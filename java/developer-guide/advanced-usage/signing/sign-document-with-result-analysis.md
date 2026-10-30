@@ -20,7 +20,7 @@ Here are the steps to analyze the process result with com.groupdocs.signature:
 
 ## Sign document with result analysis
 
-This example shows how to analize sign process result.
+This example shows how to analyze sign process result.
 
 ```java
 public static void Run()
