@@ -29,7 +29,7 @@ This example shows how to sign PDF with Digital signature certificate and analyz
 Signature signature = new Signature("sample.pdf"); 
 DigitalSignOptions options = new DigitalSignOptions("certificate.pfx");
  
-// certifiate password
+// certificate password
 options.setPassword("1234567890");
 // digital certificate details
 options.setReason("Sign");

@@ -88,7 +88,7 @@ Following examples shows the way to mark signatures in document as actual signat
  // initialize Signature instance
  using (Signature signature = new Signature("sample_signed.pdf"))
  {
-     // define search options to select required signatures om the document
+     // define search options to select required signatures on the document
      BarcodeSearchOptions barcodeOptions = new BarcodeSearchOptions();
      QrCodeSearchOptions qrCodeOptions = new QrCodeSearchOptions();
      TextSearchOptions textOptions = new TextSearchOptions();

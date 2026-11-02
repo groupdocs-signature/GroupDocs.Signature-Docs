@@ -28,7 +28,7 @@ structuredData:
 ---
 Sometimes you may want to search for electronic signatures of different types simultaneously. [**GroupDocs.Signature**](https://products.groupdocs.com/signature/net) allows searching documents for different signature types in an easy and intuitive way. In common words the idea is to pass collection of desired signature types to Search method.
 
-Here are the steps to search for multiple signatures types within the document with GroupDocs.Signature:
+Here are the steps to search for multiple signature types within the document with GroupDocs.Signature:
 
 * Create new instance of [Signature](https://reference.groupdocs.com/signature/net/groupdocs.signature/signature) class and pass source document path as a constructor parameter.
 * Instantiate search options for required signature types and them to collection of List<[SearchOptions](https://reference.groupdocs.com/signature/net/groupdocs.signature.options/searchoptions)\>  type.

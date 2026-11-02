@@ -66,7 +66,7 @@ Signature signature = new Signature("sample.pdf");
 
         // set alternative signature implementation on document page
     options.setSignatureImplementation(TextSignatureImplementation.Annotation);
-        // for Pdf document type ther's ability to setup exteneded appearences
+        // for Pdf document type there's ability to setup exteneded appearences
     PdfTextAnnotationAppearance appearance =  new PdfTextAnnotationAppearance();
     Border border= new Border();
     border.setColor(Color.BLUE);
