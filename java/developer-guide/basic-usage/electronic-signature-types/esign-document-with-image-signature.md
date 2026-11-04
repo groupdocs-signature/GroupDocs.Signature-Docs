@@ -27,7 +27,7 @@ structuredData:
         - name: Sign source file and save result 
           text: Invoke Sign method with signing options and file path for signed file. File stream can be used as well.
 ---
-## What is a Image Signature?
+## What is an Image Signature?
 
 An **image** as signature is alternative way to put any presenting data in a visual form. This electronic signature type allows to create custom image with company logo, sender' initials, names or make a company stamp icon in it,  
 ![](/signature/java/images/esign-document-with-image-signature.png)
