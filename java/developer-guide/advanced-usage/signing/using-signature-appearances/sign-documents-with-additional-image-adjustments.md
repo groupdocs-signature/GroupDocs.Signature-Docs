@@ -3,7 +3,7 @@ id: sign-documents-with-additional-image-adjustments
 url: signature/java/sign-documents-with-additional-image-adjustments
 title: Sign documents with additional image adjustments
 weight: 1
-description: " This article explains how to use different image adjustment with electronic signatures on document page."
+description: " This article explains how to use different image adjustments with electronic signatures on document page."
 keywords: 
 productName: GroupDocs.Signature for Java
 hideChildren: False

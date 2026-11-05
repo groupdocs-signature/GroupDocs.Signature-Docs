@@ -3,7 +3,7 @@ id: sign-documents-with-exception-handling
 url: signature/java/sign-documents-with-exception-handling
 title: Sign documents with exception handling
 weight: 2
-description: " This article explains how to use exceptions handling when adding electronic signatures to document with GroupDocs.Signature API."
+description: " This article explains how to use exception handling when adding electronic signatures to document with GroupDocs.Signature API."
 keywords: 
 productName: GroupDocs.Signature for Java
 hideChildren: False

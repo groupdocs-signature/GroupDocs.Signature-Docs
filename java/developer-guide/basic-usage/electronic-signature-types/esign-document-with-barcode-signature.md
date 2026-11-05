@@ -38,7 +38,7 @@ Barcodes allow to store product related data like manufacturing and expiry dat
 
 ## eSign document with Barcode signature
 
-[GroupDocs.Signature](https://products.groupdocs.com/signature/java) for Java supports wide range or Barcode types that can be used to create electronic signature within the documents. Please refer to [BarcodeTypes](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.barcodes/barcodetypes/) description to get the full list of supported barcodes.  
+[GroupDocs.Signature](https://products.groupdocs.com/signature/java) for Java supports wide range of Barcode types that can be used to create electronic signature within the documents. Please refer to [BarcodeTypes](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.domain.barcodes/barcodetypes/) description to get the full list of supported barcodes.  
 To specify different options for Barcode signature GroupDocs.Signature for Java provides [BarcodeSignOptions](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/barcodesignoptions/) class. The main fields are:
 
 *   [getEncodeType](https://reference.groupdocs.com/signature/java/com.groupdocs.signature.options.sign/barcodesignoptions/#getEncodeType--) - specifies Barcode type (AustralianPost, Codabar, EAN13, OPC, etc.);
