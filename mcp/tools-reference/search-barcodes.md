@@ -21,7 +21,7 @@ toc: True
 
 | Name | Type | Required | Description |
 |---|---|---|---|
-| `file` | object | yes |  — [FileInput shape]({{< ref "signature/mcp/tools-reference/_index.md#the-fileinput-shape" >}}) |
+| `file` | object | yes | The document — see [FileInput shape]({{< ref "signature/mcp/tools-reference/_index.md#the-fileinput-shape" >}}) |
 | `text` | string | no | Return only barcodes whose decoded text contains this string. Omit to return all barcodes. |
 | `returnImage` | boolean | no | Include the barcode graphic as a base64 PNG in the response. |
 | `password` | string | no | Password for protected documents. |

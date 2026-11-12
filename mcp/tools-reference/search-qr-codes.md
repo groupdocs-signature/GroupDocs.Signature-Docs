@@ -21,7 +21,7 @@ toc: True
 
 | Name | Type | Required | Description |
 |---|---|---|---|
-| `file` | object | yes |  — [FileInput shape]({{< ref "signature/mcp/tools-reference/_index.md#the-fileinput-shape" >}}) |
+| `file` | object | yes | The document — see [FileInput shape]({{< ref "signature/mcp/tools-reference/_index.md#the-fileinput-shape" >}}) |
 | `text` | string | no | Return only QR codes whose decoded text contains this string. Omit to return all QR codes. |
 | `returnImage` | boolean | no | Include the QR code graphic as a base64 PNG in the response. |
 | `password` | string | no | Password for protected documents. |

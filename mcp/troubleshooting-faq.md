@@ -65,4 +65,4 @@ Ask your agent *"list your GroupDocs signature tools and the license status"* â€
 
 ## Still stuck?
 
-Post your config (redact license paths) and the client name in the [Signature forum](https://forum.groupdocs.com/c/signature/11) â€” we answer MCP questions daily. Bugs: [GitHub issues](https://github.com/groupdocs-signature/GroupDocs.Signature.Mcp/issues).
+Post your config (redact license paths) and the client name in the [Signature forum](https://forum.groupdocs.com/c/signature/11). Bugs: [GitHub issues](https://github.com/groupdocs-signature/GroupDocs.Signature.Mcp/issues).
